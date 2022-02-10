@@ -1,0 +1,9 @@
+*.ts    eol=lf
+*.tsx   eol=lf
+*.js    eol=lf
+*.jsx   eol=lf
+*.json  eol=lf
+.yarn/releases/** binary
+.yarn/plugins/** binary
+*.zip filter=lfs diff=lfs merge=lfs -text
+
