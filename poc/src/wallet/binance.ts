@@ -1,4 +1,5 @@
-import { IWallet, apiKey, apiSecret, ADDRESS_BOOK } from ".";
+import type { IBinanceAccountInfo } from "../types/binanceApi.alias";
+import { IWallet, AddressBook, TSupportedCoins } from "./";
 //@ts-ignore
 import { Spot } from "@binance/connector";
 
@@ -6,12 +7,21 @@ export class BinanceWallet implements IWallet {
   private client: BinanceConnectorClient;
 
   constructor() {
-    this.client = new Spot(apiKey, apiSecret);
+    this.client = new Spot(
+      process.env.BINANCE_KEY?.trim(),
+      process.env.BINANCE_SECRET?.trim()
+    );
   }
 
+  balance = async (coin: TSupportedCoins): Promise<string> => {
+    const res = await this.client.account();
+    const asset = res.balances.find((bal) => bal.asset === coin);
+    return asset?.free ?? "0";
+  };
+
   withdraw = async (
-    coin: "USDT" | "BNB",
-    address: ADDRESS_BOOK,
+    coin: TSupportedCoins,
+    address: AddressBook,
     amount: string,
     opts: Partial<{ memo: string; network: string }> = { network: "BSC" }
   ): Promise<boolean> => {
@@ -52,7 +62,7 @@ interface BinanceWithdrawOptions {
 }
 
 interface BinanceConnectorClient {
-  account: () => Promise<{ data: any }>;
+  account: () => Promise<IBinanceAccountInfo>;
   withdraw: (
     coin: string,
     address: string,
