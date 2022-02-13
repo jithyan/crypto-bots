@@ -9,6 +9,7 @@ export enum AddressBook {
 }
 
 export type TSupportedCoins = "BNB" | "USDT" | "BUSD";
+export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
 
 export interface IWallet {
   withdraw: (
