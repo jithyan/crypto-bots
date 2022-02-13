@@ -2,6 +2,8 @@ import type { IBinanceAccountInfo } from "../types/binanceApi.alias";
 import { IWallet, AddressBook, TSupportedCoins } from "./";
 //@ts-ignore
 import { Spot } from "@binance/connector";
+import { logger } from "../log";
+import { AxiosError, AxiosResponse } from "axios";
 
 export class BinanceWallet implements IWallet {
   private client: BinanceConnectorClient;
@@ -15,8 +17,9 @@ export class BinanceWallet implements IWallet {
 
   balance = async (coin: TSupportedCoins): Promise<string> => {
     const res = await this.client.account();
-    const asset = res.balances.find((bal) => bal.asset === coin);
-    return asset?.free ?? "0";
+    const balance = res.data.balances.find((bal) => bal.asset === coin);
+    logger.info("Binance balance", { balance });
+    return balance?.free ?? "0";
   };
 
   withdraw = async (
@@ -26,11 +29,18 @@ export class BinanceWallet implements IWallet {
     opts: Partial<{ memo: string; network: string }> = { network: "BSC" }
   ): Promise<boolean> => {
     try {
+      logger.info("Withdrawing from Binance", {
+        coin,
+        address,
+        amount,
+        network: opts.network,
+      });
       const response = await this.client.withdraw(coin, address, amount, opts);
-      console.log(response.data);
+      logger.info("Binance withdraw success", response.data);
       return true;
-    } catch (err: any) {
-      console.log(err);
+    } catch (e: any) {
+      const error = e as AxiosError;
+      logger.error("Error withdrawing from Binance", { error });
       return false;
     }
   };
@@ -62,11 +72,11 @@ interface BinanceWithdrawOptions {
 }
 
 interface BinanceConnectorClient {
-  account: () => Promise<IBinanceAccountInfo>;
+  account: () => Promise<AxiosResponse<IBinanceAccountInfo>>;
   withdraw: (
     coin: string,
     address: string,
     amount: string,
     opts?: Partial<BinanceWithdrawOptions>
-  ) => Promise<{ data: any }>;
+  ) => Promise<AxiosResponse<{ id: string }>>;
 }

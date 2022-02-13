@@ -2,7 +2,16 @@
 import CSV from "winston-csv-format";
 import { createLogger, transports } from "winston";
 import Big from "big.js";
+import DailyRotateFile from "winston-daily-rotate-file";
 import type { TSupportedCoins } from "../wallet";
+
+const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
+  filename: "%DATE%-trades.csv",
+  datePattern: "YYYY-MM-DD",
+  zippedArchive: true,
+  maxSize: "40m",
+  maxFiles: "365d",
+});
 
 const csvHeaders = {
   timestamp: "Timestamp",
@@ -19,8 +28,12 @@ const csvLogger = createLogger({
   format: CSV(Object.keys(csvHeaders), {
     delimiter: ",",
   }),
-  transports: [new transports.Console()],
+  transports: [dailyRotationTransport],
 });
+
+if (process.env.NODE_ENV !== "production") {
+  csvLogger.add(new transports.Console());
+}
 
 type TLogTradeData = Record<
   Exclude<

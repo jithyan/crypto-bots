@@ -1,8 +1,12 @@
 /.yarn/*
 node_modules
-.env
+/poc/.env
 build
 dist
+
+/poc/.log
+/poc/.csv
+/poc/-audit.json
 
 !/.yarn/patches
 !/.yarn/plugins
