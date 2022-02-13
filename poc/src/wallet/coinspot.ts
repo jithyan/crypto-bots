@@ -1,8 +1,8 @@
-import { AddressBook, IWallet, TSupportedCoins } from "./index";
+import { AddressBook, IWallet, TSupportedCoins } from "./index.js";
 import { logger } from "../log/std.js";
 import axios, { AxiosError } from "axios";
 import crypto from "crypto";
-import { logTrade } from "../log";
+import { logTrade } from "../log/index.js";
 import qs from "qs";
 import Big from "big.js";
 export class CoinspotWallet implements IWallet {

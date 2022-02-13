@@ -1,5 +1,5 @@
-import { BinanceWallet } from "./binance";
-import { CoinspotWallet } from "./coinspot";
+import { BinanceWallet } from "./binance.js";
+import { CoinspotWallet } from "./coinspot.js";
 
 export enum AddressBook {
   AARON_CSPOT_BEP20 = "0x02770a548f1c66c0d6fe4bab5db00183ac18a027",

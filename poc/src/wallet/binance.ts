@@ -1,8 +1,8 @@
 import type { IBinanceAccountInfo } from "../types/binanceApi.alias";
-import { IWallet, AddressBook, TSupportedCoins } from "./";
+import { IWallet, AddressBook, TSupportedCoins } from "./index.js";
 //@ts-ignore
 import { Spot } from "@binance/connector";
-import { logger } from "../log";
+import { logger } from "../log/index.js";
 import { AxiosError, AxiosResponse } from "axios";
 
 export class BinanceWallet implements IWallet {
@@ -21,6 +21,8 @@ export class BinanceWallet implements IWallet {
     logger.info("Binance balance", { balance });
     return balance?.free ?? "0";
   };
+
+  buy = async () => {};
 
   withdraw = async (
     coin: TSupportedCoins,

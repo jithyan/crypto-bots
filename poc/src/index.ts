@@ -1,14 +1,14 @@
 // const client = new Spot(apiKey, apiSecret);
 
 import Big from "big.js";
-import { logTrade, logger } from "./log";
-import { AddressBook, binanceWallet, coinspotWallet } from "./wallet";
+import { logTrade, logger } from "./log/index.js";
+import { AddressBook, binanceWallet, coinspotWallet } from "./wallet/index.js";
 
 function isGreaterThanZero(amount: string | number): boolean {
   return new Big(amount).gt(new Big("0"));
 }
 
-swapCoins();
+binanceWallet.balance("BNB");
 
 async function swapCoins() {
   const balance = await coinspotWallet.balance("BNB");

@@ -4,9 +4,9 @@ node_modules
 build
 dist
 
-/poc/.log
-/poc/.csv
-/poc/-audit.json
+/poc/*.log
+/poc/*.csv
+/poc/*-audit.json
 
 !/.yarn/patches
 !/.yarn/plugins

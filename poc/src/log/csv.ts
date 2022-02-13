@@ -1,9 +1,9 @@
-// @ts-ignore
+//@ts-ignore
 import CSV from "winston-csv-format";
 import { createLogger, transports } from "winston";
 import Big from "big.js";
 import DailyRotateFile from "winston-daily-rotate-file";
-import type { TSupportedCoins } from "../wallet";
+import type { TSupportedCoins } from "../wallet/index.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",
@@ -25,7 +25,7 @@ const csvHeaders = {
 
 const csvLogger = createLogger({
   level: "info",
-  format: CSV(Object.keys(csvHeaders), {
+  format: CSV.default(Object.keys(csvHeaders), {
     delimiter: ",",
   }),
   transports: [dailyRotationTransport],

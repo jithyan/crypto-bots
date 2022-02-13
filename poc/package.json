@@ -1,6 +1,7 @@
 {
   "name": "poc",
   "packageManager": "yarn@3.1.1",
+  "type": "module",
   "scripts": {
     "cleanup": "rimraf build",
     "dev": "yarn cleanup && tsc && node -r dotenv/config build/index.js",
