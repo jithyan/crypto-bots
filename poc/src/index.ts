@@ -1,21 +1,7 @@
-// const client = new Spot(apiKey, apiSecret);
-
-import { AxiosError } from "axios";
 import Big from "big.js";
 import { generalLogger } from "./log/index.js";
-import { AddressBook, binanceWallet, coinspotWallet } from "./wallet/index.js";
-
-function isGreaterThanZero(amount: string | number): boolean {
-  return new Big(amount).gt(new Big("0"));
-}
-
-function roundTo3Dp(price: string | number | Big) {
-  return new Big(price).toFixed(3, Big.roundHalfEven);
-}
-
-function truncTo3Dp(price: string | number | Big) {
-  return new Big(price).toFixed(3, Big.roundDown);
-}
+import { truncTo3Dp, isGreaterThanZero } from "./utils.js";
+import { AddressBook, binanceWallet } from "./wallet/index.js";
 
 binanceWallet
   .balance("BNB")
