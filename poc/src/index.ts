@@ -2,7 +2,7 @@
 
 import { AxiosError } from "axios";
 import Big from "big.js";
-import { logTrade, logger } from "./log/index.js";
+import { generalLogger } from "./log/index.js";
 import { AddressBook, binanceWallet, coinspotWallet } from "./wallet/index.js";
 
 function isGreaterThanZero(amount: string | number): boolean {
@@ -17,7 +17,10 @@ function truncTo3Dp(price: string | number | Big) {
   return new Big(price).toFixed(3, Big.roundDown);
 }
 
-trade2();
+binanceWallet
+  .balance("BNB")
+  .then(truncTo3Dp)
+  .then(() => binanceWallet.getLatestPrice("BNB", "BUSD"));
 
 async function trade2() {
   const bnbBal = await binanceWallet.balance("BNB").then(truncTo3Dp);
@@ -64,12 +67,12 @@ async function tradeCycle() {
 
 async function transferBnbFromBinanceToCoinspot() {
   binanceWallet.balance("BNB").then((balance) => {
-    logger.info("Binance BNB balance", { balance });
+    generalLogger.info("Binance BNB balance", { balance });
 
     if (isGreaterThanZero(balance)) {
       binanceWallet.withdraw("BNB", AddressBook.MOODY_CSPOT_BEP20, balance);
     } else {
-      logger.info("Balance not greater than zero", { balance });
+      generalLogger.info("Balance not greater than zero", { balance });
     }
   });
 }

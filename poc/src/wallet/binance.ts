@@ -6,7 +6,7 @@ import type {
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 //@ts-ignore
 import { Spot } from "@binance/connector";
-import { logger, logTrade } from "../log/index.js";
+import { apiLogger, logTrade } from "../log/index.js";
 import { AxiosError, AxiosResponse } from "axios";
 
 export class BinanceWallet implements IWallet {
@@ -26,7 +26,7 @@ export class BinanceWallet implements IWallet {
     const assetPair: TCoinPair = `${assetToBuy}${usingAsset}`;
     const { data } = await this.client.tickerPrice(assetPair);
 
-    logger.info("Latest price", { assetPair, data });
+    apiLogger.info("Latest price", { assetPair, data });
 
     if (!Array.isArray(data)) {
       return data.price;
@@ -38,7 +38,7 @@ export class BinanceWallet implements IWallet {
   balance = async (coin: TSupportedCoins): Promise<string> => {
     const res = await this.client.account();
     const balance = res.data.balances.find((bal) => bal.asset === coin);
-    logger.info("Binance balance", { balance });
+    apiLogger.info("Binance balance", { balance });
     return balance?.free ?? "0";
   };
 
@@ -53,7 +53,7 @@ export class BinanceWallet implements IWallet {
     price: string;
     quantity: string;
   }) => {
-    logger.info("Initiating BUY", {
+    apiLogger.info("Initiating BUY", {
       buyAsset,
       withAsset,
       price,
@@ -71,7 +71,7 @@ export class BinanceWallet implements IWallet {
           timeInForce: "GTC",
         }
       );
-      logger.info("BUY success", { data });
+      apiLogger.info("BUY success", { data });
       logTrade({
         price,
         amount: quantity,
@@ -97,7 +97,7 @@ export class BinanceWallet implements IWallet {
     price: string;
     quantity: string;
   }) => {
-    logger.info("Initiating SELL", {
+    apiLogger.info("Initiating SELL", {
       sellAsset,
       forAsset,
       price,
@@ -115,7 +115,7 @@ export class BinanceWallet implements IWallet {
           timeInForce: "GTC",
         }
       );
-      logger.info("SELL success", { data });
+      apiLogger.info("SELL success", { data });
       logTrade({
         price,
         amount: quantity,
@@ -137,14 +137,14 @@ export class BinanceWallet implements IWallet {
     opts: Partial<{ memo: string; network: string }> = { network: "BSC" }
   ): Promise<boolean> => {
     try {
-      logger.info("Withdrawing from Binance", {
+      apiLogger.info("Withdrawing from Binance", {
         coin,
         address,
         amount,
         network: opts.network,
       });
       const response = await this.client.withdraw(coin, address, amount, opts);
-      logger.info("Binance withdraw success", response.data);
+      apiLogger.info("Binance withdraw success", response.data);
       return true;
     } catch (e: any) {
       handleAxiosError("Error withdrawing from Binance", e);
@@ -156,7 +156,7 @@ export class BinanceWallet implements IWallet {
 function handleAxiosError(message: string, e: unknown): void {
   const error = e as AxiosError;
 
-  logger.error(message, {
+  apiLogger.error(message, {
     request: {
       url: error.config.url,
       data: error.config.data,

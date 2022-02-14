@@ -5,7 +5,8 @@
   "scripts": {
     "cleanup": "rimraf build",
     "dev": "yarn cleanup && tsc && node -r dotenv/config build/index.js",
-    "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts"
+    "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
+    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv"
   },
   "devDependencies": {
     "@types/big.js": "^6.1.3",

@@ -2,17 +2,17 @@ import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
-  filename: "%DATE%-cryptobot.log",
+  filename: "%DATE%-state.log",
   datePattern: "YYYY-MM-DD",
   zippedArchive: true,
   maxSize: "40m",
   maxFiles: "365d",
 });
 
-export const logger = winston.createLogger({
+export const stateLogger = winston.createLogger({
   level: "info",
   format: winston.format.json(),
-  // defaultMeta: { service: "crypto-trading-bot" },
+  defaultMeta: { service: "state" },
   transports: [
     dailyRotationTransport,
     //
@@ -29,7 +29,7 @@ export const logger = winston.createLogger({
 // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
 //
 if (process.env.NODE_ENV !== "production") {
-  logger.add(
+  stateLogger.add(
     new winston.transports.Console({
       format: winston.format.json(),
     })

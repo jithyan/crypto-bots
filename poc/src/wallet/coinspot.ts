@@ -1,5 +1,5 @@
 import { AddressBook, IWallet, TSupportedCoins } from "./index.js";
-import { logger } from "../log/std.js";
+import { apiLogger } from "../log/api.js";
 import axios, { AxiosError } from "axios";
 import crypto from "crypto";
 import { logTrade } from "../log/index.js";
@@ -39,7 +39,7 @@ export class CoinspotWallet implements IWallet {
     markettype: "AUD" | "USDT"
   ) => {
     try {
-      logger.info("Sell order at Coinspot", {
+      apiLogger.info("Sell order at Coinspot", {
         cointype,
         amount,
         rate,
@@ -53,7 +53,7 @@ export class CoinspotWallet implements IWallet {
         }
       );
 
-      logger.info("Sell order at Coinspot success", { response });
+      apiLogger.info("Sell order at Coinspot success", { response });
       logTrade({
         amount,
         price: rate,
@@ -65,7 +65,7 @@ export class CoinspotWallet implements IWallet {
       return true;
     } catch (e: unknown) {
       const error = e as AxiosError;
-      logger.error("Error selling at Coinspot", {
+      apiLogger.error("Error selling at Coinspot", {
         error: error.message,
         errorStatus: error.response?.statusText,
         msg: error.response?.data,
@@ -81,7 +81,7 @@ export class CoinspotWallet implements IWallet {
     markettype: "USDT" | "AUD"
   ) => {
     try {
-      logger.info("Buy order at Coinspot", {
+      apiLogger.info("Buy order at Coinspot", {
         cointype,
         amount,
         rate,
@@ -92,7 +92,7 @@ export class CoinspotWallet implements IWallet {
         { cointype, amount, rate, markettype }
       );
 
-      logger.info("Buy order at Coinspot success", { response });
+      apiLogger.info("Buy order at Coinspot success", { response });
       logTrade({
         amount,
         price: rate,
@@ -104,7 +104,7 @@ export class CoinspotWallet implements IWallet {
       return true;
     } catch (e: any) {
       const error = e as AxiosError;
-      logger.error("Error buying at Coinspot", { error });
+      apiLogger.error("Error buying at Coinspot", { error });
       return false;
     }
   };
@@ -119,7 +119,7 @@ export class CoinspotWallet implements IWallet {
           amount,
         }
       );
-      logger.info("Quote for BNB to USDC", { response });
+      apiLogger.info("Quote for BNB to USDC", { response });
       const rate = Number(new Big(response.rate).mul("1.015").toFixed(8));
       const swapRes = await this.apiClient.postRequest<ISwapQuote>(
         "my/swap/now",
@@ -132,11 +132,11 @@ export class CoinspotWallet implements IWallet {
           direction: "DOWN",
         }
       );
-      logger.info("Swapped BNB to USDC", { swapRes });
+      apiLogger.info("Swapped BNB to USDC", { swapRes });
       return response;
     } catch (e) {
       const error = e as AxiosError;
-      logger.error("Error swapping at Coinspot", { error });
+      apiLogger.error("Error swapping at Coinspot", { error });
       return false;
     }
   };
@@ -145,7 +145,7 @@ export class CoinspotWallet implements IWallet {
     const response: IBalanceResponse = await this.apiClient.postRequest(
       `ro/my/balance/${coin}`
     );
-    logger.info("Coinspot balance", { response, coin });
+    apiLogger.info("Coinspot balance", { response, coin });
 
     const balance = response.balance[coin]?.balance?.toString() ?? "0";
     const rate = response.balance[coin]?.rate?.toString() ?? "0";
@@ -160,7 +160,7 @@ export class CoinspotWallet implements IWallet {
     { network = "BSC", memo }: Partial<{ memo: string; network: string }> = {}
   ): Promise<boolean> => {
     try {
-      logger.info("Withdrawing from Coinspot", {
+      apiLogger.info("Withdrawing from Coinspot", {
         cointype,
         address,
         amount,
@@ -174,11 +174,11 @@ export class CoinspotWallet implements IWallet {
           network,
           paymentid: memo,
         });
-      logger.info("Coinspot withdraw success", { response });
+      apiLogger.info("Coinspot withdraw success", { response });
       return true;
     } catch (e) {
       const error = e as AxiosError;
-      logger.error("Error withdrawing from Coinspot", { error });
+      apiLogger.error("Error withdrawing from Coinspot", { error });
       return false;
     }
   };
@@ -195,12 +195,12 @@ export class CoinspotWallet implements IWallet {
       ]);
       const bnbPrice = bnbChart.pop()?.[1].toString() ?? "0";
       const usdtPrice = usdtChart.pop()?.[1].toString() ?? "0";
-      logger.info("Price from coinspot", { bnbPrice, usdtPrice });
+      apiLogger.info("Price from coinspot", { bnbPrice, usdtPrice });
 
       return { bnbPrice, usdtPrice };
     } catch (e) {
       const error = e as AxiosError;
-      logger.error("Error querying latest price from Coinspot", {
+      apiLogger.error("Error querying latest price from Coinspot", {
         error: error.message,
         errorStatus: error.response?.statusText,
         msg: error.response?.data,
