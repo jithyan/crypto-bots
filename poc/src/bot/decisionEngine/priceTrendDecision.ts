@@ -1,8 +1,8 @@
 import Big from "big.js";
-import { stateLogger } from "../../log";
-import { roundTo3Dp as truncTo3Dp } from "../../utils";
+import { stateLogger } from "../../log/index.js";
+import { roundTo3Dp, roundTo3Dp as truncTo3Dp } from "../../utils.js";
 
-interface IDecisionEngine {
+export interface IDecisionEngine {
   shouldBuy: (currentPrice: string) => {
     nextDecision: IDecisionEngine;
     buy: boolean;
@@ -44,15 +44,45 @@ abstract class DecisionEngine implements IDecisionEngine {
     stateLogger.info("CREATE", this);
   }
 
-  isAnIncrease = (currentPrice: Big): boolean =>
-    currentPrice
+  calculatePercentChange = (currentPrice: Big) =>
+    currentPrice.div(this.lastTickerPrice).minus("1");
+
+  isAnIncrease = (currentPrice: Big): boolean => {
+    const isAnIncrease = currentPrice
       .div(this.lastTickerPrice)
       .gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
 
-  isADecrease = (currentPrice: Big): boolean =>
-    currentPrice
+    const percentChange = roundTo3Dp(
+      this.calculatePercentChange(currentPrice).mul("100")
+    );
+
+    stateLogger.info("Is an increase?", {
+      currentPrice,
+      state: this,
+      isAnIncrease,
+      percentChange,
+    });
+    return isAnIncrease;
+  };
+
+  isADecrease = (currentPrice: Big): boolean => {
+    const isADecrease = currentPrice
       .div(this.lastTickerPrice)
       .lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
+
+    const percentChange = roundTo3Dp(
+      this.calculatePercentChange(currentPrice).mul("100")
+    );
+
+    stateLogger.info("Is a decrease?", {
+      currentPrice,
+      state: this,
+      isADecrease,
+      percentChange,
+    });
+
+    return isADecrease;
+  };
 
   meetsSellCriteria = (currentPrice: Big): boolean => {
     const percentIncrease = new Big(currentPrice)

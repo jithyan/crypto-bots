@@ -1,12 +1,44 @@
 import Big from "big.js";
+import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js";
+import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
 import { generalLogger } from "./log/index.js";
-import { truncTo3Dp, isGreaterThanZero } from "./utils.js";
+import { truncTo3Dp, isGreaterThanZero, sleep } from "./utils.js";
 import { AddressBook, binanceWallet } from "./wallet/index.js";
 
-binanceWallet
-  .balance("BNB")
-  .then(truncTo3Dp)
-  .then(() => binanceWallet.getLatestPrice("BNB", "BUSD"));
+async function* iterate(decision: IDecisionEngine) {
+  let bought = false;
+  let nextDecision: IDecisionEngine = decision;
+
+  while (true) {
+    const price = await binanceWallet.getLatestPrice("AVAX", "BUSD");
+    if (bought) {
+      const next = nextDecision.shouldSell(price);
+      nextDecision = next.nextDecision;
+      bought = !next.sell;
+    } else {
+      const next = nextDecision.shouldBuy(price);
+      nextDecision = next.nextDecision;
+      bought = next.buy;
+    }
+
+    await sleep();
+    yield nextDecision;
+  }
+}
+
+async function runIteration() {
+  const price = await binanceWallet.getLatestPrice("AVAX", "BUSD");
+  const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
+  for await (const nextDecision of iterate(decision)) {
+  }
+}
+
+runIteration();
+
+// binanceWallet
+//   .balance("BNB")
+//   .then(truncTo3Dp)
+//   .then(() => binanceWallet.getLatestPrice("BNB", "BUSD"));
 
 async function trade2() {
   const bnbBal = await binanceWallet.balance("BNB").then(truncTo3Dp);

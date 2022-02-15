@@ -8,7 +8,7 @@ export enum AddressBook {
   MOODY_POLONIEX = "0xa32a2a6fca43ba7ca8a2415aaf5f266fff21c0b4",
 }
 
-export type TSupportedCoins = "BNB" | "USDT" | "BUSD";
+export type TSupportedCoins = "BNB" | "USDT" | "BUSD" | "AVAX";
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
 
 export interface IWallet {

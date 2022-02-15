@@ -51,7 +51,11 @@ type TLogTradeData = Record<
   > & { action: "BUY" | "SELL" };
 
 export const logTrade = (data: TLogTradeData) => {
-  const timestamp = new Date().toISOString();
+  const timestamp = new Date()
+    .toLocaleString("en-AU", {
+      timeZone: "Australia/Sydney",
+    })
+    .split(", ")[1];
   const value = new Big(data.amount).mul(data.price).toFixed(3);
 
   const logData: Record<keyof typeof csvHeaders, string> = {
