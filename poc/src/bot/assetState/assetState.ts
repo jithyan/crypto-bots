@@ -121,15 +121,14 @@ export class HoldVolatileAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const [latestPrice, volatileAssetBalance] = await Promise.all([
-      this.getPrice(),
-      this.getBalance().then((bal) => new Big(bal)),
-    ]);
-
+    const latestPrice = await this.getPrice();
     const { sell, nextDecision } = this.decisionEngine.shouldSell(latestPrice);
 
     if (sell) {
-      const { clientOrderId, ...rest } = await binanceWallet.sell({
+      const volatileAssetBalance = await this.getBalance().then(
+        (bal) => new Big(bal)
+      );
+      const { clientOrderId } = await binanceWallet.sell({
         sellAsset: this.volatileAsset,
         forAsset: this.stableAsset,
         price: roundTo3Dp(latestPrice),
@@ -167,7 +166,7 @@ export class HoldVolatileAsset<
       });
 
       await sleep();
-      return this;
+      return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
     }
   };
 }
@@ -181,14 +180,13 @@ export class HoldStableAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const [latestPrice, stableAssetBalance] = await Promise.all([
-      this.getPrice(),
-      this.getBalance().then((bal) => new Big(bal)),
-    ]);
-
+    const latestPrice = await this.getPrice();
     const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
     if (buy) {
+      const stableAssetBalance = await this.getBalance().then(
+        (bal) => new Big(bal)
+      );
       const { clientOrderId } = await binanceWallet.buy({
         buyAsset: this.volatileAsset,
         withAsset: this.stableAsset,
@@ -229,7 +227,7 @@ export class HoldStableAsset<
       });
 
       await sleep();
-      return this;
+      return new HoldStableAsset({ ...this, decisionEngine: nextDecision });
     }
   };
 }

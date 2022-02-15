@@ -15,7 +15,7 @@ runCryptoBot();
 
 async function runCryptoBot() {
   for await (const nextState of executeTradeCycle({
-    volatileAsset: "BNB",
+    volatileAsset: "GRT",
     stableAsset: "BUSD",
   })) {
   }
