@@ -12,7 +12,7 @@ export function truncTo3Dp(price: string | number | Big) {
   return new Big(price).toFixed(3, Big.roundDown);
 }
 
-export async function sleep(minutes = 3) {
+export async function sleep(minutes = 3.5) {
   return new Promise<void>((resolve, reject) => {
     setTimeout(() => resolve(), minutes * 60 * 1000);
   });

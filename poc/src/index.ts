@@ -2,15 +2,40 @@ import Big from "big.js";
 import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js";
 import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
 import { generalLogger } from "./log/index.js";
-import { truncTo3Dp, isGreaterThanZero, sleep } from "./utils.js";
+import { truncTo3Dp, isGreaterThanZero, sleep, roundTo3Dp } from "./utils.js";
 import { AddressBook, binanceWallet } from "./wallet/index.js";
+
+runIteration();
+
+// buyBnbCheckOrderStatus();
+
+async function buyBnbCheckOrderStatus() {
+  const busdAmt = await binanceWallet.balance("BUSD").then(truncTo3Dp);
+  const bnbPrice = await binanceWallet
+    .getLatestPrice("BNB", "BUSD")
+    .then(roundTo3Dp);
+
+  const { clientOrderId } = await binanceWallet.buy({
+    buyAsset: "BNB",
+    withAsset: "BUSD",
+    price: bnbPrice,
+    quantity: truncTo3Dp(new Big(busdAmt).mul("0.99").div(bnbPrice)),
+  });
+
+  binanceWallet
+    .checkOrderStatus(clientOrderId, "BNBBUSD")
+    .then(({ clientOrderId, status, executedQty }) => {
+      console.log("FINISHED", { clientOrderId, status, executedQty });
+    });
+}
 
 async function* iterate(decision: IDecisionEngine) {
   let bought = false;
   let nextDecision: IDecisionEngine = decision;
 
   while (true) {
-    const price = await binanceWallet.getLatestPrice("AVAX", "BUSD");
+    const price = await binanceWallet.getLatestPrice("BNB", "BUSD");
+
     if (bought) {
       const next = nextDecision.shouldSell(price);
       nextDecision = next.nextDecision;
@@ -27,18 +52,11 @@ async function* iterate(decision: IDecisionEngine) {
 }
 
 async function runIteration() {
-  const price = await binanceWallet.getLatestPrice("AVAX", "BUSD");
+  const price = await binanceWallet.getLatestPrice("BNB", "BUSD");
   const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
   for await (const nextDecision of iterate(decision)) {
   }
 }
-
-runIteration();
-
-// binanceWallet
-//   .balance("BNB")
-//   .then(truncTo3Dp)
-//   .then(() => binanceWallet.getLatestPrice("BNB", "BUSD"));
 
 async function trade2() {
   const bnbBal = await binanceWallet.balance("BNB").then(truncTo3Dp);
