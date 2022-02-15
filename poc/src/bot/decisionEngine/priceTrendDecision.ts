@@ -21,10 +21,10 @@ type DecisionStates =
   | "UpwardPriceTrendConfirmed";
 
 const DecisionConfig = {
-  MAX_PERCENT_INCREASE_FOR_BUY: new Big("1.025"),
+  MAX_PERCENT_INCREASE_FOR_BUY: new Big("1.02"),
   MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015"),
-  PRICE_HAS_INCREASED_THRESHOLD: new Big("1.005"),
-  PRICE_HAS_DECREASED_THRESHOLD: new Big("0.995"),
+  PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00225"),
+  PRICE_HAS_DECREASED_THRESHOLD: new Big("1").minus(new Big("0.002")),
 };
 
 type TDecisionEngineData = Record<
@@ -41,34 +41,34 @@ abstract class DecisionEngine implements IDecisionEngine {
     this.lastTickerPrice = data.lastTickerPrice;
     this.lastPurchasePrice = data.lastPurchasePrice;
     this.state = state;
-    stateLogger.info("CREATE", this);
+    stateLogger.info("CREATE new " + this.state, this);
   }
 
   calculatePercentChange = (currentPrice: Big) =>
     currentPrice.div(this.lastTickerPrice).minus("1");
 
   isAnIncrease = (currentPrice: Big): boolean => {
-    const isAnIncrease = currentPrice
-      .div(this.lastTickerPrice)
-      .gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
+    const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
+    const isAnIncrease = ratio.gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
 
     const percentChange = roundTo3Dp(
       this.calculatePercentChange(currentPrice).mul("100")
     );
 
     stateLogger.info("Is an increase?", {
+      ratio,
       currentPrice,
       state: this,
       isAnIncrease,
       percentChange,
     });
+
     return isAnIncrease;
   };
 
   isADecrease = (currentPrice: Big): boolean => {
-    const isADecrease = currentPrice
-      .div(this.lastTickerPrice)
-      .lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
+    const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
+    const isADecrease = ratio.lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
 
     const percentChange = roundTo3Dp(
       this.calculatePercentChange(currentPrice).mul("100")
@@ -78,6 +78,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       currentPrice,
       state: this,
       isADecrease,
+      ratio,
       percentChange,
     });
 
@@ -321,7 +322,7 @@ export class UpwardPriceTrend extends DecisionEngine {
 
 export class UpwardPriceTrendConfirmed extends DecisionEngine {
   constructor(data: TDecisionEngineData) {
-    super("DownwardPriceTrend", data);
+    super("UpwardPriceTrendConfirmed", data);
   }
 
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
