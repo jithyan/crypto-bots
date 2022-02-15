@@ -1,5 +1,5 @@
 import Big, { BigSource } from "big.js";
-import { generalLogger } from "./log";
+import { generalLogger } from "./log/index.js";
 
 export function roundTo3Dp(price: string | number | Big) {
   return new Big(price).toFixed(3, Big.roundHalfEven);
