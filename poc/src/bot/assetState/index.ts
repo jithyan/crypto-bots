@@ -1,4 +1,4 @@
-import { HoldStableAsset } from "./assetState.js";
+import { HoldStableAsset, ITradeAssetCycle } from "./assetState.js";
 import {
   TVolatileCoins,
   TStableCoins,
@@ -9,7 +9,7 @@ import { startNewPriceTrendDecisionEngine } from "../decisionEngine";
 export async function initialiseAssetState(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
-}) {
+}): Promise<ITradeAssetCycle> {
   const currentPrice = await binanceWallet.getLatestPrice(
     args.volatileAsset,
     args.stableAsset

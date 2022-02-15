@@ -1,6 +1,7 @@
 import Big from "big.js";
 import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js";
 import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
+import { executeTradeCycle } from "./bot/index.js";
 import { generalLogger } from "./log/index.js";
 import {
   truncTo3Dp,
@@ -10,8 +11,15 @@ import {
 } from "./utils.js";
 import { AddressBook, binanceWallet } from "./wallet/index.js";
 
-runIteration();
+runPriceTrendDryRun();
 
+async function runCryptoBot() {
+  for await (const nextState of executeTradeCycle({
+    volatileAsset: "BNB",
+    stableAsset: "BUSD",
+  })) {
+  }
+}
 // buyBnbCheckOrderStatus();
 
 async function buyBnbCheckOrderStatus() {
@@ -34,7 +42,7 @@ async function buyBnbCheckOrderStatus() {
     });
 }
 
-async function* iterate(decision: IDecisionEngine) {
+async function* simulateBuySellCycle(decision: IDecisionEngine) {
   let bought = false;
   let nextDecision: IDecisionEngine = decision;
 
@@ -56,10 +64,10 @@ async function* iterate(decision: IDecisionEngine) {
   }
 }
 
-async function runIteration() {
+async function runPriceTrendDryRun() {
   const price = await binanceWallet.getLatestPrice("BNB", "BUSD");
   const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
-  for await (const nextDecision of iterate(decision)) {
+  for await (const nextDecision of simulateBuySellCycle(decision)) {
   }
 }
 
