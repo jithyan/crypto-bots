@@ -1,5 +1,6 @@
 import type {
   IBinanceAccountInfo,
+  IBinanceOrderDetails,
   TOrderCreateResponse,
   TTickerPriceResponse,
 } from "../types/binanceApi.alias";
@@ -18,6 +19,28 @@ export class BinanceWallet implements IWallet {
       process.env.BINANCE_SECRET?.trim()
     );
   }
+
+  checkOrderStatus = async (
+    origClientOrderId: string,
+    coinPair: TCoinPair
+  ): Promise<IBinanceOrderDetails> => {
+    apiLogger.info("Checking order status", {
+      origClientOrderId,
+      symbol: coinPair,
+    });
+
+    try {
+      const { data } = await this.client.getOrder(coinPair, {
+        origClientOrderId,
+      });
+      apiLogger.info("Order status", { data });
+
+      return data;
+    } catch (err) {
+      handleAxiosError("BUY failed", err);
+      throw err;
+    }
+  };
 
   getLatestPrice = async (
     assetToBuy: TSupportedCoins,
@@ -52,7 +75,7 @@ export class BinanceWallet implements IWallet {
     withAsset: TSupportedCoins;
     price: string;
     quantity: string;
-  }) => {
+  }): Promise<TOrderCreateResponse> => {
     apiLogger.info("Initiating BUY", {
       buyAsset,
       withAsset,
@@ -83,6 +106,7 @@ export class BinanceWallet implements IWallet {
       return data;
     } catch (err) {
       handleAxiosError("BUY failed", err);
+      throw err;
     }
   };
 
@@ -96,7 +120,7 @@ export class BinanceWallet implements IWallet {
     forAsset: TSupportedCoins;
     price: string;
     quantity: string;
-  }) => {
+  }): Promise<TOrderCreateResponse> => {
     apiLogger.info("Initiating SELL", {
       sellAsset,
       forAsset,
@@ -127,6 +151,7 @@ export class BinanceWallet implements IWallet {
       return data;
     } catch (err) {
       handleAxiosError("SELL failed", err);
+      throw err;
     }
   };
 
@@ -213,6 +238,11 @@ interface BinanceConnectorClient {
       timeInForce: TTimeInForce;
     }
   ) => Promise<AxiosResponse<TOrderCreateResponse>>;
+
+  getOrder: (
+    symbol: string,
+    options: Record<"origClientOrderId", string>
+  ) => Promise<AxiosResponse<IBinanceOrderDetails>>;
 
   tickerPrice: (
     coin: TCoinPair

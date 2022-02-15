@@ -1,4 +1,7 @@
-export type { Account as IBinanceAccountInfo } from "./binanceSpotApi.swagger";
+export type {
+  Account as IBinanceAccountInfo,
+  OrderDetails as IBinanceOrderDetails,
+} from "./binanceSpotApi.swagger";
 import type {
   OrderResponseAck,
   OrderResponseResult,
