@@ -1,4 +1,4 @@
-import Big from "big.js";
+import Big, { BigSource } from "big.js";
 import { stateLogger } from "../../log/index.js";
 import { roundTo3Dp, roundTo3Dp as truncTo3Dp } from "../../utils.js";
 
@@ -291,12 +291,13 @@ export class UpwardPriceTrend extends DecisionEngine {
   shouldBuy: IDecisionEngine["shouldBuy"] = (currentPrice) => {
     let result;
     if (this.isAnIncrease(new Big(currentPrice))) {
+      const isABuy = this.meetsBuyCriteria(new Big(currentPrice));
       result = {
         nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: this.lastPurchasePrice,
+          lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
-        buy: this.meetsBuyCriteria(new Big(currentPrice)),
+        buy: isABuy,
       };
     } else if (this.isADecrease(new Big(currentPrice))) {
       result = {
@@ -326,18 +327,10 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
   }
 
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
-    if (this.isAnIncrease(new Big(currentPrice))) {
-      return {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: this.meetsSellCriteria(new Big(currentPrice))
-            ? truncTo3Dp(currentPrice)
-            : this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
-        sell: this.meetsSellCriteria(new Big(currentPrice)),
-      };
-    } else if (this.isADecrease(new Big(currentPrice))) {
-      return {
+    let result;
+
+    if (this.isADecrease(new Big(currentPrice))) {
+      result = {
         nextDecision: new DownwardPriceTrend({
           lastPurchasePrice: this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
@@ -345,27 +338,25 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
         sell: false,
       };
     } else {
-      return {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
+      const isASell = this.meetsSellCriteria(new Big(currentPrice));
+      result = {
+        nextDecision: new UpwardPriceTrendConfirmed({
+          lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
-        sell: false,
+        sell: isASell,
       };
     }
+
+    this.logResult("SELL", result);
+    return result;
   };
 
   shouldBuy: IDecisionEngine["shouldBuy"] = (currentPrice) => {
-    if (this.isAnIncrease(new Big(currentPrice))) {
-      return {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
-        buy: this.meetsBuyCriteria(new Big(currentPrice)),
-      };
-    } else if (this.isADecrease(new Big(currentPrice))) {
-      return {
+    let result;
+
+    if (this.isADecrease(new Big(currentPrice))) {
+      result = {
         nextDecision: new DownwardPriceTrend({
           lastPurchasePrice: this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
@@ -373,15 +364,17 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
         buy: false,
       };
     } else {
-      return {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.meetsBuyCriteria(new Big(currentPrice))
-            ? truncTo3Dp(currentPrice)
-            : this.lastPurchasePrice,
+      const isABuy = this.meetsBuyCriteria(new Big(currentPrice));
+      result = {
+        nextDecision: new UpwardPriceTrendConfirmed({
+          lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
-        buy: this.meetsBuyCriteria(new Big(currentPrice)),
+        buy: isABuy,
       };
     }
+
+    this.logResult("BUY", result);
+    return result;
   };
 }
