@@ -4,7 +4,7 @@ import {
   TStableCoins,
   binanceWallet,
 } from "../../wallet/index.js";
-import { startNewPriceTrendDecisionEngine } from "../decisionEngine";
+import { startNewPriceTrendDecisionEngine } from "../decisionEngine/index.js";
 
 export async function initialiseAssetState(args: {
   volatileAsset: TVolatileCoins;

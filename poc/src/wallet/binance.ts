@@ -1,3 +1,6 @@
+//@ts-ignore
+import { Spot } from "@binance/connector";
+import { AxiosError, AxiosResponse } from "axios";
 import type {
   IBinanceAccountInfo,
   IBinanceOrderDetails,
@@ -5,10 +8,7 @@ import type {
   TTickerPriceResponse,
 } from "../types/binanceApi.alias";
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
-//@ts-ignore
-import { Spot } from "@binance/connector";
 import { apiLogger } from "../log/index.js";
-import { AxiosError, AxiosResponse } from "axios";
 
 export class BinanceWallet implements IWallet {
   private client: BinanceConnectorClient;

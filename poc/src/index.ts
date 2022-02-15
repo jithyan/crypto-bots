@@ -11,7 +11,7 @@ import {
 } from "./utils.js";
 import { AddressBook, binanceWallet } from "./wallet/index.js";
 
-runPriceTrendDryRun();
+runCryptoBot();
 
 async function runCryptoBot() {
   for await (const nextState of executeTradeCycle({
