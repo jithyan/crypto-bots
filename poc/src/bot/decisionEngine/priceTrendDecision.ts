@@ -22,7 +22,7 @@ type DecisionStates =
 
 const DecisionConfig = {
   MAX_PERCENT_INCREASE_FOR_BUY: new Big("1.02"),
-  MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015"),
+  MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.0151"),
   PRICE_HAS_INCREASED_THRESHOLD: new Big("1.0015"),
   PRICE_HAS_DECREASED_THRESHOLD: new Big("1").minus(new Big("0.00175")),
 };
@@ -104,19 +104,19 @@ abstract class DecisionEngine implements IDecisionEngine {
   };
 
   meetsBuyCriteria = (currentPrice: Big): boolean => {
-    const lastPriceIncreasedBy3Percent = new Big(this.lastTickerPrice)
+    const lastPriceIncreasedBy2Percent = new Big(this.lastTickerPrice)
       .mul(DecisionConfig.MAX_PERCENT_INCREASE_FOR_BUY)
       .toFixed(3);
 
     const result =
       currentPrice.gt(this.lastTickerPrice) &&
-      currentPrice.lt(lastPriceIncreasedBy3Percent);
+      currentPrice.lt(lastPriceIncreasedBy2Percent);
 
     stateLogger.debug("BUY CRITERIA", {
       state: this,
       result,
       currentPrice: currentPrice.toFixed(5),
-      lastPriceIncreasedBy3Percent,
+      lastPriceIncreasedBy3Percent: lastPriceIncreasedBy2Percent,
     });
 
     return result;
