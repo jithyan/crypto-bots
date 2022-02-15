@@ -55,7 +55,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       this.calculatePercentChange(currentPrice).mul("100")
     );
 
-    stateLogger.info("Is an increase?", {
+    stateLogger.debug("Is an increase?", {
       ratio,
       currentPrice,
       state: this,
@@ -74,7 +74,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       this.calculatePercentChange(currentPrice).mul("100")
     );
 
-    stateLogger.info("Is a decrease?", {
+    stateLogger.debug("Is a decrease?", {
       currentPrice,
       state: this,
       isADecrease,
@@ -94,7 +94,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       DecisionConfig.MIN_PERCENT_INCREASE_FOR_SELL
     );
 
-    stateLogger.info("SELL CRITERIA", {
+    stateLogger.debug("SELL CRITERIA", {
       state: this,
       result,
       currentPrice: currentPrice.toFixed(5),
@@ -112,7 +112,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       currentPrice.gt(this.lastTickerPrice) &&
       currentPrice.lt(lastPriceIncreasedBy3Percent);
 
-    stateLogger.info("BUY CRITERIA", {
+    stateLogger.debug("BUY CRITERIA", {
       state: this,
       result,
       currentPrice: currentPrice.toFixed(5),

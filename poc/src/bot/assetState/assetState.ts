@@ -26,40 +26,73 @@ export class AssetState<
   readonly state: TAssetStates;
   readonly stableAsset: StableAsset;
   readonly volatileAsset: VolatileAsset;
+  readonly isStableAssetClass: boolean;
 
   constructor({
     volatileAsset,
     stableAsset,
     state,
+    isStableAssetClass,
   }: {
     volatileAsset: VolatileAsset;
     stableAsset: StableAsset;
     state: TAssetStates;
+    isStableAssetClass: boolean;
   }) {
     this.symbol = `${volatileAsset}${stableAsset}`;
     this.state = state;
     this.stableAsset = stableAsset;
     this.volatileAsset = volatileAsset;
+    this.isStableAssetClass = isStableAssetClass;
 
     stateLogger.info("CREATE new " + this.state, this);
   }
 
-  getBalance = async (): Promise<Big> => {
-    const isStableAssetClass =
-      this.state === "HoldStableAsset" ||
-      this.state === "StableAssetOrderPlaced";
-
-    const balance = await binanceWallet.balance(
-      isStableAssetClass ? this.stableAsset : this.volatileAsset
+  isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
+    const { status, executedQty } = await binanceWallet.checkOrderStatus(
+      clientOrderId,
+      this.symbol
     );
+    const result = status.toUpperCase() === "FILLED";
+
+    stateLogger.debug(`Is order ${clientOrderId} filled?`, {
+      clientOrderId,
+      status,
+      executedQty,
+      result,
+      state: this,
+    });
+
+    return result;
+  };
+
+  getBalance = async (): Promise<Big> => {
+    const asset = this.isStableAssetClass
+      ? this.stableAsset
+      : this.volatileAsset;
+    const balance = await binanceWallet.balance(asset);
+
+    stateLogger.debug(`Checking balance of ${asset}`, {
+      state: this,
+      balance,
+    });
 
     return new Big(balance);
   };
 
-  getPrice = (): Promise<Big> =>
-    binanceWallet
-      .getLatestPrice(this.volatileAsset, this.stableAsset)
-      .then((price) => new Big(price));
+  getPrice = async (): Promise<Big> => {
+    const price = await binanceWallet.getLatestPrice(
+      this.volatileAsset,
+      this.stableAsset
+    );
+
+    stateLogger.debug(`Checking price of ${this.symbol}`, {
+      state: this,
+      price,
+    });
+
+    return new Big(price);
+  };
 
   execute: () => Promise<ITradeAssetCycle> = () => Promise.resolve(this);
 }

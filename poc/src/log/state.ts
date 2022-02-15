@@ -10,7 +10,7 @@ const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
 });
 
 export const stateLogger = winston.createLogger({
-  level: "info",
+  level: "debug",
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json()
