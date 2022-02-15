@@ -12,6 +12,8 @@ export interface IDecisionEngine {
     nextDecision: IDecisionEngine;
     sell: boolean;
   };
+
+  lastPurchasePrice: string;
 }
 
 type DecisionStates =

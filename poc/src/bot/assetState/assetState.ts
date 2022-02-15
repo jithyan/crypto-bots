@@ -1,5 +1,5 @@
 import Big from "big.js";
-import { stateLogger } from "../../log";
+import { logTrade, stateLogger } from "../../log";
 import {
   isBalanceGreaterThanZero,
   roundTo3Dp,
@@ -134,7 +134,7 @@ export class HoldVolatileAsset<
     const { sell, nextDecision } = this.decisionEngine.shouldSell(latestPrice);
 
     if (sell) {
-      const { clientOrderId } = await binanceWallet.sell({
+      const { clientOrderId, ...rest } = await binanceWallet.sell({
         sellAsset: this.volatileAsset,
         forAsset: this.stableAsset,
         price: roundTo3Dp(latestPrice),
@@ -152,6 +152,15 @@ export class HoldVolatileAsset<
         price: roundTo3Dp(latestPrice),
         quantity: volatileAssetBalance.toFixed(4),
         clientOrderId,
+      });
+
+      logTrade({
+        lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
+        price: latestPrice,
+        amount: volatileAssetBalance.toFixed(4),
+        from: this.volatileAsset,
+        to: this.stableAsset,
+        action: "SELL",
       });
 
       await sleep();
@@ -205,6 +214,18 @@ export class HoldStableAsset<
       });
 
       await sleep();
+
+      logTrade({
+        lastPurchasePrice: truncTo3Dp(
+          stableAssetBalance.mul("0.99").div(latestPrice)
+        ),
+        price: latestPrice,
+        amount: stableAssetBalance.toFixed(4),
+        from: this.stableAsset,
+        to: this.volatileAsset,
+        action: "BUY",
+      });
+
       return nextState;
     } else {
       stateLogger.info("HOLD STABLE ASSET - No state change", {

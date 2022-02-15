@@ -7,7 +7,7 @@ import type {
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 //@ts-ignore
 import { Spot } from "@binance/connector";
-import { apiLogger, logTrade } from "../log/index.js";
+import { apiLogger } from "../log/index.js";
 import { AxiosError, AxiosResponse } from "axios";
 
 export class BinanceWallet implements IWallet {
@@ -95,13 +95,6 @@ export class BinanceWallet implements IWallet {
         }
       );
       apiLogger.info("BUY success", { data });
-      logTrade({
-        price,
-        amount: quantity,
-        from: withAsset,
-        to: buyAsset,
-        action: "BUY",
-      });
 
       return data;
     } catch (err) {
@@ -140,13 +133,6 @@ export class BinanceWallet implements IWallet {
         }
       );
       apiLogger.info("SELL success", { data });
-      logTrade({
-        price,
-        amount: quantity,
-        from: sellAsset,
-        to: forAsset,
-        action: "SELL",
-      });
 
       return data;
     } catch (err) {

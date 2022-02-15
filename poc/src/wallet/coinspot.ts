@@ -54,13 +54,6 @@ export class CoinspotWallet implements IWallet {
       );
 
       apiLogger.info("Sell order at Coinspot success", { response });
-      logTrade({
-        amount,
-        price: rate,
-        action: "SELL",
-        from: cointype,
-        to: "AUD",
-      } as any);
 
       return true;
     } catch (e: unknown) {
@@ -93,13 +86,6 @@ export class CoinspotWallet implements IWallet {
       );
 
       apiLogger.info("Buy order at Coinspot success", { response });
-      logTrade({
-        amount,
-        price: rate,
-        action: "BUY",
-        from: cointype,
-        to: "USDC",
-      } as any);
 
       return true;
     } catch (e: any) {
