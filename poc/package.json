@@ -1,5 +1,5 @@
 {
-  "name": "poc",
+  "name": "trade-bot",
   "packageManager": "yarn@3.1.1",
   "type": "module",
   "bin": "dist/index.js",
@@ -10,7 +10,7 @@
     "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
     "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv",
     "build": "rimraf dist && yarn node esbuild.config.cjs",
-    "package:linux": "yarn build && yarn pkg package.json"
+    "pkg:linux": "yarn build && yarn pkg package.json --options optimize_for_size,max_old_space_size=512,gc_interval=1000"
   },
   "dependencies": {
     "@binance/connector": "^1.7.0",
@@ -34,7 +34,6 @@
     "targets": [
       "node17-linux-x64"
     ],
-    "options": "--optimize_for_size --max_old_space_size=512 --gc_interval=1000",
     "outputPath": "dist/linux"
   }
 }
