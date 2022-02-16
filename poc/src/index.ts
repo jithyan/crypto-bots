@@ -17,7 +17,7 @@ import {
 } from "./wallet/index.js";
 
 runCryptoBot({
-  volatileAsset: "CVX",
+  volatileAsset: "MOVR",
   stableAsset: "USDT",
   enableResume: true,
 });

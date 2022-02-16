@@ -34,7 +34,7 @@ export const apiLogger = winston.createLogger({
 if (process.env.NODE_ENV !== "production") {
   apiLogger.add(
     new winston.transports.Console({
-      format: winston.format.json(),
+      format: winston.format.colorize(),
     })
   );
 }

@@ -18,10 +18,10 @@ export const generalLogger = winston.createLogger({
   transports: [dailyRotationTransport],
 });
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production2") {
   generalLogger.add(
     new winston.transports.Console({
-      format: winston.format.json(),
+      format: winston.format.colorize(),
     })
   );
 }
