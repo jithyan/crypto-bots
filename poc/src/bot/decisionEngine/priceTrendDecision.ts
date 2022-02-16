@@ -1,6 +1,6 @@
 import Big from "big.js";
 import { stateLogger } from "../../log/index.js";
-import { roundTo3Dp, truncTo3Dp } from "../../utils.js";
+import { roundTo4Dp, truncTo4Dp } from "../../utils.js";
 
 export interface IDecisionEngine {
   shouldBuy: (currentPrice: string) => {
@@ -53,7 +53,7 @@ abstract class DecisionEngine implements IDecisionEngine {
     const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
     const isAnIncrease = ratio.gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
 
-    const percentChange = roundTo3Dp(
+    const percentChange = roundTo4Dp(
       this.calculatePercentChange(currentPrice).mul("100")
     );
 
@@ -72,7 +72,7 @@ abstract class DecisionEngine implements IDecisionEngine {
     const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
     const isADecrease = ratio.lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
 
-    const percentChange = roundTo3Dp(
+    const percentChange = roundTo4Dp(
       this.calculatePercentChange(currentPrice).mul("100")
     );
 

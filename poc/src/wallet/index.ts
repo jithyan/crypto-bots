@@ -1,5 +1,4 @@
 import { BinanceWallet } from "./binance.js";
-import { CoinspotWallet } from "./coinspot.js";
 
 export enum AddressBook {
   AARON_CSPOT_BEP20 = "0x02770a548f1c66c0d6fe4bab5db00183ac18a027",
@@ -8,7 +7,7 @@ export enum AddressBook {
   MOODY_POLONIEX = "0xa32a2a6fca43ba7ca8a2415aaf5f266fff21c0b4",
 }
 
-export type TVolatileCoins = "BNB" | "AVAX" | "ETH" | "MVR" | "CVX" | "GRT";
+export type TVolatileCoins = "BNB" | "AVAX" | "ETH" | "MVR" | "CVX" | "QTUM";
 export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC";
 export type TSupportedCoins = TStableCoins | TVolatileCoins;
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
@@ -25,4 +24,3 @@ export interface IWallet {
 }
 
 export const binanceWallet = new BinanceWallet();
-export const coinspotWallet = new CoinspotWallet();

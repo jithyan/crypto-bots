@@ -4,35 +4,39 @@ import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
 import { executeTradeCycle } from "./bot/index.js";
 import { generalLogger } from "./log/index.js";
 import {
-  truncTo3Dp,
+  truncTo4Dp,
   isBalanceGreaterThanZero,
   sleep,
-  roundTo3Dp,
+  roundTo4Dp,
 } from "./utils.js";
-import { AddressBook, binanceWallet } from "./wallet/index.js";
+import {
+  AddressBook,
+  binanceWallet,
+  TStableCoins,
+  TVolatileCoins,
+} from "./wallet/index.js";
 
-runCryptoBot();
+runCryptoBot({ volatileAsset: "BNB", stableAsset: "BUSD" });
 
-async function runCryptoBot() {
-  for await (const nextState of executeTradeCycle({
-    volatileAsset: "GRT",
-    stableAsset: "BUSD",
-  })) {
+async function runCryptoBot(args: {
+  volatileAsset: TVolatileCoins;
+  stableAsset: TStableCoins;
+}) {
+  for await (const nextState of executeTradeCycle(args)) {
   }
 }
-// buyBnbCheckOrderStatus();
 
 async function buyBnbCheckOrderStatus() {
-  const busdAmt = await binanceWallet.balance("BUSD").then(truncTo3Dp);
+  const busdAmt = await binanceWallet.balance("BUSD").then(truncTo4Dp);
   const bnbPrice = await binanceWallet
     .getLatestPrice("BNB", "BUSD")
-    .then(roundTo3Dp);
+    .then(roundTo4Dp);
 
   const { clientOrderId } = await binanceWallet.buy({
     buyAsset: "BNB",
     withAsset: "BUSD",
     price: bnbPrice,
-    quantity: truncTo3Dp(new Big(busdAmt).mul("0.99").div(bnbPrice)),
+    quantity: truncTo4Dp(new Big(busdAmt).mul("0.99").div(bnbPrice)),
   });
 
   binanceWallet
@@ -72,7 +76,7 @@ async function runPriceTrendDryRun() {
 }
 
 async function trade2() {
-  const bnbBal = await binanceWallet.balance("BNB").then(truncTo3Dp);
+  const bnbBal = await binanceWallet.balance("BNB").then(truncTo4Dp);
 
   if (isBalanceGreaterThanZero(bnbBal)) {
     const latestBnbPrice = await binanceWallet.getLatestPrice("BNB", "BUSD");
