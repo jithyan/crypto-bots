@@ -1,5 +1,5 @@
 import Big from "big.js";
-import { logTrade, stateLogger } from "../../log/index.js";
+import { apiLogger, logTrade, stateLogger } from "../../log/index.js";
 import {
   roundTo3Dp,
   roundTo4Dp,
@@ -117,6 +117,15 @@ export class AssetState<
       error: error.message,
       config: error.config,
     });
+
+    if (error.response?.data.code === -2015) {
+      apiLogger.error(
+        "FATAL BINANCE REJECTION - Update IP/Key",
+        error.response.data
+      );
+      throw new Error("FATAL BINANCE REJECTION - Update IP/Key");
+    }
+
     await sleep(1);
     return this;
   };
