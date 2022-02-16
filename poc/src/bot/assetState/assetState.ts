@@ -15,6 +15,7 @@ import {
 } from "../../wallet/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
 import fs from "fs";
+import { AxiosError } from "axios";
 
 export interface ITradeAssetCycle {
   execute: () => Promise<ITradeAssetCycle>;
@@ -111,6 +112,15 @@ export class AssetState<
     return balance;
   };
 
+  handleError = async (error: AxiosError) => {
+    stateLogger.error("API ERROR - not changing state", {
+      error: error.message,
+      config: error.config,
+    });
+    await sleep(1);
+    return this;
+  };
+
   getPrice = async (): Promise<string> => {
     const price = await binanceWallet.getLatestPrice(
       this.volatileAsset,
@@ -137,55 +147,60 @@ export class HoldVolatileAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const latestPrice = await this.getPrice();
-    const { sell, nextDecision } = this.decisionEngine.shouldSell(latestPrice);
+    try {
+      const latestPrice = await this.getPrice();
+      const { sell, nextDecision } =
+        this.decisionEngine.shouldSell(latestPrice);
 
-    if (sell) {
-      const volatileAssetBalance = await this.getBalance().then(
-        (bal) => new Big(bal)
-      );
-      const qtyToSell = truncTo4Dp(volatileAssetBalance);
-      const priceToSell = roundTo3Dp(latestPrice);
+      if (sell) {
+        const volatileAssetBalance = await this.getBalance().then(
+          (bal) => new Big(bal)
+        );
+        const qtyToSell = truncTo4Dp(volatileAssetBalance);
+        const priceToSell = roundTo3Dp(latestPrice);
 
-      const { clientOrderId } = await binanceWallet.sell({
-        sellAsset: this.volatileAsset,
-        forAsset: this.stableAsset,
-        price: priceToSell,
-        quantity: qtyToSell,
-      });
+        const { clientOrderId } = await binanceWallet.sell({
+          sellAsset: this.volatileAsset,
+          forAsset: this.stableAsset,
+          price: priceToSell,
+          quantity: qtyToSell,
+        });
 
-      const nextState = new StableAssetOrderPlaced(
-        { ...this, decisionEngine: nextDecision },
-        clientOrderId
-      );
+        const nextState = new StableAssetOrderPlaced(
+          { ...this, decisionEngine: nextDecision },
+          clientOrderId
+        );
 
-      stateLogger.info("SOLD VOLATILE ASSET", {
-        state: this,
-        nextState,
-        price: priceToSell,
-        quantity: qtyToSell,
-        clientOrderId,
-      });
+        stateLogger.info("SOLD VOLATILE ASSET", {
+          state: this,
+          nextState,
+          price: priceToSell,
+          quantity: qtyToSell,
+          clientOrderId,
+        });
 
-      logTrade({
-        lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
-        price: priceToSell,
-        amount: qtyToSell,
-        from: this.volatileAsset,
-        to: this.stableAsset,
-        action: "SELL",
-      });
+        logTrade({
+          lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
+          price: priceToSell,
+          amount: qtyToSell,
+          from: this.volatileAsset,
+          to: this.stableAsset,
+          action: "SELL",
+        });
 
-      await sleep();
-      return nextState;
-    } else {
-      stateLogger.info("HOLD VOLATILE ASSET - No state change", {
-        state: this,
-        latestPrice,
-      });
+        await sleep();
+        return nextState;
+      } else {
+        stateLogger.info("HOLD VOLATILE ASSET - No state change", {
+          state: this,
+          latestPrice,
+        });
 
-      await sleep();
-      return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
+        await sleep();
+        return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
+      }
+    } catch (err: any) {
+      return this.handleError(err);
     }
   };
 }
@@ -199,57 +214,61 @@ export class HoldStableAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const latestPrice = await this.getPrice().then(truncTo3Dp);
-    const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
+    try {
+      const latestPrice = await this.getPrice().then(truncTo3Dp);
+      const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
-    if (buy) {
-      const stableAssetBalance = await this.getBalance().then(
-        (bal) => new Big(bal)
-      );
-      const qtyToBuy = truncTo3Dp(
-        stableAssetBalance.mul("0.99").div(latestPrice)
-      );
+      if (buy) {
+        const stableAssetBalance = await this.getBalance().then(
+          (bal) => new Big(bal)
+        );
+        const qtyToBuy = truncTo3Dp(
+          stableAssetBalance.mul("0.99").div(latestPrice)
+        );
 
-      const { clientOrderId } = await binanceWallet.buy({
-        buyAsset: this.volatileAsset,
-        withAsset: this.stableAsset,
-        price: latestPrice,
-        quantity: qtyToBuy,
-      });
+        const { clientOrderId } = await binanceWallet.buy({
+          buyAsset: this.volatileAsset,
+          withAsset: this.stableAsset,
+          price: latestPrice,
+          quantity: qtyToBuy,
+        });
 
-      const nextState = new VolatileAssetOrderPlaced(
-        { ...this, decisionEngine: nextDecision },
-        clientOrderId
-      );
+        const nextState = new VolatileAssetOrderPlaced(
+          { ...this, decisionEngine: nextDecision },
+          clientOrderId
+        );
 
-      stateLogger.info("BOUGHT VOLATILE ASSET", {
-        state: this,
-        nextState,
-        latestPrice,
-        clientOrderId,
-        qtyToBuy,
-      });
+        stateLogger.info("BOUGHT VOLATILE ASSET", {
+          state: this,
+          nextState,
+          latestPrice,
+          clientOrderId,
+          qtyToBuy,
+        });
 
-      await sleep();
+        await sleep();
 
-      logTrade({
-        lastPurchasePrice: "N/A",
-        price: latestPrice,
-        amount: qtyToBuy,
-        from: this.stableAsset,
-        to: this.volatileAsset,
-        action: "BUY",
-      });
+        logTrade({
+          lastPurchasePrice: "N/A",
+          price: latestPrice,
+          amount: qtyToBuy,
+          from: this.stableAsset,
+          to: this.volatileAsset,
+          action: "BUY",
+        });
 
-      return nextState;
-    } else {
-      stateLogger.info("HOLD STABLE ASSET - No state change", {
-        state: this,
-        latestPrice,
-      });
+        return nextState;
+      } else {
+        stateLogger.info("HOLD STABLE ASSET - No state change", {
+          state: this,
+          latestPrice,
+        });
 
-      await sleep();
-      return new HoldStableAsset({ ...this, decisionEngine: nextDecision });
+        await sleep();
+        return new HoldStableAsset({ ...this, decisionEngine: nextDecision });
+      }
+    } catch (err: any) {
+      return this.handleError(err);
     }
   };
 }
@@ -269,20 +288,24 @@ abstract class AssetOrderPlaced<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const orderFilled = await this.isOrderFilled(this.clientOrderId);
+    try {
+      const orderFilled = await this.isOrderFilled(this.clientOrderId);
 
-    if (orderFilled) {
-      const nextState = this.isStableAssetClass
-        ? new HoldStableAsset(this)
-        : new HoldVolatileAsset(this);
+      if (orderFilled) {
+        const nextState = this.isStableAssetClass
+          ? new HoldStableAsset(this)
+          : new HoldVolatileAsset(this);
 
-      stateLogger.info("ORDER FILLED", { currentState: this, nextState });
-      return nextState;
-    } else {
-      stateLogger.info("ORDER NOT FILLED - No state change", {
-        currentState: this,
-      });
-      return this;
+        stateLogger.info("ORDER FILLED", { currentState: this, nextState });
+        return nextState;
+      } else {
+        stateLogger.info("ORDER NOT FILLED - No state change", {
+          currentState: this,
+        });
+        return this;
+      }
+    } catch (err: any) {
+      return this.handleError(err);
     }
   };
 }
