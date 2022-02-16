@@ -2,11 +2,24 @@
   "name": "poc",
   "packageManager": "yarn@3.1.1",
   "type": "module",
+  "bin": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "cleanup": "rimraf build",
     "dev": "yarn cleanup && tsc && node -r dotenv/config build/index.js",
     "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
-    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv"
+    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv",
+    "build": "rimraf dist && yarn node esbuild.config.cjs",
+    "package:linux": "yarn build && yarn pkg package.json"
+  },
+  "dependencies": {
+    "@binance/connector": "^1.7.0",
+    "axios": "^0.25.0",
+    "big.js": "^6.1.1",
+    "poloniex-node-api": "^5.0.0",
+    "winston": "^3.5.1",
+    "winston-csv-format": "^2.0.2",
+    "winston-daily-rotate-file": "^4.6.0"
   },
   "devDependencies": {
     "@types/big.js": "^6.1.3",
@@ -17,13 +30,11 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.5.5"
   },
-  "dependencies": {
-    "@binance/connector": "^1.7.0",
-    "axios": "^0.25.0",
-    "big.js": "^6.1.1",
-    "poloniex-node-api": "^5.0.0",
-    "winston": "^3.5.1",
-    "winston-csv-format": "^2.0.2",
-    "winston-daily-rotate-file": "^4.6.0"
+  "pkg": {
+    "targets": [
+      "node17-linux-x64"
+    ],
+    "options": "--optimize_for_size --max_old_space_size=512 --gc_interval=1000",
+    "outputPath": "dist/linux"
   }
 }
