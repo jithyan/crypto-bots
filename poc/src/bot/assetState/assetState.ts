@@ -128,11 +128,14 @@ export class HoldVolatileAsset<
       const volatileAssetBalance = await this.getBalance().then(
         (bal) => new Big(bal)
       );
+      const qtyToSell = truncTo4Dp(volatileAssetBalance);
+      const priceToSell = roundTo4Dp(latestPrice);
+
       const { clientOrderId } = await binanceWallet.sell({
         sellAsset: this.volatileAsset,
         forAsset: this.stableAsset,
-        price: roundTo4Dp(latestPrice),
-        quantity: volatileAssetBalance.toFixed(4),
+        price: priceToSell,
+        quantity: qtyToSell,
       });
 
       const nextState = new StableAssetOrderPlaced(
@@ -143,15 +146,15 @@ export class HoldVolatileAsset<
       stateLogger.info("SOLD VOLATILE ASSET", {
         state: this,
         nextState,
-        price: roundTo4Dp(latestPrice),
-        quantity: volatileAssetBalance.toFixed(4),
+        price: priceToSell,
+        quantity: qtyToSell,
         clientOrderId,
       });
 
       logTrade({
         lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
-        price: latestPrice,
-        amount: volatileAssetBalance.toFixed(4),
+        price: priceToSell,
+        amount: qtyToSell,
         from: this.volatileAsset,
         to: this.stableAsset,
         action: "SELL",
@@ -180,19 +183,22 @@ export class HoldStableAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const latestPrice = await this.getPrice();
+    const latestPrice = await this.getPrice().then(truncTo4Dp);
     const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
     if (buy) {
       const stableAssetBalance = await this.getBalance().then(
         (bal) => new Big(bal)
       );
+      const qtyToBuy = truncTo4Dp(
+        stableAssetBalance.mul("0.99").div(latestPrice)
+      );
 
       const { clientOrderId } = await binanceWallet.buy({
         buyAsset: this.volatileAsset,
         withAsset: this.stableAsset,
         price: latestPrice,
-        quantity: truncTo4Dp(stableAssetBalance.mul("0.99").div(latestPrice)),
+        quantity: qtyToBuy,
       });
 
       const nextState = new VolatileAssetOrderPlaced(
@@ -205,16 +211,15 @@ export class HoldStableAsset<
         nextState,
         latestPrice,
         clientOrderId,
+        qtyToBuy,
       });
 
       await sleep();
 
       logTrade({
-        lastPurchasePrice: truncTo4Dp(
-          stableAssetBalance.mul("0.99").div(latestPrice)
-        ),
+        lastPurchasePrice: "N/A",
         price: latestPrice,
-        amount: stableAssetBalance.toFixed(4),
+        amount: qtyToBuy,
         from: this.stableAsset,
         to: this.volatileAsset,
         action: "BUY",
@@ -249,8 +254,6 @@ abstract class AssetOrderPlaced<
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
     const orderFilled = await this.isOrderFilled(this.clientOrderId);
-    // DOES THIS NEED TO BE HERE?
-    await sleep();
 
     if (orderFilled) {
       const nextState = this.isStableAssetClass

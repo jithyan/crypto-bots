@@ -57,7 +57,10 @@ export const logTrade = ({ lastPurchasePrice, ...data }: TLogTradeData) => {
     })
     .split(", ")[1];
   const value = new Big(data.amount).mul(data.price).toFixed(3);
-  const profit = new Big(value).minus(new Big(lastPurchasePrice)).toFixed(3);
+  const profit =
+    data.action === "SELL"
+      ? new Big(value).minus(new Big(lastPurchasePrice)).toFixed(3)
+      : "N/A";
 
   const logData: Record<keyof typeof csvHeaders, string> = {
     ...data,
