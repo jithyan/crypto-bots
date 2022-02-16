@@ -24,7 +24,7 @@ export type DecisionStates =
 
 const DecisionConfig = {
   MAX_PERCENT_INCREASE_FOR_BUY: new Big("1.02"),
-  MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.0151"),
+  MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015"),
   PRICE_HAS_INCREASED_THRESHOLD: new Big("1.0015"),
   PRICE_HAS_DECREASED_THRESHOLD: new Big("1").minus(new Big("0.00175")),
 };

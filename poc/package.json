@@ -9,8 +9,8 @@
     "dev": "yarn cleanup && tsc && node -r dotenv/config build/index.js",
     "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
     "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv",
-    "build": "rimraf dist && yarn node esbuild.config.cjs",
-    "pkg:linux": "yarn build && yarn pkg package.json --options optimize_for_size,max_old_space_size=512,gc_interval=1000"
+    "build": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs",
+    "pkg:linux": "yarn build && yarn pkg package.json --options optimize_for_size,max_old_space_size=512,use-idle-notification,stress-incremental-marking"
   },
   "dependencies": {
     "@binance/connector": "^1.7.0",

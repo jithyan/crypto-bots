@@ -21,5 +21,7 @@ build({
   define: {
     "process.env.NODE_ENV": '"production"',
     "process.env.APP_VERSION": `"${revision}"`,
+    "process.env.BINANCE_KEY": `"${process.env.BINANCE_KEY}"`,
+    "process.env.BINANCE_SECRET": `"${process.env.BINANCE_SECRET}"`,
   },
 });
