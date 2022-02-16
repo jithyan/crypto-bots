@@ -1,6 +1,12 @@
 import Big from "big.js";
 import { logTrade, stateLogger } from "../../log/index.js";
-import { roundTo4Dp, sleep, truncTo4Dp } from "../../utils.js";
+import {
+  roundTo3Dp,
+  roundTo4Dp,
+  sleep,
+  truncTo3Dp,
+  truncTo4Dp,
+} from "../../utils.js";
 import {
   binanceWallet,
   TCoinPair,
@@ -139,7 +145,7 @@ export class HoldVolatileAsset<
         (bal) => new Big(bal)
       );
       const qtyToSell = truncTo4Dp(volatileAssetBalance);
-      const priceToSell = roundTo4Dp(latestPrice);
+      const priceToSell = roundTo3Dp(latestPrice);
 
       const { clientOrderId } = await binanceWallet.sell({
         sellAsset: this.volatileAsset,
@@ -193,14 +199,14 @@ export class HoldStableAsset<
   }
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
-    const latestPrice = await this.getPrice().then(truncTo4Dp);
+    const latestPrice = await this.getPrice().then(truncTo3Dp);
     const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
     if (buy) {
       const stableAssetBalance = await this.getBalance().then(
         (bal) => new Big(bal)
       );
-      const qtyToBuy = truncTo4Dp(
+      const qtyToBuy = truncTo3Dp(
         stableAssetBalance.mul("0.99").div(latestPrice)
       );
 

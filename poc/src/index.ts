@@ -17,8 +17,8 @@ import {
 } from "./wallet/index.js";
 
 runCryptoBot({
-  volatileAsset: "LUNA",
-  stableAsset: "BUSD",
+  volatileAsset: "CVX",
+  stableAsset: "USDT",
   enableResume: true,
 });
 
