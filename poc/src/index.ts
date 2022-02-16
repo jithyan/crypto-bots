@@ -16,12 +16,14 @@ import {
   TVolatileCoins,
 } from "./wallet/index.js";
 
-runCryptoBot({ volatileAsset: "CVX", stableAsset: "USDT" });
+runCryptoBot({ volatileAsset: "CVX", stableAsset: "USDT", enableResume: true });
 
 async function runCryptoBot(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
+  enableResume: boolean;
 }) {
+  generalLogger.info("Starting bot version: " + process.env.APP_VERSION, args);
   for await (const nextState of executeTradeCycle(args)) {
   }
 }

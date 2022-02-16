@@ -20,5 +20,6 @@ build({
   format: "cjs",
   define: {
     "process.env.NODE_ENV": '"production"',
+    "process.env.APP_VERSION": `"${revision}"`,
   },
 });

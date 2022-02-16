@@ -16,7 +16,7 @@ export interface IDecisionEngine {
   lastPurchasePrice: string;
 }
 
-type DecisionStates =
+export type DecisionStates =
   | "Start"
   | "UpwardPriceTrend"
   | "DownwardPriceTrend"

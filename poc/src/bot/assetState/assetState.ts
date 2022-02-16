@@ -8,12 +8,14 @@ import {
   TVolatileCoins,
 } from "../../wallet/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
+import fs from "fs";
 
 export interface ITradeAssetCycle {
   execute: () => Promise<ITradeAssetCycle>;
+  dehydrate: () => void;
 }
 
-type TAssetStates =
+export type TAssetStates =
   | "HoldVolatileAsset"
   | "HoldStableAsset"
   | "VolatileAssetOrderPlaced"
@@ -34,6 +36,7 @@ type TAssetStateChildArguments<VolatileAsset, StableAsset> = Omit<
   TAssetStateParentOnlyArguments
 >;
 
+const version = process.env.APP_VERSION;
 export class AssetState<
   VolatileAsset extends TVolatileCoins,
   StableAsset extends TStableCoins
@@ -62,6 +65,13 @@ export class AssetState<
 
     stateLogger.info("CREATE new " + this.state, this);
   }
+
+  dehydrate = () => {
+    fs.writeFileSync(
+      `./${version}_${this.symbol}_appState.json`,
+      JSON.stringify(this, undefined, 2)
+    );
+  };
 
   isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
     const { status, executedQty } = await binanceWallet.checkOrderStatus(
