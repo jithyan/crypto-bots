@@ -7,7 +7,7 @@ export enum AddressBook {
   MOODY_POLONIEX = "0xa32a2a6fca43ba7ca8a2415aaf5f266fff21c0b4",
 }
 
-export type TVolatileCoins = "BNB" | "AVAX" | "ETH" | "MVR" | "CVX" | "QTUM";
+export type TVolatileCoins = "BNB" | "AVAX" | "ETH" | "MVR" | "CVX" | "LUNA";
 export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC";
 export type TSupportedCoins = TStableCoins | TVolatileCoins;
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;

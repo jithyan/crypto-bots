@@ -16,7 +16,11 @@ import {
   TVolatileCoins,
 } from "./wallet/index.js";
 
-runCryptoBot({ volatileAsset: "CVX", stableAsset: "USDT", enableResume: true });
+runCryptoBot({
+  volatileAsset: "LUNA",
+  stableAsset: "BUSD",
+  enableResume: true,
+});
 
 async function runCryptoBot(args: {
   volatileAsset: TVolatileCoins;
