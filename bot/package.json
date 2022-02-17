@@ -12,7 +12,8 @@
     "build:local": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs",
     "build:cloud": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs dotenv_config_path=.cloud.env dotenv_config_debug=true",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "pkg:linux:cloud": "yarn build && yarn pkg package.json --options"
+    "pkg:linux:cloud": "yarn build && yarn pkg package.json --options",
+    "make": "zx make.mjs"
   },
   "dependencies": {
     "@binance/connector": "^1.7.0",
