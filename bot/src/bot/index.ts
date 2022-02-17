@@ -1,5 +1,5 @@
 import { generalLogger } from "../log/index.js";
-import { TVolatileCoins, TStableCoins } from "../wallet/index.js";
+import { TVolatileCoins, TStableCoins } from "../exchange/index.js";
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 
 const version = process.env.APP_VERSION;

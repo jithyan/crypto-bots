@@ -1,4 +1,4 @@
-import { BinanceWallet } from "./binance.js";
+import { BinanceApi } from "./binance.js";
 
 export enum AddressBook {
   AARON_CSPOT_BEP20 = "0x02770a548f1c66c0d6fe4bab5db00183ac18a027",
@@ -30,4 +30,4 @@ export interface IWallet {
   balance: (coin: TSupportedCoins) => Promise<string>;
 }
 
-export const binanceWallet = new BinanceWallet();
+export const binanceClient = new BinanceApi();

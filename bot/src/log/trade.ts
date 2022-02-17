@@ -3,7 +3,7 @@ import CSV from "winston-csv-format";
 import { createLogger, transports } from "winston";
 import Big from "big.js";
 import DailyRotateFile from "winston-daily-rotate-file";
-import type { TSupportedCoins } from "../wallet/index.js";
+import type { TSupportedCoins } from "../exchange/index.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",

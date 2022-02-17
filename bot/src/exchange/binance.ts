@@ -10,7 +10,7 @@ import type {
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
 
-export class BinanceWallet implements IWallet {
+export class BinanceApi implements IWallet {
   private client: BinanceConnectorClient;
 
   constructor() {

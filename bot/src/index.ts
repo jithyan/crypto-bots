@@ -11,10 +11,10 @@ import {
 } from "./utils.js";
 import {
   AddressBook,
-  binanceWallet,
+  binanceClient,
   TStableCoins,
   TVolatileCoins,
-} from "./wallet/index.js";
+} from "./exchange/index.js";
 
 runCryptoBot({
   volatileAsset: "CVX",
@@ -28,28 +28,8 @@ async function runCryptoBot(args: {
   enableResume: boolean;
 }) {
   generalLogger.info("Starting bot version: " + process.env.APP_VERSION, args);
-  for await (const nextState of executeTradeCycle(args)) {
+  for await (const _ of executeTradeCycle(args)) {
   }
-}
-
-async function buyBnbCheckOrderStatus() {
-  const busdAmt = await binanceWallet.balance("BUSD").then(truncTo4Dp);
-  const bnbPrice = await binanceWallet
-    .getLatestPrice("BNB", "BUSD")
-    .then(roundTo4Dp);
-
-  const { clientOrderId } = await binanceWallet.buy({
-    buyAsset: "BNB",
-    withAsset: "BUSD",
-    price: bnbPrice,
-    quantity: truncTo4Dp(new Big(busdAmt).mul("0.99").div(bnbPrice)),
-  });
-
-  binanceWallet
-    .checkOrderStatus(clientOrderId, "BNBBUSD")
-    .then(({ clientOrderId, status, executedQty }) => {
-      console.log("FINISHED", { clientOrderId, status, executedQty });
-    });
 }
 
 async function* simulateBuySellCycle(decision: IDecisionEngine) {
@@ -57,7 +37,7 @@ async function* simulateBuySellCycle(decision: IDecisionEngine) {
   let nextDecision: IDecisionEngine = decision;
 
   while (true) {
-    const price = await binanceWallet.getLatestPrice("BNB", "BUSD");
+    const price = await binanceClient.getLatestPrice("BNB", "BUSD");
 
     if (bought) {
       const next = nextDecision.shouldSell(price);
@@ -75,22 +55,22 @@ async function* simulateBuySellCycle(decision: IDecisionEngine) {
 }
 
 async function runPriceTrendDryRun() {
-  const price = await binanceWallet.getLatestPrice("BNB", "BUSD");
+  const price = await binanceClient.getLatestPrice("BNB", "BUSD");
   const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
   for await (const nextDecision of simulateBuySellCycle(decision)) {
   }
 }
 
 async function trade2() {
-  const bnbBal = await binanceWallet.balance("BNB").then(truncTo4Dp);
+  const bnbBal = await binanceClient.balance("BNB").then(truncTo4Dp);
 
   if (isBalanceGreaterThanZero(bnbBal)) {
-    const latestBnbPrice = await binanceWallet.getLatestPrice("BNB", "BUSD");
+    const latestBnbPrice = await binanceClient.getLatestPrice("BNB", "BUSD");
     const askPrice = new Big(
       new Big(latestBnbPrice).mul(new Big("1.005"))
     ).toFixed(1);
     const qty = new Big(bnbBal).mul(new Big(askPrice));
-    binanceWallet
+    binanceClient
       .sell({
         sellAsset: "BNB",
         forAsset: "BUSD",
@@ -103,33 +83,12 @@ async function trade2() {
   }
 }
 
-async function tradeCycle() {
-  const usdtBal = await binanceWallet.balance("USDT");
-
-  if (isBalanceGreaterThanZero(usdtBal)) {
-    const latestBusdPrice = await binanceWallet.getLatestPrice("BUSD", "USDT");
-    const qtyToBuy = new Big(usdtBal)
-      .div(new Big(latestBusdPrice).mul(new Big("1.01")))
-      .toFixed(3);
-    binanceWallet
-      .buy({
-        buyAsset: "BUSD",
-        withAsset: "USDT",
-        price: latestBusdPrice,
-        quantity: "13",
-      })
-      .then((res) => {
-        console.log("Fin", res);
-      });
-  }
-}
-
 async function transferBnbFromBinanceToCoinspot() {
-  binanceWallet.balance("BNB").then((balance) => {
+  binanceClient.balance("BNB").then((balance) => {
     generalLogger.info("Binance BNB balance", { balance });
 
     if (isBalanceGreaterThanZero(balance)) {
-      binanceWallet.withdraw("BNB", AddressBook.MOODY_CSPOT_BEP20, balance);
+      binanceClient.withdraw("BNB", AddressBook.MOODY_CSPOT_BEP20, balance);
     } else {
       generalLogger.info("Balance not greater than zero", { balance });
     }

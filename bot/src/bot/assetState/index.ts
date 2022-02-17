@@ -10,8 +10,8 @@ import {
 import {
   TVolatileCoins,
   TStableCoins,
-  binanceWallet,
-} from "../../wallet/index.js";
+  binanceClient,
+} from "../../exchange/index.js";
 import { startNewPriceTrendDecisionEngine } from "../decisionEngine/index.js";
 import { generalLogger } from "../../log/index.js";
 import {
@@ -93,7 +93,7 @@ export async function initialiseAssetState(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
 }): Promise<ITradeAssetCycle> {
-  const currentPrice = await binanceWallet.getLatestPrice(
+  const currentPrice = await binanceClient.getLatestPrice(
     args.volatileAsset,
     args.stableAsset
   );

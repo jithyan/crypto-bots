@@ -8,11 +8,11 @@ import {
   truncTo4Dp,
 } from "../../utils.js";
 import {
-  binanceWallet,
+  binanceClient,
   TCoinPair,
   TStableCoins,
   TVolatileCoins,
-} from "../../wallet/index.js";
+} from "../../exchange/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
 import fs from "fs";
 import { AxiosError } from "axios";
@@ -81,7 +81,7 @@ export class AssetState<
   };
 
   isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
-    const { status, executedQty } = await binanceWallet.checkOrderStatus(
+    const { status, executedQty } = await binanceClient.checkOrderStatus(
       clientOrderId,
       this.symbol
     );
@@ -102,7 +102,7 @@ export class AssetState<
     const asset = this.isStableAssetClass
       ? this.stableAsset
       : this.volatileAsset;
-    const balance = await binanceWallet.balance(asset);
+    const balance = await binanceClient.balance(asset);
 
     stateLogger.debug(`Checking balance of ${asset}`, {
       state: this,
@@ -131,7 +131,7 @@ export class AssetState<
   };
 
   getPrice = async (): Promise<string> => {
-    const price = await binanceWallet.getLatestPrice(
+    const price = await binanceClient.getLatestPrice(
       this.volatileAsset,
       this.stableAsset
     );
@@ -168,7 +168,7 @@ export class HoldVolatileAsset<
         const qtyToSell = truncTo4Dp(volatileAssetBalance);
         const priceToSell = roundTo3Dp(latestPrice);
 
-        const { clientOrderId } = await binanceWallet.sell({
+        const { clientOrderId } = await binanceClient.sell({
           sellAsset: this.volatileAsset,
           forAsset: this.stableAsset,
           price: priceToSell,
@@ -235,7 +235,7 @@ export class HoldStableAsset<
           stableAssetBalance.mul("0.99").div(latestPrice)
         );
 
-        const { clientOrderId } = await binanceWallet.buy({
+        const { clientOrderId } = await binanceClient.buy({
           buyAsset: this.volatileAsset,
           withAsset: this.stableAsset,
           price: latestPrice,
