@@ -1,6 +1,6 @@
 /.yarn/*
 node_modules
-/bot/.env
+/bot/*.env
 build
 dist
 

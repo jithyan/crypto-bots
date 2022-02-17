@@ -1,23 +1,42 @@
 #!/usr/bin/env zx
-//import 'zx/globals'
+import "zx/globals";
 
-const volatile = (await question("What's the volatile coin symbol? ")).trim().toUpperCase()
-const stable = (await question("What's the stable coin symbol? ")).trim().toUpperCase()
-const cloudOrError = (await question("Build for cloud or local? ")).trim().toUpperCase()
+const volatile = (await question("What's the volatile coin symbol? "))
+  .trim()
+  .toUpperCase();
+const stable = (await question("What's the stable coin symbol? "))
+  .trim()
+  .toUpperCase();
+const cloudOrLocal = (await question("Build for cloud or local? ")).trim();
 
-if (cloudOrError !== "cloud" && cloudOrError !== "local") {
-    throw new Error("Invalid answer: must be either cloud or local, not " + cloudOrError)
+if (cloudOrLocal !== "cloud" && cloudOrLocal !== "local") {
+  throw new Error(
+    "Invalid answer: must be either cloud or local, not " + cloudOrLocal
+  );
 }
 
-const filename = `${volatile}${stable}_bot`
+const filename = `${volatile}${stable}_bot`;
+const env = fs
+  .readFileSync(`.${cloudOrLocal}.env`, "utf8")
+  .split("\n")
+  .filter(
+    (v) =>
+      !v.startsWith("STABLE_COIN") ||
+      !v.startsWith("VOLATILE_COIN") ||
+      !Boolean(v)
+  )
+  .concat([`STABLE_COIN=${stable}`, `VOLATILE_COIN=${volatile}`])
+  .join("\n");
 
-if (cloudOrError === "cloud") {
-    await $`await yarn pkg:linux:cloud`
+console.log("Env", env);
+
+fs.writeFileSync("./.env", env, "utf8");
+
+if (cloudOrLocal === "cloud") {
+  await $`yarn pkg:linux:cloud`;
 } else {
-    await $`await yarn pkg:linux:local`
+  await $`yarn pkg:linux:local`;
 }
 
-await $`mkdir -p dist/${volatile}${stable}`
-await $`mv dist/linux/bot dist/${filename}`
-
-
+await $`mkdir -p dist/${volatile}${stable}`;
+await $`mv dist/linux/bot dist/${volatile}${stable}/${filename}`;

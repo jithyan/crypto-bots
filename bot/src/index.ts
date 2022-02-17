@@ -17,8 +17,8 @@ import {
 } from "./exchange/index.js";
 
 runCryptoBot({
-  volatileAsset: "CVX",
-  stableAsset: "BUSD",
+  volatileAsset: process.env.VOLATILE_COIN as any,
+  stableAsset: process.env.STABLE_COIN as any,
   enableResume: true,
 });
 
@@ -27,6 +27,9 @@ async function runCryptoBot(args: {
   stableAsset: TStableCoins;
   enableResume: boolean;
 }) {
+  if (!args.volatileAsset && args.stableAsset) {
+    throw new Error("Invalid args " + args);
+  }
   generalLogger.info("Starting bot version: " + process.env.APP_VERSION, args);
   for await (const _ of executeTradeCycle(args)) {
   }
