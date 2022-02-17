@@ -32,10 +32,6 @@ const csvLogger = createLogger({
   transports: [dailyRotationTransport],
 });
 
-if (process.env.NODE_ENV !== "production") {
-  csvLogger.add(new transports.Console());
-}
-
 type THeadersWhichAreTypeString = Exclude<
   keyof typeof csvHeaders | "lastPurchasePrice",
   "timestamp" | "from" | "to" | "action" | "value" | "profit"
@@ -59,7 +55,9 @@ export const logTrade = ({ lastPurchasePrice, ...data }: TLogTradeData) => {
   const value = new Big(data.amount).mul(data.price).toFixed(3);
   const profit =
     data.action === "SELL"
-      ? new Big(value).minus(new Big(lastPurchasePrice)).toFixed(3)
+      ? new Big(value)
+          .minus(new Big(lastPurchasePrice).mul(data.amount))
+          .toFixed(3)
       : "N/A";
 
   const logData: Record<keyof typeof csvHeaders, string> = {

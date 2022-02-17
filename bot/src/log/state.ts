@@ -31,7 +31,7 @@ export const stateLogger = winston.createLogger({
 // If we're not in production then log to the `console` with the format:
 // `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
 //
-if (process.env.NODE_ENV !== "production2") {
+if (process.env.NODE_ENV !== "production") {
   stateLogger.add(
     new winston.transports.Console({
       format: winston.format.colorize(),
