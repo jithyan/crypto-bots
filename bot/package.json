@@ -1,5 +1,5 @@
 {
-  "name": "trade-bot",
+  "name": "bot",
   "packageManager": "yarn@3.1.1",
   "type": "module",
   "bin": "dist/index.js",

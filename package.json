@@ -5,7 +5,8 @@
     "bot"
   ],
   "scripts": {
-    "setup": "zx ./scripts/local-setup.mjs"
+    "setup": "zx ./scripts/local-setup.mjs",
+    "bot": "yarn workspace bot"
   },
   "devDependencies": {
     "zx": "5.1.0"
