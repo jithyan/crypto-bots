@@ -228,9 +228,7 @@ export class HoldStableAsset<
       const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
       if (buy) {
-        const stableAssetBalance = await this.getBalance().then(
-          (bal) => new Big(bal)
-        );
+        const stableAssetBalance = new Big("25");
         const qtyToBuy = truncTo3Dp(
           stableAssetBalance.mul("0.99").div(latestPrice)
         );
