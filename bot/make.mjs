@@ -15,7 +15,7 @@ if (cloudOrLocal !== "cloud" && cloudOrLocal !== "local") {
   );
 }
 
-const filename = `${volatile}${stable}_bot`;
+const filename = `${volatile}${stable}_bot`.toLowerCase();
 const env = fs
   .readFileSync(`.${cloudOrLocal}.env`, "utf8")
   .split("\n")
@@ -39,4 +39,4 @@ if (cloudOrLocal === "cloud") {
 }
 
 await $`mkdir -p dist/${volatile}${stable}`;
-await $`mv dist/linux/bot dist/${volatile}${stable}/${filename}`;
+await $`mv dist/linux/bot dist/${volatile.toLowerCase()}${stable.toLowerCase()}/${filename}`;
