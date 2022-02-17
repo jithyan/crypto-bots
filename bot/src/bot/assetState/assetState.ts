@@ -233,12 +233,26 @@ export class HoldStableAsset<
           stableAssetBalance.mul("0.99").div(latestPrice)
         );
 
-        const { clientOrderId } = await binanceClient.buy({
-          buyAsset: this.volatileAsset,
-          withAsset: this.stableAsset,
-          price: latestPrice,
-          quantity: qtyToBuy,
-        });
+        const { clientOrderId } = await binanceClient
+          .buy({
+            buyAsset: this.volatileAsset,
+            withAsset: this.stableAsset,
+            price: latestPrice,
+            quantity: qtyToBuy,
+          })
+          .catch(async (err: AxiosError) => {
+            if (err.response?.data.code === -1013) {
+              const retry = await binanceClient.buy({
+                buyAsset: this.volatileAsset,
+                withAsset: this.stableAsset,
+                price: latestPrice,
+                quantity: new Big(qtyToBuy).toFixed(2, Big.roundUp),
+              });
+              return retry;
+            } else {
+              throw err;
+            }
+          });
 
         const nextState = new VolatileAssetOrderPlaced(
           { ...this, decisionEngine: nextDecision },
