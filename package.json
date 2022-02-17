@@ -2,7 +2,7 @@
   "name": "crypto-poc",
   "packageManager": "yarn@3.1.1",
   "workspaces": [
-    "poc"
+    "bot"
   ],
   "scripts": {
     "setup": "zx ./scripts/local-setup.mjs"

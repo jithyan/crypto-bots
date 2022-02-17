@@ -2024,9 +2024,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"trade-bot@workspace:poc":
+"trade-bot@workspace:bot":
   version: 0.0.0-use.local
-  resolution: "trade-bot@workspace:poc"
+  resolution: "trade-bot@workspace:bot"
   dependencies:
     "@binance/connector": ^1.7.0
     "@types/big.js": ^6.1.3
