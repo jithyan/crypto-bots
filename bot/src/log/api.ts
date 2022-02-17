@@ -1,5 +1,6 @@
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
+import { gcpTransport } from "./gcpTransport";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-api.log",
@@ -27,10 +28,10 @@ export const apiLogger = winston.createLogger({
   ],
 });
 
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
+if (process.env.NODE_ENV === "production") {
+  apiLogger.add(gcpTransport);
+}
+
 if (process.env.NODE_ENV !== "production") {
   apiLogger.add(
     new winston.transports.Console({

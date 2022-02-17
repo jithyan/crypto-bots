@@ -1,5 +1,6 @@
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
+import { gcpTransport } from "./gcpTransport";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-general.log",
@@ -24,4 +25,8 @@ if (process.env.NODE_ENV !== "production") {
       format: winston.format.colorize(),
     })
   );
+}
+
+if (process.env.NODE_ENV === "production") {
+  generalLogger.add(gcpTransport);
 }

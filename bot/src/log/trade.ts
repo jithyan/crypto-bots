@@ -1,6 +1,6 @@
 //@ts-ignore
 import CSV from "winston-csv-format";
-import { createLogger, transports } from "winston";
+import { createLogger } from "winston";
 import Big from "big.js";
 import DailyRotateFile from "winston-daily-rotate-file";
 import type { TSupportedCoins } from "../exchange/index.js";
@@ -69,5 +69,3 @@ export const logTrade = ({ lastPurchasePrice, ...data }: TLogTradeData) => {
 
   csvLogger.log("info", logData);
 };
-
-csvLogger.log("info", csvHeaders);
