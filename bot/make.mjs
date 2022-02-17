@@ -37,6 +37,6 @@ if (cloudOrLocal === "cloud") {
 } else {
   await $`yarn pkg:linux:local`;
 }
-
-await $`mkdir -p dist/${volatile}${stable}`;
-await $`mv dist/linux/bot dist/${volatile.toLowerCase()}${stable.toLowerCase()}/${filename}`;
+const dir = `bin/${volatile.toLowerCase()}${stable.toLowerCase()}`;
+await $`mkdir -p ${dir}`;
+await $`mv dist/linux/bot ${dir}/${filename}`;

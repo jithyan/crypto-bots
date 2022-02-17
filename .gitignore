@@ -3,6 +3,7 @@ node_modules
 /bot/*.env
 build
 dist
+bin
 
 /bot/*.log
 /bot/*.csv
