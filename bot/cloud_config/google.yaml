@@ -1,0 +1,30 @@
+logging:
+  receivers:
+    bot_states:
+      type: files
+      include_paths:
+        - /home/jithya_n/bots/*/*-general.log
+        - /home/jithya_n/bots/*/*-state.log
+    bot_errors:
+      type: files
+      include_paths:
+        - /var/log/boterror.log
+    bot_trades:
+      type: files
+      include_paths:
+        - /home/jithya_n/bots/*/*.csv
+
+  processors:
+    json_p:
+      type: parse_json
+    csv_p:
+      type: parse_regex
+      regex: ^(?<timestamp>[^,]*),(?<action>[^,]*),(?<price>[^,]*),(?<amount>[^,]*),(?<value>[^,]*),(?<from>[^,]*),(?<to>[^,]*),(?<profit>[^,]*)$
+  service:
+    pipelines:
+      crypto_bot_pipeline:
+        receivers: [bot_states, bot_errors]
+        processors: [json_p]
+      trade_pipeline:
+        receivers: [bot_trades]
+        processors: [csv_p]
