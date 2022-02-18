@@ -19,13 +19,17 @@ export async function* executeTradeCycle({
   if (enableResume) {
     try {
       nextAssetState = hydrate(filepath);
-      generalLogger.info("Successfully hydrated", { state: nextAssetState });
+      generalLogger.info(`Successfully hydrated: ${symbol}`, {
+        state: nextAssetState,
+      });
     } catch (err) {
-      generalLogger.error("Unable to resume", err);
+      generalLogger.error("Unable to resume: " + symbol, err);
       nextAssetState = await initialiseAssetState(args);
     }
   } else {
-    generalLogger.info("Resuming is not enabled, using initialisation logic");
+    generalLogger.info(
+      `Resuming is not enabled, using initialisation logic: ${symbol}`
+    );
     nextAssetState = await initialiseAssetState(args);
   }
 

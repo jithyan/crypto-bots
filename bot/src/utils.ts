@@ -23,13 +23,6 @@ export async function sleep(minutes = 3) {
   });
 }
 
-export function isBalanceGreaterThanZero(balance: string | Big) {
-  if (new Big(truncTo4Dp(balance)).gt("0")) {
-    return true;
-  } else {
-    generalLogger.error("Balance is not greater than zero", {
-      balance: new Big(truncTo4Dp(balance)),
-    });
-    throw new Error("Balance is not greater than zero");
-  }
+export function isMinimumTradeableBalance(balance: string | Big): boolean {
+  return new Big(truncTo4Dp(balance)).gt("20");
 }

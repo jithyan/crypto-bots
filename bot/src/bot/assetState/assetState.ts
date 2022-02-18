@@ -70,7 +70,7 @@ export class AssetState<
     this.isStableAssetClass = isStableAssetClass;
     this.decisionEngine = decisionEngine;
 
-    stateLogger.info("CREATE new " + this.state, this);
+    stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
 
   dehydrate = () => {
@@ -87,7 +87,7 @@ export class AssetState<
     );
     const result = status.toUpperCase() === "FILLED";
 
-    stateLogger.debug(`Is order ${clientOrderId} filled?`, {
+    stateLogger.debug(`Is order ${clientOrderId} filled for ${this.symbol}?`, {
       clientOrderId,
       status,
       executedQty,
@@ -113,7 +113,7 @@ export class AssetState<
   };
 
   handleError = async (error: AxiosError) => {
-    stateLogger.error("API ERROR - not changing state", {
+    stateLogger.error("API ERROR - not changing state for " + this.symbol, {
       error: error.message,
       config: error.config,
     });
@@ -180,7 +180,7 @@ export class HoldVolatileAsset<
           clientOrderId
         );
 
-        stateLogger.info("SOLD VOLATILE ASSET", {
+        stateLogger.info("SOLD VOLATILE ASSET " + this.symbol, {
           state: this,
           nextState,
           price: priceToSell,
@@ -200,10 +200,13 @@ export class HoldVolatileAsset<
         await sleep();
         return nextState;
       } else {
-        stateLogger.info("HOLD VOLATILE ASSET - No state change", {
-          state: this,
-          latestPrice,
-        });
+        stateLogger.info(
+          "HOLD VOLATILE ASSET - No state change " + this.symbol,
+          {
+            state: this,
+            latestPrice,
+          }
+        );
 
         await sleep();
         return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
@@ -259,7 +262,7 @@ export class HoldStableAsset<
           clientOrderId
         );
 
-        stateLogger.info("BOUGHT VOLATILE ASSET", {
+        stateLogger.info("BOUGHT VOLATILE ASSET " + this.symbol, {
           state: this,
           nextState,
           latestPrice,
@@ -280,7 +283,7 @@ export class HoldStableAsset<
 
         return nextState;
       } else {
-        stateLogger.info("HOLD STABLE ASSET - No state change", {
+        stateLogger.info("HOLD STABLE ASSET - No state change " + this.symbol, {
           state: this,
           latestPrice,
         });
@@ -317,10 +320,13 @@ abstract class AssetOrderPlaced<
           ? new HoldStableAsset(this)
           : new HoldVolatileAsset(this);
 
-        stateLogger.info("ORDER FILLED", { currentState: this, nextState });
+        stateLogger.info("ORDER FILLED " + this.symbol, {
+          currentState: this,
+          nextState,
+        });
         return nextState;
       } else {
-        stateLogger.info("ORDER NOT FILLED - No state change", {
+        stateLogger.info("ORDER NOT FILLED - No state change " + this.symbol, {
           currentState: this,
         });
         return this;

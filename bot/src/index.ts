@@ -5,7 +5,7 @@ import { executeTradeCycle } from "./bot/index.js";
 import { generalLogger } from "./log/index.js";
 import {
   truncTo4Dp,
-  isBalanceGreaterThanZero,
+  isMinimumTradeableBalance,
   sleep,
   roundTo4Dp,
 } from "./utils.js";
@@ -30,7 +30,10 @@ async function runCryptoBot(args: {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);
   }
-  generalLogger.info("Starting bot version: " + process.env.APP_VERSION, args);
+  generalLogger.info(
+    `Starting bot version: ${process.env.APP_VERSION} ${args.volatileAsset}${args.stableAsset}`,
+    args
+  );
   for await (const _ of executeTradeCycle(args)) {
   }
 }
@@ -67,7 +70,7 @@ async function runPriceTrendDryRun() {
 async function trade2() {
   const bnbBal = await binanceClient.balance("BNB").then(truncTo4Dp);
 
-  if (isBalanceGreaterThanZero(bnbBal)) {
+  if (isMinimumTradeableBalance(bnbBal)) {
     const latestBnbPrice = await binanceClient.getLatestPrice("BNB", "BUSD");
     const askPrice = new Big(
       new Big(latestBnbPrice).mul(new Big("1.005"))
@@ -90,7 +93,7 @@ async function transferBnbFromBinanceToCoinspot() {
   binanceClient.balance("BNB").then((balance) => {
     generalLogger.info("Binance BNB balance", { balance });
 
-    if (isBalanceGreaterThanZero(balance)) {
+    if (isMinimumTradeableBalance(balance)) {
       binanceClient.withdraw("BNB", AddressBook.MOODY_CSPOT_BEP20, balance);
     } else {
       generalLogger.info("Balance not greater than zero", { balance });
