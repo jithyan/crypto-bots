@@ -37,6 +37,8 @@ if (cloudOrLocal === "cloud") {
 } else {
   await $`yarn pkg:linux:local`;
 }
-const dir = `bin/${volatile.toLowerCase()}${stable.toLowerCase()}`;
+const dir = `bin`;
+await $`rm -rf ${dir}`;
 await $`mkdir -p ${dir}`;
 await $`mv dist/linux/bot ${dir}/${filename}`;
+await $`gcloud compute scp ./bot/bin/${dir}/${filename} jithya_n@instance-1:~/bots`;
