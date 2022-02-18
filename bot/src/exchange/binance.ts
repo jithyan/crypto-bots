@@ -75,7 +75,9 @@ export class BinanceApi implements IWallet {
     withAsset: TSupportedCoins;
     price: string;
     quantity: string;
-  }): Promise<TOrderCreateResponse> => {
+  }): Promise<
+    TOrderCreateResponse & { qtyBought: string; orderPrice: string }
+  > => {
     apiLogger.info("Initiating BUY", {
       buyAsset,
       withAsset,
@@ -96,7 +98,7 @@ export class BinanceApi implements IWallet {
       );
       apiLogger.info("BUY success", { data });
 
-      return data;
+      return { ...data, qtyBought: quantity, orderPrice: price };
     } catch (err) {
       handleAxiosError("BUY failed", err);
       throw err;
@@ -113,7 +115,9 @@ export class BinanceApi implements IWallet {
     forAsset: TSupportedCoins;
     price: string;
     quantity: string;
-  }): Promise<TOrderCreateResponse> => {
+  }): Promise<
+    TOrderCreateResponse & { qtySold: string; orderPrice: string }
+  > => {
     apiLogger.info("Initiating SELL", {
       sellAsset,
       forAsset,
@@ -134,7 +138,7 @@ export class BinanceApi implements IWallet {
       );
       apiLogger.info("SELL success", { data });
 
-      return data;
+      return { ...data, qtySold: quantity, orderPrice: price };
     } catch (err) {
       handleAxiosError("SELL failed", err);
       throw err;

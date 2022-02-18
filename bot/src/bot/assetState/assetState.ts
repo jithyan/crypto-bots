@@ -11,6 +11,7 @@ import {
   binanceClient,
   TCoinPair,
   TStableCoins,
+  TSupportedCoins,
   TVolatileCoins,
 } from "../../exchange/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
@@ -78,6 +79,53 @@ export class AssetState<
       `./${version}_${this.symbol}_appState.json`,
       JSON.stringify(this, undefined, 2)
     );
+  };
+
+  retryOnInvalidLotSizeError = async <R>(
+    err: AxiosError,
+    decimalPlaces: number,
+    retry: (decimalPlaces: number) => Promise<R>
+  ) => {
+    if (err.response?.data.code === -1013) {
+      stateLogger.warn(
+        `Retrying with smaller rounding of ${decimalPlaces}: ` + this.symbol,
+        {
+          state: this,
+        }
+      );
+      return retry(decimalPlaces)
+        .catch(() => {
+          stateLogger.warn(
+            `Retrying with smaller rounding of ${decimalPlaces - 1}: ` +
+              this.symbol,
+            {
+              state: this,
+            }
+          );
+          return retry(decimalPlaces - 1);
+        })
+        .catch(() => {
+          stateLogger.warn(
+            `Retrying with smaller rounding of ${decimalPlaces - 2}: ` +
+              this.symbol,
+            {
+              state: this,
+            }
+          );
+          return retry(decimalPlaces - 2);
+        })
+        .catch(() => {
+          stateLogger.warn(
+            `Retrying with smaller rounding of ${decimalPlaces - 3}: ` +
+              this.symbol,
+            {
+              state: this,
+            }
+          );
+          return retry(decimalPlaces - 3);
+        });
+    }
+    throw err;
   };
 
   isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
@@ -155,6 +203,23 @@ export class HoldVolatileAsset<
     super({ ...args, isStableAssetClass: false, state: "HoldVolatileAsset" });
   }
 
+  private genSellOrder = (
+    sellPrice: Big | string,
+    qtyToSell: Big | string,
+    decimalPlaces: number
+  ) => {
+    const priceDp = decimalPlaces > 0 ? decimalPlaces - 1 : decimalPlaces;
+    const sellOrder = {
+      sellAsset: this.volatileAsset,
+      forAsset: this.stableAsset,
+      price: new Big(sellPrice).toFixed(priceDp, Big.roundHalfUp),
+      quantity: new Big(qtyToSell).toFixed(decimalPlaces, Big.roundDown),
+    };
+
+    stateLogger.debug("Buy order for " + this.symbol, sellOrder);
+    return sellOrder;
+  };
+
   execute: () => Promise<ITradeAssetCycle> = async () => {
     try {
       const latestPrice = await this.getPrice();
@@ -162,18 +227,17 @@ export class HoldVolatileAsset<
         this.decisionEngine.shouldSell(latestPrice);
 
       if (sell) {
-        const volatileAssetBalance = await this.getBalance().then(
-          (bal) => new Big(bal)
-        );
-        const qtyToSell = truncTo4Dp(volatileAssetBalance);
-        const priceToSell = roundTo3Dp(latestPrice);
+        const volatileAssetBalance = await this.getBalance();
 
-        const { clientOrderId } = await binanceClient.sell({
-          sellAsset: this.volatileAsset,
-          forAsset: this.stableAsset,
-          price: priceToSell,
-          quantity: qtyToSell,
-        });
+        const { clientOrderId, orderPrice, qtySold } = await binanceClient
+          .sell(this.genSellOrder(latestPrice, volatileAssetBalance, 4))
+          .catch((err) =>
+            this.retryOnInvalidLotSizeError(err, 3, (dp) =>
+              binanceClient.sell(
+                this.genSellOrder(latestPrice, volatileAssetBalance, dp)
+              )
+            )
+          );
 
         const nextState = new StableAssetOrderPlaced(
           { ...this, decisionEngine: nextDecision },
@@ -183,15 +247,15 @@ export class HoldVolatileAsset<
         stateLogger.info("SOLD VOLATILE ASSET " + this.symbol, {
           state: this,
           nextState,
-          price: priceToSell,
-          quantity: qtyToSell,
+          price: orderPrice,
+          quantity: qtySold,
           clientOrderId,
         });
 
         logTrade({
           lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
-          price: priceToSell,
-          amount: qtyToSell,
+          price: orderPrice,
+          amount: qtySold,
           from: this.volatileAsset,
           to: this.stableAsset,
           action: "SELL",
@@ -225,37 +289,54 @@ export class HoldStableAsset<
     super({ ...args, isStableAssetClass: true, state: "HoldStableAsset" });
   }
 
+  private genBuyOrder = (
+    qtyStable: Big | string,
+    buyPrice: Big | string,
+    decimalPlaces: number
+  ): {
+    buyAsset: TSupportedCoins;
+    withAsset: TSupportedCoins;
+    price: string;
+    quantity: string;
+  } => {
+    const priceDp = decimalPlaces > 0 ? decimalPlaces - 1 : decimalPlaces;
+    const price = new Big(buyPrice).toFixed(priceDp, Big.roundDown);
+    const quantity = new Big(qtyStable)
+      .mul("0.99")
+      .div(buyPrice)
+      .toFixed(
+        decimalPlaces,
+        decimalPlaces <= 2 ? Big.roundHalfUp : Big.roundDown
+      );
+
+    const buyOrder = {
+      buyAsset: this.volatileAsset,
+      withAsset: this.stableAsset,
+      price,
+      quantity,
+    };
+
+    stateLogger.debug("Buy order for " + this.symbol, buyOrder);
+    return buyOrder;
+  };
+
   execute: () => Promise<ITradeAssetCycle> = async () => {
     try {
-      const latestPrice = await this.getPrice().then(truncTo3Dp);
+      const latestPrice = await this.getPrice();
       const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
       if (buy) {
         const stableAssetBalance = new Big("25");
-        const qtyToBuy = truncTo3Dp(
-          stableAssetBalance.mul("0.99").div(latestPrice)
-        );
 
-        const { clientOrderId } = await binanceClient
-          .buy({
-            buyAsset: this.volatileAsset,
-            withAsset: this.stableAsset,
-            price: latestPrice,
-            quantity: qtyToBuy,
-          })
-          .catch(async (err: AxiosError) => {
-            if (err.response?.data.code === -1013) {
-              const retry = await binanceClient.buy({
-                buyAsset: this.volatileAsset,
-                withAsset: this.stableAsset,
-                price: latestPrice,
-                quantity: new Big(qtyToBuy).toFixed(2, Big.roundUp),
-              });
-              return retry;
-            } else {
-              throw err;
-            }
-          });
+        const { clientOrderId, qtyBought } = await binanceClient
+          .buy(this.genBuyOrder(stableAssetBalance, latestPrice, 4))
+          .catch((err) =>
+            this.retryOnInvalidLotSizeError(err, 3, (dp: number) =>
+              binanceClient.buy(
+                this.genBuyOrder(stableAssetBalance, latestPrice, dp)
+              )
+            )
+          );
 
         const nextState = new VolatileAssetOrderPlaced(
           { ...this, decisionEngine: nextDecision },
@@ -267,7 +348,7 @@ export class HoldStableAsset<
           nextState,
           latestPrice,
           clientOrderId,
-          qtyToBuy,
+          qtyBought,
         });
 
         await sleep();
@@ -275,7 +356,7 @@ export class HoldStableAsset<
         logTrade({
           lastPurchasePrice: "N/A",
           price: latestPrice,
-          amount: qtyToBuy,
+          amount: qtyBought,
           from: this.stableAsset,
           to: this.volatileAsset,
           action: "BUY",
