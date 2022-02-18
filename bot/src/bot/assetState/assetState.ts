@@ -1,12 +1,6 @@
 import Big from "big.js";
 import { apiLogger, logTrade, stateLogger } from "../../log/index.js";
-import {
-  roundTo3Dp,
-  roundTo4Dp,
-  sleep,
-  truncTo3Dp,
-  truncTo4Dp,
-} from "../../utils.js";
+import { sleep } from "../../utils.js";
 import {
   binanceClient,
   TCoinPair,
@@ -45,6 +39,9 @@ type TAssetStateChildArguments<VolatileAsset, StableAsset> = Omit<
 >;
 
 const version = process.env.APP_VERSION;
+
+const fatalBinanceErrorCodes = new Set<number>([-2010, -2015]);
+
 export class AssetState<
   VolatileAsset extends TVolatileCoins,
   StableAsset extends TStableCoins
@@ -172,6 +169,12 @@ export class AssetState<
         error.response.data
       );
       throw new Error("FATAL BINANCE REJECTION - Update IP/Key");
+    } else if (error.response?.data.code == -2010) {
+      apiLogger.error(
+        "FATAL BINANCE REJECTION - Crypto pair not supported",
+        error.response.data
+      );
+      throw new Error("FATAL BINANCE REJECTION - Crypto pair not supported");
     }
 
     await sleep(1);
