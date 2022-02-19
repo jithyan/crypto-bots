@@ -1,4 +1,3 @@
-import Big from "big.js";
 import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js";
 import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
 import { executeTradeCycle } from "./bot/index.js";
@@ -14,8 +13,8 @@ import { Config } from "./config.js";
 const binanceClient = getExchangeClient(Config.EXCHANGE);
 
 runCryptoBot({
-  volatileAsset: process.env.VOLATILE_COIN as any,
-  stableAsset: process.env.STABLE_COIN as any,
+  volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
+  stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
   enableResume: true,
 });
 

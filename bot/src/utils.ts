@@ -4,24 +4,17 @@ export function roundTo4Dp(price: string | number | Big) {
   return new Big(price).toFixed(4, Big.roundHalfUp);
 }
 
-export function truncTo4Dp(price: string | number | Big) {
-  return new Big(price).toFixed(4, Big.roundDown);
-}
+export function truncBasedOnStepSize(value: Big, stepSize: Big): string {
+  let maxDecimalPlaces = 0;
+  while (!stepSize.mul(new Big("10").pow(maxDecimalPlaces)).eq("1")) {
+    maxDecimalPlaces++;
+  }
 
-export function roundTo3Dp(price: string | number | Big) {
-  return new Big(price).toFixed(3, Big.roundHalfUp);
-}
-
-export function truncTo3Dp(price: string | number | Big) {
-  return new Big(price).toFixed(3, Big.roundDown);
+  return value.toFixed(maxDecimalPlaces, Big.roundDown);
 }
 
 export async function sleep(minutes = 3) {
   return new Promise<void>((resolve, reject) => {
     setTimeout(() => resolve(), minutes * 60 * 1000);
   });
-}
-
-export function isMinimumTradeableBalance(balance: string | Big): boolean {
-  return new Big(truncTo4Dp(balance)).gt("20");
 }

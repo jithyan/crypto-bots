@@ -1,7 +1,7 @@
 import Big from "big.js";
 import { Config } from "../../config.js";
 import { stateLogger } from "../../log/index.js";
-import { roundTo4Dp, truncTo4Dp } from "../../utils.js";
+import { roundTo4Dp } from "../../utils.js";
 
 export interface IDecisionEngine {
   shouldBuy: (currentPrice: string) => {
@@ -47,7 +47,7 @@ abstract class DecisionEngine implements IDecisionEngine {
     stateLogger.info("CREATE new " + this.state, this);
   }
 
-  calculatePercentChange = (currentPrice: Big) =>
+  calcPctChangeInPriceSinceLastCheck = (currentPrice: Big) =>
     currentPrice.div(this.lastTickerPrice).minus("1");
 
   isAnIncrease = (currentPrice: Big): boolean => {
@@ -55,7 +55,7 @@ abstract class DecisionEngine implements IDecisionEngine {
     const isAnIncrease = ratio.gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
 
     const percentChange = roundTo4Dp(
-      this.calculatePercentChange(currentPrice).mul("100")
+      this.calcPctChangeInPriceSinceLastCheck(currentPrice).mul("100")
     );
 
     stateLogger.debug("Is an increase?", {
@@ -74,7 +74,7 @@ abstract class DecisionEngine implements IDecisionEngine {
     const isADecrease = ratio.lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
 
     const percentChange = roundTo4Dp(
-      this.calculatePercentChange(currentPrice).mul("100")
+      this.calcPctChangeInPriceSinceLastCheck(currentPrice).mul("100")
     );
 
     stateLogger.debug("Is a decrease?", {

@@ -4,15 +4,27 @@ import { AxiosError, AxiosResponse } from "axios";
 import type {
   IBinance24hrTicker,
   IBinanceAccountInfo,
+  IBinanceExchangeInfo,
   IBinanceOrderDetails,
   TOrderCreateResponse,
   TTickerPriceResponse,
 } from "../types/binanceApi.alias";
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
+import Big from "big.js";
+import { truncBasedOnStepSize } from "../utils";
+
+type TFilterRulesField = "min" | "max" | "stepSize";
+type TImportantFilterFields = "priceFilter" | "lotSizeFilter";
+type TFilterRulesConfig = Record<
+  TImportantFilterFields,
+  Record<TFilterRulesField, Big>
+>;
 
 export class BinanceApi implements IWallet {
   private client: BinanceConnectorClient;
+  private readonly configCache: Partial<Record<TCoinPair, TFilterRulesConfig>> =
+    {};
 
   constructor() {
     const key = process.env.BINANCE_KEY?.trim();
@@ -24,6 +36,98 @@ export class BinanceApi implements IWallet {
     }
     this.client = new Spot(key, secret);
   }
+
+  getExchangeConfig = async (
+    volatileAsset: TSupportedCoins,
+    stableAsset: TSupportedCoins
+  ) => {
+    const symbol: TCoinPair = `${volatileAsset}${stableAsset}`;
+    const cacheEntry = this.configCache[symbol];
+
+    if (cacheEntry) {
+      return Promise.resolve(cacheEntry);
+    }
+
+    const { data } = await this.client.exchangeInfo({ symbol });
+    const symbolRules = data.symbols.find(
+      (symbolInfo) => symbolInfo.symbol === symbol
+    )?.filters;
+
+    if (symbolRules === undefined) {
+      throw new Error(
+        "Unable to find exchangeInfo filters for symbol: " + symbol
+      );
+    }
+
+    const priceFilter = symbolRules.find(
+      (filter) => filter.filterType === "PRICE_FILTER"
+    );
+    const lotSizeFilter = symbolRules.find(
+      (filter) => filter.filterType === "LOT_SIZE"
+      // Swagger doesn't match actual response!
+    ) as Record<"stepSize" | "minQty" | "maxQty", string> | undefined;
+
+    if (priceFilter === undefined || lotSizeFilter === undefined) {
+      throw new Error("Unable to find price or lot size filter for " + symbol);
+    }
+
+    const result = {
+      priceFilter: {
+        stepSize: new Big(priceFilter.tickSize),
+        min: new Big(priceFilter.minPrice),
+        max: new Big(priceFilter.maxPrice),
+      },
+      lotSizeFilter: {
+        stepSize: new Big(lotSizeFilter.stepSize),
+        min: new Big(lotSizeFilter.minQty),
+        max: new Big(lotSizeFilter.maxQty),
+      },
+    };
+
+    this.configCache[symbol] = result;
+
+    return result;
+  };
+
+  getValidPricePrecision = (
+    price: Big,
+    { priceFilter }: TFilterRulesConfig
+  ): string => {
+    if (price.lt(priceFilter.min)) {
+      throw new Error(
+        `Price of ${price} does not meet minimum of ${priceFilter.min}`
+      );
+    } else if (price.gt(priceFilter.max)) {
+      throw new Error(
+        `Price of ${price} exceeds maximum of ${priceFilter.max}`
+      );
+    }
+
+    if (priceFilter.stepSize.eq("0")) {
+      return price.toString();
+    }
+
+    return truncBasedOnStepSize(price, priceFilter.stepSize);
+  };
+
+  getValidQtyPrecision = (
+    qty: Big,
+    { lotSizeFilter }: TFilterRulesConfig
+  ): string => {
+    if (qty.lt(lotSizeFilter.min)) {
+      throw new Error(
+        `Quantity of ${qty} does not meet minimum of ${lotSizeFilter.min}`
+      );
+    } else if (qty.gt(lotSizeFilter.max)) {
+      throw new Error(`Quantity of ${qty} exceeds max of ${lotSizeFilter.max}`);
+    }
+
+    if (lotSizeFilter.stepSize.eq("0")) {
+      return qty.toString();
+    }
+
+    return truncBasedOnStepSize(qty, lotSizeFilter.stepSize);
+  };
 
   checkOrderStatus = async (
     origClientOrderId: string,
@@ -117,11 +221,24 @@ export class BinanceApi implements IWallet {
   }): Promise<
     TOrderCreateResponse & { qtyBought: string; orderPrice: string }
   > => {
+    const filterRules = await this.getExchangeConfig(buyAsset, withAsset);
+
+    const correctedQty = this.getValidQtyPrecision(
+      new Big(quantity),
+      filterRules
+    );
+    const correctedPrice = this.getValidPricePrecision(
+      new Big(price),
+      filterRules
+    );
+
     apiLogger.info("Initiating BUY", {
       buyAsset,
       withAsset,
       price,
       quantity,
+      correctedPrice,
+      correctedQty,
     });
 
     try {
@@ -130,14 +247,14 @@ export class BinanceApi implements IWallet {
         "BUY",
         "LIMIT",
         {
-          price,
-          quantity,
+          price: correctedPrice,
+          quantity: correctedQty,
           timeInForce: "GTC",
         }
       );
       apiLogger.info("BUY success", { data });
 
-      return { ...data, qtyBought: quantity, orderPrice: price };
+      return { ...data, qtyBought: correctedQty, orderPrice: correctedPrice };
     } catch (err) {
       handleAxiosError("BUY failed", err);
       throw err;
@@ -157,11 +274,24 @@ export class BinanceApi implements IWallet {
   }): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
+    const filterRules = await this.getExchangeConfig(sellAsset, forAsset);
+
+    const correctedQty = this.getValidQtyPrecision(
+      new Big(quantity),
+      filterRules
+    );
+    const correctedPrice = this.getValidPricePrecision(
+      new Big(price),
+      filterRules
+    );
+
     apiLogger.info("Initiating SELL", {
       sellAsset,
       forAsset,
       price,
       quantity,
+      correctedQty,
+      correctedPrice,
     });
 
     try {
@@ -170,14 +300,14 @@ export class BinanceApi implements IWallet {
         "SELL",
         "LIMIT",
         {
-          price,
-          quantity,
+          price: correctedPrice,
+          quantity: correctedQty,
           timeInForce: "GTC",
         }
       );
       apiLogger.info("SELL success", { data });
 
-      return { ...data, qtySold: quantity, orderPrice: price };
+      return { ...data, qtySold: correctedQty, orderPrice: correctedPrice };
     } catch (err) {
       handleAxiosError("SELL failed", err);
       throw err;
@@ -301,6 +431,10 @@ interface BinanceConnectorClient {
     interval: TBinanceIntervalValue,
     opt: { limit: number }
   ) => Promise<AxiosResponse<(number | string)[][]>>;
+
+  exchangeInfo: (opts: {
+    symbol: TCoinPair;
+  }) => Promise<AxiosResponse<IBinanceExchangeInfo>>;
 }
 
 type TOrderType =
