@@ -67,7 +67,9 @@ export class BinanceApi implements IWallet {
     volatileAsset: TSupportedCoins,
     stableAsset: TSupportedCoins
   ) => {
-    return this.client.ticker24hr(`${volatileAsset}${stableAsset}`);
+    return this.client
+      .ticker24hr(`${volatileAsset}${stableAsset}`)
+      .then((resp) => resp.data);
   };
 
   getKlines = async (

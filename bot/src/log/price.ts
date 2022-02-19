@@ -1,6 +1,6 @@
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
-import { Config } from "../config";
+import { Config } from "../config.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-pricestats.log",

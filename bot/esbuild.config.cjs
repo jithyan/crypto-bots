@@ -7,7 +7,7 @@ const revision =
     .slice(0, 7) || "";
 
 const define = {
-  "process.env.COLLECT_PRICE_STATS": `${process.env.COLLECT_PRICE_STATS}`,
+  "process.env.COLLECT_PRICE_STATS": `"${process.env.COLLECT_PRICE_STATS}"`,
   "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
   "process.env.APP_VERSION": `"${revision}"`,
   "process.env.BINANCE_KEY": `"${process.env.BINANCE_KEY}"`,
@@ -15,7 +15,7 @@ const define = {
   "process.env.STABLE_COIN": `"${process.env.STABLE_COIN}"`,
   "process.env.VOLATILE_COIN": `"${process.env.VOLATILE_COIN}"`,
   "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
-  "process.env.MAX_BUY_AMOUNT": `${process.env.MAX_BUY_AMOUNT}`,
+  "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
 };
 
 console.log("Starting build version", revision);

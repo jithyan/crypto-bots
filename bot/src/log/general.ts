@@ -1,7 +1,7 @@
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
-import { Config } from "../config";
-import { gcpTransport } from "./gcpTransport";
+import { Config } from "../config.js";
+import { gcpTransport } from "./gcpTransport.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-general.log",

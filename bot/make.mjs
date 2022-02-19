@@ -24,7 +24,10 @@ if (cloudOrLocal !== "cloud" && cloudOrLocal !== "local") {
 let dir = "bin/";
 let filename = "";
 
+await $`rm -rf ${dir}`;
+
 for (const volatile of volatileList) {
+  await $`mkdir -p ${dir}${volatile.toLowerCase()}${stable.toLowerCase()}/`;
   filename = `${volatile}${stable}_bot`.toLowerCase();
   const env = fs
     .readFileSync(`.${cloudOrLocal}.env`, "utf8")
@@ -48,11 +51,12 @@ for (const volatile of volatileList) {
     await $`yarn pkg:linux:local`;
   }
 
-  await $`rm -rf ${dir}`;
-  await $`mkdir -p ${dir}`;
-  await $`mv dist/linux/bot ${dir}${filename}`;
+  await $`mv dist/linux/bot ${dir}${volatile}${stable}/${filename}`;
+  await $`chmod o+x ${dir}${volatile}${stable}/${filename}`;
 }
 
 if (cloudOrLocal === "cloud") {
-  await $`gcloud compute scp --recurse ./bot/bin/${dir}${filename} jithya_n@instance-1:~/bots`;
+  await $`gcloud compute scp --recurse ./bin/* jithya_n@instance-1:~/bots --zone=asia-northeast1-b`;
+
+  console.log(chalk.cyan("Finished"));
 }

@@ -1,5 +1,4 @@
 import Big from "big.js";
-import { generalLogger } from "./log/index.js";
 
 export function roundTo4Dp(price: string | number | Big) {
   return new Big(price).toFixed(4, Big.roundHalfUp);
