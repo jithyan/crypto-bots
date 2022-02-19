@@ -40,6 +40,8 @@ export async function* executeTradeCycle({
     nextAssetState = await initialiseAssetState(args);
   }
 
+  console.log("Successfully started");
+
   while (true) {
     if (enableResume) {
       nextAssetState.dehydrate();

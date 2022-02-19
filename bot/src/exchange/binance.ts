@@ -12,7 +12,7 @@ import type {
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
 import Big from "big.js";
-import { truncBasedOnStepSize } from "../utils";
+import { truncBasedOnStepSize } from "../utils.js";
 
 type TFilterRulesField = "min" | "max" | "stepSize";
 type TImportantFilterFields = "priceFilter" | "lotSizeFilter";

@@ -8,7 +8,7 @@
     "cleanup": "rimraf build",
     "dev": "yarn cleanup && tsc && node -r dotenv/config build/index.js",
     "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
-    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv",
+    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv & rimraf *_appState.json",
     "build:local": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs ",
     "build:cloud": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",

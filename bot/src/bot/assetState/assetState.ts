@@ -78,7 +78,7 @@ export class AssetState<
   dehydrate = () => {
     fs.writeFileSync(
       Config.APPSTATE_FILENAME,
-      JSON.stringify(this, undefined, 2)
+      JSON.stringify({ ...this, version: Config.APP_VERSION }, undefined, 2)
     );
   };
 
