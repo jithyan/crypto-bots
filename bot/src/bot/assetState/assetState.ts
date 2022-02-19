@@ -7,7 +7,7 @@ import {
   priceLogger,
   stateLogger,
 } from "../../log/index.js";
-import { sleep } from "../../utils.js";
+import { sleep, truncTo3Dp } from "../../utils.js";
 import {
   getExchangeClient,
   TCoinPair,
@@ -198,6 +198,15 @@ export class AssetState<
       config: error.config,
     });
 
+    if (error.message?.toLowerCase().includes("insufficient balance")) {
+      stateLogger.log("Error: Insufficient balance for " + this.symbol, {
+        error,
+        state: this,
+      });
+      await sleep(15);
+      return this;
+    }
+
     if (error.response?.data.code === -2015) {
       apiLogger.error(
         "FATAL BINANCE REJECTION - Update IP/Key",
@@ -227,7 +236,9 @@ export class AssetState<
       price,
     });
 
-    this.recordPriceStatistics(price);
+    if (Config.COLLECT_PRICE_STATS) {
+      this.recordPriceStatistics(price);
+    }
 
     return price;
   };
@@ -329,6 +340,18 @@ export class HoldStableAsset<
     super({ ...args, isStableAssetClass: true, state: "HoldStableAsset" });
   }
 
+  getMaxTradeableBalance = async (): Promise<string> => {
+    const bal = await this.getBalance().then((b) => new Big(b));
+
+    if (bal.gte(Config.MAX_BUY_AMOUNT)) {
+      return truncTo3Dp(Config.MAX_BUY_AMOUNT);
+    } else if (bal.gte("20") && bal.lt(Config.MAX_BUY_AMOUNT)) {
+      return truncTo3Dp(bal);
+    } else {
+      throw new Error("Insufficient balance " + bal.toString());
+    }
+  };
+
   private genBuyOrder = (
     qtyStable: Big | string,
     buyPrice: Big | string,
@@ -366,7 +389,7 @@ export class HoldStableAsset<
       const { buy, nextDecision } = this.decisionEngine.shouldBuy(latestPrice);
 
       if (buy) {
-        const stableAssetBalance = new Big("25");
+        const stableAssetBalance = await this.getMaxTradeableBalance();
 
         const { clientOrderId, qtyBought } = await binanceClient
           .buy(this.genBuyOrder(stableAssetBalance, latestPrice, 4))
