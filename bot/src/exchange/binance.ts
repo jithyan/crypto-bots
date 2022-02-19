@@ -2,6 +2,7 @@
 import { Spot } from "@binance/connector";
 import { AxiosError, AxiosResponse } from "axios";
 import type {
+  IBinance24hrTicker,
   IBinanceAccountInfo,
   IBinanceOrderDetails,
   TOrderCreateResponse,
@@ -60,6 +61,38 @@ export class BinanceApi implements IWallet {
     } else {
       throw new Error("Unexpected price response");
     }
+  };
+
+  get24hrPriceChangeStats = async (
+    volatileAsset: TSupportedCoins,
+    stableAsset: TSupportedCoins
+  ) => {
+    return this.client.ticker24hr(`${volatileAsset}${stableAsset}`);
+  };
+
+  getKlines = async (
+    volatileAsset: TSupportedCoins,
+    stableAsset: TSupportedCoins,
+    period: TBinanceIntervalValue
+  ) => {
+    const { data } = await this.client.klines(
+      `${volatileAsset}${stableAsset}`,
+      period,
+      { limit: 240 }
+    );
+    return data.map((candle) => ({
+      "Open time": candle[0],
+      Open: candle[1],
+      High: candle[2],
+      Low: candle[3],
+      Close: candle[4],
+      Volume: candle[5],
+      "Close time": candle[6],
+      "Quote asset volume": candle[7],
+      "Number of trades": candle[8],
+      "Taker buy base asset volume": candle[9],
+      "Taker buy quote asset volume": candle[10],
+    }));
   };
 
   balance = async (coin: TSupportedCoins): Promise<string> => {
@@ -212,6 +245,23 @@ interface BinanceWithdrawOptions {
   recvWindow: number;
 }
 
+export type TBinanceIntervalValue =
+  | "1m"
+  | "3m"
+  | "5m"
+  | "15m"
+  | "30m"
+  | "1h"
+  | "2h"
+  | "4h"
+  | "6h"
+  | "8h"
+  | "12h"
+  | "1d"
+  | "3d"
+  | "1w"
+  | "1M";
+
 interface BinanceConnectorClient {
   account: () => Promise<AxiosResponse<IBinanceAccountInfo>>;
 
@@ -241,6 +291,14 @@ interface BinanceConnectorClient {
   tickerPrice: (
     coin: TCoinPair
   ) => Promise<AxiosResponse<TTickerPriceResponse>>;
+
+  ticker24hr: (coin: TCoinPair) => Promise<AxiosResponse<IBinance24hrTicker>>;
+
+  klines: (
+    coin: TCoinPair,
+    interval: TBinanceIntervalValue,
+    opt: { limit: number }
+  ) => Promise<AxiosResponse<(number | string)[][]>>;
 }
 
 type TOrderType =
