@@ -151,6 +151,13 @@ export class AssetState<
       config: error.config,
     });
 
+    if (error.request.status === 429) {
+      stateLogger.error(
+        "Making too many requests, going to sleep for 15 minutes"
+      );
+      await sleep(15);
+    }
+
     if (error.message?.toLowerCase().includes("insufficient balance")) {
       stateLogger.log("Error: Insufficient balance for " + this.symbol, {
         error,
@@ -401,7 +408,9 @@ abstract class AssetOrderPlaced<
       } else {
         stateLogger.info("ORDER NOT FILLED - No state change " + this.symbol, {
           currentState: this,
+          sleepFor: "5 minutes",
         });
+        await sleep(5);
         return this;
       }
     } catch (err: any) {
