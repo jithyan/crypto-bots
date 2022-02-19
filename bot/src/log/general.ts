@@ -1,5 +1,6 @@
 import winston from "winston";
 import DailyRotateFile from "winston-daily-rotate-file";
+import { Config } from "../config";
 import { gcpTransport } from "./gcpTransport";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
@@ -7,7 +8,7 @@ const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   datePattern: "YYYY-MM-DD",
   zippedArchive: true,
   maxSize: "40m",
-  maxFiles: "365d",
+  maxFiles: "7d",
 });
 
 export const generalLogger = winston.createLogger({
@@ -16,6 +17,9 @@ export const generalLogger = winston.createLogger({
     winston.format.timestamp(),
     winston.format.json()
   ),
+  defaultMeta: {
+    service: `general-${Config.APP_VERSION}-${Config.EXCHANGE}-${Config.SYMBOL}`,
+  },
   transports: [dailyRotationTransport],
 });
 

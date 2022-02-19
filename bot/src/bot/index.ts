@@ -1,6 +1,7 @@
 import { generalLogger } from "../log/index.js";
 import { TVolatileCoins, TStableCoins } from "../exchange/index.js";
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
+import { Config } from "../config.js";
 
 const version = process.env.APP_VERSION;
 
@@ -13,12 +14,11 @@ export async function* executeTradeCycle({
   enableResume: boolean;
 }) {
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
-  const filepath = `./${version}_${symbol}_appState.json`;
   let nextAssetState;
 
   if (enableResume) {
     try {
-      nextAssetState = hydrate(filepath);
+      nextAssetState = hydrate(Config.APPSTATE_FILENAME);
       generalLogger.info(`Successfully hydrated: ${symbol}`, {
         state: nextAssetState,
       });

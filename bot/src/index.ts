@@ -3,18 +3,15 @@ import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js"
 import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
 import { executeTradeCycle } from "./bot/index.js";
 import { generalLogger } from "./log/index.js";
+import { sleep } from "./utils.js";
 import {
-  truncTo4Dp,
-  isMinimumTradeableBalance,
-  sleep,
-  roundTo4Dp,
-} from "./utils.js";
-import {
-  AddressBook,
-  binanceClient,
+  getExchangeClient,
   TStableCoins,
   TVolatileCoins,
 } from "./exchange/index.js";
+import { Config } from "./config.js";
+
+const binanceClient = getExchangeClient(Config.EXCHANGE);
 
 runCryptoBot({
   volatileAsset: process.env.VOLATILE_COIN as any,
@@ -65,38 +62,4 @@ async function runPriceTrendDryRun() {
   const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
   for await (const nextDecision of simulateBuySellCycle(decision)) {
   }
-}
-
-async function trade2() {
-  const bnbBal = await binanceClient.balance("BNB").then(truncTo4Dp);
-
-  if (isMinimumTradeableBalance(bnbBal)) {
-    const latestBnbPrice = await binanceClient.getLatestPrice("BNB", "BUSD");
-    const askPrice = new Big(
-      new Big(latestBnbPrice).mul(new Big("1.005"))
-    ).toFixed(1);
-    const qty = new Big(bnbBal).mul(new Big(askPrice));
-    binanceClient
-      .sell({
-        sellAsset: "BNB",
-        forAsset: "BUSD",
-        price: new Big(latestBnbPrice).toFixed(1),
-        quantity: bnbBal,
-      })
-      .then((res) => {
-        console.log("Fin", res);
-      });
-  }
-}
-
-async function transferBnbFromBinanceToCoinspot() {
-  binanceClient.balance("BNB").then((balance) => {
-    generalLogger.info("Binance BNB balance", { balance });
-
-    if (isMinimumTradeableBalance(balance)) {
-      binanceClient.withdraw("BNB", AddressBook.MOODY_CSPOT_BEP20, balance);
-    } else {
-      generalLogger.info("Balance not greater than zero", { balance });
-    }
-  });
 }

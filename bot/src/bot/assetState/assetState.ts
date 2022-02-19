@@ -1,17 +1,19 @@
 import Big from "big.js";
+import fs from "fs";
+import { AxiosError } from "axios";
 import { apiLogger, logTrade, stateLogger } from "../../log/index.js";
 import { sleep } from "../../utils.js";
 import {
-  binanceClient,
+  getExchangeClient,
   TCoinPair,
   TStableCoins,
   TSupportedCoins,
   TVolatileCoins,
 } from "../../exchange/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
-import fs from "fs";
-import { AxiosError } from "axios";
+import { Config } from "../../config.js";
 
+const binanceClient = getExchangeClient(Config.EXCHANGE);
 export interface ITradeAssetCycle {
   execute: () => Promise<ITradeAssetCycle>;
   dehydrate: () => void;
@@ -37,10 +39,6 @@ type TAssetStateChildArguments<VolatileAsset, StableAsset> = Omit<
   IAssetStateArguments<VolatileAsset, StableAsset>,
   TAssetStateParentOnlyArguments
 >;
-
-const version = process.env.APP_VERSION;
-
-const fatalBinanceErrorCodes = new Set<number>([-2010, -2015]);
 
 export class AssetState<
   VolatileAsset extends TVolatileCoins,
@@ -73,7 +71,7 @@ export class AssetState<
 
   dehydrate = () => {
     fs.writeFileSync(
-      `./${version}_${this.symbol}_appState.json`,
+      Config.APPSTATE_FILENAME,
       JSON.stringify(this, undefined, 2)
     );
   };

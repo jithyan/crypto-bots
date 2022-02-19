@@ -10,7 +10,7 @@ import {
 import {
   TVolatileCoins,
   TStableCoins,
-  binanceClient,
+  getExchangeClient,
 } from "../../exchange/index.js";
 import { startNewPriceTrendDecisionEngine } from "../decisionEngine/index.js";
 import { generalLogger } from "../../log/index.js";
@@ -21,6 +21,9 @@ import {
   UpwardPriceTrend,
   UpwardPriceTrendConfirmed,
 } from "../decisionEngine/priceTrendDecision.js";
+import { Config } from "../../config.js";
+
+const binanceClient = getExchangeClient(Config.EXCHANGE);
 
 export function hydrate(filepath: string): ITradeAssetCycle {
   const file: Record<string, any> = JSON.parse(

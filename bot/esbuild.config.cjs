@@ -13,6 +13,7 @@ const define = {
   "process.env.BINANCE_SECRET": `"${process.env.BINANCE_SECRET}"`,
   "process.env.STABLE_COIN": `"${process.env.STABLE_COIN}"`,
   "process.env.VOLATILE_COIN": `"${process.env.VOLATILE_COIN}"`,
+  "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
 };
 
 console.log("Starting build version", revision);

@@ -14,10 +14,14 @@ export type TVolatileCoins =
   | "MVR"
   | "CVX"
   | "LUNA"
-  | "MOVR";
+  | "MOVR"
+  | "NEAR"
+  | "XRP";
+
 export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC";
 export type TSupportedCoins = TStableCoins | TVolatileCoins;
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
+export type TExchange = "binance";
 
 export interface IWallet {
   withdraw: (
@@ -30,4 +34,10 @@ export interface IWallet {
   balance: (coin: TSupportedCoins) => Promise<string>;
 }
 
-export const binanceClient = new BinanceApi();
+export function getExchangeClient(exchange: TExchange) {
+  if (exchange === "binance") {
+    return new BinanceApi();
+  } else {
+    throw new Error("Invalid exchange:" + exchange);
+  }
+}

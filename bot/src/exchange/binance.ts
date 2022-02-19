@@ -14,10 +14,14 @@ export class BinanceApi implements IWallet {
   private client: BinanceConnectorClient;
 
   constructor() {
-    this.client = new Spot(
-      process.env.BINANCE_KEY?.trim(),
-      process.env.BINANCE_SECRET?.trim()
-    );
+    const key = process.env.BINANCE_KEY?.trim();
+    const secret = process.env.BINANCE_SECRET?.trim();
+
+    if (!key || !secret) {
+      apiLogger.error("No binance key or secret provided");
+      throw new Error("No binance key or secret provided");
+    }
+    this.client = new Spot(key, secret);
   }
 
   checkOrderStatus = async (
