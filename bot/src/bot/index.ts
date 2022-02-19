@@ -22,8 +22,15 @@ export async function* executeTradeCycle({
       generalLogger.info(`Successfully hydrated: ${symbol}`, {
         state: nextAssetState,
       });
-    } catch (err) {
-      generalLogger.error("Unable to resume: " + symbol, err);
+    } catch (err: any) {
+      if (err?.message?.includes("no such file or directory")) {
+        generalLogger.warn(
+          "No state file found, not resuming from prior session",
+          { symbol, err }
+        );
+      } else {
+        generalLogger.error("Unable to resume: " + symbol, err);
+      }
       nextAssetState = await initialiseAssetState(args);
     }
   } else {
