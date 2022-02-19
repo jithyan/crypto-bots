@@ -1,4 +1,5 @@
 import Big from "big.js";
+import { Config } from "../../config.js";
 import { stateLogger } from "../../log/index.js";
 import { roundTo4Dp, truncTo4Dp } from "../../utils.js";
 
@@ -87,7 +88,25 @@ abstract class DecisionEngine implements IDecisionEngine {
     return isADecrease;
   };
 
+  shouldTriggerStopLoss = (currentPrice: Big): boolean => {
+    const changeFromPurchasePrice = new Big(currentPrice).div(
+      new Big(this.lastPurchasePrice)
+    );
+    const triggerStopLoss = changeFromPurchasePrice.lte("0.97");
+
+    stateLogger.warn(
+      `STOP LOSS TRIGGERED FOR ${Config.SYMBOL} at ${currentPrice}`,
+      { changeFromPurchasePrice, triggerStopLoss, currentPrice, state: this }
+    );
+
+    return triggerStopLoss;
+  };
+
   meetsSellCriteria = (currentPrice: Big): boolean => {
+    if (this.shouldTriggerStopLoss(currentPrice)) {
+      return true;
+    }
+
     const percentIncrease = new Big(currentPrice)
       .div(new Big(this.lastPurchasePrice))
       .toFixed(3);
