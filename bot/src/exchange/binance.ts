@@ -1,7 +1,6 @@
 //@ts-ignore
 import { Spot } from "@binance/connector";
-//@ts-ignore
-import NodeCache from "node-cached";
+import NodeCache from "node-cache";
 import { AxiosError, AxiosResponse } from "axios";
 import type {
   IBinance24hrTicker,
@@ -33,7 +32,7 @@ export class BinanceApi implements IWallet {
     new NodeCache({
       stdTTL: 60 * 60 * 24,
       useClones: false,
-      checkPeriod: 60 * 60 * 24 + 2,
+      checkperiod: 60 * 60 * 24 + 2,
       deleteOnExpire: true,
       maxKeys: 2,
     });

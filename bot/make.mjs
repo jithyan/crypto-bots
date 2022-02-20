@@ -26,19 +26,27 @@ let filename = "";
 
 await $`rm -rf ${dir}`;
 
+const envsThatMustBeReplaced = new Set([
+  "STABLE_COIN",
+  "VOLATILE_COIN",
+  "PORT",
+]);
+
 for (const volatile of volatileList) {
+  const port = Math.trunc((Math.random() * 100_000 + 1025) % 65000);
   await $`mkdir -p ${dir}${volatile.toLowerCase()}${stable.toLowerCase()}/`;
-  filename = `${volatile}${stable}_bot`.toLowerCase();
+  filename = `${port}_${volatile}${stable}_bot`.toLowerCase();
   const env = fs
     .readFileSync(`.${cloudOrLocal}.env`, "utf8")
     .split("\n")
     .filter(
-      (v) =>
-        !v.startsWith("STABLE_COIN") ||
-        !v.startsWith("VOLATILE_COIN") ||
-        !Boolean(v)
+      (envName) => !envsThatMustBeReplaced.has(envName) && Boolean(envName)
     )
-    .concat([`STABLE_COIN=${stable}`, `VOLATILE_COIN=${volatile}`])
+    .concat([
+      `STABLE_COIN=${stable}`,
+      `VOLATILE_COIN=${volatile}`,
+      `PORT=${port}`,
+    ])
     .join("\n");
 
   console.log("Env", env);

@@ -9,8 +9,7 @@ import {
   TVolatileCoins,
 } from "./exchange/index.js";
 import { Config } from "./config.js";
-
-const binanceClient = getExchangeClient(Config.EXCHANGE);
+import { startControlServer } from "./controlServer.js";
 
 runCryptoBot({
   volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
@@ -26,6 +25,7 @@ async function runCryptoBot(args: {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);
   }
+  startControlServer();
   generalLogger.info(
     `Starting bot version: ${process.env.APP_VERSION} ${args.volatileAsset}${args.stableAsset}`,
     args
@@ -35,6 +35,8 @@ async function runCryptoBot(args: {
 }
 
 async function* simulateBuySellCycle(decision: IDecisionEngine) {
+  const binanceClient = getExchangeClient(Config.EXCHANGE);
+
   let bought = false;
   let nextDecision: IDecisionEngine = decision;
 
@@ -57,6 +59,8 @@ async function* simulateBuySellCycle(decision: IDecisionEngine) {
 }
 
 async function runPriceTrendDryRun() {
+  const binanceClient = getExchangeClient(Config.EXCHANGE);
+
   const price = await binanceClient.getLatestPrice("BNB", "BUSD");
   const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
   for await (const nextDecision of simulateBuySellCycle(decision)) {

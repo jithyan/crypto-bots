@@ -13,6 +13,7 @@ export const Config = {
   SYMBOL: `${process.env.VOLATILE_COIN}${process.env.STABLE_COIN}`,
   APPSTATE_FILENAME: `./${process.env.EXCHANGE?.trim().toLowerCase()}_${process.env.VOLATILE_COIN?.trim().toLowerCase()}${process.env.STABLE_COIN?.trim().toLowerCase()}_appState.json`,
   MAX_BUY_AMOUNT: new Big(process.env.MAX_BUY_AMOUNT?.trim() ?? "25"),
+  PORT: process.env.PORT,
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -20,4 +21,5 @@ export const Config = {
   APPSTATE_FILENAME: string;
   COLLECT_PRICE_STATS: boolean;
   MAX_BUY_AMOUNT: Big;
+  PORT: string;
 };

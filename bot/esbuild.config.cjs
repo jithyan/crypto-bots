@@ -16,6 +16,7 @@ const define = {
   "process.env.VOLATILE_COIN": `"${process.env.VOLATILE_COIN}"`,
   "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
   "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
+  "process.env.PORT": `"${process.env.PORT}"`,
 };
 
 console.log("Starting build version", revision);

@@ -2,6 +2,7 @@ import { generalLogger } from "../log/index.js";
 import { TVolatileCoins, TStableCoins } from "../exchange/index.js";
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
+import { SERVER_CONTROL } from "../controlServer.js";
 
 const version = process.env.APP_VERSION;
 
@@ -45,6 +46,11 @@ export async function* executeTradeCycle({
   while (true) {
     if (enableResume) {
       nextAssetState.dehydrate();
+    }
+    if (SERVER_CONTROL.shutdown) {
+      generalLogger.info("Gracefully shut down as requested");
+      console.log("Graceful shutdown initiated");
+      process.exit(0);
     }
     nextAssetState = await nextAssetState.execute();
     yield nextAssetState;
