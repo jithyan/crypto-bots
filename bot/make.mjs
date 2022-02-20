@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 import "zx/globals";
 
-const volatileList = (
+const volatileListRaw = (
   await question(
     "List all the volatile coin symbols (space separated) e.g. cvx eth: "
   )
@@ -9,6 +9,7 @@ const volatileList = (
   .split(" ")
   .filter(Boolean)
   .map((c) => c.trim().toUpperCase());
+const volatileList = Array.from(new Set(volatileListRaw));
 
 const stable = (await question("What's the stable coin symbol? "))
   .trim()

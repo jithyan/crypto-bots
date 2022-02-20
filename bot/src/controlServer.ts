@@ -49,6 +49,6 @@ export function startControlServer() {
     console.log("Started listening on port " + port);
     generalLogger.info("Started control server on port " + port);
     registerWithBotManager();
-    cron.schedule("0 0 1 * *", registerWithBotManager);
+    cron.schedule("0 21 * * *", registerWithBotManager);
   });
 }

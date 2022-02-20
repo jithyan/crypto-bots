@@ -1,12 +1,7 @@
 import Big from "big.js";
 import fs from "fs";
 import { AxiosError } from "axios";
-import {
-  apiLogger,
-  logTrade,
-  priceLogger,
-  stateLogger,
-} from "../../log/index.js";
+import { apiLogger, logTrade, stateLogger } from "../../log/index.js";
 import { sleep } from "../../utils.js";
 import {
   getExchangeClient,
@@ -80,37 +75,6 @@ export class AssetState<
       Config.APPSTATE_FILENAME,
       JSON.stringify({ ...this, version: Config.APP_VERSION }, undefined, 2)
     );
-  };
-
-  recordPriceStatistics = async (latestPrice: string): Promise<void> => {
-    try {
-      const priceChange24HrWindow = await binanceClient.get24hrPriceChangeStats(
-        this.volatileAsset,
-        this.stableAsset
-      );
-      const klines1Hr = await binanceClient.getKlines(
-        this.volatileAsset,
-        this.stableAsset,
-        "1h"
-      );
-      const klines4Hr = await binanceClient.getKlines(
-        this.volatileAsset,
-        this.stableAsset,
-        "4h"
-      );
-
-      priceLogger.info(`${this.symbol}`, {
-        latestPrice,
-        klines1Hr,
-        klines4Hr,
-        priceChange24HrWindow,
-      });
-    } catch (err) {
-      priceLogger.error(
-        `${this.symbol} - Detailed price collection failed`,
-        err
-      );
-    }
   };
 
   isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
@@ -195,10 +159,6 @@ export class AssetState<
       state: this,
       price,
     });
-
-    if (Config.COLLECT_PRICE_STATS) {
-      this.recordPriceStatistics(price);
-    }
 
     return price;
   };
