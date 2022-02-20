@@ -1,12 +1,16 @@
 {
   "name": "crypto-poc",
   "packageManager": "yarn@3.1.1",
+  "type": "module",
   "workspaces": [
-    "bot"
+    "bot",
+    "manager"
   ],
   "scripts": {
     "setup": "zx ./scripts/local-setup.mjs",
-    "bot": "yarn workspace bot"
+    "bot": "yarn workspace bot",
+    "mgr": "yarn workspace manager",
+    "upgrade-build-tools": "yarn bot add --dev esbuild pkg && yarn mgr add --dev esbuild pkg"
   },
   "devDependencies": {
     "zx": "5.1.0"
