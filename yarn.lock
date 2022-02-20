@@ -204,6 +204,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-cron@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@types/node-cron@npm:3.0.1"
+  checksum: c93887daef8064b92122c3baf5a3f058bafb70a600f432665dd2684ef8539f7796fd731b3b35b54daad7faef88f87b56fc3236b8e69ce021a364ba2e8f30e51e
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 17.0.17
   resolution: "@types/node@npm:17.0.17"
@@ -467,12 +474,14 @@ __metadata:
     "@types/express": ^4.17.13
     "@types/node": ^17.0.16
     "@types/node-cache": ^4.2.5
+    "@types/node-cron": ^3.0.1
     axios: ^0.26.0
     big.js: ^6.1.1
     dotenv: ^16.0.0
     esbuild: ^0.14.23
     express: ^4.17.3
     node-cache: ^5.1.2
+    node-cron: ^3.0.0
     pkg: ^5.5.2
     rimraf: ^3.0.2
     typescript: ^4.5.5
@@ -1931,12 +1940,16 @@ __metadata:
   dependencies:
     "@types/express": ^4.17.13
     "@types/node": ^17.0.18
+    "@types/node-cron": ^3.0.1
     dotenv: ^16.0.0
     esbuild: ^0.14.23
     farmhash: ^3.2.2
     gaxios: ^4.3.2
+    node-cron: ^3.0.0
     pkg: ^5.5.2
+    rimraf: ^3.0.2
     typescript: ^4.5.5
+    zod: ^3.11.6
   languageName: unknown
   linkType: soft
 
@@ -2126,7 +2139,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.1":
+"moment-timezone@npm:^0.5.31":
+  version: 0.5.34
+  resolution: "moment-timezone@npm:0.5.34"
+  dependencies:
+    moment: ">= 2.9.0"
+  checksum: 12a1d3d52e4ba509cf1fa36bbda59d898a08fa80ab35f6c358747e93aec1f07e617cec647eaf2e8acf5f9132e581d4704d34a9edffa9a80c5cd04bf23b277595
+  languageName: node
+  linkType: hard
+
+"moment@npm:>= 2.9.0, moment@npm:^2.29.1":
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
@@ -2211,6 +2233,15 @@ __metadata:
   dependencies:
     clone: 2.x
   checksum: b0bdd81a6fee4754fb984a05246b510bb35dc54721116d465899bf4229ee3287fdafb47da526900ee9924fb402ed5c7d8050049d37d8bf2d26dbafc23a2c3205
+  languageName: node
+  linkType: hard
+
+"node-cron@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "node-cron@npm:3.0.0"
+  dependencies:
+    moment-timezone: ^0.5.31
+  checksum: acae07d835f74636ec2bf598ffadf6b89aa2eae036671bffad336371b28fb1eefb11870912c965bb351cd958d4b62f9fa9b28cf922b5f681459ea4878837ffcf
   languageName: node
   linkType: hard
 
@@ -3434,6 +3465,13 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
   checksum: b14afbb51e3251a204d81937c86a7e9d4bdbf9a2bcee38226c900d00f522969ab675703bee2a6f99f8e20103f608382936034e64d921b74df82b63c07c5e8f59
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.11.6":
+  version: 3.11.6
+  resolution: "zod@npm:3.11.6"
+  checksum: 044ac416450f179a0c88240f27849d2886c777cebade42df10e5f04125b0265cec82d9bd741a7dcb11796b2ea88b32c86be7d36932a4bed6af57002560359db1
   languageName: node
   linkType: hard
 
