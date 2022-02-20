@@ -14,13 +14,13 @@ import type {
 import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
 import Big from "big.js";
-import { truncBasedOnStepSize } from "../utils.js";
+import { getMaxNumberOfDecimalPlaces } from "../utils.js";
 
 type TFilterRulesField = "min" | "max" | "stepSize";
 type TImportantFilterFields = "priceFilter" | "lotSizeFilter";
 type TFilterRulesConfig = Record<
   TImportantFilterFields,
-  Record<TFilterRulesField, Big>
+  Record<TFilterRulesField, Big> & { precision: number }
 >;
 interface INodeCached<K, V> {
   get: (key: K) => V | undefined;
@@ -88,11 +88,13 @@ export class BinanceApi implements IWallet {
         stepSize: new Big(priceFilter.tickSize),
         min: new Big(priceFilter.minPrice),
         max: new Big(priceFilter.maxPrice),
+        precision: getMaxNumberOfDecimalPlaces(new Big(priceFilter.tickSize)),
       },
       lotSizeFilter: {
         stepSize: new Big(lotSizeFilter.stepSize),
         min: new Big(lotSizeFilter.minQty),
         max: new Big(lotSizeFilter.maxQty),
+        precision: getMaxNumberOfDecimalPlaces(new Big(lotSizeFilter.stepSize)),
       },
     };
 
@@ -119,7 +121,7 @@ export class BinanceApi implements IWallet {
       return price.toString();
     }
 
-    return truncBasedOnStepSize(price, priceFilter.stepSize);
+    return price.toFixed(priceFilter.precision, Big.roundDown);
   };
 
   getValidQtyPrecision = (
@@ -131,14 +133,15 @@ export class BinanceApi implements IWallet {
         `Quantity of ${qty} does not meet minimum of ${lotSizeFilter.min}`
       );
     } else if (qty.gt(lotSizeFilter.max)) {
-      throw new Error(`Quantity of ${qty} exceeds max of ${lotSizeFilter.max}`);
+      apiLogger.warn(`Quantity of ${qty} exceeds max of ${lotSizeFilter.max}`);
+      return lotSizeFilter.max.toString();
     }
 
     if (lotSizeFilter.stepSize.eq("0")) {
       return qty.toString();
     }
 
-    return truncBasedOnStepSize(qty, lotSizeFilter.stepSize);
+    return qty.toFixed(lotSizeFilter.precision, Big.roundDown);
   };
 
   checkOrderStatus = async (
