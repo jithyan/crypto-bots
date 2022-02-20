@@ -1,5 +1,7 @@
 //@ts-ignore
 import { Spot } from "@binance/connector";
+//@ts-ignore
+import NodeCache from "node-cached";
 import { AxiosError, AxiosResponse } from "axios";
 import type {
   IBinance24hrTicker,
@@ -20,11 +22,21 @@ type TFilterRulesConfig = Record<
   TImportantFilterFields,
   Record<TFilterRulesField, Big>
 >;
+interface INodeCached<K, V> {
+  get: (key: K) => V | undefined;
+  set: (key: K, value: V, ttl?: number) => boolean;
+}
 
 export class BinanceApi implements IWallet {
   private client: BinanceConnectorClient;
-  private readonly configCache: Partial<Record<TCoinPair, TFilterRulesConfig>> =
-    {};
+  private readonly configCache: INodeCached<TCoinPair, TFilterRulesConfig> =
+    new NodeCache({
+      stdTTL: 60 * 60 * 24,
+      useClones: false,
+      checkPeriod: 60 * 60 * 24 + 2,
+      deleteOnExpire: true,
+      maxKeys: 2,
+    });
 
   constructor() {
     const key = process.env.BINANCE_KEY?.trim();
@@ -42,7 +54,7 @@ export class BinanceApi implements IWallet {
     stableAsset: TSupportedCoins
   ) => {
     const symbol: TCoinPair = `${volatileAsset}${stableAsset}`;
-    const cacheEntry = this.configCache[symbol];
+    const cacheEntry = this.configCache.get(symbol);
 
     if (cacheEntry) {
       return Promise.resolve(cacheEntry);
@@ -84,7 +96,7 @@ export class BinanceApi implements IWallet {
       },
     };
 
-    this.configCache[symbol] = result;
+    this.configCache.set(symbol, result);
 
     return result;
   };

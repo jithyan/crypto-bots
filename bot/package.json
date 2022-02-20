@@ -19,6 +19,7 @@
     "@binance/connector": "^1.7.0",
     "axios": "^0.26.0",
     "big.js": "^6.1.1",
+    "node-cached": "^1.1.0",
     "winston": "^3.5.1",
     "winston-csv-format": "^2.0.2",
     "winston-daily-rotate-file": "^4.6.1"

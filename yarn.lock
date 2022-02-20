@@ -264,6 +264,7 @@ __metadata:
     big.js: ^6.1.1
     dotenv: ^16.0.0
     esbuild: ^0.14.23
+    node-cached: ^1.1.0
     pkg: ^5.5.2
     rimraf: ^3.0.2
     typescript: ^4.5.5
@@ -1376,6 +1377,13 @@ __metadata:
   dependencies:
     semver: ^5.4.1
   checksum: 3f4b0c912ce4befcd7ceab4493ba90b51d60dfcc90f567c93f731d897ef8691add601cb64c181683b800f21d479d68f9a6e15d8ab8acd16a5706333b9e30a881
+  languageName: node
+  linkType: hard
+
+"node-cached@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "node-cached@npm:1.1.0"
+  checksum: 9bc40d03f193d8ef7fc53003b76f3e794d5cb04528dd3a28feb368e36c19397f0d0c6167e4242506f907b867f14460c24a7bf4907ed759c749bbd8dd4ce1de48
   languageName: node
   linkType: hard
 
