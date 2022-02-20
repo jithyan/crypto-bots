@@ -12,7 +12,7 @@
     "build:local": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs ",
     "build:cloud": "rimraf dist && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options",
+    "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "make": "zx make.mjs"
   },
   "dependencies": {

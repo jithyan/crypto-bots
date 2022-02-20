@@ -2,8 +2,12 @@
   "name": "manager",
   "packageManager": "yarn@3.1.1",
   "type": "module",
+  "bin": "dist/index.js",
   "scripts": {
-    "dev": "rimraf build && tsc && node build/index.js"
+    "dev": "rimraf build && tsc && node build/index.js",
+    "cleanup": "rimraf build && rimraf dist",
+    "build": "yarn cleanup && yarn node -r dotenv/config esbuild.config.cjs",
+    "pkg:linux": "yarn build && pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -20,5 +24,12 @@
     "gaxios": "^4.3.2",
     "node-cron": "^3.0.0",
     "zod": "^3.11.6"
+  },
+  "pkg": {
+    "assets": "dist/*.node",
+    "targets": [
+      "node17-linux-x64"
+    ],
+    "outputPath": "dist/linux"
   }
 }
