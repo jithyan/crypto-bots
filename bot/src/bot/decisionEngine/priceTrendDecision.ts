@@ -24,9 +24,8 @@ export type DecisionStates =
   | "UpwardPriceTrendConfirmed";
 
 const DecisionConfig = {
-  MAX_PERCENT_INCREASE_FOR_BUY: new Big("1.02"),
   MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015"),
-  PRICE_HAS_INCREASED_THRESHOLD: new Big("1.0015"),
+  PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175"),
   PRICE_HAS_DECREASED_THRESHOLD: new Big("1").minus(new Big("0.00175")),
 };
 
@@ -118,26 +117,19 @@ abstract class DecisionEngine implements IDecisionEngine {
     stateLogger.debug("SELL CRITERIA", {
       state: this,
       result,
-      currentPrice: currentPrice.toFixed(5),
+      currentPrice: currentPrice.toString(),
     });
 
     return result;
   };
 
   meetsBuyCriteria = (currentPrice: Big): boolean => {
-    const lastPriceIncreasedBy2Percent = new Big(this.lastTickerPrice)
-      .mul(DecisionConfig.MAX_PERCENT_INCREASE_FOR_BUY)
-      .toFixed(3);
-
-    const result =
-      currentPrice.gt(this.lastTickerPrice) &&
-      currentPrice.lt(lastPriceIncreasedBy2Percent);
+    const result = currentPrice.gt(this.lastTickerPrice);
 
     stateLogger.debug("BUY CRITERIA", {
       state: this,
       result,
-      currentPrice: currentPrice.toFixed(5),
-      lastPriceIncreasedBy3Percent: lastPriceIncreasedBy2Percent,
+      currentPrice: currentPrice.toString(),
     });
 
     return result;
@@ -286,15 +278,16 @@ export class UpwardPriceTrend extends DecisionEngine {
           lastPurchasePrice: this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
-        sell: this.meetsSellCriteria(new Big(currentPrice)),
+        sell: false,
       };
     } else if (this.isADecrease(new Big(currentPrice))) {
+      const isASell = this.meetsSellCriteria(new Big(currentPrice));
       result = {
         nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
+          lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
-        sell: false,
+        sell: isASell,
       };
     } else {
       result = {
@@ -350,22 +343,23 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
     let result;
 
+    const isASell = this.meetsSellCriteria(new Big(currentPrice));
+
     if (this.isADecrease(new Big(currentPrice))) {
       result = {
         nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
-        sell: false,
-      };
-    } else {
-      const isASell = this.meetsSellCriteria(new Big(currentPrice));
-      result = {
-        nextDecision: new UpwardPriceTrendConfirmed({
           lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
           lastTickerPrice: currentPrice,
         }),
         sell: isASell,
+      };
+    } else {
+      result = {
+        nextDecision: new UpwardPriceTrendConfirmed({
+          lastPurchasePrice: this.lastPurchasePrice,
+          lastTickerPrice: currentPrice,
+        }),
+        sell: false,
       };
     }
 
