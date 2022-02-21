@@ -418,6 +418,7 @@ __metadata:
     winston: ^3.5.1
     winston-csv-format: ^2.0.2
     winston-daily-rotate-file: ^4.6.1
+    xxhashjs: ^0.2.2
   bin:
     bot: dist/index.js
   languageName: unknown

@@ -1,5 +1,7 @@
 #!/usr/bin/env zx
 import "zx/globals";
+import { h32 } from "xxhashjs";
+const SEED = 2048;
 
 const volatileListRaw = (
   await question(
@@ -34,7 +36,9 @@ const envsThatMustBeReplaced = new Set([
 ]);
 
 for (const volatile of volatileList) {
-  const port = Math.trunc((Math.random() * 100_000 + 1025) % 65000);
+  const port =
+    (h32([volatile, stable, "binance"].join(":"), SEED).toNumber() % 65000) +
+    1025;
   await $`mkdir -p ${dir}${volatile.toLowerCase()}${stable.toLowerCase()}/`;
   filename = `${port}_${volatile}${stable}_bot`.toLowerCase();
   const env = fs

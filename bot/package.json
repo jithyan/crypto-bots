@@ -36,7 +36,8 @@
     "esbuild": "^0.14.23",
     "pkg": "^5.5.2",
     "rimraf": "^3.0.2",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "xxhashjs": "^0.2.2"
   },
   "pkg": {
     "targets": [
