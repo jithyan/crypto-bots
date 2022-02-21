@@ -6,24 +6,24 @@ const revision =
     .trim()
     .slice(0, 7) || "";
 
-// const define = {
-//   "process.env.COLLECT_PRICE_STATS": `"${process.env.COLLECT_PRICE_STATS}"`,
-//   "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
-//   "process.env.APP_VERSION": `"${revision}"`,
-//   "process.env.BINANCE_KEY": `"${process.env.BINANCE_KEY}"`,
-//   "process.env.BINANCE_SECRET": `"${process.env.BINANCE_SECRET}"`,
-//   "process.env.STABLE_COIN": `"${process.env.STABLE_COIN}"`,
-//   "process.env.VOLATILE_COIN": `"${process.env.VOLATILE_COIN}"`,
-//   "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
-//   "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
-//   "process.env.PORT": `"${process.env.PORT}"`,
-// };
+const define = {
+  //   "process.env.COLLECT_PRICE_STATS": `"${process.env.COLLECT_PRICE_STATS}"`,
+  "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
+  //   "process.env.APP_VERSION": `"${revision}"`,
+  //   "process.env.BINANCE_KEY": `"${process.env.BINANCE_KEY}"`,
+  //   "process.env.BINANCE_SECRET": `"${process.env.BINANCE_SECRET}"`,
+  //   "process.env.STABLE_COIN": `"${process.env.STABLE_COIN}"`,
+  //   "process.env.VOLATILE_COIN": `"${process.env.VOLATILE_COIN}"`,
+  //   "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
+  //   "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
+  "process.env.PORT": `"${process.env.PORT}"`,
+  "process.env.HOSTNAME": "35.243.104.152",
+};
 
 console.log("Starting build version", revision);
 // console.log("ENV", define);
 
 build({
-  loader: { ".node": "file" },
   entryPoints: ["./src/index.ts"],
   bundle: true,
   minify: true,
@@ -35,5 +35,5 @@ build({
   // Need to keep tabs on if it gets fixed
   // https://github.com/evanw/esbuild/issues/1921
   format: "cjs",
-  // define,
+  define,
 });

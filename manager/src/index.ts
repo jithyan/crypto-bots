@@ -1,6 +1,6 @@
 import express from "express";
 import { z } from "zod";
-import farmhash from "farmhash";
+import h from "xxhashjs";
 import { request } from "gaxios";
 
 const SEED = 10_240;
@@ -23,13 +23,9 @@ interface IBotInfo extends TBotInfoReq {
 export const botRegister: Record<string, IBotInfo> = {};
 
 function getIdFromData(botInfo: TBotInfoReq): string {
-  return farmhash.hash64WithSeed(
-    Buffer.from(
-      [botInfo.exchange, botInfo.port, botInfo.symbol].join(":"),
-      "utf-8"
-    ),
-    SEED
-  );
+  return h
+    .h64([botInfo.exchange, botInfo.port, botInfo.symbol].join(":"), SEED)
+    .toString();
 }
 
 const server = express();
