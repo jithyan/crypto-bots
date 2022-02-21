@@ -5,6 +5,8 @@ build
 dist
 bin
 
+.snowpack
+
 /bot/*.log
 /bot/*.csv
 /bot/*-audit.json
