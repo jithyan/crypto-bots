@@ -72,7 +72,7 @@ server.post("/bots/shutdown", async (req, res) => {
 });
 
 const port = Number(process.env.PORT ?? "2000");
-const hostname = process.env.HOSTNAME ?? "localhost";
+const hostname = "0.0.0.0";
 
 server.listen(port, hostname, () => {
   console.log(`Listening on ${hostname}:${port}`);
