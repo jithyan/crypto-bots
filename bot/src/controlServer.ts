@@ -12,7 +12,7 @@ export const SERVER_CONTROL = {
 
 async function registerWithBotManager(): Promise<void> {
   return axios
-    .post("http://localhost:8900/register", {
+    .post("http://0.0.0.0:2000/register", {
       version: Config.APP_VERSION,
       location: Config.APPSTATE_FILENAME,
       exchange: Config.EXCHANGE,
