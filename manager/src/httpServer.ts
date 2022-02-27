@@ -14,6 +14,7 @@ httpServer.post("/register", (req, res) => {
     ...botInfo,
     hostname: req.hostname,
     status: "ONLINE",
+    lastCheckIn: new Date(),
   };
 
   console.log("Received registration", { ...data, id });

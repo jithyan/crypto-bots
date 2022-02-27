@@ -4,6 +4,7 @@ import h from "xxhashjs";
 export interface IBotInfo extends TBotInfoReq {
   status: "ONLINE" | "SHUTTING DOWN" | "OFFLINE" | "NOT WORKING";
   hostname: string;
+  lastCheckIn: Date;
 }
 type TBotRegister = Record<string, IBotInfo>;
 export const botRegister: TBotRegister = {};
@@ -14,6 +15,14 @@ export const BotInfoReq = z.object({
   symbol: z.string(),
   port: z.string(),
   location: z.string().optional(),
+  status: z
+    .union([
+      z.literal("ONLINE"),
+      z.literal("OFFLINE"),
+      z.literal("SHUTTING DOWN"),
+      z.literal("NOT WORKING"),
+    ])
+    .optional(),
 });
 export type TBotInfoReq = z.infer<typeof BotInfoReq>;
 
