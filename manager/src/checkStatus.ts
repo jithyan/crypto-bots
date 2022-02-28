@@ -1,10 +1,13 @@
 import cron from "node-cron";
 import { logger } from "./log.js";
 import { botRegister } from "./models.js";
+import { isWithinInterval, addHours } from "date-fns";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
-  // TO DO
-  return false;
+  return !isWithinInterval(lastCheckIn, {
+    start: lastCheckIn,
+    end: addHours(lastCheckIn, 1),
+  });
 }
 
 const checkBotStatus = () => {
