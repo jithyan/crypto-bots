@@ -1,26 +1,23 @@
 import cron from "node-cron";
+import { logger } from "./log.js";
 import { botRegister } from "./models.js";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
   // TO DO
-  return true;
+  return false;
 }
 
 const checkBotStatus = () => {
   Object.keys(botRegister).forEach((botId) => {
     const currentBot = botRegister[botId];
+    const { status } = currentBot;
+    const botIsDown = isLastCheckInOverAnHourAgo(currentBot.lastCheckIn);
 
-    if (
-      currentBot.status === "ONLINE" &&
-      isLastCheckInOverAnHourAgo(currentBot.lastCheckIn)
-    ) {
-      console.error("Bot has not updated");
-      currentBot.status = "NOT WORKING";
-    } else if (
-      currentBot.status === "SHUTTING DOWN" &&
-      isLastCheckInOverAnHourAgo(currentBot.lastCheckIn)
-    ) {
-      console.error("Bot has not updated since trying to shutdown");
+    if (botIsDown && ["ONLINE", "SHUTTING DOWN"].includes(status)) {
+      logger.error("Bot has not sent a health check in the last hour", {
+        ...currentBot,
+        botId,
+      });
       currentBot.status = "NOT WORKING";
     }
   });

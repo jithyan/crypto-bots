@@ -1667,6 +1667,8 @@ __metadata:
     pkg: ^5.5.2
     rimraf: ^3.0.2
     typescript: ^4.5.5
+    winston: 3.5.1
+    winston-daily-rotate-file: 4.6.1
     xxhashjs: ^0.2.2
     zod: ^3.11.6
   bin:
@@ -2780,7 +2782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston-daily-rotate-file@npm:^4.6.1":
+"winston-daily-rotate-file@npm:4.6.1, winston-daily-rotate-file@npm:^4.6.1":
   version: 4.6.1
   resolution: "winston-daily-rotate-file@npm:4.6.1"
   dependencies:
@@ -2805,7 +2807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"winston@npm:^3.5.1":
+"winston@npm:3.5.1, winston@npm:^3.5.1":
   version: 3.5.1
   resolution: "winston@npm:3.5.1"
   dependencies:

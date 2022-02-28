@@ -1,10 +1,12 @@
 import { startBotStatusCheck } from "./checkStatus.js";
+import { Config } from "./config.js";
 import { httpServer } from "./httpServer.js";
+import { logger } from "./log.js";
 
-const port = Number(process.env.PORT ?? "2000");
 const hostname = "0.0.0.0";
 
-httpServer.listen(port, hostname, () => {
-  console.log(`Listening on ${hostname}:${port}`);
+httpServer.listen(Config.PORT, hostname, () => {
+  console.log(`Listening on ${hostname}:${Config.PORT}`);
+  logger.info("Started bot manager", { ...Config });
   startBotStatusCheck();
 });

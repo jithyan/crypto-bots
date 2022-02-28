@@ -2,25 +2,31 @@ import express from "express";
 import { z } from "zod";
 import { request } from "gaxios";
 import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
+import { logger } from "./log.js";
 
 export const httpServer = express();
 httpServer.use(express.json());
 
 httpServer.post("/register", (req, res) => {
-  const botInfo = BotInfoReq.parse(req.body);
-  const id = getIdFromData(botInfo);
+  try {
+    const botInfo = BotInfoReq.parse(req.body);
 
-  const data: IBotInfo = {
-    ...botInfo,
-    hostname: req.hostname,
-    status: "ONLINE",
-    lastCheckIn: new Date(),
-  };
+    const id = getIdFromData(botInfo);
 
-  console.log("Received registration", { ...data, id });
-  botRegister[id] = data;
+    const data: IBotInfo = {
+      ...botInfo,
+      hostname: req.hostname,
+      status: "ONLINE",
+      lastCheckIn: new Date(),
+    };
 
-  return res.status(201).json({ status: "SUCCESS" });
+    botRegister[id] = data;
+
+    return res.status(201).json({ status: "SUCCESS" });
+  } catch (err: any) {
+    logger.error("Bot registration failed", err);
+    return res.status(400).json({ status: "FAILURE" });
+  }
 });
 
 httpServer.get("/bots", (req, res) =>
@@ -32,17 +38,21 @@ httpServer.get("/bots", (req, res) =>
 const ShutdownRequest = z.object({ id: z.string() });
 
 httpServer.post("/bots/shutdown", async (req, res) => {
-  const { id } = ShutdownRequest.parse(req.body);
+  try {
+    const { id } = ShutdownRequest.parse(req.body);
 
-  if (!id || !botRegister.hasOwnProperty(id)) {
-    return res.status(404).json({ status: "NOT FOUND", id });
-  } else {
-    const { port, hostname } = botRegister[id];
-    await request({
-      baseURL: `http://${hostname}:${port}`,
-      url: `/shutdown`,
-    });
-    botRegister[id].status = "OFFLINE";
-    return res.json({ status: "OK" });
+    if (!botRegister.hasOwnProperty(id)) {
+      return res.status(404).json({ status: "NOT FOUND", id });
+    } else {
+      const { port, hostname } = botRegister[id];
+      await request({
+        baseURL: `http://${hostname}:${port}`,
+        url: `/shutdown`,
+      });
+      return res.json({ status: "OK" });
+    }
+  } catch (err: any) {
+    logger.error("Bot shutdown request failed", err);
+    return res.status(400).json({ status: "FAILURE" });
   }
 });

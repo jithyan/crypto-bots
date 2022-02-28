@@ -9,6 +9,7 @@ const revision =
 const define = {
   "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
   "process.env.PORT": `"${process.env.PORT}"`,
+  "process.env.APP_VERSION": `"${revision}`
 };
 
 console.log("Starting build version", revision);

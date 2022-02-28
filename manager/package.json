@@ -23,6 +23,8 @@
   "dependencies": {
     "gaxios": "^4.3.2",
     "node-cron": "^3.0.0",
+    "winston": "3.5.1",
+    "winston-daily-rotate-file": "4.6.1",
     "xxhashjs": "^0.2.2",
     "zod": "^3.11.6"
   },
