@@ -10,7 +10,11 @@ export const SERVER_CONTROL = {
   shutdown: false,
 };
 
-async function registerWithBotManager(): Promise<void> {
+export async function registerWithBotManager(
+  extraInfo: {
+    status?: "SHUTTING DOWN" | "OFFLINE";
+  } = {}
+): Promise<void> {
   return axios
     .post("http://0.0.0.0:2000/register", {
       version: Config.APP_VERSION,
@@ -18,6 +22,7 @@ async function registerWithBotManager(): Promise<void> {
       exchange: Config.EXCHANGE,
       port: Config.PORT,
       symbol: Config.SYMBOL,
+      ...extraInfo,
     })
     .then(() => {
       generalLogger.info("Sent registration to manager");
@@ -49,6 +54,6 @@ export function startControlServer() {
     console.log("Started listening on port " + port);
     generalLogger.info("Started control server on port " + port);
     registerWithBotManager();
-    cron.schedule("0 1 * * *", registerWithBotManager);
+    cron.schedule("0 1 * * *", () => registerWithBotManager());
   });
 }

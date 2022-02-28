@@ -7,7 +7,7 @@ import {
 } from "../exchange/index.js";
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
-import { SERVER_CONTROL } from "../controlServer.js";
+import { registerWithBotManager, SERVER_CONTROL } from "../controlServer.js";
 
 export async function* executeTradeCycle({
   enableResume,
@@ -57,6 +57,9 @@ export async function* executeTradeCycle({
     if (SERVER_CONTROL.shutdown) {
       generalLogger.info("Gracefully shut down as requested");
       console.log("Graceful shutdown initiated");
+      await registerWithBotManager({ status: "OFFLINE" }).catch((e) =>
+        generalLogger.error("Failed sending offline notification to manager", e)
+      );
       process.exit(0);
     }
     nextAssetState = await nextAssetState.execute();

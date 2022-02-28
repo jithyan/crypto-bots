@@ -49,6 +49,7 @@ httpServer.post("/bots/shutdown", async (req, res) => {
         baseURL: `http://${hostname}:${port}`,
         url: `/shutdown`,
       });
+      botRegister[id].status = "SHUTTING DOWN";
       return res.json({ status: "OK" });
     }
   } catch (err: any) {
