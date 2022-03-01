@@ -20,7 +20,7 @@ httpServer.post("/register", (req, res) => {
       lastCheckIn: new Date(),
     };
 
-    botRegister[id] = data;
+    botRegister.state[id] = data;
 
     return res.status(201).json({ status: "SUCCESS" });
   } catch (err: any) {
@@ -31,7 +31,10 @@ httpServer.post("/register", (req, res) => {
 
 httpServer.get("/bots", (req, res) =>
   res.json(
-    Object.keys(botRegister).map((id) => ({ id, ...(botRegister[id] ?? {}) }))
+    Object.keys(botRegister).map((id) => ({
+      id,
+      ...(botRegister.state[id] ?? {}),
+    }))
   )
 );
 
@@ -44,12 +47,12 @@ httpServer.post("/bots/shutdown", async (req, res) => {
     if (!botRegister.hasOwnProperty(id)) {
       return res.status(404).json({ status: "NOT FOUND", id });
     } else {
-      const { port, hostname } = botRegister[id];
+      const { port, hostname } = botRegister.state[id];
       await request({
         baseURL: `http://${hostname}:${port}`,
         url: `/shutdown`,
       });
-      botRegister[id].status = "SHUTTING DOWN";
+      botRegister.state[id].status = "SHUTTING DOWN";
       return res.json({ status: "OK" });
     }
   } catch (err: any) {

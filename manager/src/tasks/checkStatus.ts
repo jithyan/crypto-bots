@@ -1,6 +1,6 @@
 import cron from "node-cron";
-import { logger } from "./log.js";
-import { botRegister } from "./models.js";
+import { logger } from "../log.js";
+import { botRegister } from "../models.js";
 import { isWithinInterval, addHours } from "date-fns";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
@@ -12,7 +12,7 @@ function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
 
 const checkBotStatus = () => {
   Object.keys(botRegister).forEach((botId) => {
-    const currentBot = botRegister[botId];
+    const currentBot = botRegister.state[botId];
     const { status } = currentBot;
     const botIsDown = isLastCheckInOverAnHourAgo(currentBot.lastCheckIn);
 

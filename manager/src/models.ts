@@ -6,8 +6,8 @@ export interface IBotInfo extends TBotInfoReq {
   hostname: string;
   lastCheckIn: Date;
 }
-type TBotRegister = Record<string, IBotInfo>;
-export const botRegister: TBotRegister = {};
+export type TBotRegister = Record<string, IBotInfo>;
+export const botRegister: { state: TBotRegister } = { state: {} };
 
 export const BotInfoReq = z.object({
   version: z.string(),
