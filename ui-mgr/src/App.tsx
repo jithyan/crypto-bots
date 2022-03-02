@@ -1,25 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { TableExample } from "./TableExample";
 
-interface AppProps {}
-
-function App({}: AppProps) {
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
+    <div className=".container-fluid px-4">
+      <header>
+        <h1>Bot Manager</h1>
       </header>
+      <main>
+        <TableExample />
+      </main>
     </div>
   );
 }
