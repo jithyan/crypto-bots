@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { TableExample } from "./TableExample";
-import axios from "axios";
-
-const resp = axios.get("http://35.243.104.152/bots").then((data) => {
-  console.log(data);
-});
 
 function App() {
   return (
