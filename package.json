@@ -1,6 +1,6 @@
 {
   "name": "crypto-poc",
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "yarn@3.2.0",
   "type": "module",
   "workspaces": [
     "bot",
