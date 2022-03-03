@@ -77,7 +77,7 @@ export function TableExample() {
         ],
       },
     ],
-    [],
+    []
   );
 
   const data = React.useMemo(() => makeData(20), []);

@@ -386,7 +386,12 @@ export interface OrderResponseFull {
 
   /** @example SELL */
   side: string;
-  fills: { price: string; qty: string; commission: string; commissionAsset: string }[];
+  fills: {
+    price: string;
+    qty: string;
+    commission: string;
+    commissionAsset: string;
+  }[];
 }
 
 export interface MarginOrder {
@@ -658,7 +663,12 @@ export interface MarginOrderResponseFull {
    */
   marginBuyBorrowAsset: string;
   isIsolated: boolean;
-  fills: { price: string; qty: string; commission: string; commissionAsset: string }[];
+  fills: {
+    price: string;
+    qty: string;
+    commission: string;
+    commissionAsset: string;
+  }[];
 }
 
 export interface MarginTrade {
@@ -1044,7 +1054,10 @@ export interface SnapshotSpot {
   /** @example  */
   msg: string;
   snapshotVos: {
-    data: { balances: { asset: string; free: string; locked: string }[]; totalAssetOfBtc: string };
+    data: {
+      balances: { asset: string; free: string; locked: string }[];
+      totalAssetOfBtc: string;
+    };
     type: string;
     updateTime: number;
   }[];
@@ -1436,16 +1449,22 @@ export interface FullRequestParams extends Omit<RequestInit, "body"> {
   cancelToken?: CancelToken;
 }
 
-export type RequestParams = Omit<FullRequestParams, "body" | "method" | "query" | "path">;
+export type RequestParams = Omit<
+  FullRequestParams,
+  "body" | "method" | "query" | "path"
+>;
 
 export interface ApiConfig<SecurityDataType = unknown> {
   baseUrl?: string;
   baseApiParams?: Omit<RequestParams, "baseUrl" | "cancelToken" | "signal">;
-  securityWorker?: (securityData: SecurityDataType | null) => Promise<RequestParams | void> | RequestParams | void;
+  securityWorker?: (
+    securityData: SecurityDataType | null
+  ) => Promise<RequestParams | void> | RequestParams | void;
   customFetch?: typeof fetch;
 }
 
-export interface HttpResponse<D extends unknown, E extends unknown = unknown> extends Response {
+export interface HttpResponse<D extends unknown, E extends unknown = unknown>
+  extends Response {
   data: D;
   error: E;
 }
@@ -1463,7 +1482,8 @@ export class HttpClient<SecurityDataType = unknown> {
   private securityData: SecurityDataType | null = null;
   private securityWorker?: ApiConfig<SecurityDataType>["securityWorker"];
   private abortControllers = new Map<CancelToken, AbortController>();
-  private customFetch = (...fetchParams: Parameters<typeof fetch>) => fetch(...fetchParams);
+  private customFetch = (...fetchParams: Parameters<typeof fetch>) =>
+    fetch(...fetchParams);
 
   private baseApiParams: RequestParams = {
     credentials: "same-origin",
@@ -1482,7 +1502,9 @@ export class HttpClient<SecurityDataType = unknown> {
 
   private encodeQueryParam(key: string, value: any) {
     const encodedKey = encodeURIComponent(key);
-    return `${encodedKey}=${encodeURIComponent(typeof value === "number" ? value : `${value}`)}`;
+    return `${encodedKey}=${encodeURIComponent(
+      typeof value === "number" ? value : `${value}`
+    )}`;
   }
 
   private addQueryParam(query: QueryParamsType, key: string) {
@@ -1496,9 +1518,15 @@ export class HttpClient<SecurityDataType = unknown> {
 
   protected toQueryString(rawQuery?: QueryParamsType): string {
     const query = rawQuery || {};
-    const keys = Object.keys(query).filter((key) => "undefined" !== typeof query[key]);
+    const keys = Object.keys(query).filter(
+      (key) => "undefined" !== typeof query[key]
+    );
     return keys
-      .map((key) => (Array.isArray(query[key]) ? this.addArrayQueryParam(query, key) : this.addQueryParam(query, key)))
+      .map((key) =>
+        Array.isArray(query[key])
+          ? this.addArrayQueryParam(query, key)
+          : this.addQueryParam(query, key)
+      )
       .join("&");
   }
 
@@ -1509,7 +1537,9 @@ export class HttpClient<SecurityDataType = unknown> {
 
   private contentFormatters: Record<ContentType, (input: any) => any> = {
     [ContentType.Json]: (input: any) =>
-      input !== null && (typeof input === "object" || typeof input === "string") ? JSON.stringify(input) : input,
+      input !== null && (typeof input === "object" || typeof input === "string")
+        ? JSON.stringify(input)
+        : input,
     [ContentType.FormData]: (input: any) =>
       Object.keys(input || {}).reduce((formData, key) => {
         const property = input[key];
@@ -1519,14 +1549,17 @@ export class HttpClient<SecurityDataType = unknown> {
             ? property
             : typeof property === "object" && property !== null
             ? JSON.stringify(property)
-            : `${property}`,
+            : `${property}`
         );
         return formData;
       }, new FormData()),
     [ContentType.UrlEncoded]: (input: any) => this.toQueryString(input),
   };
 
-  private mergeRequestParams(params1: RequestParams, params2?: RequestParams): RequestParams {
+  private mergeRequestParams(
+    params1: RequestParams,
+    params2?: RequestParams
+  ): RequestParams {
     return {
       ...this.baseApiParams,
       ...params1,
@@ -1539,7 +1572,9 @@ export class HttpClient<SecurityDataType = unknown> {
     };
   }
 
-  private createAbortSignal = (cancelToken: CancelToken): AbortSignal | undefined => {
+  private createAbortSignal = (
+    cancelToken: CancelToken
+  ): AbortSignal | undefined => {
     if (this.abortControllers.has(cancelToken)) {
       const abortController = this.abortControllers.get(cancelToken);
       if (abortController) {
@@ -1583,15 +1618,25 @@ export class HttpClient<SecurityDataType = unknown> {
     const payloadFormatter = this.contentFormatters[type || ContentType.Json];
     const responseFormat = format || requestParams.format;
 
-    return this.customFetch(`${baseUrl || this.baseUrl || ""}${path}${queryString ? `?${queryString}` : ""}`, {
-      ...requestParams,
-      headers: {
-        ...(type && type !== ContentType.FormData ? { "Content-Type": type } : {}),
-        ...(requestParams.headers || {}),
-      },
-      signal: cancelToken ? this.createAbortSignal(cancelToken) : void 0,
-      body: typeof body === "undefined" || body === null ? null : payloadFormatter(body),
-    }).then(async (response) => {
+    return this.customFetch(
+      `${baseUrl || this.baseUrl || ""}${path}${
+        queryString ? `?${queryString}` : ""
+      }`,
+      {
+        ...requestParams,
+        headers: {
+          ...(type && type !== ContentType.FormData
+            ? { "Content-Type": type }
+            : {}),
+          ...(requestParams.headers || {}),
+        },
+        signal: cancelToken ? this.createAbortSignal(cancelToken) : void 0,
+        body:
+          typeof body === "undefined" || body === null
+            ? null
+            : payloadFormatter(body),
+      }
+    ).then(async (response) => {
       const r = response as HttpResponse<T, E>;
       r.data = null as unknown as T;
       r.error = null as unknown as E;
@@ -1633,7 +1678,9 @@ export class HttpClient<SecurityDataType = unknown> {
  *   - [https://github.com/binance/binance-spot-api-docs](https://github.com/binance/binance-spot-api-docs)
  *   - [https://binance-docs.github.io/apidocs/spot/en](https://binance-docs.github.io/apidocs/spot/en)
  */
-export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
+export class Api<
+  SecurityDataType extends unknown
+> extends HttpClient<SecurityDataType> {
   api = {
     /**
      * @description Test connectivity to the Rest API. Weight(IP): 1
@@ -1675,12 +1722,20 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Exchange Information
      * @request GET:/api/v3/exchangeInfo
      */
-    v3ExchangeInfoList: (query?: { symbol?: string; arraySymbols?: string }, params: RequestParams = {}) =>
+    v3ExchangeInfoList: (
+      query?: { symbol?: string; arraySymbols?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<
         {
           timezone: string;
           serverTime: number;
-          rateLimits: { rateLimitType: string; interval: string; intervalNum: number; limit: number }[];
+          rateLimits: {
+            rateLimitType: string;
+            interval: string;
+            intervalNum: number;
+            limit: number;
+          }[];
           exchangeFilters: object[];
           symbols: {
             symbol: string;
@@ -1697,7 +1752,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
             quoteOrderQtyMarketAllowed: boolean;
             isSpotTradingAllowed: boolean;
             isMarginTradingAllowed: boolean;
-            filters: { filterType: string; minPrice: string; maxPrice: string; tickSize: string }[];
+            filters: {
+              filterType: string;
+              minPrice: string;
+              maxPrice: string;
+              tickSize: string;
+            }[];
             permissions: string[];
           }[];
         },
@@ -1719,10 +1779,16 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/api/v3/depth
      */
     v3DepthList: (
-      query: { symbol: string; limit?: 5 | 10 | 20 | 50 | 100 | 500 | 1000 | 5000 },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        limit?: 5 | 10 | 20 | 50 | 100 | 500 | 1000 | 5000;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ lastUpdateId: number; bids: string[][]; asks: string[][] }, Error>({
+      this.request<
+        { lastUpdateId: number; bids: string[][]; asks: string[][] },
+        Error
+      >({
         path: `/api/v3/depth`,
         method: "GET",
         query: query,
@@ -1738,7 +1804,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Recent Trades List
      * @request GET:/api/v3/trades
      */
-    v3TradesList: (query: { symbol: string; limit?: number }, params: RequestParams = {}) =>
+    v3TradesList: (
+      query: { symbol: string; limit?: number },
+      params: RequestParams = {}
+    ) =>
       this.request<Trade[], Error>({
         path: `/api/v3/trades`,
         method: "GET",
@@ -1756,7 +1825,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/api/v3/historicalTrades
      * @secure
      */
-    v3HistoricalTradesList: (query: { symbol: string; limit?: number; fromId?: number }, params: RequestParams = {}) =>
+    v3HistoricalTradesList: (
+      query: { symbol: string; limit?: number; fromId?: number },
+      params: RequestParams = {}
+    ) =>
       this.request<Trade[], Error>({
         path: `/api/v3/historicalTrades`,
         method: "GET",
@@ -1775,8 +1847,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/api/v3/aggTrades
      */
     v3AggTradesList: (
-      query: { symbol: string; fromId?: number; startTime?: number; endTime?: number; limit?: number },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        fromId?: number;
+        startTime?: number;
+        endTime?: number;
+        limit?: number;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<AggTrade[], Error>({
         path: `/api/v3/aggTrades`,
@@ -1817,7 +1895,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         endTime?: number;
         limit?: number;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<(number | string)[][], Error>({
         path: `/api/v3/klines`,
@@ -1852,7 +1930,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary 24hr Ticker Price Change Statistics
      * @request GET:/api/v3/ticker/24hr
      */
-    v3Ticker24HrList: (query?: { symbol?: string }, params: RequestParams = {}) =>
+    v3Ticker24HrList: (
+      query?: { symbol?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<Ticker | TickerList, Error>({
         path: `/api/v3/ticker/24hr`,
         method: "GET",
@@ -1869,7 +1950,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Symbol Price Ticker
      * @request GET:/api/v3/ticker/price
      */
-    v3TickerPriceList: (query?: { symbol?: string }, params: RequestParams = {}) =>
+    v3TickerPriceList: (
+      query?: { symbol?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<PriceTicker | PriceTickerList, Error>({
         path: `/api/v3/ticker/price`,
         method: "GET",
@@ -1886,7 +1970,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @summary Symbol Order Book Ticker
      * @request GET:/api/v3/ticker/bookTicker
      */
-    v3TickerBookTickerList: (query?: { symbol?: string }, params: RequestParams = {}) =>
+    v3TickerBookTickerList: (
+      query?: { symbol?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<BookTicker | BookTickerList, Error>({
         path: `/api/v3/ticker/bookTicker`,
         method: "GET",
@@ -1928,7 +2015,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<object, Error>({
         path: `/api/v3/order/test`,
@@ -1957,7 +2044,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<OrderDetails, Error>({
         path: `/api/v3/order`,
@@ -2001,9 +2088,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<OrderResponseAck | OrderResponseResult | OrderResponseFull, Error>({
+      this.request<
+        OrderResponseAck | OrderResponseResult | OrderResponseFull,
+        Error
+      >({
         path: `/api/v3/order`,
         method: "POST",
         query: query,
@@ -2031,7 +2121,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<Order, Error>({
         path: `/api/v3/order`,
@@ -2052,8 +2142,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v3OpenOrdersList: (
-      query: { symbol?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<OrderDetails[], Error>({
         path: `/api/v3/openOrders`,
@@ -2074,8 +2169,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v3OpenOrdersDelete: (
-      query: { symbol: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<(Order | OcoOrder | (Order & OcoOrder))[], Error>({
         path: `/api/v3/openOrders`,
@@ -2106,7 +2206,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<OrderDetails[], Error>({
         path: `/api/v3/allOrders`,
@@ -2146,7 +2246,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2202,7 +2302,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2244,7 +2344,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<OcoOrder, Error>({
         path: `/api/v3/orderList`,
@@ -2274,7 +2374,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2309,7 +2409,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v3OpenOrderListList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2341,7 +2441,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/api/v3/account
      * @secure
      */
-    v3AccountList: (query: { recvWindow?: number; timestamp: number; signature: string }, params: RequestParams = {}) =>
+    v3AccountList: (
+      query: { recvWindow?: number; timestamp: number; signature: string },
+      params: RequestParams = {}
+    ) =>
       this.request<Account, Error>({
         path: `/api/v3/account`,
         method: "GET",
@@ -2372,7 +2475,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MyTrade[], Error>({
         path: `/api/v3/myTrades`,
@@ -2394,10 +2497,16 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v3RateLimitOrderList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        { rateLimitType: string; interval: string; intervalNum: number; limit: number; count?: number }[],
+        {
+          rateLimitType: string;
+          interval: string;
+          intervalNum: number;
+          limit: number;
+          count?: number;
+        }[],
         Error
       >({
         path: `/api/v3/rateLimit/order`,
@@ -2435,7 +2544,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/api/v3/userDataStream
      * @secure
      */
-    v3UserDataStreamUpdate: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v3UserDataStreamUpdate: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/api/v3/userDataStream`,
         method: "PUT",
@@ -2454,7 +2566,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request DELETE:/api/v3/userDataStream
      * @secure
      */
-    v3UserDataStreamDelete: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v3UserDataStreamDelete: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/api/v3/userDataStream`,
         method: "DELETE",
@@ -2475,8 +2590,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginTransferCreate: (
-      query: { asset: string; amount: number; type?: 1 | 2; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        amount: number;
+        type?: 1 | 2;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<Transaction, Error>({
         path: `/sapi/v1/margin/transfer`,
@@ -2509,11 +2631,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
-          rows: { amount: string; asset: string; status: string; timestamp: number; txId: number; type: string }[];
+          rows: {
+            amount: string;
+            asset: string;
+            status: string;
+            timestamp: number;
+            txId: number;
+            type: string;
+          }[];
           total: number;
         },
         Error
@@ -2545,7 +2674,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<Transaction, Error>({
         path: `/sapi/v1/margin/loan`,
@@ -2579,7 +2708,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2622,7 +2751,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<Transaction, Error>({
         path: `/sapi/v1/margin/repay`,
@@ -2656,7 +2785,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2807,7 +2936,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/sapi/v1/margin/priceIndex
      * @secure
      */
-    v1MarginPriceIndexList: (query: { symbol: string }, params: RequestParams = {}) =>
+    v1MarginPriceIndexList: (
+      query: { symbol: string },
+      params: RequestParams = {}
+    ) =>
       this.request<{ calcTime: number; price: string; symbol: string }, Error>({
         path: `/sapi/v1/margin/priceIndex`,
         method: "GET",
@@ -2836,7 +2968,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginOrderDetail, Error>({
         path: `/sapi/v1/margin/order`,
@@ -2882,9 +3014,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<MarginOrderResponseAck | MarginOrderResponseResult | MarginOrderResponseFull, Error>({
+      this.request<
+        | MarginOrderResponseAck
+        | MarginOrderResponseResult
+        | MarginOrderResponseFull,
+        Error
+      >({
         path: `/sapi/v1/margin/order`,
         method: "POST",
         query: query,
@@ -2913,7 +3050,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginOrder, Error>({
         path: `/sapi/v1/margin/order`,
@@ -2946,7 +3083,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -2991,7 +3128,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3030,7 +3167,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1MarginAccountList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3077,7 +3214,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginOrderDetail[], Error>({
         path: `/sapi/v1/margin/openOrders`,
@@ -3105,10 +3242,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        (CanceledMarginOrderDetail | MarginOcoOrder | (CanceledMarginOrderDetail & MarginOcoOrder))[],
+        (
+          | CanceledMarginOrderDetail
+          | MarginOcoOrder
+          | (CanceledMarginOrderDetail & MarginOcoOrder)
+        )[],
         Error
       >({
         path: `/sapi/v1/margin/openOrders`,
@@ -3140,7 +3281,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginOrderDetail[], Error>({
         path: `/sapi/v1/margin/allOrders`,
@@ -3181,7 +3322,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3242,7 +3383,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3286,7 +3427,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginOcoOrder, Error>({
         path: `/sapi/v1/margin/orderList`,
@@ -3318,7 +3459,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3359,7 +3500,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3404,7 +3545,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginTrade[], Error>({
         path: `/sapi/v1/margin/myTrades`,
@@ -3425,8 +3566,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginMaxBorrowableList: (
-      query: { asset: string; isolatedSymbol?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        isolatedSymbol?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ amount: string; borrowLimit: string }, Error>({
         path: `/sapi/v1/margin/maxBorrowable`,
@@ -3447,8 +3594,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginMaxTransferableList: (
-      query: { asset: string; isolatedSymbol?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        isolatedSymbol?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ amount: string; borrowLimit: string }, Error>({
         path: `/sapi/v1/margin/maxTransferable`,
@@ -3482,7 +3635,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<MarginTransferDetails, Error>({
         path: `/sapi/v1/margin/isolated/transfer`,
@@ -3513,7 +3666,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<object, Error>({
         path: `/sapi/v1/margin/isolated/transfer`,
@@ -3534,8 +3687,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedAccountList: (
-      query: { symbols?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbols?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<IsolatedMarginAccountInfo, Error>({
         path: `/sapi/v1/margin/isolated/account`,
@@ -3556,8 +3714,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedAccountDelete: (
-      query: { symbol: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ success: boolean; symbol: string }, Error>({
         path: `/sapi/v1/margin/isolated/account`,
@@ -3578,8 +3741,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedAccountCreate: (
-      query: { symbol: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ success: boolean; symbol: string }, Error>({
         path: `/sapi/v1/margin/isolated/account`,
@@ -3601,7 +3769,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1MarginIsolatedAccountLimitList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ enabledAccount: number; maxAccount: number }, Error>({
         path: `/sapi/v1/margin/isolated/accountLimit`,
@@ -3622,8 +3790,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedPairList: (
-      query: { symbol: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3655,7 +3828,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1MarginIsolatedAllPairsList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3693,7 +3866,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<BnbBurnStatus, Error>({
         path: `/sapi/v1/bnbBurn`,
@@ -3713,7 +3886,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/sapi/v1/bnbBurn
      * @secure
      */
-    v1BnbBurnList: (query: { recvWindow?: number; timestamp: number; signature: string }, params: RequestParams = {}) =>
+    v1BnbBurnList: (
+      query: { recvWindow?: number; timestamp: number; signature: string },
+      params: RequestParams = {}
+    ) =>
       this.request<BnbBurnStatus, Error>({
         path: `/sapi/v1/bnbBurn`,
         method: "GET",
@@ -3742,9 +3918,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ asset: string; dailyInterestRate: string; timestamp: number; vipLevel: number }[], Error>({
+      this.request<
+        {
+          asset: string;
+          dailyInterestRate: string;
+          timestamp: number;
+          vipLevel: number;
+        }[],
+        Error
+      >({
         path: `/sapi/v1/margin/interestRateHistory`,
         method: "GET",
         query: query,
@@ -3763,8 +3947,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginCrossMarginDataList: (
-      query: { vipLevel?: number; coin?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        vipLevel?: number;
+        coin?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3797,15 +3987,25 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedMarginDataList: (
-      query: { vipLevel?: number; symbol?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        vipLevel?: number;
+        symbol?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           vipLevel?: number;
           symbol?: string;
           leverage?: string;
-          data?: { coin?: string; dailyInterest?: string; borrowLimit?: string }[];
+          data?: {
+            coin?: string;
+            dailyInterest?: string;
+            borrowLimit?: string;
+          }[];
         }[],
         Error
       >({
@@ -3827,8 +4027,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MarginIsolatedMarginTierList: (
-      query: { symbol: string; tier?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol: string;
+        tier?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3877,7 +4083,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1CapitalConfigGetallList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -3944,7 +4150,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<SnapshotSpot | SnapshotMargin | SnapshotFutures, Error>({
         path: `/sapi/v1/accountSnapshot`,
@@ -3966,7 +4172,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1AccountDisableFastWithdrawSwitchCreate: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<object, Error>({
         path: `/sapi/v1/account/disableFastWithdrawSwitch`,
@@ -3988,7 +4194,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1AccountEnableFastWithdrawSwitchCreate: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<object, Error>({
         path: `/sapi/v1/account/enableFastWithdrawSwitch`,
@@ -4023,7 +4229,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ id: string }, Error>({
         path: `/sapi/v1/capital/withdraw/apply`,
@@ -4055,7 +4261,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4103,7 +4309,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4141,10 +4347,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1CapitalDepositAddressList: (
-      query: { coin: string; network?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        coin: string;
+        network?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ address: string; coin: string; tag: string; url: string }, Error>({
+      this.request<
+        { address: string; coin: string; tag: string; url: string },
+        Error
+      >({
         path: `/sapi/v1/capital/deposit/address`,
         method: "GET",
         query: query,
@@ -4164,7 +4379,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1AccountStatusList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ data: string }, Error>({
         path: `/sapi/v1/account/status`,
@@ -4186,7 +4401,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1AccountApiTradingStatusList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4194,7 +4409,9 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
             isLocked: boolean;
             plannedRecoverTime: number;
             triggerCondition: { GCR: number; IFER: number; UFR: number };
-            indicators: { BTCUSDT: { i: string; c: number; v: number; t: number }[] };
+            indicators: {
+              BTCUSDT: { i: string; c: number; v: number; t: number }[];
+            };
             updateTime: number;
           };
         },
@@ -4218,8 +4435,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1AssetDribbletList: (
-      query: { startTime?: number; endTime?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        startTime?: number;
+        endTime?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4259,8 +4482,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1AssetDustCreate: (
-      query: { asset: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4304,11 +4532,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
-          rows: { id: number; amount: string; asset: string; divTime: number; enInfo: string; tranId: number }[];
+          rows: {
+            id: number;
+            amount: string;
+            asset: string;
+            divTime: number;
+            enInfo: string;
+            tranId: number;
+          }[];
           total: number;
         },
         Error
@@ -4331,8 +4566,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1AssetAssetDetailList: (
-      query: { asset?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4364,10 +4604,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1AssetTradeFeeList: (
-      query: { symbol?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        symbol?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ symbol: string; makerCommission: string; takerCommission: string }[], Error>({
+      this.request<
+        { symbol: string; makerCommission: string; takerCommission: string }[],
+        Error
+      >({
         path: `/sapi/v1/asset/tradeFee`,
         method: "GET",
         query: query,
@@ -4426,12 +4674,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           total: number;
-          rows: { asset: string; amount: string; type: string; status: string; tranId: number; timestamp: number }[];
+          rows: {
+            asset: string;
+            amount: string;
+            type: string;
+            status: string;
+            tranId: number;
+            timestamp: number;
+          }[];
         },
         Error
       >({
@@ -4491,7 +4746,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ tranId: number }, Error>({
         path: `/sapi/v1/asset/transfer`,
@@ -4519,10 +4774,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        { asset: string; free: string; locked: string; freeze: string; withdrawing: string; btcValuation: string }[],
+        {
+          asset: string;
+          free: string;
+          locked: string;
+          freeze: string;
+          withdrawing: string;
+          btcValuation: string;
+        }[],
         Error
       >({
         path: `/sapi/v1/asset/get-funding-asset`,
@@ -4544,7 +4806,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1AccountApiRestrictionsList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4580,8 +4842,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountVirtualSubAccountCreate: (
-      query: { subAccountString: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        subAccountString: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ email: string }, Error>({
         path: `/sapi/v1/sub-account/virtualSubAccount`,
@@ -4611,9 +4878,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ subAccounts: { email: string; isFreeze: boolean; createTime: number }[] }, Error>({
+      this.request<
+        {
+          subAccounts: {
+            email: string;
+            isFreeze: boolean;
+            createTime: number;
+          }[];
+        },
+        Error
+      >({
         path: `/sapi/v1/sub-account/list`,
         method: "GET",
         query: query,
@@ -4643,10 +4919,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        { from: string; to: string; asset: string; qty: string; status: string; tranId: number; time: number }[],
+        {
+          from: string;
+          to: string;
+          asset: string;
+          qty: string;
+          status: string;
+          tranId: number;
+          time: number;
+        }[],
         Error
       >({
         path: `/sapi/v1/sub-account/sub/transfer/history`,
@@ -4678,13 +4962,20 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           success: boolean;
           futuresType: number;
-          transfers: { from: string; to: string; asset: string; qty: string; tranId: number; time: number }[];
+          transfers: {
+            from: string;
+            to: string;
+            asset: string;
+            qty: string;
+            tranId: number;
+            time: number;
+          }[];
         },
         Error
       >({
@@ -4716,7 +5007,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ success: boolean; txnId: string }, Error>({
         path: `/sapi/v1/sub-account/futures/internalTransfer`,
@@ -4737,10 +5028,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v3SubAccountAssetsList: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ balances: { asset: string; free: number; locked: number }[] }, Error>({
+      this.request<
+        { balances: { asset: string; free: number; locked: number }[] },
+        Error
+      >({
         path: `/sapi/v3/sub-account/assets`,
         method: "GET",
         query: query,
@@ -4759,8 +5058,15 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountSpotSummaryList: (
-      query: { email: string; page?: number; size?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        page?: number;
+        size?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4796,9 +5102,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ address: string; coin: string; tag: string; url: string }, Error>({
+      this.request<
+        { address: string; coin: string; tag: string; url: string },
+        Error
+      >({
         path: `/sapi/v1/capital/deposit/subAddress`,
         method: "GET",
         query: query,
@@ -4829,7 +5138,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4864,8 +5173,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountStatusList: (
-      query: { email?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4897,8 +5211,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountMarginEnableCreate: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ email: string; isMarginEnabled: boolean }, Error>({
         path: `/sapi/v1/sub-account/margin/enable`,
@@ -4919,8 +5238,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountMarginAccountList: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4929,7 +5253,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
           totalAssetOfBtc: string;
           totalLiabilityOfBtc: string;
           totalNetAssetOfBtc: string;
-          marginTradeCoeffVo: { forceLiquidationBar: string; marginCallBar: string; normalBar: string };
+          marginTradeCoeffVo: {
+            forceLiquidationBar: string;
+            marginCallBar: string;
+            normalBar: string;
+          };
           marginUserAssetVoList: {
             asset: string;
             borrowed: string;
@@ -4960,7 +5288,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1SubAccountMarginAccountSummaryList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -4994,8 +5322,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountFuturesEnableCreate: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ email: string; isFuturesEnabled: boolean }, Error>({
         path: `/sapi/v1/sub-account/futures/enable`,
@@ -5016,8 +5349,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountFuturesAccountList: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5069,7 +5407,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1SubAccountFuturesAccountSummaryList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5113,8 +5451,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountFuturesPositionRiskList: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5156,7 +5499,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ txnId: string }, Error>({
         path: `/sapi/v1/sub-account/futures/transfer`,
@@ -5186,7 +5529,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ txnId: string }, Error>({
         path: `/sapi/v1/sub-account/margin/transfer`,
@@ -5215,7 +5558,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ txnId: string }, Error>({
         path: `/sapi/v1/sub-account/transfer/subToSub`,
@@ -5236,8 +5579,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountTransferSubToMasterCreate: (
-      query: { asset: string; amount: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        amount: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ txnId: string }, Error>({
         path: `/sapi/v1/sub-account/transfer/subToMaster`,
@@ -5268,7 +5617,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5315,7 +5664,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5361,7 +5710,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ tranId: number }, Error>({
         path: `/sapi/v1/sub-account/universalTransfer`,
@@ -5382,10 +5731,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v2SubAccountFuturesAccountList: (
-      query: { email: string; futuresType: 1 | 2; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        futuresType: 1 | 2;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<SubAccountUSDTFuturesDetails | SubAccountCOINFuturesDetails, Error>({
+      this.request<
+        SubAccountUSDTFuturesDetails | SubAccountCOINFuturesDetails,
+        Error
+      >({
         path: `/sapi/v2/sub-account/futures/account`,
         method: "GET",
         query: query,
@@ -5412,9 +5770,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<SubAccountUSDTFuturesSummary | SubAccountCOINFuturesSummary, Error>({
+      this.request<
+        SubAccountUSDTFuturesSummary | SubAccountCOINFuturesSummary,
+        Error
+      >({
         path: `/sapi/v2/sub-account/futures/accountSummary`,
         method: "GET",
         query: query,
@@ -5433,10 +5794,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v2SubAccountFuturesPositionRiskList: (
-      query: { email: string; futuresType: 1 | 2; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        futuresType: 1 | 2;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<SubAccountUSDTFuturesPositionRisk | SubAccountCOINFuturesPositionRisk, Error>({
+      this.request<
+        SubAccountUSDTFuturesPositionRisk | SubAccountCOINFuturesPositionRisk,
+        Error
+      >({
         path: `/sapi/v2/sub-account/futures/positionRisk`,
         method: "GET",
         query: query,
@@ -5455,8 +5825,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountBlvtEnableCreate: (
-      query: { email: string; enableBlvt: boolean; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        enableBlvt: boolean;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ email: string; enableBlvt: boolean }, Error>({
         path: `/sapi/v1/sub-account/blvt/enable`,
@@ -5485,7 +5861,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ tranId: number }, Error>({
         path: `/sapi/v1/managed-subaccount/deposit`,
@@ -5506,8 +5882,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1ManagedSubaccountAssetList: (
-      query: { email: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5547,7 +5928,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ tranId: number }, Error>({
         path: `/sapi/v1/managed-subaccount/withdraw`,
@@ -5576,9 +5957,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ ipRestrict: string; ipList: string[]; updateTime: number; apiKey: string }, Error>({
+      this.request<
+        {
+          ipRestrict: string;
+          ipList: string[];
+          updateTime: number;
+          apiKey: string;
+        },
+        Error
+      >({
         path: `/sapi/v1/sub-account/subAccountApi/ipRestriction`,
         method: "POST",
         query: query,
@@ -5597,10 +5986,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1SubAccountSubAccountApiIpRestrictionList: (
-      query: { email: string; subAccountApiKey: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        email: string;
+        subAccountApiKey: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ ipRestrict: string; ipList: string[]; updateTime: number; apiKey: string }, Error>({
+      this.request<
+        {
+          ipRestrict: string;
+          ipList: string[];
+          updateTime: number;
+          apiKey: string;
+        },
+        Error
+      >({
         path: `/sapi/v1/sub-account/subAccountApi/ipRestriction`,
         method: "GET",
         query: query,
@@ -5627,7 +6030,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ ip: string; updateTime: number; apiKey: string }, Error>({
         path: `/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList`,
@@ -5656,9 +6059,17 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ ipRestrict: string; ipList: string[]; updateTime: number; apiKey: string }, Error>({
+      this.request<
+        {
+          ipRestrict: string;
+          ipList: string[];
+          updateTime: number;
+          apiKey: string;
+        },
+        Error
+      >({
         path: `/sapi/v1/sub-account/subAccountApi/ipRestriction/ipList`,
         method: "DELETE",
         query: query,
@@ -5694,7 +6105,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/sapi/v1/userDataStream
      * @secure
      */
-    v1UserDataStreamUpdate: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v1UserDataStreamUpdate: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/sapi/v1/userDataStream`,
         method: "PUT",
@@ -5713,7 +6127,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request DELETE:/sapi/v1/userDataStream
      * @secure
      */
-    v1UserDataStreamDelete: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v1UserDataStreamDelete: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/sapi/v1/userDataStream`,
         method: "DELETE",
@@ -5750,7 +6167,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request PUT:/sapi/v1/userDataStream/isolated
      * @secure
      */
-    v1UserDataStreamIsolatedUpdate: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v1UserDataStreamIsolatedUpdate: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/sapi/v1/userDataStream/isolated`,
         method: "PUT",
@@ -5769,7 +6189,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request DELETE:/sapi/v1/userDataStream/isolated
      * @secure
      */
-    v1UserDataStreamIsolatedDelete: (query?: { listenKey?: string }, params: RequestParams = {}) =>
+    v1UserDataStreamIsolatedDelete: (
+      query?: { listenKey?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<object, Error>({
         path: `/sapi/v1/userDataStream/isolated`,
         method: "DELETE",
@@ -5799,7 +6222,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5849,7 +6272,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5899,7 +6322,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -5936,8 +6359,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1LendingDailyUserLeftQuotaList: (
-      query: { productId: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        productId: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ asset: string; leftQuota: string }, Error>({
         path: `/sapi/v1/lending/daily/userLeftQuota`,
@@ -5958,8 +6386,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1LendingDailyPurchaseCreate: (
-      query: { productId: string; amount: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        productId: string;
+        amount: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ purchaseId: number }, Error>({
         path: `/sapi/v1/lending/daily/purchase`,
@@ -5980,10 +6414,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1LendingDailyUserRedemptionQuotaList: (
-      query: { productId: string; type: "FAST" | "NORMAL"; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        productId: string;
+        type: "FAST" | "NORMAL";
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ asset: string; dailyQuota: string; leftQuota: string; minRedemptionAmount: string }, Error>({
+      this.request<
+        {
+          asset: string;
+          dailyQuota: string;
+          leftQuota: string;
+          minRedemptionAmount: string;
+        },
+        Error
+      >({
         path: `/sapi/v1/lending/daily/userRedemptionQuota`,
         method: "GET",
         query: query,
@@ -6010,7 +6458,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<object, Error>({
         path: `/sapi/v1/lending/daily/redeem`,
@@ -6031,8 +6479,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1LendingDailyTokenPositionList: (
-      query: { asset: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        asset: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6076,14 +6529,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         type: "ACTIVITY" | "CUSTOMIZED_FIXED";
         status: "ALL" | "SUBSCRIBABLE" | "UNSUBSCRIBABLE";
         isSortAsc: boolean;
-        sortBy: "START_TIME" | "LOT_SIZ" | "LOT_SIZE" | "INTEREST_RATE" | "DURATION";
+        sortBy:
+          | "START_TIME"
+          | "LOT_SIZ"
+          | "LOT_SIZE"
+          | "INTEREST_RATE"
+          | "DURATION";
         current?: number;
         size?: number;
         recvWindow?: number;
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6124,8 +6582,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1LendingCustomizedFixedPurchaseCreate: (
-      query: { projectId: string; lot: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        projectId: string;
+        lot: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ purchaseId: string }, Error>({
         path: `/sapi/v1/lending/customizedFixed/purchase`,
@@ -6154,7 +6618,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6197,11 +6661,16 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1LendingUnionAccountList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
-          positionAmountVos: { amount: string; amountInBTC: string; amountInUSDT: string; asset: string }[];
+          positionAmountVos: {
+            amount: string;
+            amountInBTC: string;
+            amountInUSDT: string;
+            asset: string;
+          }[];
           totalAmountInBTC: string;
           totalAmountInUSDT: string;
           totalFixedAmountInBTC: string;
@@ -6240,9 +6709,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<SavingsFlexiblePurchaseRecord | SavingsFixedActivityPurchaseRecord, Error>({
+      this.request<
+        SavingsFlexiblePurchaseRecord | SavingsFixedActivityPurchaseRecord,
+        Error
+      >({
         path: `/sapi/v1/lending/union/purchaseRecord`,
         method: "GET",
         query: query,
@@ -6272,9 +6744,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<SavingsFlexibleRedemptionRecord | SavingsFixedActivityRedemptionRecord, Error>({
+      this.request<
+        SavingsFlexibleRedemptionRecord | SavingsFixedActivityRedemptionRecord,
+        Error
+      >({
         path: `/sapi/v1/lending/union/redemptionRecord`,
         method: "GET",
         query: query,
@@ -6304,10 +6779,16 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        { asset: string; interest: string; lendingType: string; productName: string; time: number }[],
+        {
+          asset: string;
+          interest: string;
+          lendingType: string;
+          productName: string;
+          time: number;
+        }[],
         Error
       >({
         path: `/sapi/v1/lending/union/interestHistory`,
@@ -6336,9 +6817,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ dailyPurchaseId: number; success: boolean; time: number }, Error>({
+      this.request<
+        { dailyPurchaseId: number; success: boolean; time: number },
+        Error
+      >({
         path: `/sapi/v1/lending/positionChanged`,
         method: "POST",
         query: query,
@@ -6358,10 +6842,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1MiningPubAlgoListList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
-        { code: number; msg: string; data: { algoName: string; algoId: number; poolIndex: number; unit: string }[] },
+        {
+          code: number;
+          msg: string;
+          data: {
+            algoName: string;
+            algoId: number;
+            poolIndex: number;
+            unit: string;
+          }[];
+        },
         Error
       >({
         path: `/sapi/v1/mining/pub/algoList`,
@@ -6383,13 +6876,19 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      */
     v1MiningPubCoinListList: (
       query: { recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           code: number;
           msg: string;
-          data: { coinName: string; coinId: number; poolIndex: number; algoId: number; algoName: string }[];
+          data: {
+            coinName: string;
+            coinId: number;
+            poolIndex: number;
+            algoId: number;
+            algoName: string;
+          }[];
         },
         Error
       >({
@@ -6419,7 +6918,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6462,7 +6961,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6514,7 +7013,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6567,14 +7066,20 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           code: number;
           msg: string;
           data: {
-            otherProfits: { time: number; coinName: string; type: number; profitAmount: number; status: number }[];
+            otherProfits: {
+              time: number;
+              coinName: string;
+              type: number;
+              profitAmount: number;
+              status: number;
+            }[];
             totalNum: number;
             pageSize: number;
           };
@@ -6599,8 +7104,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MiningHashTransferConfigDetailsListList: (
-      query: { pageIndex?: number; pageSize?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        pageIndex?: number;
+        pageSize?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6650,7 +7161,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6701,7 +7212,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ code: number; msg: string; data: number }, Error>({
         path: `/sapi/v1/mining/hash-transfer/config`,
@@ -6722,8 +7233,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MiningHashTransferConfigCancelCreate: (
-      query: { configId: string; userName: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        configId: string;
+        userName: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ code: number; msg: string; data: boolean }, Error>({
         path: `/sapi/v1/mining/hash-transfer/config/cancel`,
@@ -6744,8 +7261,14 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MiningStatisticsUserStatusList: (
-      query: { algo: string; userName: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        algo: string;
+        userName: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6783,14 +7306,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1MiningStatisticsUserListList: (
-      query: { algo: string; userName: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        algo: string;
+        userName: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           code: number;
           msg: string;
-          data: { type: string; userName: string; list: { time: number; hashrate: string; reject: string }[] }[];
+          data: {
+            type: string;
+            userName: string;
+            list: { time: number; hashrate: string; reject: string }[];
+          }[];
         },
         Error
       >({
@@ -6822,7 +7355,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6860,7 +7393,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @request GET:/sapi/v1/blvt/tokenInfo
      * @secure
      */
-    v1BlvtTokenInfoList: (query?: { tokenName?: string }, params: RequestParams = {}) =>
+    v1BlvtTokenInfoList: (
+      query?: { tokenName?: string },
+      params: RequestParams = {}
+    ) =>
       this.request<
         {
           tokenName: string;
@@ -6868,7 +7404,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
           underlying: string;
           tokenIssued: string;
           basket: string;
-          currentBaskets: { symbol: string; amount: string; notionalValue: string }[];
+          currentBaskets: {
+            symbol: string;
+            amount: string;
+            notionalValue: string;
+          }[];
           nav: string;
           realLeverage: string;
           fundingRate: string;
@@ -6899,11 +7439,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BlvtSubscribeCreate: (
-      query: { tokenName: string; cost: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        tokenName: string;
+        cost: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
-        { id: number; status: string; tokenName: string; amount: string; cost: string; timestamp: number },
+        {
+          id: number;
+          status: string;
+          tokenName: string;
+          amount: string;
+          cost: string;
+          timestamp: number;
+        },
         Error
       >({
         path: `/sapi/v1/blvt/subscribe`,
@@ -6934,7 +7487,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -6966,11 +7519,24 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BlvtRedeemCreate: (
-      query: { tokenName: string; amount: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        tokenName: string;
+        amount: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
-        { id: number; status: string; tokenName: string; redeemAmount: string; amount: string; timestamp: number },
+        {
+          id: number;
+          status: string;
+          tokenName: string;
+          redeemAmount: string;
+          amount: string;
+          timestamp: number;
+        },
         Error
       >({
         path: `/sapi/v1/blvt/redeem`,
@@ -7001,7 +7567,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7033,11 +7599,20 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BlvtUserLimitList: (
-      query: { tokenName?: string; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        tokenName?: string;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
-        { tokenName: string; userDailyTotalPurchaseLimit: string; userDailyTotalRedeemLimit: string }[],
+        {
+          tokenName: string;
+          userDailyTotalPurchaseLimit: string;
+          userDailyTotalRedeemLimit: string;
+        }[],
         Error
       >({
         path: `/sapi/v1/blvt/userLimit`,
@@ -7058,7 +7633,10 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BswapPoolsList: (params: RequestParams = {}) =>
-      this.request<{ poolId: number; poolName: string; assets: string[] }[], Error>({
+      this.request<
+        { poolId: number; poolName: string; assets: string[] }[],
+        Error
+      >({
         path: `/sapi/v1/bswap/pools`,
         method: "GET",
         secure: true,
@@ -7076,8 +7654,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BswapLiquidityList: (
-      query: { poolId?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        poolId?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7085,7 +7668,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
           poolNmae: string;
           updateTime: number;
           liquidity: { BUSD: number; USDT: number };
-          share: { shareAmount: number; sharePercentage: number; asset: { BUSD: number; USDT: number } };
+          share: {
+            shareAmount: number;
+            sharePercentage: number;
+            asset: { BUSD: number; USDT: number };
+          };
         }[],
         Error
       >({
@@ -7115,7 +7702,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ operationId: number }, Error>({
         path: `/sapi/v1/bswap/liquidityAdd`,
@@ -7145,7 +7732,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ operationId: number }, Error>({
         path: `/sapi/v1/bswap/liquidityRemove`,
@@ -7177,7 +7764,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7217,7 +7804,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7257,7 +7844,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<{ swapId: number }, Error>({
         path: `/sapi/v1/bswap/swap`,
@@ -7290,7 +7877,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7324,18 +7911,37 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BswapPoolConfigureList: (
-      query: { poolId?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        poolId?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           poolId: number;
           poolNmae: string;
           updateTime: number;
-          liquidity: { constantA: number; minRedeemShare: number; slippageTolerance: number };
+          liquidity: {
+            constantA: number;
+            minRedeemShare: number;
+            slippageTolerance: number;
+          };
           assetConfigure: {
-            BUSD: { minAdd: number; maxAdd: number; minSwap: number; maxSwap: number };
-            USDT: { minAdd: number; maxAdd: number; minSwap: number; maxSwap: number };
+            BUSD: {
+              minAdd: number;
+              maxAdd: number;
+              minSwap: number;
+              maxSwap: number;
+            };
+            USDT: {
+              minAdd: number;
+              maxAdd: number;
+              minSwap: number;
+              maxSwap: number;
+            };
           };
         }[],
         Error
@@ -7367,9 +7973,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<BswapAddLiquidityPreviewCombination | BswapAddLiquidityPreviewSingle, Error>({
+      this.request<
+        BswapAddLiquidityPreviewCombination | BswapAddLiquidityPreviewSingle,
+        Error
+      >({
         path: `/sapi/v1/bswap/addLiquidityPreview`,
         method: "GET",
         query: query,
@@ -7397,9 +8006,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<BswapRmvLiquidityPreviewCombination | BswapRmvLiquidityPreviewSingle, Error>({
+      this.request<
+        BswapRmvLiquidityPreviewCombination | BswapRmvLiquidityPreviewSingle,
+        Error
+      >({
         path: `/sapi/v1/bswap/removeLiquidityPreview`,
         method: "GET",
         query: query,
@@ -7418,13 +8030,21 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BswapUnclaimedRewardsList: (
-      query: { type?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        type?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           totalUnclaimedRewards: { BUSD: number; BNB: number; USDT: number };
-          details: { "BNB/USDT": { BUSD: number; USDT: number }; "BNB/BTC": { BNB: number } };
+          details: {
+            "BNB/USDT": { BUSD: number; USDT: number };
+            "BNB/BTC": { BNB: number };
+          };
         },
         Error
       >({
@@ -7446,8 +8066,13 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1BswapUnclaimedRewardsCreate: (
-      query: { type?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        type?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
       this.request<{ success: boolean }, Error>({
         path: `/sapi/v1/bswap/unclaimedRewards`,
@@ -7479,7 +8104,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7520,7 +8145,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7582,9 +8207,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
-      this.request<{ asset: string; type: string; amount: string; timestamp: number; tranId: string }[], Error>({
+      this.request<
+        {
+          asset: string;
+          type: string;
+          amount: string;
+          timestamp: number;
+          tranId: string;
+        }[],
+        Error
+      >({
         path: `/sapi/v1/loan/income`,
         method: "GET",
         query: query,
@@ -7611,7 +8245,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7655,7 +8289,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7704,7 +8338,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7715,7 +8349,12 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
             page: number;
             totalRecords: number;
             totalPageNum: number;
-            data: { asset: string; type: number; amount: string; updateTime: number }[];
+            data: {
+              asset: string;
+              type: number;
+              amount: string;
+              updateTime: number;
+            }[];
           };
         },
         Error
@@ -7748,14 +8387,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           total: number;
           list: {
             orderNo: string;
-            tokens: { network: string; tokenId: string; contractAddress: string }[];
+            tokens: {
+              network: string;
+              tokenId: string;
+              contractAddress: string;
+            }[];
             tradeTime: number;
             tradeAmount: string;
             tradeCurrency: string;
@@ -7790,12 +8433,18 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
           total: number;
-          list: { network: string; txID: number | null; contractAdrress: string; tokenId: string; timestamp: number }[];
+          list: {
+            network: string;
+            txID: number | null;
+            contractAdrress: string;
+            tokenId: string;
+            timestamp: number;
+          }[];
         },
         Error
       >({
@@ -7826,7 +8475,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         timestamp: number;
         signature: string;
       },
-      params: RequestParams = {},
+      params: RequestParams = {}
     ) =>
       this.request<
         {
@@ -7861,10 +8510,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
      * @secure
      */
     v1NftUserGetAssetList: (
-      query: { limit?: number; page?: number; recvWindow?: number; timestamp: number; signature: string },
-      params: RequestParams = {},
+      query: {
+        limit?: number;
+        page?: number;
+        recvWindow?: number;
+        timestamp: number;
+        signature: string;
+      },
+      params: RequestParams = {}
     ) =>
-      this.request<{ total: number; list: { network: string; contractAddress: string; tokenId: string }[] }, Error>({
+      this.request<
+        {
+          total: number;
+          list: { network: string; contractAddress: string; tokenId: string }[];
+        },
+        Error
+      >({
         path: `/sapi/v1/nft/user/getAsset`,
         method: "GET",
         query: query,

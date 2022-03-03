@@ -12,11 +12,11 @@
     "bot": "yarn workspace bot",
     "mgr": "yarn workspace manager",
     "ui": "yarn workspace ui",
-    "upgrade-build-tools": "yarn bot add --dev esbuild pkg && yarn mgr add --dev esbuild pkg"
+    "upgrade-build-tools": "yarn bot add --dev esbuild pkg && yarn mgr add --dev esbuild pkg",
+    "format": "prettier --write \"**/src/**/*.ts*\""
   },
   "devDependencies": {
-    "@types/bootstrap": "^5.1.9",
-    "@types/react-table": "^7.7.9",
+    "prettier": "^2.5.1",
     "zx": "5.1.0"
   }
 }
