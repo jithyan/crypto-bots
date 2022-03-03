@@ -1,10 +1,13 @@
 import express from "express";
+import cron from "node-cron";
+import helmet from "helmet";
 import { Config } from "./config.js";
 import { generalLogger } from "./log/index.js";
 import axios, { AxiosError } from "axios";
-import cron from "node-cron";
 
 const controlServer = express();
+controlServer.use(helmet());
+controlServer.disable("x-powered-by");
 
 export const SERVER_CONTROL = {
   shutdown: false,

@@ -3,9 +3,12 @@ import { z } from "zod";
 import { request } from "gaxios";
 import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
 import { logger } from "./log.js";
+import helmet from "helmet";
 
 export const httpServer = express();
+httpServer.use(helmet());
 httpServer.use(express.json());
+httpServer.disable("x-powered-by");
 
 httpServer.post("/register", (req, res) => {
   try {
