@@ -1543,6 +1543,7 @@ __metadata:
     "@types/node-cron": ^3.0.1
     axios: ^0.26.0
     big.js: ^6.1.1
+    common-util: ../common-util/common-util-1.0.0.tgz
     dotenv: ^16.0.0
     esbuild: ^0.14.25
     express: ^4.17.3
@@ -2012,6 +2013,15 @@ __metadata:
   version: 1.0.1
   resolution: "common-ancestor-path@npm:1.0.1"
   checksum: 1d2e4186067083d8cc413f00fc2908225f04ae4e19417ded67faa6494fb313c4fcd5b28a52326d1a62b466e2b3a4325e92c31133c5fee628cdf8856b3a57c3d7
+  languageName: node
+  linkType: hard
+
+"common-util@file:../common-util/common-util-1.0.0.tgz::locator=bot%40workspace%3Abot":
+  version: 1.0.0
+  resolution: "common-util@file:../common-util/common-util-1.0.0.tgz::locator=bot%40workspace%3Abot"
+  dependencies:
+    xxhashjs: ^0.2.2
+  checksum: 69fab0abb51b8f475c128c33bef4a7c7344a89b134ecb714a6a0a594a7c8a292c2d1f4ecda3bba1791d17a9c23f671974bccb4a85581ef84f33c10ffea65feb1
   languageName: node
   linkType: hard
 

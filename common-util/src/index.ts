@@ -13,5 +13,5 @@ export function getBotFilePath(args: BotFilePathArgs): string {
     ? args.symbol.trim().toLowerCase()
     : `${args.volatileAsset.trim()}${args.stableAsset.trim()}`.toLowerCase();
 
-  return `${symbol}/${port}_${symbol}_bot`;
+  return `${symbol}/${port}_${symbol}_bot`.toLowerCase();
 }

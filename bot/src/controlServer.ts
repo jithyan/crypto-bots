@@ -1,6 +1,7 @@
 import express from "express";
 import cron from "node-cron";
 import helmet from "helmet";
+import { getBotFilePath } from "common-util";
 import { Config } from "./config.js";
 import { generalLogger } from "./log/index.js";
 import axios, { AxiosError } from "axios";
@@ -21,7 +22,7 @@ export async function registerWithBotManager(
   return axios
     .post("http://0.0.0.0:2000/register", {
       version: Config.APP_VERSION,
-      location: Config.APPSTATE_FILENAME,
+      location: getBotFilePath({ symbol: Config.SYMBOL, port: Config.PORT }),
       exchange: Config.EXCHANGE,
       port: Config.PORT,
       symbol: Config.SYMBOL,
