@@ -5,7 +5,9 @@ function App() {
   return (
     <div className=".container-fluid px-4">
       <header>
-        <h1>Bot Manager</h1>
+        <h1 style={{ color: "whitesmoke", paddingBottom: "32px" }}>
+          Bot Manager
+        </h1>
       </header>
       <main>
         <TableExample />

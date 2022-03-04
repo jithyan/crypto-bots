@@ -12,6 +12,7 @@ const data = [
     location: "./binance_xrpbusd_appState.json",
     hostname: "0.0.0.0",
     status: "HEALTHY",
+    shutdown: <button>Shutdown</button>,
   },
   {
     id: "5899427923080428277",
@@ -22,6 +23,7 @@ const data = [
     location: "./binance_adabusd_appState.json",
     hostname: "0.0.0.0",
     status: "HEALTHY",
+    shutdown: <button>Shutdown</button>,
   },
   {
     id: "9569284917431328165",
@@ -32,6 +34,7 @@ const data = [
     location: "./binance_avaxbusd_appState.json",
     hostname: "0.0.0.0",
     status: "HEALTHY",
+    shutdown: <button>Shutdown</button>,
   },
   {
     id: "5080786617416480529",
@@ -42,27 +45,50 @@ const data = [
     location: "./binance_ethbusd_appState.json",
     hostname: "0.0.0.0",
     status: "HEALTHY",
+    shutdown: <button>Shutdown</button>,
   },
 ];
 
 const columns = [
   {
-    Header: "Version",
-    accessor: "version",
+    Header: "Symbol",
+    accessor: "symbol",
   },
   {
     Header: "Exchange",
     accessor: "exchange",
   },
   {
-    Header: "Symbol",
-    accessor: "symbol",
+    Header: "Version",
+    accessor: "version",
   },
   {
     Header: "Status",
     accessor: "status",
   },
+  {
+    Header: "Shutdown",
+    accessor: "shutdown",
+  },
 ];
+
+function Td({ children, cell }: any) {
+  const style: Partial<Record<"backgroundColor", string>> = {};
+
+  if (cell.column.Header?.toString() === "Status") {
+    if (cell.value === "HEALTHY") {
+      style.backgroundColor = "green";
+    } else {
+      style.backgroundColor = "red";
+    }
+  }
+
+  return (
+    <td {...cell.getCellProps()} style={style}>
+      {cell.render("Cell")}
+    </td>
+  );
+}
 
 function Table({ columns, data }: any) {
   // Use the state and functions returned from useTable to build your UI
@@ -74,12 +100,18 @@ function Table({ columns, data }: any) {
 
   // Render the UI for your table
   return (
-    <table {...getTableProps()}>
+    <table
+      className="table table-dark table-hover"
+      style={{ borderTop: "thin solid grey" }}
+      {...getTableProps()}
+    >
       <thead>
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps()}>{column.render("Header")}</th>
+              <th scope="col" {...column.getHeaderProps()}>
+                {column.render("Header")}
+              </th>
             ))}
           </tr>
         ))}
@@ -89,9 +121,9 @@ function Table({ columns, data }: any) {
           prepareRow(row);
           return (
             <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
-              })}
+              {row.cells.map((cell) => (
+                <Td cell={cell} />
+              ))}
             </tr>
           );
         })}
