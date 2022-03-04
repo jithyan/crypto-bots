@@ -5,14 +5,20 @@
   "workspaces": [
     "bot",
     "manager",
-    "ui-mgr"
+    "ui-mgr",
+    "common-util"
   ],
   "scripts": {
     "setup": "zx ./scripts/local-setup.mjs",
     "bot": "yarn workspace bot",
     "mgr": "yarn workspace manager",
     "ui": "yarn workspace ui",
-    "upgrade-build-tools": "yarn bot add --dev esbuild pkg && yarn mgr add --dev esbuild pkg",
+    "util": "yarn workspace common-util",
+    "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
+    "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
+    "upgrade:ui": "yarn ui add --dev typescript",
+    "upgrade:util": "yarn util add --dev typescript",
+    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr",
     "format": "prettier --write \"**/src/**/*.ts*\""
   },
   "devDependencies": {
