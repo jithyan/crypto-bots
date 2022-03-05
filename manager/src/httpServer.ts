@@ -146,18 +146,18 @@ httpServer.post("/bots/startup/all", (req, res) => {
 
 function startupBot(bot: IBotInfo): Promise<void> {
   return new Promise<void>((resolve, reject) => {
-    const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"]);
+    const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"], {
+      cwd: `${Config.BOT_DIR}${bot.location?.split("/")[0]}`,
+    });
     nohup.on("error", (err) => {
       logger.error("Failed to start bot", { err, bot: bot });
     });
     nohup.on("close", (code) => {
-      if (code === 0) {
-        logger.info("Successfully started bot", { bot: bot });
-        resolve();
-      } else {
-        reject();
+      if (code !== 0) {
+        logger.error("Failed to start bot", { bot: bot, code });
       }
     });
+    setImmediate(resolve);
   });
 }
 

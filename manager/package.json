@@ -4,7 +4,7 @@
   "type": "module",
   "bin": "dist/index.js",
   "scripts": {
-    "dev": "rimraf build && tsc && node build/index.js",
+    "dev": "rimraf build && tsc && node -r dotenv/config build/index.js",
     "cleanup": "rimraf build && rimraf dist",
     "build": "yarn cleanup && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux": "yarn build && pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",

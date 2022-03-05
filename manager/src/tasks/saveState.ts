@@ -4,13 +4,10 @@ import { logger } from "../log.js";
 import { botRegister } from "../models.js";
 
 export const saveState = (): void => {
-  fs.writeFile(
+  fs.writeFileSync(
     "botRegisterState.json",
     JSON.stringify(botRegister.state, null, 2),
-    "utf8",
-    (err) => {
-      logger.error("Failed to save bot register state", err);
-    }
+    "utf8"
   );
 };
 
