@@ -22,7 +22,8 @@ function useBotStatus(): [any[], () => void] {
               const path = d.actions[action];
               return (
                 <button
-                  className="btn btn-light btn-sm"
+                  className="btn btn-primary btn-sm"
+                  style={{ marginRight: "8px" }}
                   onClick={() => sendCommandToBot(path, d.id)}
                 >
                   {action.toUpperCase()}

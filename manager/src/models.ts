@@ -2,7 +2,12 @@ import { z } from "zod";
 import h from "xxhashjs";
 
 export interface IBotInfo extends TBotInfoReq {
-  status: "ONLINE" | "SHUTTING DOWN" | "OFFLINE" | "NOT WORKING";
+  status:
+    | "ONLINE"
+    | "SHUTTING DOWN"
+    | "OFFLINE"
+    | "NOT WORKING"
+    | "STARTING UP";
   hostname: string;
   lastCheckIn: Date;
 }
@@ -21,6 +26,7 @@ export const BotInfoReq = z.object({
       z.literal("OFFLINE"),
       z.literal("SHUTTING DOWN"),
       z.literal("NOT WORKING"),
+      z.literal("STARTING UP"),
     ])
     .optional(),
 });

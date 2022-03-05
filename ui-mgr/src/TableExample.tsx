@@ -75,7 +75,7 @@ function Td({ children, cell }: any) {
       style.backgroundColor = "green";
     } else if (cell.value === "OFFLINE") {
       style.backgroundColor = "grey";
-    } else if (cell.value === "SHUTTING DOWN") {
+    } else if (cell.value === "SHUTTING DOWN" || cell.value === "STARTING UP") {
       style.backgroundColor = "orange";
     } else if (cell.value === "NOT WORKING") {
       style.backgroundColor = "red";

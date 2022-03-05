@@ -111,8 +111,17 @@ httpServer.post("/bots/shutdown/all", async (req, res) => {
   try {
     const requestDetails = getBotRegisterIds()
       .filter((id) => botRegister.state[id].status === "ONLINE")
-      .map((id) => buildBotRequest(botRegister.state[id], "/shutdown"));
-    await Promise.all(requestDetails.map((details) => request(details)));
+      .map((id) => ({
+        details: buildBotRequest(botRegister.state[id], "/shutdown"),
+        id,
+      }));
+    await Promise.all(
+      requestDetails.map(({ details, id }) =>
+        request(details).then(() => {
+          botRegister.state[id].status = "SHUTTING DOWN";
+        })
+      )
+    );
     return res.json({ status: "OK" });
   } catch (err) {
     logger.error("Failed to send mass bot shutdown request", err);
@@ -137,7 +146,7 @@ httpServer.post("/bots/startup", (req, res) => {
 
 httpServer.post("/bots/startup/all", (req, res) => {
   getBotRegisterIds()
-    .filter((id) => botRegister.state[id].status === "ONLINE")
+    .filter((id) => botRegister.state[id].status === "OFFLINE")
     .forEach((id) => {
       startupBot(botRegister.state[id]);
     });
@@ -149,6 +158,7 @@ function startupBot(bot: IBotInfo): Promise<void> {
     const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"], {
       cwd: `${Config.BOT_DIR}${bot.location?.split("/")[0]}`,
     });
+    bot.status = "STARTING UP";
     nohup.on("error", (err) => {
       logger.error("Failed to start bot", { err, bot: bot });
     });
