@@ -3,21 +3,22 @@ import { z } from "zod";
 import helmet from "helmet";
 import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
-
+import cors from "cors";
+import http from "http";
 import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
-import cors from "cors";
 
-export const httpServer = express();
-httpServer.use(cors());
-httpServer.use(helmet());
-httpServer.use(express.json());
-httpServer.disable("x-powered-by");
+export const app = express();
+export const httpServer = http.createServer(app);
+app.use(cors());
+app.use(helmet());
+app.use(express.json());
+app.disable("x-powered-by");
 
 const getBotRegisterIds = (): string[] => Object.keys(botRegister.state);
 
-httpServer.post("/register", (req, res) => {
+app.post("/register", (req, res) => {
   try {
     const botInfo = BotInfoReq.parse(req.body);
 
@@ -41,7 +42,7 @@ httpServer.post("/register", (req, res) => {
 
 type TBotActions = "shutdown" | "startup" | "remove";
 
-httpServer.get("/bots", (req, res) =>
+app.get("/bots", (req, res) =>
   res.json(
     getBotRegisterIds().map((id) => {
       const bot = botRegister.state[id] ?? {};
@@ -66,7 +67,7 @@ httpServer.get("/bots", (req, res) =>
 
 const BotActionRequest = z.object({ id: z.string() });
 
-httpServer.post("/bots/remove", (req, res) => {
+app.post("/bots/remove", (req, res) => {
   try {
     const { id } = BotActionRequest.parse(req.body);
 
@@ -85,7 +86,7 @@ httpServer.post("/bots/remove", (req, res) => {
   }
 });
 
-httpServer.post("/bots/shutdown", async (req, res) => {
+app.post("/bots/shutdown", async (req, res) => {
   try {
     const { id } = BotActionRequest.parse(req.body);
 
@@ -107,7 +108,7 @@ httpServer.post("/bots/shutdown", async (req, res) => {
   }
 });
 
-httpServer.post("/bots/shutdown/all", async (req, res) => {
+app.post("/bots/shutdown/all", async (req, res) => {
   try {
     const requestDetails = getBotRegisterIds()
       .filter((id) => botRegister.state[id].status === "ONLINE")
@@ -129,7 +130,7 @@ httpServer.post("/bots/shutdown/all", async (req, res) => {
   }
 });
 
-httpServer.post("/bots/startup", (req, res) => {
+app.post("/bots/startup", (req, res) => {
   const { id } = BotActionRequest.parse(req.body);
   if (!botRegister.state.hasOwnProperty(id)) {
     return res.status(404).json({ status: "Id not found" });
@@ -144,7 +145,7 @@ httpServer.post("/bots/startup", (req, res) => {
     .catch(() => res.status(500).json({ status: "Failed to start bot" }));
 });
 
-httpServer.post("/bots/startup/all", (req, res) => {
+app.post("/bots/startup/all", (req, res) => {
   getBotRegisterIds()
     .filter((id) => botRegister.state[id].status === "OFFLINE")
     .forEach((id) => {

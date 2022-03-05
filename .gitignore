@@ -10,6 +10,9 @@ bin
 /bot/*.log
 /bot/*.csv
 /bot/*-audit.json
+/manager/*.log
+/manager/*.csv
+/manager/*-audit.json
 
 !/.yarn/patches
 !/.yarn/plugins
