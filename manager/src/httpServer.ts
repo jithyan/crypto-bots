@@ -1,14 +1,16 @@
 import express from "express";
 import { z } from "zod";
 import helmet from "helmet";
-import { request } from "gaxios";
+import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
 
 import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
+import cors from "cors";
 
 export const httpServer = express();
+httpServer.use(cors());
 httpServer.use(helmet());
 httpServer.use(express.json());
 httpServer.disable("x-powered-by");
@@ -24,7 +26,7 @@ httpServer.post("/register", (req, res) => {
     const data: IBotInfo = {
       ...botInfo,
       hostname: req.hostname,
-      status: "ONLINE",
+      status: botInfo.status ?? "ONLINE",
       lastCheckIn: new Date(),
     };
 
@@ -37,18 +39,51 @@ httpServer.post("/register", (req, res) => {
   }
 });
 
+type TBotActions = "shutdown" | "startup" | "remove";
+
 httpServer.get("/bots", (req, res) =>
   res.json(
-    getBotRegisterIds().map((id) => ({
-      id,
-      shutdown: "/bots/shutdown",
-      startup: "/bots/startup",
-      ...(botRegister.state[id] ?? {}),
-    }))
+    getBotRegisterIds().map((id) => {
+      const bot = botRegister.state[id] ?? {};
+      const actions: Partial<Record<TBotActions, `/bots/${TBotActions}`>> = {};
+
+      if (bot.status === "ONLINE") {
+        actions.shutdown = "/bots/shutdown";
+      }
+      if (bot.status === "OFFLINE") {
+        actions.startup = "/bots/startup";
+        actions.remove = "/bots/remove";
+      }
+
+      return {
+        id,
+        actions,
+        ...bot,
+      };
+    })
   )
 );
 
 const BotActionRequest = z.object({ id: z.string() });
+
+httpServer.post("/bots/remove", (req, res) => {
+  try {
+    const { id } = BotActionRequest.parse(req.body);
+
+    if (!botRegister.state.hasOwnProperty(id)) {
+      return res.status(404).json({ status: "NOT FOUND", id });
+    } else if (botRegister.state[id].status === "ONLINE") {
+      return res
+        .status(400)
+        .json({ status: "Bot cannot be removed if online. Shutdown first." });
+    } else {
+      delete botRegister.state[id];
+    }
+  } catch (err: any) {
+    logger.error("Bot removal request failed", err);
+    return res.status(400).json({ status: "FAILURE" });
+  }
+});
 
 httpServer.post("/bots/shutdown", async (req, res) => {
   try {
@@ -62,10 +97,7 @@ httpServer.post("/bots/shutdown", async (req, res) => {
         .json({ status: "Bot has to be online to shutdown" });
     } else {
       const { port, hostname } = botRegister.state[id];
-      await request({
-        baseURL: `http://${hostname}:${port}`,
-        url: `/shutdown`,
-      });
+      await request(buildBotRequest(botRegister.state[id], "/shutdown"));
       botRegister.state[id].status = "SHUTTING DOWN";
       return res.json({ status: "OK" });
     }
@@ -98,28 +130,41 @@ httpServer.post("/bots/startup", (req, res) => {
       .json({ status: "Bot needs to be offline to start up" });
   }
 
-  return new Promise((resolve, reject) => {
-    const nohup = spawn("nohup", [
-      `${Config.BOT_DIR}${botRegister.state[id].location}`,
-      "&",
-    ]);
+  return startupBot(botRegister.state[id])
+    .then(() => res.json({ status: "SUCCESS" }))
+    .catch(() => res.status(500).json({ status: "Failed to start bot" }));
+});
+
+httpServer.post("/bots/startup/all", (req, res) => {
+  getBotRegisterIds()
+    .filter((id) => botRegister.state[id].status === "ONLINE")
+    .forEach((id) => {
+      startupBot(botRegister.state[id]);
+    });
+  return res.json({ status: "sent startup signal" });
+});
+
+function startupBot(bot: IBotInfo): Promise<void> {
+  return new Promise<void>((resolve, reject) => {
+    const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"]);
     nohup.on("error", (err) => {
-      logger.error("Failed to start bot", { err, bot: botRegister.state[id] });
+      logger.error("Failed to start bot", { err, bot: bot });
     });
     nohup.on("close", (code) => {
       if (code === 0) {
-        logger.info("Successfully started bot", { bot: botRegister.state[id] });
-        resolve(res.json({ status: "SUCCESS" }));
+        logger.info("Successfully started bot", { bot: bot });
+        resolve();
       } else {
-        resolve(res.status(500).json({ status: "Failed to start bot" }));
+        reject();
       }
     });
   });
-});
+}
 
-function buildBotRequest(bot: IBotInfo, path: string) {
+function buildBotRequest(bot: IBotInfo, path: string): GaxiosOptions {
   return {
     baseURL: `http://${bot.hostname}:${bot.port}`,
     url: path,
+    method: "POST",
   };
 }

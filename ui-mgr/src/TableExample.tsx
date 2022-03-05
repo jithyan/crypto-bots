@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { useTable } from "react-table";
 
-const data = [
+const rawResponseData = [
   {
     id: "12456387879342384292",
     version: "d27bc23",
@@ -11,8 +10,7 @@ const data = [
     port: "65341",
     location: "./binance_xrpbusd_appState.json",
     hostname: "0.0.0.0",
-    status: "HEALTHY",
-    shutdown: <button>Shutdown</button>,
+    status: "ONLINE",
   },
   {
     id: "5899427923080428277",
@@ -22,8 +20,7 @@ const data = [
     port: "15088",
     location: "./binance_adabusd_appState.json",
     hostname: "0.0.0.0",
-    status: "HEALTHY",
-    shutdown: <button>Shutdown</button>,
+    status: "ONLINE",
   },
   {
     id: "9569284917431328165",
@@ -33,8 +30,7 @@ const data = [
     port: "34755",
     location: "./binance_avaxbusd_appState.json",
     hostname: "0.0.0.0",
-    status: "HEALTHY",
-    shutdown: <button>Shutdown</button>,
+    status: "ONLINE",
   },
   {
     id: "5080786617416480529",
@@ -44,8 +40,7 @@ const data = [
     port: "44858",
     location: "./binance_ethbusd_appState.json",
     hostname: "0.0.0.0",
-    status: "HEALTHY",
-    shutdown: <button>Shutdown</button>,
+    status: "ONLINE",
   },
 ];
 
@@ -67,8 +62,8 @@ const columns = [
     accessor: "status",
   },
   {
-    Header: "Shutdown",
-    accessor: "shutdown",
+    Header: "Actions",
+    accessor: "actions",
   },
 ];
 
@@ -76,9 +71,13 @@ function Td({ children, cell }: any) {
   const style: Partial<Record<"backgroundColor", string>> = {};
 
   if (cell.column.Header?.toString() === "Status") {
-    if (cell.value === "HEALTHY") {
+    if (cell.value === "ONLINE") {
       style.backgroundColor = "green";
-    } else {
+    } else if (cell.value === "OFFLINE") {
+      style.backgroundColor = "grey";
+    } else if (cell.value === "SHUTTING DOWN") {
+      style.backgroundColor = "orange";
+    } else if (cell.value === "NOT WORKING") {
       style.backgroundColor = "red";
     }
   }
@@ -132,7 +131,7 @@ function Table({ columns, data }: any) {
   );
 }
 
-export function TableExample() {
+export function TableExample({ data }: any) {
   return (
     <>
       <Table columns={columns} data={data} />
