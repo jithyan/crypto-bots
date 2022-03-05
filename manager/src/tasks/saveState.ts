@@ -16,5 +16,5 @@ export const saveState = (): void => {
 
 export const startPeriodicStateSaving = () => {
   console.log("Started bot state saving scheduler");
-  cron.schedule("15 * * * *", saveState);
+  cron.schedule("1 * * * *", saveState);
 };
