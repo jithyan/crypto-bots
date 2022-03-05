@@ -6,6 +6,7 @@ import { spawn } from "child_process";
 
 import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
 import { logger } from "./log.js";
+import { Config } from "./config.js";
 
 export const httpServer = express();
 httpServer.use(helmet());
@@ -99,7 +100,7 @@ httpServer.post("/bots/startup", (req, res) => {
 
   return new Promise((resolve, reject) => {
     const nohup = spawn("nohup", [
-      `/home/jithya_n/bots/${botRegister.state[id].location}`,
+      `${Config.BOT_DIR}${botRegister.state[id].location}`,
       "&",
     ]);
     nohup.on("error", (err) => {
