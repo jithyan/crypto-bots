@@ -4,7 +4,7 @@ node_modules
 build
 dist
 bin
-
+*.env
 .snowpack
 
 /bot/*.log
