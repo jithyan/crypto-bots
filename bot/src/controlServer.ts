@@ -57,6 +57,5 @@ export function startControlServer() {
   return controlServer.listen(port, () => {
     console.log("Started listening on port " + port);
     generalLogger.info("Started control server on port " + port);
-    registerWithBotManager();
   });
 }

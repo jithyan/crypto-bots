@@ -7,4 +7,5 @@ export class DoNothingBot implements ITradeAssetCycle {
     await sleep(1);
     return this;
   };
+  getCurrentState = () => "DoNothing";
 }

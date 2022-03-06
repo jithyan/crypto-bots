@@ -29,6 +29,7 @@ export const BotInfoReq = z.object({
       z.literal("STARTING UP"),
     ])
     .optional(),
+  lastState: z.string().optional(),
 });
 export type TBotInfoReq = z.infer<typeof BotInfoReq>;
 
