@@ -1,22 +1,60 @@
 import express from "express";
+import { Server } from "socket.io";
 import { z } from "zod";
 import helmet from "helmet";
 import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
 import cors from "cors";
 import http from "http";
-import { getIdFromData, botRegister, BotInfoReq, IBotInfo } from "./models.js";
+import {
+  getIdFromData,
+  botRegister,
+  BotInfoReq,
+  IBotInfo,
+  getBotRegisterIds,
+} from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
 
-export const app = express();
+const app = express();
 export const httpServer = http.createServer(app);
+const io = new Server(httpServer);
+
+io.on("connection", (socket) => {
+  socket.emit("botstatus", getBotStatus());
+});
+
+const broadcastBotStatus = () => {
+  io.emit("botstatus", getBotStatus());
+};
+
+type TBotActions = "shutdown" | "startup" | "remove";
+
+const getBotStatus = () => {
+  return getBotRegisterIds().map((id) => {
+    const bot = botRegister.state[id] ?? {};
+    const actions: Partial<Record<TBotActions, `/bots/${TBotActions}`>> = {};
+
+    if (bot.status === "ONLINE") {
+      actions.shutdown = "/bots/shutdown";
+    }
+    if (bot.status === "OFFLINE") {
+      actions.startup = "/bots/startup";
+      actions.remove = "/bots/remove";
+    }
+
+    return {
+      id,
+      actions,
+      ...bot,
+    };
+  });
+};
+
 app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.disable("x-powered-by");
-
-const getBotRegisterIds = (): string[] => Object.keys(botRegister.state);
 
 app.post("/register", (req, res) => {
   try {
@@ -32,6 +70,7 @@ app.post("/register", (req, res) => {
     };
 
     botRegister.state[id] = data;
+    broadcastBotStatus();
 
     return res.status(201).json({ status: "SUCCESS" });
   } catch (err: any) {
@@ -39,31 +78,6 @@ app.post("/register", (req, res) => {
     return res.status(400).json({ status: "FAILURE" });
   }
 });
-
-type TBotActions = "shutdown" | "startup" | "remove";
-
-app.get("/bots", (req, res) =>
-  res.json(
-    getBotRegisterIds().map((id) => {
-      const bot = botRegister.state[id] ?? {};
-      const actions: Partial<Record<TBotActions, `/bots/${TBotActions}`>> = {};
-
-      if (bot.status === "ONLINE") {
-        actions.shutdown = "/bots/shutdown";
-      }
-      if (bot.status === "OFFLINE") {
-        actions.startup = "/bots/startup";
-        actions.remove = "/bots/remove";
-      }
-
-      return {
-        id,
-        actions,
-        ...bot,
-      };
-    })
-  )
-);
 
 const BotActionRequest = z.object({ id: z.string() });
 
@@ -79,6 +93,7 @@ app.post("/bots/remove", (req, res) => {
         .json({ status: "Bot cannot be removed if online. Shutdown first." });
     } else {
       delete botRegister.state[id];
+      broadcastBotStatus();
     }
   } catch (err: any) {
     logger.error("Bot removal request failed", err);
@@ -100,6 +115,8 @@ app.post("/bots/shutdown", async (req, res) => {
       const { port, hostname } = botRegister.state[id];
       await request(buildBotRequest(botRegister.state[id], "/shutdown"));
       botRegister.state[id].status = "SHUTTING DOWN";
+
+      broadcastBotStatus();
       return res.json({ status: "OK" });
     }
   } catch (err: any) {
@@ -120,6 +137,7 @@ app.post("/bots/shutdown/all", async (req, res) => {
       requestDetails.map(({ details, id }) =>
         request(details).then(() => {
           botRegister.state[id].status = "SHUTTING DOWN";
+          broadcastBotStatus();
         })
       )
     );
@@ -142,6 +160,7 @@ app.post("/bots/startup", (req, res) => {
 
   return startupBot(botRegister.state[id])
     .then(() => res.json({ status: "SUCCESS" }))
+    .then(() => broadcastBotStatus())
     .catch(() => res.status(500).json({ status: "Failed to start bot" }));
 });
 
@@ -150,6 +169,7 @@ app.post("/bots/startup/all", (req, res) => {
     .filter((id) => botRegister.state[id].status === "OFFLINE")
     .forEach((id) => {
       startupBot(botRegister.state[id]);
+      broadcastBotStatus();
     });
   return res.json({ status: "sent startup signal" });
 });

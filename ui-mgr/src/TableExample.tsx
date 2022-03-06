@@ -121,7 +121,7 @@ function Table({ columns, data }: any) {
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map((cell) => (
-                <Td cell={cell} />
+                <Td key={cell.getCellProps().key} cell={cell} />
               ))}
             </tr>
           );

@@ -1,6 +1,9 @@
 import axiosDefault from "axios";
 import React, { useState, useEffect, useRef } from "react";
 import { TableExample } from "./TableExample";
+import io from "socket.io-client";
+
+const socket = io("ws://localhost:2000");
 
 const axios = axiosDefault.create({
   baseURL: "http://localhost:2000",
@@ -9,39 +12,34 @@ function sendCommandToBot(path: string, id: string) {
   axios.post(path, { id });
 }
 
-function useBotStatus(): [any[], () => void] {
+function useBotStatus(): any[] {
   const [data, setData] = useState([]);
-  const { current: fetchData } = useRef(() => {
-    axios
-      .get("/bots")
-      .then((resp) => {
-        const parsedData = resp.data.map((d: Record<string, any>) => {
-          return {
-            ...d,
-            actions: Object.keys(d.actions).map((action) => {
-              const path = d.actions[action];
-              return (
-                <button
-                  className="btn btn-primary btn-sm"
-                  style={{ marginRight: "8px" }}
-                  onClick={() => sendCommandToBot(path, d.id)}
-                >
-                  {action.toUpperCase()}
-                </button>
-              );
-            }),
-          };
-        });
-        setData(parsedData);
-      })
-      .catch((err) => {
-        console.error("Failed", err);
+
+  useEffect(() => {
+    socket.on("botstatus", (respData) => {
+      const parsedData = respData.map((d: Record<string, any>) => {
+        return {
+          ...d,
+          actions: Object.keys(d.actions).map((action) => {
+            const path = d.actions[action];
+            return (
+              <button
+                key={`${d.id}-${action}`}
+                className="btn btn-primary btn-sm"
+                style={{ margin: "4px 4px" }}
+                onClick={() => sendCommandToBot(path, d.id)}
+              >
+                {action.toUpperCase()}
+              </button>
+            );
+          }),
+        };
       });
-  });
+      setData(parsedData);
+    });
+  }, []);
 
-  useEffect(fetchData, []);
-
-  return [data, fetchData];
+  return data;
 }
 
 function shutdownAllBots() {
@@ -57,7 +55,7 @@ function startupAllBots() {
 }
 
 function App() {
-  const [data, fetchData] = useBotStatus();
+  const data = useBotStatus();
 
   return (
     <div className="container-fluid px-4">
@@ -69,11 +67,6 @@ function App() {
       <main>
         <div className="container">
           <div className="row" style={{ paddingBottom: "24px" }}>
-            <div className="col">
-              <button className="btn btn-outline-success" onClick={fetchData}>
-                Refresh bot status
-              </button>
-            </div>
             <div className="col">
               <button className="btn btn-outline-info" onClick={startupAllBots}>
                 Start all bots

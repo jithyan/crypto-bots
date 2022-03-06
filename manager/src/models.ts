@@ -38,3 +38,5 @@ export function getIdFromData(botInfo: TBotInfoReq): string {
     .h64([botInfo.exchange, botInfo.port, botInfo.symbol].join(":"), SEED)
     .toString();
 }
+
+export const getBotRegisterIds = (): string[] => Object.keys(botRegister.state);
