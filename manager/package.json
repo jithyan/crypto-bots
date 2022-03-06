@@ -4,7 +4,7 @@
   "type": "module",
   "bin": "dist/index.js",
   "scripts": {
-    "dev": "rimraf build && tsc && node -r dotenv/config build/index.js",
+    "dev": "rimraf build && tsc && concurrently \"tsc --watch\" \"nodemon -r dotenv/config build/index.js\"",
     "cleanup": "rimraf build && rimraf dist",
     "build": "yarn cleanup && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux": "yarn build && pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
@@ -16,14 +16,16 @@
     "@types/node": "^17.0.18",
     "@types/node-cron": "^3.0.1",
     "@types/xxhashjs": "^0.2.2",
+    "concurrently": "^7.0.0",
     "dotenv": "^16.0.0",
     "esbuild": "^0.14.25",
+    "nodemon": "^2.0.15",
     "pkg": "^5.5.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.2"
   },
   "dependencies": {
-    "common-util": "../common-util/common-util-1.1.1.tgz",
+    "common-util": "../common-util/common-util-2.0.0.tgz",
     "cors": "^2.8.5",
     "date-fns": "^2.28.0",
     "gaxios": "^4.3.2",

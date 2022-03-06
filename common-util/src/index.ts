@@ -16,7 +16,7 @@ export function getBotFilePath(args: BotFilePathArgs): string {
   return `${symbol}/${port}_${symbol}_bot`.toLowerCase();
 }
 
-export function getTimeSalt(): string {
+export function getTimestampPepper(): string {
   const d = new Date().toISOString().split(":");
   d.pop();
   return d.join(":");

@@ -2,6 +2,8 @@ import express from "express";
 import { Server } from "socket.io";
 import { z } from "zod";
 import helmet from "helmet";
+import crypto from "crypto";
+
 import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
 import cors from "cors";
@@ -15,6 +17,7 @@ import {
 } from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
+import { getTimestampPepper } from "common-util";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -56,6 +59,14 @@ app.use(helmet());
 app.use(express.json());
 app.disable("x-powered-by");
 
+function recreateToken(path: string, salt: number): string {
+  const password = "hello";
+  const pepper = getTimestampPepper();
+  const msg = [path, salt, password, pepper].join(":");
+  const hash = crypto.createHash("sha512").update(msg).digest();
+  return encodeURIComponent(new TextDecoder().decode(hash));
+}
+
 app.post("/register", (req, res) => {
   try {
     const botInfo = BotInfoReq.parse(req.body);
@@ -79,6 +90,26 @@ app.post("/register", (req, res) => {
   }
 });
 
+app.use((req, res, next) => {
+  try {
+    const { token } = req.query;
+    if (token && typeof token === "string") {
+      const tokenStr = Buffer.from(token, "base64").toString();
+      const tokenParsed = JSON.parse(tokenStr);
+      const { salt, hash } = tokenParsed;
+      if (typeof salt === "number" && typeof hash === "string" && hash) {
+        const myHash = recreateToken(req.path, salt);
+        if (myHash === hash) {
+          return next();
+        }
+      }
+    }
+    throw new Error("Unauthorized");
+  } catch (err) {
+    return res.status(403).json({ code: 403, status: "Unauthorized" });
+  }
+});
+
 const BotActionRequest = z.object({ id: z.string() });
 
 app.post("/bots/remove", (req, res) => {
@@ -94,6 +125,7 @@ app.post("/bots/remove", (req, res) => {
     } else {
       delete botRegister.state[id];
       broadcastBotStatus();
+      return res.json({ status: "OK" });
     }
   } catch (err: any) {
     logger.error("Bot removal request failed", err);
@@ -126,6 +158,17 @@ app.post("/bots/shutdown", async (req, res) => {
 });
 
 app.post("/bots/shutdown/all", async (req, res) => {
+  const { token } = req.query;
+  if (token && typeof token === "string") {
+    const tokenStr = Buffer.from(token, "base64").toString();
+    const tokenParsed = JSON.parse(tokenStr);
+    const { salt, hash } = tokenParsed;
+    console.log("path", req.path);
+    const myHash = recreateToken(req.path, salt);
+
+    console.log("token", { tokenParsed });
+    console.log("isValid", myHash === hash);
+  }
   try {
     const requestDetails = getBotRegisterIds()
       .filter((id) => botRegister.state[id].status === "ONLINE")

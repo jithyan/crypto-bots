@@ -1,7 +1,7 @@
 import axiosDefault from "axios";
 import React, { useState, useEffect, useRef } from "react";
 import { TableExample } from "./TableExample";
-import { getTimeSalt } from "common-util";
+import { getTimestampPepper } from "common-util";
 import io from "socket.io-client";
 
 const socket = io("ws://localhost:2000");
@@ -9,38 +9,25 @@ const socket = io("ws://localhost:2000");
 const axios = axiosDefault.create({
   baseURL: "http://localhost:2000",
 });
-function sendCommandToBot(path: string, id: string) {
-  axios.post(path, { id });
+
+async function sendCommandToBot(path: string, id: string) {
+  const token = await getToken(path);
+  axios.post(`${path}?token=${token}`, { id });
 }
 
-async function generateToken() {
-  let iv = window.crypto.getRandomValues(new Uint8Array(16));
-  let key = new TextEncoder().encode("01234567890123456789012345678912");
-  const pepper = `/botstatus/${getTimeSalt()}`;
-  const hash = await window.crypto.subtle.digest(
-    "SHA-512",
-    new TextEncoder().encode(pepper)
+async function getToken(path: string) {
+  const salt = window.crypto.getRandomValues(new Uint32Array(1))[0];
+  const pepper = getTimestampPepper();
+  const password = "hello";
+  const hash = encodeURIComponent(
+    new TextDecoder().decode(
+      await window.crypto.subtle.digest(
+        "SHA-512",
+        new TextEncoder().encode([path, salt, password, pepper].join(":"))
+      )
+    )
   );
-  //crypto functions are wrapped in promises so we have to use await and make sure the function that
-  //contains this code is an async function
-  //encrypt function wants a cryptokey object
-  const key_encoded = await crypto.subtle.importKey(
-    "raw",
-    key.buffer,
-    "AES-CTR",
-    false,
-    ["encrypt", "decrypt"]
-  );
-  const encrypted_content = await window.crypto.subtle.encrypt(
-    {
-      name: "AES-CTR",
-      counter: iv,
-      length: 128,
-    },
-    key_encoded,
-    hash
-  );
-  return btoa(encodeURIComponent(encrypted_content));
+  return btoa(JSON.stringify({ hash: hash, salt }));
 }
 
 function useBotStatus(): any[] {
@@ -74,15 +61,17 @@ function useBotStatus(): any[] {
 }
 
 async function shutdownAllBots() {
-  const token = await generateToken();
+  const token = await getToken("/bots/shutdown/all");
 
   axios.post("/bots/shutdown/all" + "?token=" + token).then((resp) => {
     console.log("Success", resp);
   });
 }
 
-function startupAllBots() {
-  axios.post("/bots/startup/all").then((resp) => {
+async function startupAllBots() {
+  const token = await getToken("/bots/startup/all");
+
+  axios.post("/bots/startup/all" + "?token=" + token).then((resp) => {
     console.log("Success", resp);
   });
 }
