@@ -62,6 +62,9 @@ export async function* executeTradeCycle({
       );
       process.exit(0);
     }
+    registerWithBotManager({
+      lastState: JSON.parse(JSON.stringify(nextAssetState)),
+    });
     nextAssetState = await nextAssetState.execute();
     yield nextAssetState;
   }

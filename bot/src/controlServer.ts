@@ -1,5 +1,4 @@
 import express from "express";
-import cron from "node-cron";
 import helmet from "helmet";
 import { getBotFilePath } from "common-util";
 import { Config } from "./config.js";
@@ -17,6 +16,7 @@ export const SERVER_CONTROL = {
 export async function registerWithBotManager(
   extraInfo: {
     status?: "SHUTTING DOWN" | "OFFLINE";
+    lastState?: Record<string, any>;
   } = {}
 ): Promise<void> {
   return axios
@@ -58,6 +58,5 @@ export function startControlServer() {
     console.log("Started listening on port " + port);
     generalLogger.info("Started control server on port " + port);
     registerWithBotManager();
-    cron.schedule("0 1 * * *", () => registerWithBotManager());
   });
 }

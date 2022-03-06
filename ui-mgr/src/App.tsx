@@ -39,6 +39,7 @@ function useBotStatus(): any[] {
       const parsedData = respData.map((d: Record<string, any>) => {
         return {
           ...d,
+          lastState: d.lastState?.state ?? "Unknown",
           actions: Object.keys(d.actions).map((action) => {
             const path = d.actions[action];
             return (
