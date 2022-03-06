@@ -22,7 +22,12 @@ import { saveState } from "./tasks/saveState.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: "http://localhost:8080",
+    methods: ["GET", "POST"],
+  },
+});
 
 io.on("connection", (socket) => {
   socket.emit("botstatus", getBotStatus());
