@@ -36,10 +36,11 @@ function useBotStatus(): any[] {
 
   useEffect(() => {
     socket.on("botstatus", (respData) => {
+      console.log("botstatus", respData);
       const parsedData = respData.map((d: Record<string, any>) => {
         return {
           ...d,
-          lastState: d.lastState?.state ?? "Unknown",
+          lastState: d.lastState ?? "Unknown",
           actions: Object.keys(d.actions).map((action) => {
             const path = d.actions[action];
             return (
