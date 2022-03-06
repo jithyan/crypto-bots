@@ -4,10 +4,10 @@ import { TableExample } from "./TableExample";
 import { getTimestampPepper } from "common-util";
 import io from "socket.io-client";
 
-const socket = io("ws://localhost:2000");
+const socket = io("ws://35.243.104.152:2000");
 
 const axios = axiosDefault.create({
-  baseURL: "http://localhost:2000",
+  baseURL: "http://35.243.104.152:2000",
 });
 
 async function sendCommandToBot(path: string, id: string) {

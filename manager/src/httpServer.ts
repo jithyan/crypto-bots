@@ -18,6 +18,7 @@ import {
 import { logger } from "./log.js";
 import { Config } from "./config.js";
 import { getTimestampPepper } from "common-util";
+import { saveState } from "./tasks/saveState.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -81,6 +82,7 @@ app.post("/register", (req, res) => {
     };
 
     botRegister.state[id] = data;
+    saveState();
     broadcastBotStatus();
 
     return res.status(201).json({ status: "SUCCESS" });
