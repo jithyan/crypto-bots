@@ -60,7 +60,7 @@ app.use(express.json());
 app.disable("x-powered-by");
 
 function recreateToken(path: string, salt: number): string {
-  const password = "hello";
+  const password = Config.PASSWORD;
   const pepper = getTimestampPepper();
   const msg = [path, salt, password, pepper].join(":");
   const hash = crypto.createHash("sha512").update(msg).digest();
@@ -158,17 +158,6 @@ app.post("/bots/shutdown", async (req, res) => {
 });
 
 app.post("/bots/shutdown/all", async (req, res) => {
-  const { token } = req.query;
-  if (token && typeof token === "string") {
-    const tokenStr = Buffer.from(token, "base64").toString();
-    const tokenParsed = JSON.parse(tokenStr);
-    const { salt, hash } = tokenParsed;
-    console.log("path", req.path);
-    const myHash = recreateToken(req.path, salt);
-
-    console.log("token", { tokenParsed });
-    console.log("isValid", myHash === hash);
-  }
   try {
     const requestDetails = getBotRegisterIds()
       .filter((id) => botRegister.state[id].status === "ONLINE")

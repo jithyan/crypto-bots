@@ -10,7 +10,8 @@ const define = {
   "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
   "process.env.PORT": `"${process.env.PORT}"`,
   "process.env.APP_VERSION": `"${revision}"`,
-  "process.env.BOT_DIR": `"${process.env.BOT_DIR}"`
+  "process.env.BOT_DIR": `"${process.env.BOT_DIR}"`,
+  "process.env.MGR_PASSWORD": `"${process.env.MGR_PASSWORD}"`,
 };
 
 console.log("Starting build version", revision);

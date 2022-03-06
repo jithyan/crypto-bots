@@ -16,9 +16,10 @@ async function sendCommandToBot(path: string, id: string) {
 }
 
 async function getToken(path: string) {
+  //@ts-ignore
+  const password = __SNOWPACK_ENV__.SNOWPACK_PUBLIC_MGR_PWD?.trim();
   const salt = window.crypto.getRandomValues(new Uint32Array(1))[0];
   const pepper = getTimestampPepper();
-  const password = "hello";
   const hash = encodeURIComponent(
     new TextDecoder().decode(
       await window.crypto.subtle.digest(
