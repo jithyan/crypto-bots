@@ -16,7 +16,7 @@ export const SERVER_CONTROL = {
 export async function registerWithBotManager(
   extraInfo: {
     status?: "SHUTTING DOWN" | "OFFLINE";
-    lastState?: Record<string, any>;
+    lastState?: string;
   } = {}
 ): Promise<void> {
   return axios

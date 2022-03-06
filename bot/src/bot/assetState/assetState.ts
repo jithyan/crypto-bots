@@ -18,7 +18,7 @@ const binanceClient = getExchangeClient(Config.EXCHANGE);
 export interface ITradeAssetCycle {
   execute: () => Promise<ITradeAssetCycle>;
   dehydrate: () => void;
-  getCurrentState: () => Record<string, any>;
+  getCurrentState: () => string;
 }
 
 export type TAssetStates =
@@ -78,7 +78,7 @@ export class AssetState<
     );
   };
 
-  getCurrentState = () => JSON.parse(JSON.stringify({ ...this }));
+  getCurrentState = () => this.state;
 
   isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
     const { status, executedQty } = await binanceClient.checkOrderStatus(
