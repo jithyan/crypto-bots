@@ -1,0 +1,8 @@
+{
+  "name": "analysis",
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "typescript": "^4.6.2"
+  }
+}

@@ -6,7 +6,8 @@
     "bot",
     "manager",
     "ui-mgr",
-    "common-util"
+    "common-util",
+    "analysis"
   ],
   "scripts": {
     "setup": "zx ./scripts/local-setup.mjs",
@@ -14,6 +15,7 @@
     "mgr": "yarn workspace manager",
     "ui": "yarn workspace ui",
     "util": "yarn workspace common-util",
+    "anal": "yarn workspace analysis",
     "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
     "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
     "upgrade:ui": "yarn ui add --dev typescript",
