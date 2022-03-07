@@ -117,6 +117,15 @@ app.use((req, res, next) => {
   }
 });
 
+app.post("/mgr-shutdown", (req, res) => {
+  logger.info("Received shutdown request for manager");
+  setImmediate(() => {
+    logger.info("Shutting down manager");
+    process.exit(0);
+  });
+  return res.status(200).json({ status: "SUCCESS" });
+});
+
 const BotActionRequest = z.object({ id: z.string() });
 
 app.post("/bots/remove", (req, res) => {

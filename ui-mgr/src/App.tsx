@@ -79,6 +79,14 @@ async function startupAllBots() {
   });
 }
 
+async function shutdownManager() {
+  const token = await getToken("/mgr-shutdown");
+
+  axios.post("/mgr-shutdown" + "?token=" + token).then((resp) => {
+    console.log("Success", resp);
+  });
+}
+
 function App() {
   const data = useBotStatus();
 
@@ -103,6 +111,14 @@ function App() {
                 onClick={shutdownAllBots}
               >
                 Shutdown all bots
+              </button>
+            </div>
+            <div className="col">
+              <button
+                className="btn btn-outline-warning"
+                onClick={shutdownManager}
+              >
+                Shutdown Manager
               </button>
             </div>
           </div>
