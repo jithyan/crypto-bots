@@ -1256,6 +1256,9 @@ __metadata:
   resolution: "analysis@workspace:analysis"
   dependencies:
     "@types/node": ^17.0.21
+    concurrently: ^7.0.0
+    nodemon: ^2.0.15
+    rimraf: ^3.0.2
     typescript: ^4.6.2
   languageName: unknown
   linkType: soft

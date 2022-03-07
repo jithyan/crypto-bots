@@ -1,8 +1,18 @@
 {
   "name": "analysis",
   "packageManager": "yarn@3.2.0",
+  "scripts": {
+    "dl": "zx scripts/pulldown.mjs",
+    "watch-tsc": "tsc --watch",
+    "watch-node": "nodemon dist/index.js",
+    "dev": "rimraf dist && tsc && concurrently yarn:watch-tsc yarn:watch-node",
+    "start": "rimraf dist && tsc && node dist/index.js"
+  },
   "devDependencies": {
     "@types/node": "^17.0.21",
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.2"
   }
 }
