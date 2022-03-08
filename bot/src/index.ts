@@ -10,17 +10,20 @@ import {
 } from "./exchange/index.js";
 import { Config } from "./config.js";
 import { startControlServer } from "./controlServer.js";
+import { TSleepStrategyTypes } from "./bot/sleep/BaseSleepStrategy.js";
 
 runCryptoBot({
   volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
   stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
   enableResume: true,
+  sleepStrategy: Config.SLEEP_STRATEGY,
 });
 
 async function runCryptoBot(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
   enableResume: boolean;
+  sleepStrategy: TSleepStrategyTypes;
 }) {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);

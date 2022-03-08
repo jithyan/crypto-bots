@@ -17,6 +17,7 @@ const define = {
   "process.env.EXCHANGE": `"${process.env.EXCHANGE}"`,
   "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
   "process.env.PORT": `"${process.env.PORT}"`,
+  "process.env.SLEEP_STRATEGY": `"${process.env.SLEEP_STRATEGY}"`,
 };
 
 console.log("Starting build version", revision);

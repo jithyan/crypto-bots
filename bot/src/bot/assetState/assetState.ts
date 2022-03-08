@@ -2,7 +2,6 @@ import Big from "big.js";
 import fs from "fs";
 import { AxiosError } from "axios";
 import { apiLogger, logTrade, stateLogger } from "../../log/index.js";
-import { sleep } from "../../utils.js";
 import {
   getExchangeClient,
   TCoinPair,
@@ -12,6 +11,7 @@ import {
 } from "../../exchange/index.js";
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
 import { Config } from "../../config.js";
+import { ISleepStrategy } from "../sleep/index.js";
 
 const binanceClient = getExchangeClient(Config.EXCHANGE);
 
@@ -33,6 +33,7 @@ interface IAssetStateArguments<VolatileAsset, StableAsset> {
   state: TAssetStates;
   isStableAssetClass: boolean;
   decisionEngine: IDecisionEngine;
+  sleep: ISleepStrategy;
 }
 
 type TAssetStateParentOnlyArguments = "state" | "isStableAssetClass";
@@ -53,6 +54,7 @@ export class AssetState<
   readonly volatileAsset: VolatileAsset;
   readonly isStableAssetClass: boolean;
   readonly decisionEngine: IDecisionEngine;
+  readonly sleep: ISleepStrategy;
 
   constructor({
     volatileAsset,
@@ -60,6 +62,7 @@ export class AssetState<
     state,
     isStableAssetClass,
     decisionEngine,
+    sleep,
   }: IAssetStateArguments<VolatileAsset, StableAsset>) {
     this.symbol = `${volatileAsset}${stableAsset}`;
     this.state = state;
@@ -67,6 +70,7 @@ export class AssetState<
     this.volatileAsset = volatileAsset;
     this.isStableAssetClass = isStableAssetClass;
     this.decisionEngine = decisionEngine;
+    this.sleep = sleep;
 
     stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
@@ -122,7 +126,7 @@ export class AssetState<
       stateLogger.error(
         "Making too many requests, going to sleep for 15 minutes"
       );
-      await sleep(15);
+      await this.sleep.onTooManyRequestsError();
     }
 
     if (error.message?.toLowerCase().includes("insufficient balance")) {
@@ -130,7 +134,7 @@ export class AssetState<
         error,
         state: this,
       });
-      await sleep(15);
+      await this.sleep.onInsuffientBalanceError();
       return this;
     }
 
@@ -148,7 +152,7 @@ export class AssetState<
       throw new Error("FATAL BINANCE REJECTION - Crypto pair not supported");
     }
 
-    await sleep(1);
+    await this.sleep.onUnknownApiError();
     return this;
   };
 
@@ -224,7 +228,7 @@ export class HoldVolatileAsset<
           action: "SELL",
         });
 
-        await sleep();
+        await this.sleep.onPlacedVolatileAssetSellOrder();
         return nextState;
       } else {
         stateLogger.info(
@@ -235,7 +239,7 @@ export class HoldVolatileAsset<
           }
         );
 
-        await sleep();
+        await this.sleep.onHoldVolatileAsset();
         return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
       }
     } catch (err: any) {
@@ -313,7 +317,7 @@ export class HoldStableAsset<
           qtyBought,
         });
 
-        await sleep();
+        await this.sleep.onPlacedVolatileAssetBuyOrder();
 
         logTrade({
           lastPurchasePrice: "N/A",
@@ -331,7 +335,7 @@ export class HoldStableAsset<
           latestPrice,
         });
 
-        await sleep();
+        await this.sleep.onHoldStableAsset();
         return new HoldStableAsset({ ...this, decisionEngine: nextDecision });
       }
     } catch (err: any) {
@@ -367,13 +371,13 @@ abstract class AssetOrderPlaced<
           currentState: this,
           nextState,
         });
+        await this.sleep.onAssetOrderFilled();
         return nextState;
       } else {
         stateLogger.info("ORDER NOT FILLED - No state change " + this.symbol, {
           currentState: this,
-          sleepFor: "5 minutes",
         });
-        await sleep(5);
+        await this.sleep.onAssetOrderNotFilled();
         return this;
       }
     } catch (err: any) {

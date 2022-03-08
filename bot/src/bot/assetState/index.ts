@@ -22,10 +22,14 @@ import {
   UpwardPriceTrendConfirmed,
 } from "../decisionEngine/priceTrendDecision.js";
 import { Config } from "../../config.js";
+import { getSleepStrategy, TSleepStrategyTypes } from "../sleep/index.js";
 
 const binanceClient = getExchangeClient(Config.EXCHANGE);
 
-export function hydrate(filepath: string): ITradeAssetCycle {
+export function hydrate(
+  filepath: string,
+  sleepStrategy: TSleepStrategyTypes
+): ITradeAssetCycle {
   const file: Record<string, any> = JSON.parse(
     fs.readFileSync(filepath, "utf8")
   );
@@ -72,6 +76,7 @@ export function hydrate(filepath: string): ITradeAssetCycle {
     volatileAsset,
     isStableAssetClass,
     decisionEngine,
+    sleep: getSleepStrategy(sleepStrategy),
   };
 
   switch (state as TAssetStates) {
@@ -95,11 +100,13 @@ export function hydrate(filepath: string): ITradeAssetCycle {
 export async function initialiseAssetState(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
+  sleepStrategy: TSleepStrategyTypes;
 }): Promise<ITradeAssetCycle> {
   const currentPrice = await binanceClient.getLatestPrice(
     args.volatileAsset,
     args.stableAsset
   );
   const decisionEngine = startNewPriceTrendDecisionEngine(currentPrice);
-  return new HoldStableAsset({ ...args, decisionEngine });
+  const sleep = getSleepStrategy(args.sleepStrategy);
+  return new HoldStableAsset({ ...args, decisionEngine, sleep });
 }

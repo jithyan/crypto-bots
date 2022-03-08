@@ -8,6 +8,7 @@ import {
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
 import { registerWithBotManager, SERVER_CONTROL } from "../controlServer.js";
+import { TSleepStrategyTypes } from "./sleep/index.js";
 
 export async function* executeTradeCycle({
   enableResume,
@@ -15,6 +16,7 @@ export async function* executeTradeCycle({
 }: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
+  sleepStrategy: TSleepStrategyTypes;
   enableResume: boolean;
 }) {
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
@@ -22,7 +24,7 @@ export async function* executeTradeCycle({
 
   if (enableResume) {
     try {
-      nextAssetState = hydrate(Config.APPSTATE_FILENAME);
+      nextAssetState = hydrate(Config.APPSTATE_FILENAME, args.sleepStrategy);
       generalLogger.info(`Successfully hydrated: ${symbol}`, {
         state: nextAssetState,
       });

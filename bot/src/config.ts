@@ -1,4 +1,5 @@
 import Big from "big.js";
+import { TSleepStrategyTypes } from "./bot/sleep/BaseSleepStrategy.js";
 import { TCoinPair, TExchange } from "./exchange/index.js";
 
 /**!
@@ -14,6 +15,7 @@ export const Config = {
   APPSTATE_FILENAME: `./${process.env.EXCHANGE?.trim().toLowerCase()}_${process.env.VOLATILE_COIN?.trim().toLowerCase()}${process.env.STABLE_COIN?.trim().toLowerCase()}_appState.json`,
   MAX_BUY_AMOUNT: new Big(process.env.MAX_BUY_AMOUNT?.trim() ?? "25"),
   PORT: process.env.PORT,
+  SLEEP_STRATEGY: process.env.SLEEP_STRATEGY?.trim() ?? "not-set",
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -22,4 +24,5 @@ export const Config = {
   COLLECT_PRICE_STATS: boolean;
   MAX_BUY_AMOUNT: Big;
   PORT: string;
+  SLEEP_STRATEGY: TSleepStrategyTypes;
 };
