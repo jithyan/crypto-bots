@@ -21,13 +21,16 @@ const define = {
   "process.env.RUN_BOT_ON_STARTUP": `"${process.env.RUN_BOT_ON_STARTUP}"`,
 };
 
+const minify = process.env.NO_BUILD_MINIFY === "true";
+
 console.log("Starting build version", revision);
 console.log("ENV", define);
+console.log("Enable minification: ", minify);
 
 build({
   entryPoints: ["./src/index.ts"],
   bundle: true,
-  minify: true,
+  minify,
   outfile: "dist/index.js",
   platform: "node",
   target: "node17.4",
