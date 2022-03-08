@@ -58,12 +58,9 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
         })
       );
     }),
-    rest.get(
-      `*/api/v3/exchangeInfo?symbol=${symbol.toUpperCase()}`,
-      async (req, res, ctx) => {
-        return res(ctx.json(exchangeInfo[symbol as keyof typeof exchangeInfo]));
-      }
-    ),
+    rest.get(`*/api/v3/exchangeInfo`, async (req, res, ctx) => {
+      return res(ctx.json(exchangeInfo[symbol as keyof typeof exchangeInfo]));
+    }),
     rest.get("*/api/v3/account*", async (req, res, ctx) => {
       const resp = {
         balances: [

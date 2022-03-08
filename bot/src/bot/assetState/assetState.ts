@@ -117,6 +117,14 @@ export class AssetState<
   };
 
   handleError = async (error: AxiosError) => {
+    if (Config.TERMINATE_ON_ERROR) {
+      apiLogger.error(
+        "Encountered error, terminating process as flag is enabled",
+        error
+      );
+      throw error;
+    }
+
     stateLogger.error("API ERROR - not changing state for " + this.symbol, {
       error: error.message,
       config: error.config,

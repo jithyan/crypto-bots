@@ -11,22 +11,21 @@ const mockServer = makeMockServer(
 );
 mockServer.listen();
 
-try {
-  runCryptoBot({
-    volatileAsset: "ADA"?.toUpperCase().trim(),
-    stableAsset: "BUSD"?.toUpperCase().trim(),
-    enableResume: true,
-    sleepStrategy: "no-sleep",
-    decisionConfig: {
-      MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
-      PRICE_HAS_INCREASED_THRESHOLD: "1.00175",
-      PRICE_HAS_DECREASED_THRESHOLD: "0.99975",
-    },
-    enableControlServer: true,
-  });
-} catch (err) {
-  console.log("Finished");
-}
+runCryptoBot({
+  volatileAsset: "ADA"?.toUpperCase().trim(),
+  stableAsset: "BUSD"?.toUpperCase().trim(),
+  enableResume: false,
+  sleepStrategy: "no-sleep",
+  decisionConfig: {
+    MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
+    PRICE_HAS_INCREASED_THRESHOLD: "1.00175",
+    PRICE_HAS_DECREASED_THRESHOLD: "0.99975",
+    STOP_LOSS_THRESHOLD: "0.03",
+  },
+  enableControlServer: false,
+}).then((err: any) => {
+  console.log("Finished gracefully");
+});
 
 function getFileListInDir(dir: string): string[] {
   const filenames = fs.readdirSync(dir);

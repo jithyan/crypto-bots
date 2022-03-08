@@ -10,10 +10,11 @@
     "gen-swagger-types": "yarn dlx swagger-typescript-api -p ./swagger/spot_api.yaml -o ./src/types -n binanceSpotApi.swagger.ts",
     "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf *.csv & rimraf *_appState.json",
     "build:local": "rimraf dist && tsc --noEmit && yarn node -r dotenv/config esbuild.config.cjs ",
+    "build:analysis": "rimraf dist && tsc --noEmit && NO_BUILD_MINIFY=true TERMINATE_ON_ERROR=true yarn node -r dotenv/config esbuild.config.cjs ",
     "build:cloud": "rimraf dist && tsc --noEmit && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "pkg:analysis": "NO_BUILD_MINIFY=true yarn build:local && cp ./dist/index.js ../analysis/src/",
+    "pkg:analysis": "yarn build:local && cp ./dist/index.js ../analysis/src/bot.js",
     "make": "zx make.mjs"
   },
   "dependencies": {

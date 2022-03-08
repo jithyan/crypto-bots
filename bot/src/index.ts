@@ -52,7 +52,11 @@ export async function runCryptoBot(args: {
     `Starting bot version: ${process.env.APP_VERSION} ${args.volatileAsset}${args.stableAsset}`,
     args
   );
-  for await (const _ of executeTradeCycle(args)) {
+  try {
+    for await (const _ of executeTradeCycle(args)) {
+    }
+  } catch (err) {
+    return;
   }
 }
 

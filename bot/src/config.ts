@@ -16,6 +16,7 @@ export const Config = {
   MAX_BUY_AMOUNT: new Big(process.env.MAX_BUY_AMOUNT?.trim() ?? "25"),
   PORT: process.env.PORT,
   SLEEP_STRATEGY: process.env.SLEEP_STRATEGY?.trim() ?? "not-set",
+  TERMINATE_ON_ERROR: process.env.TERMINATE_ON_ERROR?.trim() === "true",
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -25,4 +26,5 @@ export const Config = {
   MAX_BUY_AMOUNT: Big;
   PORT: string;
   SLEEP_STRATEGY: TSleepStrategyTypes;
+  TERMINATE_ON_ERROR: boolean;
 };

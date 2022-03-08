@@ -19,6 +19,7 @@ const define = {
   "process.env.PORT": `"${process.env.PORT}"`,
   "process.env.SLEEP_STRATEGY": `"${process.env.SLEEP_STRATEGY}"`,
   "process.env.RUN_BOT_ON_STARTUP": `"${process.env.RUN_BOT_ON_STARTUP}"`,
+  "process.env.TERMINATE_ON_ERROR": `"${process.env.TERMINATE_ON_ERROR}"`,
 };
 
 const minify = process.env.NO_BUILD_MINIFY === "true";
