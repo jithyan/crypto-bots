@@ -28,6 +28,7 @@ if (process.env.RUN_BOT_ON_STARTUP === "true") {
       PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
         .minus(new Big("0.00175"))
         .toFixed(5),
+      STOP_LOSS_THRESHOLD: "0.03",
     },
     enableControlServer: true,
   });

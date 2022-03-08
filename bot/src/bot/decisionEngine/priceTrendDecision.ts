@@ -26,7 +26,8 @@ export type DecisionStates =
 export type PriceTrendDecisionConfig = Record<
   | "MIN_PERCENT_INCREASE_FOR_SELL"
   | "PRICE_HAS_INCREASED_THRESHOLD"
-  | "PRICE_HAS_DECREASED_THRESHOLD",
+  | "PRICE_HAS_DECREASED_THRESHOLD"
+  | "STOP_LOSS_THRESHOLD",
   string
 >;
 
@@ -102,7 +103,9 @@ abstract class DecisionEngine implements IDecisionEngine {
     const changeFromPurchasePrice = new Big(currentPrice).div(
       new Big(this.lastPurchasePrice)
     );
-    const triggerStopLoss = changeFromPurchasePrice.lte("0.97");
+    const triggerStopLoss = changeFromPurchasePrice.lte(
+      new Big("1.0").minus(this.decisionConfig.STOP_LOSS_THRESHOLD)
+    );
 
     stateLogger.warn(
       `STOP LOSS TRIGGERED FOR ${Config.SYMBOL} at ${currentPrice}`,
