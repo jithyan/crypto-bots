@@ -16,31 +16,37 @@ import { startControlServer } from "./controlServer.js";
 import { TSleepStrategyTypes } from "./bot/sleep/BaseSleepStrategy.js";
 import Big from "big.js";
 
-runCryptoBot({
-  volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
-  stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
-  enableResume: true,
-  sleepStrategy: Config.SLEEP_STRATEGY,
-  decisionConfig: {
-    MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015").toFixed(3),
-    PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175").toFixed(5),
-    PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
-      .minus(new Big("0.00175"))
-      .toFixed(5),
-  },
-});
+if (process.env.RUN_BOT_ON_STARTUP === "true") {
+  runCryptoBot({
+    volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
+    stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
+    enableResume: true,
+    sleepStrategy: Config.SLEEP_STRATEGY,
+    decisionConfig: {
+      MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015").toFixed(3),
+      PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175").toFixed(5),
+      PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
+        .minus(new Big("0.00175"))
+        .toFixed(5),
+    },
+    enableControlServer: true,
+  });
+}
 
-async function runCryptoBot(args: {
+export async function runCryptoBot(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
   enableResume: boolean;
   sleepStrategy: TSleepStrategyTypes;
   decisionConfig: PriceTrendDecisionConfig;
+  enableControlServer: boolean;
 }) {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);
   }
-  startControlServer();
+  if (args.enableControlServer) {
+    startControlServer();
+  }
   generalLogger.info(
     `Starting bot version: ${process.env.APP_VERSION} ${args.volatileAsset}${args.stableAsset}`,
     args

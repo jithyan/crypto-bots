@@ -18,6 +18,7 @@ const define = {
   "process.env.MAX_BUY_AMOUNT": `"${process.env.MAX_BUY_AMOUNT}"`,
   "process.env.PORT": `"${process.env.PORT}"`,
   "process.env.SLEEP_STRATEGY": `"${process.env.SLEEP_STRATEGY}"`,
+  "process.env.RUN_BOT_ON_STARTUP": `"${process.env.RUN_BOT_ON_STARTUP}"`,
 };
 
 console.log("Starting build version", revision);
