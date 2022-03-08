@@ -17,6 +17,7 @@ import { generalLogger } from "../../log/index.js";
 import {
   DecisionStates,
   DownwardPriceTrend,
+  PriceTrendDecisionConfig,
   Start,
   UpwardPriceTrend,
   UpwardPriceTrendConfirmed,
@@ -28,7 +29,8 @@ const binanceClient = getExchangeClient(Config.EXCHANGE);
 
 export function hydrate(
   filepath: string,
-  sleepStrategy: TSleepStrategyTypes
+  sleepStrategy: TSleepStrategyTypes,
+  decisionConfig: PriceTrendDecisionConfig
 ): ITradeAssetCycle {
   const file: Record<string, any> = JSON.parse(
     fs.readFileSync(filepath, "utf8")
@@ -54,16 +56,16 @@ export function hydrate(
   };
   switch (deState as DecisionStates) {
     case "Start":
-      decisionEngine = new Start(lastPurchasePrice);
+      decisionEngine = new Start(lastPurchasePrice, decisionConfig);
       break;
     case "DownwardPriceTrend":
-      decisionEngine = new DownwardPriceTrend(deArgs);
+      decisionEngine = new DownwardPriceTrend(deArgs, decisionConfig);
       break;
     case "UpwardPriceTrend":
-      decisionEngine = new UpwardPriceTrend(deArgs);
+      decisionEngine = new UpwardPriceTrend(deArgs, decisionConfig);
       break;
     case "UpwardPriceTrendConfirmed":
-      decisionEngine = new UpwardPriceTrendConfirmed(deArgs);
+      decisionEngine = new UpwardPriceTrendConfirmed(deArgs, decisionConfig);
       break;
     default:
       throw new Error("Unrecognized decision state: " + deState);
@@ -101,12 +103,16 @@ export async function initialiseAssetState(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
   sleepStrategy: TSleepStrategyTypes;
+  decisionConfig: PriceTrendDecisionConfig;
 }): Promise<ITradeAssetCycle> {
   const currentPrice = await binanceClient.getLatestPrice(
     args.volatileAsset,
     args.stableAsset
   );
-  const decisionEngine = startNewPriceTrendDecisionEngine(currentPrice);
+  const decisionEngine = startNewPriceTrendDecisionEngine(
+    currentPrice,
+    args.decisionConfig
+  );
   const sleep = getSleepStrategy(args.sleepStrategy);
   return new HoldStableAsset({ ...args, decisionEngine, sleep });
 }

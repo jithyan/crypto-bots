@@ -1,5 +1,8 @@
 import { startNewPriceTrendDecisionEngine } from "./bot/decisionEngine/index.js";
-import { IDecisionEngine } from "./bot/decisionEngine/priceTrendDecision.js";
+import {
+  IDecisionEngine,
+  PriceTrendDecisionConfig,
+} from "./bot/decisionEngine/priceTrendDecision.js";
 import { executeTradeCycle } from "./bot/index.js";
 import { generalLogger } from "./log/index.js";
 import { sleep } from "./utils.js";
@@ -11,12 +14,20 @@ import {
 import { Config } from "./config.js";
 import { startControlServer } from "./controlServer.js";
 import { TSleepStrategyTypes } from "./bot/sleep/BaseSleepStrategy.js";
+import Big from "big.js";
 
 runCryptoBot({
   volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
   stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
   enableResume: true,
   sleepStrategy: Config.SLEEP_STRATEGY,
+  decisionConfig: {
+    MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015").toFixed(3),
+    PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175").toFixed(5),
+    PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
+      .minus(new Big("0.00175"))
+      .toFixed(5),
+  },
 });
 
 async function runCryptoBot(args: {
@@ -24,6 +35,7 @@ async function runCryptoBot(args: {
   stableAsset: TStableCoins;
   enableResume: boolean;
   sleepStrategy: TSleepStrategyTypes;
+  decisionConfig: PriceTrendDecisionConfig;
 }) {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);
@@ -65,7 +77,7 @@ async function runPriceTrendDryRun() {
   const binanceClient = getExchangeClient(Config.EXCHANGE);
 
   const price = await binanceClient.getLatestPrice("BNB", "BUSD");
-  const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
-  for await (const nextDecision of simulateBuySellCycle(decision)) {
-  }
+  //const decision: IDecisionEngine = startNewPriceTrendDecisionEngine(price);
+  // for await (const nextDecision of simulateBuySellCycle(decision)) {
+  // }
 }

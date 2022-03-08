@@ -1,5 +1,8 @@
-import { Start } from "./priceTrendDecision.js";
+import { PriceTrendDecisionConfig, Start } from "./priceTrendDecision.js";
 
-export function startNewPriceTrendDecisionEngine(currentTickerPrice: string) {
-  return new Start(currentTickerPrice);
+export function startNewPriceTrendDecisionEngine(
+  currentTickerPrice: string,
+  decisionConfig: PriceTrendDecisionConfig
+) {
+  return new Start(currentTickerPrice, decisionConfig);
 }

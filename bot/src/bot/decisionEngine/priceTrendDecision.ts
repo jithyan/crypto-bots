@@ -23,11 +23,12 @@ export type DecisionStates =
   | "DownwardPriceTrend"
   | "UpwardPriceTrendConfirmed";
 
-const DecisionConfig = {
-  MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015"),
-  PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175"),
-  PRICE_HAS_DECREASED_THRESHOLD: new Big("1").minus(new Big("0.00175")),
-};
+export type PriceTrendDecisionConfig = Record<
+  | "MIN_PERCENT_INCREASE_FOR_SELL"
+  | "PRICE_HAS_INCREASED_THRESHOLD"
+  | "PRICE_HAS_DECREASED_THRESHOLD",
+  string
+>;
 
 type TDecisionEngineData = Record<
   "lastPurchasePrice" | "lastTickerPrice",
@@ -38,11 +39,17 @@ abstract class DecisionEngine implements IDecisionEngine {
   readonly lastTickerPrice: string;
   readonly lastPurchasePrice: string;
   readonly state: DecisionStates;
+  readonly decisionConfig: PriceTrendDecisionConfig;
 
-  constructor(state: DecisionStates, data: TDecisionEngineData) {
+  constructor(
+    state: DecisionStates,
+    data: TDecisionEngineData,
+    decisionConfig: PriceTrendDecisionConfig
+  ) {
     this.lastTickerPrice = data.lastTickerPrice;
     this.lastPurchasePrice = data.lastPurchasePrice;
     this.state = state;
+    this.decisionConfig = decisionConfig;
     stateLogger.info("CREATE new " + this.state, this);
   }
 
@@ -51,7 +58,9 @@ abstract class DecisionEngine implements IDecisionEngine {
 
   isAnIncrease = (currentPrice: Big): boolean => {
     const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
-    const isAnIncrease = ratio.gt(DecisionConfig.PRICE_HAS_INCREASED_THRESHOLD);
+    const isAnIncrease = ratio.gt(
+      this.decisionConfig.PRICE_HAS_INCREASED_THRESHOLD
+    );
 
     const percentChange = roundTo4Dp(
       this.calcPctChangeInPriceSinceLastCheck(currentPrice).mul("100")
@@ -70,7 +79,9 @@ abstract class DecisionEngine implements IDecisionEngine {
 
   isADecrease = (currentPrice: Big): boolean => {
     const ratio = new Big(currentPrice.div(this.lastTickerPrice).toFixed(4));
-    const isADecrease = ratio.lt(DecisionConfig.PRICE_HAS_DECREASED_THRESHOLD);
+    const isADecrease = ratio.lt(
+      this.decisionConfig.PRICE_HAS_DECREASED_THRESHOLD
+    );
 
     const percentChange = roundTo4Dp(
       this.calcPctChangeInPriceSinceLastCheck(currentPrice).mul("100")
@@ -111,7 +122,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       .toFixed(3);
 
     const result = new Big(percentIncrease).gt(
-      DecisionConfig.MIN_PERCENT_INCREASE_FOR_SELL
+      this.decisionConfig.MIN_PERCENT_INCREASE_FOR_SELL
     );
 
     stateLogger.debug("SELL CRITERIA", {
@@ -156,26 +167,35 @@ abstract class DecisionEngine implements IDecisionEngine {
 }
 
 export class Start extends DecisionEngine {
-  constructor(lastTickerPrice: string) {
-    super("Start", { lastPurchasePrice: "0", lastTickerPrice });
+  constructor(
+    lastTickerPrice: string,
+    decisionConfig: PriceTrendDecisionConfig
+  ) {
+    super("Start", { lastPurchasePrice: "0", lastTickerPrice }, decisionConfig);
   }
 
   shouldBuy: IDecisionEngine["shouldBuy"] = (currentPrice) => {
     let result;
     if (new Big(currentPrice).gt(this.lastTickerPrice)) {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastTickerPrice: currentPrice,
-          lastPurchasePrice: "0",
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastTickerPrice: currentPrice,
+            lastPurchasePrice: "0",
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     } else {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastTickerPrice: currentPrice,
-          lastPurchasePrice: "0",
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastTickerPrice: currentPrice,
+            lastPurchasePrice: "0",
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     }
@@ -190,18 +210,24 @@ export class Start extends DecisionEngine {
 
     if (new Big(currentPrice).gt(this.lastTickerPrice)) {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastTickerPrice: currentPrice,
-          lastPurchasePrice: "0",
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastTickerPrice: currentPrice,
+            lastPurchasePrice: "0",
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     } else {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastTickerPrice: currentPrice,
-          lastPurchasePrice: "0",
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastTickerPrice: currentPrice,
+            lastPurchasePrice: "0",
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     }
@@ -213,26 +239,35 @@ export class Start extends DecisionEngine {
 }
 
 export class DownwardPriceTrend extends DecisionEngine {
-  constructor(data: TDecisionEngineData) {
-    super("DownwardPriceTrend", data);
+  constructor(
+    data: TDecisionEngineData,
+    decisionConfig: PriceTrendDecisionConfig
+  ) {
+    super("DownwardPriceTrend", data, decisionConfig);
   }
 
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
     let result;
     if (this.isAnIncrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     } else {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     }
@@ -245,18 +280,24 @@ export class DownwardPriceTrend extends DecisionEngine {
     let result;
     if (this.isAnIncrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     } else {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     }
@@ -266,35 +307,47 @@ export class DownwardPriceTrend extends DecisionEngine {
 }
 
 export class UpwardPriceTrend extends DecisionEngine {
-  constructor(data: TDecisionEngineData) {
-    super("UpwardPriceTrend", data);
+  constructor(
+    data: TDecisionEngineData,
+    decisionConfig: PriceTrendDecisionConfig
+  ) {
+    super("UpwardPriceTrend", data, decisionConfig);
   }
 
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
     let result;
     if (this.isAnIncrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrendConfirmed(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     } else if (this.isADecrease(new Big(currentPrice))) {
       const isASell = this.meetsSellCriteria(new Big(currentPrice));
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: isASell,
       };
     } else {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     }
@@ -307,26 +360,35 @@ export class UpwardPriceTrend extends DecisionEngine {
     if (this.isAnIncrease(new Big(currentPrice))) {
       const isABuy = this.meetsBuyCriteria(new Big(currentPrice));
       result = {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrendConfirmed(
+          {
+            lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: isABuy,
       };
     } else if (this.isADecrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     } else {
       result = {
-        nextDecision: new UpwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     }
@@ -336,8 +398,11 @@ export class UpwardPriceTrend extends DecisionEngine {
 }
 
 export class UpwardPriceTrendConfirmed extends DecisionEngine {
-  constructor(data: TDecisionEngineData) {
-    super("UpwardPriceTrendConfirmed", data);
+  constructor(
+    data: TDecisionEngineData,
+    decisionConfig: PriceTrendDecisionConfig
+  ) {
+    super("UpwardPriceTrendConfirmed", data, decisionConfig);
   }
 
   shouldSell: IDecisionEngine["shouldSell"] = (currentPrice) => {
@@ -347,18 +412,24 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
 
     if (this.isADecrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: isASell,
       };
     } else {
       result = {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrendConfirmed(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         sell: false,
       };
     }
@@ -372,19 +443,25 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
 
     if (this.isADecrease(new Big(currentPrice))) {
       result = {
-        nextDecision: new DownwardPriceTrend({
-          lastPurchasePrice: this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new DownwardPriceTrend(
+          {
+            lastPurchasePrice: this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: false,
       };
     } else {
       const isABuy = this.meetsBuyCriteria(new Big(currentPrice));
       result = {
-        nextDecision: new UpwardPriceTrendConfirmed({
-          lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
-          lastTickerPrice: currentPrice,
-        }),
+        nextDecision: new UpwardPriceTrendConfirmed(
+          {
+            lastPurchasePrice: isABuy ? currentPrice : this.lastPurchasePrice,
+            lastTickerPrice: currentPrice,
+          },
+          this.decisionConfig
+        ),
         buy: isABuy,
       };
     }

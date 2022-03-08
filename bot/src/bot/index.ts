@@ -9,6 +9,7 @@ import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
 import { registerWithBotManager, SERVER_CONTROL } from "../controlServer.js";
 import { TSleepStrategyTypes } from "./sleep/index.js";
+import { PriceTrendDecisionConfig } from "./decisionEngine/priceTrendDecision.js";
 
 export async function* executeTradeCycle({
   enableResume,
@@ -18,13 +19,18 @@ export async function* executeTradeCycle({
   stableAsset: TStableCoins;
   sleepStrategy: TSleepStrategyTypes;
   enableResume: boolean;
+  decisionConfig: PriceTrendDecisionConfig;
 }) {
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
   let nextAssetState;
 
   if (enableResume) {
     try {
-      nextAssetState = hydrate(Config.APPSTATE_FILENAME, args.sleepStrategy);
+      nextAssetState = hydrate(
+        Config.APPSTATE_FILENAME,
+        args.sleepStrategy,
+        args.decisionConfig
+      );
       generalLogger.info(`Successfully hydrated: ${symbol}`, {
         state: nextAssetState,
       });
