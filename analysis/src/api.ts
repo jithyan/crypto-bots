@@ -10,9 +10,13 @@ interface LatestPriceLog {
 }
 type Log = LatestPriceLog | Record<string, any>;
 
-type PriceData = Record<"timestamp" | "price" | "symbol", string>;
+export type PriceData = Record<"timestamp" | "price" | "symbol", string>;
 
-export function getLatestPriceApiLog(files: string[]) {
+export type Intervals = "m3" | "m6" | "m9" | "m15" | "m30" | "m60";
+
+export type IntervalPriceData = Record<Intervals, PriceData[]>;
+
+export function getLatestPriceApiLog(files: string[]): PriceData[] {
   const prices: PriceData[] = files
     .filter((fn) => fn.endsWith(".log"))
     .map((fn) => {
@@ -38,7 +42,7 @@ export function getLatestPriceApiLog(files: string[]) {
   return prices;
 }
 
-export function partitionPriceList(priceList: PriceData[]) {
+export function partitionPriceList(priceList: PriceData[]): IntervalPriceData {
   const m3 = [...priceList];
   const m6 = priceList.filter((p, i) => i % 2 === 0);
   const m9 = priceList.filter((p, i) => i % 3 === 0);

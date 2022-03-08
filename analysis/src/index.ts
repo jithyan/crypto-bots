@@ -1,6 +1,32 @@
 import fs from "fs";
 import { getLatestPriceApiLog, partitionPriceList } from "./api";
 import { getCsvDataFromFiles, calculateProfit } from "./csv";
+import { makeMockServer } from "./mockApi";
+//@ts-ignore
+const { runCryptoBot } = require("./bot.js");
+
+const mockServer = makeMockServer(
+  { volatileAsset: "ada", stableAsset: "busd" },
+  "m60"
+);
+mockServer.listen();
+
+try {
+  runCryptoBot({
+    volatileAsset: "ADA"?.toUpperCase().trim(),
+    stableAsset: "BUSD"?.toUpperCase().trim(),
+    enableResume: true,
+    sleepStrategy: "no-sleep",
+    decisionConfig: {
+      MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
+      PRICE_HAS_INCREASED_THRESHOLD: "1.00175",
+      PRICE_HAS_DECREASED_THRESHOLD: "0.99975",
+    },
+    enableControlServer: true,
+  });
+} catch (err) {
+  console.log("Finished");
+}
 
 function getFileListInDir(dir: string): string[] {
   const filenames = fs.readdirSync(dir);
@@ -37,4 +63,3 @@ function getApiPricesForSymbol(symbol: string) {
 // getApiPricesForSymbol("ethbusd");
 // getApiPricesForSymbol("avaxbusd");
 // getApiPricesForSymbol("xrpbusd");
-console.log("finished");
