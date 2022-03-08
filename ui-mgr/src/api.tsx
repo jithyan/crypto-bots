@@ -24,7 +24,7 @@ axios.interceptors.request.use(
 
 export async function sendCommandToBot(path: string, id: string) {
   const token = await getToken(path);
-  axios.post(`${path}?token=${token}`, { id });
+  axios.post(`${path}`, { id });
 }
 
 export async function getToken(path: string) {

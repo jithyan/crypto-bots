@@ -28,7 +28,7 @@ if (process.env.RUN_BOT_ON_STARTUP === "true") {
       PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
         .minus(new Big("0.00175"))
         .toFixed(5),
-      STOP_LOSS_THRESHOLD: "0.03",
+      STOP_LOSS_THRESHOLD: "0.15",
     },
     enableControlServer: true,
   });
@@ -52,11 +52,7 @@ export async function runCryptoBot(args: {
     `Starting bot version: ${process.env.APP_VERSION} ${args.volatileAsset}${args.stableAsset}`,
     args
   );
-  try {
-    for await (const _ of executeTradeCycle(args)) {
-    }
-  } catch (err) {
-    return;
+  for await (const _ of executeTradeCycle(args)) {
   }
 }
 

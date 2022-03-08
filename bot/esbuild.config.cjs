@@ -22,7 +22,7 @@ const define = {
   "process.env.TERMINATE_ON_ERROR": `"${process.env.TERMINATE_ON_ERROR}"`,
 };
 
-const minify = process.env.NO_BUILD_MINIFY === "true";
+const minify = process.env.NO_BUILD_MINIFY !== "true";
 
 console.log("Starting build version", revision);
 console.log("ENV", define);

@@ -4,7 +4,7 @@ import { rest } from "msw";
 import { IntervalPriceData, Intervals, PriceData } from "./api";
 import { exchangeInfo } from "./mockApiData";
 
-const intervals: Intervals[] = ["m3", "m9", "m6", "m15", "m30", "m60"];
+export const intervals: Intervals[] = ["m3", "m9", "m6", "m15", "m30", "m60"];
 
 type AssetArgs = Record<"volatileAsset" | "stableAsset", string>;
 
@@ -27,7 +27,7 @@ function makeLowerCaseSymbolFromArgs(args: AssetArgs) {
 
 const current = {
   ptr: -1,
-  adaBalance: "0",
+  balance: "0",
 };
 
 export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
@@ -44,7 +44,7 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
     }),
     rest.post("*/api/v3/order", async (req, res, ctx) => {
       if (req.url.searchParams.get("side") === "BUY") {
-        current.adaBalance = req.url.searchParams.get("quantity") as string;
+        current.balance = req.url.searchParams.get("quantity") as string;
       }
 
       return res(ctx.json({ clientOrderId: "123" }));
@@ -64,12 +64,10 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
     rest.get("*/api/v3/account*", async (req, res, ctx) => {
       const resp = {
         balances: [
-          { asset: "ADA", free: current.adaBalance },
+          { asset: args.volatileAsset.toUpperCase(), free: current.balance },
           { asset: "BUSD", free: "25" },
         ],
       };
-      console.log(req.url.href, resp);
-      console.log(req.method);
 
       return res(ctx.json(resp));
     }),
