@@ -1,7 +1,7 @@
 import React from "react";
 import { useTable } from "react-table";
 
-const columns = [
+const columnHeaders = [
   {
     Header: "Symbol",
     accessor: "symbol",
@@ -51,14 +51,12 @@ function Td({ children, cell }: any) {
 }
 
 function Table({ columns, data }: any) {
-  // Use the state and functions returned from useTable to build your UI
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({
       columns,
       data,
     });
 
-  // Render the UI for your table
   return (
     <table
       className="table table-dark table-hover"
@@ -95,7 +93,7 @@ function Table({ columns, data }: any) {
 export function TableExample({ data }: any) {
   return (
     <>
-      <Table columns={columns} data={data} />
+      <Table columns={columnHeaders} data={data} />
     </>
   );
 }
