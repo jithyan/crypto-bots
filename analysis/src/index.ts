@@ -40,14 +40,25 @@ async function runSimulationFor(
     const csv = getCsvDataFromFiles([csvTradeFile]);
     const profit = calculateProfit(csv);
     console.log(`Result`, { increase, decrease, profit, stopLoss, interval });
-    results.push({ increase, decrease, profit, stopLoss, interval });
+    results.push({
+      increase,
+      decrease,
+      profit,
+      stopLoss,
+      interval,
+      timestamp: new Date().toISOString(),
+    });
     return profit;
   });
 
   return profit;
 }
 
-async function meow() {
+async function meow(
+  { v, s }: { v: string; s: string },
+  start = 0,
+  stop = 3000
+) {
   results = [];
   const stopLosses = [
     "0.05",
@@ -81,12 +92,14 @@ async function meow() {
     .map((a) => increases.map((increase) => ({ increase, ...a })))
     .flatMap((x) => x);
 
-  const p = combinations.map(
+  const subset = combinations.filter((x, i) => i >= start && i < stop);
+
+  const p = subset.map(
     ({ interval, stopLoss, increase, decrease }, index) =>
       () =>
         new Promise<void>(async (resolve, reject) => {
           await runSimulationFor(
-            { v: "ada", s: "busd" },
+            { v, s },
             interval,
             stopLoss,
             increase,
@@ -104,51 +117,28 @@ async function meow() {
         })
   );
   p.push(async () => {
-    results.sort((a, b) => a.profit - b.profit);
+    results.sort((a, b) => b.profit - a.profit);
     console.log("top result", results[0]);
     fs.writeFileSync(
-      "ADABUSD_FINAL_RESULTS",
+      `${v.concat(s).toUpperCase()}_FINAL_RESULTS_${start}-${stop}`,
       JSON.stringify(results, null, 2),
       "utf8"
     );
-    console.log("FINISHED");
+    console.log("FINISHED", { start, stop });
   });
   p.reduce(
-    (acc: any, curr, i) => {
-      if (i === 0) {
-        return acc().then(curr);
-      } else {
-        return acc.then(curr);
-      }
-    },
-    () => Promise.resolve()
+    (acc: any, curr, i) =>
+      acc.then(curr).then(() => {
+        //@ts-ignore
+        global.gc();
+        return Promise.resolve();
+      }),
+    Promise.resolve()
   );
 }
 
-meow();
-// runSimulationFor("m6", "0.12", "1.0025", "0.998").then((p) => {
-//   fs.writeFileSync(`${getDate()}-trades.csv`, "", "utf8");
-//   runSimulationFor("m3");
-// });
-// runSimulationFor("m3", "0.03", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.05", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.06", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.07", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.08", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.09", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.10", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.11", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.12", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.13", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.14", "1.00175", "0.99975");
-// runSimulationFor("m3", "0.15", "1.00175", "0.99975");
-
-// runSimulationFor("m6", "0.1", "1.00175", "0.99975");
-// runSimulationFor("m9", "0.1", "1.00175", "0.99975");
-// runSimulationFor("m15", "0.1", "1.00175", "0.99975");
-// runSimulationFor("m30", "0.1", "1.00175", "0.99975");
-// runSimulationFor("m60", "0.1", "1.00175", "0.99975");
-
+//meow({ v: "avax", s: "busd" }, 0, 75);
+runSimulationFor({ v: "avax", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
 function getDate() {
   const today = new Date();
   const yyyy = today.getFullYear();

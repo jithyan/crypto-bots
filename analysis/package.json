@@ -6,8 +6,8 @@
     "watch-tsc": "tsc --watch",
     "watch-node": "nodemon dist/index.js",
     "dev": "rimraf dist && tsc && concurrently yarn:watch-tsc yarn:watch-node",
-    "cleanup": "rimraf *.log & rimraf .*audit.json & rimraf *.csv & rimraf *_appState.json",
-    "start": "yarn cleanup & rimraf dist && tsc && node dist/index.js"
+    "cleanup": "rimraf *.log & rimraf *.gz & rimraf .*audit.json & rimraf *.csv & rimraf *_appState.json",
+    "start": "yarn cleanup & rimraf dist && tsc && node --expose-gc dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",

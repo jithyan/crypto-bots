@@ -1,0 +1,1002 @@
+[
+  {
+    "increase": "1.001",
+    "decrease": "0.985",
+    "profit": 2.638,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:40.387Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 2.5869999999999997,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:07.801Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99975",
+    "profit": 2.0539999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:13.716Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.9995",
+    "profit": 2.0539999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:19.200Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 2.0539999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:24.775Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99975",
+    "profit": 1.6079999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:10.545Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 1.6079999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:16.091Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.6079999999999994,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:21.533Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99",
+    "profit": 1.542,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:27:45.554Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99",
+    "profit": 0.3039999999999998,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:56.340Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.2959999999999998,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:44.965Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.08099999999999952,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:26:07.024Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.03200000000000003,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:30.323Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:29:27.064Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99",
+    "profit": -0.026999999999999247,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:23.918Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.985",
+    "profit": -0.02699999999999969,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:37.346Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.985",
+    "profit": -0.02699999999999969,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:38.851Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99",
+    "profit": -0.06699999999999995,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:33.428Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99975",
+    "profit": -0.10800000000000015,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:21:20.694Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": -0.10800000000000015,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:22:54.665Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": -0.10800000000000015,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:24:29.981Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": -0.10800000000000054,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:30.737Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": -0.10800000000000054,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:59.279Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": -0.16500000000000048,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:36.586Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": -0.16500000000000048,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:39.611Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.985",
+    "profit": -0.1899999999999995,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:37.843Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.985",
+    "profit": -0.1899999999999995,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:52.039Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": -0.3100000000000003,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:38.103Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": -0.3100000000000003,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:41.143Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99",
+    "profit": -0.3520000000000003,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:32.654Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99",
+    "profit": -0.3520000000000003,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:35.819Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99",
+    "profit": -0.37899999999999956,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:49.392Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99",
+    "profit": -0.37899999999999956,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:03.362Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": -0.4219999999999997,
+    "stopLoss": "0.13",
+    "interval": "m30",
+    "timestamp": "2022-03-09T12:20:07.730Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99",
+    "profit": -0.43600000000000017,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:42.418Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99",
+    "profit": -0.43600000000000017,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:10.223Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": -0.452,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:27.155Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99",
+    "profit": -0.47500000000000075,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:34:17.238Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99975",
+    "profit": -0.7750000000000006,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:12.976Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.9995",
+    "profit": -0.7750000000000006,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:18.416Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": -1.1400000000000006,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:27:04.145Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99",
+    "profit": -1.2699999999999998,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:28:28.524Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.995",
+    "profit": -1.3729999999999998,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:14.669Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99",
+    "profit": -1.39,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:27:18.237Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99",
+    "profit": -1.39,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:27:31.090Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99",
+    "profit": -1.39,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:28:14.280Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.995",
+    "profit": -1.4290000000000005,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:27.921Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99",
+    "profit": -1.4909999999999999,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:27:59.822Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99975",
+    "profit": -1.6540000000000008,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:08.706Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99975",
+    "profit": -1.6540000000000008,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:12.172Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.9995",
+    "profit": -1.6540000000000008,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:14.554Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.9995",
+    "profit": -1.6540000000000008,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:17.610Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99975",
+    "profit": -1.6900000000000004,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:09.692Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.9995",
+    "profit": -1.6900000000000004,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:15.323Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.995",
+    "profit": -1.7439999999999998,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:26:21.265Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": -1.7480000000000002,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:35.481Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99975",
+    "profit": -1.8649999999999998,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:22:01.106Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.9995",
+    "profit": -1.8649999999999998,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:23:35.264Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.999",
+    "profit": -1.8649999999999998,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:25:11.153Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.995",
+    "profit": -1.8879999999999995,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:26:49.860Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99",
+    "profit": -1.9199999999999997,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:28:43.096Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.995",
+    "profit": -2.146,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:00.861Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": -2.16,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:54.189Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": -2.16,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:21.554Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99975",
+    "profit": -2.2340000000000004,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:11.352Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.9995",
+    "profit": -2.2340000000000004,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:16.841Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.999",
+    "profit": -2.2340000000000004,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:22.315Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99975",
+    "profit": -2.4339999999999993,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:06.032Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.9995",
+    "profit": -2.4339999999999993,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:53.070Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.999",
+    "profit": -2.4339999999999993,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:40.517Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99975",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:30:32.782Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99975",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:30:59.286Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.9995",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:19.393Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.9995",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:46.310Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:06.404Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": -2.6629999999999994,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:33.613Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99975",
+    "profit": -2.748,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:30:39.374Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.9995",
+    "profit": -2.748,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:26.136Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.999",
+    "profit": -2.748,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:13.225Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.99975",
+    "profit": -2.762,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:30:45.908Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": -2.762,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:32.736Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": -2.762,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:19.946Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99975",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:20:54.315Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99975",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:21:07.567Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99975",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:21:47.691Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.9995",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:22:27.811Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.9995",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:22:41.291Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.9995",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:23:21.598Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:24:02.612Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.999",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:24:16.421Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": -2.895,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:24:57.173Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99975",
+    "profit": -3.0280000000000005,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:30:52.585Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.9995",
+    "profit": -3.0280000000000005,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:39.502Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.999",
+    "profit": -3.0280000000000005,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:26.774Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.999",
+    "profit": -3.1320000000000006,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:24:43.342Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.99975",
+    "profit": -3.2200000000000006,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:21:34.143Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.9995",
+    "profit": -3.2200000000000006,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:23:08.021Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.99",
+    "profit": -3.3480000000000008,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:35.032Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.99",
+    "profit": -3.357,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:31.880Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.99",
+    "profit": -3.495000000000001,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:31.106Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.99",
+    "profit": -3.495000000000001,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:34.217Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.999",
+    "profit": -3.6810000000000005,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:24.018Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.995",
+    "profit": -3.838,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:29.541Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": -4.061,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:25:38.899Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.995",
+    "profit": -4.061,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:25:53.015Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": -4.061,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:26:35.559Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": -4.191,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:28:57.756Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.985",
+    "profit": -4.191,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:29:12.376Z"
+  },
+  {
+    "increase": "1.0025",
+    "decrease": "0.985",
+    "profit": -4.191,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:29:41.868Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": -4.191,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:29:56.691Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.985",
+    "profit": -4.191,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:30:11.635Z"
+  },
+  {
+    "increase": "1.001",
+    "decrease": "0.995",
+    "profit": -4.207,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:33:28.583Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": -4.273,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:30:26.306Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": -4.368,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:25.594Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": -4.368,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:28.700Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.995",
+    "profit": -4.404000000000001,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:26.371Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99975",
+    "profit": -4.502000000000001,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:22:14.383Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.9995",
+    "profit": -4.502000000000001,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:23:48.871Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": -4.502000000000001,
+    "stopLoss": "0.14",
+    "interval": "m3",
+    "timestamp": "2022-03-09T12:25:24.917Z"
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": -4.944000000000001,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:19.970Z"
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": -4.944000000000001,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:23.167Z"
+  },
+  {
+    "increase": "1.002",
+    "decrease": "0.999",
+    "profit": -4.98,
+    "stopLoss": "0.13",
+    "interval": "m60",
+    "timestamp": "2022-03-09T12:20:20.754Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.99975",
+    "profit": -5.554,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:12.667Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.9995",
+    "profit": -5.554,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:31:59.758Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": -5.554,
+    "stopLoss": "0.14",
+    "interval": "m9",
+    "timestamp": "2022-03-09T12:32:47.382Z"
+  }
+]
