@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 365
+    },
+    "auditLog": ".8fd8e803eabaf2a6823b2469b43b7e0b28e02d51-audit.json",
+    "files": [
+        {
+            "date": 1646862127006,
+            "name": "2022-03-10-trades.csv",
+            "hash": "ebbfe1c40c023fca50c35c0a906c25f1"
+        }
+    ],
+    "hashType": "md5"
+}

@@ -1170,6 +1170,126 @@
     "timestamp": "2022-03-01T12:10:37.731Z"
   },
   {
+    "price": "0.97200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T13:10:38.608Z"
+  },
+  {
+    "price": "0.99600000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T14:10:39.354Z"
+  },
+  {
+    "price": "0.97700000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T15:10:40.395Z"
+  },
+  {
+    "price": "0.96400000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T16:10:41.078Z"
+  },
+  {
+    "price": "0.96200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T17:10:42.065Z"
+  },
+  {
+    "price": "0.96600000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T18:10:42.947Z"
+  },
+  {
+    "price": "0.96500000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T19:10:43.762Z"
+  },
+  {
+    "price": "0.96200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T20:10:44.726Z"
+  },
+  {
+    "price": "0.96900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T21:10:45.471Z"
+  },
+  {
+    "price": "0.95700000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T22:10:46.363Z"
+  },
+  {
+    "price": "0.95800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-01T23:10:47.219Z"
+  },
+  {
+    "price": "0.95700000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T00:10:47.961Z"
+  },
+  {
+    "price": "0.96000000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T01:10:48.704Z"
+  },
+  {
+    "price": "0.95100000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T02:10:49.755Z"
+  },
+  {
+    "price": "0.95700000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T03:10:50.838Z"
+  },
+  {
+    "price": "0.97200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T04:10:51.784Z"
+  },
+  {
+    "price": "0.96200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T05:10:52.692Z"
+  },
+  {
+    "price": "0.96200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T06:10:53.735Z"
+  },
+  {
+    "price": "0.94900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T07:10:54.681Z"
+  },
+  {
+    "price": "0.95500000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T08:10:55.540Z"
+  },
+  {
+    "price": "0.95500000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T09:10:56.378Z"
+  },
+  {
+    "price": "0.96000000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T10:10:57.232Z"
+  },
+  {
+    "price": "0.96000000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T11:10:58.226Z"
+  },
+  {
+    "price": "0.97000000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-02T12:10:59.028Z"
+  },
+  {
     "price": "0.96000000",
     "symbol": "ADABUSD",
     "timestamp": "2022-03-02T13:10:59.921Z"
@@ -1528,5 +1648,120 @@
     "price": "0.87400000",
     "symbol": "ADABUSD",
     "timestamp": "2022-03-05T12:17:00.972Z"
+  },
+  {
+    "price": "0.79800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-08T23:12:45.813Z"
+  },
+  {
+    "price": "0.79900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T00:12:48.224Z"
+  },
+  {
+    "price": "0.80900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T01:12:50.445Z"
+  },
+  {
+    "price": "0.80900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T02:12:52.765Z"
+  },
+  {
+    "price": "0.81600000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T03:12:54.935Z"
+  },
+  {
+    "price": "0.83800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T04:12:57.507Z"
+  },
+  {
+    "price": "0.83900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T05:13:00.114Z"
+  },
+  {
+    "price": "0.83800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T06:13:02.661Z"
+  },
+  {
+    "price": "0.84100000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T07:13:04.651Z"
+  },
+  {
+    "price": "0.84400000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T08:13:06.988Z"
+  },
+  {
+    "price": "0.84400000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T09:13:09.375Z"
+  },
+  {
+    "price": "0.84800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T10:13:11.745Z"
+  },
+  {
+    "price": "0.85500000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T11:13:13.988Z"
+  },
+  {
+    "price": "0.85400000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T12:13:16.160Z"
+  },
+  {
+    "price": "0.84300000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T13:13:18.596Z"
+  },
+  {
+    "price": "0.84800000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T14:13:20.612Z"
+  },
+  {
+    "price": "0.84500000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T15:13:22.756Z"
+  },
+  {
+    "price": "0.85600000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T16:13:25.155Z"
+  },
+  {
+    "price": "0.85600000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T17:13:27.563Z"
+  },
+  {
+    "price": "0.84900000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T18:13:29.391Z"
+  },
+  {
+    "price": "0.84200000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T19:13:31.301Z"
+  },
+  {
+    "price": "0.84700000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T20:13:33.602Z"
+  },
+  {
+    "price": "0.84000000",
+    "symbol": "ADABUSD",
+    "timestamp": "2022-03-09T21:13:35.747Z"
   }
 ]

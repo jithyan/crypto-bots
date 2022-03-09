@@ -138,7 +138,7 @@ async function meow(
 }
 
 //meow({ v: "avax", s: "busd" }, 0, 75);
-runSimulationFor({ v: "avax", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
+//runSimulationFor({ v: "avax", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
 function getDate() {
   const today = new Date();
   const yyyy = today.getFullYear();
@@ -183,6 +183,7 @@ function getApiPricesForSymbol(symbol: string) {
   });
 }
 
-// getApiPricesForSymbol("ethbusd");
-// getApiPricesForSymbol("avaxbusd");
-// getApiPricesForSymbol("xrpbusd");
+getApiPricesForSymbol("adabusd");
+getApiPricesForSymbol("ethbusd");
+getApiPricesForSymbol("avaxbusd");
+getApiPricesForSymbol("xrpbusd");
