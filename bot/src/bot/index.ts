@@ -63,22 +63,26 @@ export async function* executeTradeCycle({
     if (enableResume) {
       nextAssetState.dehydrate();
     }
+    const stateToSend = JSON.parse(JSON.stringify(nextAssetState));
+
     if (SERVER_CONTROL.shutdown) {
       generalLogger.info("Gracefully shut down as requested");
       console.log("Graceful shutdown initiated");
       await registerWithBotManager({
         status: "OFFLINE",
-        lastState: nextAssetState,
+        lastState: stateToSend,
       }).catch((e) =>
         generalLogger.error("Failed sending offline notification to manager", e)
       );
       process.exit(0);
     }
+
     if (args.enableControlServer) {
       registerWithBotManager({
-        lastState: nextAssetState,
+        lastState: stateToSend,
       });
     }
+
     nextAssetState = await nextAssetState.execute();
     yield nextAssetState;
   }
