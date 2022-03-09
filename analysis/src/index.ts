@@ -1,31 +1,165 @@
 import fs from "fs";
-import { getLatestPriceApiLog, partitionPriceList } from "./api";
+import { getLatestPriceApiLog, Intervals, partitionPriceList } from "./api";
 import { getCsvDataFromFiles, calculateProfit } from "./csv";
-import { makeMockServer } from "./mockApi";
+import { intervals, makeMockServer } from "./mockApi";
 //@ts-ignore
-const { runCryptoBot } = require("./bot.js");
+const runCryptoBot = require("./bot.js").default;
 
-const mockServer = makeMockServer(
-  { volatileAsset: "ada", stableAsset: "busd" },
-  "m60"
-);
-mockServer.listen();
+let results: any[] = [];
 
-runCryptoBot({
-  volatileAsset: "ADA"?.toUpperCase().trim(),
-  stableAsset: "BUSD"?.toUpperCase().trim(),
-  enableResume: false,
-  sleepStrategy: "no-sleep",
-  decisionConfig: {
-    MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
-    PRICE_HAS_INCREASED_THRESHOLD: "1.00175",
-    PRICE_HAS_DECREASED_THRESHOLD: "0.99975",
-    STOP_LOSS_THRESHOLD: "0.03",
-  },
-  enableControlServer: false,
-}).then((err: any) => {
-  console.log("Finished gracefully");
-});
+async function runSimulationFor(
+  { v, s = "busd" }: { v: string; s: string },
+  interval: Intervals,
+  stopLoss = "0.03",
+  increase = "1.00175",
+  decrease = "0.99975"
+) {
+  const mockServer = makeMockServer(
+    { volatileAsset: v, stableAsset: s },
+    interval
+  );
+  mockServer.listen();
+
+  const profit = await runCryptoBot({
+    volatileAsset: v?.toUpperCase().trim(),
+    stableAsset: s?.toUpperCase().trim(),
+    enableResume: false,
+    sleepStrategy: "no-sleep",
+    decisionConfig: {
+      MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
+      PRICE_HAS_INCREASED_THRESHOLD: increase,
+      PRICE_HAS_DECREASED_THRESHOLD: decrease,
+      STOP_LOSS_THRESHOLD: stopLoss,
+    },
+    enableControlServer: false,
+  }).catch((err: any) => {
+    mockServer.resetHandlers();
+    mockServer.close();
+    console.log(err?.response?.data);
+    const csvTradeFile = `${getDate()}-trades.csv`;
+    const csv = getCsvDataFromFiles([csvTradeFile]);
+    const profit = calculateProfit(csv);
+    console.log(`Result`, { increase, decrease, profit, stopLoss, interval });
+    results.push({ increase, decrease, profit, stopLoss, interval });
+    return profit;
+  });
+
+  return profit;
+}
+
+async function meow() {
+  results = [];
+  const stopLosses = [
+    "0.05",
+    "0.06",
+    "0.07",
+    "0.08",
+    "0.09",
+    "0.10",
+    "0.11",
+    "0.12",
+    "0.13",
+    "0.14",
+    "0.15",
+  ];
+  const decreases = ["0.99975", "0.9995", "0.999", "0.995", "0.99", "0.985"];
+  const increases = [
+    "1.00175",
+    "1.002",
+    "1.005",
+    "1.0025",
+    "1.0015",
+    "1.001",
+    "1.0035",
+  ];
+
+  const combinations = stopLosses
+    .map((stopLoss) => intervals.map((interval) => ({ interval, stopLoss })))
+    .flatMap((x) => x)
+    .map((a) => decreases.map((decrease) => ({ decrease, ...a })))
+    .flatMap((x) => x)
+    .map((a) => increases.map((increase) => ({ increase, ...a })))
+    .flatMap((x) => x);
+
+  const p = combinations.map(
+    ({ interval, stopLoss, increase, decrease }, index) =>
+      () =>
+        new Promise<void>(async (resolve, reject) => {
+          await runSimulationFor(
+            { v: "ada", s: "busd" },
+            interval,
+            stopLoss,
+            increase,
+            decrease
+          );
+          fs.writeFileSync(`${getDate()}-trades.csv`, "", "utf8");
+          try {
+            fs.unlinkSync(`${getDate()}-general.log`);
+            fs.unlinkSync(`${getDate()}-pricestats.log`);
+            fs.unlinkSync(`${getDate()}-state.log`);
+            fs.unlinkSync(`${getDate()}-api.log`);
+          } catch (err) {}
+          console.log("Completed run #" + index);
+          resolve();
+        })
+  );
+  p.push(async () => {
+    results.sort((a, b) => a.profit - b.profit);
+    console.log("top result", results[0]);
+    fs.writeFileSync(
+      "ADABUSD_FINAL_RESULTS",
+      JSON.stringify(results, null, 2),
+      "utf8"
+    );
+    console.log("FINISHED");
+  });
+  p.reduce(
+    (acc: any, curr, i) => {
+      if (i === 0) {
+        return acc().then(curr);
+      } else {
+        return acc.then(curr);
+      }
+    },
+    () => Promise.resolve()
+  );
+}
+
+meow();
+// runSimulationFor("m6", "0.12", "1.0025", "0.998").then((p) => {
+//   fs.writeFileSync(`${getDate()}-trades.csv`, "", "utf8");
+//   runSimulationFor("m3");
+// });
+// runSimulationFor("m3", "0.03", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.05", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.06", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.07", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.08", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.09", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.10", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.11", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.12", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.13", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.14", "1.00175", "0.99975");
+// runSimulationFor("m3", "0.15", "1.00175", "0.99975");
+
+// runSimulationFor("m6", "0.1", "1.00175", "0.99975");
+// runSimulationFor("m9", "0.1", "1.00175", "0.99975");
+// runSimulationFor("m15", "0.1", "1.00175", "0.99975");
+// runSimulationFor("m30", "0.1", "1.00175", "0.99975");
+// runSimulationFor("m60", "0.1", "1.00175", "0.99975");
+
+function getDate() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  let mm: number | string = today.getMonth() + 1; // Months start at 0!
+  let dd: number | string = today.getDate();
+
+  if (dd < 10) dd = "0" + dd;
+  if (mm < 10) mm = "0" + mm;
+
+  return yyyy + "-" + mm + "-" + dd;
+}
 
 function getFileListInDir(dir: string): string[] {
   const filenames = fs.readdirSync(dir);

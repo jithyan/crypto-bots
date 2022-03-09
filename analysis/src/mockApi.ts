@@ -25,12 +25,12 @@ function makeLowerCaseSymbolFromArgs(args: AssetArgs) {
   return args.volatileAsset.concat(args.stableAsset).trim().toLowerCase();
 }
 
-const current = {
-  ptr: -1,
-  balance: "0",
-};
-
 export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
+  const current = {
+    ptr: -1,
+    balance: "0",
+    numTrades: 0,
+  };
   const symbol = makeLowerCaseSymbolFromArgs(args);
   const data = getApiPriceDataMock(args)[interval];
 
@@ -38,6 +38,18 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
     rest.get("*/api/v3/ticker/price", async (req, res, ctx) => {
       current.ptr += 1;
       if (current.ptr >= data.length) {
+        fs.writeFileSync(
+          "numtrades.txt",
+          JSON.stringify(
+            {
+              trades: current.numTrades,
+              symbol,
+              time: new Date().toISOString(),
+            },
+            undefined,
+            2
+          )
+        );
         return res(ctx.status(500), ctx.json({ message: "out of data" }));
       }
       return res(ctx.json(data[current.ptr]));
@@ -45,6 +57,8 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
     rest.post("*/api/v3/order", async (req, res, ctx) => {
       if (req.url.searchParams.get("side") === "BUY") {
         current.balance = req.url.searchParams.get("quantity") as string;
+      } else {
+        current.numTrades += 1;
       }
 
       return res(ctx.json({ clientOrderId: "123" }));

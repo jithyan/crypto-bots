@@ -20,6 +20,7 @@ export async function* executeTradeCycle({
   sleepStrategy: TSleepStrategyTypes;
   enableResume: boolean;
   decisionConfig: PriceTrendDecisionConfig;
+  enableControlServer: boolean;
 }) {
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
   let nextAssetState;
@@ -70,9 +71,11 @@ export async function* executeTradeCycle({
       );
       process.exit(0);
     }
-    registerWithBotManager({
-      lastState: nextAssetState.getCurrentState(),
-    });
+    if (args.enableControlServer) {
+      registerWithBotManager({
+        lastState: nextAssetState.getCurrentState(),
+      });
+    }
     nextAssetState = await nextAssetState.execute();
     yield nextAssetState;
   }

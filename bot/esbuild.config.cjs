@@ -22,16 +22,13 @@ const define = {
   "process.env.TERMINATE_ON_ERROR": `"${process.env.TERMINATE_ON_ERROR}"`,
 };
 
-const minify = process.env.NO_BUILD_MINIFY !== "true";
-
 console.log("Starting build version", revision);
 console.log("ENV", define);
-console.log("Enable minification: ", minify);
 
 build({
   entryPoints: ["./src/index.ts"],
   bundle: true,
-  minify,
+  minify: true,
   outfile: "dist/index.js",
   platform: "node",
   target: "node17.4",

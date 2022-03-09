@@ -34,7 +34,7 @@ if (process.env.RUN_BOT_ON_STARTUP === "true") {
   });
 }
 
-export async function runCryptoBot(args: {
+export default async function runCryptoBot(args: {
   volatileAsset: TVolatileCoins;
   stableAsset: TStableCoins;
   enableResume: boolean;
