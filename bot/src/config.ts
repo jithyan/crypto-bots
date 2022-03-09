@@ -17,6 +17,12 @@ export const Config = {
   PORT: process.env.PORT,
   SLEEP_STRATEGY: process.env.SLEEP_STRATEGY?.trim() ?? "not-set",
   TERMINATE_ON_ERROR: process.env.TERMINATE_ON_ERROR?.trim() === "true",
+  RUN_BOT_ON_STARTUP: process.env.RUN_BOT_ON_STARTUP?.trim() === "true",
+  PRICE_HAS_INCREASED_THRESHOLD:
+    process.env.PRICE_HAS_INCREASED_THRESHOLD?.trim() ?? "not-set",
+  PRICE_HAS_DECREASED_THRESHOLD:
+    process.env.PRICE_HAS_DECREASED_THRESHOLD?.trim() ?? "not-set",
+  STOP_LOSS_THRESHOLD: process.env.STOP_LOSS_THRESHOLD?.trim() ?? "not-set",
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -27,4 +33,8 @@ export const Config = {
   PORT: string;
   SLEEP_STRATEGY: TSleepStrategyTypes;
   TERMINATE_ON_ERROR: boolean;
+  RUN_BOT_ON_STARTUP: boolean;
+  PRICE_HAS_INCREASED_THRESHOLD: string;
+  PRICE_HAS_DECREASED_THRESHOLD: string;
+  STOP_LOSS_THRESHOLD: string;
 };

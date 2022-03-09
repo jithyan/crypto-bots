@@ -3,7 +3,7 @@ import CSV from "winston-csv-format";
 import { createLogger } from "winston";
 import Big from "big.js";
 import DailyRotateFile from "winston-daily-rotate-file";
-import type { TSupportedCoins } from "../exchange/index.js";
+import type { IWallet, TSupportedCoins } from "../exchange/index.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",
@@ -22,6 +22,8 @@ const csvHeaders = {
   from: "From",
   to: "To",
   profit: "Profit",
+  audValue: "AUD Value",
+  audBusd: "AUD to BUSD",
 };
 
 const csvLogger = createLogger({
@@ -34,11 +36,25 @@ const csvLogger = createLogger({
 
 type THeadersWhichAreTypeString = Exclude<
   keyof typeof csvHeaders | "lastPurchasePrice",
-  "timestamp" | "from" | "to" | "action" | "value" | "profit"
+  | "timestamp"
+  | "from"
+  | "to"
+  | "action"
+  | "value"
+  | "profit"
+  | "audValue"
+  | "audBusd"
 >;
 type THeadersWhichAreTypeCoin = Exclude<
   keyof typeof csvHeaders,
-  "timestamp" | "action" | "value" | "price" | "amount" | "profit"
+  | "timestamp"
+  | "action"
+  | "value"
+  | "price"
+  | "amount"
+  | "profit"
+  | "audValue"
+  | "audBusd"
 >;
 
 type TLogTradeData = Record<THeadersWhichAreTypeString, string> &
@@ -46,7 +62,10 @@ type TLogTradeData = Record<THeadersWhichAreTypeString, string> &
     action: "BUY" | "SELL";
   };
 
-export const logTrade = ({ lastPurchasePrice, ...data }: TLogTradeData) => {
+export const logTrade = async (
+  { lastPurchasePrice, ...data }: TLogTradeData,
+  client: IWallet
+): Promise<string> => {
   const timestamp = new Date()
     .toLocaleString("en-AU", {
       timeZone: "Australia/Sydney",
@@ -59,13 +78,19 @@ export const logTrade = ({ lastPurchasePrice, ...data }: TLogTradeData) => {
           .minus(new Big(lastPurchasePrice).mul(data.amount))
           .toFixed(3)
       : "N/A";
+  const audBusd = await client.getAudUsdValue();
+  const audValue = new Big(value).div(audBusd).toFixed(3);
 
   const logData: Record<keyof typeof csvHeaders, string> = {
     ...data,
-    profit,
+    audBusd,
+    audValue,
     timestamp,
+    profit,
     value,
   };
 
   csvLogger.log("info", logData);
+
+  return profit;
 };

@@ -34,6 +34,7 @@ interface IAssetStateArguments<VolatileAsset, StableAsset> {
   isStableAssetClass: boolean;
   decisionEngine: IDecisionEngine;
   sleep: ISleepStrategy;
+  stats: Readonly<Record<"usdProfitToDate", string>>;
 }
 
 type TAssetStateParentOnlyArguments = "state" | "isStableAssetClass";
@@ -55,6 +56,7 @@ export class AssetState<
   readonly isStableAssetClass: boolean;
   readonly decisionEngine: IDecisionEngine;
   readonly sleep: ISleepStrategy;
+  readonly stats: { usdProfitToDate: string };
 
   constructor({
     volatileAsset,
@@ -63,6 +65,7 @@ export class AssetState<
     isStableAssetClass,
     decisionEngine,
     sleep,
+    stats,
   }: IAssetStateArguments<VolatileAsset, StableAsset>) {
     this.symbol = `${volatileAsset}${stableAsset}`;
     this.state = state;
@@ -71,6 +74,7 @@ export class AssetState<
     this.isStableAssetClass = isStableAssetClass;
     this.decisionEngine = decisionEngine;
     this.sleep = sleep;
+    this.stats = stats;
 
     stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
@@ -214,8 +218,26 @@ export class HoldVolatileAsset<
           this.genSellOrder(latestPrice, volatileAssetBalance)
         );
 
+        const profit = await logTrade(
+          {
+            lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
+            price: orderPrice,
+            amount: qtySold,
+            from: this.volatileAsset,
+            to: this.stableAsset,
+            action: "SELL",
+          },
+          binanceClient
+        );
+
         const nextState = new StableAssetOrderPlaced(
-          { ...this, decisionEngine: nextDecision },
+          {
+            ...this,
+            stats: {
+              usdProfitToDate: new Big(this.stats.usdProfitToDate).add(profit),
+            },
+            decisionEngine: nextDecision,
+          },
           clientOrderId
         );
 
@@ -225,15 +247,6 @@ export class HoldVolatileAsset<
           price: orderPrice,
           quantity: qtySold,
           clientOrderId,
-        });
-
-        logTrade({
-          lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
-          price: orderPrice,
-          amount: qtySold,
-          from: this.volatileAsset,
-          to: this.stableAsset,
-          action: "SELL",
         });
 
         await this.sleep.onPlacedVolatileAssetSellOrder();
@@ -327,14 +340,17 @@ export class HoldStableAsset<
 
         await this.sleep.onPlacedVolatileAssetBuyOrder();
 
-        logTrade({
-          lastPurchasePrice: "N/A",
-          price: orderPrice,
-          amount: qtyBought,
-          from: this.stableAsset,
-          to: this.volatileAsset,
-          action: "BUY",
-        });
+        logTrade(
+          {
+            lastPurchasePrice: "N/A",
+            price: orderPrice,
+            amount: qtyBought,
+            from: this.stableAsset,
+            to: this.volatileAsset,
+            action: "BUY",
+          },
+          binanceClient
+        );
 
         return nextState;
       } else {

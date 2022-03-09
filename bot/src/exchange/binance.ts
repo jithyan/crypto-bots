@@ -37,6 +37,14 @@ export class BinanceApi implements IWallet {
       maxKeys: 2,
     });
 
+  private readonly audUsdValue: INodeCached<"aud", string> = new NodeCache({
+    stdTTL: 60 * 60 * 12,
+    useClones: false,
+    checkperiod: 60 * 60 * 12 + 2,
+    deleteOnExpire: true,
+    maxKeys: 2,
+  });
+
   constructor() {
     const key = process.env.BINANCE_KEY?.trim();
     const secret = process.env.BINANCE_SECRET?.trim();
@@ -47,6 +55,18 @@ export class BinanceApi implements IWallet {
     }
     this.client = new Spot(key, secret);
   }
+
+  getAudUsdValue = async () => {
+    const cacheEntry = this.audUsdValue.get("aud");
+
+    if (cacheEntry) {
+      return Promise.resolve(cacheEntry);
+    }
+
+    const value = await this.getLatestPrice("AUD", "BUSD");
+    this.audUsdValue.set("aud", value);
+    return value;
+  };
 
   getExchangeConfig = async (
     volatileAsset: TSupportedCoins,

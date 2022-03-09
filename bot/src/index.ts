@@ -16,7 +16,7 @@ import { startControlServer } from "./controlServer.js";
 import { TSleepStrategyTypes } from "./bot/sleep/BaseSleepStrategy.js";
 import Big from "big.js";
 
-if (process.env.RUN_BOT_ON_STARTUP === "true") {
+if (Config.RUN_BOT_ON_STARTUP) {
   runCryptoBot({
     volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
     stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
@@ -24,11 +24,13 @@ if (process.env.RUN_BOT_ON_STARTUP === "true") {
     sleepStrategy: Config.SLEEP_STRATEGY,
     decisionConfig: {
       MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015").toFixed(3),
-      PRICE_HAS_INCREASED_THRESHOLD: new Big("1.00175").toFixed(5),
-      PRICE_HAS_DECREASED_THRESHOLD: new Big("1")
-        .minus(new Big("0.00175"))
-        .toFixed(5),
-      STOP_LOSS_THRESHOLD: "0.15",
+      PRICE_HAS_INCREASED_THRESHOLD: new Big(
+        Config.PRICE_HAS_INCREASED_THRESHOLD
+      ).toFixed(5),
+      PRICE_HAS_DECREASED_THRESHOLD: new Big(
+        Config.PRICE_HAS_DECREASED_THRESHOLD
+      ).toFixed(5),
+      STOP_LOSS_THRESHOLD: new Big(Config.STOP_LOSS_THRESHOLD).toFixed(5),
     },
     enableControlServer: true,
   });

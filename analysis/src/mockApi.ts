@@ -36,19 +36,30 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
 
   return setupServer(
     rest.get("*/api/v3/ticker/price", async (req, res, ctx) => {
+      if (req.url.searchParams.get("symbol") === "AUDBUSD") {
+        return res(
+          ctx.status(200),
+          ctx.json({
+            symbol: "AUDBUSD",
+            price: "0.72960000",
+          })
+        );
+      }
+
       current.ptr += 1;
       if (current.ptr >= data.length) {
-        fs.writeFileSync(
+        fs.appendFileSync(
           "numtrades.txt",
-          JSON.stringify(
-            {
-              trades: current.numTrades,
-              symbol,
-              time: new Date().toISOString(),
-            },
-            undefined,
-            2
-          )
+          "\n" +
+            JSON.stringify(
+              {
+                trades: current.numTrades,
+                symbol,
+                time: new Date().toISOString(),
+              },
+              undefined,
+              2
+            )
         );
         return res(ctx.status(500), ctx.json({ message: "out of data" }));
       }

@@ -20,6 +20,9 @@ const define = {
   "process.env.SLEEP_STRATEGY": `"${process.env.SLEEP_STRATEGY}"`,
   "process.env.RUN_BOT_ON_STARTUP": `"${process.env.RUN_BOT_ON_STARTUP}"`,
   "process.env.TERMINATE_ON_ERROR": `"${process.env.TERMINATE_ON_ERROR}"`,
+  "process.env.PRICE_HAS_INCREASED_THRESHOLD": `"${process.env.PRICE_HAS_INCREASED_THRESHOLD}"`,
+  "process.env.PRICE_HAS_DECREASED_THRESHOLD": `"${process.env.PRICE_HAS_DECREASED_THRESHOLD}"`,
+  "process.env.STOP_LOSS_THRESHOLD": `"${process.env.STOP_LOSS_THRESHOLD}"`,
 };
 
 console.log("Starting build version", revision);

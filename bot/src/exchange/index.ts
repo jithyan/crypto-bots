@@ -18,12 +18,14 @@ export type TVolatileCoins =
   | "NEAR"
   | "XRP";
 
-export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC";
+export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC" | "AUD";
 export type TSupportedCoins = TStableCoins | TVolatileCoins;
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
 export type TExchange = "binance";
 
 export interface IWallet {
+  getAudUsdValue: () => Promise<string>;
+
   withdraw: (
     coin: TSupportedCoins,
     address: AddressBook,

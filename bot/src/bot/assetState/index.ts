@@ -38,7 +38,8 @@ export function hydrate(
 
   generalLogger.info("Attempt to hydrate", { file, filepath });
 
-  const { symbol, state, stableAsset, volatileAsset, clientOrderId } = file;
+  const { symbol, state, stableAsset, volatileAsset, clientOrderId, stats } =
+    file;
   const {
     state: deState,
     lastPurchasePrice,
@@ -72,6 +73,7 @@ export function hydrate(
   }
 
   const assetStateArgs = {
+    stats: stats ?? { usdProfitToDate: "0" },
     symbol,
     state,
     stableAsset,
@@ -114,5 +116,10 @@ export async function initialiseAssetState(args: {
     args.decisionConfig
   );
   const sleep = getSleepStrategy(args.sleepStrategy);
-  return new HoldStableAsset({ ...args, decisionEngine, sleep });
+  return new HoldStableAsset({
+    ...args,
+    decisionEngine,
+    sleep,
+    stats: { usdProfitToDate: "0" },
+  });
 }
