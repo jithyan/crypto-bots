@@ -68,6 +68,7 @@ export function useBotStatus(): any[] {
       const parsedData = respData.map((d: Record<string, any>) => {
         return {
           ...d,
+          profitToDate: d.stats?.usdProfitToDate ?? "0",
           lastState: d.lastState ?? "Unknown",
           actions: Object.keys(d.actions).map((action) => (
             <ActionButton

@@ -26,10 +26,22 @@ const columnHeaders = [
     Header: "Last State",
     accessor: "lastState",
   },
+  {
+    Header: "Profit to Date",
+    accessor: "profitToDate",
+  },
 ];
 
 function Td({ children, cell }: any) {
   const style: Partial<Record<"backgroundColor", string>> = {};
+
+  if (cell.column.Header?.toString() === "Profit to Date") {
+    if (cell.value.startsWith("-")) {
+      style.backgroundColor = "red";
+    } else {
+      style.backgroundColor = "green";
+    }
+  }
 
   if (cell.column.Header?.toString() === "Status") {
     if (cell.value === "ONLINE") {
