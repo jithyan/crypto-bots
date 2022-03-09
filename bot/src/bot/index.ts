@@ -66,14 +66,17 @@ export async function* executeTradeCycle({
     if (SERVER_CONTROL.shutdown) {
       generalLogger.info("Gracefully shut down as requested");
       console.log("Graceful shutdown initiated");
-      await registerWithBotManager({ status: "OFFLINE" }).catch((e) =>
+      await registerWithBotManager({
+        status: "OFFLINE",
+        lastState: nextAssetState,
+      }).catch((e) =>
         generalLogger.error("Failed sending offline notification to manager", e)
       );
       process.exit(0);
     }
     if (args.enableControlServer) {
       registerWithBotManager({
-        lastState: nextAssetState.getCurrentState(),
+        lastState: nextAssetState,
       });
     }
     nextAssetState = await nextAssetState.execute();

@@ -4,6 +4,7 @@ import { getBotFilePath } from "common-util";
 import { Config } from "./config.js";
 import { generalLogger } from "./log/index.js";
 import axios, { AxiosError } from "axios";
+import { ITradeAssetCycle } from "./bot/assetState/assetState.js";
 
 const controlServer = express();
 controlServer.use(helmet());
@@ -16,7 +17,7 @@ export const SERVER_CONTROL = {
 export async function registerWithBotManager(
   extraInfo: {
     status?: "SHUTTING DOWN" | "OFFLINE";
-    lastState?: string;
+    lastState?: ITradeAssetCycle;
   } = {}
 ): Promise<void> {
   return axios

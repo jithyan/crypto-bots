@@ -68,8 +68,8 @@ export function useBotStatus(): any[] {
       const parsedData = respData.map((d: Record<string, any>) => {
         return {
           ...d,
-          profitToDate: d.stats?.usdProfitToDate ?? "0",
-          lastState: d.lastState ?? "Unknown",
+          profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
+          lastState: d.lastState?.state ?? "Unknown",
           actions: Object.keys(d.actions).map((action) => (
             <ActionButton
               key={`${d.id}-${action}`}
