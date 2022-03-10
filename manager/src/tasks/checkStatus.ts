@@ -31,5 +31,5 @@ const checkBotStatus = () => {
 
 export const startBotStatusCheck = () => {
   console.log("Started bot status check scheduler");
-  cron.schedule("7 1 * * *", checkBotStatus);
+  cron.schedule("* 2 * * *", checkBotStatus);
 };
