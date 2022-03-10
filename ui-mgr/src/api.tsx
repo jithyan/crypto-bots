@@ -62,6 +62,11 @@ function ActionButton({
 export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
   const [cardStyle, setCardStyle] = useState("card text-white bg-warning mb-3");
   const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
+  const {
+    PRICE_HAS_DECREASED_THRESHOLD = "missing",
+    PRICE_HAS_INCREASED_THRESHOLD = "missing",
+    STOP_LOSS_THRESHOLD = "missing",
+  } = lastState?.decisionEngine?.decisionConfig ?? {};
 
   useLayoutEffect(() => {
     if (prevKnownCheckIn !== lastCheckIn) {
@@ -83,6 +88,9 @@ export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
         <div className="card-body">
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
+              <em>{lastState?.decisionEngine?.state}</em>
+            </li>
+            <li className="list-group-item">
               <strong>Last ticker price:</strong>{" "}
               {parseFloat(lastState?.decisionEngine?.lastTickerPrice).toFixed(
                 3
@@ -93,10 +101,6 @@ export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
               {parseFloat(lastState?.decisionEngine?.lastPurchasePrice).toFixed(
                 3
               )}
-            </li>
-            <li className="list-group-item">
-              {/* <strong>Decision engine:</strong>{" "} */}
-              {lastState?.decisionEngine?.state}
             </li>
             <li className="list-group-item">
               <strong>Last check in:</strong>{" "}
@@ -115,6 +119,12 @@ export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
         <div className="card-footer">
           <p>
             Using <mark>{lastState?.sleep?.sleepStrategy}</mark> sleep strategy
+            <br />
+            <small>
+              Inc: {parseFloat(PRICE_HAS_INCREASED_THRESHOLD).toFixed(4)} | Dec:{" "}
+              {parseFloat(PRICE_HAS_DECREASED_THRESHOLD).toFixed(4)} | Stop
+              loss: {parseFloat(STOP_LOSS_THRESHOLD) * 100}%
+            </small>
           </p>
         </div>
       </div>

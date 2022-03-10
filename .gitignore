@@ -13,6 +13,10 @@ bin
 /manager/*.log
 /manager/*.csv
 /manager/*-audit.json
+/analysis/*.log
+/analysis/*.csv
+/analysis/*-audit.json
+/analysis/*.gz
 
 !/.yarn/patches
 !/.yarn/plugins
