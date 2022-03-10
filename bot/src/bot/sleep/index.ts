@@ -10,6 +10,7 @@ import {
   ThirtyMinuteSleepStrategy,
   SixtyMinuteSleepStrategy,
   NoSleepStrategy,
+  NineMinuteSleepStrategy,
 } from "./sleepStrategies.js";
 
 export function getSleepStrategy(
@@ -20,6 +21,8 @@ export function getSleepStrategy(
       return new ThreeMinuteSleepStrategy();
     case "6m":
       return new SixMinuteSleepStrategy();
+    case "9m":
+      return new NineMinuteSleepStrategy();
     case "15m":
       return new FifteenMinuteSleepStrategy();
     case "30m":

@@ -16,6 +16,7 @@ export type ISleepStrategy = Record<
 export type TSleepStrategyTypes =
   | "3m"
   | "6m"
+  | "9m"
   | "15m"
   | "30m"
   | "60m"

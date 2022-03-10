@@ -40,6 +40,19 @@ export class SixMinuteSleepStrategy extends BaseSleepStrategy {
   onAssetOrderFilled = () => Promise.resolve();
 }
 
+export class NineMinuteSleepStrategy extends BaseSleepStrategy {
+  constructor() {
+    super("9m");
+  }
+
+  onPlacedVolatileAssetSellOrder = () => sleep(9);
+  onHoldVolatileAsset = () => sleep(9);
+  onPlacedVolatileAssetBuyOrder = () => sleep(9);
+  onHoldStableAsset = () => sleep(9);
+  onAssetOrderNotFilled = () => sleep(9);
+  onAssetOrderFilled = () => Promise.resolve();
+}
+
 export class FifteenMinuteSleepStrategy extends BaseSleepStrategy {
   constructor() {
     super("15m");
