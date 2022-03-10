@@ -1,6 +1,6 @@
 import fs from "fs";
 import { getLatestPriceApiLog, Intervals, partitionPriceList } from "./api";
-import { getCsvDataFromFiles, calculateProfit } from "./csv";
+import { getCsvDataFromFiles, calculateProfit, getTradeStats } from "./csv";
 import { intervals, makeMockServer } from "./mockApi";
 //@ts-ignore
 const runCryptoBot = require("./bot.js").default;
@@ -39,13 +39,22 @@ async function runSimulationFor(
     const csvTradeFile = `${getDate()}-trades.csv`;
     const csv = getCsvDataFromFiles([csvTradeFile]);
     const profit = calculateProfit(csv);
-    console.log(`Result`, { increase, decrease, profit, stopLoss, interval });
+    const stats = getTradeStats(csv);
+    console.log(`Result`, {
+      increase,
+      decrease,
+      profit,
+      stopLoss,
+      interval,
+      stats,
+    });
     results.push({
       increase,
       decrease,
       profit,
       stopLoss,
       interval,
+      stats,
       timestamp: new Date().toISOString(),
     });
     return profit;
@@ -135,7 +144,7 @@ async function meow(
   );
 }
 
-meow({ v: "ada", s: "busd" }, 650, 750);
+meow({ v: "eth", s: "busd" }, 650, 725);
 // runSimulationFor({ v: "ada", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
 function getDate() {
   const today = new Date();

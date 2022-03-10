@@ -59,8 +59,18 @@ function ActionButton({
   );
 }
 
-export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
-  const [cardStyle, setCardStyle] = useState("card text-white bg-warning mb-3");
+const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
+
+export function LastState({
+  lastState,
+  lastCheckIn,
+  status,
+}: any): JSX.Element {
+  const cardNormalStyle =
+    status === "ONLINE"
+      ? "card text-white bg-warning mb-3"
+      : "card text-white bg-secondary mb-3";
+  const [cardStyle, setCardStyle] = useState(cardHasJustBeenUpdatedStyle);
   const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
   const {
     PRICE_HAS_DECREASED_THRESHOLD = "missing",
@@ -70,11 +80,11 @@ export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
 
   useLayoutEffect(() => {
     if (prevKnownCheckIn !== lastCheckIn) {
-      setCardStyle(() => "card text-white bg-warning mb-3");
+      setCardStyle(() => cardHasJustBeenUpdatedStyle);
       setPrevKnownCheckIn(lastCheckIn);
     }
     const id = setTimeout(() => {
-      setCardStyle(() => "card text-dark bg-light mb-3");
+      setCardStyle(() => cardNormalStyle);
     }, 5000);
     return () => clearTimeout(id);
   }, [lastCheckIn]);
@@ -145,7 +155,11 @@ export function useBotStatus(): any[] {
           ...d,
           profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
           lastState: (
-            <LastState lastState={d.lastState} lastCheckIn={d.lastCheckIn} />
+            <LastState
+              status={d.status}
+              lastState={d.lastState}
+              lastCheckIn={d.lastCheckIn}
+            />
           ),
           actions: Object.keys(d.actions).map((action) => (
             <ActionButton

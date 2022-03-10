@@ -1,0 +1,102 @@
+[
+  {
+    "trades": 25,
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 5.292,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "timestamp": "2022-03-10T06:36:52.828Z"
+  },
+  {
+    "trades": 25,
+    "increase": "1.0015",
+    "decrease": "0.9995",
+    "profit": 5.2109999999999985,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "timestamp": "2022-03-10T06:36:37.907Z"
+  },
+  {
+    "increase": "1.005",
+    "trades": 14,
+    "decrease": "0.999",
+    "profit": 5.188999999999999,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "timestamp": "2022-03-10T06:40:44.864Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 5.164,
+    "stopLoss": "0.09",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 12,
+      "numProfitableTrades": 11,
+      "totalProfit": 5.164,
+      "totalOnlyProfitableTrades": 7.443,
+      "avgProfitForProfitableTrade": 0.6766363636363636,
+      "avgProfit": 0.4303333333333333
+    },
+    "timestamp": "2022-03-10T07:37:04.375Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 4.919999999999999,
+    "stopLoss": "0.09",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 12,
+      "numProfitableTrades": 11,
+      "totalProfit": 4.919999999999999,
+      "totalOnlyProfitableTrades": 7.198999999999999,
+      "avgProfitForProfitableTrade": 0.6544545454545454,
+      "avgProfit": 0.4099999999999999
+    },
+    "timestamp": "2022-03-10T07:35:59.215Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 4.707999999999999,
+    "stopLoss": "0.11",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 12,
+      "numProfitableTrades": 11,
+      "totalProfit": 4.707999999999999,
+      "totalOnlyProfitableTrades": 7.443,
+      "avgProfitForProfitableTrade": 0.6766363636363636,
+      "avgProfit": 0.39233333333333326
+    },
+    "timestamp": "2022-03-10T07:54:04.376Z"
+  },
+
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 4.7780000000000005,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "timestamp": "2022-03-10T06:41:00.704Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 4.707999999999999,
+    "stopLoss": "0.11",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 12,
+      "numProfitableTrades": 11,
+      "totalProfit": 4.707999999999999,
+      "totalOnlyProfitableTrades": 7.443,
+      "avgProfitForProfitableTrade": 0.6766363636363636,
+      "avgProfit": 0.39233333333333326
+    },
+    "timestamp": "2022-03-10T07:54:04.376Z"
+  }
+]

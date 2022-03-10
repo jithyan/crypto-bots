@@ -37,3 +37,29 @@ export function calculateProfit(csvData: TradeCsv[]): number {
     .filter((row) => row[1] === "SELL")
     .reduce((acc, line) => acc + Number(line[7]), 0);
 }
+
+export function getTradeStats(csvData: TradeCsv[]) {
+  const sellTrades = csvData.filter((row) => row[1] === "SELL");
+  const profitableSellTrades = sellTrades.filter(
+    (line) => Number(line[7]) >= 0
+  );
+  const numSellTrades = sellTrades.length;
+  const numProfitableTrades = profitableSellTrades.length;
+  const totalProfit = calculateProfit(csvData);
+  const totalOnlyProfitableTrades = calculateProfit(profitableSellTrades);
+
+  const avgProfitForProfitableTrade =
+    totalOnlyProfitableTrades / numProfitableTrades;
+  const avgProfit = totalProfit / numSellTrades;
+  sellTrades.sort((a, b) => Number(a[7]) - Number(b[7]));
+  profitableSellTrades.sort((a, b) => Number(a[7]) - Number(b[7]));
+
+  return {
+    numSellTrades,
+    numProfitableTrades,
+    totalProfit,
+    totalOnlyProfitableTrades,
+    avgProfitForProfitableTrade,
+    avgProfit,
+  };
+}
