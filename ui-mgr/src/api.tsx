@@ -59,6 +59,47 @@ function ActionButton({
   );
 }
 
+export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
+  if (lastState && typeof lastState !== "string") {
+    return (
+      <div className="card text-dark bg-light mb-3" style={{ width: "18rem" }}>
+        <div className="card-header">
+          <strong>{lastState.state}</strong>
+        </div>
+        <div className="card-body">
+          <ul className="list-group list-group-flush">
+            <li className="list-group-item">
+              <strong>Last ticker price:</strong>{" "}
+              {lastState?.decisionEngine?.lastTickerPrice}
+            </li>
+            <li className="list-group-item">
+              <strong>Last purchase price:</strong>{" "}
+              {lastState?.decisionEngine?.lastPurchasePrice}
+            </li>
+            <li className="list-group-item">
+              <strong>Last check in:</strong>{" "}
+              {
+                new Date(lastCheckIn)
+                  .toLocaleString("en-AU", {
+                    timeZone: "Australia/Sydney",
+                  })
+                  .split(", ")[1]
+              }
+            </li>
+          </ul>
+        </div>
+        <div className="card-footer">
+          <p>
+            Using <mark>{lastState?.sleep?.sleepStrategy}</mark> sleep strategy
+          </p>
+        </div>
+      </div>
+    );
+  } else {
+    return <span>Unknown</span>;
+  }
+}
+
 export function useBotStatus(): any[] {
   const [data, setData] = useState([]);
 
@@ -69,7 +110,9 @@ export function useBotStatus(): any[] {
         return {
           ...d,
           profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
-          lastState: d.lastState?.state ?? "Unknown",
+          lastState: (
+            <LastState lastState={d.lastState} lastCheckIn={d.lastCheckIn} />
+          ),
           actions: Object.keys(d.actions).map((action) => (
             <ActionButton
               key={`${d.id}-${action}`}
