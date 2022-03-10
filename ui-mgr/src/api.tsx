@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 import axiosDefault from "axios";
 import { getTimestampPepper } from "common-util";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 
 const socket = io("ws://35.243.104.152:2000");
 
@@ -60,9 +60,18 @@ function ActionButton({
 }
 
 export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
+  const [cardStyle, setCardStyle] = useState("card text-white bg-warning mb-3");
+
+  useLayoutEffect(() => {
+    const id = setTimeout(() => {
+      setCardStyle("card text-dark bg-light mb-3");
+    }, 1000);
+    return () => clearTimeout(id);
+  }, []);
+
   if (lastState && typeof lastState !== "string") {
     return (
-      <div className="card text-dark bg-light mb-3" style={{ width: "18rem" }}>
+      <div className={cardStyle} style={{ width: "18rem" }}>
         <div className="card-header">
           <strong>{lastState.state}</strong>
         </div>

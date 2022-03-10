@@ -15,8 +15,11 @@ const checkBotStatus = () => {
     const currentBot = botRegister.state[botId];
     const { status } = currentBot;
     const botIsDown = isLastCheckInOverAnHourAgo(currentBot.lastCheckIn);
+    const flagError = botIsDown && ["ONLINE", "SHUTTING DOWN"].includes(status);
 
-    if (botIsDown && ["ONLINE", "SHUTTING DOWN"].includes(status)) {
+    logger.info("Checking bot status", { currentBot, status, botIsDown });
+
+    if (flagError) {
       logger.error("Bot has not sent a health check in the last hour", {
         ...currentBot,
         botId,
