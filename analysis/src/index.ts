@@ -73,19 +73,16 @@ async function meow(
     "0.14",
     "0.15",
   ];
-  const decreases = ["0.99975", "0.9995", "0.999", "0.995", "0.99", "0.985"];
-  const increases = [
-    "1.00175",
-    "1.002",
-    "1.005",
-    "1.0025",
-    "1.0015",
-    "1.001",
-    "1.0035",
-  ];
+  // remove 0.99
+  const decreases = ["0.9995", "0.999", "0.995", "0.99", "0.985"];
+  // remove 1.001
+  const increases = ["1.00175", "1.005", "1.0015", "1.001", "1.0035"];
+  const intervalsSubset: Intervals[] = ["m6", "m9", "m60", "m15"];
 
   const combinations = stopLosses
-    .map((stopLoss) => intervals.map((interval) => ({ interval, stopLoss })))
+    .map((stopLoss) =>
+      intervalsSubset.map((interval) => ({ interval, stopLoss }))
+    )
     .flatMap((x) => x)
     .map((a) => decreases.map((decrease) => ({ decrease, ...a })))
     .flatMap((x) => x)
@@ -93,6 +90,8 @@ async function meow(
     .flatMap((x) => x);
 
   const subset = combinations.filter((x, i) => i >= start && i < stop);
+
+  console.log("combinations", combinations.length);
 
   const p = subset.map(
     ({ interval, stopLoss, increase, decrease }, index) =>
@@ -120,7 +119,7 @@ async function meow(
     results.sort((a, b) => b.profit - a.profit);
     console.log("top result", results[0]);
     fs.writeFileSync(
-      `${v.concat(s).toUpperCase()}_FINAL_RESULTS_${start}-${stop}`,
+      `${v.concat(s).toUpperCase()}_FINAL_RESULTS_${start}-${stop}.json`,
       JSON.stringify(results, null, 2),
       "utf8"
     );
@@ -137,8 +136,8 @@ async function meow(
   );
 }
 
-//meow({ v: "avax", s: "busd" }, 0, 75);
-//runSimulationFor({ v: "avax", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
+meow({ v: "avax", s: "busd" }, 975, 1101);
+// runSimulationFor({ v: "ada", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
 function getDate() {
   const today = new Date();
   const yyyy = today.getFullYear();
@@ -183,7 +182,7 @@ function getApiPricesForSymbol(symbol: string) {
   });
 }
 
-getApiPricesForSymbol("adabusd");
-getApiPricesForSymbol("ethbusd");
-getApiPricesForSymbol("avaxbusd");
-getApiPricesForSymbol("xrpbusd");
+// getApiPricesForSymbol("adabusd");
+// getApiPricesForSymbol("ethbusd");
+// getApiPricesForSymbol("avaxbusd");
+// getApiPricesForSymbol("xrpbusd");

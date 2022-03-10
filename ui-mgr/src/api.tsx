@@ -61,13 +61,18 @@ function ActionButton({
 
 export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
   const [cardStyle, setCardStyle] = useState("card text-white bg-warning mb-3");
+  const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
 
   useLayoutEffect(() => {
+    if (prevKnownCheckIn !== lastCheckIn) {
+      setCardStyle(() => "card text-white bg-warning mb-3");
+      setPrevKnownCheckIn(lastCheckIn);
+    }
     const id = setTimeout(() => {
-      setCardStyle("card text-dark bg-light mb-3");
-    }, 1000);
+      setCardStyle(() => "card text-dark bg-light mb-3");
+    }, 5000);
     return () => clearTimeout(id);
-  }, []);
+  }, [lastCheckIn]);
 
   if (lastState && typeof lastState !== "string") {
     return (
@@ -79,21 +84,31 @@ export function LastState({ lastState, lastCheckIn }: any): JSX.Element {
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
               <strong>Last ticker price:</strong>{" "}
-              {lastState?.decisionEngine?.lastTickerPrice}
+              {parseFloat(lastState?.decisionEngine?.lastTickerPrice).toFixed(
+                3
+              )}
             </li>
             <li className="list-group-item">
               <strong>Last purchase price:</strong>{" "}
-              {lastState?.decisionEngine?.lastPurchasePrice}
+              {parseFloat(lastState?.decisionEngine?.lastPurchasePrice).toFixed(
+                3
+              )}
+            </li>
+            <li className="list-group-item">
+              {/* <strong>Decision engine:</strong>{" "} */}
+              {lastState?.decisionEngine?.state}
             </li>
             <li className="list-group-item">
               <strong>Last check in:</strong>{" "}
-              {
-                new Date(lastCheckIn)
-                  .toLocaleString("en-AU", {
-                    timeZone: "Australia/Sydney",
-                  })
-                  .split(", ")[1]
-              }
+              <mark>
+                {
+                  new Date(lastCheckIn)
+                    .toLocaleString("en-AU", {
+                      timeZone: "Australia/Sydney",
+                    })
+                    .split(", ")[1]
+                }
+              </mark>
             </li>
           </ul>
         </div>
