@@ -73,10 +73,9 @@ async function meow(
     "0.14",
     "0.15",
   ];
-  // remove 0.99
-  const decreases = ["0.9995", "0.999", "0.995", "0.99", "0.985"];
-  // remove 1.001
-  const increases = ["1.00175", "1.005", "1.0015", "1.001", "1.0035"];
+
+  const decreases = ["0.9995", "0.999", "0.995", "0.985"];
+  const increases = ["1.00175", "1.005", "1.0015", "1.0035"];
   const intervalsSubset: Intervals[] = ["m6", "m9", "m60", "m15"];
 
   const combinations = stopLosses
@@ -136,7 +135,7 @@ async function meow(
   );
 }
 
-meow({ v: "avax", s: "busd" }, 975, 1101);
+meow({ v: "ada", s: "busd" }, 650, 750);
 // runSimulationFor({ v: "ada", s: "busd" }, "m6", "0.15", "1.005", "0.9995");
 function getDate() {
   const today = new Date();

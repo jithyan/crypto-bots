@@ -1,0 +1,72 @@
+[
+  {
+    "trades": 13,
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 4.503,
+    "stopLoss": "0.09",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:10:38.588Z"
+  },
+  {
+    "trades": 13,
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 4.476999999999999,
+    "stopLoss": "0.09",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:11:23.667Z"
+  },
+  {
+    "trades": 13,
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 4.224,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:15:58.105Z"
+  },
+  {
+    "trades": 13,
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 4.1979999999999995,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:16:27.638Z"
+  },
+  {
+    "trades": 16,
+
+    "increase": "1.0035",
+    "decrease": "0.9995",
+    "profit": 3.1979999999999995,
+    "stopLoss": "0.14",
+    "interval": "m15",
+    "timestamp": "2022-03-10T03:44:20.422Z"
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.1979999999999995,
+    "stopLoss": "0.14",
+    "interval": "m15",
+    "timestamp": "2022-03-10T03:44:41.096Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 3.1820000000000004,
+    "stopLoss": "0.13",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:34:01.213Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 3.1820000000000004,
+    "stopLoss": "0.14",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:39:13.543Z"
+  }
+]

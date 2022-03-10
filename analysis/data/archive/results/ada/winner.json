@@ -1,9 +1,20 @@
-{
-  "increase": "1.005",
-  "decrease": "0.9995",
-  "profit": 6.258,
-  "stopLoss": "0.15",
-  "interval": "m6",
-  "timestamp": "2022-03-09T13:19:37.426Z",
-  "trades": 11
-}
+[
+  {
+    "trades": 13,
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 4.503,
+    "stopLoss": "0.09",
+    "interval": "m6",
+    "timestamp": "2022-03-10T03:10:38.588Z"
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.9995",
+    "profit": 6.258,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "timestamp": "2022-03-09T13:19:37.426Z",
+    "trades": 11
+  }
+]
