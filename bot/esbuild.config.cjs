@@ -23,6 +23,7 @@ const define = {
   "process.env.PRICE_HAS_INCREASED_THRESHOLD": `"${process.env.PRICE_HAS_INCREASED_THRESHOLD}"`,
   "process.env.PRICE_HAS_DECREASED_THRESHOLD": `"${process.env.PRICE_HAS_DECREASED_THRESHOLD}"`,
   "process.env.STOP_LOSS_THRESHOLD": `"${process.env.STOP_LOSS_THRESHOLD}"`,
+  "process.env.ENABLE_RESUME": `"${process.env.ENABLE_RESUME}"`,
 };
 
 console.log("Starting build version", revision);

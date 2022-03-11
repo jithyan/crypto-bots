@@ -20,7 +20,7 @@ if (Config.RUN_BOT_ON_STARTUP) {
   runCryptoBot({
     volatileAsset: process.env.VOLATILE_COIN?.toUpperCase().trim() as any,
     stableAsset: process.env.STABLE_COIN?.toUpperCase().trim() as any,
-    enableResume: true,
+    enableResume: Config.ENABLE_RESUME,
     sleepStrategy: Config.SLEEP_STRATEGY,
     decisionConfig: {
       MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.015").toFixed(3),

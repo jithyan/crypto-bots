@@ -8,8 +8,9 @@ import {
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
 import { registerWithBotManager, SERVER_CONTROL } from "../controlServer.js";
-import { TSleepStrategyTypes } from "./sleep/index.js";
+import { getSleepStrategy, TSleepStrategyTypes } from "./sleep/index.js";
 import { PriceTrendDecisionConfig } from "./decisionEngine/priceTrendDecision.js";
+import { PriceBot } from "./PriceBot.js";
 
 export async function* executeTradeCycle({
   enableResume,
@@ -25,7 +26,9 @@ export async function* executeTradeCycle({
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
   let nextAssetState;
 
-  if (enableResume) {
+  if (symbol === "PRICEBOT") {
+    nextAssetState = new PriceBot(getSleepStrategy(args.sleepStrategy));
+  } else if (enableResume) {
     try {
       nextAssetState = hydrate(
         Config.APPSTATE_FILENAME,

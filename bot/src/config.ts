@@ -23,6 +23,7 @@ export const Config = {
   PRICE_HAS_DECREASED_THRESHOLD:
     process.env.PRICE_HAS_DECREASED_THRESHOLD?.trim() ?? "not-set",
   STOP_LOSS_THRESHOLD: process.env.STOP_LOSS_THRESHOLD?.trim() ?? "not-set",
+  ENABLE_RESUME: (process.env.ENABLE_RESUME?.trim() ?? "true") === "true",
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -37,4 +38,5 @@ export const Config = {
   PRICE_HAS_INCREASED_THRESHOLD: string;
   PRICE_HAS_DECREASED_THRESHOLD: string;
   STOP_LOSS_THRESHOLD: string;
+  ENABLE_RESUME: boolean;
 };

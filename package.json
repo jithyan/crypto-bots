@@ -22,7 +22,7 @@
     "upgrade:util": "yarn util add --dev typescript",
     "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr",
     "format": "prettier --write \"**/src/**/*.ts*\"",
-    "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanups\""
+    "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\""
   },
   "devDependencies": {
     "concurrently": "^7.0.0",

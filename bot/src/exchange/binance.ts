@@ -185,6 +185,11 @@ export class BinanceApi implements IWallet {
     }
   };
 
+  getLatestPriceOfAllCoins = async () => {
+    const { data } = await this.client.tickerPrice();
+    return data;
+  };
+
   getLatestPrice = async (
     assetToBuy: TSupportedCoins,
     usingAsset: TSupportedCoins
@@ -455,7 +460,7 @@ interface BinanceConnectorClient {
   ) => Promise<AxiosResponse<IBinanceOrderDetails>>;
 
   tickerPrice: (
-    coin: TCoinPair
+    coin?: TCoinPair
   ) => Promise<AxiosResponse<TTickerPriceResponse>>;
 
   ticker24hr: (coin: TCoinPair) => Promise<AxiosResponse<IBinance24hrTicker>>;
