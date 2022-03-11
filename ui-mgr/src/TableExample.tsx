@@ -71,11 +71,11 @@ function Table({ columns, data }: any) {
 
   return (
     <table
-      className="table table-dark table-hover"
+      className="table table-sm table-dark table-hover"
       style={{ borderTop: "thin solid grey" }}
       {...getTableProps()}
     >
-      <thead>
+      <thead className="thead-dark">
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
