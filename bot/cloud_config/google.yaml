@@ -19,7 +19,7 @@ logging:
       type: parse_json
     csv_p:
       type: parse_regex
-      regex: ^(?<timestamp>[^,]*),(?<action>[^,]*),(?<price>[^,]*),(?<amount>[^,]*),(?<value>[^,]*),(?<from>[^,]*),(?<to>[^,]*),(?<profit>[^,]*)$
+      regex: ^(?<timestamp>[^,]*),(?<action>[^,]*),(?<price>[^,]*),(?<amount>[^,]*),(?<value>[^,]*),(?<from>[^,]*),(?<to>[^,]*),(?<profit>[^,]*),(?<audValue>[^,]*),(?<audBusd>[^,]*)$
   service:
     pipelines:
       crypto_bot_pipeline:
