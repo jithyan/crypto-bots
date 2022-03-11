@@ -45,13 +45,13 @@ function Td({ children, cell }: any) {
 
   if (cell.column.Header?.toString() === "Status") {
     if (cell.value === "ONLINE") {
-      style.backgroundColor = "green";
+      style.backgroundColor = "#28a745";
     } else if (cell.value === "OFFLINE") {
       style.backgroundColor = "grey";
     } else if (cell.value === "SHUTTING DOWN" || cell.value === "STARTING UP") {
-      style.backgroundColor = "orange";
+      style.backgroundColor = "#ffc107";
     } else if (cell.value === "NOT WORKING") {
-      style.backgroundColor = "red";
+      style.backgroundColor = "#dc3545";
     }
   }
 

@@ -68,7 +68,7 @@ export function LastState({
 }: any): JSX.Element {
   const cardNormalStyle =
     status === "ONLINE"
-      ? "card text-white bg-warning mb-3"
+      ? "card bg-light text-dark mb-3"
       : "card text-white bg-secondary mb-3";
   const [cardStyle, setCardStyle] = useState(cardHasJustBeenUpdatedStyle);
   const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
