@@ -1,7 +1,7 @@
 import fs from "fs";
 import { setupServer } from "msw/node";
 import { rest } from "msw";
-import { IntervalPriceData, Intervals, PriceData } from "./api";
+import { IntervalPriceData, Intervals, PriceData } from "../parse/api";
 import { exchangeInfo } from "./mockApiData";
 
 export const intervals: Intervals[] = ["m3", "m9", "m6", "m15", "m30", "m60"];
@@ -14,7 +14,7 @@ export function getApiPriceDataMock(args: AssetArgs): IntervalPriceData {
 
   for (const interval of intervals) {
     data[interval] = JSON.parse(
-      fs.readFileSync(`./data/${symbol}/${interval}_${symbol}.json`, "utf8")
+      fs.readFileSync(`../../data/${symbol}/${interval}_${symbol}.json`, "utf8")
     );
   }
 

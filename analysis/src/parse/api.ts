@@ -1,4 +1,5 @@
 import fs from "fs";
+import { getFilesInDir } from "../utils";
 
 interface LatestPriceLog {
   timestamp: string;
@@ -58,4 +59,25 @@ export function partitionPriceList(priceList: PriceData[]): IntervalPriceData {
     m30,
     m60,
   };
+}
+
+/**
+ *
+ * @param symbol eg "adabusd"
+ */
+export function writeApiPricesForSymbol(symbol: string) {
+  const dir = `./data/${symbol}`;
+  const files = getFilesInDir(`./data/${symbol}`);
+  const prices = getLatestPriceApiLog(files);
+  const partitions = partitionPriceList(prices);
+  Object.keys(partitions).forEach((partition) => {
+    fs.writeFileSync(
+      `${dir}/${partition}_${symbol}.json`,
+      JSON.stringify(
+        partitions[partition as keyof typeof partitions],
+        undefined,
+        2
+      )
+    );
+  });
 }

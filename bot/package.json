@@ -14,7 +14,7 @@
     "build:cloud": "rimraf dist && tsc --noEmit && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "pkg:analysis": "yarn build:local && cp ./dist/index.js ../analysis/src/bot.js",
+    "pkg:analysis": "yarn build:local && cp ./dist/index.js ../analysis/src/simulation/bot.js",
     "make": "zx make.mjs"
   },
   "dependencies": {
