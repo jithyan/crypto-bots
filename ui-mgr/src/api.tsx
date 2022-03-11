@@ -59,6 +59,36 @@ function ActionButton({
   );
 }
 
+function ContractIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+      fill="#000000"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  );
+}
+
+function ExpandIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
+      fill="#000000"
+    >
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+    </svg>
+  );
+}
+
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
 
 export function LastState({
@@ -66,6 +96,8 @@ export function LastState({
   lastCheckIn,
   status,
 }: any): JSX.Element {
+  const isNotPriceBot = lastState.state !== "PriceBot";
+  console.log(lastState.state, isNotPriceBot);
   const cardNormalStyle =
     status === "ONLINE"
       ? "card bg-light text-dark mb-3"
@@ -95,48 +127,53 @@ export function LastState({
         <div className="card-header">
           <strong>{lastState.state}</strong>
         </div>
-        <div className="card-body">
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">
-              <em>{lastState?.decisionEngine?.state}</em>
-            </li>
-            <li className="list-group-item">
-              <strong>Last ticker price:</strong>{" "}
-              {parseFloat(lastState?.decisionEngine?.lastTickerPrice).toFixed(
-                3
-              )}
-            </li>
-            <li className="list-group-item">
-              <strong>Last purchase price:</strong>{" "}
-              {parseFloat(lastState?.decisionEngine?.lastPurchasePrice).toFixed(
-                3
-              )}
-            </li>
-            <li className="list-group-item">
-              <strong>Last check in:</strong>{" "}
-              <mark>
-                {
-                  new Date(lastCheckIn)
-                    .toLocaleString("en-AU", {
-                      timeZone: "Australia/Sydney",
-                    })
-                    .split(", ")[1]
-                }
-              </mark>
-            </li>
-          </ul>
-        </div>
-        <div className="card-footer">
-          <p>
-            Using <mark>{lastState?.sleep?.sleepStrategy}</mark> sleep strategy
-            <br />
-            <small>
-              Inc: {parseFloat(PRICE_HAS_INCREASED_THRESHOLD).toFixed(4)} | Dec:{" "}
-              {parseFloat(PRICE_HAS_DECREASED_THRESHOLD).toFixed(4)} | Stop
-              loss: {parseFloat(STOP_LOSS_THRESHOLD) * 100}%
-            </small>
-          </p>
-        </div>
+        {isNotPriceBot ? (
+          <>
+            <div className="card-body">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
+                  <em>{lastState?.decisionEngine?.state}</em>
+                </li>
+                <li className="list-group-item">
+                  <strong>Last ticker price:</strong>{" "}
+                  {parseFloat(
+                    lastState?.decisionEngine?.lastTickerPrice
+                  ).toFixed(3)}
+                </li>
+                <li className="list-group-item">
+                  <strong>Last purchase price:</strong>{" "}
+                  {parseFloat(
+                    lastState?.decisionEngine?.lastPurchasePrice
+                  ).toFixed(3)}
+                </li>
+                <li className="list-group-item">
+                  <strong>Last check in:</strong>{" "}
+                  <mark>
+                    {
+                      new Date(lastCheckIn)
+                        .toLocaleString("en-AU", {
+                          timeZone: "Australia/Sydney",
+                        })
+                        .split(", ")[1]
+                    }
+                  </mark>
+                </li>
+              </ul>
+            </div>
+            <div className="card-footer">
+              <p>
+                Using <mark>{lastState?.sleep?.sleepStrategy}</mark> sleep
+                strategy
+                <br />
+                <small>
+                  Inc: {parseFloat(PRICE_HAS_INCREASED_THRESHOLD).toFixed(4)} |
+                  Dec: {parseFloat(PRICE_HAS_DECREASED_THRESHOLD).toFixed(4)} |
+                  Stop loss: {parseFloat(STOP_LOSS_THRESHOLD) * 100}%
+                </small>
+              </p>
+            </div>
+          </>
+        ) : null}
       </div>
     );
   } else {
