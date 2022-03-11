@@ -83,9 +83,9 @@ async function meow(
     "0.15",
   ];
 
-  const decreases = ["0.9995", "0.999", "0.995", "0.985"];
-  const increases = ["1.00175", "1.005", "1.0015", "1.0035"];
-  const intervalsSubset: Intervals[] = ["m6", "m9", "m60", "m15"];
+  const decreases = ["0.985", "0.995", "0.999"];
+  const increases = ["1.0015", "1.00175", "1.0035", "1.005"];
+  const intervalsSubset: Intervals[] = ["m6", "m9", "m15", "m60"];
 
   const combinations = stopLosses
     .map((stopLoss) =>
