@@ -34,6 +34,13 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
   const symbol = makeLowerCaseSymbolFromArgs(args);
   const data = getApiPriceDataMock(args)[interval];
 
+  if (!Object.keys(exchangeInfo).includes(symbol)) {
+    const errorMessage =
+      "Exchange info for symbol " + symbol + " does not exist";
+    console.error(errorMessage);
+    throw new Error("Exchange info for symbol " + symbol + " does not exist");
+  }
+
   return setupServer(
     rest.get("*/api/v3/ticker/price", async (req, res, ctx) => {
       if (req.url.searchParams.get("symbol") === "AUDBUSD") {

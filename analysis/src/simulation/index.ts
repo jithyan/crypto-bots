@@ -3,6 +3,7 @@ import { spawn } from "child_process";
 import { Intervals } from "../parse/api";
 
 export async function startSimulations(
+  numProcesses: number,
   volatileAsset: string,
   stableAsset = "busd"
 ) {
@@ -10,7 +11,7 @@ export async function startSimulations(
     volatileAsset,
     stableAsset
   );
-  const partitionedArgs = partition(allPossibleArgs, 6);
+  const partitionedArgs = partition(allPossibleArgs, numProcesses);
 
   console.log(
     "partitoned",
@@ -125,7 +126,7 @@ function generateSimulationCombinations(
 
   const decreases = ["0.985", "0.995", "0.999"];
   const increases = ["1.0015", "1.00175", "1.0035", "1.005"];
-  const intervalsSubset: Intervals[] = ["m6", "m9", "m15", "m60"];
+  const intervalsSubset: Intervals[] = ["m3"];
 
   const combinations = stopLosses
     .map((stopLoss) =>
