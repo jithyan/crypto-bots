@@ -18,9 +18,10 @@
     "anal": "yarn workspace analysis",
     "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
     "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
-    "upgrade:ui": "yarn ui add --dev typescript",
+    "upgrade:ui": "yarn ui add --dev typescript snowpack",
     "upgrade:util": "yarn util add --dev typescript",
-    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr",
+    "upgrade:anal": "yarn anal add --dev typescript",
+    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal",
     "format": "prettier --write \"**/src/**/*.ts*\"",
     "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\""
   },
