@@ -99,7 +99,7 @@ function writePartitionedPriceForSymbol(filename: string, symbol: string) {
   });
 }
 
-function areTimestampsEqualToTheMinute(
+export function areTimestampsEqualToTheMinute(
   currentTime: string,
   prevTime: string
 ): boolean {

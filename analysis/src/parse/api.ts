@@ -1,5 +1,6 @@
 import fs from "fs";
 import { getFilesInDir } from "../utils";
+import { areTimestampsEqualToTheMinute } from "./pricebot";
 
 interface LatestPriceLog {
   timestamp: string;
@@ -35,8 +36,16 @@ export function getLatestPriceApiLog(files: string[]): PriceData[] {
           symbol: l.data.symbol,
           timestamp: l.timestamp,
         }));
-      latestPrices.sort((a, b) => (a === b ? 0 : a < b ? -1 : 1));
-      return latestPrices;
+      latestPrices.sort((a, b) =>
+        a.timestamp === b.timestamp ? 0 : a.timestamp < b.timestamp ? -1 : 1
+      );
+      return latestPrices.filter(
+        (p, i) =>
+          !areTimestampsEqualToTheMinute(
+            p.timestamp,
+            latestPrices[i - 1]?.timestamp ?? new Date().toISOString()
+          )
+      );
     })
     .flatMap((x) => x);
 
