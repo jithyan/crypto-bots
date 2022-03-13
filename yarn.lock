@@ -645,16 +645,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rxnode/fs@npm:^0.5.4":
-  version: 0.5.4
-  resolution: "@rxnode/fs@npm:0.5.4"
-  peerDependencies:
-    "@rxnode/core": "*"
-    rxjs: 6.6.3
-  checksum: ca6b9e35ae83224aa0ffb9076e3bd2e0bf6756cab98903914a52a9ebc06a506cf6c201976eaf47fae9f665b20c326bf9b15ba56df1e7b51c0c8d35f14ceac859
-  languageName: node
-  linkType: hard
-
 "@sindresorhus/is@npm:^0.14.0":
   version: 0.14.0
   resolution: "@sindresorhus/is@npm:0.14.0"
@@ -778,6 +768,13 @@ __metadata:
   version: 4.2.2
   resolution: "@types/aria-query@npm:4.2.2"
   checksum: 6f2ce11d91e2d665f3873258db19da752d91d85d3679eb5efcdf9c711d14492287e1e4eb52613b28e60375841a9e428594e745b68436c963d8bad4bf72188df3
+  languageName: node
+  linkType: hard
+
+"@types/async-lock@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@types/async-lock@npm:1.1.3"
+  checksum: 90692ad8ce6a3fe83cdd5d2e534deb322bb77d0cc9b825bd6df27214fe44468a16676c626907d81f3c2659298f8ca8c24f848d5c9b462e65fa0dec78e8288cd4
   languageName: node
   linkType: hard
 
@@ -1214,13 +1211,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "analysis@workspace:analysis"
   dependencies:
-    "@rxnode/fs": ^0.5.4
+    "@types/async-lock": ^1.1.3
     "@types/node": ^17.0.21
+    async-lock: ^1.3.1
     concurrently: ^7.0.0
     msw: 0.36.8
     nodemon: ^2.0.15
     rimraf: ^3.0.2
-    rxjs: ^7.5.5
+    sonic-boom: ^2.6.0
     typescript: ^4.6.2
   languageName: unknown
   linkType: soft
@@ -1380,6 +1378,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"async-lock@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "async-lock@npm:1.3.1"
+  checksum: b11aca6d74431a42f9a3010ce7e55ac18c208f389433f55c07249ccd69dc63bc77fade28957d2d36212811d80b9c067a010341fb1e3d6a819b4fb74a122c4c27
+  languageName: node
+  linkType: hard
+
 "async@npm:^3.2.3":
   version: 3.2.3
   resolution: "async@npm:3.2.3"
@@ -1398,6 +1403,13 @@ __metadata:
   version: 1.0.0
   resolution: "at-least-node@npm:1.0.0"
   checksum: 463e2f8e43384f1afb54bc68485c436d7622acec08b6fad269b421cb1d29cebb5af751426793d0961ed243146fe4dc983402f6d5a51b720b277818dbf6f2e49e
+  languageName: node
+  linkType: hard
+
+"atomic-sleep@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "atomic-sleep@npm:1.0.0"
+  checksum: b95275afb2f80732f22f43a60178430c468906a415a7ff18bcd0feeebc8eec3930b51250aeda91a476062a90e07132b43a1794e8d8ffcf9b650e8139be75fa36
   languageName: node
   linkType: hard
 
@@ -6607,15 +6619,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.5":
-  version: 7.5.5
-  resolution: "rxjs@npm:7.5.5"
-  dependencies:
-    tslib: ^2.1.0
-  checksum: e034f60805210cce756dd2f49664a8108780b117cf5d0e2281506e9e6387f7b4f1532d974a8c8b09314fa7a16dd2f6cff3462072a5789672b5dcb45c4173f3c6
-  languageName: node
-  linkType: hard
-
 "safe-buffer@npm:5.2.1, safe-buffer@npm:^5.0.1, safe-buffer@npm:^5.1.2, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
@@ -6984,6 +6987,15 @@ __metadata:
     ip: ^1.1.5
     smart-buffer: ^4.2.0
   checksum: dd9194293059d737759d5c69273850ad4149f448426249325c4bea0e340d1cf3d266c3b022694b0dcf5d31f759de23657244c481fc1e8322add80b7985c36b5e
+  languageName: node
+  linkType: hard
+
+"sonic-boom@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "sonic-boom@npm:2.6.0"
+  dependencies:
+    atomic-sleep: ^1.0.0
+  checksum: 7d7e3de33cb2f7fc56349b0593a703a498c4501f0df57cababe70bbcc3b3f196b73a0a221e6571ed04c3431beb7a7bcb20124874effe603e7ca3238a448ca543
   languageName: node
   linkType: hard
 
