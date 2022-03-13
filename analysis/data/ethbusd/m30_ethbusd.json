@@ -1,4277 +1,4127 @@
 [
   {
-    "price": "2770.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T10:42:36.407Z"
-  },
-  {
-    "price": "2775.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T11:17:23.263Z"
-  },
-  {
-    "price": "2717.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T11:47:24.256Z"
-  },
-  {
-    "price": "2733.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T12:17:25.573Z"
-  },
-  {
-    "price": "2731.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T15:01:03.052Z"
-  },
-  {
-    "price": "2746.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-19T17:05:46.901Z"
-  },
-  {
-    "price": "2735.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T00:45:25.126Z"
-  },
-  {
-    "price": "2718.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T01:15:26.266Z"
-  },
-  {
-    "price": "2743.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T01:45:27.602Z"
-  },
-  {
-    "price": "2736.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T02:15:28.552Z"
-  },
-  {
-    "price": "2728.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T02:45:29.749Z"
-  },
-  {
-    "price": "2715.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T03:15:31.006Z"
-  },
-  {
-    "price": "2713.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T03:45:32.114Z"
-  },
-  {
-    "price": "2709.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T04:15:33.523Z"
-  },
-  {
-    "price": "2689.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T04:45:34.889Z"
-  },
-  {
-    "price": "2691.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T05:15:36.175Z"
-  },
-  {
-    "price": "2679.70000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T05:45:37.416Z"
-  },
-  {
-    "price": "2630.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T06:15:38.682Z"
-  },
-  {
-    "price": "2636.17000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T06:45:40.123Z"
-  },
-  {
-    "price": "2642.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T07:15:41.299Z"
-  },
-  {
-    "price": "2641.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T07:45:42.629Z"
-  },
-  {
-    "price": "2642.98000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T08:15:44.005Z"
-  },
-  {
-    "price": "2611.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T08:45:45.178Z"
-  },
-  {
-    "price": "2626.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T09:15:46.187Z"
-  },
-  {
-    "price": "2630.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T09:45:47.320Z"
-  },
-  {
-    "price": "2629.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T10:15:48.679Z"
-  },
-  {
-    "price": "2630.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T10:45:49.890Z"
-  },
-  {
-    "price": "2623.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T11:15:51.122Z"
-  },
-  {
-    "price": "2627.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T11:45:52.535Z"
-  },
-  {
-    "price": "2656.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T12:24:44.000Z"
-  },
-  {
-    "price": "2626.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T12:54:44.378Z"
-  },
-  {
-    "price": "2630.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T13:24:44.792Z"
-  },
-  {
-    "price": "2635.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T13:54:45.225Z"
-  },
-  {
-    "price": "2626.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T14:24:45.617Z"
-  },
-  {
-    "price": "2623.21000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T14:54:46.040Z"
-  },
-  {
-    "price": "2638.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T15:24:46.486Z"
-  },
-  {
-    "price": "2659.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T15:54:46.868Z"
-  },
-  {
-    "price": "2665.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T16:24:47.175Z"
-  },
-  {
-    "price": "2644.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T16:54:47.593Z"
-  },
-  {
-    "price": "2657.42000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T17:24:47.947Z"
-  },
-  {
-    "price": "2650.77000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T17:54:48.310Z"
-  },
-  {
-    "price": "2652.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T18:24:48.685Z"
-  },
-  {
-    "price": "2664.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T18:54:49.128Z"
-  },
-  {
-    "price": "2652.16000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T19:24:49.551Z"
-  },
-  {
-    "price": "2649.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T19:54:49.872Z"
-  },
-  {
-    "price": "2630.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T20:24:50.358Z"
-  },
-  {
-    "price": "2627.74000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T20:54:50.727Z"
-  },
-  {
-    "price": "2598.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T21:24:51.115Z"
-  },
-  {
-    "price": "2592.21000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T21:54:51.500Z"
-  },
-  {
-    "price": "2615.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T22:24:51.906Z"
-  },
-  {
-    "price": "2639.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T22:54:52.221Z"
-  },
-  {
-    "price": "2635.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T23:24:52.624Z"
-  },
-  {
-    "price": "2624.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-20T23:54:53.010Z"
-  },
-  {
-    "price": "2623.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T00:24:53.377Z"
-  },
-  {
-    "price": "2650.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T00:54:53.757Z"
-  },
-  {
-    "price": "2712.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T01:24:54.402Z"
-  },
-  {
-    "price": "2728.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T01:54:54.847Z"
-  },
-  {
-    "price": "2717.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T02:24:55.196Z"
-  },
-  {
-    "price": "2729.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T02:54:55.627Z"
-  },
-  {
-    "price": "2730.40000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T03:24:56.000Z"
-  },
-  {
-    "price": "2712.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T03:54:56.375Z"
-  },
-  {
-    "price": "2723.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T04:24:56.682Z"
-  },
-  {
-    "price": "2742.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T04:54:57.076Z"
-  },
-  {
-    "price": "2744.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T05:24:57.786Z"
-  },
-  {
-    "price": "2742.24000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T05:54:58.187Z"
-  },
-  {
-    "price": "2741.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T06:24:58.536Z"
-  },
-  {
-    "price": "2742.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T06:54:58.879Z"
-  },
-  {
-    "price": "2747.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T07:24:59.311Z"
-  },
-  {
-    "price": "2743.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T07:54:59.700Z"
-  },
-  {
-    "price": "2738.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T08:25:00.098Z"
-  },
-  {
-    "price": "2717.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T09:04:30.591Z"
-  },
-  {
-    "price": "2729.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T09:34:30.989Z"
-  },
-  {
-    "price": "2695.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T10:23:42.881Z"
-  },
-  {
-    "price": "2683.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T10:53:43.239Z"
-  },
-  {
-    "price": "2683.75000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T11:23:43.753Z"
-  },
-  {
-    "price": "2617.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T11:53:44.180Z"
-  },
-  {
-    "price": "2617.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T12:23:44.781Z"
-  },
-  {
-    "price": "2599.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T12:53:45.233Z"
-  },
-  {
-    "price": "2601.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T13:23:45.764Z"
-  },
-  {
-    "price": "2599.19000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T13:53:46.160Z"
-  },
-  {
-    "price": "2709.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T14:23:46.587Z"
-  },
-  {
-    "price": "2704.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T14:53:47.477Z"
-  },
-  {
-    "price": "2728.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T15:23:48.029Z"
-  },
-  {
-    "price": "2722.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T15:53:48.459Z"
-  },
-  {
-    "price": "2735.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T16:23:48.825Z"
-  },
-  {
-    "price": "2715.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T16:53:49.238Z"
-  },
-  {
-    "price": "2724.17000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T17:23:49.705Z"
-  },
-  {
-    "price": "2695.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T17:53:50.205Z"
-  },
-  {
-    "price": "2628.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T18:23:50.626Z"
-  },
-  {
-    "price": "2650.77000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T18:53:51.153Z"
-  },
-  {
-    "price": "2640.77000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T19:23:51.552Z"
-  },
-  {
-    "price": "2649.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T19:53:51.980Z"
-  },
-  {
-    "price": "2637.49000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T20:23:52.428Z"
-  },
-  {
-    "price": "2654.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T20:53:52.793Z"
-  },
-  {
-    "price": "2661.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T21:23:53.149Z"
-  },
-  {
-    "price": "2611.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T21:53:53.490Z"
-  },
-  {
-    "price": "2605.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T22:23:54.045Z"
-  },
-  {
-    "price": "2626.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T22:53:54.486Z"
-  },
-  {
-    "price": "2574.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T23:23:54.800Z"
-  },
-  {
-    "price": "2564.22000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-21T23:53:55.263Z"
-  },
-  {
-    "price": "2579.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T00:23:55.581Z"
-  },
-  {
-    "price": "2594.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T00:53:56.070Z"
-  },
-  {
-    "price": "2572.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T01:23:56.483Z"
-  },
-  {
-    "price": "2599.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T01:53:56.858Z"
-  },
-  {
-    "price": "2575.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T02:23:57.304Z"
-  },
-  {
-    "price": "2572.34000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T02:53:57.698Z"
-  },
-  {
-    "price": "2535.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T03:23:58.097Z"
-  },
-  {
-    "price": "2521.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T03:53:58.679Z"
-  },
-  {
-    "price": "2518.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T04:23:59.346Z"
-  },
-  {
-    "price": "2522.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T04:53:59.984Z"
-  },
-  {
-    "price": "2520.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T05:24:00.434Z"
-  },
-  {
-    "price": "2528.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T05:54:00.853Z"
-  },
-  {
-    "price": "2514.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T06:24:01.382Z"
-  },
-  {
-    "price": "2521.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T06:54:01.876Z"
-  },
-  {
-    "price": "2516.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T07:24:02.322Z"
-  },
-  {
-    "price": "2531.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T07:54:02.803Z"
-  },
-  {
-    "price": "2535.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T08:24:03.313Z"
-  },
-  {
-    "price": "2550.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T08:54:03.705Z"
-  },
-  {
-    "price": "2542.97000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T09:24:04.228Z"
-  },
-  {
-    "price": "2550.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T09:54:04.861Z"
-  },
-  {
-    "price": "2572.97000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T10:24:05.433Z"
-  },
-  {
-    "price": "2601.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T10:54:05.978Z"
-  },
-  {
-    "price": "2588.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T11:24:06.542Z"
-  },
-  {
-    "price": "2593.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T11:54:07.086Z"
-  },
-  {
-    "price": "2613.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T12:24:07.625Z"
-  },
-  {
-    "price": "2599.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T12:54:08.127Z"
-  },
-  {
-    "price": "2589.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T13:24:08.723Z"
-  },
-  {
-    "price": "2597.89000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T13:54:09.172Z"
-  },
-  {
-    "price": "2589.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T14:24:09.608Z"
-  },
-  {
-    "price": "2657.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T14:54:10.108Z"
-  },
-  {
-    "price": "2646.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T15:24:10.735Z"
-  },
-  {
-    "price": "2627.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T15:54:11.221Z"
-  },
-  {
-    "price": "2600.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T16:24:11.672Z"
-  },
-  {
-    "price": "2601.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T16:54:12.116Z"
-  },
-  {
-    "price": "2591.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T17:24:12.518Z"
-  },
-  {
-    "price": "2599.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T17:54:13.060Z"
-  },
-  {
-    "price": "2592.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T18:24:13.629Z"
-  },
-  {
-    "price": "2593.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T18:54:14.070Z"
-  },
-  {
-    "price": "2598.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T19:24:14.571Z"
-  },
-  {
-    "price": "2629.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T19:54:15.110Z"
-  },
-  {
-    "price": "2616.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T20:24:15.574Z"
-  },
-  {
-    "price": "2596.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T20:54:16.074Z"
-  },
-  {
-    "price": "2614.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T21:24:16.537Z"
-  },
-  {
-    "price": "2619.09000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T21:54:16.950Z"
-  },
-  {
-    "price": "2597.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T22:24:17.426Z"
-  },
-  {
-    "price": "2601.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T22:54:17.870Z"
-  },
-  {
-    "price": "2625.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T23:24:18.287Z"
-  },
-  {
-    "price": "2640.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-22T23:54:18.822Z"
-  },
-  {
-    "price": "2638.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T00:24:19.257Z"
-  },
-  {
-    "price": "2633.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T00:54:19.635Z"
-  },
-  {
-    "price": "2623.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T01:24:20.079Z"
-  },
-  {
-    "price": "2618.13000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T01:54:20.518Z"
-  },
-  {
-    "price": "2629.48000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T02:24:21.086Z"
-  },
-  {
-    "price": "2612.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T02:54:21.579Z"
-  },
-  {
-    "price": "2615.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T03:24:22.131Z"
-  },
-  {
-    "price": "2620.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T03:54:22.680Z"
-  },
-  {
-    "price": "2639.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T04:24:23.048Z"
-  },
-  {
-    "price": "2647.48000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T04:54:23.520Z"
-  },
-  {
-    "price": "2647.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T05:24:24.007Z"
-  },
-  {
-    "price": "2657.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T05:54:24.418Z"
-  },
-  {
-    "price": "2668.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T06:24:24.893Z"
-  },
-  {
-    "price": "2663.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T06:54:25.366Z"
-  },
-  {
-    "price": "2668.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T07:24:25.894Z"
-  },
-  {
-    "price": "2691.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T07:54:26.248Z"
-  },
-  {
-    "price": "2704.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T08:24:26.785Z"
-  },
-  {
-    "price": "2699.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T08:54:27.271Z"
-  },
-  {
-    "price": "2720.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T09:24:27.685Z"
-  },
-  {
-    "price": "2715.70000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T09:54:28.131Z"
-  },
-  {
-    "price": "2715.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T10:24:28.491Z"
-  },
-  {
-    "price": "2712.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T10:54:28.860Z"
-  },
-  {
-    "price": "2723.97000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T11:24:29.258Z"
-  },
-  {
-    "price": "2723.97000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T11:54:29.637Z"
-  },
-  {
-    "price": "2729.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T12:24:30.057Z"
-  },
-  {
-    "price": "2745.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T12:54:30.500Z"
-  },
-  {
-    "price": "2735.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T13:24:31.046Z"
-  },
-  {
-    "price": "2731.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T13:54:31.427Z"
-  },
-  {
-    "price": "2730.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T14:24:31.837Z"
-  },
-  {
-    "price": "2713.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T14:54:32.253Z"
-  },
-  {
-    "price": "2694.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T15:24:32.660Z"
-  },
-  {
-    "price": "2691.70000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T15:54:33.085Z"
-  },
-  {
-    "price": "2687.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T16:24:33.410Z"
-  },
-  {
-    "price": "2713.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T16:54:33.815Z"
-  },
-  {
-    "price": "2729.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T17:24:34.247Z"
-  },
-  {
-    "price": "2670.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T17:54:34.587Z"
-  },
-  {
-    "price": "2653.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T18:24:35.056Z"
-  },
-  {
-    "price": "2647.14000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T18:54:35.436Z"
-  },
-  {
-    "price": "2646.76000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T19:24:35.778Z"
-  },
-  {
-    "price": "2632.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T19:54:36.192Z"
-  },
-  {
-    "price": "2623.42000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T20:24:36.767Z"
-  },
-  {
-    "price": "2624.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T20:54:37.271Z"
-  },
-  {
-    "price": "2634.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T21:24:37.619Z"
-  },
-  {
-    "price": "2619.98000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T21:54:38.054Z"
-  },
-  {
-    "price": "2617.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T22:24:38.459Z"
-  },
-  {
-    "price": "2636.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T22:54:38.888Z"
-  },
-  {
-    "price": "2594.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T23:24:39.412Z"
-  },
-  {
-    "price": "2590.85000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-23T23:54:39.782Z"
-  },
-  {
-    "price": "2585.85000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T00:24:40.108Z"
-  },
-  {
-    "price": "2561.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T00:54:40.479Z"
-  },
-  {
-    "price": "2561.67000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T01:24:40.839Z"
-  },
-  {
-    "price": "2571.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T01:54:41.340Z"
-  },
-  {
-    "price": "2573.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T02:24:41.708Z"
-  },
-  {
-    "price": "2547.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T02:54:42.216Z"
-  },
-  {
-    "price": "2451.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T03:24:42.743Z"
-  },
-  {
-    "price": "2415.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T03:54:44.221Z"
-  },
-  {
-    "price": "2392.22000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T04:24:44.527Z"
-  },
-  {
-    "price": "2396.80000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T04:54:44.988Z"
-  },
-  {
-    "price": "2367.40000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T05:24:45.309Z"
-  },
-  {
-    "price": "2325.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T05:54:45.636Z"
-  },
-  {
-    "price": "2340.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T06:24:46.002Z"
-  },
-  {
-    "price": "2345.33000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T06:54:46.288Z"
-  },
-  {
-    "price": "2325.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T07:24:46.582Z"
-  },
-  {
-    "price": "2370.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T07:54:46.921Z"
-  },
-  {
-    "price": "2379.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T08:24:47.369Z"
-  },
-  {
-    "price": "2382.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T08:54:47.792Z"
-  },
-  {
-    "price": "2403.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T09:24:48.293Z"
-  },
-  {
-    "price": "2376.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T09:54:49.144Z"
-  },
-  {
-    "price": "2338.40000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T10:24:49.559Z"
-  },
-  {
-    "price": "2363.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T10:54:49.950Z"
-  },
-  {
-    "price": "2355.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T11:24:50.423Z"
-  },
-  {
-    "price": "2375.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T11:54:50.876Z"
-  },
-  {
-    "price": "2375.21000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T12:24:51.342Z"
-  },
-  {
-    "price": "2369.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T12:54:51.849Z"
-  },
-  {
-    "price": "2376.89000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T13:24:52.328Z"
-  },
-  {
-    "price": "2409.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T13:54:52.814Z"
-  },
-  {
-    "price": "2384.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T14:24:53.221Z"
-  },
-  {
-    "price": "2438.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T14:54:53.628Z"
-  },
-  {
-    "price": "2449.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T15:24:54.032Z"
-  },
-  {
-    "price": "2443.32000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T17:19:55.501Z"
-  },
-  {
-    "price": "2433.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T17:49:55.917Z"
-  },
-  {
-    "price": "2448.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T18:19:56.344Z"
-  },
-  {
-    "price": "2497.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T18:49:56.871Z"
-  },
-  {
-    "price": "2537.17000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T19:19:57.377Z"
-  },
-  {
-    "price": "2575.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T19:49:57.948Z"
-  },
-  {
-    "price": "2684.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T20:19:58.737Z"
-  },
-  {
-    "price": "2636.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T20:49:59.132Z"
-  },
-  {
-    "price": "2641.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T21:19:59.588Z"
-  },
-  {
-    "price": "2625.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T21:50:00.005Z"
-  },
-  {
-    "price": "2622.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T22:20:00.502Z"
-  },
-  {
-    "price": "2575.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T22:50:01.153Z"
-  },
-  {
-    "price": "2587.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T23:20:01.589Z"
-  },
-  {
-    "price": "2599.10000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-24T23:50:01.938Z"
-  },
-  {
-    "price": "2611.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T00:20:02.301Z"
-  },
-  {
-    "price": "2602.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T00:50:02.964Z"
-  },
-  {
-    "price": "2619.81000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T01:20:03.577Z"
-  },
-  {
-    "price": "2619.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T01:50:04.079Z"
-  },
-  {
-    "price": "2634.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T02:20:04.540Z"
-  },
-  {
-    "price": "2642.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T02:50:04.961Z"
-  },
-  {
-    "price": "2622.49000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T03:20:05.355Z"
-  },
-  {
-    "price": "2634.74000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T03:50:05.898Z"
-  },
-  {
-    "price": "2621.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T04:20:06.432Z"
-  },
-  {
-    "price": "2619.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T04:50:06.842Z"
-  },
-  {
-    "price": "2603.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T05:20:07.317Z"
-  },
-  {
-    "price": "2617.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T05:50:07.678Z"
-  },
-  {
-    "price": "2627.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T06:20:08.059Z"
-  },
-  {
-    "price": "2627.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T06:50:08.482Z"
-  },
-  {
-    "price": "2629.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T07:20:08.937Z"
-  },
-  {
-    "price": "2622.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T07:50:09.391Z"
-  },
-  {
-    "price": "2603.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T08:20:09.822Z"
-  },
-  {
-    "price": "2610.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T08:50:10.282Z"
-  },
-  {
-    "price": "2595.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T09:20:10.828Z"
-  },
-  {
-    "price": "2593.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T09:50:11.361Z"
-  },
-  {
-    "price": "2618.09000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T10:20:11.759Z"
-  },
-  {
-    "price": "2615.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T10:50:12.259Z"
-  },
-  {
-    "price": "2610.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T11:20:12.683Z"
-  },
-  {
-    "price": "2633.89000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T11:50:13.134Z"
-  },
-  {
-    "price": "2671.34000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T12:20:13.598Z"
-  },
-  {
-    "price": "2680.13000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T12:50:14.047Z"
-  },
-  {
-    "price": "2712.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T13:20:14.804Z"
-  },
-  {
-    "price": "2718.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T13:50:15.229Z"
-  },
-  {
-    "price": "2689.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T14:20:15.661Z"
-  },
-  {
-    "price": "2703.74000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T14:50:16.110Z"
-  },
-  {
-    "price": "2691.69000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T15:20:16.514Z"
-  },
-  {
-    "price": "2722.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T15:50:16.901Z"
-  },
-  {
-    "price": "2723.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T16:20:17.347Z"
-  },
-  {
-    "price": "2711.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T16:50:17.779Z"
-  },
-  {
-    "price": "2706.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T17:20:18.234Z"
-  },
-  {
-    "price": "2694.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T17:50:18.634Z"
-  },
-  {
-    "price": "2688.32000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T18:20:19.016Z"
-  },
-  {
-    "price": "2684.10000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T18:50:19.436Z"
-  },
-  {
-    "price": "2692.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T19:20:19.793Z"
-  },
-  {
-    "price": "2682.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T19:50:20.213Z"
-  },
-  {
-    "price": "2695.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T20:20:20.581Z"
-  },
-  {
-    "price": "2706.34000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T20:50:20.960Z"
-  },
-  {
-    "price": "2720.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T21:20:21.450Z"
-  },
-  {
-    "price": "2708.09000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T21:50:21.810Z"
-  },
-  {
-    "price": "2704.12000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T22:20:22.214Z"
-  },
-  {
-    "price": "2777.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T22:50:22.691Z"
-  },
-  {
-    "price": "2783.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T23:20:23.334Z"
-  },
-  {
-    "price": "2764.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-25T23:50:23.884Z"
-  },
-  {
-    "price": "2787.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T00:20:24.239Z"
-  },
-  {
-    "price": "2833.81000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T00:50:24.632Z"
-  },
-  {
-    "price": "2827.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T01:20:25.073Z"
-  },
-  {
-    "price": "2819.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T01:50:25.453Z"
-  },
-  {
-    "price": "2817.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T02:20:26.037Z"
-  },
-  {
-    "price": "2811.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T02:50:26.480Z"
-  },
-  {
-    "price": "2793.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T03:20:26.973Z"
-  },
-  {
-    "price": "2798.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T03:50:27.361Z"
-  },
-  {
-    "price": "2805.69000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T04:20:27.801Z"
-  },
-  {
-    "price": "2823.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T04:50:28.190Z"
-  },
-  {
-    "price": "2799.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T05:20:28.676Z"
-  },
-  {
-    "price": "2783.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T05:50:29.066Z"
-  },
-  {
-    "price": "2778.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T06:20:29.483Z"
-  },
-  {
-    "price": "2789.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T06:50:29.988Z"
-  },
-  {
-    "price": "2772.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T07:20:30.404Z"
-  },
-  {
-    "price": "2783.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T07:50:30.852Z"
-  },
-  {
-    "price": "2805.80000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T08:20:31.229Z"
-  },
-  {
-    "price": "2759.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T08:50:31.674Z"
-  },
-  {
-    "price": "2752.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T09:20:32.103Z"
-  },
-  {
-    "price": "2753.75000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T09:50:32.654Z"
-  },
-  {
-    "price": "2760.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T10:20:33.130Z"
-  },
-  {
-    "price": "2756.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T10:50:33.650Z"
-  },
-  {
-    "price": "2759.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T11:20:34.070Z"
-  },
-  {
-    "price": "2757.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T11:50:34.506Z"
-  },
-  {
-    "price": "2755.33000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T12:20:35.094Z"
-  },
-  {
-    "price": "2753.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T12:50:35.552Z"
-  },
-  {
-    "price": "2777.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T13:20:35.954Z"
-  },
-  {
-    "price": "2768.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T13:50:36.399Z"
-  },
-  {
-    "price": "2774.48000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T14:20:36.916Z"
-  },
-  {
-    "price": "2778.81000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T14:50:37.432Z"
-  },
-  {
-    "price": "2787.33000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T15:20:37.976Z"
-  },
-  {
-    "price": "2791.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T15:50:38.443Z"
-  },
-  {
-    "price": "2788.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T16:20:38.920Z"
-  },
-  {
-    "price": "2796.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T16:50:39.398Z"
-  },
-  {
-    "price": "2795.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T17:20:39.811Z"
-  },
-  {
-    "price": "2792.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T17:50:40.460Z"
-  },
-  {
-    "price": "2767.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T18:20:40.940Z"
-  },
-  {
-    "price": "2786.48000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T18:50:41.375Z"
-  },
-  {
-    "price": "2817.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T19:20:41.816Z"
-  },
-  {
-    "price": "2817.75000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T19:50:42.220Z"
-  },
-  {
-    "price": "2817.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T20:20:42.637Z"
-  },
-  {
-    "price": "2825.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T20:50:43.081Z"
-  },
-  {
-    "price": "2846.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T21:20:43.472Z"
-  },
-  {
-    "price": "2825.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T21:50:43.814Z"
-  },
-  {
-    "price": "2799.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T22:20:44.307Z"
-  },
-  {
-    "price": "2806.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T22:50:44.733Z"
-  },
-  {
-    "price": "2786.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T23:20:45.124Z"
-  },
-  {
-    "price": "2774.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-26T23:50:45.625Z"
-  },
-  {
-    "price": "2784.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T00:20:46.137Z"
-  },
-  {
-    "price": "2751.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T00:50:46.664Z"
-  },
-  {
-    "price": "2717.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T01:20:47.031Z"
-  },
-  {
-    "price": "2706.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T01:50:47.627Z"
-  },
-  {
-    "price": "2704.09000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T02:20:48.186Z"
-  },
-  {
-    "price": "2709.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T02:50:48.559Z"
-  },
-  {
-    "price": "2716.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T03:20:49.030Z"
-  },
-  {
-    "price": "2718.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T03:50:49.497Z"
-  },
-  {
-    "price": "2708.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T04:20:50.073Z"
-  },
-  {
-    "price": "2710.42000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T04:50:50.585Z"
-  },
-  {
-    "price": "2715.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T05:20:51.047Z"
-  },
-  {
-    "price": "2719.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T05:50:51.558Z"
-  },
-  {
-    "price": "2721.54000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T06:20:52.131Z"
-  },
-  {
-    "price": "2728.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T06:50:52.570Z"
-  },
-  {
-    "price": "2743.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T07:20:52.996Z"
-  },
-  {
-    "price": "2738.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T07:50:53.401Z"
-  },
-  {
-    "price": "2726.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T08:20:53.781Z"
-  },
-  {
-    "price": "2744.32000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T08:50:54.212Z"
-  },
-  {
-    "price": "2765.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T09:20:54.741Z"
-  },
-  {
-    "price": "2765.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T09:50:55.420Z"
-  },
-  {
-    "price": "2760.89000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T10:20:55.993Z"
-  },
-  {
-    "price": "2806.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T10:50:56.448Z"
-  },
-  {
-    "price": "2801.10000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T11:20:56.982Z"
-  },
-  {
-    "price": "2822.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T11:50:57.701Z"
-  },
-  {
-    "price": "2810.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T12:20:58.208Z"
-  },
-  {
-    "price": "2834.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T12:50:58.651Z"
-  },
-  {
-    "price": "2814.24000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T13:20:59.098Z"
-  },
-  {
-    "price": "2750.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T13:50:59.514Z"
-  },
-  {
-    "price": "2772.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T14:21:00.141Z"
-  },
-  {
-    "price": "2761.16000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T14:51:00.607Z"
-  },
-  {
-    "price": "2774.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T15:21:01.050Z"
-  },
-  {
-    "price": "2800.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T15:51:01.434Z"
-  },
-  {
-    "price": "2784.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T16:21:01.838Z"
-  },
-  {
-    "price": "2773.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T16:51:02.323Z"
-  },
-  {
-    "price": "2770.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T17:21:02.792Z"
-  },
-  {
-    "price": "2770.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T17:51:03.276Z"
-  },
-  {
-    "price": "2757.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T18:21:03.746Z"
-  },
-  {
-    "price": "2748.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T18:51:04.282Z"
-  },
-  {
-    "price": "2716.14000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T19:21:04.763Z"
-  },
-  {
-    "price": "2629.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T19:51:05.918Z"
-  },
-  {
-    "price": "2599.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T20:21:06.323Z"
-  },
-  {
-    "price": "2646.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T20:51:06.915Z"
-  },
-  {
-    "price": "2582.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T21:21:07.375Z"
-  },
-  {
-    "price": "2610.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T21:51:07.878Z"
-  },
-  {
-    "price": "2615.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T22:21:08.349Z"
-  },
-  {
-    "price": "2611.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T22:51:08.835Z"
-  },
-  {
-    "price": "2608.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T23:21:09.269Z"
-  },
-  {
-    "price": "2622.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-27T23:51:09.634Z"
-  },
-  {
-    "price": "2603.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T00:21:10.039Z"
-  },
-  {
-    "price": "2610.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T00:51:10.447Z"
-  },
-  {
-    "price": "2650.24000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T01:21:10.908Z"
-  },
-  {
-    "price": "2673.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T01:51:11.333Z"
-  },
-  {
-    "price": "2638.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T02:21:11.773Z"
-  },
-  {
-    "price": "2607.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T02:51:12.154Z"
-  },
-  {
-    "price": "2604.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T03:21:12.635Z"
-  },
-  {
-    "price": "2615.77000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T03:51:13.171Z"
-  },
-  {
-    "price": "2616.12000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T04:21:13.595Z"
-  },
-  {
-    "price": "2613.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T04:51:14.013Z"
-  },
-  {
-    "price": "2618.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T05:21:14.458Z"
-  },
-  {
-    "price": "2610.65000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T05:51:14.838Z"
-  },
-  {
-    "price": "2591.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T06:21:15.286Z"
-  },
-  {
-    "price": "2609.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T06:51:15.762Z"
-  },
-  {
-    "price": "2621.85000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T07:21:16.206Z"
-  },
-  {
-    "price": "2637.74000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T07:51:16.729Z"
-  },
-  {
-    "price": "2636.14000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T08:21:17.254Z"
-  },
-  {
-    "price": "2629.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T08:51:17.749Z"
-  },
-  {
-    "price": "2633.75000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T09:21:18.316Z"
-  },
-  {
-    "price": "2632.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T09:51:18.795Z"
-  },
-  {
-    "price": "2635.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T10:21:19.194Z"
-  },
-  {
-    "price": "2637.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T10:51:19.695Z"
-  },
-  {
-    "price": "2626.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T11:21:20.148Z"
-  },
-  {
-    "price": "2642.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T11:51:20.707Z"
-  },
-  {
-    "price": "2649.32000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T12:21:21.242Z"
-  },
-  {
-    "price": "2650.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T12:51:21.642Z"
-  },
-  {
-    "price": "2627.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T13:21:22.094Z"
-  },
-  {
-    "price": "2621.65000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T13:51:22.617Z"
-  },
-  {
-    "price": "2674.85000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T14:21:23.100Z"
-  },
-  {
-    "price": "2727.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T14:51:24.175Z"
-  },
-  {
-    "price": "2804.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T15:21:24.698Z"
-  },
-  {
-    "price": "2806.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T15:51:25.257Z"
-  },
-  {
-    "price": "2815.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T16:21:25.714Z"
-  },
-  {
-    "price": "2807.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T16:51:26.200Z"
-  },
-  {
-    "price": "2804.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T17:21:26.690Z"
-  },
-  {
-    "price": "2800.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T17:51:27.100Z"
-  },
-  {
-    "price": "2806.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T18:21:27.676Z"
-  },
-  {
-    "price": "2807.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T18:51:28.130Z"
-  },
-  {
-    "price": "2800.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T19:21:28.540Z"
-  },
-  {
-    "price": "2798.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T19:51:28.965Z"
-  },
-  {
-    "price": "2826.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T20:21:29.504Z"
-  },
-  {
-    "price": "2830.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T20:51:30.029Z"
-  },
-  {
-    "price": "2820.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T21:21:30.498Z"
-  },
-  {
-    "price": "2821.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T21:51:30.895Z"
-  },
-  {
-    "price": "2838.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T22:21:31.352Z"
-  },
-  {
-    "price": "2911.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T22:51:31.864Z"
-  },
-  {
-    "price": "2898.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T23:21:32.368Z"
-  },
-  {
-    "price": "2923.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-02-28T23:51:32.785Z"
-  },
-  {
-    "price": "2953.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T00:41:33.574Z"
-  },
-  {
-    "price": "2934.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T01:11:33.914Z"
-  },
-  {
-    "price": "2927.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T01:41:34.290Z"
-  },
-  {
-    "price": "2916.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T02:11:34.632Z"
-  },
-  {
-    "price": "2918.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T02:41:35.179Z"
-  },
-  {
-    "price": "2909.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T03:11:35.643Z"
-  },
-  {
-    "price": "2903.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T03:41:36.009Z"
-  },
-  {
-    "price": "2909.80000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T04:11:36.586Z"
-  },
-  {
-    "price": "2914.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T04:41:37.194Z"
-  },
-  {
-    "price": "2925.09000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T05:11:37.656Z"
-  },
-  {
-    "price": "2915.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T05:41:38.041Z"
-  },
-  {
-    "price": "2885.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T06:11:38.440Z"
-  },
-  {
-    "price": "2912.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T06:41:38.845Z"
-  },
-  {
-    "price": "2927.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T07:11:39.271Z"
-  },
-  {
-    "price": "2924.12000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T07:41:39.770Z"
-  },
-  {
-    "price": "2922.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T08:11:40.177Z"
-  },
-  {
-    "price": "2926.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T08:41:40.557Z"
-  },
-  {
-    "price": "2916.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T09:11:40.947Z"
-  },
-  {
-    "price": "2893.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T09:41:41.416Z"
-  },
-  {
-    "price": "2864.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T10:11:41.844Z"
-  },
-  {
-    "price": "2895.58000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T10:41:42.384Z"
-  },
-  {
-    "price": "2918.81000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T11:11:42.875Z"
-  },
-  {
-    "price": "2900.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T11:41:43.463Z"
-  },
-  {
-    "price": "2910.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T12:11:43.848Z"
-  },
-  {
-    "price": "2928.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T12:41:44.287Z"
-  },
-  {
-    "price": "2980.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T13:11:44.757Z"
-  },
-  {
-    "price": "2989.27000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T13:41:45.528Z"
-  },
-  {
-    "price": "3025.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T14:11:45.968Z"
-  },
-  {
-    "price": "2994.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T14:41:46.333Z"
-  },
-  {
-    "price": "2968.12000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T15:11:46.772Z"
-  },
-  {
-    "price": "2950.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T15:41:47.306Z"
-  },
-  {
-    "price": "2941.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T16:11:47.662Z"
-  },
-  {
-    "price": "2924.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T16:41:48.119Z"
-  },
-  {
-    "price": "2915.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T17:11:48.648Z"
-  },
-  {
-    "price": "2929.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T17:41:49.015Z"
-  },
-  {
-    "price": "2917.98000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T18:11:49.487Z"
-  },
-  {
-    "price": "2948.13000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T18:41:49.886Z"
-  },
-  {
-    "price": "2946.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T19:11:50.313Z"
-  },
-  {
-    "price": "2961.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T19:41:50.903Z"
-  },
-  {
-    "price": "2954.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T20:11:51.264Z"
-  },
-  {
-    "price": "2974.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T20:41:51.683Z"
-  },
-  {
-    "price": "2967.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T21:11:52.034Z"
-  },
-  {
-    "price": "2948.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T21:41:52.494Z"
-  },
-  {
-    "price": "2948.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T22:11:52.946Z"
-  },
-  {
-    "price": "2970.40000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T22:41:53.321Z"
-  },
-  {
-    "price": "2964.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T23:11:53.729Z"
-  },
-  {
-    "price": "2972.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-01T23:41:54.185Z"
-  },
-  {
-    "price": "2974.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T00:11:54.570Z"
-  },
-  {
-    "price": "2932.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T00:41:55.057Z"
-  },
-  {
-    "price": "2954.74000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T01:11:55.532Z"
-  },
-  {
-    "price": "2921.69000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T01:41:56.113Z"
-  },
-  {
-    "price": "2934.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T02:11:56.479Z"
-  },
-  {
-    "price": "2932.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T02:41:56.935Z"
-  },
-  {
-    "price": "2952.14000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T03:11:57.462Z"
-  },
-  {
-    "price": "2996.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T03:41:58.007Z"
-  },
-  {
-    "price": "3022.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T04:11:58.481Z"
-  },
-  {
-    "price": "3023.43000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T04:41:58.878Z"
-  },
-  {
-    "price": "2998.19000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T05:11:59.268Z"
-  },
-  {
-    "price": "2992.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T05:41:59.696Z"
-  },
-  {
-    "price": "2994.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T06:12:00.282Z"
-  },
-  {
-    "price": "2982.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T06:42:00.799Z"
-  },
-  {
-    "price": "2959.71000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T07:12:01.351Z"
-  },
-  {
-    "price": "2972.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T07:42:01.792Z"
-  },
-  {
-    "price": "2967.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T08:12:02.254Z"
-  },
-  {
-    "price": "3002.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T08:42:02.671Z"
-  },
-  {
-    "price": "2990.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T09:12:03.156Z"
-  },
-  {
-    "price": "2991.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T09:42:03.564Z"
-  },
-  {
-    "price": "3001.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T10:12:03.992Z"
-  },
-  {
-    "price": "3014.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T10:42:04.562Z"
-  },
-  {
-    "price": "2997.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T11:12:04.951Z"
-  },
-  {
-    "price": "3001.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T11:42:05.328Z"
-  },
-  {
-    "price": "3016.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T12:12:05.868Z"
-  },
-  {
-    "price": "2983.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T12:42:06.407Z"
-  },
-  {
-    "price": "2979.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T13:12:06.879Z"
-  },
-  {
-    "price": "2932.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T13:42:07.310Z"
-  },
-  {
-    "price": "2953.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T14:12:07.810Z"
-  },
-  {
-    "price": "2994.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T14:42:08.219Z"
-  },
-  {
-    "price": "2968.98000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T15:12:08.681Z"
-  },
-  {
-    "price": "2964.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T15:42:09.142Z"
-  },
-  {
-    "price": "2967.16000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T16:12:09.575Z"
-  },
-  {
-    "price": "2971.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T16:42:10.034Z"
-  },
-  {
-    "price": "2971.16000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T17:12:10.452Z"
-  },
-  {
-    "price": "2968.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T17:42:10.851Z"
-  },
-  {
-    "price": "2963.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T18:12:11.293Z"
-  },
-  {
-    "price": "2937.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T18:42:11.780Z"
-  },
-  {
-    "price": "2929.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T19:12:12.206Z"
-  },
-  {
-    "price": "2941.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T19:42:12.643Z"
-  },
-  {
-    "price": "2937.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T20:12:13.076Z"
-  },
-  {
-    "price": "2942.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T20:42:13.507Z"
-  },
-  {
-    "price": "2946.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T21:12:14.030Z"
-  },
-  {
-    "price": "2945.37000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T21:42:14.486Z"
-  },
-  {
-    "price": "2967.49000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T22:12:15.029Z"
-  },
-  {
-    "price": "2968.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T22:42:15.508Z"
-  },
-  {
-    "price": "2960.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T23:12:16.071Z"
-  },
-  {
-    "price": "2953.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-02T23:42:16.548Z"
-  },
-  {
-    "price": "2936.22000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T00:12:17.016Z"
-  },
-  {
-    "price": "2956.65000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T00:42:17.527Z"
-  },
-  {
-    "price": "2953.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T01:12:17.955Z"
-  },
-  {
-    "price": "2945.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T01:42:18.492Z"
-  },
-  {
-    "price": "2927.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T02:12:19.095Z"
-  },
-  {
-    "price": "2935.24000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T02:42:19.488Z"
-  },
-  {
-    "price": "2926.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T03:12:20.037Z"
-  },
-  {
-    "price": "2897.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T03:42:20.523Z"
-  },
-  {
-    "price": "2901.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T04:12:21.164Z"
-  },
-  {
-    "price": "2898.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T04:42:21.823Z"
-  },
-  {
-    "price": "2909.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T05:12:22.279Z"
-  },
-  {
-    "price": "2899.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T05:42:22.752Z"
-  },
-  {
-    "price": "2887.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T06:12:23.308Z"
-  },
-  {
-    "price": "2909.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T06:42:23.725Z"
-  },
-  {
-    "price": "2914.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T07:12:24.136Z"
-  },
-  {
-    "price": "2906.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T07:42:24.619Z"
-  },
-  {
-    "price": "2912.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T08:12:24.998Z"
-  },
-  {
-    "price": "2905.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T08:42:25.835Z"
-  },
-  {
-    "price": "2896.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T09:12:26.336Z"
-  },
-  {
-    "price": "2894.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T09:42:26.793Z"
-  },
-  {
-    "price": "2882.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T10:12:27.251Z"
-  },
-  {
-    "price": "2889.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T10:42:27.719Z"
-  },
-  {
-    "price": "2909.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T11:12:28.282Z"
-  },
-  {
-    "price": "2922.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T11:42:28.716Z"
-  },
-  {
-    "price": "2913.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T12:12:29.118Z"
-  },
-  {
-    "price": "2919.21000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T12:42:29.547Z"
-  },
-  {
-    "price": "2917.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T13:12:30.133Z"
-  },
-  {
-    "price": "2921.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T13:42:30.604Z"
-  },
-  {
-    "price": "2924.17000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T14:12:31.157Z"
-  },
-  {
-    "price": "2902.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T14:42:31.515Z"
-  },
-  {
-    "price": "2867.10000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T15:12:31.957Z"
-  },
-  {
-    "price": "2829.49000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T15:42:32.439Z"
-  },
-  {
-    "price": "2822.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T16:12:33.097Z"
-  },
-  {
-    "price": "2822.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T16:42:33.731Z"
-  },
-  {
-    "price": "2824.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T17:12:34.119Z"
-  },
-  {
-    "price": "2811.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T17:42:34.657Z"
-  },
-  {
-    "price": "2832.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T18:12:35.043Z"
-  },
-  {
-    "price": "2815.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T18:42:35.402Z"
-  },
-  {
-    "price": "2818.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T19:12:35.918Z"
-  },
-  {
-    "price": "2818.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T19:42:36.314Z"
-  },
-  {
-    "price": "2809.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T20:12:36.774Z"
-  },
-  {
-    "price": "2805.40000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T20:42:37.206Z"
-  },
-  {
-    "price": "2809.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T21:12:37.601Z"
-  },
-  {
-    "price": "2806.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T21:42:38.073Z"
-  },
-  {
-    "price": "2825.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T22:12:38.721Z"
-  },
-  {
-    "price": "2838.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T22:42:39.116Z"
-  },
-  {
-    "price": "2835.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T23:12:39.512Z"
-  },
-  {
-    "price": "2839.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-03T23:42:39.912Z"
-  },
-  {
-    "price": "2823.25000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T00:12:40.458Z"
-  },
-  {
-    "price": "2813.20000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T00:42:40.936Z"
-  },
-  {
-    "price": "2701.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T01:12:41.703Z"
-  },
-  {
-    "price": "2716.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T01:42:42.185Z"
-  },
-  {
-    "price": "2725.06000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T02:12:42.742Z"
-  },
-  {
-    "price": "2734.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T02:42:43.173Z"
-  },
-  {
-    "price": "2722.17000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T03:12:43.577Z"
-  },
-  {
     "price": "2720.27000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T03:42:44.032Z"
+    "timestamp": "2022-02-19T11:35:23.881Z"
   },
   {
-    "price": "2722.14000000",
+    "price": "2712.42000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T04:12:44.491Z"
+    "timestamp": "2022-02-19T12:05:25.031Z"
   },
   {
-    "price": "2718.01000000",
+    "price": "2716.08000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T04:42:45.043Z"
+    "timestamp": "2022-02-19T12:37:26.393Z"
   },
   {
-    "price": "2732.26000000",
+    "price": "2738.78000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T05:12:45.618Z"
+    "timestamp": "2022-02-20T00:48:25.236Z"
   },
   {
-    "price": "2721.82000000",
+    "price": "2714.94000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T05:42:46.070Z"
+    "timestamp": "2022-02-20T01:18:26.419Z"
   },
   {
-    "price": "2733.74000000",
+    "price": "2740.47000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T06:12:46.436Z"
+    "timestamp": "2022-02-20T01:48:27.659Z"
   },
   {
-    "price": "2723.50000000",
+    "price": "2738.09000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T06:42:46.912Z"
+    "timestamp": "2022-02-20T02:18:28.685Z"
   },
   {
-    "price": "2718.95000000",
+    "price": "2732.60000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T07:12:47.474Z"
+    "timestamp": "2022-02-20T02:48:29.815Z"
   },
   {
-    "price": "2722.53000000",
+    "price": "2717.80000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T07:42:48.033Z"
+    "timestamp": "2022-02-20T03:18:31.133Z"
   },
   {
-    "price": "2748.99000000",
+    "price": "2715.17000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T08:12:48.577Z"
+    "timestamp": "2022-02-20T03:48:32.254Z"
   },
   {
-    "price": "2733.33000000",
+    "price": "2718.09000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T08:42:49.117Z"
+    "timestamp": "2022-02-20T04:18:33.625Z"
   },
   {
-    "price": "2737.65000000",
+    "price": "2690.81000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T09:12:49.585Z"
+    "timestamp": "2022-02-20T04:48:34.994Z"
   },
   {
-    "price": "2733.18000000",
+    "price": "2695.94000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T09:42:50.060Z"
+    "timestamp": "2022-02-20T05:18:36.308Z"
+  },
+  {
+    "price": "2678.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T05:48:37.569Z"
+  },
+  {
+    "price": "2630.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T06:18:38.821Z"
+  },
+  {
+    "price": "2635.36000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T06:48:40.248Z"
+  },
+  {
+    "price": "2639.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T07:18:41.434Z"
+  },
+  {
+    "price": "2645.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T07:48:42.774Z"
+  },
+  {
+    "price": "2641.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T08:18:44.119Z"
+  },
+  {
+    "price": "2609.45000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T08:48:45.260Z"
+  },
+  {
+    "price": "2630.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T09:18:46.322Z"
+  },
+  {
+    "price": "2628.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T09:48:47.465Z"
+  },
+  {
+    "price": "2635.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T10:18:48.771Z"
+  },
+  {
+    "price": "2623.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T10:48:49.982Z"
+  },
+  {
+    "price": "2620.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T11:18:51.250Z"
+  },
+  {
+    "price": "2637.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T11:48:52.659Z"
+  },
+  {
+    "price": "2642.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T12:27:44.035Z"
+  },
+  {
+    "price": "2627.64000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T12:57:44.417Z"
+  },
+  {
+    "price": "2627.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T14:12:45.418Z"
+  },
+  {
+    "price": "2624.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T14:42:45.848Z"
+  },
+  {
+    "price": "2633.32000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T15:12:46.318Z"
+  },
+  {
+    "price": "2646.47000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T15:42:46.731Z"
+  },
+  {
+    "price": "2668.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T16:12:47.064Z"
+  },
+  {
+    "price": "2635.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T16:42:47.437Z"
+  },
+  {
+    "price": "2656.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T17:12:47.821Z"
+  },
+  {
+    "price": "2645.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T17:42:48.172Z"
+  },
+  {
+    "price": "2645.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T18:12:48.522Z"
+  },
+  {
+    "price": "2662.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T18:42:48.931Z"
+  },
+  {
+    "price": "2660.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T19:12:49.354Z"
+  },
+  {
+    "price": "2648.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T19:42:49.768Z"
+  },
+  {
+    "price": "2631.26000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T20:12:50.232Z"
+  },
+  {
+    "price": "2632.94000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T20:42:50.591Z"
+  },
+  {
+    "price": "2608.04000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T21:12:50.974Z"
+  },
+  {
+    "price": "2578.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T21:42:51.316Z"
+  },
+  {
+    "price": "2609.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T22:12:51.718Z"
+  },
+  {
+    "price": "2612.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T22:42:52.073Z"
+  },
+  {
+    "price": "2651.36000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T23:12:52.498Z"
+  },
+  {
+    "price": "2643.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-20T23:42:52.828Z"
+  },
+  {
+    "price": "2630.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T00:12:53.224Z"
+  },
+  {
+    "price": "2637.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T00:42:53.588Z"
+  },
+  {
+    "price": "2710.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T01:12:54.260Z"
+  },
+  {
+    "price": "2730.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T01:42:54.603Z"
+  },
+  {
+    "price": "2718.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T02:12:55.077Z"
+  },
+  {
+    "price": "2722.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T02:42:55.438Z"
+  },
+  {
+    "price": "2727.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T03:12:55.851Z"
+  },
+  {
+    "price": "2709.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T03:42:56.242Z"
+  },
+  {
+    "price": "2722.05000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T04:12:56.537Z"
+  },
+  {
+    "price": "2723.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T04:42:56.918Z"
+  },
+  {
+    "price": "2743.74000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T05:12:57.626Z"
+  },
+  {
+    "price": "2740.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T05:42:58.049Z"
+  },
+  {
+    "price": "2740.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T06:12:58.401Z"
+  },
+  {
+    "price": "2735.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-21T06:42:58.715Z"
   },
   {
     "price": "2738.18000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T10:12:50.561Z"
+    "timestamp": "2022-02-21T07:12:59.144Z"
   },
   {
-    "price": "2746.86000000",
+    "price": "2738.90000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T10:42:51.006Z"
+    "timestamp": "2022-02-21T07:42:59.561Z"
   },
   {
-    "price": "2741.18000000",
+    "price": "2752.73000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T11:12:51.385Z"
+    "timestamp": "2022-02-21T08:12:59.933Z"
   },
   {
-    "price": "2745.64000000",
+    "price": "2727.95000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T11:42:51.905Z"
+    "timestamp": "2022-02-21T08:52:30.418Z"
   },
   {
-    "price": "2736.28000000",
+    "price": "2721.92000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T12:12:52.320Z"
+    "timestamp": "2022-02-21T09:22:30.830Z"
   },
   {
-    "price": "2740.01000000",
+    "price": "2718.83000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T12:42:52.758Z"
+    "timestamp": "2022-02-21T10:11:42.669Z"
   },
   {
-    "price": "2728.33000000",
+    "price": "2675.44000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T13:12:53.170Z"
+    "timestamp": "2022-02-21T10:41:43.112Z"
   },
   {
-    "price": "2727.94000000",
+    "price": "2680.73000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T13:42:53.659Z"
+    "timestamp": "2022-02-21T11:11:43.539Z"
   },
   {
-    "price": "2711.68000000",
+    "price": "2630.21000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T14:12:54.280Z"
+    "timestamp": "2022-02-21T11:41:44.014Z"
   },
   {
-    "price": "2692.83000000",
+    "price": "2621.14000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T14:42:54.856Z"
+    "timestamp": "2022-02-21T12:11:44.582Z"
   },
   {
-    "price": "2683.27000000",
+    "price": "2614.57000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T15:12:55.281Z"
+    "timestamp": "2022-02-21T12:41:45.092Z"
   },
   {
-    "price": "2677.01000000",
+    "price": "2608.95000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T15:42:55.735Z"
+    "timestamp": "2022-02-21T13:56:46.191Z"
   },
   {
-    "price": "2656.61000000",
+    "price": "2719.03000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T16:12:56.174Z"
+    "timestamp": "2022-02-21T14:26:46.621Z"
   },
   {
-    "price": "2674.90000000",
+    "price": "2699.75000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T16:42:56.695Z"
+    "timestamp": "2022-02-21T14:56:47.657Z"
   },
   {
-    "price": "2689.58000000",
+    "price": "2718.09000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T17:12:57.174Z"
+    "timestamp": "2022-02-21T15:26:48.058Z"
   },
   {
-    "price": "2689.30000000",
+    "price": "2718.98000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T17:42:57.646Z"
+    "timestamp": "2022-02-21T15:56:48.495Z"
   },
   {
-    "price": "2688.41000000",
+    "price": "2720.23000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T18:12:58.103Z"
+    "timestamp": "2022-02-21T16:26:48.859Z"
   },
   {
-    "price": "2672.92000000",
+    "price": "2718.86000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T18:42:58.540Z"
+    "timestamp": "2022-02-21T16:56:49.275Z"
   },
   {
-    "price": "2631.05000000",
+    "price": "2728.83000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T19:12:58.948Z"
+    "timestamp": "2022-02-21T17:26:49.758Z"
   },
   {
-    "price": "2628.27000000",
+    "price": "2699.61000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T19:42:59.394Z"
+    "timestamp": "2022-02-21T17:56:50.245Z"
   },
   {
-    "price": "2621.00000000",
+    "price": "2620.02000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T20:12:59.814Z"
+    "timestamp": "2022-02-21T18:26:50.655Z"
   },
   {
-    "price": "2619.38000000",
+    "price": "2641.07000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T20:43:00.304Z"
+    "timestamp": "2022-02-21T18:56:51.183Z"
   },
   {
-    "price": "2608.84000000",
+    "price": "2630.00000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T21:13:00.733Z"
+    "timestamp": "2022-02-21T19:26:51.580Z"
   },
   {
-    "price": "2615.43000000",
+    "price": "2651.93000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T21:53:01.296Z"
+    "timestamp": "2022-02-21T19:56:52.003Z"
   },
   {
-    "price": "2597.96000000",
+    "price": "2641.24000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T22:23:01.620Z"
+    "timestamp": "2022-02-21T20:26:52.460Z"
   },
   {
-    "price": "2607.22000000",
+    "price": "2649.96000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T22:53:01.940Z"
+    "timestamp": "2022-02-21T20:56:52.829Z"
   },
   {
-    "price": "2614.93000000",
+    "price": "2666.70000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T23:23:02.378Z"
+    "timestamp": "2022-02-21T21:26:53.214Z"
   },
   {
-    "price": "2614.50000000",
+    "price": "2582.04000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-04T23:53:02.697Z"
+    "timestamp": "2022-02-21T21:56:53.542Z"
   },
   {
-    "price": "2615.70000000",
+    "price": "2596.97000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T00:23:03.032Z"
+    "timestamp": "2022-02-21T22:26:54.104Z"
   },
   {
-    "price": "2609.61000000",
+    "price": "2621.03000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T00:53:03.466Z"
+    "timestamp": "2022-02-21T22:56:54.516Z"
   },
   {
-    "price": "2614.16000000",
+    "price": "2590.12000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T01:23:03.805Z"
+    "timestamp": "2022-02-21T23:26:54.831Z"
   },
   {
-    "price": "2610.73000000",
+    "price": "2572.29000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T01:53:04.105Z"
+    "timestamp": "2022-02-21T23:56:55.302Z"
   },
   {
-    "price": "2613.96000000",
+    "price": "2576.17000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T02:23:04.459Z"
-  },
-  {
-    "price": "2612.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T02:53:04.857Z"
-  },
-  {
-    "price": "2619.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T03:23:05.161Z"
-  },
-  {
-    "price": "2626.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T03:53:05.508Z"
-  },
-  {
-    "price": "2619.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T04:23:05.858Z"
-  },
-  {
-    "price": "2621.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T04:53:06.241Z"
-  },
-  {
-    "price": "2623.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T05:23:06.538Z"
-  },
-  {
-    "price": "2620.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T05:53:07.065Z"
-  },
-  {
-    "price": "2627.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T06:23:07.441Z"
-  },
-  {
-    "price": "2623.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T06:53:07.738Z"
-  },
-  {
-    "price": "2635.70000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T07:23:08.123Z"
-  },
-  {
-    "price": "2638.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T07:53:08.477Z"
-  },
-  {
-    "price": "2639.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T08:23:08.993Z"
-  },
-  {
-    "price": "2651.88000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T08:53:09.350Z"
-  },
-  {
-    "price": "2649.19000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T09:23:09.733Z"
-  },
-  {
-    "price": "2648.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T09:53:10.050Z"
-  },
-  {
-    "price": "2647.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T10:23:10.374Z"
-  },
-  {
-    "price": "2647.48000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T10:53:10.788Z"
-  },
-  {
-    "price": "2655.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T11:23:11.112Z"
-  },
-  {
-    "price": "2650.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T11:53:11.478Z"
-  },
-  {
-    "price": "2664.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T12:23:11.880Z"
-  },
-  {
-    "price": "2660.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T12:53:12.211Z"
-  },
-  {
-    "price": "2645.01000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T13:23:12.516Z"
-  },
-  {
-    "price": "2639.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T13:53:12.855Z"
-  },
-  {
-    "price": "2646.69000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T14:23:13.136Z"
-  },
-  {
-    "price": "2644.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T14:53:13.429Z"
-  },
-  {
-    "price": "2647.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T15:23:13.753Z"
-  },
-  {
-    "price": "2643.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T15:53:14.160Z"
-  },
-  {
-    "price": "2647.65000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T16:23:14.430Z"
-  },
-  {
-    "price": "2662.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T16:53:14.938Z"
-  },
-  {
-    "price": "2666.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T17:23:15.293Z"
-  },
-  {
-    "price": "2668.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T17:53:15.625Z"
-  },
-  {
-    "price": "2664.77000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T18:23:16.041Z"
-  },
-  {
-    "price": "2666.91000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T18:53:16.443Z"
-  },
-  {
-    "price": "2672.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T19:23:16.741Z"
-  },
-  {
-    "price": "2669.28000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T19:53:17.251Z"
-  },
-  {
-    "price": "2673.65000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T20:23:17.630Z"
-  },
-  {
-    "price": "2669.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T20:53:18.030Z"
-  },
-  {
-    "price": "2666.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T21:23:18.425Z"
-  },
-  {
-    "price": "2661.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T21:53:18.715Z"
-  },
-  {
-    "price": "2660.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T22:23:19.115Z"
-  },
-  {
-    "price": "2666.45000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T22:53:19.435Z"
-  },
-  {
-    "price": "2664.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T23:23:19.812Z"
-  },
-  {
-    "price": "2665.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-05T23:53:20.104Z"
-  },
-  {
-    "price": "2672.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T00:23:20.482Z"
-  },
-  {
-    "price": "2669.84000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T00:53:20.881Z"
-  },
-  {
-    "price": "2670.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T01:23:21.179Z"
-  },
-  {
-    "price": "2660.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T01:53:21.525Z"
-  },
-  {
-    "price": "2662.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T02:23:21.877Z"
-  },
-  {
-    "price": "2661.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T02:53:22.378Z"
-  },
-  {
-    "price": "2658.04000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T03:23:22.742Z"
-  },
-  {
-    "price": "2647.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T03:53:23.134Z"
-  },
-  {
-    "price": "2628.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T04:23:23.471Z"
-  },
-  {
-    "price": "2648.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T04:53:23.793Z"
-  },
-  {
-    "price": "2654.11000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T05:23:24.147Z"
-  },
-  {
-    "price": "2652.19000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T05:53:24.566Z"
-  },
-  {
-    "price": "2659.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T06:23:24.873Z"
-  },
-  {
-    "price": "2648.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T06:53:25.221Z"
-  },
-  {
-    "price": "2641.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T08:13:43.556Z"
-  },
-  {
-    "price": "2638.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T08:58:03.051Z"
-  },
-  {
-    "price": "2624.32000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T09:33:16.934Z"
+    "timestamp": "2022-02-22T00:26:55.622Z"
   },
   {
     "price": "2597.81000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T10:03:18.115Z"
+    "timestamp": "2022-02-22T00:56:56.100Z"
   },
   {
-    "price": "2605.30000000",
+    "price": "2573.39000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T10:40:24.071Z"
+    "timestamp": "2022-02-22T01:26:56.517Z"
   },
   {
-    "price": "2598.88000000",
+    "price": "2597.89000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T11:10:25.161Z"
+    "timestamp": "2022-02-22T01:56:56.884Z"
   },
   {
-    "price": "2601.40000000",
+    "price": "2574.81000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T11:40:26.368Z"
+    "timestamp": "2022-02-22T02:26:57.339Z"
   },
   {
-    "price": "2609.19000000",
+    "price": "2573.24000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T12:10:27.505Z"
+    "timestamp": "2022-02-22T02:56:57.736Z"
   },
   {
-    "price": "2615.76000000",
+    "price": "2537.98000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T12:40:28.676Z"
+    "timestamp": "2022-02-22T03:26:58.138Z"
   },
   {
-    "price": "2620.28000000",
+    "price": "2516.62000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T13:10:29.838Z"
+    "timestamp": "2022-02-22T03:56:58.721Z"
   },
   {
-    "price": "2642.45000000",
+    "price": "2524.39000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T13:40:31.117Z"
+    "timestamp": "2022-02-22T04:26:59.380Z"
   },
   {
-    "price": "2629.93000000",
+    "price": "2516.02000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T14:10:32.170Z"
+    "timestamp": "2022-02-22T04:57:00.022Z"
   },
   {
-    "price": "2627.69000000",
+    "price": "2523.59000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T14:40:33.415Z"
+    "timestamp": "2022-02-22T05:27:00.473Z"
   },
   {
-    "price": "2618.53000000",
+    "price": "2517.64000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T15:10:34.622Z"
+    "timestamp": "2022-02-22T05:57:00.931Z"
   },
   {
-    "price": "2625.41000000",
+    "price": "2511.80000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T15:40:35.813Z"
+    "timestamp": "2022-02-22T06:27:01.420Z"
   },
   {
-    "price": "2627.95000000",
+    "price": "2523.70000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T16:10:36.950Z"
+    "timestamp": "2022-02-22T06:57:01.915Z"
   },
   {
-    "price": "2639.19000000",
+    "price": "2518.34000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T16:40:37.957Z"
+    "timestamp": "2022-02-22T07:27:02.383Z"
   },
   {
-    "price": "2635.07000000",
+    "price": "2526.66000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T17:10:39.410Z"
-  },
-  {
-    "price": "2631.52000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T17:40:40.451Z"
-  },
-  {
-    "price": "2635.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T18:10:41.425Z"
-  },
-  {
-    "price": "2627.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T18:40:42.439Z"
-  },
-  {
-    "price": "2622.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T19:10:43.577Z"
-  },
-  {
-    "price": "2621.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T19:40:44.827Z"
-  },
-  {
-    "price": "2615.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T20:10:45.919Z"
-  },
-  {
-    "price": "2620.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T20:40:47.023Z"
-  },
-  {
-    "price": "2639.61000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T21:10:48.064Z"
-  },
-  {
-    "price": "2632.49000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T21:40:49.273Z"
-  },
-  {
-    "price": "2639.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T22:10:50.608Z"
-  },
-  {
-    "price": "2637.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T22:40:51.809Z"
-  },
-  {
-    "price": "2605.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T23:10:53.053Z"
-  },
-  {
-    "price": "2551.70000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-06T23:40:54.393Z"
-  },
-  {
-    "price": "2541.08000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T00:10:55.434Z"
-  },
-  {
-    "price": "2541.86000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T00:40:56.561Z"
-  },
-  {
-    "price": "2543.81000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T01:10:57.715Z"
-  },
-  {
-    "price": "2554.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T01:40:58.883Z"
-  },
-  {
-    "price": "2545.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T02:11:00.067Z"
-  },
-  {
-    "price": "2535.62000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T02:41:01.108Z"
-  },
-  {
-    "price": "2509.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T03:11:02.096Z"
-  },
-  {
-    "price": "2526.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T03:41:03.145Z"
-  },
-  {
-    "price": "2521.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T04:11:04.136Z"
-  },
-  {
-    "price": "2527.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T04:41:05.297Z"
-  },
-  {
-    "price": "2522.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T05:11:06.504Z"
-  },
-  {
-    "price": "2535.80000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T05:41:07.762Z"
-  },
-  {
-    "price": "2534.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T06:11:08.954Z"
-  },
-  {
-    "price": "2537.07000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T06:41:09.929Z"
-  },
-  {
-    "price": "2538.31000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T07:11:11.052Z"
-  },
-  {
-    "price": "2525.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T07:41:12.345Z"
-  },
-  {
-    "price": "2525.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T08:11:13.372Z"
-  },
-  {
-    "price": "2520.67000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T08:41:14.474Z"
-  },
-  {
-    "price": "2544.44000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T09:11:15.830Z"
-  },
-  {
-    "price": "2533.66000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T09:41:17.077Z"
-  },
-  {
-    "price": "2529.00000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T10:11:18.207Z"
-  },
-  {
-    "price": "2530.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T10:41:19.215Z"
-  },
-  {
-    "price": "2524.29000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T11:11:20.440Z"
-  },
-  {
-    "price": "2533.52000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T11:41:21.668Z"
-  },
-  {
-    "price": "2552.67000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T12:11:23.026Z"
-  },
-  {
-    "price": "2565.55000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T12:41:24.128Z"
-  },
-  {
-    "price": "2566.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T13:11:25.360Z"
-  },
-  {
-    "price": "2614.30000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T13:41:26.477Z"
-  },
-  {
-    "price": "2633.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T14:11:27.759Z"
-  },
-  {
-    "price": "2639.89000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T14:41:28.785Z"
-  },
-  {
-    "price": "2616.63000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T15:11:29.918Z"
-  },
-  {
-    "price": "2618.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T15:41:30.925Z"
-  },
-  {
-    "price": "2635.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T16:11:32.005Z"
-  },
-  {
-    "price": "2606.39000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T16:41:33.028Z"
-  },
-  {
-    "price": "2589.38000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T17:11:34.232Z"
-  },
-  {
-    "price": "2582.80000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T17:41:35.406Z"
-  },
-  {
-    "price": "2537.79000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T18:11:36.607Z"
-  },
-  {
-    "price": "2524.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T18:41:37.623Z"
-  },
-  {
-    "price": "2525.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T19:11:38.848Z"
-  },
-  {
-    "price": "2467.93000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T19:41:39.764Z"
-  },
-  {
-    "price": "2458.26000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T20:11:40.659Z"
-  },
-  {
-    "price": "2465.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T20:41:41.857Z"
-  },
-  {
-    "price": "2474.82000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T21:11:42.889Z"
-  },
-  {
-    "price": "2478.73000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T21:41:44.276Z"
-  },
-  {
-    "price": "2501.35000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T22:11:45.322Z"
-  },
-  {
-    "price": "2521.41000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T22:41:46.536Z"
-  },
-  {
-    "price": "2499.36000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T23:11:47.791Z"
-  },
-  {
-    "price": "2510.03000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-07T23:41:48.969Z"
-  },
-  {
-    "price": "2486.02000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T00:11:50.240Z"
-  },
-  {
-    "price": "2520.60000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T00:41:51.468Z"
-  },
-  {
-    "price": "2538.59000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T01:11:52.815Z"
-  },
-  {
-    "price": "2522.18000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T01:41:53.847Z"
-  },
-  {
-    "price": "2525.68000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T02:11:55.070Z"
-  },
-  {
-    "price": "2532.94000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T02:41:56.284Z"
-  },
-  {
-    "price": "2548.90000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T03:11:57.635Z"
-  },
-  {
-    "price": "2538.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T03:41:58.807Z"
-  },
-  {
-    "price": "2558.50000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T04:11:59.918Z"
-  },
-  {
-    "price": "2545.83000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T04:42:01.162Z"
-  },
-  {
-    "price": "2532.05000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T05:12:02.254Z"
-  },
-  {
-    "price": "2520.72000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T05:42:03.435Z"
-  },
-  {
-    "price": "2520.95000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T06:12:04.582Z"
-  },
-  {
-    "price": "2507.64000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T06:42:05.747Z"
-  },
-  {
-    "price": "2516.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T07:12:06.915Z"
-  },
-  {
-    "price": "2538.46000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T07:42:08.272Z"
-  },
-  {
-    "price": "2540.78000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T08:12:13.688Z"
-  },
-  {
-    "price": "2577.51000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T08:42:14.998Z"
-  },
-  {
-    "price": "2569.57000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T09:12:16.253Z"
-  },
-  {
-    "price": "2583.42000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T09:42:17.227Z"
-  },
-  {
-    "price": "2573.47000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T10:12:18.147Z"
-  },
-  {
-    "price": "2591.99000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T10:42:19.375Z"
-  },
-  {
-    "price": "2588.92000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T11:12:20.641Z"
-  },
-  {
-    "price": "2579.23000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T11:42:21.914Z"
-  },
-  {
-    "price": "2593.15000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T12:12:23.226Z"
-  },
-  {
-    "price": "2574.96000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T12:42:24.224Z"
-  },
-  {
-    "price": "2566.56000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T13:12:25.375Z"
-  },
-  {
-    "price": "2587.53000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T13:42:26.446Z"
-  },
-  {
-    "price": "2578.16000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T14:12:27.463Z"
-  },
-  {
-    "price": "2573.87000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T14:42:28.799Z"
-  },
-  {
-    "price": "2572.24000000",
-    "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T15:12:29.789Z"
+    "timestamp": "2022-02-22T07:57:02.837Z"
   },
   {
     "price": "2541.13000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T15:42:30.842Z"
+    "timestamp": "2022-02-22T08:27:03.347Z"
   },
   {
-    "price": "2571.93000000",
+    "price": "2547.19000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T16:12:31.609Z"
+    "timestamp": "2022-02-22T08:57:03.736Z"
   },
   {
-    "price": "2530.02000000",
+    "price": "2541.65000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T16:42:32.877Z"
+    "timestamp": "2022-02-22T09:27:04.311Z"
   },
   {
-    "price": "2564.94000000",
+    "price": "2546.33000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T17:12:33.977Z"
+    "timestamp": "2022-02-22T09:57:04.927Z"
   },
   {
-    "price": "2592.00000000",
+    "price": "2587.30000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T17:42:34.905Z"
+    "timestamp": "2022-02-22T10:27:05.496Z"
   },
   {
-    "price": "2618.03000000",
+    "price": "2600.00000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T18:12:36.106Z"
+    "timestamp": "2022-02-22T10:57:06.013Z"
   },
   {
-    "price": "2584.11000000",
+    "price": "2583.67000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T18:42:37.317Z"
+    "timestamp": "2022-02-22T11:27:06.585Z"
   },
   {
-    "price": "2562.36000000",
+    "price": "2592.43000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T19:12:38.607Z"
+    "timestamp": "2022-02-22T11:57:07.120Z"
   },
   {
-    "price": "2567.76000000",
+    "price": "2611.74000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T19:42:39.741Z"
+    "timestamp": "2022-02-22T12:27:07.709Z"
   },
   {
-    "price": "2576.81000000",
+    "price": "2598.68000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T20:12:40.939Z"
+    "timestamp": "2022-02-22T12:57:08.186Z"
   },
   {
-    "price": "2562.13000000",
+    "price": "2603.51000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T20:42:42.184Z"
+    "timestamp": "2022-02-22T14:12:09.418Z"
   },
   {
-    "price": "2550.51000000",
+    "price": "2606.84000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T21:12:43.369Z"
+    "timestamp": "2022-02-22T14:42:09.959Z"
   },
   {
-    "price": "2557.36000000",
+    "price": "2639.37000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T21:42:44.488Z"
+    "timestamp": "2022-02-22T15:12:10.482Z"
   },
   {
-    "price": "2563.95000000",
+    "price": "2629.17000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T22:12:45.685Z"
+    "timestamp": "2022-02-22T15:42:11.008Z"
   },
   {
-    "price": "2570.86000000",
+    "price": "2603.74000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T22:42:46.787Z"
+    "timestamp": "2022-02-22T16:12:11.481Z"
   },
   {
-    "price": "2574.93000000",
+    "price": "2599.48000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T23:12:47.802Z"
+    "timestamp": "2022-02-22T16:42:11.904Z"
   },
   {
-    "price": "2576.11000000",
+    "price": "2600.82000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-08T23:42:48.597Z"
+    "timestamp": "2022-02-22T17:12:12.365Z"
   },
   {
-    "price": "2578.86000000",
+    "price": "2602.16000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T00:18:13.166Z"
+    "timestamp": "2022-02-22T17:42:12.833Z"
   },
   {
-    "price": "2583.76000000",
+    "price": "2595.15000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T00:48:14.408Z"
+    "timestamp": "2022-02-22T18:12:13.323Z"
   },
   {
-    "price": "2589.71000000",
+    "price": "2603.87000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T01:18:15.677Z"
+    "timestamp": "2022-02-22T18:42:13.927Z"
   },
   {
-    "price": "2623.08000000",
+    "price": "2593.36000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T01:48:16.766Z"
+    "timestamp": "2022-02-22T19:12:14.367Z"
   },
   {
-    "price": "2614.01000000",
+    "price": "2618.66000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T02:18:17.960Z"
+    "timestamp": "2022-02-22T19:42:14.845Z"
   },
   {
-    "price": "2625.59000000",
+    "price": "2632.11000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T02:48:18.945Z"
+    "timestamp": "2022-02-22T20:12:15.396Z"
+  },
+  {
+    "price": "2604.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T20:42:15.857Z"
+  },
+  {
+    "price": "2617.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T21:12:16.337Z"
+  },
+  {
+    "price": "2617.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T21:42:16.751Z"
+  },
+  {
+    "price": "2606.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T22:12:17.210Z"
+  },
+  {
+    "price": "2599.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T22:42:17.725Z"
+  },
+  {
+    "price": "2614.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T23:12:18.126Z"
+  },
+  {
+    "price": "2642.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-22T23:42:18.636Z"
+  },
+  {
+    "price": "2652.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T00:12:19.078Z"
+  },
+  {
+    "price": "2626.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T00:42:19.489Z"
+  },
+  {
+    "price": "2624.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T01:12:19.865Z"
+  },
+  {
+    "price": "2616.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T01:42:20.334Z"
+  },
+  {
+    "price": "2637.14000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T02:12:20.854Z"
+  },
+  {
+    "price": "2616.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T02:42:21.356Z"
+  },
+  {
+    "price": "2612.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T03:12:21.808Z"
+  },
+  {
+    "price": "2620.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T03:42:22.490Z"
+  },
+  {
+    "price": "2635.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T04:12:22.895Z"
+  },
+  {
+    "price": "2652.64000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T04:42:23.257Z"
+  },
+  {
+    "price": "2650.93000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T05:12:23.838Z"
+  },
+  {
+    "price": "2649.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T05:42:24.278Z"
+  },
+  {
+    "price": "2671.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T06:12:24.688Z"
+  },
+  {
+    "price": "2666.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T06:42:25.202Z"
+  },
+  {
+    "price": "2672.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T07:12:25.660Z"
+  },
+  {
+    "price": "2688.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T07:42:26.097Z"
+  },
+  {
+    "price": "2688.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T08:12:26.632Z"
+  },
+  {
+    "price": "2709.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T08:42:27.131Z"
+  },
+  {
+    "price": "2720.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T09:12:27.499Z"
+  },
+  {
+    "price": "2721.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T09:42:27.982Z"
+  },
+  {
+    "price": "2706.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T10:12:28.360Z"
+  },
+  {
+    "price": "2718.18000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T10:42:28.721Z"
+  },
+  {
+    "price": "2714.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T11:12:29.114Z"
+  },
+  {
+    "price": "2731.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T11:42:29.477Z"
+  },
+  {
+    "price": "2719.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T12:12:29.918Z"
+  },
+  {
+    "price": "2742.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T12:42:30.279Z"
+  },
+  {
+    "price": "2732.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T13:57:31.463Z"
+  },
+  {
+    "price": "2731.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T14:27:31.868Z"
+  },
+  {
+    "price": "2712.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T14:57:32.329Z"
+  },
+  {
+    "price": "2691.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T15:27:32.716Z"
+  },
+  {
+    "price": "2692.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T15:57:33.117Z"
+  },
+  {
+    "price": "2696.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T16:27:33.448Z"
+  },
+  {
+    "price": "2714.25000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T16:57:33.885Z"
+  },
+  {
+    "price": "2722.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T17:27:34.284Z"
+  },
+  {
+    "price": "2665.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T17:57:34.617Z"
+  },
+  {
+    "price": "2648.24000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T18:27:35.083Z"
+  },
+  {
+    "price": "2651.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T18:57:35.478Z"
+  },
+  {
+    "price": "2648.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T19:27:35.808Z"
+  },
+  {
+    "price": "2631.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T19:57:36.221Z"
+  },
+  {
+    "price": "2632.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T20:27:36.934Z"
+  },
+  {
+    "price": "2626.92000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T20:57:37.298Z"
+  },
+  {
+    "price": "2631.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T21:27:37.645Z"
+  },
+  {
+    "price": "2623.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T21:57:38.091Z"
+  },
+  {
+    "price": "2621.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T22:27:38.487Z"
+  },
+  {
+    "price": "2633.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T22:57:38.964Z"
+  },
+  {
+    "price": "2597.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T23:27:39.432Z"
+  },
+  {
+    "price": "2587.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-23T23:57:39.818Z"
+  },
+  {
+    "price": "2593.45000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T00:27:40.135Z"
+  },
+  {
+    "price": "2566.14000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T00:57:40.517Z"
+  },
+  {
+    "price": "2552.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T01:27:40.874Z"
+  },
+  {
+    "price": "2569.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T01:57:41.369Z"
+  },
+  {
+    "price": "2571.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T02:27:41.742Z"
+  },
+  {
+    "price": "2516.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T02:57:42.246Z"
+  },
+  {
+    "price": "2452.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T03:27:42.813Z"
+  },
+  {
+    "price": "2406.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T03:57:44.250Z"
+  },
+  {
+    "price": "2379.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T04:27:44.693Z"
+  },
+  {
+    "price": "2398.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T04:57:45.010Z"
+  },
+  {
+    "price": "2358.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T05:27:45.334Z"
+  },
+  {
+    "price": "2334.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T05:57:45.712Z"
+  },
+  {
+    "price": "2339.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T06:27:46.032Z"
+  },
+  {
+    "price": "2341.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T06:57:46.311Z"
+  },
+  {
+    "price": "2327.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T07:27:46.608Z"
+  },
+  {
+    "price": "2366.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T07:57:46.956Z"
+  },
+  {
+    "price": "2388.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T08:27:47.395Z"
+  },
+  {
+    "price": "2383.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T08:57:47.820Z"
+  },
+  {
+    "price": "2407.35000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T09:27:48.333Z"
+  },
+  {
+    "price": "2366.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T09:57:49.173Z"
+  },
+  {
+    "price": "2340.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T10:27:49.610Z"
+  },
+  {
+    "price": "2361.63000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T10:57:49.988Z"
+  },
+  {
+    "price": "2348.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T11:27:50.480Z"
+  },
+  {
+    "price": "2384.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T11:57:50.904Z"
+  },
+  {
+    "price": "2366.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T12:27:51.445Z"
+  },
+  {
+    "price": "2366.24000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T12:57:51.886Z"
+  },
+  {
+    "price": "2398.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T14:12:53.064Z"
+  },
+  {
+    "price": "2411.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T14:42:53.485Z"
+  },
+  {
+    "price": "2456.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T15:12:53.895Z"
+  },
+  {
+    "price": "2433.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T15:42:54.437Z"
+  },
+  {
+    "price": "2449.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T17:37:55.709Z"
+  },
+  {
+    "price": "2443.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T18:07:56.205Z"
+  },
+  {
+    "price": "2449.74000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T18:37:56.699Z"
+  },
+  {
+    "price": "2525.54000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T19:07:57.226Z"
+  },
+  {
+    "price": "2560.37000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T19:37:57.800Z"
+  },
+  {
+    "price": "2694.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T20:07:58.188Z"
+  },
+  {
+    "price": "2659.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T20:37:58.942Z"
+  },
+  {
+    "price": "2641.36000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T21:07:59.477Z"
+  },
+  {
+    "price": "2627.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T21:37:59.784Z"
+  },
+  {
+    "price": "2624.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T22:08:00.322Z"
+  },
+  {
+    "price": "2591.39000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T22:38:00.777Z"
+  },
+  {
+    "price": "2582.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T23:08:01.425Z"
+  },
+  {
+    "price": "2592.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-24T23:38:01.814Z"
+  },
+  {
+    "price": "2604.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T00:08:02.154Z"
+  },
+  {
+    "price": "2613.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T00:38:02.759Z"
+  },
+  {
+    "price": "2601.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T01:08:03.286Z"
+  },
+  {
+    "price": "2628.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T01:38:03.887Z"
+  },
+  {
+    "price": "2633.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T02:08:04.374Z"
+  },
+  {
+    "price": "2635.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T02:38:04.797Z"
+  },
+  {
+    "price": "2630.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T03:08:05.206Z"
+  },
+  {
+    "price": "2611.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T03:38:05.753Z"
+  },
+  {
+    "price": "2638.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T04:08:06.255Z"
+  },
+  {
+    "price": "2618.15000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T04:38:06.688Z"
+  },
+  {
+    "price": "2601.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T05:08:07.114Z"
+  },
+  {
+    "price": "2612.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T05:38:07.514Z"
+  },
+  {
+    "price": "2603.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T06:08:07.932Z"
+  },
+  {
+    "price": "2623.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T06:38:08.270Z"
+  },
+  {
+    "price": "2627.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T07:08:08.752Z"
+  },
+  {
+    "price": "2618.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T07:38:09.196Z"
+  },
+  {
+    "price": "2609.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T08:08:09.688Z"
+  },
+  {
+    "price": "2604.05000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T08:38:10.106Z"
+  },
+  {
+    "price": "2599.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T09:08:10.599Z"
+  },
+  {
+    "price": "2588.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T09:38:11.097Z"
+  },
+  {
+    "price": "2614.64000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T10:08:11.585Z"
+  },
+  {
+    "price": "2616.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T10:38:12.081Z"
+  },
+  {
+    "price": "2604.32000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T11:08:12.563Z"
+  },
+  {
+    "price": "2629.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T11:38:12.938Z"
+  },
+  {
+    "price": "2681.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T12:08:13.348Z"
+  },
+  {
+    "price": "2674.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T12:38:13.893Z"
+  },
+  {
+    "price": "2709.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T13:53:15.269Z"
+  },
+  {
+    "price": "2693.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T14:23:15.697Z"
+  },
+  {
+    "price": "2694.05000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T14:53:16.138Z"
+  },
+  {
+    "price": "2700.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T15:23:16.543Z"
+  },
+  {
+    "price": "2725.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T15:53:16.932Z"
+  },
+  {
+    "price": "2718.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T16:23:17.452Z"
+  },
+  {
+    "price": "2714.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T16:53:17.813Z"
+  },
+  {
+    "price": "2704.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T17:23:18.272Z"
+  },
+  {
+    "price": "2697.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T17:53:18.666Z"
+  },
+  {
+    "price": "2683.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T18:23:19.070Z"
+  },
+  {
+    "price": "2681.11000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T18:53:19.468Z"
+  },
+  {
+    "price": "2697.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T19:23:19.827Z"
+  },
+  {
+    "price": "2675.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T19:53:20.271Z"
+  },
+  {
+    "price": "2689.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T20:23:20.629Z"
+  },
+  {
+    "price": "2717.03000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T20:53:21.032Z"
+  },
+  {
+    "price": "2720.92000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T21:23:21.477Z"
+  },
+  {
+    "price": "2709.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T21:53:21.870Z"
+  },
+  {
+    "price": "2705.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T22:23:22.271Z"
+  },
+  {
+    "price": "2772.66000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T22:53:22.731Z"
+  },
+  {
+    "price": "2804.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T23:23:23.372Z"
+  },
+  {
+    "price": "2752.34000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-25T23:53:23.915Z"
+  },
+  {
+    "price": "2781.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T00:23:24.288Z"
+  },
+  {
+    "price": "2831.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T00:53:24.660Z"
+  },
+  {
+    "price": "2827.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T01:23:25.100Z"
+  },
+  {
+    "price": "2820.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T01:53:25.492Z"
+  },
+  {
+    "price": "2818.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T02:23:26.074Z"
+  },
+  {
+    "price": "2811.01000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T02:53:26.519Z"
+  },
+  {
+    "price": "2788.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T03:23:27.009Z"
+  },
+  {
+    "price": "2796.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T03:53:27.390Z"
+  },
+  {
+    "price": "2812.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T04:23:27.837Z"
+  },
+  {
+    "price": "2819.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T04:53:28.228Z"
+  },
+  {
+    "price": "2798.04000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T05:23:28.712Z"
+  },
+  {
+    "price": "2780.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T05:53:29.100Z"
+  },
+  {
+    "price": "2783.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T06:23:29.554Z"
+  },
+  {
+    "price": "2778.63000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T06:53:30.048Z"
+  },
+  {
+    "price": "2775.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T07:23:30.437Z"
+  },
+  {
+    "price": "2791.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T07:53:30.887Z"
+  },
+  {
+    "price": "2806.28000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T08:23:31.263Z"
+  },
+  {
+    "price": "2756.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T08:53:31.758Z"
+  },
+  {
+    "price": "2756.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T09:23:32.137Z"
+  },
+  {
+    "price": "2755.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T09:53:32.692Z"
+  },
+  {
+    "price": "2759.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T10:23:33.165Z"
+  },
+  {
+    "price": "2772.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T10:53:33.681Z"
+  },
+  {
+    "price": "2756.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T11:23:34.103Z"
+  },
+  {
+    "price": "2755.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T11:53:34.554Z"
+  },
+  {
+    "price": "2750.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T12:23:35.129Z"
+  },
+  {
+    "price": "2758.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T12:53:35.583Z"
+  },
+  {
+    "price": "2778.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T14:08:36.728Z"
+  },
+  {
+    "price": "2783.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T14:38:37.241Z"
+  },
+  {
+    "price": "2787.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T15:08:37.726Z"
+  },
+  {
+    "price": "2802.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T15:38:38.280Z"
+  },
+  {
+    "price": "2794.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T16:08:38.739Z"
+  },
+  {
+    "price": "2785.34000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T16:38:39.260Z"
+  },
+  {
+    "price": "2792.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T17:08:39.610Z"
+  },
+  {
+    "price": "2794.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T17:38:40.238Z"
+  },
+  {
+    "price": "2785.26000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T18:08:40.759Z"
+  },
+  {
+    "price": "2776.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T18:38:41.211Z"
+  },
+  {
+    "price": "2818.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T19:08:41.619Z"
+  },
+  {
+    "price": "2825.79000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T19:38:42.091Z"
+  },
+  {
+    "price": "2813.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T20:08:42.478Z"
+  },
+  {
+    "price": "2822.18000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T20:38:42.938Z"
+  },
+  {
+    "price": "2825.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T21:08:43.274Z"
+  },
+  {
+    "price": "2833.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T21:38:43.690Z"
+  },
+  {
+    "price": "2817.63000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T22:08:44.130Z"
+  },
+  {
+    "price": "2814.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T22:38:44.578Z"
+  },
+  {
+    "price": "2784.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T23:08:44.968Z"
+  },
+  {
+    "price": "2775.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-26T23:38:45.412Z"
+  },
+  {
+    "price": "2783.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T00:08:45.923Z"
+  },
+  {
+    "price": "2747.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T00:38:46.486Z"
+  },
+  {
+    "price": "2723.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T01:08:46.893Z"
+  },
+  {
+    "price": "2700.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T01:38:47.438Z"
+  },
+  {
+    "price": "2702.98000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T02:08:48.021Z"
+  },
+  {
+    "price": "2707.94000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T02:38:48.400Z"
+  },
+  {
+    "price": "2716.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T03:08:48.806Z"
+  },
+  {
+    "price": "2718.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T03:38:49.260Z"
+  },
+  {
+    "price": "2709.66000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T04:08:49.796Z"
+  },
+  {
+    "price": "2714.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T04:38:50.432Z"
+  },
+  {
+    "price": "2709.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T05:08:50.853Z"
+  },
+  {
+    "price": "2719.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T05:38:51.327Z"
+  },
+  {
+    "price": "2720.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T06:08:51.856Z"
+  },
+  {
+    "price": "2732.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T06:38:52.414Z"
+  },
+  {
+    "price": "2737.34000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T07:08:52.847Z"
+  },
+  {
+    "price": "2745.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T07:38:53.251Z"
+  },
+  {
+    "price": "2730.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T08:08:53.633Z"
+  },
+  {
+    "price": "2742.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T08:38:54.032Z"
+  },
+  {
+    "price": "2744.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T09:08:54.551Z"
+  },
+  {
+    "price": "2756.93000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T09:38:55.166Z"
+  },
+  {
+    "price": "2765.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T10:08:55.798Z"
+  },
+  {
+    "price": "2776.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T10:38:56.307Z"
+  },
+  {
+    "price": "2806.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T11:08:56.749Z"
+  },
+  {
+    "price": "2819.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T11:38:57.495Z"
+  },
+  {
+    "price": "2828.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T12:08:57.958Z"
+  },
+  {
+    "price": "2819.29000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T12:38:58.448Z"
+  },
+  {
+    "price": "2767.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T13:53:59.550Z"
+  },
+  {
+    "price": "2775.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T14:24:00.193Z"
+  },
+  {
+    "price": "2750.37000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T14:54:00.644Z"
+  },
+  {
+    "price": "2791.92000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T15:24:01.089Z"
+  },
+  {
+    "price": "2798.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T15:54:01.467Z"
+  },
+  {
+    "price": "2784.35000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T16:24:01.907Z"
+  },
+  {
+    "price": "2769.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T16:54:02.352Z"
+  },
+  {
+    "price": "2770.78000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T17:24:02.863Z"
+  },
+  {
+    "price": "2769.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T17:54:03.307Z"
+  },
+  {
+    "price": "2765.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T18:24:03.786Z"
+  },
+  {
+    "price": "2737.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T18:54:04.337Z"
+  },
+  {
+    "price": "2706.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T19:24:04.799Z"
+  },
+  {
+    "price": "2628.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T19:54:05.957Z"
+  },
+  {
+    "price": "2600.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T20:24:06.360Z"
+  },
+  {
+    "price": "2641.98000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T20:54:06.952Z"
+  },
+  {
+    "price": "2589.45000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T21:24:07.413Z"
+  },
+  {
+    "price": "2616.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T21:54:07.912Z"
+  },
+  {
+    "price": "2620.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T22:24:08.421Z"
+  },
+  {
+    "price": "2608.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T22:54:08.895Z"
+  },
+  {
+    "price": "2594.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T23:24:09.306Z"
+  },
+  {
+    "price": "2625.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-27T23:54:09.669Z"
+  },
+  {
+    "price": "2605.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T00:24:10.074Z"
+  },
+  {
+    "price": "2607.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T00:54:10.486Z"
+  },
+  {
+    "price": "2652.32000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T01:24:10.943Z"
+  },
+  {
+    "price": "2663.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T01:54:11.370Z"
+  },
+  {
+    "price": "2640.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T02:24:11.814Z"
+  },
+  {
+    "price": "2599.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T02:54:12.189Z"
+  },
+  {
+    "price": "2611.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T03:24:12.679Z"
+  },
+  {
+    "price": "2612.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T03:54:13.204Z"
+  },
+  {
+    "price": "2620.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T04:24:13.661Z"
+  },
+  {
+    "price": "2609.63000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T04:54:14.053Z"
+  },
+  {
+    "price": "2622.28000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T05:24:14.495Z"
+  },
+  {
+    "price": "2612.14000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T05:54:14.871Z"
+  },
+  {
+    "price": "2597.36000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T06:24:15.319Z"
+  },
+  {
+    "price": "2610.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T06:54:15.830Z"
+  },
+  {
+    "price": "2627.43000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T07:24:16.298Z"
+  },
+  {
+    "price": "2631.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T07:54:16.766Z"
+  },
+  {
+    "price": "2634.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T08:24:17.340Z"
+  },
+  {
+    "price": "2625.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T08:54:17.818Z"
+  },
+  {
+    "price": "2630.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T09:24:18.358Z"
+  },
+  {
+    "price": "2637.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T09:54:18.835Z"
+  },
+  {
+    "price": "2632.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T10:24:19.232Z"
+  },
+  {
+    "price": "2639.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T10:54:19.756Z"
+  },
+  {
+    "price": "2631.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T11:24:20.212Z"
+  },
+  {
+    "price": "2640.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T11:54:20.744Z"
+  },
+  {
+    "price": "2658.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T12:24:21.280Z"
+  },
+  {
+    "price": "2649.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T12:54:21.681Z"
+  },
+  {
+    "price": "2625.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T14:09:22.947Z"
+  },
+  {
+    "price": "2712.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T14:39:23.978Z"
+  },
+  {
+    "price": "2744.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T15:09:24.500Z"
+  },
+  {
+    "price": "2810.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T15:39:25.109Z"
+  },
+  {
+    "price": "2818.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T16:09:25.504Z"
+  },
+  {
+    "price": "2822.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T16:39:26.009Z"
+  },
+  {
+    "price": "2800.98000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T17:09:26.481Z"
+  },
+  {
+    "price": "2796.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T17:39:26.938Z"
+  },
+  {
+    "price": "2818.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T18:09:27.414Z"
+  },
+  {
+    "price": "2812.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T18:39:27.974Z"
+  },
+  {
+    "price": "2794.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T19:09:28.406Z"
+  },
+  {
+    "price": "2797.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T19:39:28.764Z"
+  },
+  {
+    "price": "2810.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T20:09:29.325Z"
+  },
+  {
+    "price": "2821.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T20:39:29.819Z"
+  },
+  {
+    "price": "2822.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T21:09:30.280Z"
+  },
+  {
+    "price": "2822.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T21:39:30.731Z"
+  },
+  {
+    "price": "2846.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T22:09:31.193Z"
+  },
+  {
+    "price": "2919.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T22:39:31.556Z"
+  },
+  {
+    "price": "2904.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T23:09:32.118Z"
+  },
+  {
+    "price": "2914.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-02-28T23:39:32.618Z"
+  },
+  {
+    "price": "2948.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T00:09:33.042Z"
+  },
+  {
+    "price": "2949.01000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T00:59:33.776Z"
+  },
+  {
+    "price": "2924.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T01:29:34.130Z"
+  },
+  {
+    "price": "2918.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T01:59:34.497Z"
+  },
+  {
+    "price": "2910.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T02:29:34.932Z"
+  },
+  {
+    "price": "2917.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T02:59:35.462Z"
+  },
+  {
+    "price": "2902.43000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T03:29:35.886Z"
+  },
+  {
+    "price": "2914.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T03:59:36.384Z"
+  },
+  {
+    "price": "2915.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T04:29:36.984Z"
+  },
+  {
+    "price": "2925.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T04:59:37.522Z"
+  },
+  {
+    "price": "2920.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T05:29:37.875Z"
+  },
+  {
+    "price": "2913.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T05:59:38.255Z"
+  },
+  {
+    "price": "2910.47000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T06:29:38.663Z"
+  },
+  {
+    "price": "2916.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T06:59:39.056Z"
+  },
+  {
+    "price": "2924.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T07:29:39.558Z"
+  },
+  {
+    "price": "2923.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T07:59:40.021Z"
+  },
+  {
+    "price": "2924.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T08:29:40.411Z"
+  },
+  {
+    "price": "2925.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T08:59:40.811Z"
+  },
+  {
+    "price": "2902.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T09:29:41.278Z"
+  },
+  {
+    "price": "2894.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T09:59:41.644Z"
+  },
+  {
+    "price": "2876.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T10:29:42.165Z"
+  },
+  {
+    "price": "2920.47000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T10:59:42.703Z"
+  },
+  {
+    "price": "2907.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T11:29:43.222Z"
+  },
+  {
+    "price": "2903.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T11:59:43.710Z"
+  },
+  {
+    "price": "2943.86000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T12:29:44.154Z"
+  },
+  {
+    "price": "2948.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T12:59:44.529Z"
+  },
+  {
+    "price": "3029.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T14:14:46.007Z"
+  },
+  {
+    "price": "2988.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T14:44:46.365Z"
+  },
+  {
+    "price": "2958.11000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T15:14:46.803Z"
+  },
+  {
+    "price": "2939.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T15:44:47.348Z"
+  },
+  {
+    "price": "2946.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T16:14:47.715Z"
+  },
+  {
+    "price": "2928.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T16:44:48.192Z"
+  },
+  {
+    "price": "2918.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T17:14:48.674Z"
+  },
+  {
+    "price": "2929.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T17:44:49.053Z"
+  },
+  {
+    "price": "2921.94000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T18:14:49.521Z"
+  },
+  {
+    "price": "2950.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T18:44:49.919Z"
+  },
+  {
+    "price": "2946.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T19:14:50.352Z"
+  },
+  {
+    "price": "2964.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T19:44:50.936Z"
+  },
+  {
+    "price": "2960.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T20:14:51.300Z"
+  },
+  {
+    "price": "2965.11000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T20:44:51.717Z"
+  },
+  {
+    "price": "2961.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T21:14:52.069Z"
+  },
+  {
+    "price": "2942.14000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T21:44:52.551Z"
+  },
+  {
+    "price": "2951.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T22:14:52.974Z"
+  },
+  {
+    "price": "2969.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T22:44:53.357Z"
+  },
+  {
+    "price": "2965.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T23:14:53.763Z"
+  },
+  {
+    "price": "2974.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-01T23:44:54.221Z"
+  },
+  {
+    "price": "2977.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T00:14:54.628Z"
+  },
+  {
+    "price": "2934.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T00:44:55.096Z"
+  },
+  {
+    "price": "2951.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T01:14:55.567Z"
+  },
+  {
+    "price": "2925.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T01:44:56.151Z"
+  },
+  {
+    "price": "2934.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T02:14:56.514Z"
+  },
+  {
+    "price": "2930.15000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T02:44:56.967Z"
+  },
+  {
+    "price": "2951.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T03:14:57.525Z"
+  },
+  {
+    "price": "2995.93000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T03:44:58.047Z"
+  },
+  {
+    "price": "3023.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T04:14:58.544Z"
+  },
+  {
+    "price": "3021.24000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T04:44:58.916Z"
+  },
+  {
+    "price": "2998.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T05:14:59.298Z"
+  },
+  {
+    "price": "3000.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T05:44:59.772Z"
+  },
+  {
+    "price": "2988.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T06:15:00.315Z"
+  },
+  {
+    "price": "2976.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T06:45:00.854Z"
+  },
+  {
+    "price": "2963.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T07:15:01.390Z"
+  },
+  {
+    "price": "2975.33000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T07:45:01.873Z"
+  },
+  {
+    "price": "2969.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T08:15:02.296Z"
+  },
+  {
+    "price": "3000.04000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T08:45:02.705Z"
+  },
+  {
+    "price": "2986.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T09:15:03.239Z"
+  },
+  {
+    "price": "2992.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T09:45:03.597Z"
+  },
+  {
+    "price": "3001.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T10:15:04.078Z"
+  },
+  {
+    "price": "3013.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T10:45:04.590Z"
+  },
+  {
+    "price": "3002.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T11:15:04.980Z"
+  },
+  {
+    "price": "3007.64000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T11:45:05.414Z"
+  },
+  {
+    "price": "3021.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T12:15:05.904Z"
+  },
+  {
+    "price": "2978.25000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T12:45:06.484Z"
+  },
+  {
+    "price": "2942.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T14:00:07.570Z"
+  },
+  {
+    "price": "2965.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T14:30:08.059Z"
+  },
+  {
+    "price": "3019.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T15:00:08.537Z"
+  },
+  {
+    "price": "2991.37000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T15:30:08.980Z"
+  },
+  {
+    "price": "2953.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T16:00:09.437Z"
+  },
+  {
+    "price": "2969.43000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T16:30:09.867Z"
+  },
+  {
+    "price": "2963.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T17:00:10.288Z"
+  },
+  {
+    "price": "2962.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T17:30:10.688Z"
+  },
+  {
+    "price": "2950.34000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T18:00:11.132Z"
+  },
+  {
+    "price": "2953.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T18:30:11.604Z"
+  },
+  {
+    "price": "2927.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T19:00:12.034Z"
+  },
+  {
+    "price": "2921.63000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T19:30:12.462Z"
+  },
+  {
+    "price": "2935.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T20:00:12.903Z"
+  },
+  {
+    "price": "2934.34000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T20:30:13.321Z"
+  },
+  {
+    "price": "2949.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T21:00:13.818Z"
+  },
+  {
+    "price": "2944.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T21:30:14.309Z"
+  },
+  {
+    "price": "2975.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T22:00:14.827Z"
+  },
+  {
+    "price": "2970.90000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T22:30:15.338Z"
+  },
+  {
+    "price": "2961.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T23:00:15.851Z"
+  },
+  {
+    "price": "2958.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-02T23:30:16.338Z"
+  },
+  {
+    "price": "2948.92000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T00:00:16.877Z"
+  },
+  {
+    "price": "2952.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T00:30:17.311Z"
+  },
+  {
+    "price": "2966.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T01:00:17.785Z"
+  },
+  {
+    "price": "2952.54000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T01:30:18.315Z"
+  },
+  {
+    "price": "2946.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T02:00:18.900Z"
+  },
+  {
+    "price": "2934.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T02:30:19.342Z"
+  },
+  {
+    "price": "2932.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T03:00:19.799Z"
+  },
+  {
+    "price": "2922.98000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T03:30:20.311Z"
+  },
+  {
+    "price": "2898.66000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T04:00:20.973Z"
+  },
+  {
+    "price": "2907.01000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T04:30:21.675Z"
+  },
+  {
+    "price": "2904.57000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T05:00:22.128Z"
+  },
+  {
+    "price": "2906.94000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T05:30:22.581Z"
+  },
+  {
+    "price": "2902.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T06:00:23.125Z"
+  },
+  {
+    "price": "2891.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T06:30:23.585Z"
+  },
+  {
+    "price": "2914.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T07:00:23.991Z"
+  },
+  {
+    "price": "2910.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T07:30:24.425Z"
+  },
+  {
+    "price": "2908.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T08:00:24.848Z"
+  },
+  {
+    "price": "2908.77000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T08:30:25.636Z"
+  },
+  {
+    "price": "2906.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T09:00:26.142Z"
+  },
+  {
+    "price": "2884.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T09:30:26.647Z"
+  },
+  {
+    "price": "2888.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T10:00:27.082Z"
+  },
+  {
+    "price": "2887.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T10:30:27.501Z"
+  },
+  {
+    "price": "2911.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T11:00:28.004Z"
+  },
+  {
+    "price": "2928.25000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T11:30:28.554Z"
+  },
+  {
+    "price": "2913.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T12:00:28.988Z"
+  },
+  {
+    "price": "2926.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T12:30:29.340Z"
+  },
+  {
+    "price": "2923.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T13:45:30.639Z"
+  },
+  {
+    "price": "2925.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T14:15:31.201Z"
+  },
+  {
+    "price": "2895.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T14:45:31.556Z"
+  },
+  {
+    "price": "2854.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T15:15:31.983Z"
+  },
+  {
+    "price": "2823.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T15:45:32.472Z"
+  },
+  {
+    "price": "2819.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T16:15:33.133Z"
+  },
+  {
+    "price": "2823.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T16:45:33.773Z"
+  },
+  {
+    "price": "2820.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T17:15:34.194Z"
+  },
+  {
+    "price": "2814.57000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T17:45:34.689Z"
+  },
+  {
+    "price": "2831.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T18:15:35.083Z"
+  },
+  {
+    "price": "2816.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T18:45:35.443Z"
+  },
+  {
+    "price": "2820.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T19:15:35.958Z"
+  },
+  {
+    "price": "2814.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T19:45:36.342Z"
+  },
+  {
+    "price": "2809.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T20:15:36.828Z"
+  },
+  {
+    "price": "2808.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T20:45:37.238Z"
+  },
+  {
+    "price": "2810.47000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T21:15:37.632Z"
+  },
+  {
+    "price": "2801.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T21:45:38.147Z"
+  },
+  {
+    "price": "2827.43000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T22:15:38.751Z"
+  },
+  {
+    "price": "2839.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T22:45:39.143Z"
+  },
+  {
+    "price": "2841.08000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T23:15:39.547Z"
+  },
+  {
+    "price": "2837.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-03T23:45:39.946Z"
+  },
+  {
+    "price": "2816.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T00:15:40.503Z"
+  },
+  {
+    "price": "2796.35000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T00:45:40.970Z"
+  },
+  {
+    "price": "2712.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T01:15:41.730Z"
+  },
+  {
+    "price": "2717.45000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T01:45:42.221Z"
+  },
+  {
+    "price": "2723.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T02:15:42.777Z"
+  },
+  {
+    "price": "2731.86000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T02:45:43.207Z"
+  },
+  {
+    "price": "2722.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T03:15:43.616Z"
+  },
+  {
+    "price": "2721.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T03:45:44.068Z"
+  },
+  {
+    "price": "2724.11000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T04:15:44.574Z"
+  },
+  {
+    "price": "2721.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T04:45:45.105Z"
+  },
+  {
+    "price": "2731.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T05:15:45.654Z"
+  },
+  {
+    "price": "2722.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T05:45:46.103Z"
+  },
+  {
+    "price": "2730.95000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T06:15:46.472Z"
+  },
+  {
+    "price": "2723.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T06:45:46.997Z"
+  },
+  {
+    "price": "2726.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T07:15:47.516Z"
+  },
+  {
+    "price": "2723.20000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T07:45:48.120Z"
+  },
+  {
+    "price": "2745.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T08:15:48.646Z"
+  },
+  {
+    "price": "2735.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T08:45:49.150Z"
+  },
+  {
+    "price": "2734.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T09:15:49.614Z"
+  },
+  {
+    "price": "2736.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T09:45:50.125Z"
+  },
+  {
+    "price": "2738.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T10:15:50.593Z"
+  },
+  {
+    "price": "2745.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T10:45:51.042Z"
+  },
+  {
+    "price": "2739.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T11:15:51.426Z"
+  },
+  {
+    "price": "2742.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T11:45:51.945Z"
+  },
+  {
+    "price": "2737.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T12:15:52.368Z"
+  },
+  {
+    "price": "2744.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T12:45:52.795Z"
+  },
+  {
+    "price": "2721.24000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T14:00:54.053Z"
+  },
+  {
+    "price": "2708.70000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T14:30:54.642Z"
+  },
+  {
+    "price": "2708.33000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T15:00:55.114Z"
+  },
+  {
+    "price": "2680.15000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T15:30:55.496Z"
+  },
+  {
+    "price": "2675.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T16:00:55.971Z"
+  },
+  {
+    "price": "2665.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T16:30:56.546Z"
+  },
+  {
+    "price": "2672.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T17:00:56.991Z"
+  },
+  {
+    "price": "2689.88000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T17:30:57.435Z"
+  },
+  {
+    "price": "2693.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T18:00:57.955Z"
+  },
+  {
+    "price": "2684.94000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T18:30:58.336Z"
+  },
+  {
+    "price": "2673.57000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T19:00:58.778Z"
+  },
+  {
+    "price": "2636.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T19:30:59.228Z"
+  },
+  {
+    "price": "2615.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T20:00:59.622Z"
+  },
+  {
+    "price": "2608.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T20:31:00.195Z"
+  },
+  {
+    "price": "2620.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T21:01:00.517Z"
+  },
+  {
+    "price": "2611.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T21:31:01.004Z"
+  },
+  {
+    "price": "2608.33000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T22:11:01.492Z"
+  },
+  {
+    "price": "2592.64000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T22:41:01.830Z"
+  },
+  {
+    "price": "2613.62000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T23:11:02.140Z"
+  },
+  {
+    "price": "2619.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-04T23:41:02.566Z"
+  },
+  {
+    "price": "2615.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T00:11:02.900Z"
+  },
+  {
+    "price": "2605.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T00:41:03.227Z"
+  },
+  {
+    "price": "2611.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T01:11:03.682Z"
+  },
+  {
+    "price": "2610.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T01:41:04.000Z"
+  },
+  {
+    "price": "2618.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T02:11:04.312Z"
+  },
+  {
+    "price": "2608.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T02:41:04.703Z"
+  },
+  {
+    "price": "2613.27000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T03:11:05.028Z"
+  },
+  {
+    "price": "2629.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T03:41:05.365Z"
+  },
+  {
+    "price": "2621.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T04:11:05.743Z"
+  },
+  {
+    "price": "2624.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T04:41:06.109Z"
+  },
+  {
+    "price": "2620.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T05:11:06.419Z"
+  },
+  {
+    "price": "2620.03000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T05:41:06.919Z"
+  },
+  {
+    "price": "2625.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T06:11:07.313Z"
+  },
+  {
+    "price": "2627.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T06:41:07.622Z"
+  },
+  {
+    "price": "2627.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T07:11:07.971Z"
+  },
+  {
+    "price": "2636.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T07:41:08.378Z"
+  },
+  {
+    "price": "2636.50000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T08:11:08.752Z"
+  },
+  {
+    "price": "2639.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T08:41:09.239Z"
+  },
+  {
+    "price": "2644.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T09:11:09.599Z"
+  },
+  {
+    "price": "2650.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T09:41:09.943Z"
+  },
+  {
+    "price": "2642.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T10:11:10.269Z"
+  },
+  {
+    "price": "2642.39000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T10:41:10.632Z"
+  },
+  {
+    "price": "2653.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T11:11:11.000Z"
+  },
+  {
+    "price": "2648.39000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T11:41:11.289Z"
+  },
+  {
+    "price": "2655.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T12:11:11.739Z"
+  },
+  {
+    "price": "2662.04000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T12:41:12.086Z"
+  },
+  {
+    "price": "2638.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T13:56:12.888Z"
+  },
+  {
+    "price": "2644.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T14:26:13.159Z"
+  },
+  {
+    "price": "2642.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T14:56:13.455Z"
+  },
+  {
+    "price": "2639.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T15:26:13.844Z"
+  },
+  {
+    "price": "2643.26000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T15:56:14.195Z"
+  },
+  {
+    "price": "2648.53000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T16:26:14.480Z"
+  },
+  {
+    "price": "2662.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T16:56:14.965Z"
+  },
+  {
+    "price": "2666.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T17:26:15.323Z"
+  },
+  {
+    "price": "2667.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T17:56:15.649Z"
+  },
+  {
+    "price": "2661.15000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T18:26:16.089Z"
+  },
+  {
+    "price": "2668.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T18:56:16.469Z"
+  },
+  {
+    "price": "2672.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T19:26:16.846Z"
+  },
+  {
+    "price": "2672.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T19:56:17.275Z"
+  },
+  {
+    "price": "2672.55000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T20:26:17.697Z"
+  },
+  {
+    "price": "2670.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T20:56:18.083Z"
+  },
+  {
+    "price": "2666.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T21:26:18.452Z"
+  },
+  {
+    "price": "2659.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T21:56:18.753Z"
+  },
+  {
+    "price": "2661.10000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T22:26:19.142Z"
+  },
+  {
+    "price": "2669.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T22:56:19.466Z"
+  },
+  {
+    "price": "2663.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T23:26:19.840Z"
+  },
+  {
+    "price": "2664.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-05T23:56:20.141Z"
+  },
+  {
+    "price": "2669.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T00:26:20.534Z"
+  },
+  {
+    "price": "2670.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T00:56:20.915Z"
+  },
+  {
+    "price": "2670.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T01:26:21.207Z"
+  },
+  {
+    "price": "2660.58000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T01:56:21.550Z"
+  },
+  {
+    "price": "2662.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T02:26:21.899Z"
+  },
+  {
+    "price": "2662.65000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T02:56:22.404Z"
+  },
+  {
+    "price": "2658.37000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T03:26:22.774Z"
+  },
+  {
+    "price": "2645.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T03:56:23.193Z"
+  },
+  {
+    "price": "2629.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T04:26:23.500Z"
+  },
+  {
+    "price": "2648.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T04:56:23.821Z"
+  },
+  {
+    "price": "2654.15000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T05:26:24.200Z"
+  },
+  {
+    "price": "2652.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T05:56:24.592Z"
+  },
+  {
+    "price": "2658.79000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T06:26:24.908Z"
+  },
+  {
+    "price": "2647.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T06:56:25.245Z"
+  },
+  {
+    "price": "2640.48000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T08:16:43.594Z"
+  },
+  {
+    "price": "2638.18000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T09:01:03.186Z"
+  },
+  {
+    "price": "2626.42000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T09:36:17.109Z"
+  },
+  {
+    "price": "2598.33000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T10:06:18.148Z"
+  },
+  {
+    "price": "2610.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T10:43:24.141Z"
+  },
+  {
+    "price": "2598.43000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T11:13:25.257Z"
+  },
+  {
+    "price": "2600.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T11:43:26.466Z"
+  },
+  {
+    "price": "2608.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T12:13:27.556Z"
+  },
+  {
+    "price": "2616.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T12:43:28.766Z"
+  },
+  {
+    "price": "2638.92000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T13:58:31.815Z"
+  },
+  {
+    "price": "2622.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-06T14:28:33.013Z"
   },
   {
     "price": "2627.37000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T03:18:20.009Z"
+    "timestamp": "2022-03-06T14:58:34.159Z"
   },
   {
-    "price": "2688.73000000",
+    "price": "2622.09000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T03:48:21.082Z"
+    "timestamp": "2022-03-06T15:28:35.307Z"
   },
   {
-    "price": "2705.90000000",
+    "price": "2625.46000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T04:18:22.326Z"
+    "timestamp": "2022-03-06T15:58:36.607Z"
   },
   {
-    "price": "2711.64000000",
+    "price": "2647.47000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T04:48:23.522Z"
+    "timestamp": "2022-03-06T16:28:37.600Z"
   },
   {
-    "price": "2712.77000000",
+    "price": "2646.58000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T05:18:24.641Z"
+    "timestamp": "2022-03-06T16:58:38.865Z"
   },
   {
-    "price": "2708.10000000",
+    "price": "2632.09000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T05:48:25.865Z"
+    "timestamp": "2022-03-06T17:28:40.029Z"
   },
   {
-    "price": "2712.86000000",
+    "price": "2632.40000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T06:18:27.083Z"
+    "timestamp": "2022-03-06T17:58:40.906Z"
   },
   {
-    "price": "2718.31000000",
+    "price": "2635.57000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T06:48:28.222Z"
+    "timestamp": "2022-03-06T18:28:42.073Z"
   },
   {
-    "price": "2723.84000000",
+    "price": "2622.35000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T07:18:29.392Z"
+    "timestamp": "2022-03-06T18:58:43.183Z"
   },
   {
-    "price": "2739.53000000",
+    "price": "2626.40000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T07:48:30.460Z"
+    "timestamp": "2022-03-06T19:28:44.326Z"
   },
   {
-    "price": "2730.49000000",
+    "price": "2609.17000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T08:18:31.663Z"
+    "timestamp": "2022-03-06T19:58:45.504Z"
   },
   {
-    "price": "2750.95000000",
+    "price": "2620.48000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T08:48:32.767Z"
+    "timestamp": "2022-03-06T20:28:46.527Z"
   },
   {
-    "price": "2755.74000000",
+    "price": "2616.08000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T09:18:33.977Z"
+    "timestamp": "2022-03-06T20:58:47.598Z"
   },
   {
-    "price": "2757.94000000",
+    "price": "2628.93000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T09:48:35.078Z"
+    "timestamp": "2022-03-06T21:28:48.771Z"
   },
   {
-    "price": "2755.30000000",
+    "price": "2627.75000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T10:18:36.284Z"
+    "timestamp": "2022-03-06T21:58:50.152Z"
   },
   {
-    "price": "2752.23000000",
+    "price": "2639.20000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T10:48:37.386Z"
+    "timestamp": "2022-03-06T22:28:51.381Z"
   },
   {
-    "price": "2758.87000000",
+    "price": "2630.18000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T11:18:38.557Z"
+    "timestamp": "2022-03-06T22:58:52.584Z"
   },
   {
-    "price": "2743.34000000",
+    "price": "2549.15000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T11:48:39.606Z"
+    "timestamp": "2022-03-06T23:28:53.748Z"
   },
   {
-    "price": "2758.69000000",
+    "price": "2550.57000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T12:18:40.690Z"
+    "timestamp": "2022-03-06T23:58:54.926Z"
   },
   {
-    "price": "2743.10000000",
+    "price": "2531.02000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T12:48:41.988Z"
+    "timestamp": "2022-03-07T00:28:56.066Z"
   },
   {
-    "price": "2736.72000000",
+    "price": "2542.60000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T13:18:43.108Z"
+    "timestamp": "2022-03-07T00:58:57.198Z"
   },
   {
-    "price": "2724.87000000",
+    "price": "2549.39000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T13:48:44.045Z"
+    "timestamp": "2022-03-07T01:28:58.357Z"
   },
   {
-    "price": "2734.71000000",
+    "price": "2546.49000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T14:18:45.225Z"
+    "timestamp": "2022-03-07T01:58:59.563Z"
   },
   {
-    "price": "2740.75000000",
+    "price": "2529.84000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T14:48:46.215Z"
+    "timestamp": "2022-03-07T02:29:00.760Z"
   },
   {
-    "price": "2739.72000000",
+    "price": "2516.08000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T15:18:47.431Z"
+    "timestamp": "2022-03-07T02:59:01.603Z"
   },
   {
-    "price": "2758.51000000",
+    "price": "2525.38000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T15:48:48.661Z"
+    "timestamp": "2022-03-07T03:29:02.671Z"
   },
   {
-    "price": "2749.33000000",
+    "price": "2525.25000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T16:18:49.986Z"
+    "timestamp": "2022-03-07T03:59:03.810Z"
   },
   {
-    "price": "2747.06000000",
+    "price": "2528.38000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T16:48:51.068Z"
+    "timestamp": "2022-03-07T04:29:04.862Z"
   },
   {
-    "price": "2746.42000000",
+    "price": "2527.41000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T17:18:52.250Z"
+    "timestamp": "2022-03-07T04:59:05.998Z"
   },
   {
-    "price": "2743.63000000",
+    "price": "2534.02000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T17:48:53.424Z"
+    "timestamp": "2022-03-07T05:29:07.316Z"
   },
   {
-    "price": "2728.13000000",
+    "price": "2531.15000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T18:18:54.623Z"
+    "timestamp": "2022-03-07T05:59:08.541Z"
   },
   {
-    "price": "2703.92000000",
+    "price": "2534.75000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T18:48:55.696Z"
+    "timestamp": "2022-03-07T06:29:09.591Z"
   },
   {
-    "price": "2683.59000000",
+    "price": "2538.92000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T19:18:56.887Z"
+    "timestamp": "2022-03-07T06:59:10.627Z"
   },
   {
-    "price": "2717.26000000",
+    "price": "2532.31000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T19:48:58.140Z"
+    "timestamp": "2022-03-07T07:29:11.835Z"
   },
   {
-    "price": "2712.72000000",
+    "price": "2521.14000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T20:18:59.410Z"
+    "timestamp": "2022-03-07T07:59:12.858Z"
   },
   {
-    "price": "2694.61000000",
+    "price": "2515.00000000",
     "symbol": "ETHBUSD",
-    "timestamp": "2022-03-09T20:49:00.403Z"
+    "timestamp": "2022-03-07T08:29:14.170Z"
+  },
+  {
+    "price": "2533.66000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T08:59:15.365Z"
+  },
+  {
+    "price": "2537.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T09:29:16.535Z"
+  },
+  {
+    "price": "2531.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T09:59:17.729Z"
+  },
+  {
+    "price": "2528.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T10:29:18.751Z"
+  },
+  {
+    "price": "2524.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T10:59:19.902Z"
+  },
+  {
+    "price": "2534.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T11:29:21.127Z"
+  },
+  {
+    "price": "2543.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T11:59:22.450Z"
+  },
+  {
+    "price": "2563.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T12:29:23.840Z"
+  },
+  {
+    "price": "2559.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T12:59:24.816Z"
+  },
+  {
+    "price": "2636.74000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T14:14:27.872Z"
+  },
+  {
+    "price": "2623.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T14:44:28.873Z"
+  },
+  {
+    "price": "2617.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T15:14:29.992Z"
+  },
+  {
+    "price": "2614.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T15:44:31.069Z"
+  },
+  {
+    "price": "2626.49000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T16:14:32.166Z"
+  },
+  {
+    "price": "2604.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T16:44:33.168Z"
+  },
+  {
+    "price": "2579.30000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T17:14:34.390Z"
+  },
+  {
+    "price": "2586.06000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T17:44:35.545Z"
+  },
+  {
+    "price": "2530.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T18:14:36.722Z"
+  },
+  {
+    "price": "2530.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T18:44:37.758Z"
+  },
+  {
+    "price": "2524.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T19:14:38.878Z"
+  },
+  {
+    "price": "2465.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T19:44:39.890Z"
+  },
+  {
+    "price": "2463.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T20:14:40.818Z"
+  },
+  {
+    "price": "2472.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T20:44:42.000Z"
+  },
+  {
+    "price": "2482.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T21:14:43.020Z"
+  },
+  {
+    "price": "2482.79000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T21:44:44.350Z"
+  },
+  {
+    "price": "2504.86000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T22:14:45.450Z"
+  },
+  {
+    "price": "2519.03000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T22:44:46.640Z"
+  },
+  {
+    "price": "2494.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T23:14:47.924Z"
+  },
+  {
+    "price": "2510.45000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-07T23:44:49.039Z"
+  },
+  {
+    "price": "2503.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T00:14:50.344Z"
+  },
+  {
+    "price": "2518.13000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T00:44:51.622Z"
+  },
+  {
+    "price": "2535.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T01:14:52.889Z"
+  },
+  {
+    "price": "2527.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T01:44:53.993Z"
+  },
+  {
+    "price": "2530.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T02:14:55.196Z"
+  },
+  {
+    "price": "2558.07000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T02:44:56.446Z"
+  },
+  {
+    "price": "2550.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T03:14:57.778Z"
+  },
+  {
+    "price": "2536.60000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T03:44:58.884Z"
+  },
+  {
+    "price": "2560.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T04:15:00.057Z"
+  },
+  {
+    "price": "2547.71000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T04:45:01.293Z"
+  },
+  {
+    "price": "2530.82000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T05:15:02.393Z"
+  },
+  {
+    "price": "2520.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T05:45:03.563Z"
+  },
+  {
+    "price": "2522.84000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T06:15:04.691Z"
+  },
+  {
+    "price": "2510.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T06:45:05.822Z"
+  },
+  {
+    "price": "2512.86000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T07:15:07.046Z"
+  },
+  {
+    "price": "2542.57000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T07:45:08.411Z"
+  },
+  {
+    "price": "2546.38000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T08:15:13.739Z"
+  },
+  {
+    "price": "2579.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T08:45:15.111Z"
+  },
+  {
+    "price": "2570.89000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T09:15:16.303Z"
+  },
+  {
+    "price": "2578.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T09:45:17.314Z"
+  },
+  {
+    "price": "2572.35000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T10:15:18.283Z"
+  },
+  {
+    "price": "2587.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T10:45:19.509Z"
+  },
+  {
+    "price": "2586.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T11:15:20.778Z"
+  },
+  {
+    "price": "2588.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T11:45:22.038Z"
+  },
+  {
+    "price": "2591.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T12:15:23.271Z"
+  },
+  {
+    "price": "2571.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T12:45:24.364Z"
+  },
+  {
+    "price": "2586.74000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T14:00:27.140Z"
+  },
+  {
+    "price": "2590.00000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T14:30:28.284Z"
+  },
+  {
+    "price": "2568.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T15:00:29.392Z"
+  },
+  {
+    "price": "2563.81000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T15:30:30.404Z"
+  },
+  {
+    "price": "2567.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T16:00:31.283Z"
+  },
+  {
+    "price": "2532.35000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T16:30:32.499Z"
+  },
+  {
+    "price": "2541.91000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T17:00:33.590Z"
+  },
+  {
+    "price": "2588.75000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T17:30:34.567Z"
+  },
+  {
+    "price": "2599.32000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T18:00:35.670Z"
+  },
+  {
+    "price": "2591.22000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T18:30:36.948Z"
+  },
+  {
+    "price": "2570.57000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T19:00:38.147Z"
+  },
+  {
+    "price": "2574.56000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T19:30:39.270Z"
+  },
+  {
+    "price": "2580.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T20:00:40.437Z"
+  },
+  {
+    "price": "2563.72000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T20:30:41.667Z"
+  },
+  {
+    "price": "2553.66000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T21:00:43.029Z"
+  },
+  {
+    "price": "2558.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T21:30:44.070Z"
+  },
+  {
+    "price": "2559.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T22:00:45.187Z"
+  },
+  {
+    "price": "2572.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T22:30:46.315Z"
+  },
+  {
+    "price": "2570.44000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T23:00:47.505Z"
+  },
+  {
+    "price": "2584.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-08T23:30:48.057Z"
+  },
+  {
+    "price": "2579.74000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T00:06:12.629Z"
+  },
+  {
+    "price": "2574.17000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T00:36:13.938Z"
+  },
+  {
+    "price": "2589.83000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T01:06:15.170Z"
+  },
+  {
+    "price": "2616.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T01:36:16.298Z"
+  },
+  {
+    "price": "2609.52000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T02:06:17.476Z"
+  },
+  {
+    "price": "2634.26000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T02:36:18.553Z"
+  },
+  {
+    "price": "2619.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T03:06:19.577Z"
+  },
+  {
+    "price": "2686.09000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T03:36:20.718Z"
+  },
+  {
+    "price": "2701.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T04:06:21.734Z"
+  },
+  {
+    "price": "2713.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T04:36:23.099Z"
+  },
+  {
+    "price": "2720.80000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T05:06:24.293Z"
+  },
+  {
+    "price": "2714.40000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T05:36:25.418Z"
+  },
+  {
+    "price": "2712.59000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T06:06:26.557Z"
+  },
+  {
+    "price": "2711.04000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T06:36:27.633Z"
+  },
+  {
+    "price": "2721.61000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T07:06:29.027Z"
+  },
+  {
+    "price": "2737.51000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T07:36:30.058Z"
+  },
+  {
+    "price": "2729.96000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T08:06:31.196Z"
+  },
+  {
+    "price": "2734.16000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T08:36:32.391Z"
+  },
+  {
+    "price": "2753.33000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T09:06:33.476Z"
+  },
+  {
+    "price": "2760.31000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T09:36:34.553Z"
+  },
+  {
+    "price": "2757.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T10:06:35.876Z"
+  },
+  {
+    "price": "2749.41000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T10:36:36.910Z"
+  },
+  {
+    "price": "2761.73000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T11:06:38.058Z"
+  },
+  {
+    "price": "2748.87000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T11:36:39.199Z"
+  },
+  {
+    "price": "2753.46000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T12:06:40.239Z"
+  },
+  {
+    "price": "2754.68000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T12:36:41.523Z"
+  },
+  {
+    "price": "2719.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T13:51:44.180Z"
+  },
+  {
+    "price": "2736.78000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T14:21:45.329Z"
+  },
+  {
+    "price": "2735.97000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T14:51:46.350Z"
+  },
+  {
+    "price": "2738.67000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T15:21:47.564Z"
+  },
+  {
+    "price": "2757.12000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T15:51:48.765Z"
+  },
+  {
+    "price": "2750.02000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T16:21:50.023Z"
+  },
+  {
+    "price": "2745.23000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T16:51:51.193Z"
+  },
+  {
+    "price": "2734.99000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T17:21:52.378Z"
+  },
+  {
+    "price": "2745.78000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T17:51:53.564Z"
+  },
+  {
+    "price": "2716.69000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T18:21:54.763Z"
+  },
+  {
+    "price": "2707.21000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T18:51:55.833Z"
+  },
+  {
+    "price": "2688.76000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T19:21:57.008Z"
+  },
+  {
+    "price": "2719.85000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T19:51:58.293Z"
+  },
+  {
+    "price": "2713.19000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T20:21:59.469Z"
+  },
+  {
+    "price": "2683.28000000",
+    "symbol": "ETHBUSD",
+    "timestamp": "2022-03-09T20:52:00.535Z"
   }
 ]

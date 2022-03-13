@@ -39,12 +39,17 @@ export function getLatestPriceApiLog(files: string[]): PriceData[] {
       latestPrices.sort((a, b) =>
         a.timestamp === b.timestamp ? 0 : a.timestamp < b.timestamp ? -1 : 1
       );
-      return latestPrices.filter(
-        (p, i) =>
-          !areTimestampsEqualToTheMinute(
-            p.timestamp,
-            latestPrices[i - 1]?.timestamp ?? new Date().toISOString()
+      return (
+        latestPrices
+          .filter(
+            (p, i) =>
+              !areTimestampsEqualToTheMinute(
+                p.timestamp,
+                latestPrices[i - 1]?.timestamp ?? new Date().toISOString()
+              )
           )
+          // Found some missing data for the first few minutes
+          .filter((a, i) => i > 14)
       );
     })
     .flatMap((x) => x);

@@ -14,11 +14,10 @@ if (parsePriceBot) {
   getAllPriceDataFromLogs();
 } else if (getApiPricesForSymbol) {
   writeApiPricesForSymbol("adabusd");
-
-  // writeApiPricesForSymbol("avaxbusd");
+  writeApiPricesForSymbol("avaxbusd");
   // writeApiPricesForSymbol("lunabusd");
-  // writeApiPricesForSymbol("ethbusd");
-  // writeApiPricesForSymbol("xrpbusd");
+  writeApiPricesForSymbol("ethbusd");
+  writeApiPricesForSymbol("xrpbusd");
 } else if (simulate) {
   console.time("simul");
 

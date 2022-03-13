@@ -1,2172 +1,2092 @@
 [
   {
-    "price": "84.33000000",
+    "price": "84.40000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T10:42:27.220Z"
-  },
-  {
-    "price": "82.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T11:46:37.852Z"
-  },
-  {
-    "price": "83.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T15:41:00.555Z"
-  },
-  {
-    "price": "84.66000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T17:38:29.170Z"
-  },
-  {
-    "price": "83.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T18:38:31.386Z"
-  },
-  {
-    "price": "83.40000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T19:38:33.329Z"
-  },
-  {
-    "price": "83.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T20:38:35.783Z"
-  },
-  {
-    "price": "83.32000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T21:38:38.045Z"
-  },
-  {
-    "price": "84.28000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T22:38:40.181Z"
-  },
-  {
-    "price": "85.09000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-19T23:38:42.635Z"
-  },
-  {
-    "price": "84.31000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T00:38:45.267Z"
-  },
-  {
-    "price": "85.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T01:38:47.279Z"
+    "timestamp": "2022-02-19T17:11:28.117Z"
   },
   {
     "price": "84.36000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T02:38:49.399Z"
+    "timestamp": "2022-02-19T18:11:30.447Z"
   },
   {
-    "price": "83.82000000",
+    "price": "83.27000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T03:38:51.676Z"
-  },
-  {
-    "price": "82.72000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T04:38:53.969Z"
-  },
-  {
-    "price": "82.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T05:38:56.492Z"
-  },
-  {
-    "price": "80.58000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T06:38:58.857Z"
-  },
-  {
-    "price": "80.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T07:39:01.494Z"
-  },
-  {
-    "price": "78.78000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T08:39:04.023Z"
-  },
-  {
-    "price": "79.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T09:39:06.342Z"
-  },
-  {
-    "price": "79.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T10:39:08.554Z"
-  },
-  {
-    "price": "79.23000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T11:39:10.738Z"
-  },
-  {
-    "price": "79.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T12:46:45.086Z"
-  },
-  {
-    "price": "78.93000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T13:46:46.055Z"
-  },
-  {
-    "price": "78.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T15:26:47.570Z"
-  },
-  {
-    "price": "79.34000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T16:26:48.450Z"
-  },
-  {
-    "price": "79.08000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T17:26:49.351Z"
-  },
-  {
-    "price": "79.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T18:26:50.168Z"
-  },
-  {
-    "price": "79.19000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T19:26:51.089Z"
-  },
-  {
-    "price": "78.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T20:26:52.120Z"
-  },
-  {
-    "price": "77.09000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T21:26:53.025Z"
-  },
-  {
-    "price": "77.62000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T22:26:54.051Z"
-  },
-  {
-    "price": "77.98000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-20T23:26:55.058Z"
-  },
-  {
-    "price": "77.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T00:26:55.918Z"
-  },
-  {
-    "price": "80.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T01:26:56.942Z"
-  },
-  {
-    "price": "80.70000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T02:26:58.170Z"
-  },
-  {
-    "price": "80.99000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T03:26:59.216Z"
-  },
-  {
-    "price": "80.64000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T04:27:00.113Z"
-  },
-  {
-    "price": "81.38000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T05:27:00.904Z"
-  },
-  {
-    "price": "81.05000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T06:27:01.842Z"
-  },
-  {
-    "price": "82.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T07:27:02.714Z"
-  },
-  {
-    "price": "82.21000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T08:27:03.635Z"
-  },
-  {
-    "price": "81.26000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T09:36:27.240Z"
-  },
-  {
-    "price": "79.36000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T10:51:58.834Z"
-  },
-  {
-    "price": "76.57000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T11:51:59.670Z"
-  },
-  {
-    "price": "75.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T12:52:00.725Z"
-  },
-  {
-    "price": "75.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T13:52:01.862Z"
-  },
-  {
-    "price": "78.70000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T15:07:03.007Z"
-  },
-  {
-    "price": "78.65000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T16:07:03.905Z"
-  },
-  {
-    "price": "77.44000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T17:07:04.860Z"
-  },
-  {
-    "price": "74.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T18:07:05.588Z"
-  },
-  {
-    "price": "75.13000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T19:12:06.701Z"
-  },
-  {
-    "price": "74.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T20:12:07.557Z"
-  },
-  {
-    "price": "74.69000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T21:12:08.209Z"
-  },
-  {
-    "price": "72.44000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T22:12:08.966Z"
-  },
-  {
-    "price": "71.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-21T23:12:10.028Z"
-  },
-  {
-    "price": "70.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T00:12:10.955Z"
-  },
-  {
-    "price": "70.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T01:12:11.883Z"
-  },
-  {
-    "price": "69.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T02:12:12.693Z"
-  },
-  {
-    "price": "68.04000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T03:12:13.495Z"
-  },
-  {
-    "price": "68.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T04:12:14.683Z"
-  },
-  {
-    "price": "67.86000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T05:12:15.541Z"
-  },
-  {
-    "price": "69.06000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T06:12:16.658Z"
-  },
-  {
-    "price": "69.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T07:12:17.389Z"
-  },
-  {
-    "price": "69.41000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T08:12:18.142Z"
-  },
-  {
-    "price": "70.53000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T09:12:19.118Z"
-  },
-  {
-    "price": "70.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T10:12:19.982Z"
-  },
-  {
-    "price": "72.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T11:12:20.926Z"
-  },
-  {
-    "price": "71.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T12:12:21.851Z"
-  },
-  {
-    "price": "72.12000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T13:12:22.694Z"
-  },
-  {
-    "price": "74.10000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T14:57:23.886Z"
-  },
-  {
-    "price": "73.24000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T15:57:24.770Z"
-  },
-  {
-    "price": "73.33000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T16:57:25.564Z"
-  },
-  {
-    "price": "72.55000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T17:57:26.427Z"
-  },
-  {
-    "price": "72.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T18:57:27.181Z"
-  },
-  {
-    "price": "73.05000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T19:57:27.955Z"
-  },
-  {
-    "price": "72.64000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T20:57:28.675Z"
-  },
-  {
-    "price": "72.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T21:57:29.353Z"
-  },
-  {
-    "price": "72.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T22:57:30.038Z"
-  },
-  {
-    "price": "74.57000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-22T23:57:30.751Z"
-  },
-  {
-    "price": "75.10000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T00:57:31.625Z"
-  },
-  {
-    "price": "75.24000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T01:57:32.390Z"
-  },
-  {
-    "price": "75.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T02:57:33.281Z"
-  },
-  {
-    "price": "75.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T03:57:34.232Z"
-  },
-  {
-    "price": "76.39000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T04:57:35.035Z"
-  },
-  {
-    "price": "76.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T06:02:36.184Z"
-  },
-  {
-    "price": "77.50000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T07:02:37.201Z"
-  },
-  {
-    "price": "78.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T08:02:38.277Z"
-  },
-  {
-    "price": "78.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T09:02:39.325Z"
-  },
-  {
-    "price": "79.41000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T10:02:40.206Z"
-  },
-  {
-    "price": "81.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T11:02:41.184Z"
-  },
-  {
-    "price": "81.07000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T12:02:42.147Z"
-  },
-  {
-    "price": "81.89000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T13:02:42.956Z"
-  },
-  {
-    "price": "81.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T14:02:43.821Z"
-  },
-  {
-    "price": "79.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T15:02:44.730Z"
-  },
-  {
-    "price": "80.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T16:02:45.616Z"
-  },
-  {
-    "price": "80.40000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T17:02:46.335Z"
-  },
-  {
-    "price": "78.26000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T18:02:47.579Z"
-  },
-  {
-    "price": "77.68000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T19:02:48.387Z"
-  },
-  {
-    "price": "76.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T20:02:49.131Z"
-  },
-  {
-    "price": "76.25000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T21:02:49.848Z"
-  },
-  {
-    "price": "75.99000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T22:02:50.844Z"
-  },
-  {
-    "price": "75.76000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-23T23:02:51.886Z"
-  },
-  {
-    "price": "73.38000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T00:02:52.804Z"
-  },
-  {
-    "price": "74.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T01:02:53.653Z"
-  },
-  {
-    "price": "74.07000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T02:02:54.454Z"
-  },
-  {
-    "price": "71.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T03:02:55.306Z"
-  },
-  {
-    "price": "67.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T04:02:56.340Z"
-  },
-  {
-    "price": "67.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T05:02:57.217Z"
-  },
-  {
-    "price": "66.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T06:02:58.203Z"
-  },
-  {
-    "price": "66.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T07:02:59.050Z"
-  },
-  {
-    "price": "67.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T08:02:59.814Z"
-  },
-  {
-    "price": "67.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T09:03:00.772Z"
-  },
-  {
-    "price": "67.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T10:03:01.683Z"
-  },
-  {
-    "price": "66.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T11:03:02.599Z"
-  },
-  {
-    "price": "66.50000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T12:03:03.581Z"
-  },
-  {
-    "price": "65.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T13:03:04.604Z"
-  },
-  {
-    "price": "66.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T14:03:05.385Z"
-  },
-  {
-    "price": "68.38000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T15:03:06.470Z"
-  },
-  {
-    "price": "71.82000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T16:03:07.835Z"
-  },
-  {
-    "price": "70.30000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T17:03:08.732Z"
-  },
-  {
-    "price": "69.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T18:03:09.448Z"
-  },
-  {
-    "price": "72.06000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T19:03:10.423Z"
-  },
-  {
-    "price": "76.31000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T20:48:12.187Z"
-  },
-  {
-    "price": "75.70000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T21:48:13.112Z"
-  },
-  {
-    "price": "74.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T22:48:13.920Z"
-  },
-  {
-    "price": "76.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-24T23:48:14.716Z"
-  },
-  {
-    "price": "76.29000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T00:48:15.798Z"
-  },
-  {
-    "price": "76.73000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T01:48:16.880Z"
-  },
-  {
-    "price": "77.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T02:48:17.704Z"
-  },
-  {
-    "price": "75.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T03:48:18.688Z"
-  },
-  {
-    "price": "75.03000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T04:48:19.712Z"
-  },
-  {
-    "price": "75.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T05:48:20.700Z"
-  },
-  {
-    "price": "75.53000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T06:48:21.640Z"
-  },
-  {
-    "price": "75.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T07:48:22.583Z"
-  },
-  {
-    "price": "74.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T08:48:23.660Z"
-  },
-  {
-    "price": "73.93000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T09:48:24.874Z"
-  },
-  {
-    "price": "74.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T10:48:25.933Z"
-  },
-  {
-    "price": "74.92000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T11:48:26.897Z"
-  },
-  {
-    "price": "75.18000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T12:48:27.995Z"
-  },
-  {
-    "price": "78.48000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T13:48:29.158Z"
-  },
-  {
-    "price": "78.33000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T14:48:29.933Z"
-  },
-  {
-    "price": "78.27000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T15:48:30.897Z"
-  },
-  {
-    "price": "77.32000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T16:48:31.799Z"
-  },
-  {
-    "price": "77.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T17:48:32.828Z"
-  },
-  {
-    "price": "77.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T18:48:33.646Z"
-  },
-  {
-    "price": "77.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T19:48:34.524Z"
-  },
-  {
-    "price": "77.44000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T20:48:35.426Z"
-  },
-  {
-    "price": "78.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T21:48:36.179Z"
-  },
-  {
-    "price": "79.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T22:48:36.913Z"
-  },
-  {
-    "price": "80.77000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-25T23:48:38.074Z"
-  },
-  {
-    "price": "82.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T00:48:39.050Z"
-  },
-  {
-    "price": "81.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T01:48:39.900Z"
-  },
-  {
-    "price": "81.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T02:48:40.735Z"
-  },
-  {
-    "price": "80.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T03:48:41.531Z"
-  },
-  {
-    "price": "81.04000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T04:48:42.351Z"
-  },
-  {
-    "price": "79.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T05:48:43.034Z"
-  },
-  {
-    "price": "79.65000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T06:48:43.729Z"
-  },
-  {
-    "price": "79.29000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T07:48:44.648Z"
-  },
-  {
-    "price": "79.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T08:48:45.515Z"
-  },
-  {
-    "price": "78.71000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T09:48:46.347Z"
-  },
-  {
-    "price": "79.03000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T10:48:47.267Z"
-  },
-  {
-    "price": "79.24000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T11:48:48.229Z"
-  },
-  {
-    "price": "78.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T12:48:49.047Z"
-  },
-  {
-    "price": "79.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T13:48:49.861Z"
-  },
-  {
-    "price": "80.13000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T14:48:50.775Z"
-  },
-  {
-    "price": "81.32000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T15:48:51.760Z"
-  },
-  {
-    "price": "80.65000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T16:48:52.660Z"
-  },
-  {
-    "price": "82.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T17:48:53.438Z"
-  },
-  {
-    "price": "82.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T18:48:54.472Z"
-  },
-  {
-    "price": "82.41000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T19:48:55.166Z"
-  },
-  {
-    "price": "83.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T20:48:56.037Z"
-  },
-  {
-    "price": "84.04000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T21:48:56.883Z"
-  },
-  {
-    "price": "81.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T22:48:57.637Z"
-  },
-  {
-    "price": "81.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-26T23:48:58.333Z"
-  },
-  {
-    "price": "79.87000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T00:48:59.240Z"
-  },
-  {
-    "price": "78.81000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T01:49:00.175Z"
-  },
-  {
-    "price": "79.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T02:49:00.981Z"
-  },
-  {
-    "price": "78.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T03:49:01.902Z"
-  },
-  {
-    "price": "77.92000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T04:49:02.655Z"
-  },
-  {
-    "price": "78.53000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T05:49:03.415Z"
-  },
-  {
-    "price": "79.03000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T06:49:04.195Z"
-  },
-  {
-    "price": "79.32000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T07:49:05.034Z"
-  },
-  {
-    "price": "79.39000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T08:49:05.929Z"
-  },
-  {
-    "price": "80.31000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T09:49:06.769Z"
-  },
-  {
-    "price": "81.13000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T10:49:07.403Z"
-  },
-  {
-    "price": "81.27000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T11:49:08.240Z"
-  },
-  {
-    "price": "82.04000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T12:49:09.160Z"
-  },
-  {
-    "price": "79.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T13:49:10.050Z"
-  },
-  {
-    "price": "79.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T14:49:11.056Z"
-  },
-  {
-    "price": "80.30000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T15:49:11.880Z"
-  },
-  {
-    "price": "78.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T16:49:12.610Z"
-  },
-  {
-    "price": "78.22000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T17:49:13.404Z"
-  },
-  {
-    "price": "78.32000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T18:49:14.254Z"
-  },
-  {
-    "price": "74.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T19:49:15.072Z"
-  },
-  {
-    "price": "75.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T20:49:16.074Z"
-  },
-  {
-    "price": "74.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T21:49:16.916Z"
-  },
-  {
-    "price": "74.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T22:49:17.646Z"
-  },
-  {
-    "price": "74.75000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-27T23:49:18.517Z"
-  },
-  {
-    "price": "73.73000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T00:49:19.464Z"
-  },
-  {
-    "price": "74.90000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T01:49:20.181Z"
-  },
-  {
-    "price": "73.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T02:49:20.991Z"
-  },
-  {
-    "price": "73.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T03:49:21.751Z"
-  },
-  {
-    "price": "73.48000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T04:49:22.475Z"
-  },
-  {
-    "price": "73.07000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T05:49:23.359Z"
-  },
-  {
-    "price": "73.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T06:49:24.265Z"
-  },
-  {
-    "price": "75.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T07:49:25.068Z"
-  },
-  {
-    "price": "75.18000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T08:49:26.149Z"
-  },
-  {
-    "price": "75.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T09:49:27.124Z"
-  },
-  {
-    "price": "75.22000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T10:49:27.974Z"
-  },
-  {
-    "price": "75.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T11:49:28.713Z"
-  },
-  {
-    "price": "75.23000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T12:49:29.493Z"
-  },
-  {
-    "price": "74.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T13:49:30.262Z"
-  },
-  {
-    "price": "79.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T14:54:31.093Z"
-  },
-  {
-    "price": "81.86000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T15:54:32.084Z"
-  },
-  {
-    "price": "79.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T16:54:32.891Z"
-  },
-  {
-    "price": "80.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T17:54:33.724Z"
-  },
-  {
-    "price": "80.09000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T18:54:34.544Z"
-  },
-  {
-    "price": "80.25000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T19:54:35.275Z"
-  },
-  {
-    "price": "81.75000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T20:54:36.115Z"
-  },
-  {
-    "price": "81.28000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T21:54:36.886Z"
-  },
-  {
-    "price": "83.61000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T22:54:37.669Z"
-  },
-  {
-    "price": "84.36000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-02-28T23:54:38.353Z"
-  },
-  {
-    "price": "88.57000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T01:04:39.352Z"
-  },
-  {
-    "price": "88.14000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T02:04:39.977Z"
-  },
-  {
-    "price": "87.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T03:04:40.841Z"
-  },
-  {
-    "price": "86.87000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T04:04:41.629Z"
-  },
-  {
-    "price": "88.52000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T05:04:42.504Z"
-  },
-  {
-    "price": "87.06000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T06:04:43.352Z"
-  },
-  {
-    "price": "86.82000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T07:04:44.154Z"
-  },
-  {
-    "price": "86.81000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T08:04:44.907Z"
-  },
-  {
-    "price": "86.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T09:04:45.662Z"
-  },
-  {
-    "price": "85.55000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T10:04:46.662Z"
-  },
-  {
-    "price": "85.71000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T11:04:47.727Z"
-  },
-  {
-    "price": "85.74000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T12:04:48.586Z"
-  },
-  {
-    "price": "89.07000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T13:04:49.577Z"
-  },
-  {
-    "price": "90.30000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T14:04:50.534Z"
-  },
-  {
-    "price": "86.99000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T15:04:51.379Z"
-  },
-  {
-    "price": "86.34000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T16:04:52.218Z"
-  },
-  {
-    "price": "84.85000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T17:04:53.417Z"
-  },
-  {
-    "price": "85.62000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T18:04:54.130Z"
-  },
-  {
-    "price": "86.96000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T19:04:55.248Z"
-  },
-  {
-    "price": "86.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T20:04:56.238Z"
-  },
-  {
-    "price": "87.34000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T21:04:57.028Z"
-  },
-  {
-    "price": "85.69000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T22:04:57.849Z"
-  },
-  {
-    "price": "86.11000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-01T23:04:58.692Z"
-  },
-  {
-    "price": "86.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T00:04:59.458Z"
-  },
-  {
-    "price": "86.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T01:05:00.258Z"
-  },
-  {
-    "price": "85.78000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T02:05:01.170Z"
-  },
-  {
-    "price": "86.61000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T03:05:01.991Z"
-  },
-  {
-    "price": "88.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T04:05:02.984Z"
-  },
-  {
-    "price": "87.65000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T05:05:03.955Z"
-  },
-  {
-    "price": "87.64000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T06:05:04.756Z"
-  },
-  {
-    "price": "86.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T07:05:05.796Z"
-  },
-  {
-    "price": "85.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T08:05:06.835Z"
-  },
-  {
-    "price": "85.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T09:05:07.708Z"
-  },
-  {
-    "price": "85.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T10:05:08.566Z"
-  },
-  {
-    "price": "85.87000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T11:05:09.322Z"
-  },
-  {
-    "price": "86.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T12:05:10.181Z"
-  },
-  {
-    "price": "84.98000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T13:05:11.000Z"
-  },
-  {
-    "price": "83.85000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T14:05:12.011Z"
-  },
-  {
-    "price": "83.71000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T15:15:13.060Z"
-  },
-  {
-    "price": "84.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T16:15:13.872Z"
-  },
-  {
-    "price": "84.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T17:15:14.583Z"
-  },
-  {
-    "price": "83.71000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T18:15:15.371Z"
-  },
-  {
-    "price": "83.09000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T19:15:16.211Z"
+    "timestamp": "2022-02-19T19:11:32.368Z"
   },
   {
     "price": "83.05000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T20:15:16.923Z"
-  },
-  {
-    "price": "82.90000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T21:15:17.540Z"
-  },
-  {
-    "price": "83.98000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T22:15:18.280Z"
-  },
-  {
-    "price": "84.09000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-02T23:15:19.022Z"
-  },
-  {
-    "price": "82.82000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T00:15:19.724Z"
-  },
-  {
-    "price": "83.19000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T01:15:20.485Z"
-  },
-  {
-    "price": "82.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T02:15:21.196Z"
-  },
-  {
-    "price": "82.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T03:15:22.165Z"
-  },
-  {
-    "price": "81.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T04:15:22.809Z"
-  },
-  {
-    "price": "81.92000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T05:15:23.778Z"
-  },
-  {
-    "price": "81.60000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T06:15:24.661Z"
+    "timestamp": "2022-02-19T20:11:34.688Z"
   },
   {
     "price": "83.34000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T07:15:25.464Z"
+    "timestamp": "2022-02-19T21:11:36.960Z"
   },
   {
-    "price": "83.40000000",
+    "price": "83.60000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T08:15:26.155Z"
+    "timestamp": "2022-02-19T22:11:39.124Z"
   },
   {
-    "price": "82.53000000",
+    "price": "84.63000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T09:15:26.905Z"
+    "timestamp": "2022-02-19T23:11:41.488Z"
   },
   {
-    "price": "82.29000000",
+    "price": "84.84000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T10:15:27.611Z"
+    "timestamp": "2022-02-20T00:11:44.195Z"
   },
   {
-    "price": "82.35000000",
+    "price": "84.56000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T11:15:28.340Z"
+    "timestamp": "2022-02-20T01:11:46.390Z"
   },
   {
-    "price": "82.31000000",
+    "price": "85.03000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T12:15:29.155Z"
+    "timestamp": "2022-02-20T02:11:48.624Z"
   },
   {
-    "price": "82.44000000",
+    "price": "83.76000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T13:15:30.160Z"
+    "timestamp": "2022-02-20T03:11:50.611Z"
   },
   {
-    "price": "81.21000000",
+    "price": "83.26000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T14:15:31.200Z"
+    "timestamp": "2022-02-20T04:11:52.854Z"
   },
   {
-    "price": "77.63000000",
+    "price": "83.50000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T15:15:31.979Z"
+    "timestamp": "2022-02-20T05:11:55.412Z"
   },
   {
-    "price": "78.05000000",
+    "price": "80.93000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T16:15:33.237Z"
+    "timestamp": "2022-02-20T06:11:57.743Z"
   },
   {
-    "price": "78.20000000",
+    "price": "80.74000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T17:15:34.197Z"
+    "timestamp": "2022-02-20T07:12:00.442Z"
   },
   {
-    "price": "78.58000000",
+    "price": "79.89000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T18:15:35.082Z"
+    "timestamp": "2022-02-20T08:12:02.906Z"
   },
   {
-    "price": "78.23000000",
+    "price": "79.74000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T19:15:35.963Z"
+    "timestamp": "2022-02-20T09:12:05.110Z"
   },
   {
-    "price": "77.92000000",
+    "price": "79.66000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T20:15:36.827Z"
-  },
-  {
-    "price": "78.41000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T21:15:37.644Z"
-  },
-  {
-    "price": "79.21000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T22:15:38.769Z"
-  },
-  {
-    "price": "79.44000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-03T23:15:39.548Z"
-  },
-  {
-    "price": "78.06000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T00:15:40.502Z"
-  },
-  {
-    "price": "75.98000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T01:15:41.708Z"
-  },
-  {
-    "price": "77.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T02:15:42.788Z"
-  },
-  {
-    "price": "77.60000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T03:15:43.610Z"
-  },
-  {
-    "price": "77.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T04:15:44.575Z"
-  },
-  {
-    "price": "77.48000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T05:15:45.652Z"
-  },
-  {
-    "price": "77.17000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T06:15:46.468Z"
-  },
-  {
-    "price": "77.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T07:15:47.523Z"
-  },
-  {
-    "price": "77.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T08:15:48.646Z"
-  },
-  {
-    "price": "78.15000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T09:15:49.614Z"
-  },
-  {
-    "price": "79.69000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T10:15:50.687Z"
-  },
-  {
-    "price": "79.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T11:15:51.464Z"
-  },
-  {
-    "price": "81.15000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T12:15:52.380Z"
-  },
-  {
-    "price": "80.86000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T13:15:53.258Z"
-  },
-  {
-    "price": "79.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T14:15:54.360Z"
+    "timestamp": "2022-02-20T10:12:07.554Z"
   },
   {
     "price": "79.24000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T15:15:55.405Z"
+    "timestamp": "2022-02-20T11:12:09.702Z"
   },
   {
-    "price": "78.16000000",
+    "price": "80.12000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T16:15:56.226Z"
+    "timestamp": "2022-02-20T12:19:44.703Z"
   },
   {
-    "price": "79.95000000",
+    "price": "78.92000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T17:15:57.212Z"
+    "timestamp": "2022-02-20T14:04:46.262Z"
   },
   {
-    "price": "79.99000000",
+    "price": "78.38000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T18:15:58.145Z"
+    "timestamp": "2022-02-20T15:44:47.888Z"
   },
   {
-    "price": "77.73000000",
+    "price": "78.38000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T19:15:58.995Z"
+    "timestamp": "2022-02-20T16:44:48.697Z"
   },
   {
-    "price": "77.73000000",
+    "price": "79.48000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T20:15:59.857Z"
+    "timestamp": "2022-02-20T17:44:49.559Z"
   },
   {
-    "price": "77.09000000",
+    "price": "79.41000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T21:16:00.746Z"
+    "timestamp": "2022-02-20T18:44:50.388Z"
   },
   {
-    "price": "76.42000000",
+    "price": "79.01000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T22:16:01.945Z"
-  },
-  {
-    "price": "75.72000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-04T23:16:03.107Z"
-  },
-  {
-    "price": "74.76000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T00:16:04.073Z"
-  },
-  {
-    "price": "74.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T01:16:04.985Z"
-  },
-  {
-    "price": "74.76000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T02:16:05.835Z"
-  },
-  {
-    "price": "74.60000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T03:16:06.826Z"
-  },
-  {
-    "price": "74.82000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T04:16:07.705Z"
-  },
-  {
-    "price": "74.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T05:16:08.657Z"
-  },
-  {
-    "price": "76.03000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T06:16:09.624Z"
-  },
-  {
-    "price": "76.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T07:16:10.778Z"
-  },
-  {
-    "price": "76.93000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T08:16:11.792Z"
-  },
-  {
-    "price": "77.10000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T09:16:12.857Z"
-  },
-  {
-    "price": "76.92000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T10:16:13.877Z"
-  },
-  {
-    "price": "76.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T11:16:14.822Z"
-  },
-  {
-    "price": "77.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T12:16:15.735Z"
-  },
-  {
-    "price": "76.66000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T13:16:16.613Z"
-  },
-  {
-    "price": "76.21000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T14:16:17.573Z"
-  },
-  {
-    "price": "76.53000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T15:16:18.395Z"
-  },
-  {
-    "price": "77.40000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T16:16:19.284Z"
-  },
-  {
-    "price": "78.03000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T17:16:20.148Z"
-  },
-  {
-    "price": "77.21000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T18:16:21.016Z"
-  },
-  {
-    "price": "77.43000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T19:16:21.817Z"
-  },
-  {
-    "price": "78.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T20:16:22.644Z"
-  },
-  {
-    "price": "77.04000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T21:16:23.625Z"
-  },
-  {
-    "price": "76.90000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T22:16:24.384Z"
-  },
-  {
-    "price": "76.66000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-05T23:16:25.259Z"
-  },
-  {
-    "price": "76.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T00:16:26.183Z"
-  },
-  {
-    "price": "76.83000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T01:16:27.021Z"
-  },
-  {
-    "price": "76.60000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T02:16:27.797Z"
-  },
-  {
-    "price": "76.38000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T03:16:28.683Z"
-  },
-  {
-    "price": "75.42000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T04:16:29.599Z"
-  },
-  {
-    "price": "76.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T05:16:30.387Z"
-  },
-  {
-    "price": "76.10000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T06:16:31.337Z"
-  },
-  {
-    "price": "75.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T08:05:26.714Z"
-  },
-  {
-    "price": "75.16000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T09:27:16.652Z"
-  },
-  {
-    "price": "74.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T10:34:23.816Z"
-  },
-  {
-    "price": "74.88000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T11:34:26.403Z"
-  },
-  {
-    "price": "75.33000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T12:34:28.637Z"
-  },
-  {
-    "price": "75.73000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T13:34:31.003Z"
-  },
-  {
-    "price": "75.63000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T14:34:33.318Z"
-  },
-  {
-    "price": "74.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T15:34:35.570Z"
-  },
-  {
-    "price": "75.31000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T16:34:37.903Z"
-  },
-  {
-    "price": "74.87000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T17:34:40.396Z"
-  },
-  {
-    "price": "74.66000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T18:34:42.357Z"
-  },
-  {
-    "price": "74.05000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T19:34:44.591Z"
-  },
-  {
-    "price": "73.55000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T20:34:46.846Z"
-  },
-  {
-    "price": "74.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T21:34:49.029Z"
-  },
-  {
-    "price": "74.13000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T22:34:51.624Z"
-  },
-  {
-    "price": "72.78000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-06T23:34:53.947Z"
-  },
-  {
-    "price": "72.08000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T00:34:56.321Z"
-  },
-  {
-    "price": "72.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T01:34:58.605Z"
-  },
-  {
-    "price": "71.89000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T02:35:00.917Z"
-  },
-  {
-    "price": "71.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T03:35:02.981Z"
-  },
-  {
-    "price": "71.59000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T04:35:05.109Z"
-  },
-  {
-    "price": "72.01000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T05:35:07.502Z"
-  },
-  {
-    "price": "72.37000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T06:35:09.973Z"
-  },
-  {
-    "price": "71.72000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T07:35:12.060Z"
-  },
-  {
-    "price": "72.24000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T08:35:14.288Z"
-  },
-  {
-    "price": "72.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T09:35:16.761Z"
-  },
-  {
-    "price": "73.06000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T10:35:18.973Z"
-  },
-  {
-    "price": "73.93000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T11:35:21.451Z"
-  },
-  {
-    "price": "75.12000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T12:35:23.884Z"
-  },
-  {
-    "price": "75.40000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T13:35:26.175Z"
-  },
-  {
-    "price": "75.95000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T14:35:28.505Z"
-  },
-  {
-    "price": "75.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T15:35:31.022Z"
-  },
-  {
-    "price": "75.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T16:35:33.183Z"
-  },
-  {
-    "price": "74.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T17:35:35.150Z"
-  },
-  {
-    "price": "73.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T18:35:37.441Z"
-  },
-  {
-    "price": "71.71000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T19:35:39.701Z"
-  },
-  {
-    "price": "71.33000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T20:35:41.977Z"
-  },
-  {
-    "price": "71.52000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T21:35:44.024Z"
-  },
-  {
-    "price": "72.38000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T22:35:46.292Z"
-  },
-  {
-    "price": "72.46000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-07T23:35:48.696Z"
-  },
-  {
-    "price": "72.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T00:35:51.186Z"
-  },
-  {
-    "price": "72.89000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T01:35:53.629Z"
-  },
-  {
-    "price": "73.08000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T02:35:56.030Z"
-  },
-  {
-    "price": "73.12000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T03:35:58.625Z"
-  },
-  {
-    "price": "72.70000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T04:36:01.025Z"
-  },
-  {
-    "price": "71.93000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T05:36:03.150Z"
-  },
-  {
-    "price": "71.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T06:36:05.488Z"
-  },
-  {
-    "price": "72.05000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T07:36:07.981Z"
-  },
-  {
-    "price": "73.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T08:36:14.701Z"
-  },
-  {
-    "price": "72.84000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T09:36:16.956Z"
-  },
-  {
-    "price": "72.35000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T10:36:19.046Z"
-  },
-  {
-    "price": "72.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T11:36:21.694Z"
-  },
-  {
-    "price": "72.20000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T12:36:24.104Z"
-  },
-  {
-    "price": "72.13000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T13:36:26.141Z"
-  },
-  {
-    "price": "71.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T14:36:28.166Z"
-  },
-  {
-    "price": "71.98000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T15:36:30.414Z"
-  },
-  {
-    "price": "72.27000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T16:36:32.643Z"
-  },
-  {
-    "price": "74.47000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T17:36:34.728Z"
-  },
-  {
-    "price": "75.28000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T18:36:37.271Z"
-  },
-  {
-    "price": "74.48000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T19:36:39.644Z"
-  },
-  {
-    "price": "73.51000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T20:36:41.903Z"
-  },
-  {
-    "price": "72.91000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T21:36:44.269Z"
-  },
-  {
-    "price": "72.45000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T22:36:46.558Z"
-  },
-  {
-    "price": "73.18000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-08T23:36:48.959Z"
-  },
-  {
-    "price": "73.29000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T00:42:14.159Z"
-  },
-  {
-    "price": "74.97000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T01:42:16.332Z"
-  },
-  {
-    "price": "75.40000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T02:42:18.621Z"
-  },
-  {
-    "price": "77.80000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T03:42:20.907Z"
-  },
-  {
-    "price": "78.56000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T04:42:23.505Z"
-  },
-  {
-    "price": "77.81000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T05:42:25.691Z"
-  },
-  {
-    "price": "79.00000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T06:42:28.025Z"
-  },
-  {
-    "price": "79.02000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T07:42:30.249Z"
-  },
-  {
-    "price": "78.54000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T08:42:32.618Z"
-  },
-  {
-    "price": "78.67000000",
-    "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T09:42:34.827Z"
+    "timestamp": "2022-02-20T19:44:51.360Z"
   },
   {
     "price": "78.53000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T10:42:37.161Z"
+    "timestamp": "2022-02-20T20:44:52.374Z"
   },
   {
-    "price": "78.55000000",
+    "price": "76.65000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T11:42:39.393Z"
+    "timestamp": "2022-02-20T21:44:53.353Z"
   },
   {
-    "price": "77.90000000",
+    "price": "77.28000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T12:42:41.604Z"
+    "timestamp": "2022-02-20T22:44:54.360Z"
+  },
+  {
+    "price": "77.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-20T23:44:55.317Z"
+  },
+  {
+    "price": "77.72000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T00:44:56.170Z"
+  },
+  {
+    "price": "81.37000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T01:44:57.448Z"
+  },
+  {
+    "price": "81.15000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T02:44:58.457Z"
+  },
+  {
+    "price": "80.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T03:44:59.484Z"
+  },
+  {
+    "price": "80.43000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T04:45:00.318Z"
+  },
+  {
+    "price": "80.84000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T05:45:01.185Z"
+  },
+  {
+    "price": "81.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T06:45:02.133Z"
+  },
+  {
+    "price": "81.82000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T07:45:02.940Z"
+  },
+  {
+    "price": "81.63000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T08:54:26.688Z"
+  },
+  {
+    "price": "80.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T10:09:58.335Z"
+  },
+  {
+    "price": "79.35000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T11:09:59.086Z"
+  },
+  {
+    "price": "77.08000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T12:10:00.070Z"
+  },
+  {
+    "price": "75.41000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T13:55:01.895Z"
+  },
+  {
+    "price": "79.34000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T15:10:03.068Z"
+  },
+  {
+    "price": "78.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T16:10:03.938Z"
+  },
+  {
+    "price": "77.58000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T17:10:04.888Z"
+  },
+  {
+    "price": "75.20000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T18:10:05.658Z"
+  },
+  {
+    "price": "74.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T19:15:06.758Z"
+  },
+  {
+    "price": "74.88000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T20:15:07.591Z"
+  },
+  {
+    "price": "74.76000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T21:15:08.237Z"
+  },
+  {
+    "price": "72.46000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T22:15:08.990Z"
+  },
+  {
+    "price": "71.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-21T23:15:10.053Z"
+  },
+  {
+    "price": "70.48000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T00:15:10.981Z"
+  },
+  {
+    "price": "69.78000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T01:15:11.915Z"
+  },
+  {
+    "price": "69.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T02:15:12.724Z"
+  },
+  {
+    "price": "67.49000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T03:15:13.521Z"
+  },
+  {
+    "price": "68.29000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T04:15:14.712Z"
+  },
+  {
+    "price": "67.54000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T05:15:15.567Z"
+  },
+  {
+    "price": "69.36000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T06:15:16.689Z"
+  },
+  {
+    "price": "69.12000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T07:15:17.426Z"
+  },
+  {
+    "price": "69.49000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T08:15:18.195Z"
+  },
+  {
+    "price": "70.42000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T09:15:19.148Z"
+  },
+  {
+    "price": "70.74000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T10:15:20.037Z"
+  },
+  {
+    "price": "71.93000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T11:15:20.960Z"
+  },
+  {
+    "price": "72.30000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T12:15:21.883Z"
+  },
+  {
+    "price": "73.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T14:00:23.331Z"
+  },
+  {
+    "price": "73.37000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T15:45:24.600Z"
+  },
+  {
+    "price": "72.61000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T16:45:25.440Z"
+  },
+  {
+    "price": "72.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T17:45:26.235Z"
+  },
+  {
+    "price": "72.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T18:45:27.056Z"
+  },
+  {
+    "price": "72.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T19:45:27.765Z"
+  },
+  {
+    "price": "72.61000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T20:45:28.513Z"
+  },
+  {
+    "price": "73.03000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T21:45:29.223Z"
+  },
+  {
+    "price": "72.48000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T22:45:29.873Z"
+  },
+  {
+    "price": "74.66000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-22T23:45:30.589Z"
+  },
+  {
+    "price": "74.27000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T00:45:31.412Z"
+  },
+  {
+    "price": "75.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T01:45:32.261Z"
+  },
+  {
+    "price": "74.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T02:45:33.139Z"
+  },
+  {
+    "price": "75.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T03:45:34.046Z"
+  },
+  {
+    "price": "76.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T04:45:34.851Z"
+  },
+  {
+    "price": "75.76000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T05:50:36.042Z"
+  },
+  {
+    "price": "76.89000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T06:50:37.043Z"
+  },
+  {
+    "price": "78.48000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T07:50:38.070Z"
+  },
+  {
+    "price": "78.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T08:50:39.125Z"
+  },
+  {
+    "price": "79.07000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T09:50:40.052Z"
+  },
+  {
+    "price": "80.67000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T10:50:41.035Z"
+  },
+  {
+    "price": "81.87000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T11:50:42.001Z"
+  },
+  {
+    "price": "81.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T12:50:42.784Z"
+  },
+  {
+    "price": "81.29000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T14:35:44.345Z"
+  },
+  {
+    "price": "79.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T15:35:45.199Z"
+  },
+  {
+    "price": "80.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T16:35:46.007Z"
+  },
+  {
+    "price": "79.20000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T17:35:46.952Z"
+  },
+  {
+    "price": "77.33000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T18:35:48.079Z"
+  },
+  {
+    "price": "76.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T19:35:48.738Z"
+  },
+  {
+    "price": "76.46000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T20:35:49.562Z"
+  },
+  {
+    "price": "76.70000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T21:35:50.322Z"
+  },
+  {
+    "price": "75.54000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T22:35:51.485Z"
+  },
+  {
+    "price": "74.03000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-23T23:35:52.371Z"
+  },
+  {
+    "price": "73.62000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T00:35:53.274Z"
+  },
+  {
+    "price": "73.83000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T01:35:54.046Z"
+  },
+  {
+    "price": "73.80000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T02:35:54.913Z"
+  },
+  {
+    "price": "68.22000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T03:35:55.991Z"
+  },
+  {
+    "price": "67.83000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T04:35:56.771Z"
+  },
+  {
+    "price": "66.51000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T05:35:57.729Z"
+  },
+  {
+    "price": "66.07000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T06:35:58.651Z"
+  },
+  {
+    "price": "64.62000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T07:35:59.419Z"
+  },
+  {
+    "price": "68.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T08:36:00.358Z"
+  },
+  {
+    "price": "68.16000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T09:36:01.317Z"
+  },
+  {
+    "price": "66.42000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T10:36:02.176Z"
+  },
+  {
+    "price": "65.45000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T11:36:03.116Z"
+  },
+  {
+    "price": "66.29000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T12:36:04.125Z"
+  },
+  {
+    "price": "67.04000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T14:21:05.674Z"
+  },
+  {
+    "price": "71.48000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T15:21:06.762Z"
+  },
+  {
+    "price": "72.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T16:21:08.079Z"
+  },
+  {
+    "price": "69.08000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T17:21:08.906Z"
+  },
+  {
+    "price": "70.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T18:21:09.750Z"
+  },
+  {
+    "price": "72.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T19:21:10.637Z"
+  },
+  {
+    "price": "76.70000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T21:06:12.491Z"
+  },
+  {
+    "price": "75.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T22:06:13.413Z"
+  },
+  {
+    "price": "75.12000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-24T23:06:14.141Z"
+  },
+  {
+    "price": "76.41000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T00:06:14.960Z"
+  },
+  {
+    "price": "76.26000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T01:06:16.078Z"
+  },
+  {
+    "price": "76.81000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T02:06:17.145Z"
+  },
+  {
+    "price": "76.44000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T03:06:17.972Z"
+  },
+  {
+    "price": "75.93000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T04:06:19.001Z"
+  },
+  {
+    "price": "74.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T05:06:19.956Z"
+  },
+  {
+    "price": "74.77000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T06:06:20.911Z"
+  },
+  {
+    "price": "75.62000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T07:06:21.931Z"
+  },
+  {
+    "price": "75.65000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T08:06:22.977Z"
+  },
+  {
+    "price": "73.86000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T09:06:24.024Z"
+  },
+  {
+    "price": "74.40000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T10:06:25.305Z"
+  },
+  {
+    "price": "73.79000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T11:06:26.164Z"
+  },
+  {
+    "price": "76.57000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T12:06:27.200Z"
+  },
+  {
+    "price": "78.44000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T13:51:29.188Z"
+  },
+  {
+    "price": "78.42000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T14:51:29.971Z"
+  },
+  {
+    "price": "77.96000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T15:51:30.925Z"
+  },
+  {
+    "price": "77.61000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T16:51:31.836Z"
+  },
+  {
+    "price": "77.54000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T17:51:32.871Z"
+  },
+  {
+    "price": "77.61000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T18:51:33.684Z"
+  },
+  {
+    "price": "77.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T19:51:34.558Z"
+  },
+  {
+    "price": "77.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-25T20:51:35.490Z"
   },
   {
     "price": "78.05000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T13:42:43.757Z"
+    "timestamp": "2022-02-25T21:51:36.210Z"
   },
   {
-    "price": "78.41000000",
+    "price": "79.82000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T14:42:46.171Z"
+    "timestamp": "2022-02-25T22:51:36.984Z"
   },
   {
-    "price": "78.80000000",
+    "price": "80.62000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T15:42:48.425Z"
+    "timestamp": "2022-02-25T23:51:38.110Z"
   },
   {
-    "price": "79.36000000",
+    "price": "82.85000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T16:42:50.891Z"
+    "timestamp": "2022-02-26T00:51:39.077Z"
   },
   {
-    "price": "78.89000000",
+    "price": "81.84000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T17:42:53.157Z"
+    "timestamp": "2022-02-26T01:51:40.039Z"
   },
   {
-    "price": "76.93000000",
+    "price": "81.70000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T18:42:55.509Z"
+    "timestamp": "2022-02-26T02:51:40.766Z"
   },
   {
-    "price": "77.29000000",
+    "price": "80.63000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T19:42:57.823Z"
+    "timestamp": "2022-02-26T03:51:41.571Z"
+  },
+  {
+    "price": "81.26000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T04:51:42.378Z"
+  },
+  {
+    "price": "79.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T05:51:43.107Z"
+  },
+  {
+    "price": "79.51000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T06:51:43.765Z"
+  },
+  {
+    "price": "79.38000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T07:51:44.681Z"
+  },
+  {
+    "price": "78.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T08:51:45.546Z"
+  },
+  {
+    "price": "78.65000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T09:51:46.378Z"
+  },
+  {
+    "price": "79.22000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T10:51:47.330Z"
+  },
+  {
+    "price": "78.90000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T11:51:48.260Z"
+  },
+  {
+    "price": "79.24000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T12:51:49.084Z"
+  },
+  {
+    "price": "80.37000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T14:36:50.577Z"
+  },
+  {
+    "price": "81.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T15:36:51.367Z"
+  },
+  {
+    "price": "80.55000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T16:36:52.513Z"
+  },
+  {
+    "price": "82.66000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T17:36:53.288Z"
+  },
+  {
+    "price": "82.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T18:36:54.305Z"
+  },
+  {
+    "price": "82.75000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T19:36:55.018Z"
+  },
+  {
+    "price": "83.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T20:36:55.747Z"
+  },
+  {
+    "price": "84.62000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T21:36:56.761Z"
+  },
+  {
+    "price": "83.16000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T22:36:57.494Z"
+  },
+  {
+    "price": "81.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-26T23:36:58.182Z"
+  },
+  {
+    "price": "80.26000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T00:36:58.950Z"
+  },
+  {
+    "price": "78.50000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T01:36:59.969Z"
+  },
+  {
+    "price": "79.09000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T02:37:00.803Z"
+  },
+  {
+    "price": "78.90000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T03:37:01.769Z"
+  },
+  {
+    "price": "78.31000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T04:37:02.514Z"
+  },
+  {
+    "price": "78.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T05:37:03.241Z"
+  },
+  {
+    "price": "79.34000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T06:37:04.034Z"
+  },
+  {
+    "price": "79.79000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T07:37:04.843Z"
+  },
+  {
+    "price": "79.38000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T08:37:05.662Z"
+  },
+  {
+    "price": "79.75000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T09:37:06.555Z"
+  },
+  {
+    "price": "80.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T10:37:07.268Z"
+  },
+  {
+    "price": "81.38000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T11:37:08.110Z"
+  },
+  {
+    "price": "81.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T12:37:08.939Z"
+  },
+  {
+    "price": "79.73000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T14:22:10.726Z"
+  },
+  {
+    "price": "79.65000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T15:22:11.490Z"
+  },
+  {
+    "price": "78.49000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T16:22:12.262Z"
+  },
+  {
+    "price": "78.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T17:22:13.035Z"
+  },
+  {
+    "price": "78.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T18:22:13.882Z"
+  },
+  {
+    "price": "75.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T19:22:14.674Z"
+  },
+  {
+    "price": "73.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T20:22:15.684Z"
+  },
+  {
+    "price": "73.66000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T21:22:16.535Z"
+  },
+  {
+    "price": "74.84000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T22:22:17.332Z"
+  },
+  {
+    "price": "74.08000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-27T23:22:18.181Z"
+  },
+  {
+    "price": "74.24000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T00:22:18.996Z"
+  },
+  {
+    "price": "74.93000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T01:22:19.865Z"
+  },
+  {
+    "price": "74.13000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T02:22:20.614Z"
+  },
+  {
+    "price": "73.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T03:22:21.363Z"
+  },
+  {
+    "price": "74.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T04:22:22.169Z"
+  },
+  {
+    "price": "73.41000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T05:22:22.970Z"
+  },
+  {
+    "price": "73.10000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T06:22:23.796Z"
+  },
+  {
+    "price": "74.56000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T07:22:24.664Z"
+  },
+  {
+    "price": "75.46000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T08:22:25.533Z"
+  },
+  {
+    "price": "75.43000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T09:22:26.730Z"
+  },
+  {
+    "price": "75.20000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T10:22:27.534Z"
+  },
+  {
+    "price": "74.83000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T11:22:28.380Z"
+  },
+  {
+    "price": "75.44000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T12:22:29.146Z"
+  },
+  {
+    "price": "74.24000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T14:07:30.517Z"
+  },
+  {
+    "price": "78.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T15:12:31.501Z"
+  },
+  {
+    "price": "80.76000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T16:12:32.303Z"
+  },
+  {
+    "price": "78.88000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T17:12:33.082Z"
+  },
+  {
+    "price": "79.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T18:12:33.973Z"
+  },
+  {
+    "price": "80.00000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T19:12:34.769Z"
+  },
+  {
+    "price": "80.41000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T20:12:35.508Z"
+  },
+  {
+    "price": "81.01000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T21:12:36.425Z"
+  },
+  {
+    "price": "82.35000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T22:12:37.084Z"
+  },
+  {
+    "price": "83.93000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-02-28T23:12:37.854Z"
+  },
+  {
+    "price": "86.54000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T00:12:38.561Z"
+  },
+  {
+    "price": "88.76000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T01:22:39.538Z"
+  },
+  {
+    "price": "87.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T02:22:40.201Z"
+  },
+  {
+    "price": "86.67000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T03:22:41.055Z"
+  },
+  {
+    "price": "87.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T04:22:41.852Z"
+  },
+  {
+    "price": "87.46000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T05:22:42.760Z"
+  },
+  {
+    "price": "87.06000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T06:22:43.604Z"
+  },
+  {
+    "price": "86.34000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T07:22:44.379Z"
+  },
+  {
+    "price": "86.33000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T08:22:45.189Z"
+  },
+  {
+    "price": "86.71000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T09:22:45.975Z"
+  },
+  {
+    "price": "85.15000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T10:22:46.914Z"
+  },
+  {
+    "price": "85.92000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T11:22:47.944Z"
+  },
+  {
+    "price": "87.52000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T12:22:48.851Z"
+  },
+  {
+    "price": "90.03000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T14:07:50.566Z"
+  },
+  {
+    "price": "87.66000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T15:07:51.408Z"
+  },
+  {
+    "price": "85.92000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T16:07:52.254Z"
+  },
+  {
+    "price": "84.86000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T17:07:53.447Z"
+  },
+  {
+    "price": "85.24000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T18:07:54.162Z"
+  },
+  {
+    "price": "87.13000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T19:07:55.290Z"
+  },
+  {
+    "price": "86.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T20:07:56.312Z"
+  },
+  {
+    "price": "87.13000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T21:07:57.065Z"
+  },
+  {
+    "price": "85.75000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T22:07:57.904Z"
+  },
+  {
+    "price": "86.44000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-01T23:07:58.730Z"
+  },
+  {
+    "price": "86.51000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T00:07:59.494Z"
+  },
+  {
+    "price": "86.70000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T01:08:00.334Z"
+  },
+  {
+    "price": "85.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T02:08:01.197Z"
+  },
+  {
+    "price": "86.51000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T03:08:02.026Z"
+  },
+  {
+    "price": "89.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T04:08:03.020Z"
+  },
+  {
+    "price": "87.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T05:08:04.005Z"
+  },
+  {
+    "price": "87.82000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T06:08:04.848Z"
+  },
+  {
+    "price": "85.96000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T07:08:05.831Z"
+  },
+  {
+    "price": "85.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T08:08:06.864Z"
+  },
+  {
+    "price": "86.06000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T09:08:07.741Z"
+  },
+  {
+    "price": "86.11000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T10:08:08.599Z"
+  },
+  {
+    "price": "85.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T11:08:09.420Z"
+  },
+  {
+    "price": "86.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T12:08:10.213Z"
+  },
+  {
+    "price": "83.42000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T13:53:11.846Z"
+  },
+  {
+    "price": "84.67000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T14:53:12.706Z"
+  },
+  {
+    "price": "84.12000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T16:03:13.745Z"
+  },
+  {
+    "price": "84.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T17:03:14.423Z"
+  },
+  {
+    "price": "83.66000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T18:03:15.243Z"
+  },
+  {
+    "price": "83.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T19:03:15.994Z"
+  },
+  {
+    "price": "83.29000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T20:03:16.803Z"
+  },
+  {
+    "price": "83.20000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T21:03:17.408Z"
+  },
+  {
+    "price": "84.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T22:03:18.140Z"
+  },
+  {
+    "price": "83.71000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-02T23:03:18.908Z"
+  },
+  {
+    "price": "83.35000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T00:03:19.614Z"
+  },
+  {
+    "price": "83.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T01:03:20.319Z"
+  },
+  {
+    "price": "83.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T02:03:21.052Z"
+  },
+  {
+    "price": "82.30000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T03:03:21.954Z"
+  },
+  {
+    "price": "81.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T04:03:22.684Z"
+  },
+  {
+    "price": "81.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T05:03:23.648Z"
+  },
+  {
+    "price": "82.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T06:03:24.513Z"
+  },
+  {
+    "price": "83.34000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T07:03:25.192Z"
+  },
+  {
+    "price": "83.04000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T08:03:26.047Z"
+  },
+  {
+    "price": "82.87000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T09:03:26.725Z"
+  },
+  {
+    "price": "82.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T10:03:27.436Z"
+  },
+  {
+    "price": "82.27000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T11:03:28.112Z"
+  },
+  {
+    "price": "82.13000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T12:03:29.022Z"
+  },
+  {
+    "price": "80.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T13:48:30.713Z"
+  },
+  {
+    "price": "79.55000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T14:48:31.598Z"
+  },
+  {
+    "price": "78.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T15:48:32.664Z"
+  },
+  {
+    "price": "78.30000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T16:48:33.835Z"
+  },
+  {
+    "price": "78.14000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T17:48:34.676Z"
+  },
+  {
+    "price": "77.77000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T18:48:35.504Z"
+  },
+  {
+    "price": "77.79000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T19:48:36.378Z"
+  },
+  {
+    "price": "78.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T20:48:37.281Z"
+  },
+  {
+    "price": "78.37000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T21:48:38.191Z"
+  },
+  {
+    "price": "79.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T22:48:39.182Z"
+  },
+  {
+    "price": "78.59000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-03T23:48:40.022Z"
+  },
+  {
+    "price": "75.68000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T00:48:41.004Z"
+  },
+  {
+    "price": "77.00000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T01:48:42.305Z"
+  },
+  {
+    "price": "77.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T02:48:43.292Z"
+  },
+  {
+    "price": "78.01000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T03:48:44.147Z"
+  },
+  {
+    "price": "77.67000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T04:48:45.182Z"
+  },
+  {
+    "price": "77.10000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T05:48:46.138Z"
+  },
+  {
+    "price": "76.75000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T06:48:47.031Z"
+  },
+  {
+    "price": "76.89000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T07:48:48.159Z"
+  },
+  {
+    "price": "77.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T08:48:49.174Z"
+  },
+  {
+    "price": "78.84000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T09:48:50.400Z"
+  },
+  {
+    "price": "79.97000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T10:48:51.158Z"
+  },
+  {
+    "price": "81.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T11:48:51.978Z"
+  },
+  {
+    "price": "81.58000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T12:48:52.892Z"
+  },
+  {
+    "price": "79.97000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T14:33:54.684Z"
+  },
+  {
+    "price": "79.07000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T15:33:55.699Z"
+  },
+  {
+    "price": "77.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T16:33:56.601Z"
+  },
+  {
+    "price": "80.16000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T17:33:57.497Z"
+  },
+  {
+    "price": "79.97000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T18:33:58.368Z"
+  },
+  {
+    "price": "78.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T19:33:59.262Z"
+  },
+  {
+    "price": "77.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T20:34:00.123Z"
+  },
+  {
+    "price": "76.88000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T21:34:01.157Z"
+  },
+  {
+    "price": "75.33000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T22:34:02.180Z"
+  },
+  {
+    "price": "75.73000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-04T23:34:03.469Z"
+  },
+  {
+    "price": "73.87000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T00:34:04.341Z"
+  },
+  {
+    "price": "73.89000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T01:34:05.267Z"
+  },
+  {
+    "price": "74.52000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T02:34:06.153Z"
+  },
+  {
+    "price": "75.11000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T03:34:07.089Z"
+  },
+  {
+    "price": "74.41000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T04:34:08.013Z"
+  },
+  {
+    "price": "75.03000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T05:34:09.018Z"
+  },
+  {
+    "price": "76.20000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T06:34:09.941Z"
+  },
+  {
+    "price": "76.36000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T07:34:11.053Z"
+  },
+  {
+    "price": "76.91000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T08:34:12.068Z"
+  },
+  {
+    "price": "77.11000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T09:34:13.177Z"
   },
   {
     "price": "76.68000000",
     "symbol": "AVAXBUSD",
-    "timestamp": "2022-03-09T20:43:00.285Z"
+    "timestamp": "2022-03-05T10:34:14.158Z"
+  },
+  {
+    "price": "76.79000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T11:34:15.089Z"
+  },
+  {
+    "price": "77.79000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T12:34:15.968Z"
+  },
+  {
+    "price": "76.59000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T14:19:17.608Z"
+  },
+  {
+    "price": "76.67000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T15:19:18.428Z"
+  },
+  {
+    "price": "77.11000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T16:19:19.345Z"
+  },
+  {
+    "price": "78.12000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T17:19:20.180Z"
+  },
+  {
+    "price": "77.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T18:19:21.040Z"
+  },
+  {
+    "price": "77.45000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T19:19:21.878Z"
+  },
+  {
+    "price": "77.99000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T20:19:22.687Z"
+  },
+  {
+    "price": "77.05000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T21:19:23.657Z"
+  },
+  {
+    "price": "76.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T22:19:24.414Z"
+  },
+  {
+    "price": "76.86000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-05T23:19:25.287Z"
+  },
+  {
+    "price": "76.85000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T00:19:26.215Z"
+  },
+  {
+    "price": "76.73000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T01:19:27.048Z"
+  },
+  {
+    "price": "76.69000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T02:19:27.846Z"
+  },
+  {
+    "price": "76.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T03:19:28.713Z"
+  },
+  {
+    "price": "75.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T04:19:29.625Z"
+  },
+  {
+    "price": "76.45000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T05:19:30.412Z"
+  },
+  {
+    "price": "76.27000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T06:19:31.368Z"
+  },
+  {
+    "price": "75.47000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T08:08:26.749Z"
+  },
+  {
+    "price": "75.08000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T09:30:16.806Z"
+  },
+  {
+    "price": "74.61000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T10:37:23.947Z"
+  },
+  {
+    "price": "74.65000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T11:37:26.566Z"
+  },
+  {
+    "price": "75.25000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T12:37:28.761Z"
+  },
+  {
+    "price": "75.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T14:22:32.761Z"
+  },
+  {
+    "price": "74.63000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T15:22:35.042Z"
+  },
+  {
+    "price": "75.46000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T16:22:37.505Z"
+  },
+  {
+    "price": "74.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T17:22:39.844Z"
+  },
+  {
+    "price": "74.94000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T18:22:41.915Z"
+  },
+  {
+    "price": "74.02000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T19:22:44.099Z"
+  },
+  {
+    "price": "72.86000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T20:22:46.416Z"
+  },
+  {
+    "price": "73.72000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T21:22:48.644Z"
+  },
+  {
+    "price": "74.08000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T22:22:51.105Z"
+  },
+  {
+    "price": "72.39000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-06T23:22:53.602Z"
+  },
+  {
+    "price": "71.57000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T00:22:55.812Z"
+  },
+  {
+    "price": "72.85000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T01:22:58.130Z"
+  },
+  {
+    "price": "71.89000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T02:23:00.568Z"
+  },
+  {
+    "price": "71.03000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T03:23:02.616Z"
+  },
+  {
+    "price": "71.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T04:23:04.632Z"
+  },
+  {
+    "price": "71.85000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T05:23:07.032Z"
+  },
+  {
+    "price": "72.18000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T06:23:09.508Z"
+  },
+  {
+    "price": "72.31000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T07:23:11.717Z"
+  },
+  {
+    "price": "71.96000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T08:23:13.771Z"
+  },
+  {
+    "price": "73.06000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T09:23:16.279Z"
+  },
+  {
+    "price": "73.60000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T10:23:18.614Z"
+  },
+  {
+    "price": "73.81000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T11:23:20.935Z"
+  },
+  {
+    "price": "75.19000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T12:23:23.620Z"
+  },
+  {
+    "price": "76.00000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T14:08:27.455Z"
+  },
+  {
+    "price": "75.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T15:08:29.810Z"
+  },
+  {
+    "price": "75.63000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T16:08:32.283Z"
+  },
+  {
+    "price": "74.27000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T17:08:34.114Z"
+  },
+  {
+    "price": "73.96000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T18:08:36.370Z"
+  },
+  {
+    "price": "73.09000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T19:08:38.763Z"
+  },
+  {
+    "price": "70.80000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T20:08:40.955Z"
+  },
+  {
+    "price": "71.32000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T21:08:42.999Z"
+  },
+  {
+    "price": "72.06000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T22:08:45.296Z"
+  },
+  {
+    "price": "72.10000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-07T23:08:47.651Z"
+  },
+  {
+    "price": "72.40000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T00:08:50.141Z"
+  },
+  {
+    "price": "72.29000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T01:08:52.372Z"
+  },
+  {
+    "price": "72.56000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T02:08:54.904Z"
+  },
+  {
+    "price": "73.68000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T03:08:57.508Z"
+  },
+  {
+    "price": "73.31000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T04:08:59.779Z"
+  },
+  {
+    "price": "72.17000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T05:09:02.122Z"
+  },
+  {
+    "price": "72.21000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T06:09:04.439Z"
+  },
+  {
+    "price": "71.70000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T07:09:06.890Z"
+  },
+  {
+    "price": "72.23000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T08:09:13.568Z"
+  },
+  {
+    "price": "72.49000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T09:09:15.938Z"
+  },
+  {
+    "price": "72.40000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T10:09:18.187Z"
+  },
+  {
+    "price": "72.58000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T11:09:20.555Z"
+  },
+  {
+    "price": "72.78000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T12:09:23.137Z"
+  },
+  {
+    "price": "72.10000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T13:54:26.781Z"
+  },
+  {
+    "price": "71.55000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T14:54:28.783Z"
+  },
+  {
+    "price": "72.57000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T15:54:31.069Z"
+  },
+  {
+    "price": "72.68000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T16:54:33.179Z"
+  },
+  {
+    "price": "74.86000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T17:54:35.408Z"
+  },
+  {
+    "price": "74.81000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T18:54:37.979Z"
+  },
+  {
+    "price": "74.68000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T19:54:40.177Z"
+  },
+  {
+    "price": "73.53000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T20:54:42.746Z"
+  },
+  {
+    "price": "72.62000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T21:54:44.958Z"
+  },
+  {
+    "price": "72.37000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-08T22:54:47.311Z"
+  },
+  {
+    "price": "73.02000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T00:00:12.409Z"
+  },
+  {
+    "price": "74.11000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T01:00:14.835Z"
+  },
+  {
+    "price": "75.12000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T02:00:17.030Z"
+  },
+  {
+    "price": "75.26000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T03:00:19.242Z"
+  },
+  {
+    "price": "79.98000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T04:00:21.673Z"
+  },
+  {
+    "price": "78.88000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T05:00:24.138Z"
+  },
+  {
+    "price": "78.04000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T06:00:26.310Z"
+  },
+  {
+    "price": "78.72000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T07:00:28.659Z"
+  },
+  {
+    "price": "78.58000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T08:00:30.856Z"
+  },
+  {
+    "price": "78.73000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T09:00:33.167Z"
+  },
+  {
+    "price": "78.15000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T10:00:35.590Z"
+  },
+  {
+    "price": "78.93000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T11:00:37.800Z"
+  },
+  {
+    "price": "78.85000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T12:00:40.039Z"
+  },
+  {
+    "price": "78.04000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T13:45:43.819Z"
+  },
+  {
+    "price": "78.74000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T14:45:46.248Z"
+  },
+  {
+    "price": "78.96000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T15:45:48.605Z"
+  },
+  {
+    "price": "78.85000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T16:45:50.961Z"
+  },
+  {
+    "price": "78.83000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T17:45:53.287Z"
+  },
+  {
+    "price": "76.95000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T18:45:55.562Z"
+  },
+  {
+    "price": "77.49000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T19:45:57.959Z"
+  },
+  {
+    "price": "76.89000000",
+    "symbol": "AVAXBUSD",
+    "timestamp": "2022-03-09T20:46:00.386Z"
   }
 ]
