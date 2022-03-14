@@ -14,8 +14,10 @@ export async function getAllPriceDataFromLogs() {
   );
   console.log("Number of log files: " + logFiles.length);
   await Promise.all(logFiles.map(writePriceForSymbolFromLog));
+  console.log("Finished processing logs");
   await Promise.all(closeAllSonicBoomFileStreams());
   generateParititonedPriceDataForAllSymbols();
+  console.log("Finished partitioning price data");
 }
 
 type LogPrice = Record<"symbol" | "price", string>;
@@ -140,7 +142,6 @@ async function writePriceForSymbolFromLog(filepath: string) {
     });
 
     rl.on("close", () => {
-      console.log("Processed ", filepath);
       resolve();
     });
   });

@@ -3,9 +3,9 @@ import { getAllPriceDataFromLogs } from "./parse/pricebot";
 import { startSimulations } from "./simulation";
 import { getFilesInDir, runAsyncSequentially } from "./utils";
 
-const parsePriceBot = true;
+const parsePriceBot = false;
 const getApiPricesForSymbol = false;
-const simulate = false;
+const simulate = true;
 
 if (parsePriceBot) {
   getAllPriceDataFromLogs().then(() => {
@@ -26,12 +26,12 @@ if (parsePriceBot) {
     writeApiPricesForSymbol(symbol);
   });
 } else if (simulate) {
-  const numProcesses = 8;
+  const numProcesses = 4;
 
   console.time("simul");
 
   runAsyncSequentially(
-    ["eth", "xrp"].map((vol) => [numProcesses, vol]),
+    ["eth"].map((vol) => [numProcesses, vol]),
     startSimulations
   ).then(() => {
     console.timeEnd("simul");
