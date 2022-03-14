@@ -25,7 +25,7 @@ export async function startSimulations(
   finalResults.sort((a, b) => Number(b.profit) - Number(a.profit));
 
   fs.writeFileSync(
-    `${volatileAsset}_results.json`,
+    `./data/${volatileAsset}_results.json`,
     JSON.stringify(finalResults, undefined, 2),
     "utf8"
   );

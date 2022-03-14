@@ -3,7 +3,7 @@ import { getAllPriceDataFromLogs } from "./parse/pricebot";
 import { startSimulations } from "./simulation";
 import { getFilesInDir, runAsyncSequentially } from "./utils";
 
-const parsePriceBot = true;
+const parsePriceBot = false;
 const getApiPricesForSymbol = false;
 const simulate = false;
 
