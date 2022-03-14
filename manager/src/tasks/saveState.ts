@@ -1,6 +1,5 @@
 import fs from "fs";
 import cron from "node-cron";
-import { logger } from "../log.js";
 import { botRegister } from "../models.js";
 
 export const saveState = (): void => {

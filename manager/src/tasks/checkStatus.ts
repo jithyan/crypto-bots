@@ -1,4 +1,3 @@
-import cron from "node-cron";
 import { logger } from "../log.js";
 import { botRegister } from "../models.js";
 import { isWithinInterval, addHours } from "date-fns";
@@ -31,5 +30,5 @@ const checkBotStatus = () => {
 
 export const startBotStatusCheck = () => {
   console.log("Started bot status check scheduler");
-  cron.schedule("* 2 * * *", checkBotStatus);
+  setInterval(checkBotStatus, 60 * 60 * 1000);
 };
