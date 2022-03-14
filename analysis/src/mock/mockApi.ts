@@ -23,7 +23,7 @@ export function getApiPriceDataMock(args: AssetArgs): IntervalPriceData {
     } catch (e) {
       data[interval] = JSON.parse(
         fs.readFileSync(
-          `../../data/pricebot/${symbol}/${interval}_${symbol}.json`,
+          `../../data/pricebot/symbols/${symbol}/${interval}_${symbol}.json`,
           "utf8"
         )
       );
