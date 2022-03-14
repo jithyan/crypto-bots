@@ -3,6 +3,7 @@ import { setupServer } from "msw/node";
 import { rest } from "msw";
 import { IntervalPriceData, Intervals, PriceData } from "../parse/api";
 import { exchangeInfo } from "./mockApiData";
+import { exchangeInfoData } from "./exchange";
 
 export const intervals: Intervals[] = ["m3", "m9", "m6", "m15", "m30", "m60"];
 
@@ -45,13 +46,6 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
   };
   const symbol = makeLowerCaseSymbolFromArgs(args);
   const data = getApiPriceDataMock(args)[interval];
-
-  if (!Object.keys(exchangeInfo).includes(symbol)) {
-    const errorMessage =
-      "Exchange info for symbol " + symbol + " does not exist";
-    console.error(errorMessage);
-    throw new Error("Exchange info for symbol " + symbol + " does not exist");
-  }
 
   return setupServer(
     rest.get("*/api/v3/ticker/price", async (req, res, ctx) => {
@@ -103,7 +97,19 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
       );
     }),
     rest.get(`*/api/v3/exchangeInfo`, async (req, res, ctx) => {
-      return res(ctx.json(exchangeInfo[symbol as keyof typeof exchangeInfo]));
+      const { symbols, ...rest } = exchangeInfoData;
+      const symbolData = symbols.find((x) => x.symbol === symbol.toUpperCase());
+      const response = { ...rest, symbols: [symbolData] };
+      const originalResp = exchangeInfo["ethbusd"];
+
+      if (symbolData) {
+        return res(ctx.json(response));
+      } else {
+        return res(
+          ctx.status(404),
+          ctx.json({ status: "Not found for symbol " + symbol })
+        );
+      }
     }),
     rest.get("*/api/v3/account*", async (req, res, ctx) => {
       const resp = {
