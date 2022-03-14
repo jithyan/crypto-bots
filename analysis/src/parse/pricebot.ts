@@ -119,7 +119,6 @@ function generateParititonedPriceDataForAllSymbols() {
     const symbol = fn.split("/").pop()?.replace(".json", "");
     if (symbol) {
       writePartitionedPriceForSymbol(fn, symbol);
-      console.log(`Processed ${i + 1} of ${files.length}`);
     } else {
       throw new Error("No symbol provided");
     }
