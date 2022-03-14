@@ -16,3 +16,30 @@ export function getFilesInDir(dir: string): string[] {
   const filenames = fs.readdirSync(dir);
   return filenames.map((fn) => `${dir}/${fn}`);
 }
+
+export function runAsyncSequentially<T = any, R = any>(
+  asyncFuncArgs: T[][],
+  asyncFunc: (...args: any[]) => Promise<R>
+): Promise<void> {
+  let resolve: () => any;
+  let counter = 0;
+  const finalPromise = new Promise<void>((res) => {
+    resolve = res;
+  });
+
+  function nextPromise(): Promise<void> {
+    return asyncFunc(...asyncFuncArgs[counter++])
+      .then((res) => {
+        console.log(
+          `Completed run #${counter}, ${(
+            (counter / asyncFuncArgs.length) *
+            100
+          ).toFixed(2)}%`
+        );
+      })
+      .then(counter < asyncFuncArgs.length ? nextPromise : () => resolve());
+  }
+
+  nextPromise();
+  return finalPromise;
+}

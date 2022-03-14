@@ -5,13 +5,23 @@ import {
 } from "./parse/api";
 import { getAllPriceDataFromLogs } from "./parse/pricebot";
 import { startSimulations } from "./simulation";
+import { getFilesInDir, runAsyncSequentially } from "./utils";
 
 const parsePriceBot = false;
-const getApiPricesForSymbol = true;
-const simulate = false;
+const getApiPricesForSymbol = false;
+const simulate = true;
 
 if (parsePriceBot) {
   getAllPriceDataFromLogs();
+  const volatileSymbols = getFilesInDir("./data/pricebot/symbols")
+    .filter((fn) => fn.endsWith(".json"))
+    .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
+
+  const simulArgs = volatileSymbols.map((vol) => [6, vol]);
+  console.time("simul");
+  runAsyncSequentially(simulArgs, startSimulations).then(() => {
+    console.timeEnd("simul");
+  });
 } else if (getApiPricesForSymbol) {
   writeApiPricesForSymbol("adabusd");
   writeApiPricesForSymbol("avaxbusd");
@@ -20,14 +30,13 @@ if (parsePriceBot) {
   writeApiPricesForSymbol("xrpbusd");
 } else if (simulate) {
   console.time("simul");
-
-  startSimulations(6, "ada").then((res) => {
-    startSimulations(6, "eth").then((res) => {
-      startSimulations(6, "avax").then((res) => {
-        startSimulations(6, "xrp").then((res) => {
-          console.timeEnd("simul");
-        });
-      });
-    });
+  runAsyncSequentially(
+    [
+      [8, "eth"],
+      [8, "xrp"],
+    ],
+    startSimulations
+  ).then(() => {
+    console.timeEnd("simul");
   });
 }
