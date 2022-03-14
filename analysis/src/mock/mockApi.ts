@@ -13,9 +13,21 @@ export function getApiPriceDataMock(args: AssetArgs): IntervalPriceData {
   const data: Partial<IntervalPriceData> = {};
 
   for (const interval of intervals) {
-    data[interval] = JSON.parse(
-      fs.readFileSync(`../../data/${symbol}/${interval}_${symbol}.json`, "utf8")
-    );
+    try {
+      data[interval] = JSON.parse(
+        fs.readFileSync(
+          `../../data/${symbol}/${interval}_${symbol}.json`,
+          "utf8"
+        )
+      );
+    } catch (e) {
+      data[interval] = JSON.parse(
+        fs.readFileSync(
+          `../../data/pricebot/${symbol}/${interval}_${symbol}.json`,
+          "utf8"
+        )
+      );
+    }
   }
 
   return data as IntervalPriceData;
