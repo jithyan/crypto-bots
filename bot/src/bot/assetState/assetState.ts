@@ -88,22 +88,18 @@ export class AssetState<
 
   getCurrentState = () => this.state;
 
-  isOrderFilled = async (clientOrderId: string): Promise<boolean> => {
-    const { status, executedQty } = await binanceClient.checkOrderStatus(
+  isOrderFilled = async (clientOrderId: string) => {
+    const response = await binanceClient.checkOrderStatus(
       clientOrderId,
       this.symbol
     );
-    const result = status.toUpperCase() === "FILLED";
-
     stateLogger.debug(`Is order ${clientOrderId} filled for ${this.symbol}?`, {
       clientOrderId,
-      status,
-      executedQty,
-      result,
+      response,
       state: this,
     });
 
-    return result;
+    return response;
   };
 
   getBalance = async (): Promise<string> => {
@@ -218,24 +214,9 @@ export class HoldVolatileAsset<
           this.genSellOrder(latestPrice, volatileAssetBalance)
         );
 
-        const profit = await logTrade(
-          {
-            lastPurchasePrice: this.decisionEngine.lastPurchasePrice,
-            price: orderPrice,
-            amount: qtySold,
-            from: this.volatileAsset,
-            to: this.stableAsset,
-            action: "SELL",
-          },
-          binanceClient
-        );
-
         const nextState = new StableAssetOrderPlaced(
           {
             ...this,
-            stats: {
-              usdProfitToDate: new Big(this.stats.usdProfitToDate).add(profit),
-            },
             decisionEngine: nextDecision,
           },
           clientOrderId
@@ -340,18 +321,6 @@ export class HoldStableAsset<
 
         await this.sleep.onPlacedVolatileAssetBuyOrder();
 
-        logTrade(
-          {
-            lastPurchasePrice: "N/A",
-            price: orderPrice,
-            amount: qtyBought,
-            from: this.stableAsset,
-            to: this.volatileAsset,
-            action: "BUY",
-          },
-          binanceClient
-        );
-
         return nextState;
       } else {
         stateLogger.info("HOLD STABLE ASSET - No state change " + this.symbol, {
@@ -382,13 +351,46 @@ abstract class AssetOrderPlaced<
     this.clientOrderId = clientOrderId;
   }
 
+  calculateProfitAndLogTrade = async ({
+    orderPrice,
+    amount,
+  }: Record<"orderPrice" | "amount", string>): Promise<string> => {
+    const isSell = this.state === "StableAssetOrderPlaced" ? "SELL" : "BUY";
+
+    return logTrade(
+      {
+        lastPurchasePrice: isSell
+          ? this.decisionEngine.lastPurchasePrice
+          : "N/A",
+        price: orderPrice,
+        amount: amount,
+        from: isSell ? this.volatileAsset : this.stableAsset,
+        to: isSell ? this.stableAsset : this.volatileAsset,
+        action: isSell ? "SELL" : "BUY",
+      },
+      binanceClient
+    );
+  };
+
   execute: () => Promise<ITradeAssetCycle> = async () => {
     try {
-      const orderFilled = await this.isOrderFilled(this.clientOrderId);
+      const orderStatus = await this.isOrderFilled(this.clientOrderId);
 
-      if (orderFilled) {
+      if (orderStatus.status === "FILLED") {
+        const profit = await this.calculateProfitAndLogTrade({
+          orderPrice: orderStatus.price,
+          amount: orderStatus.executedQty,
+        });
+
         const nextState = this.isStableAssetClass
-          ? new HoldStableAsset(this)
+          ? new HoldStableAsset({
+              ...this,
+              stats: {
+                usdProfitToDate: new Big(this.stats.usdProfitToDate).add(
+                  profit
+                ),
+              },
+            })
           : new HoldVolatileAsset(this);
 
         stateLogger.info("ORDER FILLED " + this.symbol, {
