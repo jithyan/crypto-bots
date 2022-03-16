@@ -3,6 +3,7 @@ import {
   HoldStableAsset,
   HoldVolatileAsset,
   ITradeAssetCycle,
+  PostSellStasis,
   StableAssetOrderPlaced,
   TAssetStates,
   VolatileAssetOrderPlaced,
@@ -38,8 +39,15 @@ export function hydrate(
 
   generalLogger.info("Attempt to hydrate", { file, filepath });
 
-  const { symbol, state, stableAsset, volatileAsset, clientOrderId, stats } =
-    file;
+  const {
+    symbol,
+    state,
+    stableAsset,
+    volatileAsset,
+    clientOrderId,
+    stats,
+    iteration,
+  } = file;
   const {
     state: deState,
     lastPurchasePrice,
@@ -103,6 +111,8 @@ export function hydrate(
         clientOrderId,
         file.lastPurchasePrice ?? "0"
       );
+    case "PostSellStasis":
+      return new PostSellStasis(assetStateArgs, iteration);
 
     default:
       throw new Error("Unrecognized asset state: " + state);
