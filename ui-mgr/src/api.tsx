@@ -140,12 +140,14 @@ export function LastState({
                     lastState?.decisionEngine?.lastTickerPrice
                   ).toFixed(3)}
                 </li>
-                <li className="list-group-item">
-                  <strong>Last purchase price:</strong>{" "}
-                  {parseFloat(
-                    lastState?.decisionEngine?.lastPurchasePrice
-                  ).toFixed(3)}
-                </li>
+                {lastState?.state !== "HoldStableAsset" && (
+                  <li className="list-group-item">
+                    <strong>Last purchase price:</strong>{" "}
+                    {parseFloat(
+                      lastState?.decisionEngine?.lastPurchasePrice
+                    ).toFixed(3)}
+                  </li>
+                )}
                 <li className="list-group-item">
                   <strong>Last check in:</strong>{" "}
                   <mark>
