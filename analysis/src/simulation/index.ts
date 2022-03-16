@@ -55,6 +55,15 @@ type SimulationParams = Record<
   string
 >;
 
+const sleepStrategyToNumCalls: Record<Intervals, number> = {
+  m3: 20,
+  m6: 10,
+  m9: 7,
+  m15: 4,
+  m30: 2,
+  m60: 0,
+};
+
 async function runSingleSimulationProcessFor(
   {
     volatileAsset,
@@ -83,6 +92,8 @@ async function runSingleSimulationProcessFor(
         INC: increase,
         DEC: decrease,
         STOPL: stopLoss,
+        NUM_PRICE_CALLS:
+          sleepStrategyToNumCalls[interval as Intervals].toString(),
       },
     });
 
@@ -126,7 +137,7 @@ function generateSimulationCombinations(
 
   const decreases = ["0.985", "0.995", "0.999"];
   const increases = ["1.0015", "1.00175", "1.0035", "1.005"];
-  const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15", "m60"];
+  const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15", "m30"];
 
   const combinations = stopLosses
     .map((stopLoss) =>

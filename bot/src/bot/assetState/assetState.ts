@@ -25,7 +25,8 @@ export type TAssetStates =
   | "HoldVolatileAsset"
   | "HoldStableAsset"
   | "VolatileAssetOrderPlaced"
-  | "StableAssetOrderPlaced";
+  | "StableAssetOrderPlaced"
+  | "PostSellStasis";
 
 interface IAssetStateArguments<VolatileAsset, StableAsset> {
   volatileAsset: VolatileAsset;
@@ -179,6 +180,30 @@ export class AssetState<
   };
 
   execute: () => Promise<ITradeAssetCycle> = () => Promise.resolve(this);
+}
+
+export class PostSellStasis<
+  VolatileAsset extends TVolatileCoins,
+  StableAsset extends TStableCoins
+> extends AssetState<VolatileAsset, StableAsset> {
+  public readonly iteration: number;
+  constructor(
+    args: TAssetStateChildArguments<VolatileAsset, StableAsset>,
+    iteration: number = 0
+  ) {
+    super({ ...args, isStableAssetClass: true, state: "PostSellStasis" });
+    this.iteration = iteration;
+  }
+
+  execute: () => Promise<ITradeAssetCycle> = async () => {
+    stateLogger.info("PostSellStasis iter: " + this.iteration, { state: this });
+    if (this.iteration < 4) {
+      await this.sleep.waitAnHour();
+      return new PostSellStasis({ ...this }, this.iteration + 1);
+    } else {
+      return Promise.resolve(new HoldStableAsset({ ...this }));
+    }
+  };
 }
 
 export class HoldVolatileAsset<
@@ -386,7 +411,7 @@ abstract class AssetOrderPlaced<
         });
 
         const nextState = this.isStableAssetClass
-          ? new HoldStableAsset({
+          ? new PostSellStasis({
               ...this,
               stats: {
                 usdProfitToDate: new Big(this.stats.usdProfitToDate).add(

@@ -30,7 +30,7 @@ export function getSleepStrategy(
     case "60m":
       return new SixtyMinuteSleepStrategy();
     case "no-sleep":
-      return new NoSleepStrategy();
+      return new NoSleepStrategy(Number(process.env.NUM_PRICE_CALLS ?? 0));
     default:
       throw new Error("Unknown strategy: " + strategy);
   }

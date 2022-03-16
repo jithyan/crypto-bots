@@ -1,9 +1,18 @@
+import { getExchangeClient } from "../../exchange/index.js";
+import { generalLogger } from "../../log/general.js";
 import { sleep } from "../../utils.js";
 import { BaseSleepStrategy } from "./BaseSleepStrategy.js";
 
 export class NoSleepStrategy extends BaseSleepStrategy {
-  constructor() {
+  readonly numFakePriceCallsOnWait: number;
+
+  constructor(numFakePriceCallsOnWait: number = 0) {
     super("no-sleep");
+    generalLogger.info(
+      "Starting no sleep strategy with numWaits = " + numFakePriceCallsOnWait,
+      { numFakePriceCallsOnWait }
+    );
+    this.numFakePriceCallsOnWait = numFakePriceCallsOnWait;
   }
 
   onPlacedVolatileAssetSellOrder = () => Promise.resolve();
@@ -12,6 +21,15 @@ export class NoSleepStrategy extends BaseSleepStrategy {
   onHoldStableAsset = () => Promise.resolve();
   onAssetOrderNotFilled = () => Promise.resolve();
   onAssetOrderFilled = () => Promise.resolve();
+
+  waitAnHour = async () => {
+    for (let i = 0; i < this.numFakePriceCallsOnWait; i++) {
+      await getExchangeClient("binance").getLatestPrice(
+        "PRICE" as any,
+        "BOT" as any
+      );
+    }
+  };
 }
 
 export class ThreeMinuteSleepStrategy extends BaseSleepStrategy {

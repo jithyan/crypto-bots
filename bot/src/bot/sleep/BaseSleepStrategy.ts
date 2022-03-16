@@ -1,6 +1,7 @@
 import { sleep } from "../../utils.js";
 
 export type ISleepStrategy = Record<
+  | "waitAnHour"
   | "onTooManyRequestsError"
   | "onInsuffientBalanceError"
   | "onUnknownApiError"
@@ -39,4 +40,6 @@ export abstract class BaseSleepStrategy implements ISleepStrategy {
   abstract onHoldStableAsset: () => Promise<void>;
   abstract onAssetOrderNotFilled: () => Promise<void>;
   abstract onAssetOrderFilled: () => Promise<void>;
+
+  waitAnHour = () => sleep(60);
 }
