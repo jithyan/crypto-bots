@@ -3,11 +3,19 @@ import { getAllPriceDataFromLogs } from "./parse/pricebot";
 import { startSimulations } from "./simulation";
 import { getFilesInDir, runAsyncSequentially } from "./utils";
 
-const parsePriceBot = false;
-const getApiPricesForSymbol = false;
-const simulate = true;
+type Actions = "Analyze price bot" | "Extract api data" | "Run simulation";
+const action: { do: Actions } = { do: "Run simulation" };
 
-if (parsePriceBot) {
+const execute = (
+  arg: "Analyze price bot" | "Extract api data" | "Run simulation"
+) => {
+  action.do = arg;
+  console.log(action.do + "...");
+};
+
+execute("Run simulation");
+
+if (action.do === "Analyze price bot") {
   getAllPriceDataFromLogs().then(() => {
     const volatileSymbols = getFilesInDir("./data/pricebot/symbols")
       .filter((fn) => fn.endsWith(".json"))
@@ -21,12 +29,12 @@ if (parsePriceBot) {
       console.timeEnd("simul");
     });
   });
-} else if (getApiPricesForSymbol) {
+} else if (action.do === "Extract api data") {
   ["adabusd", "avaxbusd", "ethbusd", "xrpbusd"].forEach((symbol) => {
     writeApiPricesForSymbol(symbol);
   });
-} else if (simulate) {
-  const numProcesses = 10;
+} else if (action.do === "Run simulation") {
+  const numProcesses = 8;
 
   console.time("simul");
 
