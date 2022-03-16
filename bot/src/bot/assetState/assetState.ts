@@ -219,7 +219,8 @@ export class HoldVolatileAsset<
             ...this,
             decisionEngine: nextDecision,
           },
-          clientOrderId
+          clientOrderId,
+          this.decisionEngine.lastPurchasePrice
         );
 
         stateLogger.info("SOLD VOLATILE ASSET " + this.symbol, {
@@ -308,7 +309,8 @@ export class HoldStableAsset<
 
         const nextState = new VolatileAssetOrderPlaced(
           { ...this, decisionEngine: nextDecision },
-          clientOrderId
+          clientOrderId,
+          this.decisionEngine.lastPurchasePrice
         );
 
         stateLogger.info("BOUGHT VOLATILE ASSET " + this.symbol, {
@@ -342,26 +344,27 @@ abstract class AssetOrderPlaced<
   StableAsset extends TStableCoins
 > extends AssetState<VolatileAsset, StableAsset> {
   readonly clientOrderId: string;
+  readonly lastPurchasePrice: string;
 
   constructor(
     args: IAssetStateArguments<VolatileAsset, StableAsset>,
-    clientOrderId: string
+    clientOrderId: string,
+    lastPurchasePrice: string
   ) {
     super(args);
     this.clientOrderId = clientOrderId;
+    this.lastPurchasePrice = lastPurchasePrice;
   }
 
   calculateProfitAndLogTrade = async ({
     orderPrice,
     amount,
   }: Record<"orderPrice" | "amount", string>): Promise<string> => {
-    const isSell = this.state === "StableAssetOrderPlaced" ? "SELL" : "BUY";
+    const isSell = this.state === "StableAssetOrderPlaced";
 
     return logTrade(
       {
-        lastPurchasePrice: isSell
-          ? this.decisionEngine.lastPurchasePrice
-          : "N/A",
+        lastPurchasePrice: isSell ? this.lastPurchasePrice : "N/A",
         price: orderPrice,
         amount: amount,
         from: isSell ? this.volatileAsset : this.stableAsset,
@@ -418,7 +421,8 @@ export class VolatileAssetOrderPlaced<
 > extends AssetOrderPlaced<VolatileAsset, StableAsset> {
   constructor(
     args: TAssetStateChildArguments<VolatileAsset, StableAsset>,
-    clientOrderId: string
+    clientOrderId: string,
+    lastPurchasePrice: string
   ) {
     super(
       {
@@ -426,7 +430,8 @@ export class VolatileAssetOrderPlaced<
         isStableAssetClass: false,
         state: "VolatileAssetOrderPlaced",
       },
-      clientOrderId
+      clientOrderId,
+      lastPurchasePrice
     );
   }
 }
@@ -437,7 +442,8 @@ export class StableAssetOrderPlaced<
 > extends AssetOrderPlaced<VolatileAsset, StableAsset> {
   constructor(
     args: TAssetStateChildArguments<VolatileAsset, StableAsset>,
-    clientOrderId: string
+    clientOrderId: string,
+    lastPurchasePrice: string
   ) {
     super(
       {
@@ -445,7 +451,8 @@ export class StableAssetOrderPlaced<
         isStableAssetClass: true,
         state: "StableAssetOrderPlaced",
       },
-      clientOrderId
+      clientOrderId,
+      lastPurchasePrice
     );
   }
 }

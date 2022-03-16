@@ -91,10 +91,18 @@ export function hydrate(
       return new HoldVolatileAsset(assetStateArgs);
 
     case "StableAssetOrderPlaced":
-      return new StableAssetOrderPlaced(assetStateArgs, clientOrderId);
+      return new StableAssetOrderPlaced(
+        assetStateArgs,
+        clientOrderId,
+        file.lastPurchasePrice ?? "0"
+      );
 
     case "VolatileAssetOrderPlaced":
-      return new VolatileAssetOrderPlaced(assetStateArgs, clientOrderId);
+      return new VolatileAssetOrderPlaced(
+        assetStateArgs,
+        clientOrderId,
+        file.lastPurchasePrice ?? "0"
+      );
 
     default:
       throw new Error("Unrecognized asset state: " + state);

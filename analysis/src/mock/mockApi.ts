@@ -2,8 +2,7 @@ import fs from "fs";
 import { setupServer } from "msw/node";
 import { rest } from "msw";
 import { IntervalPriceData, Intervals, PriceData } from "../parse/api";
-import { exchangeInfo } from "./mockApiData";
-import { exchangeInfoData } from "./exchange";
+import exchangeInfoData from "./exchange.js";
 
 export const intervals: Intervals[] = ["m3", "m9", "m6", "m15", "m30", "m60"];
 
@@ -43,6 +42,7 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
     ptr: -1,
     balance: "0",
     numTrades: 0,
+    lastOrderQty: "0.0",
   };
   const symbol = makeLowerCaseSymbolFromArgs(args);
   const data = getApiPriceDataMock(args)[interval];
@@ -79,6 +79,7 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
       return res(ctx.json(data[current.ptr]));
     }),
     rest.post("*/api/v3/order", async (req, res, ctx) => {
+      current.lastOrderQty = req.url.searchParams.get("quantity") ?? "0";
       if (req.url.searchParams.get("side") === "BUY") {
         current.balance = req.url.searchParams.get("quantity") as string;
       } else {
@@ -92,15 +93,17 @@ export const makeMockServer = (args: AssetArgs, interval: Intervals) => {
         ctx.json({
           clientOrderId: "123",
           status: "FILLED",
-          executedQty: "100%",
+          price: data[current.ptr].price,
+          executedQty: current.lastOrderQty,
         })
       );
     }),
     rest.get(`*/api/v3/exchangeInfo`, async (req, res, ctx) => {
       const { symbols, ...rest } = exchangeInfoData;
-      const symbolData = symbols.find((x) => x.symbol === symbol.toUpperCase());
+      const symbolData = symbols.find(
+        (x: Record<"symbol", string>) => x.symbol === symbol.toUpperCase()
+      );
       const response = { ...rest, symbols: [symbolData] };
-      const originalResp = exchangeInfo["ethbusd"];
 
       if (symbolData) {
         return res(ctx.json(response));

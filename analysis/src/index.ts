@@ -5,7 +5,7 @@ import { getFilesInDir, runAsyncSequentially } from "./utils";
 
 const parsePriceBot = false;
 const getApiPricesForSymbol = false;
-const simulate = false;
+const simulate = true;
 
 if (parsePriceBot) {
   getAllPriceDataFromLogs().then(() => {
@@ -26,7 +26,7 @@ if (parsePriceBot) {
     writeApiPricesForSymbol(symbol);
   });
 } else if (simulate) {
-  const numProcesses = 4;
+  const numProcesses = 10;
 
   console.time("simul");
 

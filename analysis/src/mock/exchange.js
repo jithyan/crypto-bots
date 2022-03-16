@@ -1,4 +1,4 @@
-export const exchangeInfoData = {
+export default {
   timezone: "UTC",
   serverTime: 1647227067176,
   rateLimits: [
