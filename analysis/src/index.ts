@@ -30,7 +30,7 @@ if (action.do === "Analyze price bot") {
     });
   });
 } else if (action.do === "Extract api data") {
-  ["adabusd", "avaxbusd", "ethbusd", "xrpbusd"].forEach((symbol) => {
+  ["adabusd", "xrpbusd"].forEach((symbol) => {
     writeApiPricesForSymbol(symbol);
   });
 } else if (action.do === "Run simulation") {
