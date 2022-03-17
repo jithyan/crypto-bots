@@ -25,7 +25,6 @@
     "express": "^4.17.3",
     "helmet": "^5.0.2",
     "node-cache": "^5.1.2",
-    "node-cron": "^3.0.0",
     "winston": "^3.5.1",
     "winston-csv-format": "^2.0.2",
     "winston-daily-rotate-file": "^4.6.1"
@@ -35,7 +34,6 @@
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.16",
     "@types/node-cache": "^4.2.5",
-    "@types/node-cron": "^3.0.1",
     "dotenv": "^16.0.0",
     "esbuild": "^0.14.25",
     "pkg": "^5.5.2",

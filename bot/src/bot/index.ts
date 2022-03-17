@@ -1,10 +1,5 @@
-import { generalLogger, priceLogger } from "../log/index.js";
-import cron from "node-cron";
-import {
-  TVolatileCoins,
-  TStableCoins,
-  getExchangeClient,
-} from "../exchange/index.js";
+import { generalLogger } from "../log/index.js";
+import { TVolatileCoins, TStableCoins } from "../exchange/index.js";
 import { hydrate, initialiseAssetState } from "./assetState/index.js";
 import { Config } from "../config.js";
 import { registerWithBotManager, SERVER_CONTROL } from "../controlServer.js";
@@ -58,10 +53,6 @@ export async function* executeTradeCycle({
 
   console.log("Successfully started");
 
-  if (Config.COLLECT_PRICE_STATS) {
-    cron.schedule("0 8 * * *", () => recordPriceStatistics(args));
-  }
-
   while (true) {
     if (enableResume) {
       nextAssetState.dehydrate();
@@ -88,24 +79,5 @@ export async function* executeTradeCycle({
 
     nextAssetState = await nextAssetState.execute();
     yield nextAssetState;
-  }
-}
-
-async function recordPriceStatistics({
-  volatileAsset,
-  stableAsset,
-}: {
-  volatileAsset: TVolatileCoins;
-  stableAsset: TStableCoins;
-}): Promise<void> {
-  const symbol = `${volatileAsset}${stableAsset}`;
-  try {
-    const priceChange24HrWindow = await getExchangeClient(
-      Config.EXCHANGE
-    ).get24hrPriceChangeStats(volatileAsset, stableAsset);
-
-    priceLogger.info(`${symbol}`, { priceChange24HrWindow });
-  } catch (err) {
-    priceLogger.error(`${symbol} - Detailed price collection failed`, err);
   }
 }

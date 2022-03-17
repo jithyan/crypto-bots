@@ -7,7 +7,6 @@ const revision =
     .slice(0, 7) || "";
 
 const define = {
-  "process.env.COLLECT_PRICE_STATS": `"${process.env.COLLECT_PRICE_STATS}"`,
   "process.env.NODE_ENV": `"${process.env.NODE_ENV}"`,
   "process.env.APP_VERSION": `"${revision}"`,
   "process.env.BINANCE_KEY": `"${process.env.BINANCE_KEY}"`,
