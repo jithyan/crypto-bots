@@ -1,0 +1,38 @@
+{
+  "ethbusd": {
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "SLEEP_STRATEGY": "9m",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": 0.05
+  },
+  "adabusd": {
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "SLEEP_STRATEGY": "9m",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": 0.05
+  },
+  "xrpbusd": {
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "SLEEP_STRATEGY": "9m",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": 0.05
+  },
+  "avaxbusd": {
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "SLEEP_STRATEGY": "9m",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": 0.05
+  }
+}
