@@ -176,7 +176,11 @@ app.post("/bots/shutdown", async (req, res) => {
 app.post("/bots/shutdown/all", async (req, res) => {
   try {
     const requestDetails = getBotRegisterIds()
-      .filter((id) => botRegister.state[id].status === "ONLINE")
+      .filter(
+        (id) =>
+          botRegister.state[id].status === "ONLINE" &&
+          botRegister.state[id].symbol.toUpperCase() !== "PRICEBOT"
+      )
       .map((id) => ({
         details: buildBotRequest(botRegister.state[id], "/shutdown"),
         id,

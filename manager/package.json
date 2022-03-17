@@ -8,7 +8,8 @@
     "cleanup": "rimraf build && rimraf dist",
     "build": "yarn cleanup && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux": "yarn build && pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf botRegisterState.json &"
+    "remove-logs": "rimraf *.log & rimraf .*audit.json & rimraf botRegisterState.json &",
+    "make": "zx make.mjs"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
