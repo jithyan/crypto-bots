@@ -247,17 +247,20 @@ export class BinanceApi implements IWallet {
     return balance?.free ?? "0";
   };
 
-  buy = async ({
-    buyAsset,
-    withAsset,
-    price,
-    quantity,
-  }: {
-    buyAsset: TSupportedCoins;
-    withAsset: TSupportedCoins;
-    price: string;
-    quantity: string;
-  }): Promise<
+  buy = async (
+    {
+      buyAsset,
+      withAsset,
+      price,
+      quantity,
+    }: {
+      buyAsset: TSupportedCoins;
+      withAsset: TSupportedCoins;
+      price: string;
+      quantity: string;
+    },
+    type: "MARKET" | "LIMIT" = "MARKET"
+  ): Promise<
     TOrderCreateResponse & { qtyBought: string; orderPrice: string }
   > => {
     const filterRules = await this.getExchangeConfig(buyAsset, withAsset);
@@ -284,11 +287,11 @@ export class BinanceApi implements IWallet {
       const { data } = await this.client.newOrder(
         `${buyAsset}${withAsset}`,
         "BUY",
-        "LIMIT",
+        type,
         {
           price: correctedPrice,
           quantity: correctedQty,
-          timeInForce: "GTC",
+          timeInForce: type === "LIMIT" ? "GTC" : undefined,
         }
       );
       apiLogger.info("BUY success", { data });
@@ -300,17 +303,20 @@ export class BinanceApi implements IWallet {
     }
   };
 
-  sell = async ({
-    sellAsset,
-    forAsset,
-    price,
-    quantity,
-  }: {
-    sellAsset: TSupportedCoins;
-    forAsset: TSupportedCoins;
-    price: string;
-    quantity: string;
-  }): Promise<
+  sell = async (
+    {
+      sellAsset,
+      forAsset,
+      price,
+      quantity,
+    }: {
+      sellAsset: TSupportedCoins;
+      forAsset: TSupportedCoins;
+      price: string;
+      quantity: string;
+    },
+    type: "MARKET" | "LIMIT" = "MARKET"
+  ): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
     const filterRules = await this.getExchangeConfig(sellAsset, forAsset);
@@ -337,11 +343,11 @@ export class BinanceApi implements IWallet {
       const { data } = await this.client.newOrder(
         `${sellAsset}${forAsset}`,
         "SELL",
-        "LIMIT",
+        type,
         {
           price: correctedPrice,
           quantity: correctedQty,
-          timeInForce: "GTC",
+          timeInForce: type === "LIMIT" ? "GTC" : undefined,
         }
       );
       apiLogger.info("SELL success", { data });
@@ -450,7 +456,7 @@ interface BinanceConnectorClient {
     opts: {
       price: string;
       quantity: string;
-      timeInForce: TTimeInForce;
+      timeInForce?: TTimeInForce;
     }
   ) => Promise<AxiosResponse<TOrderCreateResponse>>;
 

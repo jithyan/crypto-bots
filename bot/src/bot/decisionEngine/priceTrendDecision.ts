@@ -15,6 +15,8 @@ export interface IDecisionEngine {
   };
 
   lastPurchasePrice: string;
+
+  setLastPurchasePrice: (price: string) => IDecisionEngine;
 }
 
 export type DecisionStates =
@@ -167,6 +169,7 @@ abstract class DecisionEngine implements IDecisionEngine {
 
   abstract shouldBuy: IDecisionEngine["shouldBuy"];
   abstract shouldSell: IDecisionEngine["shouldSell"];
+  abstract setLastPurchasePrice: (price: string) => IDecisionEngine;
 }
 
 export class Start extends DecisionEngine {
@@ -239,6 +242,12 @@ export class Start extends DecisionEngine {
 
     return result;
   };
+
+  setLastPurchasePrice = (price: string) => {
+    throw new Error(
+      "Cannot set last purchase price for Starting decision: " + price
+    );
+  };
 }
 
 export class DownwardPriceTrend extends DecisionEngine {
@@ -307,6 +316,12 @@ export class DownwardPriceTrend extends DecisionEngine {
     this.logResult("BUY", result);
     return result;
   };
+
+  setLastPurchasePrice = (price: string) =>
+    new DownwardPriceTrend(
+      { ...this, lastPurchasePrice: price },
+      this.decisionConfig
+    );
 }
 
 export class UpwardPriceTrend extends DecisionEngine {
@@ -398,6 +413,12 @@ export class UpwardPriceTrend extends DecisionEngine {
     this.logResult("BUY", result);
     return result;
   };
+
+  setLastPurchasePrice = (price: string) =>
+    new UpwardPriceTrend(
+      { ...this, lastPurchasePrice: price },
+      this.decisionConfig
+    );
 }
 
 export class UpwardPriceTrendConfirmed extends DecisionEngine {
@@ -472,4 +493,10 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
     this.logResult("BUY", result);
     return result;
   };
+
+  setLastPurchasePrice = (price: string) =>
+    new UpwardPriceTrendConfirmed(
+      { ...this, lastPurchasePrice: price },
+      this.decisionConfig
+    );
 }

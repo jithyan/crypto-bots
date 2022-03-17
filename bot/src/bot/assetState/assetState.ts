@@ -12,6 +12,7 @@ import {
 import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
 import { Config } from "../../config.js";
 import { ISleepStrategy } from "../sleep/index.js";
+import { TLogTradeData } from "../../log/trade.js";
 
 const binanceClient = getExchangeClient(Config.EXCHANGE);
 
@@ -381,50 +382,37 @@ abstract class AssetOrderPlaced<
     this.lastPurchasePrice = lastPurchasePrice;
   }
 
-  calculateProfitAndLogTrade = async ({
-    orderPrice,
-    amount,
-  }: Record<"orderPrice" | "amount", string>): Promise<string> => {
-    const isSell = this.state === "StableAssetOrderPlaced";
+  abstract getNextStateOnOrderFilled: (
+    args: Record<"profit" | "price", string>
+  ) => AssetState<VolatileAsset, StableAsset>;
 
-    return logTrade(
-      {
-        lastPurchasePrice: isSell ? this.lastPurchasePrice : "N/A",
-        price: orderPrice,
-        amount: amount,
-        from: isSell ? this.volatileAsset : this.stableAsset,
-        to: isSell ? this.stableAsset : this.volatileAsset,
-        action: isSell ? "SELL" : "BUY",
-      },
-      binanceClient
-    );
-  };
+  abstract getTradeLogArgs: (
+    args: Record<"orderPrice" | "amount", string>
+  ) => TLogTradeData;
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
     try {
       const orderStatus = await this.isOrderFilled(this.clientOrderId);
 
       if (orderStatus.status === "FILLED") {
-        const profit = await this.calculateProfitAndLogTrade({
-          orderPrice: orderStatus.price,
-          amount: orderStatus.executedQty,
-        });
+        const profit = await logTrade(
+          this.getTradeLogArgs({
+            orderPrice: orderStatus.price,
+            amount: orderStatus.executedQty,
+          }),
+          binanceClient
+        );
 
-        const nextState = this.isStableAssetClass
-          ? new PostSellStasis({
-              ...this,
-              stats: {
-                usdProfitToDate: new Big(this.stats.usdProfitToDate).add(
-                  profit
-                ),
-              },
-            })
-          : new HoldVolatileAsset(this);
+        const nextState = this.getNextStateOnOrderFilled({
+          profit,
+          price: orderStatus.price,
+        });
 
         stateLogger.info("ORDER FILLED " + this.symbol, {
           currentState: this,
           nextState,
         });
+
         await this.sleep.onAssetOrderFilled();
         return nextState;
       } else {
@@ -459,6 +447,23 @@ export class VolatileAssetOrderPlaced<
       lastPurchasePrice
     );
   }
+
+  getTradeLogArgs = ({
+    orderPrice,
+    amount,
+  }: Record<"orderPrice" | "amount", string>): TLogTradeData => ({
+    lastPurchasePrice: "N/A",
+    price: orderPrice,
+    amount: amount,
+    from: this.stableAsset,
+    to: this.volatileAsset,
+    action: "BUY",
+  });
+
+  getNextStateOnOrderFilled = ({ price }: Record<"price", string>) => {
+    const nextDecision = this.decisionEngine.setLastPurchasePrice(price);
+    return new HoldVolatileAsset({ ...this, decisionEngine: nextDecision });
+  };
 }
 
 export class StableAssetOrderPlaced<
@@ -480,4 +485,24 @@ export class StableAssetOrderPlaced<
       lastPurchasePrice
     );
   }
+
+  getTradeLogArgs = ({
+    orderPrice,
+    amount,
+  }: Record<"orderPrice" | "amount", string>): TLogTradeData => ({
+    lastPurchasePrice: this.lastPurchasePrice,
+    price: orderPrice,
+    amount: amount,
+    from: this.volatileAsset,
+    to: this.stableAsset,
+    action: "SELL",
+  });
+
+  getNextStateOnOrderFilled = ({ profit }: Record<"profit", string>) =>
+    new PostSellStasis({
+      ...this,
+      stats: {
+        usdProfitToDate: new Big(this.stats.usdProfitToDate).add(profit),
+      },
+    });
 }

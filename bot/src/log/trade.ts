@@ -57,7 +57,7 @@ type THeadersWhichAreTypeCoin = Exclude<
   | "audBusd"
 >;
 
-type TLogTradeData = Record<THeadersWhichAreTypeString, string> &
+export type TLogTradeData = Record<THeadersWhichAreTypeString, string> &
   Record<THeadersWhichAreTypeCoin, TSupportedCoins> & {
     action: "BUY" | "SELL";
   };
