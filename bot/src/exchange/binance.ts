@@ -259,7 +259,7 @@ export class BinanceApi implements IWallet {
       price: string;
       quantity: string;
     },
-    type: "MARKET" | "LIMIT" = "MARKET"
+    type: "MARKET" | "LIMIT" = "LIMIT"
   ): Promise<
     TOrderCreateResponse & { qtyBought: string; orderPrice: string }
   > => {
@@ -289,6 +289,7 @@ export class BinanceApi implements IWallet {
         "BUY",
         type,
         {
+          // TODO: Needs to be fixed for MARKET - not needed
           price: correctedPrice,
           quantity: correctedQty,
           timeInForce: type === "LIMIT" ? "GTC" : undefined,
@@ -315,7 +316,7 @@ export class BinanceApi implements IWallet {
       price: string;
       quantity: string;
     },
-    type: "MARKET" | "LIMIT" = "MARKET"
+    type: "MARKET" | "LIMIT" = "LIMIT"
   ): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
@@ -345,6 +346,7 @@ export class BinanceApi implements IWallet {
         "SELL",
         type,
         {
+          // TODO: Needs to be fixed for MARKET - not needed
           price: correctedPrice,
           quantity: correctedQty,
           timeInForce: type === "LIMIT" ? "GTC" : undefined,
