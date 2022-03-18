@@ -187,6 +187,12 @@ export function useBotStatus(): any[] {
   const [data, setData] = useState([]);
 
   useEffect(() => {
+    socket.timeout(2000).emit("timeout", (err: any) => {
+      if (err) {
+        console.error(err);
+        setData([]);
+      }
+    });
     socket.on("botstatus", (respData) => {
       console.log("botstatus", respData);
       const parsedData = respData.map((d: Record<string, any>) => {
