@@ -21,7 +21,7 @@ if (action.do === "Analyze price bot") {
       .filter((fn) => fn.endsWith(".json"))
       .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
 
-    const numProcesses = 4;
+    const numProcesses = 8;
     const simulArgs = volatileSymbols.map((vol) => [numProcesses, vol]);
 
     console.time("simul");
@@ -30,7 +30,7 @@ if (action.do === "Analyze price bot") {
     });
   });
 } else if (action.do === "Extract api data") {
-  ["adabusd", "xrpbusd"].forEach((symbol) => {
+  ["lunabusd"].forEach((symbol) => {
     writeApiPricesForSymbol(symbol);
   });
 } else if (action.do === "Run simulation") {
@@ -39,7 +39,7 @@ if (action.do === "Analyze price bot") {
   console.time("simul");
 
   runAsyncSequentially(
-    ["eth"].map((vol) => [numProcesses, vol]),
+    ["luna"].map((vol) => [numProcesses, vol]),
     startSimulations
   ).then(() => {
     console.timeEnd("simul");

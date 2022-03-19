@@ -17,6 +17,7 @@ bin
 /analysis/*.csv
 /analysis/*-audit.json
 /analysis/*.gz
+/analysis/data/pricebot
 
 !/.yarn/patches
 !/.yarn/plugins
