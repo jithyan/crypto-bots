@@ -5,6 +5,15 @@ import { Table } from "./Table";
 
 const columnHeaders = [
   {
+    Header: "#",
+    id: "row",
+    maxWidth: 10,
+    filterable: false,
+    Cell: (rows: any) => {
+      return <div>{rows.row.index}</div>;
+    },
+  },
+  {
     Header: "Symbol",
     accessor: "symbol",
   },

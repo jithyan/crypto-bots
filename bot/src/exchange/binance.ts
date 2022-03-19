@@ -247,20 +247,17 @@ export class BinanceApi implements IWallet {
     return balance?.free ?? "0";
   };
 
-  buy = async (
-    {
-      buyAsset,
-      withAsset,
-      price,
-      quantity,
-    }: {
-      buyAsset: TSupportedCoins;
-      withAsset: TSupportedCoins;
-      price: string;
-      quantity: string;
-    },
-    type: "MARKET" | "LIMIT" = "LIMIT"
-  ): Promise<
+  buy = async ({
+    buyAsset,
+    withAsset,
+    price,
+    quantity,
+  }: {
+    buyAsset: TSupportedCoins;
+    withAsset: TSupportedCoins;
+    price: string;
+    quantity: string;
+  }): Promise<
     TOrderCreateResponse & { qtyBought: string; orderPrice: string }
   > => {
     const filterRules = await this.getExchangeConfig(buyAsset, withAsset);
@@ -287,12 +284,12 @@ export class BinanceApi implements IWallet {
       const { data } = await this.client.newOrder(
         `${buyAsset}${withAsset}`,
         "BUY",
-        type,
+        "LIMIT",
         {
           // TODO: Needs to be fixed for MARKET - not needed
           price: correctedPrice,
           quantity: correctedQty,
-          timeInForce: type === "LIMIT" ? "GTC" : undefined,
+          timeInForce: "GTC",
         }
       );
       apiLogger.info("BUY success", { data });
@@ -304,20 +301,17 @@ export class BinanceApi implements IWallet {
     }
   };
 
-  sell = async (
-    {
-      sellAsset,
-      forAsset,
-      price,
-      quantity,
-    }: {
-      sellAsset: TSupportedCoins;
-      forAsset: TSupportedCoins;
-      price: string;
-      quantity: string;
-    },
-    type: "MARKET" | "LIMIT" = "LIMIT"
-  ): Promise<
+  sell = async ({
+    sellAsset,
+    forAsset,
+    price,
+    quantity,
+  }: {
+    sellAsset: TSupportedCoins;
+    forAsset: TSupportedCoins;
+    price: string;
+    quantity: string;
+  }): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
     const filterRules = await this.getExchangeConfig(sellAsset, forAsset);
@@ -344,12 +338,12 @@ export class BinanceApi implements IWallet {
       const { data } = await this.client.newOrder(
         `${sellAsset}${forAsset}`,
         "SELL",
-        type,
+        "LIMIT",
         {
           // TODO: Needs to be fixed for MARKET - not needed
-          price: type === "LIMIT" ? correctedPrice : undefined,
+          price: correctedPrice,
           quantity: correctedQty,
-          timeInForce: type === "LIMIT" ? "GTC" : undefined,
+          timeInForce: "GTC",
         }
       );
       apiLogger.info("SELL success", { data });

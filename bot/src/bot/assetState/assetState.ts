@@ -219,7 +219,7 @@ export class HoldVolatileAsset<
     const sellOrder = {
       sellAsset: this.volatileAsset,
       forAsset: this.stableAsset,
-      price: sellPrice,
+      price: new Big(sellPrice).mul(new Big("0.998")).toString(),
       quantity: qtyToSell,
     };
 
@@ -306,8 +306,8 @@ export class HoldStableAsset<
     price: string;
     quantity: string;
   } => {
-    const price = new Big(buyPrice).toString();
-    const quantity = new Big(qtyStable).mul("0.99").div(buyPrice).toString();
+    const price = new Big(buyPrice).mul("1.0025").toString();
+    const quantity = new Big(qtyStable).div(buyPrice).toFixed(8);
 
     const buyOrder = {
       buyAsset: this.volatileAsset,

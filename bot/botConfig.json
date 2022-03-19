@@ -1,4 +1,76 @@
 {
+  "btcstbusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BTCST"
+  },
+  "btcbusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "15m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BTC"
+  },
+  "barbusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "15m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BAR"
+  },
+  "batbusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "6m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BAD"
+  },
+  "bicobusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "15m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BICO"
+  },
+  "betabusd": {
+    "skip": true,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": "0.10",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "BETA"
+  },
   "lunabusd": {
     "skip": false,
     "EXCHANGE": "binance",
