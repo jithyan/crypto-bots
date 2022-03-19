@@ -316,7 +316,7 @@ export class BinanceApi implements IWallet {
       price: string;
       quantity: string;
     },
-    type: "MARKET" | "LIMIT" = "LIMIT"
+    type: "MARKET" | "LIMIT" = "MARKET"
   ): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
@@ -347,7 +347,7 @@ export class BinanceApi implements IWallet {
         type,
         {
           // TODO: Needs to be fixed for MARKET - not needed
-          price: correctedPrice,
+          price: type === "LIMIT" ? correctedPrice : undefined,
           quantity: correctedQty,
           timeInForce: type === "LIMIT" ? "GTC" : undefined,
         }
@@ -455,11 +455,15 @@ interface BinanceConnectorClient {
     assetPair: TCoinPair,
     orderType: TOrderSide,
     type: TOrderType,
-    opts: {
-      price: string;
-      quantity: string;
-      timeInForce?: TTimeInForce;
-    }
+    opts:
+      | {
+          price: string;
+          quantity: string;
+          timeInForce: TTimeInForce;
+        }
+      | {
+          quantity: string;
+        }
   ) => Promise<AxiosResponse<TOrderCreateResponse>>;
 
   getOrder: (

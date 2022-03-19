@@ -1,6 +1,18 @@
 {
+  "lunabusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": "0.15",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "LUNA"
+  },
   "ethbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -12,7 +24,7 @@
     "VOLATILE_COIN": "ETH"
   },
   "adabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -24,7 +36,7 @@
     "SLEEP_STRATEGY": "15m"
   },
   "xrpbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -36,7 +48,7 @@
     "SLEEP_STRATEGY": "6m"
   },
   "avaxbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -59,7 +71,7 @@
     "SLEEP_STRATEGY": "6m"
   },
   "antbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -71,7 +83,7 @@
     "SLEEP_STRATEGY": "3m"
   },
   "ankrbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -83,7 +95,7 @@
     "SLEEP_STRATEGY": "3m"
   },
   "ancbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -117,7 +129,7 @@
     "SLEEP_STRATEGY": "15m"
   },
   "algobusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -151,7 +163,7 @@
     "SLEEP_STRATEGY": "3m"
   },
   "adxbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
