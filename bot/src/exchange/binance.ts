@@ -316,7 +316,7 @@ export class BinanceApi implements IWallet {
       price: string;
       quantity: string;
     },
-    type: "MARKET" | "LIMIT" = "MARKET"
+    type: "MARKET" | "LIMIT" = "LIMIT"
   ): Promise<
     TOrderCreateResponse & { qtySold: string; orderPrice: string }
   > => {
