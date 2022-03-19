@@ -9,10 +9,6 @@ const columnHeaders = [
     accessor: "symbol",
   },
   {
-    Header: "Exchange",
-    accessor: "exchange",
-  },
-  {
     Header: "Version",
     accessor: "version",
   },
@@ -106,7 +102,7 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
             </span>
           </li>
           <li className="list-group-item">
-            <small>{checkIn}</small>
+            {checkIn} <mark>{lastState?.sleep?.sleepStrategy}</mark>
           </li>
         </ul>
       </div>
@@ -151,7 +147,9 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
           )}
         </li>
         <li className="list-group-item">
-          <small>{checkIn}</small>
+          <small>
+            {checkIn} <mark>{lastState?.sleep?.sleepStrategy}</mark>
+          </small>
         </li>
       </ul>
     </div>
@@ -175,6 +173,7 @@ export function LastState({
     PRICE_HAS_DECREASED_THRESHOLD = "missing",
     PRICE_HAS_INCREASED_THRESHOLD = "missing",
     STOP_LOSS_THRESHOLD = "missing",
+    MIN_PERCENT_INCREASE_FOR_SELL = "missing",
   } = lastState?.decisionEngine?.decisionConfig ?? {};
 
   useLayoutEffect(() => {
@@ -202,14 +201,14 @@ export function LastState({
                   <em>{lastState?.decisionEngine?.state}</em>
                 </li>
                 <li className="list-group-item">
-                  <strong>Last ticker price:</strong>{" "}
+                  <strong>Last ticker price:</strong> $
                   {parseFloat(
                     lastState?.decisionEngine?.lastTickerPrice
                   ).toFixed(3)}
                 </li>
                 {lastState?.state !== "HoldStableAsset" && (
                   <li className="list-group-item">
-                    <strong>Last purchase price:</strong>{" "}
+                    <strong>Last purchase price:</strong> $
                     {parseFloat(
                       lastState?.decisionEngine?.lastPurchasePrice
                     ).toFixed(3)}
@@ -237,7 +236,14 @@ export function LastState({
                 <small>
                   Inc: {parseFloat(PRICE_HAS_INCREASED_THRESHOLD).toFixed(4)} |
                   Dec: {parseFloat(PRICE_HAS_DECREASED_THRESHOLD).toFixed(4)} |
-                  Stop loss: {parseFloat(STOP_LOSS_THRESHOLD) * 100}%
+                  Stop loss:{" "}
+                  {(parseFloat(STOP_LOSS_THRESHOLD) * 100).toFixed(0)}% | Min
+                  inc:{" "}
+                  {(
+                    parseFloat(MIN_PERCENT_INCREASE_FOR_SELL) * 100 -
+                    100
+                  ).toFixed(1)}
+                  %
                 </small>
               </p>
             </div>
