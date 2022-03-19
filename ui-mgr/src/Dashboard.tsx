@@ -1,57 +1,7 @@
 import React, { useLayoutEffect, useState } from "react";
 import { ActionButton } from "./helper";
+import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
 import { Table } from "./Table";
-
-function ArrowUp() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      className="bi bi-arrow-up"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fillRule="evenodd"
-        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-      />
-    </svg>
-  );
-}
-
-function ArrowUpCircleFill() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      className="bi bi-arrow-up-circle-fill"
-      viewBox="0 0 16 16"
-    >
-      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-    </svg>
-  );
-}
-
-function ArrowDown() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      className="bi bi-arrow-down"
-      viewBox="0 0 16 16"
-    >
-      <path
-        fillRule="evenodd"
-        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-      />
-    </svg>
-  );
-}
 
 const columnHeaders = [
   {
@@ -89,10 +39,11 @@ function parseBotData(d: Record<string, any>) {
     ...d,
     profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
     lastState: (
-      <CompactView
+      <ToggleOnClick
         status={d.status}
         lastState={d.lastState}
         lastCheckIn={d.lastCheckIn}
+        symbol={d.symbol}
       />
     ),
     actions: Object.keys(d.actions).map((action) => (
@@ -108,7 +59,17 @@ function parseBotData(d: Record<string, any>) {
 
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
 
-function CompactView({ lastState, lastCheckIn, status }: any) {
+function ToggleOnClick(props: any) {
+  const [showCompact, setShowCompact] = useState(true);
+
+  return (
+    <div onClick={() => setShowCompact((prev) => !prev)}>
+      {showCompact ? <CompactView {...props} /> : <LastState {...props} />}
+    </div>
+  );
+}
+
+function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
   const lastTickerPrice = parseFloat(
     lastState?.decisionEngine?.lastTickerPrice
   ).toFixed(3);
@@ -130,24 +91,70 @@ function CompactView({ lastState, lastCheckIn, status }: any) {
   const TrendIcon = trendState.includes("confirm") ? (
     <ArrowUpCircleFill />
   ) : trendState.startsWith("up") ? (
-    <ArrowUp />
+    <ArrowUpCircle />
   ) : (
-    <ArrowDown />
+    <ArrowDownCircle />
   );
 
+  if (lastState.state === "PostSellStasis") {
+    return (
+      <div>
+        <ul className="list-group list-group-horizontal-sm">
+          <li className="list-group-item">
+            <span className="badge bg-dark text-light">
+              Zzz.. {4 - lastState.iteration}h left
+            </span>
+          </li>
+          <li className="list-group-item">
+            <small>{checkIn}</small>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
+  if (symbol === "PRICEBOT") {
+    return (
+      <div>
+        <ul className="list-group list-group-horizontal-sm">
+          <li className="list-group-item">
+            <small>{checkIn}</small>
+          </li>
+        </ul>
+      </div>
+    );
+  }
+
+  const HoldAsset = <span className="badge rounded-pill bg-primary">H</span>;
+  const OrderPlaced = (
+    <span className="badge rounded-pill bg-secondary">O</span>
+  );
+
+  const assetState = lastState.state.includes("Hold") ? HoldAsset : OrderPlaced;
+
+  const purchasePriceBgColor =
+    lastPurchasePrice === lastTickerPrice
+      ? "secondary"
+      : Number(lastPurchasePrice) < Number(lastTickerPrice)
+      ? "success"
+      : "danger";
+
   return (
-    <ul className="list-group list-group-horizontal">
-      <li className="list-group-item">
-        <span className="badge bg-info text-dark">{TrendIcon}</span>
-        {checkIn}
-      </li>
-      <li className="list-group-item">
-        ${lastTickerPrice}{" "}
-        {holdsVolatileAsset && (
-          <span className="badge bg-secondary">${lastPurchasePrice}</span>
-        )}
-      </li>
-    </ul>
+    <div>
+      <ul className="list-group list-group-horizontal-sm">
+        <li className="list-group-item">
+          {assetState} {TrendIcon} ${lastTickerPrice}{" "}
+          {holdsVolatileAsset && (
+            <span className={`badge bg-${purchasePriceBgColor}`}>
+              ${lastPurchasePrice}
+            </span>
+          )}
+        </li>
+        <li className="list-group-item">
+          <small>{checkIn}</small>
+        </li>
+      </ul>
+    </div>
   );
 }
 
@@ -162,7 +169,7 @@ export function LastState({
     status === "ONLINE"
       ? "card bg-light text-dark mb-3"
       : "card text-white bg-secondary mb-3";
-  const [cardStyle, setCardStyle] = useState(cardHasJustBeenUpdatedStyle);
+  const [cardStyle, setCardStyle] = useState(cardNormalStyle);
   const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
   const {
     PRICE_HAS_DECREASED_THRESHOLD = "missing",
