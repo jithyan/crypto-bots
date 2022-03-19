@@ -72,10 +72,12 @@ export const logTrade = async (
     })
     .split(", ")[1];
   const value = new Big(data.amount).mul(data.price).toFixed(3);
+  const commission = new Big(value).mul("0.001").toFixed(3);
   const profit =
     data.action === "SELL"
       ? new Big(value)
           .minus(new Big(lastPurchasePrice).mul(data.amount))
+          .minus(commission)
           .toFixed(3)
       : "N/A";
   const audBusd = await client.getAudUsdValue();

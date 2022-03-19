@@ -102,7 +102,7 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
             </span>
           </li>
           <li className="list-group-item">
-            {checkIn} <mark>{lastState?.sleep?.sleepStrategy}</mark>
+            {checkIn} <mark>1h</mark>
           </li>
         </ul>
       </div>
