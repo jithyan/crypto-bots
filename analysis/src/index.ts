@@ -13,17 +13,39 @@ const execute = (
   console.log(action.do + "...");
 };
 
-execute("Run simulation");
+execute("Analyze price bot");
+
+const ignoreSymbols = [
+  "1",
+  "a",
+  "zec",
+  "xmr",
+  "dash",
+  "rose",
+  "scrt",
+  "dcr",
+  "zen",
+  "keep",
+  "mob",
+  "arrr",
+  "snt",
+  "beam",
+  "sero",
+];
 
 if (action.do === "Analyze price bot") {
   getAllPriceDataFromLogs().then(() => {
     const volatileSymbols = getFilesInDir("./data/pricebot/symbols")
       .filter((fn) => fn.endsWith(".json"))
+      .filter(
+        (fn) =>
+          !ignoreSymbols.some((pref) => fn.split("/").pop()?.startsWith(pref))
+      )
       .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
 
     const numProcesses = 8;
     const simulArgs = volatileSymbols.map((vol) => [numProcesses, vol]);
-
+    console.log(simulArgs);
     console.time("simul");
     runAsyncSequentially(simulArgs, startSimulations).then(() => {
       console.timeEnd("simul");

@@ -12,6 +12,7 @@ export interface IDecisionEngine {
   shouldSell: (currentPrice: string) => {
     nextDecision: IDecisionEngine;
     sell: boolean;
+    isStopLossTriggered: boolean;
   };
 
   lastPurchasePrice: string;
@@ -157,6 +158,7 @@ abstract class DecisionEngine implements IDecisionEngine {
       nextDecision: IDecisionEngine;
       buy?: boolean;
       sell?: boolean;
+      isStopLossTriggered?: boolean;
     }
   ) => {
     stateLogger.info(`SHOULD ${type}?`, {
@@ -224,6 +226,7 @@ export class Start extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     } else {
       result = {
@@ -235,6 +238,7 @@ export class Start extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     }
 
@@ -270,17 +274,21 @@ export class DownwardPriceTrend extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     } else {
+      const isASell = this.meetsSellCriteria(new Big(currentPrice));
+
       result = {
         nextDecision: new DownwardPriceTrend(
           {
-            lastPurchasePrice: this.lastPurchasePrice,
+            lastPurchasePrice: isASell ? "0" : this.lastPurchasePrice,
             lastTickerPrice: currentPrice,
           },
           this.decisionConfig
         ),
-        sell: false,
+        sell: isASell,
+        isStopLossTriggered: this.shouldTriggerStopLoss(new Big(currentPrice)),
       };
     }
     this.logResult("SELL", result);
@@ -344,6 +352,7 @@ export class UpwardPriceTrend extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     } else if (this.isADecrease(new Big(currentPrice))) {
       const isASell = this.meetsSellCriteria(new Big(currentPrice));
@@ -356,6 +365,7 @@ export class UpwardPriceTrend extends DecisionEngine {
           this.decisionConfig
         ),
         sell: isASell,
+        isStopLossTriggered: this.shouldTriggerStopLoss(new Big(currentPrice)),
       };
     } else {
       result = {
@@ -367,6 +377,7 @@ export class UpwardPriceTrend extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     }
     this.logResult("SELL", result);
@@ -444,6 +455,7 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
           this.decisionConfig
         ),
         sell: isASell,
+        isStopLossTriggered: this.shouldTriggerStopLoss(new Big(currentPrice)),
       };
     } else {
       result = {
@@ -455,6 +467,7 @@ export class UpwardPriceTrendConfirmed extends DecisionEngine {
           this.decisionConfig
         ),
         sell: false,
+        isStopLossTriggered: false,
       };
     }
 

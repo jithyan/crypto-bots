@@ -1,6 +1,30 @@
 {
+  "cakebusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.07",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "CAKE"
+  },
+  "c98busd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.12",
+    "SLEEP_STRATEGY": "9m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "C98"
+  },
   "btcstbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -12,7 +36,7 @@
     "VOLATILE_COIN": "BTCST"
   },
   "btcbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -24,7 +48,7 @@
     "VOLATILE_COIN": "BTC"
   },
   "barbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -36,7 +60,7 @@
     "VOLATILE_COIN": "BAR"
   },
   "batbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -48,7 +72,7 @@
     "VOLATILE_COIN": "BAD"
   },
   "bicobusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -60,7 +84,7 @@
     "VOLATILE_COIN": "BICO"
   },
   "betabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
