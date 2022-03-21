@@ -23,8 +23,7 @@ axios.interceptors.request.use(
 );
 
 export async function getToken(path: string) {
-  //@ts-ignore
-  const password = __SNOWPACK_ENV__.SNOWPACK_PUBLIC_MGR_PWD?.trim();
+  const password = import.meta.env.SNOWPACK_PUBLIC_MGR_PWD?.trim();
   const salt = window.crypto.getRandomValues(new Uint32Array(1))[0];
   const pepper = getTimestampPepper();
   const hash = encodeURIComponent(
