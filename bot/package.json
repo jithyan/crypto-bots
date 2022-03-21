@@ -35,7 +35,7 @@
     "@types/node": "^17.0.16",
     "@types/node-cache": "^4.2.5",
     "dotenv": "^16.0.0",
-    "esbuild": "^0.14.25",
+    "esbuild": "^0.14.27",
     "pkg": "^5.5.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.2",
