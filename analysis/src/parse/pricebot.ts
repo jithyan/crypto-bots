@@ -158,3 +158,28 @@ function closeAllSonicBoomFileStreams() {
       })
   );
 }
+
+export function collateResults() {
+  const allResults: any[] = [];
+  const resultFiles = getFilesInDir("./data").filter((file) =>
+    file.endsWith(".json")
+  );
+  resultFiles.forEach((file) => {
+    const res = JSON.parse(fs.readFileSync(file, "utf8"))[0];
+
+    if (res.length > 0) {
+      allResults.push({
+        ...res,
+        name: file
+          .split("/")
+          .pop()
+          ?.replace(/_results.json$/gi, ""),
+      });
+    }
+  });
+  allResults.sort((a, b) => b.profit - a.profit);
+  fs.writeFileSync(
+    "./data/sortedResults.json",
+    JSON.stringify(allResults, null, 2)
+  );
+}

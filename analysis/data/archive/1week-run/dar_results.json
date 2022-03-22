@@ -1,0 +1,3632 @@
+[
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 6.773,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 9,
+      "totalProfit": 6.773,
+      "totalOnlyProfitableTrades": 6.773,
+      "avgProfitForProfitableTrade": 0.7525555555555555,
+      "avgProfit": 0.7525555555555555
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.853,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.853,
+      "totalOnlyProfitableTrades": 4.853,
+      "avgProfitForProfitableTrade": 0.9705999999999999,
+      "avgProfit": 0.9705999999999999
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.853,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.853,
+      "totalOnlyProfitableTrades": 4.853,
+      "avgProfitForProfitableTrade": 0.9705999999999999,
+      "avgProfit": 0.9705999999999999
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.853,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.853,
+      "totalOnlyProfitableTrades": 4.853,
+      "avgProfitForProfitableTrade": 0.9705999999999999,
+      "avgProfit": 0.9705999999999999
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.853,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.853,
+      "totalOnlyProfitableTrades": 4.853,
+      "avgProfitForProfitableTrade": 0.9705999999999999,
+      "avgProfit": 0.9705999999999999
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.853,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.853,
+      "totalOnlyProfitableTrades": 4.853,
+      "avgProfitForProfitableTrade": 0.9705999999999999,
+      "avgProfit": 0.9705999999999999
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.073,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.073,
+      "totalOnlyProfitableTrades": 4.073,
+      "avgProfitForProfitableTrade": 0.8146000000000001,
+      "avgProfit": 0.8146000000000001
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.073,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.073,
+      "totalOnlyProfitableTrades": 4.073,
+      "avgProfitForProfitableTrade": 0.8146000000000001,
+      "avgProfit": 0.8146000000000001
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.073,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.073,
+      "totalOnlyProfitableTrades": 4.073,
+      "avgProfitForProfitableTrade": 0.8146000000000001,
+      "avgProfit": 0.8146000000000001
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 4.073,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 4.073,
+      "totalOnlyProfitableTrades": 4.073,
+      "avgProfitForProfitableTrade": 0.8146000000000001,
+      "avgProfit": 0.8146000000000001
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 3.6330000000000005,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6330000000000005,
+      "totalOnlyProfitableTrades": 3.6330000000000005,
+      "avgProfitForProfitableTrade": 1.211,
+      "avgProfit": 1.211
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 3.6010000000000004,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.6010000000000004,
+      "totalOnlyProfitableTrades": 3.6010000000000004,
+      "avgProfitForProfitableTrade": 1.2003333333333335,
+      "avgProfit": 1.2003333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 3.547,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 3.547,
+      "totalOnlyProfitableTrades": 3.547,
+      "avgProfitForProfitableTrade": 1.1823333333333335,
+      "avgProfit": 1.1823333333333335
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 3.519,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.519,
+      "totalOnlyProfitableTrades": 3.519,
+      "avgProfitForProfitableTrade": 0.87975,
+      "avgProfit": 0.87975
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.516,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 3.516,
+      "totalOnlyProfitableTrades": 3.516,
+      "avgProfitForProfitableTrade": 0.7032,
+      "avgProfit": 0.7032
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.516,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 3.516,
+      "totalOnlyProfitableTrades": 3.516,
+      "avgProfitForProfitableTrade": 0.7032,
+      "avgProfit": 0.7032
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.516,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 3.516,
+      "totalOnlyProfitableTrades": 3.516,
+      "avgProfitForProfitableTrade": 0.7032,
+      "avgProfit": 0.7032
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.516,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 5,
+      "totalProfit": 3.516,
+      "totalOnlyProfitableTrades": 3.516,
+      "avgProfitForProfitableTrade": 0.7032,
+      "avgProfit": 0.7032
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 3.367,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.367,
+      "totalOnlyProfitableTrades": 3.367,
+      "avgProfitForProfitableTrade": 0.84175,
+      "avgProfit": 0.84175
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 3.184,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 4,
+      "totalProfit": 3.184,
+      "totalOnlyProfitableTrades": 3.184,
+      "avgProfitForProfitableTrade": 0.796,
+      "avgProfit": 0.796
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 3.108,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 11,
+      "numProfitableTrades": 9,
+      "totalProfit": 3.108,
+      "totalOnlyProfitableTrades": 5.64,
+      "avgProfitForProfitableTrade": 0.6266666666666666,
+      "avgProfit": 0.28254545454545454
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 3.1020000000000003,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 3.1020000000000003,
+      "totalOnlyProfitableTrades": 5.864,
+      "avgProfitForProfitableTrade": 0.733,
+      "avgProfit": 0.31020000000000003
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 3.0999999999999996,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 3.0999999999999996,
+      "totalOnlyProfitableTrades": 5.862,
+      "avgProfitForProfitableTrade": 0.73275,
+      "avgProfit": 0.30999999999999994
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 3.0959999999999996,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 3.0959999999999996,
+      "totalOnlyProfitableTrades": 4.682,
+      "avgProfitForProfitableTrade": 0.6688571428571429,
+      "avgProfit": 0.38699999999999996
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 3.09,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 8,
+      "totalProfit": 3.09,
+      "totalOnlyProfitableTrades": 5.1370000000000005,
+      "avgProfitForProfitableTrade": 0.6421250000000001,
+      "avgProfit": 0.3433333333333333
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 3.09,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 8,
+      "totalProfit": 3.09,
+      "totalOnlyProfitableTrades": 5.1370000000000005,
+      "avgProfitForProfitableTrade": 0.6421250000000001,
+      "avgProfit": 0.3433333333333333
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 2.955,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.955,
+      "totalOnlyProfitableTrades": 4.762,
+      "avgProfitForProfitableTrade": 0.59525,
+      "avgProfit": 0.32833333333333337
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 2.942,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 2.942,
+      "totalOnlyProfitableTrades": 4.7090000000000005,
+      "avgProfitForProfitableTrade": 0.6727142857142858,
+      "avgProfit": 0.36775
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 2.8209999999999997,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.8209999999999997,
+      "totalOnlyProfitableTrades": 2.8209999999999997,
+      "avgProfitForProfitableTrade": 0.9403333333333332,
+      "avgProfit": 0.9403333333333332
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 2.8209999999999997,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.8209999999999997,
+      "totalOnlyProfitableTrades": 2.8209999999999997,
+      "avgProfitForProfitableTrade": 0.9403333333333332,
+      "avgProfit": 0.9403333333333332
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 2.7650000000000006,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.7650000000000006,
+      "totalOnlyProfitableTrades": 5.862,
+      "avgProfitForProfitableTrade": 0.73275,
+      "avgProfit": 0.2765000000000001
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 2.739,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.739,
+      "totalOnlyProfitableTrades": 2.739,
+      "avgProfitForProfitableTrade": 0.9129999999999999,
+      "avgProfit": 0.9129999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 2.739,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.739,
+      "totalOnlyProfitableTrades": 2.739,
+      "avgProfitForProfitableTrade": 0.9129999999999999,
+      "avgProfit": 0.9129999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 2.6970000000000005,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.6970000000000005,
+      "totalOnlyProfitableTrades": 5.709,
+      "avgProfitForProfitableTrade": 0.713625,
+      "avgProfit": 0.29966666666666675
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 2.6410000000000005,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.6410000000000005,
+      "totalOnlyProfitableTrades": 5.709,
+      "avgProfitForProfitableTrade": 0.713625,
+      "avgProfit": 0.26410000000000006
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 2.616,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.616,
+      "totalOnlyProfitableTrades": 2.616,
+      "avgProfitForProfitableTrade": 0.872,
+      "avgProfit": 0.872
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 2.616,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 3,
+      "totalProfit": 2.616,
+      "totalOnlyProfitableTrades": 2.616,
+      "avgProfitForProfitableTrade": 0.872,
+      "avgProfit": 0.872
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 2.598,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 11,
+      "numProfitableTrades": 9,
+      "totalProfit": 2.598,
+      "totalOnlyProfitableTrades": 5.64,
+      "avgProfitForProfitableTrade": 0.6266666666666666,
+      "avgProfit": 0.23618181818181816
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 2.5789999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 2.5789999999999997,
+      "totalOnlyProfitableTrades": 5.166,
+      "avgProfitForProfitableTrade": 0.7380000000000001,
+      "avgProfit": 0.32237499999999997
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 2.335,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.335,
+      "totalOnlyProfitableTrades": 5.3469999999999995,
+      "avgProfitForProfitableTrade": 0.6683749999999999,
+      "avgProfit": 0.2594444444444444
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 2.2790000000000004,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 2.2790000000000004,
+      "totalOnlyProfitableTrades": 5.3469999999999995,
+      "avgProfitForProfitableTrade": 0.6683749999999999,
+      "avgProfit": 0.22790000000000005
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 2.1799999999999997,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 4,
+      "totalProfit": 2.1799999999999997,
+      "totalOnlyProfitableTrades": 4.036,
+      "avgProfitForProfitableTrade": 1.009,
+      "avgProfit": 0.43599999999999994
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 2.1799999999999997,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 4,
+      "totalProfit": 2.1799999999999997,
+      "totalOnlyProfitableTrades": 4.036,
+      "avgProfitForProfitableTrade": 1.009,
+      "avgProfit": 0.43599999999999994
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 2.043,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 4,
+      "totalProfit": 2.043,
+      "totalOnlyProfitableTrades": 3.814,
+      "avgProfitForProfitableTrade": 0.9535,
+      "avgProfit": 0.4086
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 2.029,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 4,
+      "totalProfit": 2.029,
+      "totalOnlyProfitableTrades": 3.8,
+      "avgProfitForProfitableTrade": 0.95,
+      "avgProfit": 0.4058
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 2.004,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 2.004,
+      "totalOnlyProfitableTrades": 2.004,
+      "avgProfitForProfitableTrade": 1.002,
+      "avgProfit": 1.002
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 2.004,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 2.004,
+      "totalOnlyProfitableTrades": 2.004,
+      "avgProfitForProfitableTrade": 1.002,
+      "avgProfit": 1.002
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 2.004,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 2.004,
+      "totalOnlyProfitableTrades": 2.004,
+      "avgProfitForProfitableTrade": 1.002,
+      "avgProfit": 1.002
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 2.004,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 2.004,
+      "totalOnlyProfitableTrades": 2.004,
+      "avgProfitForProfitableTrade": 1.002,
+      "avgProfit": 1.002
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.9649999999999999,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.9649999999999999,
+      "totalOnlyProfitableTrades": 4.198,
+      "avgProfitForProfitableTrade": 0.5997142857142858,
+      "avgProfit": 0.24562499999999998
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.926,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.926,
+      "totalOnlyProfitableTrades": 1.926,
+      "avgProfitForProfitableTrade": 0.963,
+      "avgProfit": 0.963
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.908,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.908,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.477
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.8690000000000002,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 1.8690000000000002,
+      "totalOnlyProfitableTrades": 5.208,
+      "avgProfitForProfitableTrade": 0.651,
+      "avgProfit": 0.1869
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.8690000000000002,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 1.8690000000000002,
+      "totalOnlyProfitableTrades": 5.208,
+      "avgProfitForProfitableTrade": 0.651,
+      "avgProfit": 0.1869
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.8479999999999999,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.8479999999999999,
+      "totalOnlyProfitableTrades": 3.891,
+      "avgProfitForProfitableTrade": 0.7782,
+      "avgProfit": 0.308
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 1.8220000000000005,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.8220000000000005,
+      "totalOnlyProfitableTrades": 4.476999999999999,
+      "avgProfitForProfitableTrade": 0.6395714285714285,
+      "avgProfit": 0.22775000000000006
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.751,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.751,
+      "totalOnlyProfitableTrades": 3.66,
+      "avgProfitForProfitableTrade": 1.22,
+      "avgProfit": 0.43775
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.75,
+    "stopLoss": "0.05",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.75,
+      "totalOnlyProfitableTrades": 3.053,
+      "avgProfitForProfitableTrade": 1.0176666666666667,
+      "avgProfit": 0.4375
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 1.748,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.748,
+      "totalOnlyProfitableTrades": 1.748,
+      "avgProfitForProfitableTrade": 0.874,
+      "avgProfit": 0.874
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 1.748,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.748,
+      "totalOnlyProfitableTrades": 1.748,
+      "avgProfitForProfitableTrade": 0.874,
+      "avgProfit": 0.874
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.7129999999999999,
+    "stopLoss": "0.05",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.7129999999999999,
+      "totalOnlyProfitableTrades": 3.034,
+      "avgProfitForProfitableTrade": 1.0113333333333332,
+      "avgProfit": 0.42824999999999996
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.7129999999999999,
+    "stopLoss": "0.05",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.7129999999999999,
+      "totalOnlyProfitableTrades": 3.034,
+      "avgProfitForProfitableTrade": 1.0113333333333332,
+      "avgProfit": 0.42824999999999996
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.691,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.691,
+      "totalOnlyProfitableTrades": 3.485,
+      "avgProfitForProfitableTrade": 0.697,
+      "avgProfit": 0.2818333333333333
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.691,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.691,
+      "totalOnlyProfitableTrades": 3.485,
+      "avgProfitForProfitableTrade": 0.697,
+      "avgProfit": 0.2818333333333333
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.69,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.69,
+      "totalOnlyProfitableTrades": 3.66,
+      "avgProfitForProfitableTrade": 1.22,
+      "avgProfit": 0.4225
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.69,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.69,
+      "totalOnlyProfitableTrades": 3.66,
+      "avgProfitForProfitableTrade": 1.22,
+      "avgProfit": 0.4225
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.662,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.662,
+      "totalOnlyProfitableTrades": 3.705,
+      "avgProfitForProfitableTrade": 0.741,
+      "avgProfit": 0.27699999999999997
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.6389999999999998,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.6389999999999998,
+      "totalOnlyProfitableTrades": 4.635999999999999,
+      "avgProfitForProfitableTrade": 0.7726666666666665,
+      "avgProfit": 0.23414285714285712
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.6389999999999998,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.6389999999999998,
+      "totalOnlyProfitableTrades": 4.635999999999999,
+      "avgProfitForProfitableTrade": 0.7726666666666665,
+      "avgProfit": 0.23414285714285712
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.6389999999999998,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.6389999999999998,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.40974999999999995
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.6389999999999998,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.6389999999999998,
+      "totalOnlyProfitableTrades": 4.259,
+      "avgProfitForProfitableTrade": 1.4196666666666669,
+      "avgProfit": 0.40974999999999995
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.638,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.638,
+      "totalOnlyProfitableTrades": 4.198,
+      "avgProfitForProfitableTrade": 0.5997142857142858,
+      "avgProfit": 0.20475
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.6199999999999999,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 8,
+      "totalProfit": 1.6199999999999999,
+      "totalOnlyProfitableTrades": 4.8069999999999995,
+      "avgProfitForProfitableTrade": 0.6008749999999999,
+      "avgProfit": 0.16199999999999998
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.5909999999999997,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.5909999999999997,
+      "totalOnlyProfitableTrades": 3.614,
+      "avgProfitForProfitableTrade": 0.7228,
+      "avgProfit": 0.2651666666666666
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.5849999999999995,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.5849999999999995,
+      "totalOnlyProfitableTrades": 3.608,
+      "avgProfitForProfitableTrade": 0.7216,
+      "avgProfit": 0.2641666666666666
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.5849999999999995,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.5849999999999995,
+      "totalOnlyProfitableTrades": 3.608,
+      "avgProfitForProfitableTrade": 0.7216,
+      "avgProfit": 0.2641666666666666
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.5490000000000002,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.5490000000000002,
+      "totalOnlyProfitableTrades": 4.139,
+      "avgProfitForProfitableTrade": 0.8278000000000001,
+      "avgProfit": 0.2581666666666667
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.523,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.523,
+      "totalOnlyProfitableTrades": 3.034,
+      "avgProfitForProfitableTrade": 1.0113333333333332,
+      "avgProfit": 0.38075
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.523,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.523,
+      "totalOnlyProfitableTrades": 3.034,
+      "avgProfitForProfitableTrade": 1.0113333333333332,
+      "avgProfit": 0.38075
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.5229999999999997,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.5229999999999997,
+      "totalOnlyProfitableTrades": 3.546,
+      "avgProfitForProfitableTrade": 0.7091999999999999,
+      "avgProfit": 0.2538333333333333
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.4920000000000002,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.4920000000000002,
+      "totalOnlyProfitableTrades": 5.1,
+      "avgProfitForProfitableTrade": 0.7285714285714285,
+      "avgProfit": 0.1657777777777778
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 1.4900000000000002,
+    "stopLoss": "0.12",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.4900000000000002,
+      "totalOnlyProfitableTrades": 4.476999999999999,
+      "avgProfitForProfitableTrade": 0.6395714285714285,
+      "avgProfit": 0.18625000000000003
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.453,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.453,
+      "totalOnlyProfitableTrades": 3.482,
+      "avgProfitForProfitableTrade": 0.6964,
+      "avgProfit": 0.24216666666666667
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.453,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.453,
+      "totalOnlyProfitableTrades": 3.482,
+      "avgProfitForProfitableTrade": 0.6964,
+      "avgProfit": 0.24216666666666667
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.4329999999999994,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.4329999999999994,
+      "totalOnlyProfitableTrades": 4.707999999999999,
+      "avgProfitForProfitableTrade": 0.7846666666666665,
+      "avgProfit": 0.17912499999999992
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.4329999999999994,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.4329999999999994,
+      "totalOnlyProfitableTrades": 4.707999999999999,
+      "avgProfitForProfitableTrade": 0.7846666666666665,
+      "avgProfit": 0.17912499999999992
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.401,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.401,
+      "totalOnlyProfitableTrades": 2.904,
+      "avgProfitForProfitableTrade": 0.484,
+      "avgProfit": 0.20014285714285715
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.376,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.376,
+      "totalOnlyProfitableTrades": 1.376,
+      "avgProfitForProfitableTrade": 0.688,
+      "avgProfit": 0.688
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.376,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.376,
+      "totalOnlyProfitableTrades": 1.376,
+      "avgProfitForProfitableTrade": 0.688,
+      "avgProfit": 0.688
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.366,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.366,
+      "totalOnlyProfitableTrades": 3.5960000000000005,
+      "avgProfitForProfitableTrade": 0.7192000000000001,
+      "avgProfit": 0.22766666666666668
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.347,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.347,
+      "totalOnlyProfitableTrades": 3.053,
+      "avgProfitForProfitableTrade": 1.0176666666666667,
+      "avgProfit": 0.33675
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.3210000000000002,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 5,
+      "numProfitableTrades": 4,
+      "totalProfit": 1.3210000000000002,
+      "totalOnlyProfitableTrades": 3.14,
+      "avgProfitForProfitableTrade": 0.785,
+      "avgProfit": 0.26420000000000005
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.321,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.321,
+      "totalOnlyProfitableTrades": 1.321,
+      "avgProfitForProfitableTrade": 0.6605,
+      "avgProfit": 0.6605
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.321,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.321,
+      "totalOnlyProfitableTrades": 1.321,
+      "avgProfitForProfitableTrade": 0.6605,
+      "avgProfit": 0.6605
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.302,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 7,
+      "totalProfit": 1.302,
+      "totalOnlyProfitableTrades": 4.489,
+      "avgProfitForProfitableTrade": 0.6412857142857142,
+      "avgProfit": 0.14466666666666667
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 1.249,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.249,
+      "totalOnlyProfitableTrades": 3.479,
+      "avgProfitForProfitableTrade": 1.1596666666666666,
+      "avgProfit": 0.31225
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.2140000000000002,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.2140000000000002,
+      "totalOnlyProfitableTrades": 3.8040000000000003,
+      "avgProfitForProfitableTrade": 0.7608,
+      "avgProfit": 0.20233333333333337
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 1.185,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.185,
+      "totalOnlyProfitableTrades": 1.185,
+      "avgProfitForProfitableTrade": 0.5925,
+      "avgProfit": 0.5925
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 1.185,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 2,
+      "numProfitableTrades": 2,
+      "totalProfit": 1.185,
+      "totalOnlyProfitableTrades": 1.185,
+      "avgProfitForProfitableTrade": 0.5925,
+      "avgProfit": 0.5925
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 1.149,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.149,
+      "totalOnlyProfitableTrades": 2.904,
+      "avgProfitForProfitableTrade": 0.484,
+      "avgProfit": 0.16414285714285715
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 1.1479999999999997,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.1479999999999997,
+      "totalOnlyProfitableTrades": 3.6719999999999997,
+      "avgProfitForProfitableTrade": 0.7343999999999999,
+      "avgProfit": 0.19133333333333327
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 1.1479999999999997,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.1479999999999997,
+      "totalOnlyProfitableTrades": 3.6719999999999997,
+      "avgProfitForProfitableTrade": 0.7343999999999999,
+      "avgProfit": 0.19133333333333327
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.1359999999999997,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.1359999999999997,
+      "totalOnlyProfitableTrades": 4.276999999999999,
+      "avgProfitForProfitableTrade": 1.4256666666666664,
+      "avgProfit": 0.2839999999999999
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 1.1359999999999997,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.1359999999999997,
+      "totalOnlyProfitableTrades": 4.276999999999999,
+      "avgProfitForProfitableTrade": 1.4256666666666664,
+      "avgProfit": 0.2839999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.1359999999999997,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.1359999999999997,
+      "totalOnlyProfitableTrades": 4.276999999999999,
+      "avgProfitForProfitableTrade": 1.4256666666666664,
+      "avgProfit": 0.2839999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 1.1359999999999997,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.1359999999999997,
+      "totalOnlyProfitableTrades": 4.276999999999999,
+      "avgProfitForProfitableTrade": 1.4256666666666664,
+      "avgProfit": 0.2839999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.0899999999999999,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.0899999999999999,
+      "totalOnlyProfitableTrades": 3.614,
+      "avgProfitForProfitableTrade": 0.7228,
+      "avgProfit": 0.18166666666666664
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.073,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.073,
+      "totalOnlyProfitableTrades": 4.069999999999999,
+      "avgProfitForProfitableTrade": 0.6783333333333332,
+      "avgProfit": 0.15328571428571428
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 1.073,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 1.073,
+      "totalOnlyProfitableTrades": 4.069999999999999,
+      "avgProfitForProfitableTrade": 0.6783333333333332,
+      "avgProfit": 0.15328571428571428
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 1.069,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 1.069,
+      "totalOnlyProfitableTrades": 3.053,
+      "avgProfitForProfitableTrade": 1.0176666666666667,
+      "avgProfit": 0.26725
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 1.0219999999999998,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 1.0219999999999998,
+      "totalOnlyProfitableTrades": 3.546,
+      "avgProfitForProfitableTrade": 0.7091999999999999,
+      "avgProfit": 0.1703333333333333
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.9869999999999999,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.9869999999999999,
+      "totalOnlyProfitableTrades": 3.8179999999999996,
+      "avgProfitForProfitableTrade": 1.2726666666666666,
+      "avgProfit": 0.24674999999999997
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.9550000000000003,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.9550000000000003,
+      "totalOnlyProfitableTrades": 4.491,
+      "avgProfitForProfitableTrade": 0.7484999999999999,
+      "avgProfit": 0.11937500000000004
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.9529999999999998,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.9529999999999998,
+      "totalOnlyProfitableTrades": 3.54,
+      "avgProfitForProfitableTrade": 0.708,
+      "avgProfit": 0.1588333333333333
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.9469999999999996,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.9469999999999996,
+      "totalOnlyProfitableTrades": 3.5589999999999997,
+      "avgProfitForProfitableTrade": 1.1863333333333332,
+      "avgProfit": 0.2367499999999999
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.9400000000000002,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.9400000000000002,
+      "totalOnlyProfitableTrades": 3.482,
+      "avgProfitForProfitableTrade": 0.6964,
+      "avgProfit": 0.1566666666666667
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.9400000000000002,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.9400000000000002,
+      "totalOnlyProfitableTrades": 3.482,
+      "avgProfitForProfitableTrade": 0.6964,
+      "avgProfit": 0.1566666666666667
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.9120000000000004,
+    "stopLoss": "0.07",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.9120000000000004,
+      "totalOnlyProfitableTrades": 4.475,
+      "avgProfitForProfitableTrade": 0.6392857142857142,
+      "avgProfit": 0.10133333333333337
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.9119999999999999,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.9119999999999999,
+      "totalOnlyProfitableTrades": 2.904,
+      "avgProfitForProfitableTrade": 0.484,
+      "avgProfit": 0.13028571428571428
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.9050000000000001,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.9050000000000001,
+      "totalOnlyProfitableTrades": 3.1350000000000002,
+      "avgProfitForProfitableTrade": 1.0450000000000002,
+      "avgProfit": 0.22625000000000003
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.9010000000000004,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.9010000000000004,
+      "totalOnlyProfitableTrades": 3.5960000000000005,
+      "avgProfitForProfitableTrade": 0.7192000000000001,
+      "avgProfit": 0.15016666666666673
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.8809999999999998,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.8809999999999998,
+      "totalOnlyProfitableTrades": 3.468,
+      "avgProfitForProfitableTrade": 0.6936,
+      "avgProfit": 0.1468333333333333
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.8640000000000001,
+    "stopLoss": "0.05",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.8640000000000001,
+      "totalOnlyProfitableTrades": 2.917,
+      "avgProfitForProfitableTrade": 0.9723333333333333,
+      "avgProfit": 0.21600000000000003
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.8640000000000001,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.8640000000000001,
+      "totalOnlyProfitableTrades": 2.917,
+      "avgProfitForProfitableTrade": 0.9723333333333333,
+      "avgProfit": 0.21600000000000003
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.8640000000000001,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.8640000000000001,
+      "totalOnlyProfitableTrades": 2.917,
+      "avgProfitForProfitableTrade": 0.9723333333333333,
+      "avgProfit": 0.21600000000000003
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.8640000000000001,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.8640000000000001,
+      "totalOnlyProfitableTrades": 2.917,
+      "avgProfitForProfitableTrade": 0.9723333333333333,
+      "avgProfit": 0.21600000000000003
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.855,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.855,
+      "totalOnlyProfitableTrades": 3.206,
+      "avgProfitForProfitableTrade": 1.0686666666666667,
+      "avgProfit": 0.21375
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.855,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.855,
+      "totalOnlyProfitableTrades": 3.206,
+      "avgProfitForProfitableTrade": 1.0686666666666667,
+      "avgProfit": 0.21375
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.855,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.855,
+      "totalOnlyProfitableTrades": 3.206,
+      "avgProfitForProfitableTrade": 1.0686666666666667,
+      "avgProfit": 0.21375
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.855,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.855,
+      "totalOnlyProfitableTrades": 3.206,
+      "avgProfitForProfitableTrade": 1.0686666666666667,
+      "avgProfit": 0.21375
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.851,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.851,
+      "totalOnlyProfitableTrades": 3.682,
+      "avgProfitForProfitableTrade": 1.2273333333333334,
+      "avgProfit": 0.21275
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 0.7999999999999998,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.7999999999999998,
+      "totalOnlyProfitableTrades": 4.441999999999999,
+      "avgProfitForProfitableTrade": 0.6345714285714285,
+      "avgProfit": 0.08888888888888886
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.7840000000000001,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7840000000000001,
+      "totalOnlyProfitableTrades": 3.479,
+      "avgProfitForProfitableTrade": 1.1596666666666666,
+      "avgProfit": 0.19600000000000004
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.766,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.766,
+      "totalOnlyProfitableTrades": 4.061,
+      "avgProfitForProfitableTrade": 0.8122,
+      "avgProfit": 0.10942857142857143
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.7600000000000005,
+    "stopLoss": "0.15",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.7600000000000005,
+      "totalOnlyProfitableTrades": 4.475,
+      "avgProfitForProfitableTrade": 0.6392857142857142,
+      "avgProfit": 0.09500000000000006
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.7489999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7489999999999999,
+      "totalOnlyProfitableTrades": 3.3360000000000003,
+      "avgProfitForProfitableTrade": 1.112,
+      "avgProfit": 0.18724999999999997
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.7489999999999999,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7489999999999999,
+      "totalOnlyProfitableTrades": 3.3360000000000003,
+      "avgProfitForProfitableTrade": 1.112,
+      "avgProfit": 0.18724999999999997
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.744,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 12,
+      "numProfitableTrades": 8,
+      "totalProfit": 0.744,
+      "totalOnlyProfitableTrades": 5.776,
+      "avgProfitForProfitableTrade": 0.722,
+      "avgProfit": 0.062
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.7309999999999998,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7309999999999998,
+      "totalOnlyProfitableTrades": 3.343,
+      "avgProfitForProfitableTrade": 1.1143333333333334,
+      "avgProfit": 0.18274999999999994
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 0.7230000000000001,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7230000000000001,
+      "totalOnlyProfitableTrades": 3.1079999999999997,
+      "avgProfitForProfitableTrade": 1.0359999999999998,
+      "avgProfit": 0.18075000000000002
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 0.7230000000000001,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7230000000000001,
+      "totalOnlyProfitableTrades": 3.1079999999999997,
+      "avgProfitForProfitableTrade": 1.0359999999999998,
+      "avgProfit": 0.18075000000000002
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 0.7230000000000001,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7230000000000001,
+      "totalOnlyProfitableTrades": 3.1079999999999997,
+      "avgProfitForProfitableTrade": 1.0359999999999998,
+      "avgProfit": 0.18075000000000002
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 0.7230000000000001,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7230000000000001,
+      "totalOnlyProfitableTrades": 3.1079999999999997,
+      "avgProfitForProfitableTrade": 1.0359999999999998,
+      "avgProfit": 0.18075000000000002
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.7090000000000001,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.7090000000000001,
+      "totalOnlyProfitableTrades": 2.895,
+      "avgProfitForProfitableTrade": 0.965,
+      "avgProfit": 0.17725000000000002
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.706,
+    "stopLoss": "0.07",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.706,
+      "totalOnlyProfitableTrades": 4.31,
+      "avgProfitForProfitableTrade": 0.8619999999999999,
+      "avgProfit": 0.10085714285714285
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.6940000000000002,
+    "stopLoss": "0.10",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.6940000000000002,
+      "totalOnlyProfitableTrades": 3.3890000000000002,
+      "avgProfitForProfitableTrade": 1.1296666666666668,
+      "avgProfit": 0.17350000000000004
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.6739999999999999,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.6739999999999999,
+      "totalOnlyProfitableTrades": 3.814,
+      "avgProfitForProfitableTrade": 0.6356666666666667,
+      "avgProfit": 0.08424999999999999
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.6120000000000001,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.6120000000000001,
+      "totalOnlyProfitableTrades": 2.668,
+      "avgProfitForProfitableTrade": 0.8893333333333334,
+      "avgProfit": 0.15300000000000002
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.6120000000000001,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.6120000000000001,
+      "totalOnlyProfitableTrades": 2.668,
+      "avgProfitForProfitableTrade": 0.8893333333333334,
+      "avgProfit": 0.15300000000000002
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 0.6119999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.6119999999999999,
+      "totalOnlyProfitableTrades": 3.088,
+      "avgProfitForProfitableTrade": 1.0293333333333334,
+      "avgProfit": 0.15299999999999997
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.5970000000000002,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.5970000000000002,
+      "totalOnlyProfitableTrades": 4.601,
+      "avgProfitForProfitableTrade": 0.6572857142857143,
+      "avgProfit": 0.05970000000000002
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.5859999999999999,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.5859999999999999,
+      "totalOnlyProfitableTrades": 3.206,
+      "avgProfitForProfitableTrade": 1.0686666666666667,
+      "avgProfit": 0.14649999999999996
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.5609999999999997,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.5609999999999997,
+      "totalOnlyProfitableTrades": 4.301,
+      "avgProfitForProfitableTrade": 0.8602000000000001,
+      "avgProfit": 0.09349999999999996
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.5609999999999997,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.5609999999999997,
+      "totalOnlyProfitableTrades": 4.301,
+      "avgProfitForProfitableTrade": 0.8602000000000001,
+      "avgProfit": 0.09349999999999996
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.5349999999999999,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.5349999999999999,
+      "totalOnlyProfitableTrades": 3.857,
+      "avgProfitForProfitableTrade": 1.2856666666666667,
+      "avgProfit": 0.13374999999999998
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.5169999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.5169999999999999,
+      "totalOnlyProfitableTrades": 2.573,
+      "avgProfitForProfitableTrade": 0.8576666666666667,
+      "avgProfit": 0.12924999999999998
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.985",
+    "profit": 0.5129999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.5129999999999997,
+      "totalOnlyProfitableTrades": 3.088,
+      "avgProfitForProfitableTrade": 1.0293333333333334,
+      "avgProfit": 0.12824999999999992
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 0.5129999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.5129999999999997,
+      "totalOnlyProfitableTrades": 3.088,
+      "avgProfitForProfitableTrade": 1.0293333333333334,
+      "avgProfit": 0.12824999999999992
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.985",
+    "profit": 0.4889999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.4889999999999999,
+      "totalOnlyProfitableTrades": 2.965,
+      "avgProfitForProfitableTrade": 0.9883333333333333,
+      "avgProfit": 0.12224999999999997
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 0.4869999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.4869999999999999,
+      "totalOnlyProfitableTrades": 2.543,
+      "avgProfitForProfitableTrade": 0.8476666666666667,
+      "avgProfit": 0.12174999999999997
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 0.4869999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.4869999999999999,
+      "totalOnlyProfitableTrades": 2.543,
+      "avgProfitForProfitableTrade": 0.8476666666666667,
+      "avgProfit": 0.12174999999999997
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 0.4819999999999998,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.4819999999999998,
+      "totalOnlyProfitableTrades": 4.124,
+      "avgProfitForProfitableTrade": 0.6873333333333332,
+      "avgProfit": 0.06024999999999998
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.4640000000000001,
+    "stopLoss": "0.06",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.4640000000000001,
+      "totalOnlyProfitableTrades": 4.960999999999999,
+      "avgProfitForProfitableTrade": 0.7087142857142856,
+      "avgProfit": 0.04640000000000001
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.44899999999999984,
+    "stopLoss": "0.10",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.44899999999999984,
+      "totalOnlyProfitableTrades": 2.904,
+      "avgProfitForProfitableTrade": 0.484,
+      "avgProfit": 0.06414285714285713
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.4179999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.4179999999999997,
+      "totalOnlyProfitableTrades": 2.993,
+      "avgProfitForProfitableTrade": 0.9976666666666666,
+      "avgProfit": 0.10449999999999993
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.3939999999999999,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.3939999999999999,
+      "totalOnlyProfitableTrades": 2.87,
+      "avgProfitForProfitableTrade": 0.9566666666666667,
+      "avgProfit": 0.09849999999999998
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.37800000000000034,
+    "stopLoss": "0.08",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.37800000000000034,
+      "totalOnlyProfitableTrades": 4.475,
+      "avgProfitForProfitableTrade": 0.6392857142857142,
+      "avgProfit": 0.04200000000000004
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.357,
+    "stopLoss": "0.05",
+    "interval": "m3",
+    "stats": {
+      "numSellTrades": 8,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.357,
+      "totalOnlyProfitableTrades": 2.904,
+      "avgProfitForProfitableTrade": 0.484,
+      "avgProfit": 0.044625
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.32699999999999996,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.32699999999999996,
+      "totalOnlyProfitableTrades": 2.423,
+      "avgProfitForProfitableTrade": 0.8076666666666666,
+      "avgProfit": 0.08174999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.05",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.06",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.10",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.985",
+    "profit": 0.31899999999999995,
+    "stopLoss": "0.12",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.31899999999999995,
+      "totalOnlyProfitableTrades": 3.384,
+      "avgProfitForProfitableTrade": 1.128,
+      "avgProfit": 0.07974999999999999
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.30799999999999983,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.30799999999999983,
+      "totalOnlyProfitableTrades": 5.180999999999999,
+      "avgProfitForProfitableTrade": 0.740142857142857,
+      "avgProfit": 0.030799999999999984
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.30799999999999983,
+    "stopLoss": "0.06",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 10,
+      "numProfitableTrades": 7,
+      "totalProfit": 0.30799999999999983,
+      "totalOnlyProfitableTrades": 5.180999999999999,
+      "avgProfitForProfitableTrade": 0.740142857142857,
+      "avgProfit": 0.030799999999999984
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.30600000000000005,
+    "stopLoss": "0.15",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.30600000000000005,
+      "totalOnlyProfitableTrades": 4.061,
+      "avgProfitForProfitableTrade": 0.8122,
+      "avgProfit": 0.05100000000000001
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.27400000000000024,
+    "stopLoss": "0.12",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.27400000000000024,
+      "totalOnlyProfitableTrades": 3.5960000000000005,
+      "avgProfitForProfitableTrade": 0.7192000000000001,
+      "avgProfit": 0.04566666666666671
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.26200000000000023,
+    "stopLoss": "0.05",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 4,
+      "totalProfit": 0.26200000000000023,
+      "totalOnlyProfitableTrades": 4.1850000000000005,
+      "avgProfitForProfitableTrade": 1.0462500000000001,
+      "avgProfit": 0.037428571428571464
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.22599999999999998,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.22599999999999998,
+      "totalOnlyProfitableTrades": 2.282,
+      "avgProfitForProfitableTrade": 0.7606666666666667,
+      "avgProfit": 0.056499999999999995
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.21599999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.21599999999999997,
+      "totalOnlyProfitableTrades": 2.7910000000000004,
+      "avgProfitForProfitableTrade": 0.9303333333333335,
+      "avgProfit": 0.05399999999999999
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.21599999999999997,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.21599999999999997,
+      "totalOnlyProfitableTrades": 2.7910000000000004,
+      "avgProfitForProfitableTrade": 0.9303333333333335,
+      "avgProfit": 0.05399999999999999
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.21299999999999997,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.21299999999999997,
+      "totalOnlyProfitableTrades": 4.086,
+      "avgProfitForProfitableTrade": 0.681,
+      "avgProfit": 0.023666666666666662
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.20499999999999985,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 4,
+      "totalProfit": 0.20499999999999985,
+      "totalOnlyProfitableTrades": 4.192,
+      "avgProfitForProfitableTrade": 1.048,
+      "avgProfit": 0.029285714285714266
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.20199999999999996,
+    "stopLoss": "0.08",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.20199999999999996,
+      "totalOnlyProfitableTrades": 2.298,
+      "avgProfitForProfitableTrade": 0.766,
+      "avgProfit": 0.05049999999999999
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.16999999999999982,
+    "stopLoss": "0.07",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.16999999999999982,
+      "totalOnlyProfitableTrades": 3.7550000000000003,
+      "avgProfitForProfitableTrade": 0.7510000000000001,
+      "avgProfit": 0.02428571428571426
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.12799999999999984,
+    "stopLoss": "0.08",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.12799999999999984,
+      "totalOnlyProfitableTrades": 2.3609999999999998,
+      "avgProfitForProfitableTrade": 0.7869999999999999,
+      "avgProfit": 0.03199999999999996
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.995",
+    "profit": 0.12099999999999977,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.12099999999999977,
+      "totalOnlyProfitableTrades": 2.6959999999999997,
+      "avgProfitForProfitableTrade": 0.8986666666666666,
+      "avgProfit": 0.030249999999999944
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.985",
+    "profit": 0.1060000000000001,
+    "stopLoss": "0.12",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.1060000000000001,
+      "totalOnlyProfitableTrades": 3.4050000000000002,
+      "avgProfitForProfitableTrade": 1.135,
+      "avgProfit": 0.026500000000000024
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.995",
+    "profit": 0.10300000000000009,
+    "stopLoss": "0.06",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 5,
+      "totalProfit": 0.10300000000000009,
+      "totalOnlyProfitableTrades": 3.2640000000000002,
+      "avgProfitForProfitableTrade": 0.6528,
+      "avgProfit": 0.014714285714285727
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.09699999999999953,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 4,
+      "totalProfit": 0.09699999999999953,
+      "totalOnlyProfitableTrades": 4.114,
+      "avgProfitForProfitableTrade": 1.0285,
+      "avgProfit": 0.01385714285714279
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 0.09099999999999975,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.09099999999999975,
+      "totalOnlyProfitableTrades": 2.666,
+      "avgProfitForProfitableTrade": 0.8886666666666666,
+      "avgProfit": 0.022749999999999937
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 0.09099999999999975,
+    "stopLoss": "0.10",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 4,
+      "numProfitableTrades": 3,
+      "totalProfit": 0.09099999999999975,
+      "totalOnlyProfitableTrades": 2.666,
+      "avgProfitForProfitableTrade": 0.8886666666666666,
+      "avgProfit": 0.022749999999999937
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.995",
+    "profit": 0.08699999999999997,
+    "stopLoss": "0.05",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 9,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.08699999999999997,
+      "totalOnlyProfitableTrades": 3.96,
+      "avgProfitForProfitableTrade": 0.66,
+      "avgProfit": 0.009666666666666664
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.999",
+    "profit": 0.05600000000000005,
+    "stopLoss": "0.15",
+    "interval": "m6",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.05600000000000005,
+      "totalOnlyProfitableTrades": 3.814,
+      "avgProfitForProfitableTrade": 0.6356666666666667,
+      "avgProfit": 0.008000000000000007
+    }
+  },
+  {
+    "increase": "1.005",
+    "decrease": "0.995",
+    "profit": 0.05599999999999983,
+    "stopLoss": "0.08",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 3,
+      "numProfitableTrades": 2,
+      "totalProfit": 0.05599999999999983,
+      "totalOnlyProfitableTrades": 2.08,
+      "avgProfitForProfitableTrade": 1.04,
+      "avgProfit": 0.01866666666666661
+    }
+  },
+  {
+    "increase": "1.0035",
+    "decrease": "0.999",
+    "profit": 0.026000000000000134,
+    "stopLoss": "0.07",
+    "interval": "m9",
+    "stats": {
+      "numSellTrades": 6,
+      "numProfitableTrades": 4,
+      "totalProfit": 0.026000000000000134,
+      "totalOnlyProfitableTrades": 3.562,
+      "avgProfitForProfitableTrade": 0.8905,
+      "avgProfit": 0.004333333333333356
+    }
+  },
+  {
+    "increase": "1.0015",
+    "decrease": "0.999",
+    "profit": 0.009999999999999676,
+    "stopLoss": "0.12",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.009999999999999676,
+      "totalOnlyProfitableTrades": 3.309,
+      "avgProfitForProfitableTrade": 0.5515,
+      "avgProfit": 0.0014285714285713822
+    }
+  },
+  {
+    "increase": "1.00175",
+    "decrease": "0.999",
+    "profit": 0.009999999999999676,
+    "stopLoss": "0.12",
+    "interval": "m15",
+    "stats": {
+      "numSellTrades": 7,
+      "numProfitableTrades": 6,
+      "totalProfit": 0.009999999999999676,
+      "totalOnlyProfitableTrades": 3.309,
+      "avgProfitForProfitableTrade": 0.5515,
+      "avgProfit": 0.0014285714285713822
+    }
+  }
+]

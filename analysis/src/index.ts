@@ -1,14 +1,12 @@
 import { writeApiPricesForSymbol } from "./parse/api";
-import { getAllPriceDataFromLogs } from "./parse/pricebot";
+import { collateResults, getAllPriceDataFromLogs } from "./parse/pricebot";
 import { startSimulations } from "./simulation";
 import { getFilesInDir, runAsyncSequentially } from "./utils";
 
 type Actions = "Analyze price bot" | "Extract api data" | "Run simulation";
 const action: { do: Actions } = { do: "Run simulation" };
 
-const execute = (
-  arg: "Analyze price bot" | "Extract api data" | "Run simulation"
-) => {
+const execute = (arg: Actions) => {
   action.do = arg;
   console.log(action.do + "...");
 };
@@ -18,6 +16,7 @@ execute("Analyze price bot");
 const ignoreSymbols = [
   "1",
   "a",
+  "b",
   "zec",
   "xmr",
   "dash",
@@ -65,5 +64,6 @@ if (action.do === "Analyze price bot") {
     startSimulations
   ).then(() => {
     console.timeEnd("simul");
+    collateResults();
   });
 }
