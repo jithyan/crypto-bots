@@ -13,9 +13,9 @@
     "build:analysis": "rimraf dist && tsc --noEmit && yarn node -r dotenv/config esbuild.config.cjs ",
     "build:cloud": "rimraf dist && tsc --noEmit && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
-    "pkg:linux:cloud": "rimraf && yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
+    "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "pkg:analysis": "yarn build:local && cp ./dist/index.js ../analysis/src/simulation/bot.js",
-    "make": "rimraf bin/* & zx make.mjs"
+    "make": "rimraf bin & zx make.mjs"
   },
   "dependencies": {
     "@binance/connector": "^1.7.0",

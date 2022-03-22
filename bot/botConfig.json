@@ -1,4 +1,28 @@
 {
+  "cvxbusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
+    "STOP_LOSS_THRESHOLD": "0.05",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "CVX"
+  },
+  "degobusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.07",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BUSD",
+    "VOLATILE_COIN": "DEGO"
+  },
   "dfbusd": {
     "skip": false,
     "EXCHANGE": "binance",

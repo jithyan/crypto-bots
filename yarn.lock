@@ -948,13 +948,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-cron@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "@types/node-cron@npm:3.0.1"
-  checksum: c93887daef8064b92122c3baf5a3f058bafb70a600f432665dd2684ef8539f7796fd731b3b35b54daad7faef88f87b56fc3236b8e69ce021a364ba2e8f30e51e
-  languageName: node
-  linkType: hard
-
 "@types/node@npm:*":
   version: 17.0.17
   resolution: "@types/node@npm:17.0.17"
@@ -980,6 +973,13 @@ __metadata:
   version: 17.0.16
   resolution: "@types/node@npm:17.0.16"
   checksum: 2d452a9e0ee7ec83d447d66dd2baf4dd05ef2fbcda39b06f73d86b36d5150d86c43a733d534d77467e7782104756944d42a35ed4b64113bda341b8334ee4d01d
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^17.0.22":
+  version: 17.0.22
+  resolution: "@types/node@npm:17.0.22"
+  checksum: 72d1fc8bdc37f0c18b1160e7207b52fb569d0e2b459ac9a4cbd3ca40e478ffe1455efc2c6a253c81e0a7a7c7a899716535d9970cd9521f87d6050b7de04b9ba3
   languageName: node
   linkType: hard
 
@@ -2373,6 +2373,27 @@ __metadata:
   checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
   languageName: node
   linkType: hard
+
+"db@workspace:db":
+  version: 0.0.0-use.local
+  resolution: "db@workspace:db"
+  dependencies:
+    "@types/cors": ^2.8.12
+    "@types/express": ^4.17.13
+    "@types/node": ^17.0.22
+    concurrently: ^7.0.0
+    cors: ^2.8.5
+    dotenv: ^16.0.0
+    esbuild: ^0.14.27
+    express: ^4.17.3
+    helmet: ^5.0.2
+    nodemon: ^2.0.15
+    pkg: ^5.5.2
+    rimraf: ^3.0.2
+    typescript: ^4.6.2
+    zod: ^3.14.2
+  languageName: unknown
+  linkType: soft
 
 "debug@npm:2.6.9, debug@npm:^2.6.0":
   version: 2.6.9
@@ -4792,7 +4813,6 @@ __metadata:
     "@types/cors": ^2.8.12
     "@types/express": ^4.17.13
     "@types/node": ^17.0.18
-    "@types/node-cron": ^3.0.1
     "@types/xxhashjs": ^0.2.2
     common-util: ../common-util/common-util-2.0.0.tgz
     concurrently: ^7.0.0
@@ -4802,7 +4822,6 @@ __metadata:
     esbuild: ^0.14.27
     gaxios: ^4.3.2
     helmet: ^5.0.2
-    node-cron: ^3.0.0
     nodemon: ^2.0.15
     pkg: ^5.5.2
     rimraf: ^3.0.2
@@ -5052,16 +5071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment-timezone@npm:^0.5.31":
-  version: 0.5.34
-  resolution: "moment-timezone@npm:0.5.34"
-  dependencies:
-    moment: ">= 2.9.0"
-  checksum: 12a1d3d52e4ba509cf1fa36bbda59d898a08fa80ab35f6c358747e93aec1f07e617cec647eaf2e8acf5f9132e581d4704d34a9edffa9a80c5cd04bf23b277595
-  languageName: node
-  linkType: hard
-
-"moment@npm:>= 2.9.0, moment@npm:^2.29.1":
+"moment@npm:^2.29.1":
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 1e14d5f422a2687996be11dd2d50c8de3bd577c4a4ca79ba5d02c397242a933e5b941655de6c8cb90ac18f01cc4127e55b4a12ae3c527a6c0a274e455979345e
@@ -5174,15 +5184,6 @@ __metadata:
   dependencies:
     clone: 2.x
   checksum: b0bdd81a6fee4754fb984a05246b510bb35dc54721116d465899bf4229ee3287fdafb47da526900ee9924fb402ed5c7d8050049d37d8bf2d26dbafc23a2c3205
-  languageName: node
-  linkType: hard
-
-"node-cron@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "node-cron@npm:3.0.0"
-  dependencies:
-    moment-timezone: ^0.5.31
-  checksum: acae07d835f74636ec2bf598ffadf6b89aa2eae036671bffad336371b28fb1eefb11870912c965bb351cd958d4b62f9fa9b28cf922b5f681459ea4878837ffcf
   languageName: node
   linkType: hard
 
@@ -7994,6 +7995,13 @@ __metadata:
   version: 3.11.6
   resolution: "zod@npm:3.11.6"
   checksum: 044ac416450f179a0c88240f27849d2886c777cebade42df10e5f04125b0265cec82d9bd741a7dcb11796b2ea88b32c86be7d36932a4bed6af57002560359db1
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.14.2":
+  version: 3.14.2
+  resolution: "zod@npm:3.14.2"
+  checksum: 397c300f0957126519c6d9fa95b8ea08f8dc2d0692e8c40be78d070a69e88cacec9d7b960c33f61382b7c1647c0850bea5c299bcdfbe7a671a8bf0fb3e6923cf
   languageName: node
   linkType: hard
 

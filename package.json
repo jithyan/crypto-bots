@@ -7,7 +7,8 @@
     "manager",
     "ui-mgr",
     "common-util",
-    "analysis"
+    "analysis",
+    "db"
   ],
   "scripts": {
     "setup": "zx ./scripts/local-setup.mjs",
@@ -16,6 +17,7 @@
     "ui": "yarn workspace ui",
     "util": "yarn workspace common-util",
     "anal": "yarn workspace analysis",
+    "db": "yarn workspace db",
     "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
     "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
     "upgrade:ui": "yarn ui add --dev typescript snowpack",
