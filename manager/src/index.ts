@@ -29,6 +29,6 @@ try {
 httpServer.listen(Config.PORT, hostname, () => {
   console.log(`Listening on ${hostname}:${Config.PORT}`);
   logger.info("Started bot manager", { ...Config });
-  startBotStatusCheck();
+  // startBotStatusCheck();
   startPeriodicStateSaving();
 });
