@@ -10,7 +10,7 @@ function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
 }
 
 const checkBotStatus = () => {
-  Object.keys(botRegister).forEach((botId) => {
+  Object.keys(botRegister.state).forEach((botId) => {
     const currentBot = botRegister.state[botId];
     if (currentBot) {
       const { status } = currentBot;
