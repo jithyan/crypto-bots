@@ -11,7 +11,8 @@ function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
 
 const checkBotStatus = () => {
   Object.keys(botRegister.state).forEach((botId) => {
-    const currentBot = botRegister.state[botId];
+    const currentBot =
+      botRegister.state[botId as keyof typeof botRegister.state];
     if (currentBot) {
       const { status } = currentBot;
       const botIsDown = isLastCheckInOverAnHourAgo(currentBot.lastCheckIn);
@@ -34,9 +35,4 @@ const checkBotStatus = () => {
       });
     }
   });
-};
-
-export const startBotStatusCheck = () => {
-  console.log("Started bot status check scheduler");
-  setInterval(checkBotStatus, 60 * 60 * 1000);
 };

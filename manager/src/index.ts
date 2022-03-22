@@ -1,9 +1,7 @@
 import fs from "fs";
-import { startBotStatusCheck } from "./tasks/checkStatus.js";
 import { Config } from "./config.js";
 import { httpServer } from "./httpServer.js";
 import { logger } from "./log.js";
-import { startPeriodicStateSaving } from "./tasks/saveState.js";
 import { botRegister, TBotRegister } from "./models.js";
 
 const hostname = "0.0.0.0";
@@ -29,6 +27,4 @@ try {
 httpServer.listen(Config.PORT, hostname, () => {
   console.log(`Listening on ${hostname}:${Config.PORT}`);
   logger.info("Started bot manager", { ...Config });
-  // startBotStatusCheck();
-  startPeriodicStateSaving();
 });
