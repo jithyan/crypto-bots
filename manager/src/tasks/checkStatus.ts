@@ -1,9 +1,9 @@
 import { logger } from "../log.js";
 import { botRegister } from "../models.js";
-import { isWithinInterval, addHours } from "date-fns";
+import { isWithinInterval, addHours, addMinutes } from "date-fns";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
-  return !isWithinInterval(lastCheckIn, {
+  return !isWithinInterval(new Date(), {
     start: lastCheckIn,
     end: addHours(lastCheckIn, 1),
   });
@@ -13,6 +13,7 @@ const checkBotStatus = () => {
   Object.keys(botRegister.state).forEach((botId) => {
     const currentBot =
       botRegister.state[botId as keyof typeof botRegister.state];
+
     if (currentBot) {
       const { status } = currentBot;
       const botIsDown = isLastCheckInOverAnHourAgo(currentBot.lastCheckIn);
@@ -35,4 +36,9 @@ const checkBotStatus = () => {
       });
     }
   });
+};
+
+export const startBotCheckup = () => {
+  console.log("Starting bot checkup");
+  setInterval(checkBotStatus, 30 * 60 * 1000);
 };

@@ -8,3 +8,8 @@ export const saveState = (): void => {
     "utf8"
   );
 };
+
+export const startSavingStatePeriodically = () => {
+  console.log("Starting saving state periodically");
+  setInterval(saveState, 75 * 1000);
+};
