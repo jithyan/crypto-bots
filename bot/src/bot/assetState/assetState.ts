@@ -132,7 +132,7 @@ export class AssetState<
       config: error.config,
     });
 
-    if (error.request.status === 429) {
+    if (error.request?.status === 429) {
       stateLogger.error(
         "Making too many requests, going to sleep for 15 minutes"
       );

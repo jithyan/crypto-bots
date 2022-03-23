@@ -1,6 +1,6 @@
 import { logger } from "../log.js";
 import { botRegister } from "../models.js";
-import { isWithinInterval, addHours, addMinutes } from "date-fns";
+import { isWithinInterval, addHours } from "date-fns";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
   return !isWithinInterval(new Date(), {
