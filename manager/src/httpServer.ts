@@ -210,7 +210,7 @@ app.post("/bots/startup", (req, res) => {
       .json({ status: "Bot needs to be offline to start up" });
   }
 
-  return startupBot(botRegister.state[id])
+  return startupBot(botRegister.state[id], 0)
     .then(() => res.json({ status: "SUCCESS" }))
     .then(() => broadcastBotStatus())
     .catch(() => res.status(500).json({ status: "Failed to start bot" }));
@@ -219,28 +219,29 @@ app.post("/bots/startup", (req, res) => {
 app.post("/bots/startup/all", (req, res) => {
   getBotRegisterIds()
     .filter((id) => botRegister.state[id].status === "OFFLINE")
-    .forEach((id) => {
-      startupBot(botRegister.state[id]);
-      broadcastBotStatus();
+    .forEach((id, index) => {
+      startupBot(botRegister.state[id], index).then(broadcastBotStatus);
     });
   return res.json({ status: "sent startup signal" });
 });
 
-function startupBot(bot: IBotInfo): Promise<void> {
+function startupBot(bot: IBotInfo, seconds: number): Promise<void> {
   return new Promise<void>((resolve, reject) => {
-    const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"], {
-      cwd: `${Config.BOT_DIR}${bot.location?.split("/")[0]}`,
-    });
-    bot.status = "STARTING UP";
-    nohup.on("error", (err) => {
-      logger.error("Failed to start bot", { err, bot: bot });
-    });
-    nohup.on("close", (code) => {
-      if (code !== 0) {
-        logger.error("Failed to start bot", { bot: bot, code });
-      }
-    });
-    setImmediate(resolve);
+    setTimeout(() => {
+      const nohup = spawn("nohup", [`${Config.BOT_DIR}${bot.location}`, "&"], {
+        cwd: `${Config.BOT_DIR}${bot.location?.split("/")[0]}`,
+      });
+      bot.status = "STARTING UP";
+      nohup.on("error", (err) => {
+        logger.error("Failed to start bot", { err, bot: bot });
+      });
+      nohup.on("close", (code) => {
+        if (code !== 0) {
+          logger.error("Failed to start bot", { bot: bot, code });
+        }
+      });
+      setImmediate(resolve);
+    }, seconds * 1000);
   });
 }
 
