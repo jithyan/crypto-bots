@@ -144,15 +144,25 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
       ? "success"
       : "danger";
 
+  const pctChange =
+    (1 - Number(lastTickerPrice) / Number(lastPurchasePrice)) * -100;
+
   return (
     <div>
       <ul className="list-group list-group-horizontal-sm">
         <li className="list-group-item">
           {assetState} {TrendIcon} ${lastTickerPrice}{" "}
           {holdsVolatileAsset && (
-            <span className={`badge bg-${purchasePriceBgColor}`}>
-              ${lastPurchasePrice}
-            </span>
+            <>
+              <span className={`badge bg-${purchasePriceBgColor}`}>
+                ${lastPurchasePrice}
+              </span>
+              <span
+                className={`badge rounded-pill bg-light text-${purchasePriceBgColor}`}
+              >
+                {pctChange.toFixed(2)}%
+              </span>
+            </>
           )}
         </li>
         <li className="list-group-item">
