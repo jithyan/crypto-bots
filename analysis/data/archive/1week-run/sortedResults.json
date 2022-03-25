@@ -208,22 +208,6 @@
     "name": "eps"
   },
   {
-    "increase": "1.0015",
-    "decrease": "0.985",
-    "profit": 6.190999999999999,
-    "stopLoss": "0.05",
-    "interval": "m3",
-    "stats": {
-      "numSellTrades": 3,
-      "numProfitableTrades": 3,
-      "totalProfit": 6.190999999999999,
-      "totalOnlyProfitableTrades": 6.190999999999999,
-      "avgProfitForProfitableTrade": 2.0636666666666663,
-      "avgProfit": 2.0636666666666663
-    },
-    "name": "dia"
-  },
-  {
     "increase": "1.0035",
     "decrease": "0.999",
     "profit": 6.130999999999999,

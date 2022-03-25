@@ -1,28 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
-
-export function useAnimateProfit(totalProfit: string) {
-  const [prevProfit, setPrevProfit] = useState(0);
-
-  useEffect(() => {
-    if (prevProfit.toFixed(3) !== totalProfit) {
-      const increment =
-        Number(totalProfit) < Number(prevProfit.toFixed(3)) ? -0.001 : 0.001;
-      let prof = Number(prevProfit);
-      while (
-        (increment > 0 && prof < Number(totalProfit)) ||
-        (increment < 0 && prof > Number(totalProfit))
-      ) {
-        prof += increment;
-        setTimeout(() => {
-          setPrevProfit((prof) => prof + increment);
-        }, 350);
-      }
-    }
-  }, [totalProfit]);
-
-  return prevProfit;
-}
 
 export function ControlPanel({ data }: { data: any[] }) {
   const totalProfit = data
@@ -32,23 +9,6 @@ export function ControlPanel({ data }: { data: any[] }) {
       0
     )
     .toFixed(3);
-  const prevProfit = useAnimateProfit(totalProfit);
-
-  // useEffect(() => {
-  //   if (prevProfit.toFixed(3) !== totalProfit) {
-  //     const increment =
-  //       Number(totalProfit) < Number(prevProfit.toFixed(3)) ? -0.001 : 0.001;
-  //     let prof = Number(prevProfit);
-  //     while (prof < Number(totalProfit)) {
-  //       prof += 0.001;
-  //       setTimeout(() => {
-  //         setPrevProfit((prof) => prof + increment);
-  //       }, 350);
-  //     }
-  //   }
-  // }, [totalProfit]);
-
-  console.log({ totalProfit, prevProfit });
 
   return (
     <div className="container">
@@ -75,7 +35,7 @@ export function ControlPanel({ data }: { data: any[] }) {
                 Number(totalProfit) >= 0 ? "success" : "danger"
               }`}
             >
-              Total profit: {prevProfit.toFixed(3)}
+              Total profit: {totalProfit}
             </span>
           </h4>
         </div>
