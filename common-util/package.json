@@ -2,14 +2,15 @@
   "name": "common-util",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "pkg": "yarn build && yarn pack --out ./%s-%v.tgz",
     "build": "tsc"
   },
   "dependencies": {
-    "xxhashjs": "^0.2.2"
+    "xxhashjs": "^0.2.2",
+    "zod": "^3.14.2"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",

@@ -3,21 +3,14 @@ import { Server } from "socket.io";
 import { z } from "zod";
 import helmet from "helmet";
 import crypto from "crypto";
-
 import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
 import cors from "cors";
 import http from "http";
-import {
-  getIdFromData,
-  botRegister,
-  BotInfoReq,
-  IBotInfo,
-  getBotRegisterIds,
-} from "./models.js";
+import { getIdFromData, botRegister, getBotRegisterIds } from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
-import { getTimestampPepper } from "common-util";
+import { BotInfoReq, getTimestampPepper, IBotInfo } from "common-util";
 import { saveState } from "./tasks/saveState.js";
 
 const app = express();
