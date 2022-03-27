@@ -1,7 +1,10 @@
 import React from "react";
+import type { IBotInfoStream } from "common-util";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
+import { usePasswordContext } from "./PasswordContext";
 
-export function ControlPanel({ data }: { data: any[] }) {
+export function ControlPanel({ data }: { data: IBotInfoStream[] }) {
+  const { setShowPasswordModal, password } = usePasswordContext();
   const totalProfit = data
     .reduce(
       (acc, curr) =>
@@ -10,21 +13,38 @@ export function ControlPanel({ data }: { data: any[] }) {
     )
     .toFixed(3);
 
+  const checkPassword = (func: () => void) => () => {
+    if (password) {
+      func();
+    } else {
+      setShowPasswordModal(true);
+    }
+  };
+
   return (
     <div className="container">
       <div className="row" style={{ paddingBottom: "24px" }}>
         <div className="col">
-          <button className="btn btn-outline-info" onClick={startupAllBots}>
+          <button
+            className="btn btn-outline-info"
+            onClick={checkPassword(startupAllBots)}
+          >
             Start all bots
           </button>
         </div>
         <div className="col">
-          <button className="btn btn-outline-warning" onClick={shutdownAllBots}>
+          <button
+            className="btn btn-outline-warning"
+            onClick={checkPassword(shutdownAllBots)}
+          >
             Shutdown all bots
           </button>
         </div>
         <div className="col">
-          <button className="btn btn-outline-warning" onClick={shutdownManager}>
+          <button
+            className="btn btn-outline-warning"
+            onClick={checkPassword(shutdownManager)}
+          >
             Shutdown Manager
           </button>
         </div>
