@@ -1,10 +1,12 @@
 import React from "react";
-import { useBotStatus } from "./api";
+import { useBotStream } from "./api";
 import { ControlPanel } from "./ControlPanel";
 import { Dashboard } from "./Dashboard";
+import { useBotState } from "./botState";
 
 function App() {
-  const data = useBotStatus();
+  const [botData, updateBotDataOnEvent] = useBotState();
+  useBotStream(updateBotDataOnEvent);
 
   return (
     <div className="container-fluid px-4">
@@ -14,8 +16,8 @@ function App() {
         </h1>
       </header>
       <main>
-        <ControlPanel data={data} />
-        <Dashboard data={data} />
+        <ControlPanel data={botData} />
+        <Dashboard data={botData} />
       </main>
     </div>
   );

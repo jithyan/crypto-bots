@@ -1,7 +1,8 @@
 import io from "socket.io-client";
 import axiosDefault from "axios";
 import { getTimestampPepper } from "common-util";
-import { useState, useEffect } from "react";
+import { useLayoutEffect } from "react";
+import type { PossibleSocketEvents } from "./botState";
 
 const socket = io("ws://35.243.104.152:2000");
 
@@ -37,23 +38,27 @@ export async function getToken(path: string) {
   return btoa(JSON.stringify({ hash: hash, salt }));
 }
 
-export function useBotStatus(): any[] {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    socket.timeout(5000).emit("timeout", (err: any) => {
-      if (err) {
-        console.error(err);
-        //setData([]);
-      }
+export function useBotStream(
+  updateOnEvent: (event: PossibleSocketEvents) => void
+): void {
+  useLayoutEffect(() => {
+    socket.on("allbots", (data) => {
+      console.log("allbots", data);
+      updateOnEvent({ event: "allbots", data });
     });
-    socket.on("botstatus", (respData) => {
-      console.log("botstatus", respData);
-      setData(respData);
+    socket.on("botremove", (data) => {
+      console.log("botremove", data);
+      updateOnEvent({ event: "botremove", data });
+    });
+    socket.on("botstatus", (data) => {
+      console.log("botstatus", data);
+      updateOnEvent({ event: "botstatus", data });
+    });
+    socket.on("botupdate", (data) => {
+      console.log("botupdate", data);
+      updateOnEvent({ event: "botupdate", data });
     });
   }, []);
-
-  return data;
 }
 
 export async function sendCommandToBot(path: string, id: string) {
