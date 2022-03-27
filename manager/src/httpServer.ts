@@ -7,11 +7,27 @@ import { GaxiosOptions, request } from "gaxios";
 import { spawn } from "child_process";
 import cors from "cors";
 import http from "http";
-import { getIdFromData, botRegister, getBotRegisterIds } from "./models.js";
+import {
+  getIdFromData,
+  botRegister,
+  getBotRegisterIds,
+  IBotInfo,
+} from "./models.js";
 import { logger } from "./log.js";
 import { Config } from "./config.js";
-import { BotInfoReq, getTimestampPepper, IBotInfo } from "common-util";
+import {
+  BotInfoReq,
+  getTimestampPepper,
+  TBotStatus,
+  TBotStatusEvent,
+} from "common-util";
 import { saveState } from "./tasks/saveState.js";
+import {
+  getBotRemovalUpdate,
+  getBotStatusUpdate,
+  getAllBotInfo,
+  getBotUpdate,
+} from "./socketStream.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -23,34 +39,19 @@ const io = new Server(httpServer, {
 });
 
 io.on("connection", (socket) => {
-  socket.emit("botstatus", getBotStatus());
+  socket.emit<TBotStatusEvent>("allbots", getAllBotInfo());
 });
 
-const broadcastBotStatus = () => {
-  io.emit("botstatus", getBotStatus());
+const broadcastBotStatusUpdate = (id: string, status: TBotStatus) => {
+  io.emit<TBotStatusEvent>("botstatus", getBotStatusUpdate(id, status));
 };
 
-type TBotActions = "shutdown" | "startup" | "remove";
+const broadcastBotRemoval = (id: string) => {
+  io.emit<TBotStatusEvent>("botremove", getBotRemovalUpdate(id));
+};
 
-const getBotStatus = () => {
-  return getBotRegisterIds().map((id) => {
-    const bot = botRegister.state[id] ?? {};
-    const actions: Partial<Record<TBotActions, `/bots/${TBotActions}`>> = {};
-
-    if (bot.status === "ONLINE") {
-      actions.shutdown = "/bots/shutdown";
-    }
-    if (bot.status === "OFFLINE") {
-      actions.startup = "/bots/startup";
-      actions.remove = "/bots/remove";
-    }
-
-    return {
-      id,
-      actions,
-      ...bot,
-    };
-  });
+const broadcastBotUpdate = (id: string) => {
+  io.emit<TBotStatusEvent>("botupdate", getBotUpdate(id));
 };
 
 app.use(cors());
@@ -81,7 +82,7 @@ app.post("/register", (req, res) => {
 
     botRegister.state[id] = data;
     saveState();
-    broadcastBotStatus();
+    broadcastBotUpdate(id);
 
     return res.status(201).json({ status: "SUCCESS" });
   } catch (err: any) {
@@ -133,7 +134,7 @@ app.post("/bots/remove", (req, res) => {
         .json({ status: "Bot cannot be removed if online. Shutdown first." });
     } else {
       delete botRegister.state[id];
-      broadcastBotStatus();
+      broadcastBotRemoval(id);
       return res.json({ status: "OK" });
     }
   } catch (err: any) {
@@ -153,11 +154,10 @@ app.post("/bots/shutdown", async (req, res) => {
         .status(400)
         .json({ status: "Bot has to be online to shutdown" });
     } else {
-      const { port, hostname } = botRegister.state[id];
       await request(buildBotRequest(botRegister.state[id], "/shutdown"));
       botRegister.state[id].status = "SHUTTING DOWN";
 
-      broadcastBotStatus();
+      broadcastBotStatusUpdate(id, "SHUTTING DOWN");
       return res.json({ status: "OK" });
     }
   } catch (err: any) {
@@ -182,7 +182,7 @@ app.post("/bots/shutdown/all", async (req, res) => {
       requestDetails.map(({ details, id }) =>
         request(details).then(() => {
           botRegister.state[id].status = "SHUTTING DOWN";
-          broadcastBotStatus();
+          broadcastBotStatusUpdate(id, "SHUTTING DOWN");
         })
       )
     );
@@ -205,7 +205,7 @@ app.post("/bots/startup", (req, res) => {
 
   return startupBot(botRegister.state[id], 0)
     .then(() => res.json({ status: "SUCCESS" }))
-    .then(() => broadcastBotStatus())
+    .then(() => broadcastBotStatusUpdate(id, "STARTING UP"))
     .catch(() => res.status(500).json({ status: "Failed to start bot" }));
 });
 
@@ -213,7 +213,9 @@ app.post("/bots/startup/all", (req, res) => {
   getBotRegisterIds()
     .filter((id) => botRegister.state[id].status === "OFFLINE")
     .forEach((id, index) => {
-      startupBot(botRegister.state[id], index).then(broadcastBotStatus);
+      startupBot(botRegister.state[id], index).then(() =>
+        broadcastBotStatusUpdate(id, "STARTING UP")
+      );
     });
   return res.json({ status: "sent startup signal" });
 });

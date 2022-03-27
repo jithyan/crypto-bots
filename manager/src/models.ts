@@ -1,5 +1,11 @@
 import h from "xxhashjs";
-import { IBotInfo, TBotInfoReq } from "common-util";
+import { TBotInfoReq, TBotStatus } from "common-util";
+
+export interface IBotInfo extends TBotInfoReq {
+  status: TBotStatus;
+  hostname: string;
+  lastCheckIn: Date;
+}
 
 export type TBotRegister = Record<string, IBotInfo>;
 export const botRegister: { state: TBotRegister } = { state: {} };

@@ -21,7 +21,7 @@
     "@binance/connector": "^1.7.0",
     "axios": "^0.26.0",
     "big.js": "^6.1.1",
-    "common-util": "../common-util/common-util-3.0.0.tgz",
+    "common-util": "../common-util/common-util-4.0.0.tgz",
     "express": "^4.17.3",
     "helmet": "^5.0.2",
     "node-cache": "^5.1.2",
