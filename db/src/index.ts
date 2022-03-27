@@ -3,7 +3,8 @@ import mariadb from "mariadb";
 import { getAllCsvData } from "./csv.js";
 import { createTradeTable } from "./db_scripts/createTradeTable.js";
 
-console.log("Init pool");
+console.log("WORK IN PROGRESS");
+
 const pool = mariadb.createPool({
   user: "admin",
   password: "password",
