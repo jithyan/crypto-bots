@@ -34,6 +34,7 @@ function botStateReducer(
     case "botstatus":
       return produce(prevState, (draft) => {
         draft[action.data.id].status = action.data.status;
+        draft[action.data.id].actions = action.data.actions;
       });
 
     case "botupdate":

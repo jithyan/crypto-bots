@@ -2,7 +2,7 @@
   "name": "common-util",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "pkg": "yarn build && yarn pack --out ./%s-%v.tgz",

@@ -46,6 +46,7 @@ export type TBotAvailableActions = z.infer<typeof BotAvailableActions>;
 export const BotStatusUpdate = z.object({
   id: z.string(),
   status: BotStatus,
+  actions: BotAvailableActions,
 });
 export type IBotStatusUpdate = z.infer<typeof BotStatusUpdate>;
 

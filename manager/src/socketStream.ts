@@ -7,13 +7,13 @@ import {
 } from "common-util";
 import { getBotRegisterIds, botRegister, IBotInfo } from "./models";
 
-function getAvailableActionsForBot(bot: IBotInfo): TBotAvailableActions {
+function getAvailableActionsForBot(status: TBotStatus): TBotAvailableActions {
   const actions: TBotAvailableActions = {};
 
-  if (bot.status === "ONLINE") {
+  if (status === "ONLINE") {
     actions.shutdown = "/bots/shutdown";
   }
-  if (bot.status === "OFFLINE") {
+  if (status === "OFFLINE") {
     actions.startup = "/bots/startup";
     actions.remove = "/bots/remove";
   }
@@ -28,7 +28,7 @@ export const getBotUpdate = (id: string): IBotInfoStream => {
     id,
     ...bot,
     lastCheckIn: bot?.lastCheckIn?.toISOString(),
-    actions: getAvailableActionsForBot(bot),
+    actions: getAvailableActionsForBot(bot.status),
   };
 };
 
@@ -41,6 +41,7 @@ export const getBotStatusUpdate = (
 ): IBotStatusUpdate => ({
   id,
   status,
+  actions: getAvailableActionsForBot(status),
 });
 
 export const getBotRemovalUpdate = (id: string): IBotRemovalUpdate => ({ id });
