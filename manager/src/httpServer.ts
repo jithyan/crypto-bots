@@ -33,7 +33,7 @@ const app = express();
 export const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:8080",
+    origin: ["http://localhost:8080", "https://ponzibots.com"],
     methods: ["GET", "POST"],
   },
 });
@@ -54,7 +54,7 @@ const broadcastBotUpdate = (id: string) => {
   io.emit<TBotStatusEvent>("botupdate", getBotUpdate(id));
 };
 
-app.use(cors());
+app.use(cors({ origin: ["http:localhost:8080", "https://ponzibots.com/"] }));
 app.use(helmet());
 app.use(express.json());
 app.disable("x-powered-by");
