@@ -25,7 +25,9 @@
     "upgrade:anal": "yarn anal add --dev typescript",
     "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal",
     "format": "prettier --write \"**/src/**/*.ts*\"",
-    "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\""
+    "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\"",
+    "build:ui:cloud": "gcloud builds submit --tag gcr.io/crypto-bot-341604/crypto-ui  --verbosity debug",
+    "deploy:ui": "gcloud run deploy --image gcr.io/crypto-bot-341604/crypto-ui --platform managed"
   },
   "devDependencies": {
     "@types/event-stream": "^4.0.0",

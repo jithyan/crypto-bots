@@ -1,5 +1,7 @@
 # New Project
 
+cra-cloud-run
+
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
 ## Available Scripts

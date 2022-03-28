@@ -5,7 +5,7 @@ import {
   TBotAvailableActions,
   TBotStatus,
 } from "common-util";
-import { getBotRegisterIds, botRegister, IBotInfo } from "./models";
+import { getBotRegisterIds, botRegister } from "./models.js";
 
 function getAvailableActionsForBot(status: TBotStatus): TBotAvailableActions {
   const actions: TBotAvailableActions = {};
