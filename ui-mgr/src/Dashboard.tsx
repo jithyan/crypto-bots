@@ -295,16 +295,6 @@ export function LastState({
 }
 
 function ChangeLog({ changes }: { changes: string[] }) {
-  const [staggeredChanges, setStaggeredChanges] = useState(changes);
-
-  useEffect(() => {
-    const id = setTimeout(() => {
-      setStaggeredChanges(() => changes);
-    }, 1500 + Math.round(Math.random() * 100));
-
-    return () => clearTimeout(id);
-  }, [changes]);
-
   return (
     <div
       className={"card bg-dark border-light mb-3"}
@@ -326,8 +316,8 @@ function ChangeLog({ changes }: { changes: string[] }) {
       >
         <strong>Bot Feed</strong>
       </div>
-      {staggeredChanges.length > 0 ? (
-        staggeredChanges.map((change, id) => (
+      {changes.length > 0 ? (
+        changes.map((change, id) => (
           <p
             style={{ paddingBottom: "0", margin: "0" }}
             key={`${change}-${id}`}

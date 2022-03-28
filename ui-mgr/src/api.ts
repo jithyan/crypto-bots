@@ -72,7 +72,7 @@ export function useBotStream(
 
     socket.on("botupdate", (data) => {
       console.log("botupdate", data);
-      updateOnEvent({ event: "botupdate", data });
+      setTimeout(() => updateOnEvent({ event: "botupdate", data }), 0);
     });
   }, []);
 }
