@@ -1,23 +1,80 @@
 import { useReducer, useMemo } from "react";
-import type {
-  TBotStatusEvent,
-  IBotInfoStream,
-  IBotRemovalUpdate,
-  IBotStatusUpdate,
-} from "common-util";
+import type { IBotInfoStream } from "common-util";
 import produce from "immer";
+import type { BotEvent, BotEventData } from "./api";
+import { formatIsoDate } from "./helper";
 
-type Action<E extends TBotStatusEvent, D> = { event: E; data: D };
+export interface IBotReducerState {
+  bots: Record<string, IBotInfoStream>;
+  changes: string[];
+}
 
-export type PossibleSocketEvents =
-  | Action<"allbots", IBotInfoStream[]>
-  | Action<"botstatus", IBotStatusUpdate>
-  | Action<"botupdate", IBotInfoStream>
-  | Action<"botremove", IBotRemovalUpdate>;
+export function reducer(state: IBotReducerState, action: BotEventData) {
+  return produce(state, (draft) => {
+    draft.bots = botStateReducer(state.bots, action);
+    draft.changes = botUpdateReducer(state.changes, action, state.bots);
+  });
+}
+
+export const MAX_EVENT_LIST = 3;
+
+function getUpdateForBot(
+  data: Record<string, IBotInfoStream>,
+  bot: IBotInfoStream
+): string {
+  const initialLog = `[${formatIsoDate(bot.lastCheckIn)}] ${bot.symbol}:`;
+  const updates: string[] = [];
+
+  const oldBot = data[bot.id];
+  if (oldBot) {
+    const oldProfit = oldBot.lastState?.stats?.usdProfitToDate ?? "0";
+    const currProfit = bot.lastState?.stats?.usdProfitToDate ?? "0";
+    const diff = Number(currProfit) - Number(oldProfit);
+
+    if (oldProfit !== currProfit) {
+      updates.push(`Profit changed by $${diff.toFixed(3)}`);
+    }
+
+    const oldState = oldBot.lastState?.state;
+    const currState = bot.lastState?.state;
+
+    if (oldState !== currState) {
+      updates.push(`State changed to ${currState}`);
+    }
+  } else {
+    updates.push("New bot added");
+  }
+
+  return `${initialLog} ${
+    updates.length > 0 ? updates.join(" | ") : "No change"
+  }`;
+}
+
+function botUpdateReducer(
+  prevState: string[],
+  action: BotEventData,
+  data: Record<string, IBotInfoStream>
+): string[] {
+  switch (action.event) {
+    case "botupdate":
+      const update = getUpdateForBot(data, action.data);
+      return produce(prevState, (draft) => {
+        if (prevState.length >= MAX_EVENT_LIST) {
+          draft.shift();
+          draft[prevState.length - 1] = update;
+        } else {
+          draft.push(update);
+        }
+      });
+
+    default:
+      return prevState;
+  }
+}
 
 function botStateReducer(
   prevState: Record<string, IBotInfoStream>,
-  action: PossibleSocketEvents
+  action: BotEventData
 ): Record<string, IBotInfoStream> {
   switch (action.event) {
     case "allbots":
@@ -49,12 +106,17 @@ function botStateReducer(
 
 export function useBotState(): [
   IBotInfoStream[],
-  (action: PossibleSocketEvents) => void
+  string[],
+  (action: BotEventData) => void
 ] {
-  const [state, dispatch] = useReducer(botStateReducer, {});
+  const [state, dispatch] = useReducer(reducer, { bots: {}, changes: [] });
 
   return useMemo(
-    () => [Object.keys(state).map((id) => state[id]), dispatch],
+    () => [
+      Object.keys(state.bots).map((id) => state.bots[id]),
+      state.changes,
+      dispatch,
+    ],
     [state]
   );
 }

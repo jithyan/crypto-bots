@@ -1,6 +1,6 @@
 import type { IBotInfoStream, TBotActions } from "common-util";
-import React, { useLayoutEffect, useState } from "react";
-import { ActionButton } from "./helper";
+import React, { useEffect, useLayoutEffect, useState } from "react";
+import { ActionButton, formatIsoDate } from "./helper";
 import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
 import { Table } from "./Table";
 
@@ -85,11 +85,7 @@ function CompactView({
     lastState?.decisionEngine?.lastTickerPrice
   ).toFixed(3);
 
-  const checkIn = new Date(lastCheckIn)
-    .toLocaleString("en-AU", {
-      timeZone: "Australia/Sydney",
-    })
-    .split(", ")[1];
+  const checkIn = formatIsoDate(lastCheckIn);
 
   const holdsVolatileAsset = lastState.state === "HoldVolatileAsset";
 
@@ -200,7 +196,7 @@ function useUpdateStyleOnCheckIn(
     }
     const id = setTimeout(() => {
       setStyle(() => normalStyle);
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(id);
   }, [lastCheckIn]);
 
@@ -298,9 +294,66 @@ export function LastState({
   }
 }
 
-export function Dashboard({ data }: any) {
+function ChangeLog({ changes }: { changes: string[] }) {
+  const [staggeredChanges, setStaggeredChanges] = useState(changes);
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setStaggeredChanges(() => changes);
+    }, 1500 + Math.round(Math.random() * 100));
+
+    return () => clearTimeout(id);
+  }, [changes]);
+
+  return (
+    <div
+      className={"card bg-dark border-light mb-3"}
+      style={{
+        width: "32rem",
+        margin: "auto",
+        color: "limegreen",
+        padding: "8px",
+      }}
+    >
+      <div
+        className="card-header text-light"
+        style={{
+          margin: "auto",
+          marginTop: "0",
+          marginBottom: "0",
+          padding: "0",
+        }}
+      >
+        <strong>Bot Feed</strong>
+      </div>
+      {staggeredChanges.length > 0 ? (
+        staggeredChanges.map((change, id) => (
+          <p
+            style={{ paddingBottom: "0", margin: "0" }}
+            key={`${change}-${id}`}
+          >
+            <small>{change}</small>
+          </p>
+        ))
+      ) : (
+        <p style={{ paddingBottom: "0", margin: "auto" }}>
+          <small>Waiting for a bot update...</small>
+        </p>
+      )}
+    </div>
+  );
+}
+
+export function Dashboard({
+  data,
+  changes,
+}: {
+  data: IBotInfoStream[];
+  changes: string[];
+}) {
   return (
     <>
+      <ChangeLog changes={changes} />
       <Table columns={columnHeaders} data={data.map(parseBotData)} />
     </>
   );

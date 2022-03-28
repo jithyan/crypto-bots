@@ -1,8 +1,13 @@
 import io from "socket.io-client";
 import axiosDefault from "axios";
-import { getTimestampPepper } from "common-util";
+import {
+  getTimestampPepper,
+  IBotInfoStream,
+  IBotRemovalUpdate,
+  IBotStatusUpdate,
+  TBotStatusEvent,
+} from "common-util";
 import { useLayoutEffect } from "react";
-import type { PossibleSocketEvents } from "./botState";
 import { Password } from "./PasswordContext";
 
 const socket = io("ws://35.243.104.152:2000");
@@ -39,8 +44,15 @@ export async function getToken(path: string) {
   return btoa(JSON.stringify({ hash: hash, salt }));
 }
 
+export type BotEvent<E extends TBotStatusEvent, D> = { event: E; data: D };
+export type BotEventData =
+  | BotEvent<"allbots", IBotInfoStream[]>
+  | BotEvent<"botstatus", IBotStatusUpdate>
+  | BotEvent<"botupdate", IBotInfoStream>
+  | BotEvent<"botremove", IBotRemovalUpdate>;
+
 export function useBotStream(
-  updateOnEvent: (event: PossibleSocketEvents) => void
+  updateOnEvent: (event: BotEventData) => void
 ): void {
   useLayoutEffect(() => {
     socket.on("allbots", (data) => {

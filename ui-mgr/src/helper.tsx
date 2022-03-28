@@ -2,6 +2,14 @@ import React from "react";
 import { sendCommandToBot } from "./api";
 import { usePasswordContext } from "./PasswordContext";
 
+export function formatIsoDate(date: string): string {
+  return new Date(date)
+    .toLocaleString("en-AU", {
+      timeZone: "Australia/Sydney",
+    })
+    .split(", ")[1];
+}
+
 export function ContractIcon() {
   return (
     <svg

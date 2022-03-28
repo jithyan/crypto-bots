@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { useBotStream } from "./api";
 import { ControlPanel } from "./ControlPanel";
 import { Dashboard } from "./Dashboard";
@@ -7,7 +7,7 @@ import { PasswordModal } from "./PasswordModal";
 import { PasswordContextProvider } from "./PasswordContext";
 
 function App() {
-  const [botData, updateBotDataOnEvent] = useBotState();
+  const [botData, changes, updateBotDataOnEvent] = useBotState();
   useBotStream(updateBotDataOnEvent);
 
   return (
@@ -36,7 +36,7 @@ function App() {
         <PasswordContextProvider>
           <PasswordModal />
           <ControlPanel data={botData} />
-          <Dashboard data={botData} />
+          <Dashboard data={botData} changes={changes} />
         </PasswordContextProvider>
       </main>
     </div>
