@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from "react";
-import { useTable } from "react-table";
+import { useTable, useSortBy } from "react-table";
 
 function Td({ children, cell }: any) {
   const style: Partial<Record<"backgroundColor", string>> = {};
@@ -33,10 +33,13 @@ function Td({ children, cell }: any) {
 
 export function Table({ data, columns }: any) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable({
-      columns,
-      data,
-    });
+    useTable(
+      {
+        columns,
+        data,
+      },
+      useSortBy
+    );
 
   return (
     <table
@@ -48,7 +51,13 @@ export function Table({ data, columns }: any) {
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <th scope="col" {...column.getHeaderProps()}>
+              <th
+                scope="col"
+                {
+                  //@ts-ignore
+                  ...column.getHeaderProps(column.getSortByToggleProps())
+                }
+              >
                 {column.render("Header")}
               </th>
             ))}
