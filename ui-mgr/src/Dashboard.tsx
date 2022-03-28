@@ -1,3 +1,4 @@
+import type { IBotInfoStream, TBotActions } from "common-util";
 import React, { useLayoutEffect, useState } from "react";
 import { ActionButton } from "./helper";
 import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
@@ -39,7 +40,7 @@ const columnHeaders = [
   },
 ];
 
-function parseBotData(d: Record<string, any>) {
+function parseBotData(d: IBotInfoStream) {
   return {
     ...d,
     profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
@@ -55,7 +56,7 @@ function parseBotData(d: Record<string, any>) {
       <ActionButton
         key={`${d.id}-${action}`}
         id={d.id}
-        path={d.actions[action]}
+        path={d.actions[action as TBotActions] ?? ""}
         action={action}
       />
     )),
@@ -74,7 +75,12 @@ function ToggleOnClick(props: any) {
   );
 }
 
-function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
+function CompactView({
+  lastState,
+  lastCheckIn,
+  status,
+  symbol,
+}: IBotInfoStream) {
   const lastTickerPrice = parseFloat(
     lastState?.decisionEngine?.lastTickerPrice
   ).toFixed(3);
@@ -101,16 +107,21 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
     <ArrowDownCircle />
   );
 
+  const bgStyle = useUpdateStyleOnCheckIn(lastCheckIn, {
+    normalStyle: "",
+    updatedStyle: "bg-warning",
+  });
+
   if (lastState.state === "PostSellStasis") {
     return (
       <div>
         <ul className="list-group list-group-horizontal-sm">
-          <li className="list-group-item">
+          <li className={`list-group-item ${bgStyle}`}>
             <span className="badge bg-dark text-light">
               Zzz.. {4 - lastState.iteration}h left
             </span>
           </li>
-          <li className="list-group-item">
+          <li className={`list-group-item ${bgStyle}`}>
             {checkIn} <mark>1h</mark>
           </li>
         </ul>
@@ -122,7 +133,7 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
     return (
       <div>
         <ul className="list-group list-group-horizontal-sm">
-          <li className="list-group-item">
+          <li className={`list-group-item ${bgStyle}`}>
             <small>{checkIn}</small>
           </li>
         </ul>
@@ -150,7 +161,7 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
   return (
     <div>
       <ul className="list-group list-group-horizontal-sm">
-        <li className="list-group-item">
+        <li className={`list-group-item ${bgStyle}`}>
           {assetState} {TrendIcon} ${lastTickerPrice}{" "}
           {holdsVolatileAsset && (
             <>
@@ -165,7 +176,7 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
             </>
           )}
         </li>
-        <li className="list-group-item">
+        <li className={`list-group-item ${bgStyle}`}>
           <small>
             {checkIn} <mark>{lastState?.sleep?.sleepStrategy}</mark>
           </small>
@@ -175,36 +186,48 @@ function CompactView({ lastState, lastCheckIn, status, symbol }: any) {
   );
 }
 
+function useUpdateStyleOnCheckIn(
+  lastCheckIn: string,
+  { normalStyle, updatedStyle }: { normalStyle: string; updatedStyle: string }
+) {
+  const [style, setStyle] = useState(normalStyle);
+  const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
+
+  useLayoutEffect(() => {
+    if (prevKnownCheckIn !== lastCheckIn) {
+      setStyle(() => updatedStyle);
+      setPrevKnownCheckIn(lastCheckIn);
+    }
+    const id = setTimeout(() => {
+      setStyle(() => normalStyle);
+    }, 5000);
+    return () => clearTimeout(id);
+  }, [lastCheckIn]);
+
+  return style;
+}
+
 export function LastState({
   lastState,
   lastCheckIn,
   status,
-}: any): JSX.Element {
+}: IBotInfoStream): JSX.Element {
   const isNotPriceBot = lastState.state !== "PriceBot";
   console.log(lastState.state, isNotPriceBot);
   const cardNormalStyle =
     status === "ONLINE"
       ? "card bg-light text-dark mb-3"
       : "card text-white bg-secondary mb-3";
-  const [cardStyle, setCardStyle] = useState(cardNormalStyle);
-  const [prevKnownCheckIn, setPrevKnownCheckIn] = useState(lastCheckIn);
+  const cardStyle = useUpdateStyleOnCheckIn(lastCheckIn, {
+    normalStyle: cardNormalStyle,
+    updatedStyle: cardHasJustBeenUpdatedStyle,
+  });
   const {
     PRICE_HAS_DECREASED_THRESHOLD = "missing",
     PRICE_HAS_INCREASED_THRESHOLD = "missing",
     STOP_LOSS_THRESHOLD = "missing",
     MIN_PERCENT_INCREASE_FOR_SELL = "missing",
   } = lastState?.decisionEngine?.decisionConfig ?? {};
-
-  useLayoutEffect(() => {
-    if (prevKnownCheckIn !== lastCheckIn) {
-      setCardStyle(() => cardHasJustBeenUpdatedStyle);
-      setPrevKnownCheckIn(lastCheckIn);
-    }
-    const id = setTimeout(() => {
-      setCardStyle(() => cardNormalStyle);
-    }, 5000);
-    return () => clearTimeout(id);
-  }, [lastCheckIn]);
 
   if (lastState && typeof lastState !== "string") {
     return (
