@@ -3508,6 +3508,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-rate-limit@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "express-rate-limit@npm:6.3.0"
+  peerDependencies:
+    express: ^4
+  checksum: c5ab0a16cc87b317aaef27d6a270ea93513bf5e3ad5041e55ddd1d91bd2e2888030cdcf95b54fba4852a22b76ef23fa83d1787d7b7fcb0627fd0a6731ea7cf01
+  languageName: node
+  linkType: hard
+
 "express@npm:^4.17.3":
   version: 4.17.3
   resolution: "express@npm:4.17.3"
@@ -5116,6 +5125,7 @@ __metadata:
     date-fns: ^2.28.0
     dotenv: ^16.0.0
     esbuild: ^0.14.28
+    express-rate-limit: ^6.3.0
     gaxios: ^4.3.2
     helmet: ^5.0.2
     nodemon: ^2.0.15

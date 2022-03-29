@@ -28,6 +28,14 @@ import {
   getAllBotInfo,
   getBotUpdate,
 } from "./socketStream.js";
+import rateLimit from "express-rate-limit";
+
+const apiLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000, // 10 minutes
+  max: 100, // Limit each IP to 100 requests per `window` (here, per 10 minutes)
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -56,6 +64,7 @@ const broadcastBotUpdate = (id: string) => {
 
 app.use(cors({ origin: ["http:localhost:8080", "http://ponzibots.com"] }));
 app.use(helmet());
+app.use(apiLimiter);
 app.use(express.json());
 app.disable("x-powered-by");
 
