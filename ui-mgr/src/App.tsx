@@ -6,7 +6,7 @@ import { PasswordModal } from "./PasswordModal";
 import { PasswordContextProvider } from "./PasswordContext";
 import { useBotFeed, useSortedBotList, useUpdateBotRegistry } from "./state";
 
-function App() {
+function MainContent() {
   const updateBotRegistry = useUpdateBotRegistry();
   const [feed, updateFeed] = useBotFeed();
 
@@ -24,6 +24,15 @@ function App() {
 
   const sortedData = useSortedBotList();
 
+  return (
+    <>
+      <ControlPanel data={sortedData} />
+      <Dashboard data={sortedData} changes={feed} />
+    </>
+  );
+}
+
+function App() {
   return (
     <div id="container" className="container-fluid px-4">
       <div className="row">
@@ -55,8 +64,7 @@ function App() {
       <main>
         <PasswordContextProvider>
           <PasswordModal />
-          <ControlPanel data={sortedData} />
-          <Dashboard data={sortedData} changes={feed} />
+          <MainContent />
         </PasswordContextProvider>
       </main>
     </div>

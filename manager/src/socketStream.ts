@@ -2,6 +2,7 @@ import {
   IBotInfoStream,
   IBotRemovalUpdate,
   IBotStatusUpdate,
+  mapBotLastStateToStateDetails,
   TBotAvailableActions,
   TBotStatus,
 } from "common-util";
@@ -25,10 +26,14 @@ export const getBotUpdate = (id: string): IBotInfoStream => {
   const bot = botRegister.state[id] ?? {};
 
   return {
-    id,
-    ...bot,
     lastCheckIn: bot?.lastCheckIn?.toISOString(),
     actions: getAvailableActionsForBot(bot.status),
+    id,
+    status: bot.status,
+    version: bot.version,
+    exchange: bot.exchange,
+    symbol: bot.symbol,
+    state: mapBotLastStateToStateDetails(bot),
   };
 };
 
