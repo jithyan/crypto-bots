@@ -1,18 +1,11 @@
 import React, { useState, useLayoutEffect } from "react";
-import { useTable, useSortBy } from "react-table";
+import { useTable } from "react-table";
+import { StatusHeader } from "./Dashboard";
 
 function Td({ children, cell }: any) {
   const style: Partial<Record<"backgroundColor", string>> = {};
 
-  if (cell.column.Header?.toString() === "Profit to Date") {
-    if (cell.value.startsWith("-")) {
-      style.backgroundColor = "red";
-    } else {
-      style.backgroundColor = "green";
-    }
-  }
-
-  if (cell.column.Header?.toString() === "Status") {
+  if (cell.column.Header?.type === StatusHeader) {
     if (cell.value === "ONLINE") {
       style.backgroundColor = "#28a745";
     } else if (cell.value === "OFFLINE") {
@@ -21,6 +14,14 @@ function Td({ children, cell }: any) {
       style.backgroundColor = "#ffc107";
     } else if (cell.value === "NOT WORKING") {
       style.backgroundColor = "#dc3545";
+    }
+  }
+
+  if (cell.column.Header?.toString?.() === "Profit to Date") {
+    if (cell.value.startsWith("-")) {
+      style.backgroundColor = "red";
+    } else {
+      style.backgroundColor = "green";
     }
   }
 
@@ -33,13 +34,10 @@ function Td({ children, cell }: any) {
 
 export function Table({ data, columns }: any) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-      },
-      useSortBy
-    );
+    useTable({
+      columns,
+      data,
+    });
 
   return (
     <table
@@ -51,13 +49,7 @@ export function Table({ data, columns }: any) {
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <th
-                scope="col"
-                {
-                  //@ts-ignore
-                  ...column.getHeaderProps(column.getSortByToggleProps())
-                }
-              >
+              <th scope="col" {...column.getHeaderProps()}>
                 {column.render("Header")}
               </th>
             ))}

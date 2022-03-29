@@ -1,14 +1,28 @@
-import React from "react";
-import { useBotStream } from "./api";
+import React, { useRef } from "react";
+import { BotEventData, useBotStream } from "./api";
 import { ControlPanel } from "./ControlPanel";
 import { Dashboard } from "./Dashboard";
-import { useBotState } from "./botState";
 import { PasswordModal } from "./PasswordModal";
 import { PasswordContextProvider } from "./PasswordContext";
+import { useBotFeed, useSortedBotList, useUpdateBotRegistry } from "./state";
 
 function App() {
-  const [botData, changes, updateBotDataOnEvent] = useBotState();
-  useBotStream(updateBotDataOnEvent);
+  const updateBotRegistry = useUpdateBotRegistry();
+  const [feed, updateFeed] = useBotFeed();
+
+  const updateState = useRef((action: BotEventData) => {
+    if (action.event === "botupdate") {
+      setTimeout(() => {
+        updateFeed(action.data);
+        updateBotRegistry(action);
+      }, 0);
+    } else {
+      updateBotRegistry(action);
+    }
+  });
+  useBotStream(updateState.current);
+
+  const sortedData = useSortedBotList();
 
   return (
     <div id="container" className="container-fluid px-4">
@@ -35,8 +49,8 @@ function App() {
       <main>
         <PasswordContextProvider>
           <PasswordModal />
-          <ControlPanel data={botData} />
-          <Dashboard data={botData} changes={changes} />
+          <ControlPanel data={sortedData} />
+          <Dashboard data={sortedData} changes={feed} />
         </PasswordContextProvider>
       </main>
     </div>

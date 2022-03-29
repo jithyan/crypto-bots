@@ -1,14 +1,15 @@
 import React from "react";
-import type { IBotInfoStream } from "common-util";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
 import { usePasswordContext } from "./PasswordContext";
+import type { List } from "immutable";
+import type { ImmutableBotInfo } from "./state/botRegistry";
 
-export function ControlPanel({ data }: { data: IBotInfoStream[] }) {
+export function ControlPanel({ data }: { data: List<ImmutableBotInfo> }) {
   const { setShowPasswordModal, password } = usePasswordContext();
   const totalProfit = data
     .reduce(
       (acc, curr) =>
-        acc + Number(curr.lastState?.stats?.usdProfitToDate ?? "0"),
+        acc + Number(curr.get("lastState")?.stats?.usdProfitToDate ?? "0"),
       0
     )
     .toFixed(3);

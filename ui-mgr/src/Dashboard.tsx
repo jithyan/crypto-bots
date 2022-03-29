@@ -1,15 +1,46 @@
-import type { IBotInfoStream, TBotActions } from "common-util";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import type { TBotActions } from "common-util";
+import React, { useLayoutEffect, useState } from "react";
 import { ActionButton, formatIsoDate } from "./helper";
 import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
+import { ImmutableBotInfo, useBotSortMethod } from "./state";
 import { Table } from "./Table";
+import type { Column } from "react-table";
+import type { List } from "immutable";
 
-const columnHeaders = [
+interface BotTableDefinition {
+  symbol: string;
+  version: string;
+  status: string;
+  actions: JSX.Element[];
+  lastState: JSX.Element;
+  profitToDate: string;
+}
+
+export function StatusHeader() {
+  const [_, setSortMethod] = useBotSortMethod();
+  return (
+    <span
+      onClick={() =>
+        setSortMethod((prev) =>
+          prev === "statusAsc" ? "statusDesc" : "statusAsc"
+        )
+      }
+    >
+      Status
+    </span>
+  );
+}
+
+export function RowNumberHeader() {
+  const [_, setSortMethod] = useBotSortMethod();
+  return <span onClick={() => setSortMethod("")}>#</span>;
+}
+
+const columnHeaders: Column<BotTableDefinition>[] = [
   {
-    Header: "#",
+    Header: <RowNumberHeader />,
     id: "row",
     maxWidth: 10,
-    filterable: false,
     Cell: (rows: any) => {
       return <div>{rows.row.index}</div>;
     },
@@ -23,7 +54,7 @@ const columnHeaders = [
     accessor: "version",
   },
   {
-    Header: "Status",
+    Header: <StatusHeader />,
     accessor: "status",
   },
   {
@@ -40,23 +71,36 @@ const columnHeaders = [
   },
 ];
 
-function parseBotData(d: IBotInfoStream) {
+function parseImmutableBotData(
+  d: ImmutableBotInfo
+): Readonly<BotTableDefinition> {
+  const status = d.get("status");
+  const lastState = d.get("lastState");
+  const profitToDate = lastState?.stats?.usdProfitToDate ?? "0";
+  const lastCheckIn = d.get("lastCheckIn");
+  const symbol = d.get("symbol");
+  const actions = d.get("actions");
+  const id = d.get("id");
+  const version = d.get("version");
+
   return {
-    ...d,
-    profitToDate: d.lastState?.stats?.usdProfitToDate ?? "0",
+    symbol,
+    version,
+    status,
+    profitToDate,
     lastState: (
       <ToggleOnClick
-        status={d.status}
-        lastState={d.lastState}
-        lastCheckIn={d.lastCheckIn}
-        symbol={d.symbol}
+        status={status}
+        lastState={lastState}
+        lastCheckIn={lastCheckIn}
+        symbol={symbol}
       />
     ),
-    actions: Object.keys(d.actions).map((action) => (
+    actions: Object.keys(actions).map((action) => (
       <ActionButton
-        key={`${d.id}-${action}`}
-        id={d.id}
-        path={d.actions[action as TBotActions] ?? ""}
+        key={`${id}-${action}`}
+        id={id}
+        path={actions[action as TBotActions] ?? ""}
         action={action}
       />
     )),
@@ -65,7 +109,14 @@ function parseBotData(d: IBotInfoStream) {
 
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
 
-function ToggleOnClick(props: any) {
+interface IStateProps {
+  lastState: Record<string, any>;
+  symbol: string;
+  lastCheckIn: string;
+  status: string;
+}
+
+function ToggleOnClickNoMemo(props: IStateProps) {
   const [showCompact, setShowCompact] = useState(true);
 
   return (
@@ -74,13 +125,16 @@ function ToggleOnClick(props: any) {
     </div>
   );
 }
+const ToggleOnClick = React.memo(ToggleOnClickNoMemo);
+const CompactView = React.memo(CompactViewNoMemo);
+const LastState = React.memo(LastStateNoMemo);
 
-function CompactView({
+function CompactViewNoMemo({
   lastState,
   lastCheckIn,
   status,
   symbol,
-}: IBotInfoStream) {
+}: IStateProps) {
   const lastTickerPrice = parseFloat(
     lastState?.decisionEngine?.lastTickerPrice
   ).toFixed(3);
@@ -203,11 +257,11 @@ function useUpdateStyleOnCheckIn(
   return style;
 }
 
-export function LastState({
+export function LastStateNoMemo({
   lastState,
   lastCheckIn,
   status,
-}: IBotInfoStream): JSX.Element {
+}: IStateProps): JSX.Element {
   const isNotPriceBot = lastState.state !== "PriceBot";
   console.log(lastState.state, isNotPriceBot);
   const cardNormalStyle =
@@ -294,7 +348,7 @@ export function LastState({
   }
 }
 
-function ChangeLog({ changes }: { changes: string[] }) {
+function ChangeLog({ changes }: { changes: List<string> }) {
   return (
     <div
       className={"card bg-dark border-light mb-3"}
@@ -316,7 +370,7 @@ function ChangeLog({ changes }: { changes: string[] }) {
       >
         <strong>Bot Feed</strong>
       </div>
-      {changes.length > 0 ? (
+      {changes.size > 0 ? (
         changes.map((change, id) => (
           <p
             style={{ paddingBottom: "0", margin: "0" }}
@@ -338,13 +392,13 @@ export function Dashboard({
   data,
   changes,
 }: {
-  data: IBotInfoStream[];
-  changes: string[];
+  data: List<ImmutableBotInfo>;
+  changes: List<string>;
 }) {
   return (
     <>
       <ChangeLog changes={changes} />
-      <Table columns={columnHeaders} data={data.map(parseBotData)} />
+      <Table columns={columnHeaders} data={data.map(parseImmutableBotData)} />
     </>
   );
 }
