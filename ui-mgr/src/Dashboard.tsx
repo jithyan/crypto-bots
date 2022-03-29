@@ -353,7 +353,7 @@ function ChangeLog({ changes }: { changes: List<string> }) {
     <div
       className={"card bg-dark border-light mb-3"}
       style={{
-        width: "32rem",
+        width: "28rem",
         margin: "auto",
         color: "limegreen",
         padding: "8px",
@@ -397,8 +397,19 @@ export function Dashboard({
 }) {
   return (
     <>
-      <ChangeLog changes={changes} />
-      <Table columns={columnHeaders} data={data.map(parseImmutableBotData)} />
+      <div className="row">
+        <div className="col">
+          <ChangeLog changes={changes} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <Table
+            columns={columnHeaders}
+            data={data.map(parseImmutableBotData)}
+          />
+        </div>
+      </div>
     </>
   );
 }
