@@ -58,34 +58,34 @@ export function ControlPanel({ data }: { data: List<ImmutableBotInfo> }) {
                   aria-labelledby="navbarDarkDropdownMenuLink"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <div className="dropdown-item">
                       <button
                         className="btn btn-outline-info"
                         onClick={checkPassword(startupAllBots)}
                       >
                         Start all bots
                       </button>
-                    </a>
+                    </div>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <div className="dropdown-item">
                       <button
                         className="btn btn-outline-warning"
                         onClick={checkPassword(shutdownAllBots)}
                       >
                         Shutdown all bots
                       </button>
-                    </a>
+                    </div>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <div className="dropdown-item">
                       <button
                         className="btn btn-outline-warning"
                         onClick={checkPassword(shutdownManager)}
                       >
                         Shutdown Manager
                       </button>
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </li>
