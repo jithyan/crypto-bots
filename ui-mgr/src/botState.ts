@@ -1,4 +1,4 @@
-import { useReducer, useMemo } from "react";
+import { useReducer, useMemo, useState, useEffect } from "react";
 import type { IBotInfoStream } from "common-util";
 import produce from "immer";
 import type { BotEvent, BotEventData } from "./api";
@@ -110,13 +110,27 @@ export function useBotState(): [
   (action: BotEventData) => void
 ] {
   const [state, dispatch] = useReducer(reducer, { bots: {}, changes: [] });
+  const [sortedData, setSortedData] = useState(
+    Object.keys(state.bots).map((id) => state.bots[id])
+  );
+  const [sortBy, setSortBy] = useState("");
+
+  useEffect(() => {
+    const data = Object.keys(state.bots).map((id) => state.bots[id]);
+    if (sortBy === "statusAsc") {
+      data.sort((a, b) =>
+        (a.status ?? "") < (b.status ?? "") ? -1 : a.status === b.status ? 0 : 1
+      );
+    } else if (sortBy === "statusDesc") {
+      data.sort((a, b) =>
+        (a.status ?? "") < (b.status ?? "") ? 1 : a.status === b.status ? 0 : -1
+      );
+    }
+    setSortedData(data);
+  }, [sortBy, state]);
 
   return useMemo(
-    () => [
-      Object.keys(state.bots).map((id) => state.bots[id]),
-      state.changes,
-      dispatch,
-    ],
-    [state]
+    () => [sortedData, state.changes, dispatch],
+    [sortedData, state.changes]
   );
 }
