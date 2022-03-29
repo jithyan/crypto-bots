@@ -31,7 +31,7 @@ import {
 import rateLimit from "express-rate-limit";
 
 const apiLimiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 10 minutes
+  windowMs: 3 * 60 * 1000, // 10 minutes
   max: 100, // Limit each IP to 100 requests per `window` (here, per 10 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
@@ -62,7 +62,7 @@ const broadcastBotUpdate = (id: string) => {
   io.emit<TBotStatusEvent>("botupdate", getBotUpdate(id));
 };
 
-app.use(cors({ origin: ["http:localhost:8080", "http://ponzibots.com"] }));
+app.use(cors({ origin: ["http://localhost:8080", "http://ponzibots.com"] }));
 app.use(helmet());
 app.use(apiLimiter);
 app.use(express.json());
