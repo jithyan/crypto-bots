@@ -142,7 +142,9 @@ function CompactViewNoMemo({
   const lastTickerPrice = parseFloat(lastState.tickerPrice).toFixed(3);
   const checkIn = formatIsoDate(lastCheckIn);
   const holdsVolatileAsset = lastState.state === "HoldVolatileAsset";
-  const lastPurchasePrice = parseFloat(lastState?.lastPurchasePrice).toFixed(3);
+  const lastPurchasePrice = parseFloat(
+    lastState.lastPurchasePrice ?? "0"
+  ).toFixed(3);
   const trendState = lastState?.priceTrendState?.toLowerCase() ?? "";
 
   const TrendIcon = trendState.includes("confirm") ? (
