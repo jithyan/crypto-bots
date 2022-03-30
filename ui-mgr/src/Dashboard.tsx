@@ -298,7 +298,7 @@ export function LastStateNoMemo({
                 {lastState?.state !== "HoldStableAsset" && (
                   <li className="list-group-item">
                     <strong>Last purchase price:</strong> $
-                    {parseFloat(lastState?.lastPurchasePrice).toFixed(3)}
+                    {parseFloat(lastState.lastPurchasePrice ?? "0").toFixed(3)}
                   </li>
                 )}
                 <li className="list-group-item">

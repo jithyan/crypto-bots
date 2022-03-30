@@ -1,5 +1,5 @@
 import { atom, selector, useRecoilValue, useRecoilState } from "recoil";
-import { botRegistry, ImmutableBotInfo } from "./botRegistry";
+import { botRegistry, getBotInfo, ImmutableBotInfo } from "./botRegistry";
 
 export function useSortedBotList() {
   return useRecoilValue(sortedBotData);
@@ -31,9 +31,9 @@ export const sortedBotData = selector({
 });
 
 function sortByStatusAsc(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
-  if (a.get("status") < b.get("status")) {
+  if (getBotInfo(a, "status") < getBotInfo(b, "status")) {
     return -1;
-  } else if (a.get("status") === b.get("status")) {
+  } else if (getBotInfo(a, "status") === getBotInfo(b, "status")) {
     return 0;
   } else {
     return 1;
@@ -41,9 +41,9 @@ function sortByStatusAsc(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
 }
 
 function sortByStatusDesc(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
-  if (a.get("status") < b.get("status")) {
+  if (getBotInfo(a, "status") < getBotInfo(b, "status")) {
     return 1;
-  } else if (a.get("status") === b.get("status")) {
+  } else if (getBotInfo(a, "status") === getBotInfo(b, "status")) {
     return 0;
   } else {
     return -1;
