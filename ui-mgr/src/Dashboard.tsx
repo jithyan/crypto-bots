@@ -288,7 +288,7 @@ export function LastStateNoMemo({
             <div className="card-body">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <em>{lastState?.state}</em>
+                  <em>{lastState?.priceTrendState}</em>
                 </li>
                 <li className="list-group-item">
                   <strong>Last ticker price:</strong> $
