@@ -44,7 +44,7 @@ function getUpdateForBot(
 
   if (oldBot) {
     const oldProfit = oldBotState?.profit ?? "0";
-    const currProfit = bot.state.profit ?? "0";
+    const currProfit = bot?.state?.profit ?? "0";
     const diff = Number(currProfit) - Number(oldProfit);
 
     if (oldProfit !== currProfit) {
@@ -52,7 +52,7 @@ function getUpdateForBot(
     }
 
     const oldState = oldBotState?.state;
-    const currState = bot.state.state;
+    const currState = bot.state?.state;
 
     if (oldState !== currState) {
       updates.push(`State changed to ${currState}`);

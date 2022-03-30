@@ -160,7 +160,7 @@ function CompactViewNoMemo({
     updatedStyle: "bg-warning",
   });
 
-  if (lastState.state === "PostSellStasis") {
+  if (lastState?.state === "PostSellStasis") {
     return (
       <div>
         <ul className="list-group list-group-horizontal-sm">
@@ -260,8 +260,7 @@ export function LastStateNoMemo({
   lastCheckIn,
   status,
 }: IStateProps): JSX.Element {
-  const isNotPriceBot = lastState.state !== "PriceBot";
-  console.log(lastState.state, isNotPriceBot);
+  const isNotPriceBot = lastState?.state !== "PriceBot";
   const cardNormalStyle =
     status === "ONLINE"
       ? "card bg-light text-dark mb-3"
