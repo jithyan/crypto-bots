@@ -55,7 +55,7 @@ export const BotStateDetails = z.object({
   state: z.string(),
   priceTrendState: z.string(),
   tickerPrice: z.string(),
-  lastPurchasePrice: z.string(),
+  lastPurchasePrice: z.string().optional(),
   iteration: z.number(),
   config: z.object({
     priceHasIncreased: z.string(),
@@ -92,11 +92,11 @@ export function mapBotLastStateToStateDetails(
   } = bot.lastState?.decisionEngine?.decisionConfig ?? {};
 
   return {
-    profit: bot.lastState?.stats?.profit ?? "0",
+    profit: bot.lastState?.stats?.usdProfitToDate ?? "0",
     state: bot.lastState?.state ?? "",
     priceTrendState: bot.lastState?.decisionEngine?.state ?? "",
     tickerPrice: bot.lastState?.decisionEngine?.lastTickerPrice ?? "0",
-    lastPurchasePrice: bot.lastState?.lastPurchasePrice ?? "",
+    lastPurchasePrice: bot.lastState?.decisionEngine?.lastPurchasePrice,
     iteration: bot.lastState?.iteration ?? 0,
     config: {
       priceHasIncreased: PRICE_HAS_INCREASED_THRESHOLD,
