@@ -31,6 +31,12 @@ export const botInfoFor = selectorFamily({
       get(botRegistry).get(id),
 });
 
+export function getBotInfo<
+  K extends keyof IBotInfoStream = keyof IBotInfoStream
+>(map: ImmutableBotInfo, key: K): IBotInfoStream[K] {
+  return map.get(key) as IBotInfoStream[K];
+}
+
 function botRegistryReducer(
   prevState: Map<string, ImmutableBotInfo>,
   action: BotEventData

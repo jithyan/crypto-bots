@@ -1,8 +1,12 @@
-import type { TBotActions } from "common-util";
+import type {
+  IBotInfoStream,
+  IBotStateDetails,
+  TBotActions,
+} from "common-util";
 import React, { useLayoutEffect, useState } from "react";
 import { ActionButton, formatIsoDate } from "./helper";
 import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
-import { ImmutableBotInfo, useBotSortMethod } from "./state";
+import { getBotInfo, ImmutableBotInfo, useBotSortMethod } from "./state";
 import { Table } from "./Table";
 import type { Column } from "react-table";
 import type { List } from "immutable";
@@ -74,14 +78,14 @@ const columnHeaders: Column<BotTableDefinition>[] = [
 function parseImmutableBotData(
   d: ImmutableBotInfo
 ): Readonly<BotTableDefinition> {
-  const status = d.get("status");
-  const lastState = d.get("lastState");
-  const profitToDate = lastState?.stats?.usdProfitToDate ?? "0";
-  const lastCheckIn = d.get("lastCheckIn");
-  const symbol = d.get("symbol");
-  const actions = d.get("actions");
-  const id = d.get("id");
-  const version = d.get("version");
+  const status = getBotInfo(d, "status");
+  const lastState = getBotInfo(d, "state");
+  const profitToDate = lastState.profit;
+  const lastCheckIn = getBotInfo(d, "lastCheckIn") ?? "";
+  const symbol = getBotInfo(d, "symbol") ?? "";
+  const actions = getBotInfo(d, "actions") ?? {};
+  const id = getBotInfo(d, "id") ?? "";
+  const version = getBotInfo(d, "version") ?? "";
 
   return {
     symbol,
@@ -110,7 +114,7 @@ function parseImmutableBotData(
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
 
 interface IStateProps {
-  lastState: Record<string, any>;
+  lastState: IBotStateDetails;
   symbol: string;
   lastCheckIn: string;
   status: string;
@@ -135,19 +139,11 @@ function CompactViewNoMemo({
   status,
   symbol,
 }: IStateProps) {
-  const lastTickerPrice = parseFloat(
-    lastState?.decisionEngine?.lastTickerPrice
-  ).toFixed(3);
-
+  const lastTickerPrice = parseFloat(lastState.tickerPrice).toFixed(3);
   const checkIn = formatIsoDate(lastCheckIn);
-
   const holdsVolatileAsset = lastState.state === "HoldVolatileAsset";
-
-  const lastPurchasePrice = parseFloat(
-    lastState?.decisionEngine?.lastPurchasePrice
-  ).toFixed(3);
-
-  const trendState = lastState?.decisionEngine?.state?.toLowerCase() ?? "";
+  const lastPurchasePrice = parseFloat(lastState?.lastPurchasePrice).toFixed(3);
+  const trendState = lastState?.priceTrendState?.toLowerCase() ?? "";
 
   const TrendIcon = trendState.includes("confirm") ? (
     <ArrowUpCircleFill />
@@ -228,7 +224,7 @@ function CompactViewNoMemo({
         </li>
         <li className={`list-group-item ${bgStyle}`}>
           <small>
-            {checkIn} <mark>{lastState?.sleep?.sleepStrategy}</mark>
+            {checkIn} <mark>{lastState?.config?.sleepStrategy}</mark>
           </small>
         </li>
       </ul>
@@ -273,11 +269,12 @@ export function LastStateNoMemo({
     updatedStyle: cardHasJustBeenUpdatedStyle,
   });
   const {
-    PRICE_HAS_DECREASED_THRESHOLD = "missing",
-    PRICE_HAS_INCREASED_THRESHOLD = "missing",
-    STOP_LOSS_THRESHOLD = "missing",
-    MIN_PERCENT_INCREASE_FOR_SELL = "missing",
-  } = lastState?.decisionEngine?.decisionConfig ?? {};
+    priceHasDecreased,
+    priceHasIncreased,
+    sleepStrategy,
+    stopLoss,
+    minPercentIncreaseForSell,
+  } = lastState?.config;
 
   if (lastState && typeof lastState !== "string") {
     return (
@@ -290,20 +287,16 @@ export function LastStateNoMemo({
             <div className="card-body">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <em>{lastState?.decisionEngine?.state}</em>
+                  <em>{lastState?.state}</em>
                 </li>
                 <li className="list-group-item">
                   <strong>Last ticker price:</strong> $
-                  {parseFloat(
-                    lastState?.decisionEngine?.lastTickerPrice
-                  ).toFixed(3)}
+                  {parseFloat(lastState?.tickerPrice).toFixed(3)}
                 </li>
                 {lastState?.state !== "HoldStableAsset" && (
                   <li className="list-group-item">
                     <strong>Last purchase price:</strong> $
-                    {parseFloat(
-                      lastState?.decisionEngine?.lastPurchasePrice
-                    ).toFixed(3)}
+                    {parseFloat(lastState?.lastPurchasePrice).toFixed(3)}
                   </li>
                 )}
                 <li className="list-group-item">
@@ -322,19 +315,15 @@ export function LastStateNoMemo({
             </div>
             <div className="card-footer">
               <p>
-                Using <mark>{lastState?.sleep?.sleepStrategy}</mark> sleep
-                strategy
+                Using <mark>{sleepStrategy}</mark> sleep strategy
                 <br />
                 <small>
-                  Inc: {parseFloat(PRICE_HAS_INCREASED_THRESHOLD).toFixed(4)} |
-                  Dec: {parseFloat(PRICE_HAS_DECREASED_THRESHOLD).toFixed(4)} |
-                  Stop loss:{" "}
-                  {(parseFloat(STOP_LOSS_THRESHOLD) * 100).toFixed(0)}% | Min
-                  inc:{" "}
-                  {(
-                    parseFloat(MIN_PERCENT_INCREASE_FOR_SELL) * 100 -
-                    100
-                  ).toFixed(1)}
+                  Inc: {parseFloat(priceHasIncreased).toFixed(4)} | Dec:{" "}
+                  {parseFloat(priceHasDecreased).toFixed(4)} | Stop loss:{" "}
+                  {(parseFloat(stopLoss) * 100).toFixed(0)}% | Min inc:{" "}
+                  {(parseFloat(minPercentIncreaseForSell) * 100 - 100).toFixed(
+                    1
+                  )}
                   %
                 </small>
               </p>

@@ -1,6 +1,6 @@
 import { atom, selector, useRecoilState } from "recoil";
-import { List } from "immutable";
-import { botInfoFor, ImmutableBotInfo } from "./botRegistry";
+import { List, Map } from "immutable";
+import { botInfoFor, getBotInfo, ImmutableBotInfo } from "./botRegistry";
 import type { IBotInfoStream } from "common-util";
 import { formatIsoDate } from "../helper";
 
@@ -40,19 +40,19 @@ function getUpdateForBot(
 ): string {
   const initialLog = `[${formatIsoDate(bot.lastCheckIn)}] ${bot.symbol}:`;
   const updates: string[] = [];
-  const oldBotLastState = oldBot?.get("lastState");
+  const oldBotState = getBotInfo(oldBot ?? Map(), "state");
 
   if (oldBot) {
-    const oldProfit = oldBotLastState?.stats?.usdProfitToDate ?? "0";
-    const currProfit = bot.lastState?.stats?.usdProfitToDate ?? "0";
+    const oldProfit = oldBotState?.profit ?? "0";
+    const currProfit = bot.state.profit ?? "0";
     const diff = Number(currProfit) - Number(oldProfit);
 
     if (oldProfit !== currProfit) {
       updates.push(`Profit changed by $${diff.toFixed(3)}`);
     }
 
-    const oldState = oldBotLastState?.state;
-    const currState = bot.lastState?.state;
+    const oldState = oldBotState?.state;
+    const currState = bot.state.state;
 
     if (oldState !== currState) {
       updates.push(`State changed to ${currState}`);
