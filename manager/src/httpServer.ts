@@ -163,7 +163,13 @@ app.post("/bots/shutdown", async (req, res) => {
         .status(400)
         .json({ status: "Bot has to be online to shutdown" });
     } else {
-      await request(buildBotRequest(botRegister.state[id], "/shutdown"));
+      await request(buildBotRequest(botRegister.state[id], "/shutdown")).catch(
+        (e) => {
+          botRegister.state[id].status = "NOT WORKING";
+          broadcastBotStatusUpdate(id, "NOT WORKING");
+          throw e;
+        }
+      );
       botRegister.state[id].status = "SHUTTING DOWN";
 
       broadcastBotStatusUpdate(id, "SHUTTING DOWN");
@@ -177,7 +183,7 @@ app.post("/bots/shutdown", async (req, res) => {
 
 app.post("/bots/shutdown/all", async (req, res) => {
   try {
-    const requestDetails = getBotRegisterIds()
+    const shutdownRequestDetails = getBotRegisterIds()
       .filter(
         (id) =>
           botRegister.state[id].status === "ONLINE" &&
@@ -188,7 +194,7 @@ app.post("/bots/shutdown/all", async (req, res) => {
         id,
       }));
     await Promise.all(
-      requestDetails.map(({ details, id }) =>
+      shutdownRequestDetails.map(({ details, id }) =>
         request(details).then(() => {
           botRegister.state[id].status = "SHUTTING DOWN";
           broadcastBotStatusUpdate(id, "SHUTTING DOWN");
@@ -215,7 +221,10 @@ app.post("/bots/startup", (req, res) => {
   return startupBot(botRegister.state[id], 0)
     .then(() => res.json({ status: "SUCCESS" }))
     .then(() => broadcastBotStatusUpdate(id, "STARTING UP"))
-    .catch(() => res.status(500).json({ status: "Failed to start bot" }));
+    .catch(() => {
+      broadcastBotStatusUpdate(id, "NOT WORKING");
+      return res.status(500).json({ status: "Failed to start bot" });
+    });
 });
 
 app.post("/bots/startup/all", (req, res) => {

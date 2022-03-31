@@ -18,6 +18,10 @@ function getAvailableActionsForBot(status: TBotStatus): TBotAvailableActions {
     actions.startup = "/bots/startup";
     actions.remove = "/bots/remove";
   }
+  if (status === "NOT WORKING") {
+    actions.startup = "/bots/startup";
+    actions.shutdown = "/bots/shutdown";
+  }
 
   return actions;
 }
