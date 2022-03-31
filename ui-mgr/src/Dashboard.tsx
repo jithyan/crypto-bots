@@ -1,8 +1,4 @@
-import type {
-  IBotInfoStream,
-  IBotStateDetails,
-  TBotActions,
-} from "common-util";
+import type { IBotStateDetails, TBotActions } from "common-util";
 import React, { useLayoutEffect, useState } from "react";
 import { ActionButton, formatIsoDate } from "./helper";
 import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";

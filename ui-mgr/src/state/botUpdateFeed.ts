@@ -1,5 +1,5 @@
 import { atom, selector, useRecoilState } from "recoil";
-import { List, Map } from "immutable";
+import { List } from "immutable";
 import { botInfoFor, getBotInfo, ImmutableBotInfo } from "./botRegistry";
 import type { IBotInfoStream } from "common-util";
 import { formatIsoDate } from "../helper";

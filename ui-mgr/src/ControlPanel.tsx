@@ -1,13 +1,13 @@
 import React from "react";
+import type { PropsWithChildren } from "react";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
 import { usePasswordContext } from "./PasswordContext";
-import type { List } from "immutable";
-import { ImmutableBotInfo, useBotStats } from "./state";
+import { useBotStats } from "./state";
 
 function BadgeListItem({
   children,
   bg,
-}: React.PropsWithChildren<{
+}: PropsWithChildren<{
   bg:
     | "light"
     | "dark"
