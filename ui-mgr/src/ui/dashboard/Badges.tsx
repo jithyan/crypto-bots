@@ -1,5 +1,6 @@
 import Big from "big.js";
 import React from "react";
+import { useAnimateNumber } from "./CompactView";
 import type { IStateProps } from "./Dashboard";
 
 const holdStableAssetIcon = (
@@ -56,15 +57,20 @@ export const PctChangeBadge = React.memo(
       tickerPrice: lastTickerPriceAsBig,
     });
 
-    const pctChange = new Big("1")
-      .minus(lastTickerPriceAsBig.div(lastPurchasePriceAsBig))
-      .mul("-100");
+    const pctChange = useAnimateNumber(
+      new Big("1")
+        .minus(lastTickerPriceAsBig.div(lastPurchasePriceAsBig))
+        .mul("-100")
+        .toString(),
+      2,
+      { steps: 10, ms: 300 }
+    );
 
     return (
       <span
         className={`badge rounded-pill bg-light text-${purchasePriceBgColor}`}
       >
-        {pctChange.round(2).toString()}%
+        {pctChange}%
       </span>
     );
   }

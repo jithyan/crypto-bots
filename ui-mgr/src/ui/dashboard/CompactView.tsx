@@ -1,4 +1,5 @@
-import React from "react";
+//@ts-ignore
+import React, { useEffect, useState, startTransition } from "react";
 import { formatIsoDate } from "../../utils/date";
 import { PriceTrendIcon } from "./Icons";
 import type { IStateProps } from "./Dashboard";
@@ -12,13 +13,47 @@ import Big from "big.js";
 
 export const CompactView = React.memo(CompactViewNoMemo);
 
+export function useAnimateNumber(
+  val: string,
+  round: number,
+  { steps = 10, ms = 125 }: { steps?: number; ms?: number }
+) {
+  const [num, setNum] = useState(new Big(val).round(round).toString());
+
+  useEffect(() => {
+    if (!new Big(val).round(round).eq(num)) {
+      const ids: number[] = [];
+      const increment = new Big(num).minus(val).div(steps);
+
+      for (let i = 0; i < steps; i++) {
+        const id = setTimeout(() => {
+          startTransition(() => {
+            setNum((prev) =>
+              new Big(prev).add(increment).round(round).toString()
+            );
+          });
+        }, ms);
+
+        ids.push(id);
+      }
+
+      return () => ids.forEach((id) => clearTimeout(id));
+    }
+  }, [val]);
+
+  return num;
+}
+
 function CompactViewNoMemo({
   lastState,
   lastCheckIn,
   status,
   symbol,
 }: IStateProps) {
-  const lastTickerPrice = new Big(lastState.tickerPrice).round(3).toString();
+  const lastTickerPrice = useAnimateNumber(lastState.tickerPrice, 3, {
+    steps: 10,
+    ms: 500,
+  });
   const checkIn = formatIsoDate(lastCheckIn);
   const holdsVolatileAsset = lastState.state === "HoldVolatileAsset";
 
