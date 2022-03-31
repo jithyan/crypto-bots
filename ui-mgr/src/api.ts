@@ -7,7 +7,7 @@ import {
   IBotStatusUpdate,
   TBotStatusEvent,
 } from "common-util";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { Password } from "./PasswordContext";
 
 const socket = io("ws://35.243.104.152:2000");
@@ -53,12 +53,14 @@ export type BotEventData =
 
 export function useBotStream(
   updateOnEvent: (event: BotEventData) => void
-): void {
+): boolean {
+  const [loading, setLoading] = useState(true);
   useLayoutEffect(() => {
     if (!socket.hasListeners("allbots")) {
       socket.on("allbots", (data) => {
         console.log("allbots", data);
         updateOnEvent({ event: "allbots", data });
+        setLoading(false);
       });
 
       socket.on("botremove", (data) => {
@@ -77,6 +79,7 @@ export function useBotStream(
       });
     }
   }, []);
+  return loading;
 }
 
 export async function sendCommandToBot(path: string, id: string) {
