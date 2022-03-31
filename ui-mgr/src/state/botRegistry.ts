@@ -7,9 +7,9 @@ import {
 } from "recoil";
 import { Map } from "immutable";
 import type { IBotInfoStream } from "common-util";
-import type { BotEventData } from "../api";
 import { useCallback, useMemo } from "react";
 import Big from "big.js";
+import type { BotEventData } from "../api/botDataSocket";
 
 export function useUpdateBotRegistry() {
   const setBotRegistry = useSetRecoilState(botRegistry);

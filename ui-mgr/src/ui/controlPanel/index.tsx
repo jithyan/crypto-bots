@@ -1,8 +1,8 @@
 import React from "react";
 import type { PropsWithChildren } from "react";
-import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
-import { usePasswordContext } from "./PasswordContext";
-import { useBotStats } from "./state";
+import { usePasswordContext } from "../password";
+import { useBotStats } from "../../state";
+import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 
 function BadgeListItem({
   children,

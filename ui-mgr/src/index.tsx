@@ -1,9 +1,9 @@
-import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import { RecoilRoot } from "recoil";
-import App from "./App";
+import App from "./ui/App";
 
 const container = document.getElementById("root");
 const root = createRoot(container as HTMLElement);

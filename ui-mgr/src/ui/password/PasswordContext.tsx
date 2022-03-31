@@ -1,5 +1,4 @@
-import React, { useContext, useLayoutEffect } from "react";
-import { useState } from "react";
+import React, { useContext, useLayoutEffect, useState } from "react";
 
 export const Password = {
   current: "",
