@@ -343,7 +343,7 @@ function ChangeLog({ changes }: { changes: List<string> }) {
     <div
       className={"card bg-dark border-light mb-3"}
       style={{
-        width: "28rem",
+        width: "32rem",
         margin: "auto",
         color: "limegreen",
         padding: "8px",

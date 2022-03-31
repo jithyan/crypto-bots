@@ -3,6 +3,7 @@ import { List, Map } from "immutable";
 import { botInfoFor, getBotInfo, ImmutableBotInfo } from "./botRegistry";
 import type { IBotInfoStream } from "common-util";
 import { formatIsoDate } from "../helper";
+import Big from "big.js";
 
 export const MAX_EVENT_LIST = 4;
 
@@ -34,34 +35,97 @@ const botFeed = selector<IBotInfoStream | List<string>>({
   },
 });
 
+type DetectChange = (current: IBotInfoStream, old: ImmutableBotInfo) => string;
+
+const skipIfPriceBot =
+  (fn: DetectChange): DetectChange =>
+  (curr, old) =>
+    isPriceBot(curr) ? "" : fn(curr, old);
+
+const changeDetectors: DetectChange[] = [
+  skipIfPriceBot(stateChange),
+  skipIfPriceBot(profitChange),
+  skipIfPriceBot(tickerPriceChange),
+  statusChange,
+];
+
+function isPriceBot(bot: IBotInfoStream): boolean {
+  return bot.symbol === "PRICEBOT";
+}
+
 function getUpdateForBot(
   bot: IBotInfoStream,
   oldBot: ImmutableBotInfo | undefined
 ): string {
   const initialLog = `[${formatIsoDate(bot.lastCheckIn)}] ${bot.symbol}:`;
-  const updates: string[] = [];
-  const oldBotState = getBotInfo(oldBot ?? Map(), "state");
 
-  if (oldBot) {
-    const oldProfit = oldBotState?.profit ?? "0";
-    const currProfit = bot?.state?.profit ?? "0";
-    const diff = Number(currProfit) - Number(oldProfit);
-
-    if (oldProfit !== currProfit) {
-      updates.push(`Profit changed by $${diff.toFixed(3)}`);
-    }
-
-    const oldState = oldBotState?.state;
-    const currState = bot.state?.state;
-
-    if (oldState !== currState) {
-      updates.push(`State changed to ${currState}`);
-    }
-  } else {
-    updates.push("New bot added");
-  }
+  const updates: string[] = oldBot
+    ? changeDetectors
+        .map((detectChange) => detectChange(bot, oldBot))
+        .filter(Boolean)
+    : ["New bot added"];
 
   return `${initialLog} ${
     updates.length > 0 ? updates.join(" | ") : "No change"
   }`;
+}
+
+function statusChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
+  const oldStatus = getBotInfo(oldBot, "status");
+  const currentStatus = currentBot.status;
+
+  if (isPriceBot(currentBot)) {
+    return "Checked in";
+  } else if (oldStatus === currentStatus) {
+    return "";
+  } else {
+    return `Status changed to ${currentStatus}`;
+  }
+}
+
+function tickerPriceChange(
+  currentBot: IBotInfoStream,
+  oldBot: ImmutableBotInfo
+): string {
+  const oldTickerPrice = new Big(
+    getBotInfo(oldBot, "state")?.tickerPrice ?? "0"
+  );
+  const newTickerPrice = new Big(currentBot?.state?.tickerPrice ?? "0");
+  const pctChange = new Big("1")
+    .minus(newTickerPrice.div(oldTickerPrice))
+    .mul("-100");
+
+  if (pctChange.eq("0")) {
+    return "Ticker price unchanged";
+  } else if (pctChange.gt("0")) {
+    return `Ticker price increased by ${pctChange.toFixed(3)}%`;
+  } else {
+    return `Ticker price decreased by ${pctChange.toFixed(3)}%`;
+  }
+}
+
+function stateChange(
+  currentBot: IBotInfoStream,
+  oldBot: ImmutableBotInfo
+): string {
+  const oldState = getBotInfo(oldBot, "state")?.state;
+  const currState = currentBot?.state?.state;
+
+  if (oldState !== currState) {
+    return `State changed from ${oldState} to ${currState}`;
+  } else {
+    return "";
+  }
+}
+
+function profitChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
+  const oldProfit = new Big(getBotInfo(oldBot, "state")?.profit ?? "0");
+  const currProfit = new Big(currentBot?.state?.profit ?? "0");
+
+  if (!oldProfit.eq(currProfit)) {
+    const diff = currProfit.minus(oldProfit).toFixed(3);
+    return `Profit changed by $${diff}`;
+  } else {
+    return "";
+  }
 }

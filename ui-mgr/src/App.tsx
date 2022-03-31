@@ -87,7 +87,7 @@ function MainContent() {
     <TableLoading />
   ) : (
     <>
-      <ControlPanel data={sortedData} />
+      <ControlPanel />
       <Dashboard data={sortedData} changes={feed} />
     </>
   );
@@ -96,7 +96,7 @@ function MainContent() {
 function App() {
   return (
     <div id="container" className="container-fluid px-4">
-      <div className="row">
+      <div className="row" style={{ paddingTop: "24px" }}>
         <div className="col">
           <header>
             <h1
