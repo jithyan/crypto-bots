@@ -1,6 +1,6 @@
 import React from "react";
 import { formatIsoDate } from "../../utils/date";
-import type { IStateProps } from ".";
+import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";

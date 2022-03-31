@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import { useTable } from "react-table";
-import { StatusHeader } from ".";
+import { StatusHeader } from "./Dashboard";
 
 function Td({ children, cell }: any) {
   const style: Partial<Record<"backgroundColor", string>> = {};

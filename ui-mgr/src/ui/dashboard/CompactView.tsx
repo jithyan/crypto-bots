@@ -1,11 +1,7 @@
 import React from "react";
 import { formatIsoDate } from "../../utils/date";
-import {
-  ArrowUpCircleFill,
-  ArrowUpCircle,
-  ArrowDownCircle,
-} from "../components/Icons";
-import type { IStateProps } from ".";
+import { ArrowUpCircleFill, ArrowUpCircle, ArrowDownCircle } from "./Icons";
+import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 
 export const CompactView = React.memo(CompactViewNoMemo);
