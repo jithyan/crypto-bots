@@ -1,6 +1,7 @@
 import { logger } from "../log.js";
 import { botRegister } from "../models.js";
 import { isWithinInterval, addHours } from "date-fns";
+import { broadcastBotStatusUpdate } from "../httpServer.js";
 
 function isLastCheckInOverAnHourAgo(lastCheckIn: Date) {
   return !isWithinInterval(new Date(), {
@@ -27,6 +28,7 @@ const checkBotStatus = () => {
           botId,
         });
         currentBot.status = "NOT WORKING";
+        broadcastBotStatusUpdate(botId, "NOT WORKING");
       }
     } else {
       logger.warn("currentBot does not exist", {

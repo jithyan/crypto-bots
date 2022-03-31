@@ -50,7 +50,7 @@ io.on("connection", (socket) => {
   socket.emit<TBotStatusEvent>("allbots", getAllBotInfo());
 });
 
-const broadcastBotStatusUpdate = (id: string, status: TBotStatus) => {
+export const broadcastBotStatusUpdate = (id: string, status: TBotStatus) => {
   io.emit<TBotStatusEvent>("botstatus", getBotStatusUpdate(id, status));
 };
 
