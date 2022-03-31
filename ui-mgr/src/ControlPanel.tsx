@@ -2,16 +2,36 @@ import React from "react";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "./api";
 import { usePasswordContext } from "./PasswordContext";
 import type { List } from "immutable";
-import { ImmutableBotInfo, getBotInfo } from "./state";
+import { ImmutableBotInfo, useBotStats } from "./state";
 
-export function ControlPanel({ data }: { data: List<ImmutableBotInfo> }) {
+function BadgeListItem({
+  children,
+  bg,
+}: React.PropsWithChildren<{
+  bg:
+    | "light"
+    | "dark"
+    | "info"
+    | "warning"
+    | "danger"
+    | "success"
+    | "secondary"
+    | "primary";
+}>) {
+  return (
+    <li>
+      <h5>
+        <span className={`badge bg-${bg}`} style={{ marginLeft: "16px" }}>
+          {children}
+        </span>
+      </h5>
+    </li>
+  );
+}
+export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
-  const totalProfit = data
-    .reduce(
-      (acc, curr) => acc + Number(getBotInfo(curr, "state").profit ?? "0"),
-      0
-    )
-    .toFixed(3);
+  const { totalBots, totalProfit, botsNotWorking, onlineBots, offlineBots } =
+    useBotStats();
 
   const checkPassword = (func: () => void) => () => {
     if (password) {
@@ -91,16 +111,21 @@ export function ControlPanel({ data }: { data: List<ImmutableBotInfo> }) {
             </ul>
 
             <ul className="navbar-nav">
-              <h5>
-                <span
-                  className={`badge bg-${
-                    Number(totalProfit) >= 0 ? "success" : "danger"
-                  }`}
-                  style={{ marginLeft: "16px" }}
-                >
-                  Total profit: {totalProfit}
-                </span>
-              </h5>
+              <BadgeListItem
+                bg={Number(totalProfit) > 0 ? "success" : "danger"}
+              >
+                Total profit: ${totalProfit}
+              </BadgeListItem>
+              <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
+              <BadgeListItem bg={"primary"}>
+                {onlineBots} bots online
+              </BadgeListItem>
+              <BadgeListItem bg={"secondary"}>
+                {offlineBots} bots offline{" "}
+              </BadgeListItem>
+              <BadgeListItem bg={"danger"}>
+                {botsNotWorking} bots not working
+              </BadgeListItem>
             </ul>
           </div>
         </div>

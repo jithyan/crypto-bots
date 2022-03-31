@@ -1,8 +1,15 @@
-import { atom, selectorFamily, useSetRecoilState } from "recoil";
+import {
+  atom,
+  selector,
+  selectorFamily,
+  useRecoilValue,
+  useSetRecoilState,
+} from "recoil";
 import { Map } from "immutable";
 import type { IBotInfoStream } from "common-util";
 import type { BotEventData } from "../api";
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
+import Big from "big.js";
 
 export function useUpdateBotRegistry() {
   const setBotRegistry = useSetRecoilState(botRegistry);
@@ -12,6 +19,12 @@ export function useUpdateBotRegistry() {
       setBotRegistry((prevState) => botRegistryReducer(prevState, action)),
     [setBotRegistry]
   );
+}
+
+export function useBotStats() {
+  const botStats = useRecoilValue(atomBotStats);
+
+  return useMemo(() => botStats, Object.values(botStats));
 }
 
 export type ImmutableBotInfo<
@@ -29,6 +42,32 @@ export const botInfoFor = selectorFamily({
     (id: string) =>
     ({ get }) =>
       get(botRegistry).get(id),
+});
+
+export const atomBotStats = selector({
+  key: "botStats",
+  get: ({ get }) => {
+    const bots = get(botRegistry);
+    const totalProfit = bots
+      .reduce(
+        (prev, curr) => new Big(getBotInfo(curr, "state").profit).add(prev),
+        new Big("0")
+      )
+      .toFixed(3);
+
+    const totalBots = bots.size;
+    const onlineBots = bots.filter(
+      (b) => getBotInfo(b, "status") === "ONLINE"
+    ).size;
+    const offlineBots = bots.filter(
+      (b) => getBotInfo(b, "status") === "OFFLINE"
+    ).size;
+    const botsNotWorking = bots.filter(
+      (b) => getBotInfo(b, "status") === "NOT WORKING"
+    ).size;
+
+    return { totalProfit, totalBots, onlineBots, botsNotWorking, offlineBots };
+  },
 });
 
 export function getBotInfo<

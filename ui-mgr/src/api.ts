@@ -55,6 +55,7 @@ export function useBotStream(
   updateOnEvent: (event: BotEventData) => void
 ): boolean {
   const [loading, setLoading] = useState(true);
+
   useLayoutEffect(() => {
     if (!socket.hasListeners("allbots")) {
       socket.on("allbots", (data) => {
@@ -79,6 +80,7 @@ export function useBotStream(
       });
     }
   }, []);
+
   return loading;
 }
 
