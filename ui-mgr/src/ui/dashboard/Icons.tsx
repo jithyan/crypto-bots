@@ -6,9 +6,9 @@ const upwardsPriceTrendIcon = <ArrowUpCircle />;
 
 export const PriceTrendIcon = React.memo(
   ({ trendState }: { trendState: string }) => {
-    if (trendState.includes("confirm")) {
+    if (trendState.includes("Confirm")) {
       return upwardsPriceTrendConfirmedIcon;
-    } else if (trendState.startsWith("up")) {
+    } else if (trendState.startsWith("Up")) {
       return upwardsPriceTrendIcon;
     } else {
       return downwardsPriceIcon;

@@ -1,6 +1,9 @@
+import Big from "big.js";
 import React from "react";
 import { formatIsoDate } from "../../utils/date";
+import { AssetStateBadge, LastPurchasePriceBadge } from "./Badges";
 import type { IStateProps } from "./Dashboard";
+import { PriceTrendIcon } from "./Icons";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 
 const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
@@ -31,25 +34,30 @@ function ExpandedViewNoMemo({
 
   if (lastState && typeof lastState !== "string") {
     return (
-      <div className={cardStyle} style={{ width: "18rem" }}>
+      <div className={cardStyle} style={{ width: "24rem" }}>
         <div className="card-header">
-          <strong>{lastState.state}</strong>
+          <strong>{lastState.state}</strong>{" "}
+          <AssetStateBadge assetState={lastState.state} />
         </div>
         {isNotPriceBot ? (
           <>
             <div className="card-body">
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
-                  <em>{lastState?.priceTrendState}</em>
+                  <em>{lastState?.priceTrendState}</em>{" "}
+                  <PriceTrendIcon trendState={lastState.priceTrendState} />
                 </li>
                 <li className="list-group-item">
                   <strong>Last ticker price:</strong> $
-                  {parseFloat(lastState?.tickerPrice).toFixed(3)}
+                  {new Big(lastState.tickerPrice).round(3).toString()}
                 </li>
                 {lastState?.state !== "HoldStableAsset" && (
                   <li className="list-group-item">
-                    <strong>Last purchase price:</strong> $
-                    {parseFloat(lastState.lastPurchasePrice ?? "0").toFixed(3)}
+                    <strong>Last purchase price:</strong>
+                    <LastPurchasePriceBadge
+                      lastPurchasePrice={lastState.lastPurchasePrice}
+                      tickerPrice={lastState.tickerPrice}
+                    />
                   </li>
                 )}
                 <li className="list-group-item">
