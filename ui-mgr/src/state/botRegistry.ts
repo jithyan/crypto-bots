@@ -44,7 +44,17 @@ export const botInfoFor = selectorFamily({
       get(botRegistry).get(id),
 });
 
-export const atomBotStats = selector({
+export const atomBotStats = selector<{
+  totalProfit: string;
+  totalBots: number;
+  onlineBots: number;
+  botsNotWorking: number;
+  offlineBots: number;
+  numBotsHoldStable: number;
+  numBotsPlacedOrders: number;
+  numBotsHoldingVolatileAssets: number;
+  numBotsSleeping: number;
+}>({
   key: "botStats",
   get: ({ get }) => {
     const bots = get(botRegistry);
@@ -66,7 +76,49 @@ export const atomBotStats = selector({
       (b) => getBotInfo(b, "status") === "NOT WORKING"
     ).size;
 
-    return { totalProfit, totalBots, onlineBots, botsNotWorking, offlineBots };
+    const numBotsHoldingVolatileAssets = bots.reduce((prev, curr) => {
+      if (getBotInfo(curr, "state")?.state?.includes("HoldVolatile")) {
+        return prev + 1;
+      } else {
+        return prev;
+      }
+    }, 0);
+
+    const numBotsPlacedOrders = bots.reduce((prev, curr) => {
+      if (getBotInfo(curr, "state")?.state?.includes("Order")) {
+        return prev + 1;
+      } else {
+        return prev;
+      }
+    }, 0);
+
+    const numBotsHoldStable = bots.reduce((prev, curr) => {
+      if (getBotInfo(curr, "state")?.state?.includes("HoldStable")) {
+        return prev + 1;
+      } else {
+        return prev;
+      }
+    }, 0);
+
+    const numBotsSleeping = bots.reduce((prev, curr) => {
+      if (getBotInfo(curr, "state")?.state?.includes("PostSell")) {
+        return prev + 1;
+      } else {
+        return prev;
+      }
+    }, 0);
+
+    return {
+      totalProfit,
+      totalBots,
+      onlineBots,
+      botsNotWorking,
+      offlineBots,
+      numBotsHoldStable,
+      numBotsPlacedOrders,
+      numBotsHoldingVolatileAssets,
+      numBotsSleeping,
+    };
   },
 });
 

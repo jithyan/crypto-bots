@@ -10,6 +10,34 @@ import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 
 export const CompactView = React.memo(CompactViewNoMemo);
 
+const PriceTrendIcon = React.memo(({ trendState }: { trendState: string }) => {
+  if (trendState.includes("confirm")) {
+    return <ArrowUpCircleFill />;
+  } else if (trendState.startsWith("up")) {
+    return <ArrowUpCircle />;
+  } else {
+    return <ArrowDownCircle />;
+  }
+});
+
+const HoldStableAsset = (
+  <span className="badge rounded-pill bg-secondary">S</span>
+);
+const OrderPlaced = <span className="badge rounded-pill bg-warning">O</span>;
+const HoldVolatileAsset = (
+  <span className="badge rounded-pill bg-primary">V</span>
+);
+
+const AssetStateIcon = React.memo(({ assetState }: { assetState: string }) => {
+  if (assetState.includes("HoldStable")) {
+    return HoldStableAsset;
+  } else if (assetState.includes("Order")) {
+    return OrderPlaced;
+  } else {
+    return HoldVolatileAsset;
+  }
+});
+
 function CompactViewNoMemo({
   lastState,
   lastCheckIn,
@@ -23,14 +51,6 @@ function CompactViewNoMemo({
     lastState.lastPurchasePrice ?? "0"
   ).toFixed(3);
   const trendState = lastState?.priceTrendState?.toLowerCase() ?? "";
-
-  const TrendIcon = trendState.includes("confirm") ? (
-    <ArrowUpCircleFill />
-  ) : trendState.startsWith("up") ? (
-    <ArrowUpCircle />
-  ) : (
-    <ArrowDownCircle />
-  );
 
   const bgStyle = useUpdateStyleOnCheckIn(lastCheckIn, {
     normalStyle: "",
@@ -66,13 +86,6 @@ function CompactViewNoMemo({
     );
   }
 
-  const HoldAsset = <span className="badge rounded-pill bg-primary">H</span>;
-  const OrderPlaced = (
-    <span className="badge rounded-pill bg-secondary">O</span>
-  );
-
-  const assetState = lastState.state.includes("Hold") ? HoldAsset : OrderPlaced;
-
   const purchasePriceBgColor =
     lastPurchasePrice === lastTickerPrice
       ? "secondary"
@@ -87,7 +100,9 @@ function CompactViewNoMemo({
     <div>
       <ul className="list-group list-group-horizontal-sm">
         <li className={`list-group-item ${bgStyle}`}>
-          {assetState} {TrendIcon} ${lastTickerPrice}{" "}
+          <AssetStateIcon assetState={lastState.state} />{" "}
+          <PriceTrendIcon trendState={lastState.priceTrendState} /> $
+          {lastTickerPrice}{" "}
           {holdsVolatileAsset && (
             <>
               <span className={`badge bg-${purchasePriceBgColor}`}>

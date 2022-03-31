@@ -4,34 +4,51 @@ import { usePasswordContext } from "../password";
 import { useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 
-function BadgeListItem({
-  children,
-  bg,
-}: PropsWithChildren<{
-  bg:
-    | "light"
-    | "dark"
-    | "info"
-    | "warning"
-    | "danger"
-    | "success"
-    | "secondary"
-    | "primary";
-}>) {
-  return (
-    <li>
-      <h5>
-        <span className={`badge bg-${bg}`} style={{ marginLeft: "16px" }}>
-          {children}
-        </span>
-      </h5>
-    </li>
-  );
-}
+const BadgeListItem = React.memo(
+  ({
+    show = true,
+    children,
+    bg,
+  }: PropsWithChildren<{
+    bg:
+      | "light"
+      | "dark"
+      | "info"
+      | "warning"
+      | "danger"
+      | "success"
+      | "secondary"
+      | "primary";
+    show?: boolean;
+  }>) => {
+    return show ? (
+      <li>
+        <h5>
+          <span
+            className={`badge bg-${bg}${bg === "light" ? "text-dark" : ""}`}
+            style={{ marginLeft: "16px" }}
+          >
+            {children}
+          </span>
+        </h5>
+      </li>
+    ) : null;
+  }
+);
+
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
-  const { totalBots, totalProfit, botsNotWorking, onlineBots, offlineBots } =
-    useBotStats();
+  const {
+    totalBots,
+    totalProfit,
+    botsNotWorking,
+    onlineBots,
+    offlineBots,
+    numBotsHoldStable,
+    numBotsHoldingVolatileAssets,
+    numBotsPlacedOrders,
+    numBotsSleeping,
+  } = useBotStats();
 
   const checkPassword = (func: () => void) => () => {
     if (password) {
@@ -117,14 +134,29 @@ export function ControlPanel() {
                 Total profit: ${totalProfit}
               </BadgeListItem>
               <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
-              <BadgeListItem bg={"primary"}>
+              <BadgeListItem show={onlineBots > 0} bg={"primary"}>
                 {onlineBots} bots online
               </BadgeListItem>
-              <BadgeListItem bg={"secondary"}>
+              <BadgeListItem show={offlineBots > 0} bg={"secondary"}>
                 {offlineBots} bots offline{" "}
               </BadgeListItem>
-              <BadgeListItem bg={"danger"}>
+              <BadgeListItem show={botsNotWorking > 0} bg={"danger"}>
                 {botsNotWorking} bots not working
+              </BadgeListItem>
+              <BadgeListItem show={numBotsHoldStable > 0} bg={"light"}>
+                {numBotsHoldStable} bots not bought anything
+              </BadgeListItem>
+              <BadgeListItem
+                show={numBotsHoldingVolatileAssets > 0}
+                bg={"light"}
+              >
+                {numBotsHoldingVolatileAssets} bots holding crypto{" "}
+              </BadgeListItem>
+              <BadgeListItem show={numBotsSleeping > 0} bg={"light"}>
+                {numBotsSleeping} bots asleep
+              </BadgeListItem>
+              <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
+                {numBotsPlacedOrders} bots have placed orders
               </BadgeListItem>
             </ul>
           </div>
