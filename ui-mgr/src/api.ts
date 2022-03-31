@@ -55,25 +55,27 @@ export function useBotStream(
   updateOnEvent: (event: BotEventData) => void
 ): void {
   useLayoutEffect(() => {
-    socket.on("allbots", (data) => {
-      console.log("allbots", data);
-      updateOnEvent({ event: "allbots", data });
-    });
+    if (!socket.hasListeners("allbots")) {
+      socket.on("allbots", (data) => {
+        console.log("allbots", data);
+        updateOnEvent({ event: "allbots", data });
+      });
 
-    socket.on("botremove", (data) => {
-      console.log("botremove", data);
-      updateOnEvent({ event: "botremove", data });
-    });
+      socket.on("botremove", (data) => {
+        console.log("botremove", data);
+        updateOnEvent({ event: "botremove", data });
+      });
 
-    socket.on("botstatus", (data) => {
-      console.log("botstatus", data);
-      updateOnEvent({ event: "botstatus", data });
-    });
+      socket.on("botstatus", (data) => {
+        console.log("botstatus", data);
+        updateOnEvent({ event: "botstatus", data });
+      });
 
-    socket.on("botupdate", (data) => {
-      console.log("botupdate", data);
-      updateOnEvent({ event: "botupdate", data });
-    });
+      socket.on("botupdate", (data) => {
+        console.log("botupdate", data);
+        updateOnEvent({ event: "botupdate", data });
+      });
+    }
   }, []);
 }
 

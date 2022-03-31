@@ -1,18 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
-
+import { createRoot } from "react-dom/client";
 import { RecoilRoot } from "recoil";
+import App from "./App";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container as HTMLElement);
+
+root.render(
   <React.StrictMode>
     <RecoilRoot>
       <App />
     </RecoilRoot>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
