@@ -10,7 +10,8 @@ export type ISleepStrategy = Record<
   | "onPlacedVolatileAssetBuyOrder"
   | "onHoldStableAsset"
   | "onAssetOrderNotFilled"
-  | "onAssetOrderFilled",
+  | "onAssetOrderFilled"
+  | "onApiTimeout",
   () => Promise<void>
 >;
 
@@ -33,6 +34,7 @@ export abstract class BaseSleepStrategy implements ISleepStrategy {
   onTooManyRequestsError: () => Promise<void> = () => sleep(15);
   onInsuffientBalanceError: () => Promise<void> = () => sleep(30);
   onUnknownApiError: () => Promise<void> = () => sleep(2);
+  onApiTimeout: () => Promise<void> = () => sleep(0.25);
 
   abstract onPlacedVolatileAssetSellOrder: () => Promise<void>;
   abstract onHoldVolatileAsset: () => Promise<void>;

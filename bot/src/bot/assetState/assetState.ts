@@ -59,6 +59,7 @@ export class AssetState<
   readonly decisionEngine: IDecisionEngine;
   readonly sleep: ISleepStrategy;
   readonly stats: { usdProfitToDate: string };
+  numberOfTimeouts: number;
 
   constructor({
     volatileAsset,
@@ -77,6 +78,7 @@ export class AssetState<
     this.decisionEngine = decisionEngine;
     this.sleep = sleep;
     this.stats = stats;
+    this.numberOfTimeouts = 0;
 
     stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
@@ -127,6 +129,28 @@ export class AssetState<
       throw error;
     }
 
+    if (
+      error.message?.includes("ETIMEDOUT") ||
+      error.message?.includes("ECONNRESET")
+    ) {
+      apiLogger.warn("API Timeout", {
+        error: error.message,
+        times: this.numberOfTimeouts,
+      });
+
+      this.numberOfTimeouts++;
+
+      if (this.numberOfTimeouts > 3) {
+        apiLogger.error("API Timeout retries exceeded", {
+          error: error.message,
+          times: this.numberOfTimeouts,
+        });
+      } else {
+        await this.sleep.onApiTimeout();
+        return this;
+      }
+    }
+
     stateLogger.error("API ERROR - not changing state for " + this.symbol, {
       error: error.message,
       config: error.config,
@@ -137,6 +161,7 @@ export class AssetState<
         "Making too many requests, going to sleep for 15 minutes"
       );
       await this.sleep.onTooManyRequestsError();
+      return this;
     }
 
     if (error.message?.toLowerCase().includes("insufficient balance")) {
