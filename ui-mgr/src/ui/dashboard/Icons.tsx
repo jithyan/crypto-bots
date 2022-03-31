@@ -1,5 +1,21 @@
 import React from "react";
 
+const upwardsPriceTrendConfirmedIcon = <ArrowUpCircleFill />;
+const downwardsPriceIcon = <ArrowDownCircle />;
+const upwardsPriceTrendIcon = <ArrowUpCircle />;
+
+export const PriceTrendIcon = React.memo(
+  ({ trendState }: { trendState: string }) => {
+    if (trendState.includes("confirm")) {
+      return upwardsPriceTrendConfirmedIcon;
+    } else if (trendState.startsWith("up")) {
+      return upwardsPriceTrendIcon;
+    } else {
+      return downwardsPriceIcon;
+    }
+  }
+);
+
 export function ArrowUpCircle() {
   return (
     <span className="badge rounded-pill bg-info text-light">

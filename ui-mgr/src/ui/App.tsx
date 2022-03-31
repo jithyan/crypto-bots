@@ -35,7 +35,9 @@ export function Header() {
         className="text-center text-light"
         style={{ paddingBottom: "0", marginBottom: "0" }}
       >
-        Crypto bots attempting to profitably execute momentum trades.
+        <em>
+          Bots trading crypto scam tokens based on a momentum trading strategy.
+        </em>
       </p>
       <p className="text-center text-light">
         By <a href="https://www.linkedin.com/in/jithyan">Jithya Nanayakkara</a>
