@@ -14,7 +14,7 @@
     "big.js": "^6.1.1",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
-    "common-util": "../common-util/common-util-8.0.0.tgz",
+    "common-util": "../common-util/common-util-8.1.0.tgz",
     "immutable": "^4.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

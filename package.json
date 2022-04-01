@@ -20,7 +20,7 @@
     "db": "yarn workspace db",
     "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
     "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
-    "upgrade:ui": "yarn ui add --dev typescript snowpack",
+    "upgrade:ui": "yarn ui add --dev typescript snowpack @types/react @types/react-dom && yarn ui add react react-dom",
     "upgrade:util": "yarn util add --dev typescript",
     "upgrade:anal": "yarn anal add --dev typescript",
     "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal",

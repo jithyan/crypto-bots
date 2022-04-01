@@ -27,6 +27,7 @@ export async function registerWithBotManager(
       exchange: Config.EXCHANGE,
       port: Config.PORT,
       symbol: Config.SYMBOL,
+      maxBuyAmount: Config.MAX_BUY_AMOUNT,
       ...extraInfo,
     })
     .then(() => {

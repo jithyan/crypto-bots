@@ -36,7 +36,8 @@ export function Header() {
         style={{ paddingBottom: "0", marginBottom: "0" }}
       >
         <em>
-          Bots trading crypto scam tokens based on a momentum trading strategy.
+          Bots trading crypto scam tokens using a momentum based trading
+          strategy.
         </em>
       </p>
       <p className="text-center text-light">

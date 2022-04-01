@@ -33,7 +33,7 @@ export function useAnimateNumber(
             setTimeout(() => {
               startTransition(() => {
                 setCurrentNum((prev) =>
-                  new Big(prev).add(increment).round(round).toString()
+                  new Big(prev).add(increment).toFixed(round)
                 );
               });
             }, ms * i)
