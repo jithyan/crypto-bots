@@ -12,6 +12,8 @@ import {
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { getBotInfo, useBotDetails } from "../../state";
 import Big from "big.js";
+import type { TBotActions } from "common-util";
+import { ActionButton } from "./ActionButton";
 
 export const CompactView = React.memo(CompactViewNoMemo);
 
@@ -28,6 +30,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
   const lastState = getBotInfo(bot, "state");
   const version = getBotInfo(bot, "version");
   const profit = useAnimateNumber(lastState.profit ?? "0", 3);
+  const actions = getBotInfo(bot, "actions");
 
   const sleepStrategy = lastState.state?.includes("Stasis")
     ? "1hr"
@@ -35,7 +38,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
 
   const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
     normalStyle: "bg-dark text-light",
-    updatedStyle: "bg-light",
+    updatedStyle: "bg-info",
   });
 
   let statusBgColor = "";
@@ -51,9 +54,18 @@ export function BotRow({ id, index }: { id: string; index: number }) {
 
   const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
 
+  const [borderColor, setBorderColor] = useState("dark");
+
   return (
-    <div className="row" style={{ padding: "4px" }}>
-      <ul className="list-group border border-dark list-group-horizontal">
+    <div
+      onMouseEnter={() => startTransition(() => setBorderColor("light"))}
+      onMouseLeave={() => startTransition(() => setBorderColor("dark"))}
+      className="row"
+      style={{ padding: "4px" }}
+    >
+      <ul
+        className={`list-group border border-${borderColor} list-group-horizontal`}
+      >
         <BotColItem minWidth="128px" width="168px" classNames={bgStyle}>
           <small>
             <span
@@ -84,6 +96,16 @@ export function BotRow({ id, index }: { id: string; index: number }) {
             sleepStrategy={sleepStrategy}
             checkIn={checkIn}
           />
+        </BotColItem>
+        <BotColItem minWidth="144px" width="144px" classNames={bgStyle}>
+          {Object.keys(actions).map((action) => (
+            <ActionButton
+              key={`${id}-${action}`}
+              id={id}
+              path={actions[action as TBotActions] ?? ""}
+              action={action}
+            />
+          ))}
         </BotColItem>
         <BotColItem minWidth="128px" classNames={bgStyle}>
           <BotState
