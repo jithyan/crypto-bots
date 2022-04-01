@@ -3,6 +3,7 @@ import type { PropsWithChildren } from "react";
 import { usePasswordContext } from "../password";
 import { useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
+import { useAnimateNumber } from "../../utils/useAnimateNumber";
 
 const BadgeListItem = React.memo(
   ({
@@ -49,6 +50,11 @@ export function ControlPanel() {
     numBotsPlacedOrders,
     numBotsSleeping,
   } = useBotStats();
+
+  const animatedTotalProfit = useAnimateNumber(totalProfit, 3, {
+    steps: 25,
+    ms: 200,
+  });
 
   const checkPassword = (func: () => void) => () => {
     if (password) {
@@ -131,7 +137,7 @@ export function ControlPanel() {
               <BadgeListItem
                 bg={Number(totalProfit) > 0 ? "success" : "danger"}
               >
-                Total profit: ${totalProfit}
+                Total profit: ${animatedTotalProfit}
               </BadgeListItem>
               <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
               <BadgeListItem show={onlineBots > 0} bg={"primary"}>

@@ -6,7 +6,7 @@ import { startTransition } from "react";
 export function useAnimateNumber(
   num: string,
   round: number,
-  { steps = 10, ms = 300 }: { steps?: number; ms?: number } = {}
+  { steps = 10, ms = 250 }: { steps?: number; ms?: number } = {}
 ) {
   const [currentNum, setCurrentNum] = useState<string>(
     new Big(num).round(round).toString()
