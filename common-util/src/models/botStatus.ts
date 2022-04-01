@@ -17,6 +17,7 @@ export const BotInfoReq = z.object({
   location: z.string().optional(),
   status: BotStatus.optional(),
   lastState: z.any().optional(),
+  maxBuyAmount: z.string().optional(),
 });
 export type TBotInfoReq = z.infer<typeof BotInfoReq>;
 
@@ -63,6 +64,7 @@ export const BotStateDetails = z.object({
     stopLoss: z.string(),
     minPercentIncreaseForSell: z.string(),
     sleepStrategy: z.string(),
+    maxBuyAmount: z.string(),
   }),
 });
 
@@ -104,6 +106,7 @@ export function mapBotLastStateToStateDetails(
       stopLoss: STOP_LOSS_THRESHOLD,
       minPercentIncreaseForSell: MIN_PERCENT_INCREASE_FOR_SELL,
       sleepStrategy: bot?.lastState?.sleep?.sleepStrategy,
+      maxBuyAmount: bot?.maxBuyAmount ?? "",
     },
   };
 }

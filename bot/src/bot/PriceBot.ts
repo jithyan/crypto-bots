@@ -9,9 +9,11 @@ const client = getExchangeClient(Config.EXCHANGE);
 export class PriceBot implements ITradeAssetCycle {
   readonly state = "PriceBot";
   readonly sleep: ISleepStrategy;
+  numberOfTimeouts: number;
 
   constructor(sleep: ISleepStrategy) {
     this.sleep = sleep;
+    this.numberOfTimeouts = 0;
   }
 
   dehydrate = () => {};
@@ -27,8 +29,29 @@ export class PriceBot implements ITradeAssetCycle {
       }
       await this.sleep.onHoldStableAsset();
       return new PriceBot(this.sleep);
-    } catch (err) {
-      generalLogger.error("Getting all prices failed", err);
+    } catch (error: any) {
+      if (
+        error.message?.includes("ETIMEDOUT") ||
+        error.message?.includes("ECONNRESET")
+      ) {
+        generalLogger.warn("API Timeout", {
+          error: error.message,
+          times: this.numberOfTimeouts,
+        });
+        this.numberOfTimeouts++;
+
+        if (this.numberOfTimeouts > 3) {
+          apiLogger.error("API Timeout retries exceeded", {
+            error: error.message,
+            times: this.numberOfTimeouts,
+          });
+        } else {
+          await this.sleep.onApiTimeout();
+          return this;
+        }
+      }
+
+      generalLogger.error("Getting all prices failed", error);
       process.exit(1);
     }
   };

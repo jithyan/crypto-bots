@@ -9,11 +9,11 @@ export function useAnimateNumber(
   { steps = 10, ms = 250 }: { steps?: number; ms?: number } = {}
 ) {
   const [currentNum, setCurrentNum] = useState<string>(
-    new Big(num).round(round).toString()
+    new Big(num).toFixed(round)
   );
 
   useEffect(() => {
-    const newNumRounded = new Big(num).round(round).toString();
+    const newNumRounded = new Big(num).toFixed(round);
 
     if (newNumRounded !== currentNum) {
       const timeoutIds: number[] = [];
@@ -33,7 +33,7 @@ export function useAnimateNumber(
             setTimeout(() => {
               startTransition(() => {
                 setCurrentNum((prev) =>
-                  new Big(prev).add(increment).round(round).toString()
+                  new Big(prev).add(increment).toFixed(round)
                 );
               });
             }, ms * i)

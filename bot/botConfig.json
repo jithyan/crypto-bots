@@ -167,18 +167,6 @@
     "STABLE_COIN": "BUSD",
     "VOLATILE_COIN": "ENJ"
   },
-  "etcbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": "0.06",
-    "SLEEP_STRATEGY": "6m",
-    "STABLE_COIN": "BUSD",
-    "VOLATILE_COIN": "ETC"
-  },
   "clvbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -215,18 +203,6 @@
     "STABLE_COIN": "BUSD",
     "VOLATILE_COIN": "CHR"
   },
-  "epsbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": "0.06",
-    "SLEEP_STRATEGY": "3m",
-    "STABLE_COIN": "BUSD",
-    "VOLATILE_COIN": "EPS"
-  },
   "celrbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -238,30 +214,6 @@
     "SLEEP_STRATEGY": "9m",
     "STABLE_COIN": "BUSD",
     "VOLATILE_COIN": "CELR"
-  },
-  "creambusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": "0.05",
-    "SLEEP_STRATEGY": "9m",
-    "STABLE_COIN": "BUSD",
-    "VOLATILE_COIN": "CREAM"
-  },
-  "ensbusd": {
-    "skip": true,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": "0.06",
-    "SLEEP_STRATEGY": "3m",
-    "STABLE_COIN": "BUSD",
-    "VOLATILE_COIN": "ENS"
   },
   "dgbbusd": {
     "skip": false,
@@ -279,7 +231,7 @@
     "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
     "STOP_LOSS_THRESHOLD": "0.05",
@@ -375,7 +327,7 @@
     "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
     "STOP_LOSS_THRESHOLD": "0.07",
@@ -471,7 +423,7 @@
     "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
     "STOP_LOSS_THRESHOLD": "0.07",
@@ -542,7 +494,7 @@
   "anybusd": {
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "VOLATILE_COIN": "ANY",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
@@ -558,18 +510,6 @@
     "VOLATILE_COIN": "ANT",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.06",
-    "SLEEP_STRATEGY": "3m"
-  },
-  "ankrbusd": {
-    "skip": true,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "ANKR",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
     "STOP_LOSS_THRESHOLD": " 0.06",
     "SLEEP_STRATEGY": "3m"
@@ -634,7 +574,7 @@
   "agldbusd": {
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "VOLATILE_COIN": "AGLD",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
@@ -668,7 +608,7 @@
   "acmbusd": {
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
+    "MAX_BUY_AMOUNT": "50",
     "VOLATILE_COIN": "ACM",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",

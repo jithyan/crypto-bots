@@ -8,6 +8,7 @@ import { ActionButton } from "./ActionButton";
 import { BotFeed } from "./BotFeed";
 import { ExpandedView } from "./ExpandedView";
 import { CompactView } from "./CompactView";
+import Big from "big.js";
 
 interface BotTableDefinition {
   symbol: string;
@@ -85,7 +86,7 @@ function parseImmutableBotData(
 ): Readonly<BotTableDefinition> {
   const status = getBotInfo(d, "status");
   const lastState = getBotInfo(d, "state");
-  const profitToDate = lastState.profit;
+  const profitToDate = new Big(lastState.profit ?? "0").toFixed(3);
   const lastCheckIn = getBotInfo(d, "lastCheckIn") ?? "";
   const symbol = getBotInfo(d, "symbol") ?? "";
   const actions = getBotInfo(d, "actions") ?? {};
