@@ -45,6 +45,10 @@ function mergeCloudEnvWithConfigEnv(configForSymbol, port) {
 }
 
 async function buildFromConfig() {
+  const upload = (await question("Do you want to upload on build complete? (y/n) "))
+  .toLowerCase()
+  .startsWith("y");
+
   const config = parseConfig();
 
   const buildBotAsyncFns = Object.keys(config).map((key) => async () => {
@@ -80,7 +84,11 @@ async function buildFromConfig() {
     Promise.resolve()
   );
 
-  await $`gcloud compute scp --recurse ./bin/* jithya_n@instance-1:~/bots --zone=asia-northeast1-b`;
+  if (upload) {
+    await $`gcloud compute scp --recurse ./bin/* jithya_n@instance-1:~/bots --zone=asia-northeast1-b`;
+  } else {
+    console.log(chalk.yellow("Skipping upload"))
+  }
 
   console.log(chalk.cyan("Finished"));
 }
