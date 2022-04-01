@@ -21,6 +21,10 @@ export function useUpdateBotRegistry() {
   );
 }
 
+export function useBotDetails(id: string) {
+  return useRecoilValue(botInfoFor(id));
+}
+
 export function useBotStats() {
   const botStats = useRecoilValue(atomBotStats);
 

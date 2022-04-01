@@ -6,14 +6,14 @@ import { startTransition } from "react";
 export function useAnimateNumber(
   num: string,
   round: number,
-  { steps = 10, ms = 250 }: { steps?: number; ms?: number } = {}
+  { steps = 25, ms = 100 }: { steps?: number; ms?: number } = {}
 ) {
   const [currentNum, setCurrentNum] = useState<string>(
-    new Big(num).round(round).toString()
+    new Big(num).toFixed(round)
   );
 
   useEffect(() => {
-    const newNumRounded = new Big(num).round(round).toString();
+    const newNumRounded = new Big(num).toFixed(round);
 
     if (newNumRounded !== currentNum) {
       const timeoutIds: number[] = [];

@@ -7,7 +7,7 @@ import { Table } from "./Table";
 import { ActionButton } from "./ActionButton";
 import { BotFeed } from "./BotFeed";
 import { ExpandedView } from "./ExpandedView";
-import { CompactView } from "./CompactView";
+import { BotRow, CompactView } from "./CompactView";
 
 interface BotTableDefinition {
   symbol: string;
@@ -23,6 +23,8 @@ export interface IStateProps {
   symbol: string;
   lastCheckIn: string;
   status: string;
+  index: number;
+  id: string;
 }
 
 export function StatusHeader() {
@@ -81,7 +83,8 @@ const columnHeaders: Column<BotTableDefinition>[] = [
 ];
 
 function parseImmutableBotData(
-  d: ImmutableBotInfo
+  d: ImmutableBotInfo,
+  index: number
 ): Readonly<BotTableDefinition> {
   const status = getBotInfo(d, "status");
   const lastState = getBotInfo(d, "state");
@@ -99,6 +102,8 @@ function parseImmutableBotData(
     profitToDate,
     lastState: (
       <ToggleOnClick
+        id={id}
+        index={index}
         status={status}
         lastState={lastState}
         lastCheckIn={lastCheckIn}
@@ -141,14 +146,13 @@ export function Dashboard({
           <BotFeed changes={changes} />
         </div>
       </div>
-      <div className="row">
-        <div className="col">
-          <Table
-            columns={columnHeaders}
-            data={data.map(parseImmutableBotData)}
-          />
-        </div>
-      </div>
+      {data.map((b, index) => (
+        <BotRow
+          key={`${getBotInfo(b, "id")}-${index}`}
+          index={index}
+          id={getBotInfo(b, "id")}
+        />
+      ))}
     </>
   );
 }
