@@ -30,6 +30,7 @@ function ExpandedViewNoMemo({
     sleepStrategy,
     stopLoss,
     minPercentIncreaseForSell,
+    maxBuyAmount,
   } = lastState?.config;
 
   if (lastState && typeof lastState !== "string") {
@@ -77,7 +78,7 @@ function ExpandedViewNoMemo({
                   {(parseFloat(minPercentIncreaseForSell) * 100 - 100).toFixed(
                     1
                   )}
-                  %
+                  % | Max buy: ${maxBuyAmount}
                 </small>
               </p>
             </div>

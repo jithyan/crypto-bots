@@ -444,7 +444,7 @@
     "VOLATILE_COIN": "BETA"
   },
   "lunabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -468,7 +468,7 @@
     "VOLATILE_COIN": "ETH"
   },
   "adabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -492,7 +492,7 @@
     "SLEEP_STRATEGY": "6m"
   },
   "avaxbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
