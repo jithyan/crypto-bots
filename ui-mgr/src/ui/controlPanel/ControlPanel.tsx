@@ -150,16 +150,16 @@ export function ControlPanel() {
                 {botsNotWorking} bots not working
               </BadgeListItem>
               <BadgeListItem show={numBotsHoldStable > 0} bg={"light"}>
-                {numBotsHoldStable} bots not bought anything
+                {numBotsHoldStable} online bots not bought anything
               </BadgeListItem>
               <BadgeListItem
                 show={numBotsHoldingVolatileAssets > 0}
                 bg={"light"}
               >
-                {numBotsHoldingVolatileAssets} bots holding crypto{" "}
+                {numBotsHoldingVolatileAssets} online bots holding crypto{" "}
               </BadgeListItem>
               <BadgeListItem show={numBotsSleeping > 0} bg={"light"}>
-                {numBotsSleeping} bots asleep
+                {numBotsSleeping} online bots asleep
               </BadgeListItem>
               <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
                 {numBotsPlacedOrders} bots have placed orders

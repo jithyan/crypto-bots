@@ -77,7 +77,10 @@ export const atomBotStats = selector<{
     ).size;
 
     const numBotsHoldingVolatileAssets = bots.reduce((prev, curr) => {
-      if (getBotInfo(curr, "state")?.state?.includes("HoldVolatile")) {
+      const state = getBotInfo(curr, "state")?.state ?? "";
+      const status = getBotInfo(curr, "status");
+
+      if (state.includes("HoldVolatile") && status === "ONLINE") {
         return prev + 1;
       } else {
         return prev;
@@ -93,7 +96,10 @@ export const atomBotStats = selector<{
     }, 0);
 
     const numBotsHoldStable = bots.reduce((prev, curr) => {
-      if (getBotInfo(curr, "state")?.state?.includes("HoldStable")) {
+      const state = getBotInfo(curr, "state")?.state ?? "";
+      const status = getBotInfo(curr, "status");
+
+      if (state.includes("HoldStable") && status === "ONLINE") {
         return prev + 1;
       } else {
         return prev;
@@ -101,7 +107,10 @@ export const atomBotStats = selector<{
     }, 0);
 
     const numBotsSleeping = bots.reduce((prev, curr) => {
-      if (getBotInfo(curr, "state")?.state?.includes("PostSell")) {
+      const state = getBotInfo(curr, "state")?.state ?? "";
+      const status = getBotInfo(curr, "status");
+
+      if (state.includes("PostSell") && status === "ONLINE") {
         return prev + 1;
       } else {
         return prev;
