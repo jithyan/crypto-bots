@@ -34,7 +34,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
     : lastState.config.sleepStrategy;
 
   const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
-    normalStyle: "bg-secondary text-light",
+    normalStyle: "bg-dark text-light",
     updatedStyle: "bg-warning",
   });
 
@@ -49,18 +49,18 @@ export function BotRow({ id, index }: { id: string; index: number }) {
     statusBgColor = "#dc3545";
   }
 
-  const profitBgColor = profit.startsWith("-") ? "red" : "green";
+  const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
 
   return (
-    <div className="row" style={{ paddingBottom: "8px" }}>
-      <ul className="list-group list-group-horizontal">
+    <div className="row" style={{ padding: "4px" }}>
+      <ul className="list-group border border-dark list-group-horizontal">
         <BotColItem width="168px" classNames={bgStyle}>
           <small>
             <span
               style={{ marginRight: "4px" }}
-              className="badge rounded-pill bg-dark text-light"
+              className="badge  rounded-pill bg-dark text-light"
             >
-              {index}
+              <strong>{index}</strong>
             </span>
           </small>
           <span style={{ paddingTop: "8px" }}>{symbol}</span>
@@ -75,11 +75,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
         <BotColItem width="96px" classNames={bgStyle}>
           {version}
         </BotColItem>
-        <BotColItem
-          bgColor={profitBgColor}
-          width="96px"
-          classNames={"text-light"}
-        >
+        <BotColItem width="96px" classNames={`${profitBgColor} text-light`}>
           ${profit}
         </BotColItem>
         <BotColItem width="160px" classNames={bgStyle}>
@@ -132,13 +128,14 @@ function BotState({
     <>
       {" "}
       <AssetStateBadge assetState={assetState} />{" "}
-      <PriceTrendIcon trendState={priceTrendState} /> ${formattedTickerPrice}{" "}
+      <PriceTrendIcon trendState={priceTrendState} />{" "}
+      <strong>${formattedTickerPrice}</strong>{" "}
       {holdsVolatileAsset ? (
         <>
           <LastPurchasePriceBadge
             lastPurchasePrice={lastPurchasePrice}
             tickerPrice={tickerPrice}
-          />
+          />{" "}
           <PctChangeBadge
             lastPurchasePrice={lastPurchasePrice}
             tickerPrice={tickerPrice}
@@ -241,11 +238,11 @@ function CompactViewNoMemo({ id, index }: IStateProps) {
               <LastPurchasePriceBadge
                 lastPurchasePrice={lastState.lastPurchasePrice}
                 tickerPrice={lastState.tickerPrice}
-              />
+              />{" "}
               <PctChangeBadge
                 lastPurchasePrice={lastState.lastPurchasePrice}
                 tickerPrice={lastState.tickerPrice}
-              />
+              />{" "}
             </>
           )}
         </li>
@@ -264,7 +261,13 @@ export const CheckInAndSleepStrategy = React.memo(
   ({ sleepStrategy, checkIn }: Record<"sleepStrategy" | "checkIn", string>) => {
     return (
       <small>
-        {checkIn} <mark>{sleepStrategy}</mark>
+        {checkIn}{" "}
+        <span
+          style={{ padding: "1px 2px" }}
+          className="bg-secondary text-light"
+        >
+          {sleepStrategy}
+        </span>
       </small>
     );
   }

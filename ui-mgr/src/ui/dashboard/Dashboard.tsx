@@ -148,8 +148,8 @@ export function Dashboard({
       </div>
       {data.map((b, index) => (
         <BotRow
-          key={`${getBotInfo(b, "id")}-${index}`}
-          index={index}
+          key={`${getBotInfo(b, "id")}-${index + 1}`}
+          index={index + 1}
           id={getBotInfo(b, "id")}
         />
       ))}

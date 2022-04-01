@@ -10,6 +10,7 @@ export function BotFeed({ changes }: { changes: List<string> }) {
         margin: "auto",
         color: "limegreen",
         padding: "8px",
+        marginTop: "16px",
       }}
     >
       <div

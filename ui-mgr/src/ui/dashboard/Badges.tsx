@@ -4,13 +4,19 @@ import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import type { IStateProps } from "./Dashboard";
 
 const holdStableAssetIcon = (
-  <span className="badge rounded-pill bg-secondary">S</span>
+  <span style={{ margin: "1px" }} className="badge rounded-pill bg-secondary">
+    S
+  </span>
 );
 const orderPlacedIcon = (
-  <span className="badge rounded-pill bg-warning">O</span>
+  <span style={{ margin: "1px" }} className="badge rounded-pill bg-warning">
+    O
+  </span>
 );
 const holdVolatileAssetIcon = (
-  <span className="badge rounded-pill bg-primary">V</span>
+  <span style={{ margin: "1px" }} className="badge rounded-pill bg-primary">
+    V
+  </span>
 );
 
 export const AssetStateBadge = React.memo(
@@ -67,6 +73,7 @@ export const PctChangeBadge = React.memo(
 
     return (
       <span
+        style={{ margin: "1px" }}
         className={`badge rounded-pill bg-light text-${purchasePriceBgColor}`}
       >
         {pctChange}%
@@ -91,7 +98,10 @@ export const LastPurchasePriceBadge = React.memo(
     });
 
     return (
-      <span className={`badge bg-${purchasePriceBgColor}`}>
+      <span
+        style={{ margin: "1px" }}
+        className={`badge bg-${purchasePriceBgColor}`}
+      >
         ${lastPurchasePriceAsBig.round(3).toString()}
       </span>
     );

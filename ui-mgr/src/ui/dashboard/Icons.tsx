@@ -18,7 +18,10 @@ export const PriceTrendIcon = React.memo(
 
 export function ArrowUpCircle() {
   return (
-    <span className="badge rounded-pill bg-info text-light">
+    <span
+      style={{ margin: "1px" }}
+      className="badge rounded-pill bg-info text-light"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -38,7 +41,10 @@ export function ArrowUpCircle() {
 
 export function ArrowUpCircleFill() {
   return (
-    <span className="badge rounded-pill bg-success text-light">
+    <span
+      style={{ margin: "1px" }}
+      className="badge rounded-pill bg-success text-light"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
@@ -55,7 +61,10 @@ export function ArrowUpCircleFill() {
 
 export function ArrowDownCircle() {
   return (
-    <span className="badge rounded-pill bg-warning text-dark">
+    <span
+      style={{ margin: "1px" }}
+      className="badge rounded-pill bg-warning text-dark"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
