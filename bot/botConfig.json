@@ -1,4 +1,16 @@
 {
+  "pricebot": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
+    "STOP_LOSS_THRESHOLD": "0.05",
+    "SLEEP_STRATEGY": "3m",
+    "STABLE_COIN": "BOT",
+    "VOLATILE_COIN": "PRICE"
+  },
   "compbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -432,7 +444,7 @@
     "VOLATILE_COIN": "BETA"
   },
   "lunabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -456,7 +468,7 @@
     "VOLATILE_COIN": "ETH"
   },
   "adabusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
@@ -480,7 +492,7 @@
     "SLEEP_STRATEGY": "6m"
   },
   "avaxbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
