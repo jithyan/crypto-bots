@@ -46,6 +46,7 @@ const changeDetectors: DetectChange[] = [
   skipIfPriceBot(stateChange),
   skipIfPriceBot(profitChange),
   skipIfPriceBot(tickerPriceChange),
+  skipIfPriceBot(priceTrendChange),
   statusChange,
 ];
 
@@ -128,4 +129,14 @@ function profitChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
   } else {
     return "";
   }
+}
+
+function priceTrendChange(
+  currentBot: IBotInfoStream,
+  oldBot: ImmutableBotInfo
+) {
+  const oldPriceTrend = getBotInfo(oldBot, "state")?.priceTrendState;
+  const currPriceTrend = currentBot?.state?.priceTrendState;
+
+  return oldPriceTrend !== currPriceTrend ? `Changed to ${currPriceTrend}` : "";
 }
