@@ -1,6 +1,6 @@
 import Big from "big.js";
 import React from "react";
-import { useAnimateNumber } from "./CompactView";
+import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import type { IStateProps } from "./Dashboard";
 
 const holdStableAssetIcon = (
@@ -62,8 +62,7 @@ export const PctChangeBadge = React.memo(
         .minus(lastTickerPriceAsBig.div(lastPurchasePriceAsBig))
         .mul("-100")
         .toString(),
-      2,
-      { steps: 10, ms: 300 }
+      2
     );
 
     return (
