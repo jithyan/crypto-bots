@@ -1,6 +1,6 @@
 //@ts-ignore
 import React, { useEffect, useState, startTransition } from "react";
-import { formatIsoDate } from "../../utils/date";
+import { formatAsUsd, formatIsoDate } from "../../utils/format";
 import { PriceTrendIcon } from "./Icons";
 import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
@@ -35,7 +35,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
 
   const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
     normalStyle: "bg-dark text-light",
-    updatedStyle: "bg-warning",
+    updatedStyle: "bg-light",
   });
 
   let statusBgColor = "";
@@ -54,11 +54,11 @@ export function BotRow({ id, index }: { id: string; index: number }) {
   return (
     <div className="row" style={{ padding: "4px" }}>
       <ul className="list-group border border-dark list-group-horizontal">
-        <BotColItem width="168px" classNames={bgStyle}>
+        <BotColItem minWidth="128px" width="168px" classNames={bgStyle}>
           <small>
             <span
               style={{ marginRight: "4px" }}
-              className="badge  rounded-pill bg-dark text-light"
+              className="badge rounded-pill bg-dark text-light"
             >
               <strong>{index}</strong>
             </span>
@@ -67,16 +67,17 @@ export function BotRow({ id, index }: { id: string; index: number }) {
         </BotColItem>
         <BotColItem
           bgColor={statusBgColor}
+          minWidth="104px"
           width="144px"
           classNames={"text-light"}
         >
           {status}
         </BotColItem>
-        <BotColItem width="96px" classNames={bgStyle}>
+        <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
           {version}
         </BotColItem>
         <BotColItem width="96px" classNames={`${profitBgColor} text-light`}>
-          ${profit}
+          {formatAsUsd(profit, 3)}
         </BotColItem>
         <BotColItem width="160px" classNames={bgStyle}>
           <CheckInAndSleepStrategy
@@ -84,7 +85,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
             checkIn={checkIn}
           />
         </BotColItem>
-        <BotColItem classNames={bgStyle}>
+        <BotColItem minWidth="128px" classNames={bgStyle}>
           <BotState
             tickerPrice={lastState?.tickerPrice ?? ""}
             assetState={lastState?.state}
@@ -129,7 +130,7 @@ function BotState({
       {" "}
       <AssetStateBadge assetState={assetState} />{" "}
       <PriceTrendIcon trendState={priceTrendState} />{" "}
-      <strong>${formattedTickerPrice}</strong>{" "}
+      <strong>{formatAsUsd(formattedTickerPrice, 3)}</strong>{" "}
       {holdsVolatileAsset ? (
         <>
           <LastPurchasePriceBadge
@@ -151,14 +152,16 @@ export function BotColItem({
   width,
   children,
   classNames = "",
+  minWidth,
 }: React.PropsWithChildren<{
   classNames?: string;
   width?: string;
+  minWidth?: string;
   bgColor?: string;
 }>) {
   return (
     <li
-      style={{ maxWidth: width, backgroundColor: bgColor }}
+      style={{ maxWidth: width, minWidth, backgroundColor: bgColor }}
       className={`list-group-item flex-fill ${classNames}`}
     >
       {children}

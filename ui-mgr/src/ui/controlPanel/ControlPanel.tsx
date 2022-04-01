@@ -4,6 +4,7 @@ import { usePasswordContext } from "../password";
 import { useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
+import { formatAsUsd } from "../../utils/format";
 
 const BadgeListItem = React.memo(
   ({
@@ -141,7 +142,7 @@ export function ControlPanel() {
                 <BadgeListItem
                   bg={Number(totalProfit) > 0 ? "success" : "danger"}
                 >
-                  Total profit: ${animatedTotalProfit}
+                  Total profit: {formatAsUsd(animatedTotalProfit, 3)}
                 </BadgeListItem>
                 <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
                 <BadgeListItem show={onlineBots > 0} bg={"primary"}>
@@ -169,8 +170,8 @@ export function ControlPanel() {
                 className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDarkDropdown"
-                aria-controls="navbarNavDarkDropdown"
+                data-bs-target="#navbarNavDarkDropdown2"
+                aria-controls="navbarNavDarkDropdown2"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >

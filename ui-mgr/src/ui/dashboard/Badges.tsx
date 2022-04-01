@@ -1,5 +1,6 @@
 import Big from "big.js";
 import React from "react";
+import { formatAsUsd } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import type { IStateProps } from "./Dashboard";
 
@@ -102,7 +103,7 @@ export const LastPurchasePriceBadge = React.memo(
         style={{ margin: "1px" }}
         className={`badge bg-${purchasePriceBgColor}`}
       >
-        ${lastPurchasePriceAsBig.round(3).toString()}
+        {formatAsUsd(lastPurchasePriceAsBig.toString(), 3)}
       </span>
     );
   }

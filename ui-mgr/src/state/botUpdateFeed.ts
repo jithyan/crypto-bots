@@ -3,7 +3,7 @@ import { List } from "immutable";
 import type { IBotInfoStream } from "common-util";
 import Big from "big.js";
 import { botInfoFor, getBotInfo, ImmutableBotInfo } from "./botRegistry";
-import { formatIsoDate } from "../utils/date";
+import { formatIsoDate } from "../utils/format";
 
 export const MAX_EVENT_LIST = 4;
 
@@ -28,7 +28,8 @@ const botFeed = selector<IBotInfoStream | List<string>>({
     set(botChangeList, (changeList) => {
       const nextUpdate = getUpdateForBot(botUpdate, oldBot);
 
-      return changeList.size >= MAX_EVENT_LIST
+      return changeList.size >= MAX_EVENT_LIST ||
+        (nextUpdate.length > 1 && changeList.size === MAX_EVENT_LIST - 1)
         ? changeList.shift().push(nextUpdate)
         : changeList.push(nextUpdate);
     });

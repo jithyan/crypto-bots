@@ -1,6 +1,6 @@
 import Big from "big.js";
 import React from "react";
-import { formatIsoDate } from "../../utils/date";
+import { formatIsoDate } from "../../utils/format";
 import { AssetStateBadge, LastPurchasePriceBadge } from "./Badges";
 import type { IStateProps } from "./Dashboard";
 import { PriceTrendIcon } from "./Icons";
