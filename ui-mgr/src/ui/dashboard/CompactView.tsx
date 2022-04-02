@@ -11,148 +11,150 @@ import {
 } from "./Badges";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { getBotInfo, useBotDetails } from "../../state";
-import Big from "big.js";
 import type { TBotActions } from "common-util";
 import { ActionButton } from "./ActionButton";
 import { ExpandedView } from "./ExpandedView";
 
-export const CompactView = React.memo(CompactViewNoMemo);
+export const BotRow = React.memo(
+  ({ id, index }: { id: string; index: number }) => {
+    const bot = useBotDetails(id);
 
-export function BotRow({ id, index }: { id: string; index: number }) {
-  const bot = useBotDetails(id);
+    if (!bot) {
+      return null;
+    }
 
-  if (!bot) {
-    return null;
-  }
+    const checkIn = formatIsoDate(getBotInfo(bot, "lastCheckIn"));
+    const status = getBotInfo(bot, "status");
+    const symbol = getBotInfo(bot, "symbol");
+    const lastState = getBotInfo(bot, "state");
+    const version = getBotInfo(bot, "version");
+    const profit = useAnimateNumber(lastState.profit ?? "0", 3);
+    const actions = getBotInfo(bot, "actions");
 
-  const checkIn = formatIsoDate(getBotInfo(bot, "lastCheckIn"));
-  const status = getBotInfo(bot, "status");
-  const symbol = getBotInfo(bot, "symbol");
-  const lastState = getBotInfo(bot, "state");
-  const version = getBotInfo(bot, "version");
-  const profit = useAnimateNumber(lastState.profit ?? "0", 3);
-  const actions = getBotInfo(bot, "actions");
+    const sleepStrategy = lastState.state?.includes("Stasis")
+      ? "1hr"
+      : lastState.config.sleepStrategy;
 
-  const sleepStrategy = lastState.state?.includes("Stasis")
-    ? "1hr"
-    : lastState.config.sleepStrategy;
+    const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
+      normalStyle: "bg-dark text-light",
+      updatedStyle: "bg-info",
+    });
 
-  const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
-    normalStyle: "bg-dark text-light",
-    updatedStyle: "bg-info",
-  });
+    let statusBgColor = "";
+    if (status === "ONLINE") {
+      statusBgColor = "#459457";
+    } else if (status === "OFFLINE") {
+      statusBgColor = "grey";
+    } else if (status === "SHUTTING DOWN" || status === "STARTING UP") {
+      statusBgColor = "#ffc412";
+    } else if (status === "NOT WORKING") {
+      statusBgColor = "#dc3545";
+    }
 
-  let statusBgColor = "";
-  if (status === "ONLINE") {
-    statusBgColor = "#459457";
-  } else if (status === "OFFLINE") {
-    statusBgColor = "grey";
-  } else if (status === "SHUTTING DOWN" || status === "STARTING UP") {
-    statusBgColor = "#ffc412";
-  } else if (status === "NOT WORKING") {
-    statusBgColor = "#dc3545";
-  }
+    const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
 
-  const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
+    const [borderColor, setBorderColor] = useState("dark");
+    const [showCompact, setShowCompact] = useState(true);
 
-  const [borderColor, setBorderColor] = useState("dark");
-  const [showCompact, setShowCompact] = useState(true);
-
-  return (
-    <div
-      onMouseEnter={() => startTransition(() => setBorderColor("light"))}
-      onMouseLeave={() => startTransition(() => setBorderColor("dark"))}
-      className="row"
-      style={{ padding: "4px" }}
-    >
-      <ul
-        className={`list-group border border-${borderColor} list-group-horizontal`}
+    return (
+      <div
+        onMouseEnter={() => startTransition(() => setBorderColor("light"))}
+        onMouseLeave={() => startTransition(() => setBorderColor("dark"))}
+        className="row"
+        style={{ padding: "4px" }}
       >
-        <BotColItem minWidth="128px" width="168px" classNames={bgStyle}>
-          <small>
-            <span
-              style={{ marginRight: "4px" }}
-              className="badge rounded-pill bg-dark text-light"
-            >
-              <strong>{index}</strong>
-            </span>
-          </small>
-          <span style={{ paddingTop: "8px" }}>{symbol}</span>
-        </BotColItem>
-        <BotColItem
-          bgColor={statusBgColor}
-          minWidth="104px"
-          width="144px"
-          classNames={"text-light"}
+        <ul
+          className={`list-group border border-${borderColor} list-group-horizontal`}
         >
-          {status}
-        </BotColItem>
-        <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
-          {version}
-        </BotColItem>
-        <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
-          {formatAsUsd(profit, 3)}
-        </BotColItem>
-        <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
-          <CheckInAndSleepStrategy
-            sleepStrategy={sleepStrategy}
-            checkIn={checkIn}
-          />
-        </BotColItem>
-        <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
-          <div className="dropdown">
-            <button
-              className="btn btn-dark dropdown-toggle text-light"
-              type="button"
-              id={`${id}-bot-actions`}
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <ThreeDotsVertical />
-            </button>
-            <ul className="dropdown-menu" aria-labelledby={`${id}-bot-actions`}>
-              {Object.keys(actions).map((action) => (
-                <li>
-                  <ActionButton
-                    key={`${id}-${action}`}
-                    id={id}
-                    path={actions[action as TBotActions] ?? ""}
-                    action={action}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        </BotColItem>
+          <BotColItem minWidth="128px" width="168px" classNames={bgStyle}>
+            <small>
+              <span
+                style={{ marginRight: "4px" }}
+                className="badge rounded-pill bg-dark text-light"
+              >
+                <strong>{index}</strong>
+              </span>
+            </small>
+            <span style={{ paddingTop: "8px" }}>{symbol}</span>
+          </BotColItem>
+          <BotColItem
+            bgColor={statusBgColor}
+            minWidth="104px"
+            width="144px"
+            classNames={"text-light"}
+          >
+            {status}
+          </BotColItem>
+          <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
+            {version}
+          </BotColItem>
+          <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
+            {formatAsUsd(profit, 3)}
+          </BotColItem>
+          <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
+            <CheckInAndSleepStrategy
+              sleepStrategy={sleepStrategy}
+              checkIn={checkIn}
+            />
+          </BotColItem>
+          <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
+            <div className="dropdown">
+              <button
+                className="btn btn-dark dropdown-toggle text-light"
+                type="button"
+                id={`${id}-bot-actions`}
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <ThreeDotsVertical />
+              </button>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby={`${id}-bot-actions`}
+              >
+                {Object.keys(actions).map((action) => (
+                  <li>
+                    <ActionButton
+                      key={`${id}-${action}`}
+                      id={id}
+                      path={actions[action as TBotActions] ?? ""}
+                      action={action}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </BotColItem>
 
-        <BotColItem
-          onClick={() => setShowCompact((prev) => !prev)}
-          minWidth="128px"
-          classNames={bgStyle}
-        >
-          {showCompact ? (
-            <BotState
-              tickerPrice={lastState?.tickerPrice ?? ""}
-              assetState={lastState?.state}
-              priceTrendState={lastState?.priceTrendState}
-              symbol={symbol}
-              lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
-            />
-          ) : (
-            <ExpandedView
-              lastCheckIn={getBotInfo(bot, "lastCheckIn")}
-              lastState={lastState}
-              status={status}
-              symbol={symbol}
-              index={index}
-              id={id}
-            />
-          )}
-        </BotColItem>
-      </ul>
-    </div>
-  );
-}
+          <BotColItem
+            onClick={() => setShowCompact((prev) => !prev)}
+            minWidth="128px"
+            classNames={bgStyle}
+          >
+            {showCompact ? (
+              <BotState
+                tickerPrice={lastState?.tickerPrice ?? ""}
+                assetState={lastState?.state}
+                priceTrendState={lastState?.priceTrendState}
+                symbol={symbol}
+                lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
+              />
+            ) : (
+              <ExpandedView
+                lastCheckIn={getBotInfo(bot, "lastCheckIn")}
+                lastState={lastState}
+                status={status}
+                symbol={symbol}
+                index={index}
+                id={id}
+              />
+            )}
+          </BotColItem>
+        </ul>
+      </div>
+    );
+  }
+);
 
 function BotState({
   priceTrendState,
