@@ -1,7 +1,7 @@
 import React from "react";
 import type { PropsWithChildren } from "react";
 import { usePasswordContext } from "../password";
-import { useBotStats } from "../../state";
+import { useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { formatAsUsd } from "../../utils/format";
@@ -64,6 +64,7 @@ export function ControlPanel() {
       setShowPasswordModal(true);
     }
   };
+  const [_, setSortMethod] = useBotSortMethod();
 
   return (
     <>
@@ -127,7 +128,7 @@ export function ControlPanel() {
                     <li>
                       <div className="dropdown-item">
                         <button
-                          className="btn btn-outline-warning"
+                          className="btn btn-outline-danger"
                           onClick={checkPassword(shutdownManager)}
                         >
                           Shutdown Manager
@@ -137,6 +138,76 @@ export function ControlPanel() {
                   </ul>
                 </li>
               </ul>
+
+              <div className="collapse navbar-collapse" id="sortAndFilter">
+                <ul className="navbar-nav">
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="sortAndFilterDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Sort
+                    </a>
+                    <ul
+                      className="dropdown-menu dropdown-menu-dark"
+                      aria-labelledby="sortAndFilterDropdown"
+                    >
+                      <li>
+                        <div className="dropdown-item">
+                          <button
+                            className="btn btn-outline-light"
+                            onClick={() =>
+                              setSortMethod((prev) =>
+                                prev === "statusAsc"
+                                  ? "statusDesc"
+                                  : "statusAsc"
+                              )
+                            }
+                          >
+                            Status
+                          </button>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="dropdown-item">
+                          <button
+                            className="btn small btn-outline-light"
+                            onClick={() =>
+                              setSortMethod((prev) =>
+                                prev === "symbolDesc"
+                                  ? "symbolAsc"
+                                  : "symbolDesc"
+                              )
+                            }
+                          >
+                            Symbol
+                          </button>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="dropdown-item">
+                          <button
+                            className="btn btn-outline-light"
+                            onClick={() =>
+                              setSortMethod((prev) =>
+                                prev === "profitDesc"
+                                  ? "profitAsc"
+                                  : "profitDesc"
+                              )
+                            }
+                          >
+                            Profit
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
 
               <ul className="navbar-nav">
                 <BadgeListItem
@@ -159,6 +230,7 @@ export function ControlPanel() {
           </div>
         </nav>
       </div>
+
       <div className="row">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
