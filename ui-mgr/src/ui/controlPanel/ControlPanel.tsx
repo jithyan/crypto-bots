@@ -139,75 +139,67 @@ export function ControlPanel() {
                 </li>
               </ul>
 
-              <div className="collapse navbar-collapse" id="sortAndFilter">
-                <ul className="navbar-nav">
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      href="#"
-                      id="sortAndFilterDropdown"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Sort
-                    </a>
-                    <ul
-                      className="dropdown-menu dropdown-menu-dark"
-                      aria-labelledby="sortAndFilterDropdown"
-                    >
-                      <li>
-                        <div className="dropdown-item">
-                          <button
-                            className="btn btn-outline-light"
-                            onClick={() =>
-                              setSortMethod((prev) =>
-                                prev === "statusAsc"
-                                  ? "statusDesc"
-                                  : "statusAsc"
-                              )
-                            }
-                          >
-                            Status
-                          </button>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="dropdown-item">
-                          <button
-                            className="btn small btn-outline-light"
-                            onClick={() =>
-                              setSortMethod((prev) =>
-                                prev === "symbolDesc"
-                                  ? "symbolAsc"
-                                  : "symbolDesc"
-                              )
-                            }
-                          >
-                            Symbol
-                          </button>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="dropdown-item">
-                          <button
-                            className="btn btn-outline-light"
-                            onClick={() =>
-                              setSortMethod((prev) =>
-                                prev === "profitDesc"
-                                  ? "profitAsc"
-                                  : "profitDesc"
-                              )
-                            }
-                          >
-                            Profit
-                          </button>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              <ul className="navbar-nav">
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="sortAndFilterDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Sort
+                  </a>
+                  <ul
+                    className="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="sortAndFilterDropdown"
+                  >
+                    <li>
+                      <div className="dropdown-item">
+                        <button
+                          className="btn btn-outline-light"
+                          onClick={() =>
+                            setSortMethod((prev) =>
+                              prev === "statusAsc" ? "statusDesc" : "statusAsc"
+                            )
+                          }
+                        >
+                          Status
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="dropdown-item">
+                        <button
+                          className="btn small btn-outline-light"
+                          onClick={() =>
+                            setSortMethod((prev) =>
+                              prev === "symbolDesc" ? "symbolAsc" : "symbolDesc"
+                            )
+                          }
+                        >
+                          Symbol
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="dropdown-item">
+                        <button
+                          className="btn btn-outline-light"
+                          onClick={() =>
+                            setSortMethod((prev) =>
+                              prev === "profitDesc" ? "profitAsc" : "profitDesc"
+                            )
+                          }
+                        >
+                          Profit
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
 
               <ul className="navbar-nav">
                 <BadgeListItem
