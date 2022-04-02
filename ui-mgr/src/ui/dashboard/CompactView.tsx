@@ -1,7 +1,7 @@
 //@ts-ignore
 import React, { useEffect, useState, startTransition } from "react";
 import { formatAsUsd, formatIsoDate } from "../../utils/format";
-import { PriceTrendIcon } from "./Icons";
+import { PriceTrendIcon, ThreeDotsVertical } from "./Icons";
 import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 import {
@@ -97,15 +97,30 @@ export function BotRow({ id, index }: { id: string; index: number }) {
             checkIn={checkIn}
           />
         </BotColItem>
-        <BotColItem minWidth="144px" width="144px" classNames={bgStyle}>
-          {Object.keys(actions).map((action) => (
-            <ActionButton
-              key={`${id}-${action}`}
-              id={id}
-              path={actions[action as TBotActions] ?? ""}
-              action={action}
-            />
-          ))}
+        <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
+          <div className="dropdown">
+            <button
+              className="btn btn-dark dropdown-toggle text-primary"
+              type="button"
+              id={`${id}-bot-actions`}
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <ThreeDotsVertical />
+            </button>
+            <ul className="dropdown-menu" aria-labelledby={`${id}-bot-actions`}>
+              {Object.keys(actions).map((action) => (
+                <li>
+                  <ActionButton
+                    key={`${id}-${action}`}
+                    id={id}
+                    path={actions[action as TBotActions] ?? ""}
+                    action={action}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </BotColItem>
         <BotColItem minWidth="128px" classNames={bgStyle}>
           <BotState

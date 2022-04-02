@@ -11,7 +11,7 @@ export function ActionButton({
 
   return (
     <button
-      className="btn btn-primary btn-sm"
+      className="dropdown-item"
       style={{ margin: "4px 4px" }}
       onClick={() => {
         if (password) {
