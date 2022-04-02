@@ -15,12 +15,11 @@ const sortBotMethod = atom<
   | "statusDesc"
   | "profitAsc"
   | "profitDesc"
-  | ""
   | "symbolAsc"
   | "symbolDesc"
 >({
   key: "sortBotMethod",
-  default: "",
+  default: "statusDesc",
 });
 
 export const sortedBotData = selector({

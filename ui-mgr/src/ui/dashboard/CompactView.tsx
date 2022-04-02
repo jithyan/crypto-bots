@@ -48,6 +48,7 @@ export function TillNextUpdateCountdown({
       return () => clearTimeout(id);
     }
   }, [nextCheckInFormatted]);
+  const isZero = nextCheckInFormatted === "0 seconds";
 
   const seconds = `${parseInt(nextCheckInFormatted) % 60}s`;
   const minutes = `${Math.trunc(parseInt(nextCheckInFormatted) / 60)}m`;
@@ -56,8 +57,12 @@ export function TillNextUpdateCountdown({
     <span
       style={{ marginRight: "4px" }}
       className={`badge rounded-pill bg-${
-        nextCheckInFormatted === "0 seconds" ? "danger" : "primary"
-      } text-light`}
+        nextCheckInFormatted === "0 seconds"
+          ? "danger"
+          : minutes === "0m" && parseInt(seconds) < 30
+          ? "warning"
+          : "info"
+      } text-${nextCheckInFormatted === "0 seconds" ? "light" : "dark"}`}
     >
       {`${minutes === "0m" ? "" : `${minutes} `}${seconds}`}
     </span>
@@ -382,7 +387,7 @@ export const CheckInAndSleepStrategy = React.memo(
         {checkIn}{" "}
         <span
           style={{ padding: "1px 2px" }}
-          className="badge rounded-pill bg-secondary text-light"
+          className="badge bg-secondary text-light"
         >
           {sleepStrategy}
         </span>
