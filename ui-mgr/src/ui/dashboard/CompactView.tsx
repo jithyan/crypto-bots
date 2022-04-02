@@ -88,10 +88,10 @@ export function BotRow({ id, index }: { id: string; index: number }) {
         <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
           {version}
         </BotColItem>
-        <BotColItem width="96px" classNames={`${profitBgColor} text-light`}>
+        <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
           {formatAsUsd(profit, 3)}
         </BotColItem>
-        <BotColItem width="160px" classNames={bgStyle}>
+        <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
           <CheckInAndSleepStrategy
             sleepStrategy={sleepStrategy}
             checkIn={checkIn}
@@ -100,7 +100,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
         <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
           <div className="dropdown">
             <button
-              className="btn btn-dark dropdown-toggle text-primary"
+              className="btn btn-dark dropdown-toggle text-light"
               type="button"
               id={`${id}-bot-actions`}
               data-bs-toggle="dropdown"
