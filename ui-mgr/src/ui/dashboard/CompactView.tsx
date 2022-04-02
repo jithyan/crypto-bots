@@ -14,6 +14,7 @@ import { getBotInfo, useBotDetails } from "../../state";
 import Big from "big.js";
 import type { TBotActions } from "common-util";
 import { ActionButton } from "./ActionButton";
+import { ExpandedView } from "./ExpandedView";
 
 export const CompactView = React.memo(CompactViewNoMemo);
 
@@ -55,6 +56,7 @@ export function BotRow({ id, index }: { id: string; index: number }) {
   const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
 
   const [borderColor, setBorderColor] = useState("dark");
+  const [showCompact, setShowCompact] = useState(true);
 
   return (
     <div
@@ -122,14 +124,30 @@ export function BotRow({ id, index }: { id: string; index: number }) {
             </ul>
           </div>
         </BotColItem>
-        <BotColItem minWidth="128px" classNames={bgStyle}>
-          <BotState
-            tickerPrice={lastState?.tickerPrice ?? ""}
-            assetState={lastState?.state}
-            priceTrendState={lastState?.priceTrendState}
-            symbol={symbol}
-            lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
-          />
+
+        <BotColItem
+          onClick={() => setShowCompact((prev) => !prev)}
+          minWidth="128px"
+          classNames={bgStyle}
+        >
+          {showCompact ? (
+            <BotState
+              tickerPrice={lastState?.tickerPrice ?? ""}
+              assetState={lastState?.state}
+              priceTrendState={lastState?.priceTrendState}
+              symbol={symbol}
+              lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
+            />
+          ) : (
+            <ExpandedView
+              lastCheckIn={getBotInfo(bot, "lastCheckIn")}
+              lastState={lastState}
+              status={status}
+              symbol={symbol}
+              index={index}
+              id={id}
+            />
+          )}
         </BotColItem>
       </ul>
     </div>
@@ -190,14 +208,17 @@ export function BotColItem({
   children,
   classNames = "",
   minWidth,
+  onClick,
 }: React.PropsWithChildren<{
   classNames?: string;
   width?: string;
   minWidth?: string;
   bgColor?: string;
+  onClick?: () => void;
 }>) {
   return (
     <li
+      onClick={onClick}
       style={{ maxWidth: width, minWidth, backgroundColor: bgColor }}
       className={`list-group-item flex-fill ${classNames}`}
     >
@@ -304,7 +325,7 @@ export const CheckInAndSleepStrategy = React.memo(
         {checkIn}{" "}
         <span
           style={{ padding: "1px 2px" }}
-          className="bg-secondary text-light"
+          className="badge rounded-pill bg-secondary text-light"
         >
           {sleepStrategy}
         </span>
