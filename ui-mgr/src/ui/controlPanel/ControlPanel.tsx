@@ -161,7 +161,7 @@ export function ControlPanel() {
                           className="btn btn-outline-light"
                           onClick={() =>
                             setSortMethod((prev) =>
-                              prev === "statusAsc" ? "statusDesc" : "statusAsc"
+                              prev === "statusDesc" ? "statusAsc" : "statusDesc"
                             )
                           }
                         >
