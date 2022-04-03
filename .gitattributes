@@ -8,4 +8,6 @@
 .yarn/cache/*.zip binary
 *.tgz binary
 *.zip filter=lfs diff=lfs merge=lfs -text
+*-api.log filter=lfs diff=lfs merge=lfs -text
+
 
