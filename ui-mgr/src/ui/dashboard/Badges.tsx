@@ -3,7 +3,6 @@ import React, { PropsWithChildren } from "react";
 import type { ThemeColor } from "src/utils/types";
 import { formatAsUsd } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
-import type { IStateProps } from "./Dashboard";
 
 export function Badge({
   children,
@@ -80,8 +79,12 @@ export const PctChangeBadge = React.memo(
   ({
     lastPurchasePrice,
     tickerPrice,
-  }: Pick<IStateProps["lastState"], "lastPurchasePrice" | "tickerPrice">) => {
+  }: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
     if (!tickerPrice || !lastPurchasePrice) {
+      console.error("PctChangeBadge called with no required args", {
+        lastPurchasePrice,
+        tickerPrice,
+      });
       return null;
     }
 
@@ -117,8 +120,12 @@ export const LastPurchasePriceBadge = React.memo(
   ({
     lastPurchasePrice,
     tickerPrice,
-  }: Pick<IStateProps["lastState"], "lastPurchasePrice" | "tickerPrice">) => {
+  }: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
     if (!tickerPrice || !lastPurchasePrice) {
+      console.error("LastPurchasePriceBadge called with no required args", {
+        lastPurchasePrice,
+        tickerPrice,
+      });
       return null;
     }
 
