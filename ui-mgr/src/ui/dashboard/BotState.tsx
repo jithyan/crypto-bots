@@ -111,7 +111,7 @@ export const ExpandedView = React.memo(
       maxBuyAmount,
     } = config;
 
-    if (typeof state !== "string") {
+    if (typeof state === "string") {
       return (
         <div className={cardStyle} style={{ width: "24rem" }}>
           <div className="card-header">
@@ -165,6 +165,7 @@ export const ExpandedView = React.memo(
         </div>
       );
     } else {
+      console.error("Invalid state", state);
       return <span>Unknown</span>;
     }
   }
