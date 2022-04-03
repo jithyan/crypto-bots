@@ -1,6 +1,12 @@
 import type { TBotStatus } from "common-util";
-import { atom, selector, useRecoilValue, useRecoilState } from "recoil";
-import { botRegistry, getBotInfo, ImmutableBotInfo } from "./botRegistry";
+import {
+  atom,
+  selector,
+  useRecoilValue,
+  useRecoilState,
+  useSetRecoilState,
+} from "recoil";
+import { botRegistry, getBotInfo, ImmutableBotMap } from "./botRegistry";
 
 export function useSortedBotList() {
   return useRecoilValue(sortedBotData);
@@ -22,10 +28,41 @@ const sortBotMethod = atom<
   default: "statusDesc",
 });
 
+export const filterMethod = atom<{ method: "" | "symbol"; value: string }>({
+  key: "filterMethod",
+  default: {
+    method: "",
+    value: "",
+  },
+});
+
+export const filteredBotData = selector({
+  key: "filterBotData",
+  get: ({ get }) => {
+    const bots = get(botRegistry);
+    const { method, value } = get(filterMethod);
+    if (!method || !value) {
+      return bots;
+    }
+    return bots.filter((b) => {
+      const sym = getBotInfo(b, "symbol").toLowerCase();
+      const has = getBotInfo(b, "symbol")
+        .toLowerCase()
+        .includes(value.toLowerCase());
+      console.log({ sym, has, value });
+      return has;
+    });
+  },
+});
+
+export function useBotFilter() {
+  return useSetRecoilState(filterMethod);
+}
+
 export const sortedBotData = selector({
   key: "sortedBotData",
   get: ({ get }) => {
-    const bots = get(botRegistry).toList();
+    const bots = get(filteredBotData);
     const sortBy = get(sortBotMethod);
 
     switch (sortBy) {
@@ -54,21 +91,21 @@ const statusSortScore: Record<TBotStatus, number> = {
   "SHUTTING DOWN": 2,
   OFFLINE: 1,
 };
-function sortByStatusAsc(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
+function sortByStatusAsc(a: ImmutableBotMap, b: ImmutableBotMap): number {
   const statusA = statusSortScore[getBotInfo(a, "status")];
   const statusB = statusSortScore[getBotInfo(b, "status")];
 
   return statusA - statusB;
 }
 
-function sortByProfit(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
+function sortByProfit(a: ImmutableBotMap, b: ImmutableBotMap): number {
   const profitA = Number(getBotInfo(a, "state")?.profit ?? "0");
   const profitB = Number(getBotInfo(b, "state")?.profit ?? "0");
 
   return profitA - profitB;
 }
 
-function sortBySymbol(a: ImmutableBotInfo, b: ImmutableBotInfo): number {
+function sortBySymbol(a: ImmutableBotMap, b: ImmutableBotMap): number {
   const statusA = getBotInfo(a, "symbol");
   const statusB = getBotInfo(b, "symbol");
 

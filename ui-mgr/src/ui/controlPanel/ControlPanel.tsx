@@ -1,7 +1,8 @@
-import React from "react";
+//@ts-ignore
+import React, { startTransition, useState } from "react";
 import type { PropsWithChildren } from "react";
 import { usePasswordContext } from "../password";
-import { useBotSortMethod, useBotStats } from "../../state";
+import { useBotFilter, useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { formatAsUsd } from "../../utils/format";
@@ -51,6 +52,9 @@ export function ControlPanel() {
     numBotsPlacedOrders,
     numBotsSleeping,
   } = useBotStats();
+
+  const setFilter = useBotFilter();
+  const [filterValue, setFilterValue] = useState("");
 
   const animatedTotalProfit = useAnimateNumber(totalProfit, 3, {
     steps: 25,
@@ -149,7 +153,7 @@ export function ControlPanel() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Sort
+                    Sort & Filter
                   </a>
                   <ul
                     className="dropdown-menu dropdown-menu-dark"
@@ -195,6 +199,28 @@ export function ControlPanel() {
                         >
                           Profit
                         </button>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="dropdown-item">
+                        <label className="form-label">
+                          Filter by symbol
+                          <input
+                            className="form-control"
+                            type="text"
+                            value={filterValue}
+                            onChange={(e) => {
+                              const value = e.target.value ?? "";
+                              setFilterValue(value);
+                              startTransition(() =>
+                                setFilter({
+                                  method: "symbol",
+                                  value,
+                                })
+                              );
+                            }}
+                          />
+                        </label>
                       </div>
                     </li>
                   </ul>

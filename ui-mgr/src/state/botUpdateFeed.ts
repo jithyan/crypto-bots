@@ -2,7 +2,7 @@ import { atom, selector, useRecoilState } from "recoil";
 import { List } from "immutable";
 import type { IBotInfoStream } from "common-util";
 import Big from "big.js";
-import { botInfoFor, getBotInfo, ImmutableBotInfo } from "./botRegistry";
+import { botInfoFor, getBotInfo, ImmutableBotMap } from "./botRegistry";
 import { formatIsoDate } from "../utils/format";
 
 export const MAX_EVENT_LIST = 4;
@@ -36,7 +36,7 @@ const botFeed = selector<IBotInfoStream | List<string>>({
   },
 });
 
-type DetectChange = (current: IBotInfoStream, old: ImmutableBotInfo) => string;
+type DetectChange = (current: IBotInfoStream, old: ImmutableBotMap) => string;
 
 const skipIfPriceBot =
   (fn: DetectChange): DetectChange =>
@@ -57,7 +57,7 @@ function isPriceBot(bot: IBotInfoStream): boolean {
 
 function getUpdateForBot(
   bot: IBotInfoStream,
-  oldBot: ImmutableBotInfo | undefined
+  oldBot: ImmutableBotMap | undefined
 ): string {
   const initialLog = `[${formatIsoDate(bot.lastCheckIn)}] ${bot.symbol}:`;
 
@@ -72,7 +72,7 @@ function getUpdateForBot(
   }`;
 }
 
-function statusChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
+function statusChange(currentBot: IBotInfoStream, oldBot: ImmutableBotMap) {
   const oldStatus = getBotInfo(oldBot, "status");
   const currentStatus = currentBot.status;
 
@@ -87,7 +87,7 @@ function statusChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
 
 function tickerPriceChange(
   currentBot: IBotInfoStream,
-  oldBot: ImmutableBotInfo
+  oldBot: ImmutableBotMap
 ): string {
   const oldTickerPrice = new Big(
     getBotInfo(oldBot, "state")?.tickerPrice ?? "0"
@@ -108,7 +108,7 @@ function tickerPriceChange(
 
 function stateChange(
   currentBot: IBotInfoStream,
-  oldBot: ImmutableBotInfo
+  oldBot: ImmutableBotMap
 ): string {
   const oldState = getBotInfo(oldBot, "state")?.state;
   const currState = currentBot?.state?.state;
@@ -120,7 +120,7 @@ function stateChange(
   }
 }
 
-function profitChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
+function profitChange(currentBot: IBotInfoStream, oldBot: ImmutableBotMap) {
   const oldProfit = new Big(getBotInfo(oldBot, "state")?.profit ?? "0");
   const currProfit = new Big(currentBot?.state?.profit ?? "0");
 
@@ -132,10 +132,7 @@ function profitChange(currentBot: IBotInfoStream, oldBot: ImmutableBotInfo) {
   }
 }
 
-function priceTrendChange(
-  currentBot: IBotInfoStream,
-  oldBot: ImmutableBotInfo
-) {
+function priceTrendChange(currentBot: IBotInfoStream, oldBot: ImmutableBotMap) {
   const oldPriceTrend = getBotInfo(oldBot, "state")?.priceTrendState;
   const currPriceTrend = currentBot?.state?.priceTrendState;
 

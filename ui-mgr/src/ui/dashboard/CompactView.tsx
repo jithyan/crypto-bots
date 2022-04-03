@@ -173,7 +173,7 @@ export const BotRow = React.memo(
                 aria-labelledby={`${id}-bot-actions`}
               >
                 {Object.keys(actions).map((action) => (
-                  <li>
+                  <li key={`action-${id}-${action}`}>
                     <ActionButton
                       key={`${id}-${action}`}
                       id={id}

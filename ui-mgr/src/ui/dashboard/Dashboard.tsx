@@ -1,9 +1,10 @@
 import React from "react";
 import type { IBotStateDetails, TBotActions } from "common-util";
-import type { List } from "immutable";
+import type { Collection, List } from "immutable";
 import { ImmutableBotInfo, getBotInfo } from "../../state";
 import { BotFeed } from "./BotFeed";
 import { BotRow } from "./CompactView";
+import type { ImmutableBotCollection } from "src/state/botRegistry";
 
 export interface IStateProps {
   lastState: IBotStateDetails;
@@ -18,9 +19,10 @@ export function Dashboard({
   data,
   changes,
 }: {
-  data: List<ImmutableBotInfo>;
+  data: ImmutableBotCollection;
   changes: List<string>;
 }) {
+  let index = 0;
   return (
     <>
       <div className="row">
@@ -28,12 +30,8 @@ export function Dashboard({
           <BotFeed changes={changes} />
         </div>
       </div>
-      {data.map((b, index) => (
-        <BotRow
-          key={`${getBotInfo(b, "id")}-${index + 1}`}
-          index={index + 1}
-          id={getBotInfo(b, "id")}
-        />
+      {data.map((b, id) => (
+        <BotRow key={`row-${++index}-${id}`} index={index} id={id} />
       ))}
     </>
   );

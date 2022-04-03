@@ -5,7 +5,7 @@ import {
   useRecoilValue,
   useSetRecoilState,
 } from "recoil";
-import { Map } from "immutable";
+import { Collection, Map } from "immutable";
 import type { IBotInfoStream } from "common-util";
 import { useCallback, useMemo } from "react";
 import Big from "big.js";
@@ -31,13 +31,15 @@ export function useBotStats() {
   return useMemo(() => botStats, Object.values(botStats));
 }
 
-export type ImmutableBotInfo<
+export type ImmutableBotMap<
   K extends keyof IBotInfoStream = keyof IBotInfoStream
 > = Map<K, IBotInfoStream[K]>;
 
+export type ImmutableBotCollection = Collection<string, ImmutableBotMap>;
+
 export const botRegistry = atom({
   key: "botRegistry",
-  default: Map<string, ImmutableBotInfo>(),
+  default: Map<string, ImmutableBotMap>(),
 });
 
 export const botInfoFor = selectorFamily({
@@ -137,18 +139,18 @@ export const atomBotStats = selector<{
 
 export function getBotInfo<
   K extends keyof IBotInfoStream = keyof IBotInfoStream
->(map: ImmutableBotInfo, key: K): IBotInfoStream[K] {
+>(map: ImmutableBotMap, key: K): IBotInfoStream[K] {
   return map.get(key) as IBotInfoStream[K];
 }
 
 function botRegistryReducer(
-  prevState: Map<string, ImmutableBotInfo>,
+  prevState: Map<string, ImmutableBotMap>,
   action: BotEventData
-): Map<string, ImmutableBotInfo> {
+): Map<string, ImmutableBotMap> {
   switch (action.event) {
     case "allbots":
       return Map(
-        action.data.map((bot) => [bot.id, Map(bot) as ImmutableBotInfo])
+        action.data.map((bot) => [bot.id, Map(bot) as ImmutableBotMap])
       );
 
     case "botremove":
@@ -160,10 +162,7 @@ function botRegistryReducer(
         .setIn([action.data.id, "actions"], action.data.actions);
 
     case "botupdate":
-      return prevState.set(
-        action.data.id,
-        Map(action.data) as ImmutableBotInfo
-      );
+      return prevState.set(action.data.id, Map(action.data) as ImmutableBotMap);
 
     default:
       return prevState;
