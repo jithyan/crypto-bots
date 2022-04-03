@@ -14,9 +14,6 @@ const execute = (arg: Actions) => {
 execute("Analyze price bot");
 
 const ignoreSymbols = [
-  "1",
-  "a",
-  "b",
   "zec",
   "xmr",
   "dash",
@@ -41,8 +38,7 @@ if (action.do === "Analyze price bot") {
           !ignoreSymbols.some((pref) => fn.split("/").pop()?.startsWith(pref))
       )
       .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
-
-    const numProcesses = 8;
+    const numProcesses = 32;
     const simulArgs = volatileSymbols.map((vol) => [numProcesses, vol]);
     console.log(simulArgs);
     console.time("simul");
@@ -60,7 +56,7 @@ if (action.do === "Analyze price bot") {
   console.time("simul");
 
   runAsyncSequentially(
-    ["luna"].map((vol) => [numProcesses, vol]),
+    ["xrp"].map((vol) => [numProcesses, vol]),
     startSimulations
   ).then(() => {
     console.timeEnd("simul");

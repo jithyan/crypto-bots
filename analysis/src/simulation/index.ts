@@ -128,24 +128,42 @@ function generateSimulationCombinations(
   stableAsset = "BUSD"
 ): SimulationParams[] {
   const stopLosses = [
+    "0.04",
     "0.05",
     "0.06",
     "0.07",
     "0.08",
-    // "0.09",
+    "0.09",
     "0.10",
-    // "0.11",
+    "0.11",
     "0.12",
-    // "0.13",
-    // "0.14",
+    "0.13",
+    "0.14",
     "0.15",
   ];
 
-  const decreases = ["0.985", "0.995", "0.999"];
-  const increases = ["1.0015", "1.00175", "1.0035", "1.005"];
-  const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15"];
-  const postSellSleepDuration: string[] = ["4"];
-  const pumpSignals: string[] = ["1.02"];
+  const decreases = ["0.985", "0.995", "0.999", "0.98"];
+  const increases = [
+    "1.0015",
+    "1.00175",
+    "1.0035",
+    "1.005",
+    "1.0075",
+    "1.01",
+    "1.001",
+  ];
+  const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15", "m30"];
+  const postSellSleepDuration: string[] = [
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "12",
+    "18",
+    "24",
+  ];
+  const pumpSignals: string[] = ["1.02", "1.015", "1.01", "1.03", "1.035"];
 
   const combinations = stopLosses
     .map((stopLoss) =>
