@@ -198,6 +198,7 @@ export const BotRow = React.memo(
                 priceTrendState={lastState?.priceTrendState}
                 symbol={symbol}
                 lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
+                iteration={lastState.iteration}
               />
             ) : (
               <ExpandedView
@@ -222,12 +223,14 @@ function BotState({
   tickerPrice,
   lastPurchasePrice,
   symbol,
+  iteration,
 }: {
   symbol: string;
   priceTrendState: string;
   assetState: string;
   tickerPrice: string;
   lastPurchasePrice: string;
+  iteration?: number;
 }) {
   const holdsVolatileAsset = assetState.includes("Volatile");
   const formattedTickerPrice = useAnimateNumber(tickerPrice, 3);
@@ -238,7 +241,9 @@ function BotState({
     return null;
   } else if (assetState.includes("Stasis")) {
     return (
-      <span className="badge bg-dark text-light">Zzz.. {4 - 1}h left</span>
+      <span className="badge bg-dark text-light">
+        Zzz.. {4 - iteration!}h left
+      </span>
     );
   }
 
