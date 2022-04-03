@@ -1,19 +1,9 @@
 import React from "react";
-import type { IBotStateDetails, TBotActions } from "common-util";
-import type { Collection, List } from "immutable";
-import { ImmutableBotInfo, getBotInfo } from "../../state";
+import type { IBotStateDetails } from "common-util";
+import type { List } from "immutable";
 import { BotFeed } from "./BotFeed";
-import { BotRow } from "./CompactView";
+import { BotRow } from "./BotRow";
 import type { ImmutableBotCollection } from "src/state/botRegistry";
-
-export interface IStateProps {
-  lastState: IBotStateDetails;
-  symbol: string;
-  lastCheckIn: string;
-  status: string;
-  index: number;
-  id: string;
-}
 
 export function Dashboard({
   data,
