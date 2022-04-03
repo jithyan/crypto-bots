@@ -51,7 +51,9 @@ type SimulationParams = Record<
   | "interval"
   | "stopLoss"
   | "increase"
-  | "decrease",
+  | "decrease"
+  | "postSellSleep"
+  | "pumpInc",
   string
 >;
 
@@ -72,6 +74,8 @@ async function runSingleSimulationProcessFor(
     stopLoss = "0.03",
     increase = "1.00175",
     decrease = "0.99975",
+    postSellSleep = "4",
+    pumpInc = "",
   }: SimulationParams,
   processNumber: number,
   results: any[]
@@ -92,6 +96,8 @@ async function runSingleSimulationProcessFor(
         INC: increase,
         DEC: decrease,
         STOPL: stopLoss,
+        PUMP_INC: pumpInc,
+        POST_SELL_SLEEP: postSellSleep,
         NUM_PRICE_CALLS:
           sleepStrategyToNumCalls[interval as Intervals].toString(),
       },
@@ -138,6 +144,8 @@ function generateSimulationCombinations(
   const decreases = ["0.985", "0.995", "0.999"];
   const increases = ["1.0015", "1.00175", "1.0035", "1.005"];
   const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15"];
+  const postSellSleepDuration: string[] = ["4"];
+  const pumpSignals: string[] = ["1.02"];
 
   const combinations = stopLosses
     .map((stopLoss) =>
@@ -147,16 +155,24 @@ function generateSimulationCombinations(
     .map((a) => decreases.map((decrease) => ({ decrease, ...a })))
     .flatMap((x) => x)
     .map((a) => increases.map((increase) => ({ increase, ...a })))
+    .flatMap((x) => x)
+    .map((a) =>
+      postSellSleepDuration.map((postSellSleep) => ({ postSellSleep, ...a }))
+    )
+    .flatMap((x) => x)
+    .map((a) => pumpSignals.map((pumpInc) => ({ pumpInc, ...a })))
     .flatMap((x) => x);
 
   const params: SimulationParams[] = combinations.map(
-    ({ interval, stopLoss, increase, decrease }) => ({
+    ({ interval, stopLoss, increase, decrease, pumpInc, postSellSleep }) => ({
       volatileAsset,
       stableAsset,
       interval,
       stopLoss,
       increase,
       decrease,
+      pumpInc,
+      postSellSleep,
     })
   );
 

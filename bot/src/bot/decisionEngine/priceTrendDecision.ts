@@ -87,9 +87,17 @@ abstract class DecisionEngine implements IDecisionEngine {
       return false;
     }
 
-    return this.calcPctChangeInPriceSinceLastCheck(currentPrice).gt(
-      new Big(this.decisionConfig.PUMP_INC)
-    );
+    const isPumping = this.calcPctChangeInPriceSinceLastCheck(currentPrice)
+      .add("1")
+      .gt(new Big(this.decisionConfig.PUMP_INC));
+
+    stateLogger.debug("Is it pumping?", {
+      isPumping,
+      currentPrice,
+      state: this,
+    });
+
+    return isPumping;
   };
 
   isADecrease = (currentPrice: Big): boolean => {
@@ -318,7 +326,7 @@ export class DownwardPriceTrend extends DecisionEngine {
           },
           this.decisionConfig
         ),
-        buy: false,
+        buy: this.isAPump(new Big(currentPrice)),
       };
     } else {
       result = {

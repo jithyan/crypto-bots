@@ -16,6 +16,8 @@ const stableAsset = process.env.STAB as string;
 const increase = process.env.INC as string;
 const decrease = process.env.DEC as string;
 const stopLoss = process.env.STOPL as string;
+const pumpSignal = process.env.PUMP_INC as string;
+const postSellSleep = process.env.POST_SELL_SLEEP as string;
 
 if (
   interval &&
@@ -23,7 +25,8 @@ if (
   stableAsset &&
   increase &&
   decrease &&
-  stopLoss
+  stopLoss &&
+  postSellSleep
 ) {
   startEngine();
 }
@@ -47,6 +50,8 @@ async function startEngine() {
         stopLoss,
         interval,
         stats,
+        postSellSleep,
+        pumpSignal,
       };
       process.send?.(JSON.stringify(result));
 
@@ -92,11 +97,13 @@ function getBotConfig() {
     sleepStrategy: "no-sleep",
     volatileAsset: volatileAsset?.toUpperCase().trim(),
     stableAsset: stableAsset?.toUpperCase().trim(),
+    postSellSleep: Number(postSellSleep),
     decisionConfig: {
       MIN_PERCENT_INCREASE_FOR_SELL: "1.015",
       PRICE_HAS_INCREASED_THRESHOLD: increase,
       PRICE_HAS_DECREASED_THRESHOLD: decrease,
       STOP_LOSS_THRESHOLD: stopLoss,
+      PUMP_INC: pumpSignal,
     },
   };
 }
