@@ -1,23 +1,51 @@
 import Big from "big.js";
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import type { ThemeColor } from "src/utils/types";
 import { formatAsUsd } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import type { IStateProps } from "./Dashboard";
 
+export function Badge({
+  children,
+  color,
+  rounded = false,
+  textColor,
+  style,
+}: PropsWithChildren<{
+  color: ThemeColor;
+  textColor?: ThemeColor;
+  rounded?: boolean;
+  style?: React.CSSProperties;
+}>) {
+  const bgColorClass = `bg-${color}`;
+  const txtColorClass = textColor ? `text-${textColor}` : "";
+  const roundedPillClass = rounded ? "rounded-pill" : "";
+
+  const className = ["badge", bgColorClass, txtColorClass, roundedPillClass]
+    .filter(Boolean)
+    .join(" ");
+
+  return (
+    <span style={style} className={className}>
+      {children}
+    </span>
+  );
+}
+
 const holdStableAssetIcon = (
-  <span style={{ margin: "1px" }} className="badge rounded-pill bg-secondary">
+  <Badge style={{ margin: "1px" }} rounded={true} color="secondary">
     S
-  </span>
+  </Badge>
 );
 const orderPlacedIcon = (
-  <span style={{ margin: "1px" }} className="badge rounded-pill bg-warning">
+  <Badge style={{ margin: "1px" }} rounded={true} color="warning">
     O
-  </span>
+  </Badge>
 );
 const holdVolatileAssetIcon = (
-  <span style={{ margin: "1px" }} className="badge rounded-pill bg-primary">
+  <Badge style={{ margin: "1px" }} rounded={true} color="primary">
     V
-  </span>
+  </Badge>
 );
 
 export const AssetStateBadge = React.memo(
@@ -73,12 +101,14 @@ export const PctChangeBadge = React.memo(
     );
 
     return (
-      <span
+      <Badge
         style={{ margin: "1px" }}
-        className={`badge rounded-pill bg-light text-${purchasePriceBgColor}`}
+        rounded={true}
+        color="light"
+        textColor={purchasePriceBgColor}
       >
         {pctChange}%
-      </span>
+      </Badge>
     );
   }
 );
@@ -99,12 +129,9 @@ export const LastPurchasePriceBadge = React.memo(
     });
 
     return (
-      <span
-        style={{ margin: "1px" }}
-        className={`badge bg-${purchasePriceBgColor}`}
-      >
+      <Badge style={{ margin: "1px" }} color={purchasePriceBgColor}>
         {formatAsUsd(lastPurchasePriceAsBig.toString(), 3)}
-      </span>
+      </Badge>
     );
   }
 );

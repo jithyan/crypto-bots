@@ -30,9 +30,11 @@ export function Dashboard({
           <BotFeed changes={changes} />
         </div>
       </div>
-      {data.map((b, id) => (
-        <BotRow key={`row-${++index}-${id}`} index={index} id={id} />
-      ))}
+      {data
+        .map((_, id) => (
+          <BotRow key={`row-${++index}-${id}`} index={index} id={id} />
+        ))
+        .toList()}
     </>
   );
 }

@@ -6,6 +6,7 @@ import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 import {
   AssetStateBadge,
+  Badge,
   LastPurchasePriceBadge,
   PctChangeBadge,
 } from "./Badges";
@@ -131,6 +132,7 @@ export const BotRow = React.memo(
             </small>
             <span style={{ paddingTop: "8px" }}>{symbol}</span>
           </BotColItem>
+
           <BotColItem
             bgColor={statusBgColor}
             minWidth="104px"
@@ -139,12 +141,15 @@ export const BotRow = React.memo(
           >
             {status}
           </BotColItem>
+
           <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
             {version}
           </BotColItem>
+
           <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
             {formatAsUsd(profit, 3)}
           </BotColItem>
+
           <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
             <CheckInAndSleepStrategy
               sleepStrategy={sleepStrategy}
@@ -157,6 +162,7 @@ export const BotRow = React.memo(
               checkInIsoDate={getBotInfo(bot, "lastCheckIn")}
             />
           </BotColItem>
+
           <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
             <div className="dropdown">
               <button
@@ -241,9 +247,9 @@ function BotState({
     return null;
   } else if (assetState.includes("Stasis")) {
     return (
-      <span className="badge bg-dark text-light">
+      <Badge color="dark" textColor="light">
         Zzz.. {4 - iteration!}h left
-      </span>
+      </Badge>
     );
   }
 
@@ -294,108 +300,18 @@ export function BotColItem({
   );
 }
 
-function CompactViewNoMemo({ id, index }: IStateProps) {
-  const bot = useBotDetails(id);
-
-  if (!bot) {
-    return null;
-  }
-
-  const lastCheckIn = getBotInfo(bot, "lastCheckIn");
-  const status = getBotInfo(bot, "status");
-  const symbol = getBotInfo(bot, "symbol");
-  const lastState = getBotInfo(bot, "state");
-  const version = getBotInfo(bot, "version");
-  const profit = lastState.profit ?? "0";
-
-  const lastTickerPrice = useAnimateNumber(lastState.tickerPrice, 3);
-  const checkIn = formatIsoDate(lastCheckIn);
-  const holdsVolatileAsset = lastState.state === "HoldVolatileAsset";
-
-  const bgStyle = useUpdateStyleOnCheckIn(lastCheckIn, {
-    normalStyle: "",
-    updatedStyle: "bg-warning",
-  });
-
-  if (lastState?.state === "PostSellStasis") {
-    return (
-      <div>
-        <ul className="list-group list-group-horizontal-sm">
-          <li className={`list-group-item ${bgStyle}`}>
-            <span className="badge bg-dark text-light">
-              Zzz.. {4 - lastState.iteration}h left
-            </span>
-          </li>
-          <li className={`list-group-item ${bgStyle}`}>
-            <CheckInAndSleepStrategy sleepStrategy={"1h"} checkIn={checkIn} />
-          </li>
-        </ul>
-      </div>
-    );
-  }
-
-  if (symbol === "PRICEBOT") {
-    return (
-      <div>
-        <ul className="list-group list-group-horizontal-sm">
-          <li className={`list-group-item ${bgStyle}`}>
-            <CheckInAndSleepStrategy
-              sleepStrategy={lastState.config.sleepStrategy}
-              checkIn={checkIn}
-            />
-          </li>
-        </ul>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <ul className="list-group list-group-horizontal-sm">
-        <li className={`list-group-item ${bgStyle}`}>{index}</li>
-        <li className={`list-group-item ${bgStyle}`}>{symbol}</li>
-        <li className={`list-group-item ${bgStyle}`}>{status}</li>
-        <li className={`list-group-item ${bgStyle}`}>{version}</li>
-
-        <li className={`list-group-item ${bgStyle}`}>
-          <AssetStateBadge assetState={lastState.state} />{" "}
-          <PriceTrendIcon trendState={lastState.priceTrendState} /> $
-          {lastTickerPrice}{" "}
-          {holdsVolatileAsset && (
-            <>
-              <LastPurchasePriceBadge
-                lastPurchasePrice={lastState.lastPurchasePrice}
-                tickerPrice={lastState.tickerPrice}
-              />{" "}
-              <PctChangeBadge
-                lastPurchasePrice={lastState.lastPurchasePrice}
-                tickerPrice={lastState.tickerPrice}
-              />{" "}
-            </>
-          )}
-        </li>
-        <li className={`list-group-item ${bgStyle}`}>
-          <CheckInAndSleepStrategy
-            sleepStrategy={lastState.config.sleepStrategy}
-            checkIn={checkIn}
-          />
-        </li>
-      </ul>
-    </div>
-  );
-}
-
 export const CheckInAndSleepStrategy = React.memo(
   ({ sleepStrategy, checkIn }: Record<"sleepStrategy" | "checkIn", string>) => {
     return (
       <small>
         {checkIn}{" "}
-        <span
+        <Badge
           style={{ padding: "1px 2px" }}
-          className="badge bg-secondary text-light"
+          color="secondary"
+          textColor="light"
         >
           {sleepStrategy}
-        </span>
+        </Badge>
       </small>
     );
   }
