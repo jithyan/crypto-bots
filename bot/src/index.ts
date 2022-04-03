@@ -31,7 +31,9 @@ if (Config.RUN_BOT_ON_STARTUP) {
         Config.PRICE_HAS_DECREASED_THRESHOLD
       ).toFixed(5),
       STOP_LOSS_THRESHOLD: new Big(Config.STOP_LOSS_THRESHOLD).toFixed(5),
+      PUMP_INC: Config.PUMP_INC,
     },
+    postSellSleep: Number(Config.POST_SELL_SLEEP),
     enableControlServer: true,
   });
 }
@@ -43,6 +45,7 @@ export default async function runCryptoBot(args: {
   sleepStrategy: TSleepStrategyTypes;
   decisionConfig: PriceTrendDecisionConfig;
   enableControlServer: boolean;
+  postSellSleep: number;
 }) {
   if (!args.volatileAsset && args.stableAsset) {
     throw new Error("Invalid args " + args);

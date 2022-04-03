@@ -47,6 +47,7 @@ export function hydrate(
     clientOrderId,
     stats,
     iteration,
+    postSellSleep,
   } = file;
   const {
     state: deState,
@@ -89,6 +90,9 @@ export function hydrate(
     isStableAssetClass,
     decisionEngine,
     sleep: getSleepStrategy(sleepStrategy),
+    postSellSleep: Number(
+      postSellSleep ? postSellSleep : Config.POST_SELL_SLEEP
+    ),
   };
 
   switch (state as TAssetStates) {
@@ -124,6 +128,7 @@ export async function initialiseAssetState(args: {
   stableAsset: TStableCoins;
   sleepStrategy: TSleepStrategyTypes;
   decisionConfig: PriceTrendDecisionConfig;
+  postSellSleep: number;
 }): Promise<ITradeAssetCycle> {
   const currentPrice = await binanceClient.getLatestPrice(
     args.volatileAsset,

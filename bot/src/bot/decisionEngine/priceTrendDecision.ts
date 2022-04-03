@@ -30,7 +30,8 @@ export type PriceTrendDecisionConfig = Record<
   | "MIN_PERCENT_INCREASE_FOR_SELL"
   | "PRICE_HAS_INCREASED_THRESHOLD"
   | "PRICE_HAS_DECREASED_THRESHOLD"
-  | "STOP_LOSS_THRESHOLD",
+  | "STOP_LOSS_THRESHOLD"
+  | "PUMP_INC",
   string
 >;
 
@@ -79,6 +80,16 @@ abstract class DecisionEngine implements IDecisionEngine {
     });
 
     return isAnIncrease;
+  };
+
+  isAPump = (currentPrice: Big) => {
+    if (!Boolean(this.decisionConfig.PUMP_INC)) {
+      return false;
+    }
+
+    return this.calcPctChangeInPriceSinceLastCheck(currentPrice).gt(
+      new Big(this.decisionConfig.PUMP_INC)
+    );
   };
 
   isADecrease = (currentPrice: Big): boolean => {

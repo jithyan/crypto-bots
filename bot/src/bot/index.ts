@@ -17,6 +17,7 @@ export async function* executeTradeCycle({
   enableResume: boolean;
   decisionConfig: PriceTrendDecisionConfig;
   enableControlServer: boolean;
+  postSellSleep: number;
 }) {
   const symbol = `${args.volatileAsset}${args.stableAsset}`;
   let nextAssetState;

@@ -37,6 +37,7 @@ interface IAssetStateArguments<VolatileAsset, StableAsset> {
   decisionEngine: IDecisionEngine;
   sleep: ISleepStrategy;
   stats: Readonly<Record<"usdProfitToDate", string>>;
+  postSellSleep: number;
 }
 
 type TAssetStateParentOnlyArguments = "state" | "isStableAssetClass";
@@ -59,6 +60,7 @@ export class AssetState<
   readonly decisionEngine: IDecisionEngine;
   readonly sleep: ISleepStrategy;
   readonly stats: { usdProfitToDate: string };
+  readonly postSellSleep: number;
   numberOfTimeouts: number;
 
   constructor({
@@ -69,6 +71,7 @@ export class AssetState<
     decisionEngine,
     sleep,
     stats,
+    postSellSleep,
   }: IAssetStateArguments<VolatileAsset, StableAsset>) {
     this.symbol = `${volatileAsset}${stableAsset}`;
     this.state = state;
@@ -79,6 +82,7 @@ export class AssetState<
     this.sleep = sleep;
     this.stats = stats;
     this.numberOfTimeouts = 0;
+    this.postSellSleep = Number(postSellSleep);
 
     stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
@@ -223,7 +227,7 @@ export class PostSellStasis<
 
   execute: () => Promise<ITradeAssetCycle> = async () => {
     stateLogger.info("PostSellStasis iter: " + this.iteration, { state: this });
-    if (this.iteration < 4) {
+    if (this.iteration < this.postSellSleep) {
       await this.sleep.waitAnHour();
       return new PostSellStasis({ ...this }, this.iteration + 1);
     } else {
