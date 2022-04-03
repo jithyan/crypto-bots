@@ -1,21 +1,13 @@
 //@ts-ignore
 import React, { useEffect, useState, startTransition } from "react";
 import { formatAsUsd, formatIsoDate } from "../../utils/format";
-import { PriceTrendIcon, ThreeDotsVertical } from "./Icons";
-import type { IStateProps } from "./Dashboard";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
-import {
-  AssetStateBadge,
-  Badge,
-  LastPurchasePriceBadge,
-  PctChangeBadge,
-} from "./Badges";
+import { Badge } from "./Badges";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { getBotInfo, useBotDetails } from "../../state";
-import type { TBotActions } from "common-util";
-import { ActionButton } from "./ActionButton";
-import { ExpandedView } from "./ExpandedView";
-import { parseISO, formatDistanceStrict, add, isEqual } from "date-fns";
+import { ActionsMenu } from "./ActionsMenu";
+import { parseISO, formatDistanceStrict, add } from "date-fns";
+import { BotState } from "./BotState";
 
 export function TillNextUpdateCountdown({
   sleepStrategy,
@@ -109,7 +101,6 @@ export const BotRow = React.memo(
     const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
 
     const [borderColor, setBorderColor] = useState("dark");
-    const [showCompact, setShowCompact] = useState(true);
 
     return (
       <div
@@ -164,116 +155,22 @@ export const BotRow = React.memo(
           </BotColItem>
 
           <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
-            <div className="dropdown">
-              <button
-                className="btn btn-dark dropdown-toggle text-light"
-                type="button"
-                id={`${id}-bot-actions`}
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <ThreeDotsVertical />
-              </button>
-              <ul
-                className="dropdown-menu"
-                aria-labelledby={`${id}-bot-actions`}
-              >
-                {Object.keys(actions).map((action) => (
-                  <li key={`action-${id}-${action}`}>
-                    <ActionButton
-                      key={`${id}-${action}`}
-                      id={id}
-                      path={actions[action as TBotActions] ?? ""}
-                      action={action}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ActionsMenu id={id} actions={actions} />
           </BotColItem>
 
-          <BotColItem
-            onClick={() => setShowCompact((prev) => !prev)}
-            minWidth="128px"
-            classNames={bgStyle}
-          >
-            {showCompact ? (
-              <BotState
-                tickerPrice={lastState?.tickerPrice ?? ""}
-                assetState={lastState?.state}
-                priceTrendState={lastState?.priceTrendState}
-                symbol={symbol}
-                lastPurchasePrice={lastState?.lastPurchasePrice ?? ""}
-                iteration={lastState.iteration}
-              />
-            ) : (
-              <ExpandedView
-                lastCheckIn={getBotInfo(bot, "lastCheckIn")}
-                lastState={lastState}
-                status={status}
-                symbol={symbol}
-                index={index}
-                id={id}
-              />
-            )}
+          <BotColItem minWidth="128px" classNames={bgStyle}>
+            <BotState
+              lastCheckIn={getBotInfo(bot, "lastCheckIn")}
+              status={status}
+              symbol={symbol}
+              {...lastState}
+            />
           </BotColItem>
         </ul>
       </div>
     );
   }
 );
-
-function BotState({
-  priceTrendState,
-  assetState,
-  tickerPrice,
-  lastPurchasePrice,
-  symbol,
-  iteration,
-}: {
-  symbol: string;
-  priceTrendState: string;
-  assetState: string;
-  tickerPrice: string;
-  lastPurchasePrice: string;
-  iteration?: number;
-}) {
-  const holdsVolatileAsset = assetState.includes("Volatile");
-  const formattedTickerPrice = useAnimateNumber(tickerPrice, 3);
-
-  const isPriceBot = symbol === "PRICEBOT";
-
-  if (isPriceBot) {
-    return null;
-  } else if (assetState.includes("Stasis")) {
-    return (
-      <Badge color="dark" textColor="light">
-        Zzz.. {4 - iteration!}h left
-      </Badge>
-    );
-  }
-
-  return (
-    <>
-      {" "}
-      <AssetStateBadge assetState={assetState} />{" "}
-      <PriceTrendIcon trendState={priceTrendState} />{" "}
-      <strong>{formatAsUsd(formattedTickerPrice, 3)}</strong>{" "}
-      {holdsVolatileAsset ? (
-        <>
-          <LastPurchasePriceBadge
-            lastPurchasePrice={lastPurchasePrice}
-            tickerPrice={tickerPrice}
-          />{" "}
-          <PctChangeBadge
-            lastPurchasePrice={lastPurchasePrice}
-            tickerPrice={tickerPrice}
-          />
-        </>
-      ) : null}
-    </>
-  );
-}
 
 export function BotColItem({
   bgColor,
