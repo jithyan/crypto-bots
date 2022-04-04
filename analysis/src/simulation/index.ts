@@ -132,13 +132,9 @@ function generateSimulationCombinations(
     "0.05",
     "0.06",
     "0.07",
-    "0.08",
     "0.09",
     "0.10",
-    "0.11",
     "0.12",
-    "0.13",
-    "0.14",
     "0.15",
   ];
 
@@ -154,7 +150,7 @@ function generateSimulationCombinations(
   ];
   const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15", "m30"];
   const postSellSleepDuration: string[] = ["4", "6", "8", "10", "12", "18"];
-  const pumpSignals: string[] = ["1.015", "1.02", "1.03", "1.035"];
+  const pumpSignals: string[] = ["", "1.015", "1.02", "1.03", "1.035"];
 
   const combinations = stopLosses
     .map((stopLoss) =>

@@ -1,6 +1,6 @@
 export default {
   timezone: "UTC",
-  serverTime: 1647227067176,
+  serverTime: 1649064413561,
   rateLimits: [
     {
       rateLimitType: "REQUEST_WEIGHT",
@@ -84,7 +84,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1334.63265638",
+          maxQty: "1195.39522784",
           stepSize: "0.00000000",
         },
         {
@@ -153,7 +153,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9936.54356072",
+          maxQty: "10212.15084732",
           stepSize: "0.00000000",
         },
         {
@@ -222,7 +222,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21710.63811944",
+          maxQty: "24895.40344791",
           stepSize: "0.00000000",
         },
         {
@@ -291,7 +291,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9580.72328472",
+          maxQty: "8590.58531250",
           stepSize: "0.00000000",
         },
         {
@@ -360,7 +360,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7928.32291666",
+          maxQty: "7718.99750000",
           stepSize: "0.00000000",
         },
         {
@@ -429,7 +429,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49525.59479166",
+          maxQty: "57517.54291666",
           stepSize: "0.00000000",
         },
         {
@@ -498,7 +498,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "464378.36458333",
+          maxQty: "400137.38958333",
           stepSize: "0.00000000",
         },
         {
@@ -567,7 +567,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13045.33284722",
+          maxQty: "16874.95493055",
           stepSize: "0.00000000",
         },
         {
@@ -699,7 +699,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15588.29868055",
+          maxQty: "21892.79763888",
           stepSize: "0.00000000",
         },
         {
@@ -768,7 +768,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8265.58468125",
+          maxQty: "4178.48158680",
           stepSize: "0.00000000",
         },
         {
@@ -837,7 +837,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "133.65993936",
+          maxQty: "135.48770327",
           stepSize: "0.00000000",
         },
         {
@@ -906,7 +906,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2624.23706611",
+          maxQty: "1668.59716465",
           stepSize: "0.00000000",
         },
         {
@@ -1377,7 +1377,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "75609.81808333",
+          maxQty: "111335.89097222",
           stepSize: "0.00000000",
         },
         {
@@ -1515,7 +1515,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "225131.49583333",
+          maxQty: "242310.33263888",
           stepSize: "0.00000000",
         },
         {
@@ -1584,7 +1584,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "102765.81597222",
+          maxQty: "80446.17986111",
           stepSize: "0.00000000",
         },
         {
@@ -1653,7 +1653,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15218.63247916",
+          maxQty: "13285.33868055",
           stepSize: "0.00000000",
         },
         {
@@ -1791,7 +1791,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25900.11826388",
+          maxQty: "30763.93062500",
           stepSize: "0.00000000",
         },
         {
@@ -1860,7 +1860,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13055.73118055",
+          maxQty: "11282.70375000",
           stepSize: "0.00000000",
         },
         {
@@ -1929,7 +1929,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "84965.95833333",
+          maxQty: "133216.03194444",
           stepSize: "0.00000000",
         },
         {
@@ -1998,7 +1998,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "80007.16944444",
+          maxQty: "60318.24913254",
           stepSize: "0.00000000",
         },
         {
@@ -2481,7 +2481,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "56908.22284722",
+          maxQty: "51109.64829979",
           stepSize: "0.00000000",
         },
         {
@@ -2550,7 +2550,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15579.28597222",
+          maxQty: "17820.40062500",
           stepSize: "0.00000000",
         },
         {
@@ -2688,7 +2688,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2212081.14236111",
+          maxQty: "4801762.27966689",
           stepSize: "0.00000000",
         },
         {
@@ -2757,7 +2757,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "228625.58402777",
+          maxQty: "446230.10208333",
           stepSize: "0.00000000",
         },
         {
@@ -2895,7 +2895,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2675.43813194",
+          maxQty: "2920.54097222",
           stepSize: "0.00000000",
         },
         {
@@ -2964,7 +2964,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "167127.04652777",
+          maxQty: "244340.91875000",
           stepSize: "0.00000000",
         },
         {
@@ -3033,7 +3033,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61110.27361111",
+          maxQty: "60194.31367106",
           stepSize: "0.00000000",
         },
         {
@@ -3102,7 +3102,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33722.99152083",
+          maxQty: "51690.19035392",
           stepSize: "0.00000000",
         },
         {
@@ -3171,7 +3171,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14511.15394444",
+          maxQty: "13533.80086805",
           stepSize: "0.00000000",
         },
         {
@@ -3309,7 +3309,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5544229.42152777",
+          maxQty: "3372785.22152777",
           stepSize: "0.00000000",
         },
         {
@@ -3504,7 +3504,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "91501.23263888",
+          maxQty: "85767.35183900",
           stepSize: "0.00000000",
         },
         {
@@ -3642,7 +3642,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31067.56284722",
+          maxQty: "24753.48493055",
           stepSize: "0.00000000",
         },
         {
@@ -3711,7 +3711,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29434.08430555",
+          maxQty: "19769.27862595",
           stepSize: "0.00000000",
         },
         {
@@ -3906,7 +3906,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "168915.82709027",
+          maxQty: "165091.80055517",
           stepSize: "0.00000000",
         },
         {
@@ -3975,7 +3975,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1140914.83333333",
+          maxQty: "1109136.97083333",
           stepSize: "0.00000000",
         },
         {
@@ -4044,7 +4044,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3977.72856250",
+          maxQty: "4348.01202777",
           stepSize: "0.00000000",
         },
         {
@@ -4113,7 +4113,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6355.30737500",
+          maxQty: "8627.65205555",
           stepSize: "0.00000000",
         },
         {
@@ -4458,7 +4458,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "879732.17916666",
+          maxQty: "964644.93472222",
           stepSize: "0.00000000",
         },
         {
@@ -4527,7 +4527,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2871.19582569",
+          maxQty: "1695.32425069",
           stepSize: "0.00000000",
         },
         {
@@ -4596,7 +4596,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1279.22548958",
+          maxQty: "400.01567361",
           stepSize: "0.00000000",
         },
         {
@@ -4665,7 +4665,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21989.14451388",
+          maxQty: "17824.87201388",
           stepSize: "0.00000000",
         },
         {
@@ -4734,7 +4734,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "294402.14305555",
+          maxQty: "365356.92643997",
           stepSize: "0.00000000",
         },
         {
@@ -4872,7 +4872,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1734.48816388",
+          maxQty: "1450.71588611",
           stepSize: "0.00000000",
         },
         {
@@ -4941,7 +4941,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "392.35751319",
+          maxQty: "465.30729791",
           stepSize: "0.00000000",
         },
         {
@@ -5010,7 +5010,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "284579.47569444",
+          maxQty: "542217.33125000",
           stepSize: "0.00000000",
         },
         {
@@ -5142,7 +5142,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1226.57852083",
+          maxQty: "1145.41093684",
           stepSize: "0.00000000",
         },
         {
@@ -5418,7 +5418,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "428813.75919500",
+          maxQty: "467196.91464260",
           stepSize: "0.00000000",
         },
         {
@@ -5556,7 +5556,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2169856.82638888",
+          maxQty: "3974352.58333333",
           stepSize: "0.00000000",
         },
         {
@@ -5625,7 +5625,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "625182.17916666",
+          maxQty: "886915.00902777",
           stepSize: "0.00000000",
         },
         {
@@ -5757,7 +5757,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "30951592.81180555",
+          maxQty: "24026556.93611111",
           stepSize: "0.00000000",
         },
         {
@@ -5826,7 +5826,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2545031.91736111",
+          maxQty: "1558920.29097222",
           stepSize: "0.00000000",
         },
         {
@@ -5895,7 +5895,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "234906.25277777",
+          maxQty: "167633.38055555",
           stepSize: "0.00000000",
         },
         {
@@ -5964,7 +5964,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "94260.12013888",
+          maxQty: "80809.75902777",
           stepSize: "0.00000000",
         },
         {
@@ -6033,7 +6033,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "98377.01708333",
+          maxQty: "105321.76145833",
           stepSize: "0.00000000",
         },
         {
@@ -6240,7 +6240,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1199072.74722222",
+          maxQty: "1406251.57113115",
           stepSize: "0.00000000",
         },
         {
@@ -6309,7 +6309,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "395061.23125000",
+          maxQty: "296676.57638888",
           stepSize: "0.00000000",
         },
         {
@@ -6504,7 +6504,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "90299.51048611",
+          maxQty: "112822.99444444",
           stepSize: "0.00000000",
         },
         {
@@ -6573,7 +6573,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37581.70020833",
+          maxQty: "35946.60707841",
           stepSize: "0.00000000",
         },
         {
@@ -6642,7 +6642,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "45516.96666666",
+          maxQty: "63679.38958333",
           stepSize: "0.00000000",
         },
         {
@@ -6780,7 +6780,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31835.29720277",
+          maxQty: "27138.01957569",
           stepSize: "0.00000000",
         },
         {
@@ -7176,7 +7176,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "59486.07737500",
+          maxQty: "79100.51492019",
           stepSize: "0.00000000",
         },
         {
@@ -7590,7 +7590,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "145388.95347222",
+          maxQty: "161607.23819444",
           stepSize: "0.00000000",
         },
         {
@@ -7935,7 +7935,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4798.03534236",
+          maxQty: "3977.97958541",
           stepSize: "0.00000000",
         },
         {
@@ -8004,7 +8004,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2734.00383611",
+          maxQty: "2034.80176041",
           stepSize: "0.00000000",
         },
         {
@@ -8349,7 +8349,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4852697.09930555",
+          maxQty: "7117478.32130464",
           stepSize: "0.00000000",
         },
         {
@@ -8745,7 +8745,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "197855.66597222",
+          maxQty: "176177.79930555",
           stepSize: "0.00000000",
         },
         {
@@ -8814,7 +8814,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "85622.21180555",
+          maxQty: "156808.05277777",
           stepSize: "0.00000000",
         },
         {
@@ -9573,7 +9573,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49689.68402777",
+          maxQty: "36993.99444444",
           stepSize: "0.00000000",
         },
         {
@@ -9642,7 +9642,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38216.95972222",
+          maxQty: "30238.78611111",
           stepSize: "0.00000000",
         },
         {
@@ -9711,7 +9711,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26427.32658333",
+          maxQty: "24277.61202777",
           stepSize: "0.00000000",
         },
         {
@@ -9780,7 +9780,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2902.92518750",
+          maxQty: "1849.81359722",
           stepSize: "0.00000000",
         },
         {
@@ -9987,7 +9987,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1338834.04027777",
+          maxQty: "1200904.14989590",
           stepSize: "0.00000000",
         },
         {
@@ -10194,7 +10194,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6207594.81597222",
+          maxQty: "6383347.91388888",
           stepSize: "0.00000000",
         },
         {
@@ -10608,7 +10608,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14666.24520833",
+          maxQty: "17728.08812500",
           stepSize: "0.00000000",
         },
         {
@@ -10677,7 +10677,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11374.70527777",
+          maxQty: "11930.87395833",
           stepSize: "0.00000000",
         },
         {
@@ -11091,7 +11091,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "153055.55486111",
+          maxQty: "174726.94305555",
           stepSize: "0.00000000",
         },
         {
@@ -11160,7 +11160,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "76358.48055555",
+          maxQty: "52348.99791666",
           stepSize: "0.00000000",
         },
         {
@@ -11505,7 +11505,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "30355.87777777",
+          maxQty: "78218.22152777",
           stepSize: "0.00000000",
         },
         {
@@ -11574,7 +11574,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "424717.84305555",
+          maxQty: "237845.10277777",
           stepSize: "0.00000000",
         },
         {
@@ -11643,7 +11643,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "116850.61319444",
+          maxQty: "148427.56041666",
           stepSize: "0.00000000",
         },
         {
@@ -11781,7 +11781,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1096033.55312500",
+          maxQty: "1253341.87756944",
           stepSize: "0.00000000",
         },
         {
@@ -11850,7 +11850,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "582775.77513888",
+          maxQty: "417304.38694444",
           stepSize: "0.00000000",
         },
         {
@@ -12264,7 +12264,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1907936.27638888",
+          maxQty: "2045919.33125000",
           stepSize: "0.00000000",
         },
         {
@@ -12333,7 +12333,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "664565.87708333",
+          maxQty: "604149.55555555",
           stepSize: "0.00000000",
         },
         {
@@ -12402,7 +12402,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "252082.89729354",
+          maxQty: "274997.92435808",
           stepSize: "0.00000000",
         },
         {
@@ -12816,7 +12816,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "399334.91041666",
+          maxQty: "321142.99583333",
           stepSize: "0.00000000",
         },
         {
@@ -12901,7 +12901,7 @@ export default {
     },
     {
       symbol: "WABIBNB",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "WABI",
       baseAssetPrecision: 8,
       quoteAsset: "BNB",
@@ -12954,7 +12954,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "196093.83125000",
+          maxQty: "119043.30972222",
           stepSize: "0.00000000",
         },
         {
@@ -13023,7 +13023,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2047.88179027",
+          maxQty: "2307.27208472",
           stepSize: "0.00000000",
         },
         {
@@ -13092,7 +13092,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23916.13660625",
+          maxQty: "23620.93528263",
           stepSize: "0.00000000",
         },
         {
@@ -13161,7 +13161,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1687.38116666",
+          maxQty: "1252.38894791",
           stepSize: "0.00000000",
         },
         {
@@ -13368,7 +13368,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19496.95747916",
+          maxQty: "13997.93702083",
           stepSize: "0.00000000",
         },
         {
@@ -13437,7 +13437,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2792.62321527",
+          maxQty: "9273.91111805",
           stepSize: "0.00000000",
         },
         {
@@ -13506,7 +13506,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2183.90546527",
+          maxQty: "2743.91119444",
           stepSize: "0.00000000",
         },
         {
@@ -13575,7 +13575,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4986080.10478834",
+          maxQty: "3077268.59375000",
           stepSize: "0.00000000",
         },
         {
@@ -13782,7 +13782,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "96146.92430555",
+          maxQty: "119556.41527777",
           stepSize: "0.00000000",
         },
         {
@@ -13851,7 +13851,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46734.62569444",
+          maxQty: "44472.47222222",
           stepSize: "0.00000000",
         },
         {
@@ -14196,7 +14196,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "72521.45870922",
+          maxQty: "111900.06041666",
           stepSize: "0.00000000",
         },
         {
@@ -14265,7 +14265,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52333.99722222",
+          maxQty: "86228.87638888",
           stepSize: "0.00000000",
         },
         {
@@ -14334,7 +14334,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "522922.02638888",
+          maxQty: "589063.03539208",
           stepSize: "0.00000000",
         },
         {
@@ -14403,7 +14403,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "273072.31944444",
+          maxQty: "293207.83958333",
           stepSize: "0.00000000",
         },
         {
@@ -14541,7 +14541,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "47823.05756944",
+          maxQty: "68222.74097222",
           stepSize: "0.00000000",
         },
         {
@@ -14679,7 +14679,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "209860.60138888",
+          maxQty: "639192.63636363",
           stepSize: "0.00000000",
         },
         {
@@ -14748,7 +14748,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "80135.91250000",
+          maxQty: "184721.69861111",
           stepSize: "0.00000000",
         },
         {
@@ -15219,7 +15219,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "182213.02916666",
+          maxQty: "281595.80569049",
           stepSize: "0.00000000",
         },
         {
@@ -16098,7 +16098,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31134.89104166",
+          maxQty: "32189.56722222",
           stepSize: "0.00000000",
         },
         {
@@ -16167,7 +16167,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25166.35895833",
+          maxQty: "18756.45954198",
           stepSize: "0.00000000",
         },
         {
@@ -16443,7 +16443,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "125940.92083333",
+          maxQty: "156886.74791666",
           stepSize: "0.00000000",
         },
         {
@@ -16581,7 +16581,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "64160915.46388888",
+          maxQty: "45402927.87786259",
           stepSize: "0.00000000",
         },
         {
@@ -16650,7 +16650,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1670162.81332408",
+          maxQty: "1932618.64260929",
           stepSize: "0.00000000",
         },
         {
@@ -16845,7 +16845,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "124509.50833333",
+          maxQty: "96276.33125000",
           stepSize: "0.00000000",
         },
         {
@@ -16914,7 +16914,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "104945.06250000",
+          maxQty: "94931.14920194",
           stepSize: "0.00000000",
         },
         {
@@ -17466,7 +17466,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "403167.98541666",
+          maxQty: "396114.84652777",
           stepSize: "0.00000000",
         },
         {
@@ -17535,7 +17535,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "262773.14652777",
+          maxQty: "192302.71458333",
           stepSize: "0.00000000",
         },
         {
@@ -18483,7 +18483,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9864644.41041666",
+          maxQty: "7606019.11172796",
           stepSize: "0.00000000",
         },
         {
@@ -18552,7 +18552,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "985249.69583333",
+          maxQty: "729752.13750000",
           stepSize: "0.00000000",
         },
         {
@@ -18621,7 +18621,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "756174.74097222",
+          maxQty: "899646.23263888",
           stepSize: "0.00000000",
         },
         {
@@ -18690,7 +18690,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "125974.12969444",
+          maxQty: "111703.85277777",
           stepSize: "0.00000000",
         },
         {
@@ -18759,7 +18759,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28807.54513888",
+          maxQty: "38072.27986111",
           stepSize: "0.00000000",
         },
         {
@@ -19173,7 +19173,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "36633.84881944",
+          maxQty: "64496.58340277",
           stepSize: "0.00000000",
         },
         {
@@ -19242,7 +19242,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1281688.44305555",
+          maxQty: "1473952.29097222",
           stepSize: "0.00000000",
         },
         {
@@ -19449,7 +19449,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "77230.68541666",
+          maxQty: "103397.49444444",
           stepSize: "0.00000000",
         },
         {
@@ -19518,7 +19518,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57726.03333333",
+          maxQty: "59018.12361111",
           stepSize: "0.00000000",
         },
         {
@@ -19794,7 +19794,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3516138.87500000",
+          maxQty: "8288726.85694444",
           stepSize: "0.00000000",
         },
         {
@@ -19932,7 +19932,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "202412.78611111",
+          maxQty: "327976.34305555",
           stepSize: "0.00000000",
         },
         {
@@ -20208,7 +20208,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "97837.90000000",
+          maxQty: "88627.06527777",
           stepSize: "0.00000000",
         },
         {
@@ -20346,7 +20346,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6210692.88395833",
+          maxQty: "8701925.86675919",
           stepSize: "0.00000000",
         },
         {
@@ -20415,7 +20415,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "347224.33340277",
+          maxQty: "200144.40909722",
           stepSize: "0.00000000",
         },
         {
@@ -20817,7 +20817,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1244321.07777777",
+          maxQty: "1179836.63819444",
           stepSize: "0.00000000",
         },
         {
@@ -20886,7 +20886,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "395901.95138888",
+          maxQty: "478784.23125000",
           stepSize: "0.00000000",
         },
         {
@@ -21282,7 +21282,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1988.30278194",
+          maxQty: "2949.38943095",
           stepSize: "0.00000000",
         },
         {
@@ -21420,7 +21420,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4.53085920",
+          maxQty: "2.61596015",
           stepSize: "0.00000000",
         },
         {
@@ -21552,7 +21552,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57.15031104",
+          maxQty: "34.80453118",
           stepSize: "0.00000000",
         },
         {
@@ -21747,7 +21747,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1770.56127777",
+          maxQty: "1708.38841666",
           stepSize: "0.00000000",
         },
         {
@@ -21816,7 +21816,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1231.74820138",
+          maxQty: "1131.57025694",
           stepSize: "0.00000000",
         },
         {
@@ -21885,7 +21885,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1275.28213888",
+          maxQty: "980.92401388",
           stepSize: "0.00000000",
         },
         {
@@ -22161,7 +22161,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "300375.02965277",
+          maxQty: "485208.67076388",
           stepSize: "0.00000000",
         },
         {
@@ -22230,7 +22230,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "36773.01097222",
+          maxQty: "41387.84993055",
           stepSize: "0.00000000",
         },
         {
@@ -22299,7 +22299,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "150927.13750000",
+          maxQty: "171436.49583333",
           stepSize: "0.00000000",
         },
         {
@@ -22506,7 +22506,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "163943.60715277",
+          maxQty: "108855.58972222",
           stepSize: "0.00000000",
         },
         {
@@ -22575,7 +22575,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17615.81048611",
+          maxQty: "22816.22486111",
           stepSize: "0.00000000",
         },
         {
@@ -22644,7 +22644,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25175.27395833",
+          maxQty: "18172.97015961",
           stepSize: "0.00000000",
         },
         {
@@ -22713,7 +22713,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "264646.85277777",
+          maxQty: "297525.31158917",
           stepSize: "0.00000000",
         },
         {
@@ -22782,7 +22782,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2556273.32197916",
+          maxQty: "2046577.26555555",
           stepSize: "0.00000000",
         },
         {
@@ -22851,7 +22851,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "493751.66666666",
+          maxQty: "1053568.55069444",
           stepSize: "0.00000000",
         },
         {
@@ -22920,7 +22920,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4230052.62395833",
+          maxQty: "4155435.10416666",
           stepSize: "0.00000000",
         },
         {
@@ -22989,7 +22989,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3168943.15347222",
+          maxQty: "3249824.61041666",
           stepSize: "0.00000000",
         },
         {
@@ -23058,7 +23058,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "778316.16736111",
+          maxQty: "701809.32569444",
           stepSize: "0.00000000",
         },
         {
@@ -23127,7 +23127,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15204091.15902777",
+          maxQty: "22924695.60972222",
           stepSize: "0.00000000",
         },
         {
@@ -23196,7 +23196,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1146241.33194444",
+          maxQty: "1911473.61736111",
           stepSize: "0.00000000",
         },
         {
@@ -23472,7 +23472,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "92751.50833333",
+          maxQty: "113476.60833333",
           stepSize: "0.00000000",
         },
         {
@@ -23679,7 +23679,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15759.30117973",
+          maxQty: "23833.68667591",
           stepSize: "0.00000000",
         },
         {
@@ -23748,7 +23748,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1155930.29513888",
+          maxQty: "1766970.25190839",
           stepSize: "0.00000000",
         },
         {
@@ -23817,7 +23817,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "368113.93819444",
+          maxQty: "436854.31180555",
           stepSize: "0.00000000",
         },
         {
@@ -23886,7 +23886,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "235554.36944444",
+          maxQty: "331894.62664816",
           stepSize: "0.00000000",
         },
         {
@@ -23955,7 +23955,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1961766.72361111",
+          maxQty: "1362094.77361111",
           stepSize: "0.00000000",
         },
         {
@@ -24024,7 +24024,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26248389.30937499",
+          maxQty: "20129190.30423612",
           stepSize: "0.00000000",
         },
         {
@@ -24093,7 +24093,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34621.98643750",
+          maxQty: "71593.86671527",
           stepSize: "0.00000000",
         },
         {
@@ -24162,7 +24162,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1536.13672916",
+          maxQty: "1378.43765972",
           stepSize: "0.00000000",
         },
         {
@@ -24231,7 +24231,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "559752.71298611",
+          maxQty: "368009.81833333",
           stepSize: "0.00000000",
         },
         {
@@ -24369,7 +24369,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2518919.07777777",
+          maxQty: "2874893.36944444",
           stepSize: "0.00000000",
         },
         {
@@ -24708,7 +24708,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6856628.04444444",
+          maxQty: "9612360.31527777",
           stepSize: "0.00000000",
         },
         {
@@ -24777,7 +24777,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "362258.89444444",
+          maxQty: "554111.89722222",
           stepSize: "0.00000000",
         },
         {
@@ -24846,7 +24846,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "39384.87361111",
+          maxQty: "83370.19097222",
           stepSize: "0.00000000",
         },
         {
@@ -25053,7 +25053,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4892321.03402777",
+          maxQty: "3775916.86041666",
           stepSize: "0.00000000",
         },
         {
@@ -25260,7 +25260,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37649629.74861111",
+          maxQty: "25139359.41666666",
           stepSize: "0.00000000",
         },
         {
@@ -25329,7 +25329,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "217527.66111111",
+          maxQty: "217191.70575988",
           stepSize: "0.00000000",
         },
         {
@@ -25536,7 +25536,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "362896.20069444",
+          maxQty: "560104.07980569",
           stepSize: "0.00000000",
         },
         {
@@ -25674,7 +25674,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15379011.69236111",
+          maxQty: "13748352.35486111",
           stepSize: "0.00000000",
         },
         {
@@ -25743,7 +25743,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26387086.36944444",
+          maxQty: "26975950.28958333",
           stepSize: "0.00000000",
         },
         {
@@ -25812,7 +25812,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2186959.77430555",
+          maxQty: "2525691.54305555",
           stepSize: "0.00000000",
         },
         {
@@ -25881,7 +25881,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22428123.63201389",
+          maxQty: "28125684.17027777",
           stepSize: "0.00000000",
         },
         {
@@ -25950,7 +25950,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2232154.00694444",
+          maxQty: "1503034.97083333",
           stepSize: "0.00000000",
         },
         {
@@ -26019,7 +26019,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2419719.72430555",
+          maxQty: "2371074.46666666",
           stepSize: "0.00000000",
         },
         {
@@ -26157,7 +26157,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "237529.22986111",
+          maxQty: "136492.03750000",
           stepSize: "0.00000000",
         },
         {
@@ -26640,7 +26640,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4547035.95555555",
+          maxQty: "7185124.20763888",
           stepSize: "0.00000000",
         },
         {
@@ -27036,7 +27036,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6549094.89583333",
+          maxQty: "9630417.42817487",
           stepSize: "0.00000000",
         },
         {
@@ -27105,7 +27105,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "409.46412083",
+          maxQty: "775.88168958",
           stepSize: "0.00000000",
         },
         {
@@ -27306,7 +27306,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2810251.84305555",
+          maxQty: "2750098.82638888",
           stepSize: "0.00000000",
         },
         {
@@ -27375,7 +27375,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "891461.02430555",
+          maxQty: "1390762.62916666",
           stepSize: "0.00000000",
         },
         {
@@ -28122,7 +28122,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "277390.91325468",
+          maxQty: "238955.49652777",
           stepSize: "0.00000000",
         },
         {
@@ -28260,7 +28260,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "109.96124930",
+          maxQty: "69.32675294",
           stepSize: "0.00000000",
         },
         {
@@ -28329,7 +28329,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "56596.56250000",
+          maxQty: "34898.95347222",
           stepSize: "0.00000000",
         },
         {
@@ -28536,7 +28536,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "776.98889791",
+          maxQty: "766.50935972",
           stepSize: "0.00000000",
         },
         {
@@ -28605,7 +28605,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "133.68808185",
+          maxQty: "71.62441946",
           stepSize: "0.00000000",
         },
         {
@@ -28674,7 +28674,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "843.67611416",
+          maxQty: "748.28270090",
           stepSize: "0.00000000",
         },
         {
@@ -28743,7 +28743,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "372683.74791666",
+          maxQty: "274010.75780707",
           stepSize: "0.00000000",
         },
         {
@@ -28812,7 +28812,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46430.93873611",
+          maxQty: "42414.38090277",
           stepSize: "0.00000000",
         },
         {
@@ -29019,7 +29019,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37417.89347222",
+          maxQty: "31680.07980569",
           stepSize: "0.00000000",
         },
         {
@@ -29088,7 +29088,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "838139.90527777",
+          maxQty: "353854.91548611",
           stepSize: "0.00000000",
         },
         {
@@ -29226,7 +29226,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1942618.37708333",
+          maxQty: "2227835.48506944",
           stepSize: "0.00000000",
         },
         {
@@ -29571,7 +29571,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "172319.67241498",
+          maxQty: "157428.58254166",
           stepSize: "0.00000000",
         },
         {
@@ -29778,7 +29778,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17990.73535045",
+          maxQty: "6989.79221527",
           stepSize: "0.00000000",
         },
         {
@@ -29847,7 +29847,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61376.61464583",
+          maxQty: "37811.53020833",
           stepSize: "0.00000000",
         },
         {
@@ -30657,7 +30657,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1005.23773194",
+          maxQty: "1062.24868402",
           stepSize: "0.00000000",
         },
         {
@@ -30795,7 +30795,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "914815.40673143",
+          maxQty: "592295.37465277",
           stepSize: "0.00000000",
         },
         {
@@ -31761,7 +31761,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "65507.72638888",
+          maxQty: "50669.35972222",
           stepSize: "0.00000000",
         },
         {
@@ -31830,7 +31830,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "247095.50694444",
+          maxQty: "216942.44097222",
           stepSize: "0.00000000",
         },
         {
@@ -31899,7 +31899,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5540481.34305555",
+          maxQty: "3554240.59791666",
           stepSize: "0.00000000",
         },
         {
@@ -31968,7 +31968,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "88855064.38611111",
+          maxQty: "92141578.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -32037,7 +32037,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5720326.17395833",
+          maxQty: "9222449.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -32175,7 +32175,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "787107.88313888",
+          maxQty: "555507.54652777",
           stepSize: "0.00000000",
         },
         {
@@ -32244,7 +32244,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "139245.40972222",
+          maxQty: "114817.12977099",
           stepSize: "0.00000000",
         },
         {
@@ -32313,7 +32313,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "486449.69791666",
+          maxQty: "702134.39097222",
           stepSize: "0.00000000",
         },
         {
@@ -32382,7 +32382,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "929447.83194444",
+          maxQty: "1337442.69930555",
           stepSize: "0.00000000",
         },
         {
@@ -32451,7 +32451,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "640519.97500000",
+          maxQty: "908615.05277777",
           stepSize: "0.00000000",
         },
         {
@@ -32520,7 +32520,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1677.09590208",
+          maxQty: "2144.04317002",
           stepSize: "0.00000000",
         },
         {
@@ -32589,7 +32589,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5697.82044236",
+          maxQty: "4442.04021597",
           stepSize: "0.00000000",
         },
         {
@@ -32658,7 +32658,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "658.89553541",
+          maxQty: "391.99887777",
           stepSize: "0.00000000",
         },
         {
@@ -32727,7 +32727,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9938.74217569",
+          maxQty: "9541.77938958",
           stepSize: "0.00000000",
         },
         {
@@ -32934,7 +32934,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "598.52428174",
+          maxQty: "283.34311527",
           stepSize: "0.00000000",
         },
         {
@@ -33003,7 +33003,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5623603.97013888",
+          maxQty: "18603865.81180555",
           stepSize: "0.00000000",
         },
         {
@@ -33072,7 +33072,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "569664.05208333",
+          maxQty: "1126930.81041666",
           stepSize: "0.00000000",
         },
         {
@@ -33141,7 +33141,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5581218.92986111",
+          maxQty: "5581324.78333333",
           stepSize: "0.00000000",
         },
         {
@@ -33210,7 +33210,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6485824.81840277",
+          maxQty: "9222449.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -33348,7 +33348,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "231457.35979166",
+          maxQty: "314024.82213740",
           stepSize: "0.00000000",
         },
         {
@@ -33555,7 +33555,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "667.78739278",
+          maxQty: "779.47539486",
           stepSize: "0.00000000",
         },
         {
@@ -33624,7 +33624,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6663.28890000",
+          maxQty: "7794.28316736",
           stepSize: "0.00000000",
         },
         {
@@ -33831,7 +33831,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "139130.97791666",
+          maxQty: "120302.12701388",
           stepSize: "0.00000000",
         },
         {
@@ -33900,7 +33900,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "232968.18666666",
+          maxQty: "411316.48180555",
           stepSize: "0.00000000",
         },
         {
@@ -33969,7 +33969,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "267272.84486111",
+          maxQty: "536290.40715277",
           stepSize: "0.00000000",
         },
         {
@@ -34038,7 +34038,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4502939.45840277",
+          maxQty: "5228033.38993754",
           stepSize: "0.00000000",
         },
         {
@@ -34107,7 +34107,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "152265.75537820",
+          maxQty: "149537.94392782",
           stepSize: "0.00000000",
         },
         {
@@ -34176,7 +34176,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "579313.31277777",
+          maxQty: "652097.63180555",
           stepSize: "0.00000000",
         },
         {
@@ -34245,7 +34245,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2241747.11958333",
+          maxQty: "2610417.21750000",
           stepSize: "0.00000000",
         },
         {
@@ -34314,7 +34314,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5021.92900694",
+          maxQty: "3105.68902083",
           stepSize: "0.00000000",
         },
         {
@@ -34383,7 +34383,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26717.12322916",
+          maxQty: "26516.94070833",
           stepSize: "0.00000000",
         },
         {
@@ -34452,7 +34452,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "125447.50770138",
+          maxQty: "150890.08404580",
           stepSize: "0.00000000",
         },
         {
@@ -34521,7 +34521,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3778.14591666",
+          maxQty: "3007.40835416",
           stepSize: "0.00000000",
         },
         {
@@ -35211,7 +35211,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68141.75965277",
+          maxQty: "183756.60062500",
           stepSize: "0.00000000",
         },
         {
@@ -35544,7 +35544,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "618959.75625000",
+          maxQty: "560668.66250000",
           stepSize: "0.00000000",
         },
         {
@@ -35613,7 +35613,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "945322.09791666",
+          maxQty: "1076909.71111111",
           stepSize: "0.00000000",
         },
         {
@@ -35871,7 +35871,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "452012.05694444",
+          maxQty: "431606.93472222",
           stepSize: "0.00000000",
         },
         {
@@ -35940,7 +35940,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2519171.07708333",
+          maxQty: "2822929.78263888",
           stepSize: "0.00000000",
         },
         {
@@ -36009,7 +36009,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5731739.48944445",
+          maxQty: "8008418.74708333",
           stepSize: "0.00000000",
         },
         {
@@ -36273,7 +36273,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "130039.21805555",
+          maxQty: "397313.97432338",
           stepSize: "0.00000000",
         },
         {
@@ -36342,7 +36342,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "611434.72847222",
+          maxQty: "1058230.58472222",
           stepSize: "0.00000000",
         },
         {
@@ -36411,7 +36411,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2657046.47916666",
+          maxQty: "2768759.18112421",
           stepSize: "0.00000000",
         },
         {
@@ -36921,7 +36921,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "60412.66527777",
+          maxQty: "87741.59513888",
           stepSize: "0.00000000",
         },
         {
@@ -36990,7 +36990,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "237879.61736111",
+          maxQty: "392134.78888888",
           stepSize: "0.00000000",
         },
         {
@@ -37455,7 +37455,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4984325.05891741",
+          maxQty: "7566293.84854166",
           stepSize: "0.00000000",
         },
         {
@@ -38115,7 +38115,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9415214.67638888",
+          maxQty: "11370065.69166666",
           stepSize: "0.00000000",
         },
         {
@@ -38184,7 +38184,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22039517.60416666",
+          maxQty: "34209433.88680555",
           stepSize: "0.00000000",
         },
         {
@@ -38448,7 +38448,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "194741.84385843",
+          maxQty: "279827.31714087",
           stepSize: "0.00000000",
         },
         {
@@ -38517,7 +38517,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "678966.42916666",
+          maxQty: "790104.95972222",
           stepSize: "0.00000000",
         },
         {
@@ -38793,7 +38793,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "478466.90347222",
+          maxQty: "450869.32916666",
           stepSize: "0.00000000",
         },
         {
@@ -38862,7 +38862,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3817431.12768910",
+          maxQty: "3318818.16736111",
           stepSize: "0.00000000",
         },
         {
@@ -38931,7 +38931,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5255072.05486110",
+          maxQty: "4540956.23435114",
           stepSize: "0.00000000",
         },
         {
@@ -39321,7 +39321,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "320514697.87777777",
+          maxQty: "276895706.94791666",
           stepSize: "0.00000000",
         },
         {
@@ -39453,7 +39453,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "869617008.87777777",
+          maxQty: "913205152.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -39522,7 +39522,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "102322790.53194444",
+          maxQty: "83019949.61041666",
           stepSize: "0.00000000",
         },
         {
@@ -39591,7 +39591,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1869636.86537126",
+          maxQty: "2126022.48194444",
           stepSize: "0.00000000",
         },
         {
@@ -39660,7 +39660,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53314698.35138888",
+          maxQty: "62677423.52361111",
           stepSize: "0.00000000",
         },
         {
@@ -39729,7 +39729,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7878127.66020833",
+          maxQty: "18443055.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -39993,7 +39993,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26365.74027777",
+          maxQty: "34627.70784177",
           stepSize: "0.00000000",
         },
         {
@@ -40131,7 +40131,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "393856.47013888",
+          maxQty: "377465.89652777",
           stepSize: "0.00000000",
         },
         {
@@ -40200,7 +40200,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "51999.94732824",
+          maxQty: "68169.67180555",
           stepSize: "0.00000000",
         },
         {
@@ -40338,7 +40338,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35172.34006944",
+          maxQty: "24081.16743055",
           stepSize: "0.00000000",
         },
         {
@@ -40407,7 +40407,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "97942.21916666",
+          maxQty: "98473.74680555",
           stepSize: "0.00000000",
         },
         {
@@ -40545,7 +40545,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "715062.25902777",
+          maxQty: "532033.36736111",
           stepSize: "0.00000000",
         },
         {
@@ -40614,7 +40614,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1288910.81458333",
+          maxQty: "1700768.03125000",
           stepSize: "0.00000000",
         },
         {
@@ -40746,7 +40746,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1482859.59020833",
+          maxQty: "2045646.09868147",
           stepSize: "0.00000000",
         },
         {
@@ -40884,7 +40884,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17586202.72708333",
+          maxQty: "12258802.34236111",
           stepSize: "0.00000000",
         },
         {
@@ -40953,7 +40953,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28267254.04166666",
+          maxQty: "42252770.78333333",
           stepSize: "0.00000000",
         },
         {
@@ -41091,7 +41091,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2268577.95625000",
+          maxQty: "3247034.42638888",
           stepSize: "0.00000000",
         },
         {
@@ -41160,7 +41160,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "233842.40555555",
+          maxQty: "298922.17013888",
           stepSize: "0.00000000",
         },
         {
@@ -41229,7 +41229,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6953010.03750000",
+          maxQty: "15720077.73194444",
           stepSize: "0.00000000",
         },
         {
@@ -41265,7 +41265,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -41298,7 +41298,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "657560.84652777",
+          maxQty: "547093.55378209",
           stepSize: "0.00000000",
         },
         {
@@ -41310,7 +41310,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "BTTTRX",
@@ -41436,7 +41436,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67102266.62715278",
+          maxQty: "71221130.28118053",
           stepSize: "0.00000000",
         },
         {
@@ -41505,7 +41505,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "348056.73333333",
+          maxQty: "331020.84305555",
           stepSize: "0.00000000",
         },
         {
@@ -41574,7 +41574,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1628914.72638888",
+          maxQty: "1910689.85149201",
           stepSize: "0.00000000",
         },
         {
@@ -41643,7 +41643,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5447847.17152777",
+          maxQty: "4382687.30625000",
           stepSize: "0.00000000",
         },
         {
@@ -41781,7 +41781,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23875.41840277",
+          maxQty: "27002.33479166",
           stepSize: "0.00000000",
         },
         {
@@ -41850,7 +41850,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "79866.42965277",
+          maxQty: "90880.58784722",
           stepSize: "0.00000000",
         },
         {
@@ -41919,7 +41919,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16438.98274375",
+          maxQty: "17521.91698472",
           stepSize: "0.00000000",
         },
         {
@@ -41988,7 +41988,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61.26475292",
+          maxQty: "69.35721647",
           stepSize: "0.00000000",
         },
         {
@@ -42057,7 +42057,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "83895276.42668057",
+          maxQty: "76016522.43399305",
           stepSize: "0.00000000",
         },
         {
@@ -42195,7 +42195,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "134914.42986111",
+          maxQty: "179815.22430555",
           stepSize: "0.00000000",
         },
         {
@@ -42264,7 +42264,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "502783.20277777",
+          maxQty: "791535.86259541",
           stepSize: "0.00000000",
         },
         {
@@ -42333,7 +42333,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11389.09937500",
+          maxQty: "13259.68881944",
           stepSize: "0.00000000",
         },
         {
@@ -42402,7 +42402,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "95883.83990277",
+          maxQty: "115348.73208333",
           stepSize: "0.00000000",
         },
         {
@@ -42471,7 +42471,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "195061.91416666",
+          maxQty: "187302.01805555",
           stepSize: "0.00000000",
         },
         {
@@ -42540,7 +42540,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "490142.55972222",
+          maxQty: "647802.26944444",
           stepSize: "0.00000000",
         },
         {
@@ -42609,7 +42609,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3846896.23805555",
+          maxQty: "6052878.10041666",
           stepSize: "0.00000000",
         },
         {
@@ -42747,7 +42747,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "239999.60625000",
+          maxQty: "208822.14503816",
           stepSize: "0.00000000",
         },
         {
@@ -42816,7 +42816,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "991130.33541666",
+          maxQty: "1066693.54861111",
           stepSize: "0.00000000",
         },
         {
@@ -42885,7 +42885,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2760297.69097222",
+          maxQty: "2885985.38472222",
           stepSize: "0.00000000",
         },
         {
@@ -43023,7 +43023,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "378743.19916724",
+          maxQty: "283168.01318528",
           stepSize: "0.00000000",
         },
         {
@@ -43092,7 +43092,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "542185.17847222",
+          maxQty: "1135252.95347222",
           stepSize: "0.00000000",
         },
         {
@@ -43161,7 +43161,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2159885.53055555",
+          maxQty: "2309450.95555555",
           stepSize: "0.00000000",
         },
         {
@@ -43230,7 +43230,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1439.70550236",
+          maxQty: "850.03803622",
           stepSize: "0.00000000",
         },
         {
@@ -43362,7 +43362,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7258.78973194",
+          maxQty: "7802.94341875",
           stepSize: "0.00000000",
         },
         {
@@ -43431,7 +43431,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57966.41259722",
+          maxQty: "49239.68531944",
           stepSize: "0.00000000",
         },
         {
@@ -43500,7 +43500,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5234.84633587",
+          maxQty: "14241.76850000",
           stepSize: "0.00000000",
         },
         {
@@ -43569,7 +43569,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "51412.52763888",
+          maxQty: "55292.97604166",
           stepSize: "0.00000000",
         },
         {
@@ -43638,7 +43638,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "87316.46673611",
+          maxQty: "70497.59076388",
           stepSize: "0.00000000",
         },
         {
@@ -43707,7 +43707,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "175808.26243055",
+          maxQty: "182602.10736111",
           stepSize: "0.00000000",
         },
         {
@@ -43776,7 +43776,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12798.25090277",
+          maxQty: "7338.66534722",
           stepSize: "0.00000000",
         },
         {
@@ -43845,7 +43845,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24706.71464260",
+          maxQty: "52911.29798750",
           stepSize: "0.00000000",
         },
         {
@@ -43914,7 +43914,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67332.84562500",
+          maxQty: "158268.06250000",
           stepSize: "0.00000000",
         },
         {
@@ -44068,7 +44068,7 @@ export default {
     },
     {
       symbol: "BTCNGN",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "BTC",
       baseAssetPrecision: 8,
       quoteAsset: "NGN",
@@ -44121,7 +44121,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "0.46653235",
+          maxQty: "0.24221708",
           stepSize: "0.00000000",
         },
         {
@@ -44190,7 +44190,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "641629.90486111",
+          maxQty: "621199.42886884",
           stepSize: "0.00000000",
         },
         {
@@ -44259,7 +44259,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1617921.83750000",
+          maxQty: "1557347.22708333",
           stepSize: "0.00000000",
         },
         {
@@ -44328,7 +44328,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2565670.22173611",
+          maxQty: "2806432.38549618",
           stepSize: "0.00000000",
         },
         {
@@ -44397,7 +44397,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3547975.41381944",
+          maxQty: "4010581.14125000",
           stepSize: "0.00000000",
         },
         {
@@ -44466,7 +44466,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "123750.77472222",
+          maxQty: "147358.29902845",
           stepSize: "0.00000000",
         },
         {
@@ -44535,7 +44535,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4516465.90972222",
+          maxQty: "6371654.98750000",
           stepSize: "0.00000000",
         },
         {
@@ -44604,7 +44604,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "75019.29125607",
+          maxQty: "81634.41242192",
           stepSize: "0.00000000",
         },
         {
@@ -44742,7 +44742,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "989804.70451388",
+          maxQty: "1113541.70833333",
           stepSize: "0.00000000",
         },
         {
@@ -44811,7 +44811,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1899081.10381944",
+          maxQty: "2224857.95097222",
           stepSize: "0.00000000",
         },
         {
@@ -44949,7 +44949,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "207899.09930555",
+          maxQty: "197204.71944444",
           stepSize: "0.00000000",
         },
         {
@@ -45018,7 +45018,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "499837.53125000",
+          maxQty: "895056.85416666",
           stepSize: "0.00000000",
         },
         {
@@ -45087,7 +45087,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "330.81603402",
+          maxQty: "292.12021582",
           stepSize: "0.00000000",
         },
         {
@@ -45156,7 +45156,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1225.56105138",
+          maxQty: "1312.06812152",
           stepSize: "0.00000000",
         },
         {
@@ -45225,7 +45225,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3573.98745859",
+          maxQty: "4636.07547986",
           stepSize: "0.00000000",
         },
         {
@@ -45294,7 +45294,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "312.04547430",
+          maxQty: "216.75887152",
           stepSize: "0.00000000",
         },
         {
@@ -45501,7 +45501,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1056.89817222",
+          maxQty: "1087.20170367",
           stepSize: "0.00000000",
         },
         {
@@ -45570,7 +45570,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8.10505777",
+          maxQty: "6.77651782",
           stepSize: "0.00000000",
         },
         {
@@ -45639,7 +45639,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "59.38972388",
+          maxQty: "73.69227402",
           stepSize: "0.00000000",
         },
         {
@@ -45708,7 +45708,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67927.08750000",
+          maxQty: "59525.55902777",
           stepSize: "0.00000000",
         },
         {
@@ -45777,7 +45777,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "127.64115486",
+          maxQty: "176.56788819",
           stepSize: "0.00000000",
         },
         {
@@ -45846,7 +45846,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3206694.10277777",
+          maxQty: "3838519.07222222",
           stepSize: "0.00000000",
         },
         {
@@ -45984,7 +45984,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26518868.29722222",
+          maxQty: "53909823.74184594",
           stepSize: "0.00000000",
         },
         {
@@ -46053,7 +46053,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "440925.98402777",
+          maxQty: "240259.21597222",
           stepSize: "0.00000000",
         },
         {
@@ -46122,7 +46122,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17296.54777777",
+          maxQty: "18139.20152777",
           stepSize: "0.00000000",
         },
         {
@@ -46191,7 +46191,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7908677.52187499",
+          maxQty: "10786057.66312500",
           stepSize: "0.00000000",
         },
         {
@@ -46329,7 +46329,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2104450.52500000",
+          maxQty: "1670313.46666666",
           stepSize: "0.00000000",
         },
         {
@@ -46398,7 +46398,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1478640.77827897",
+          maxQty: "3511666.78625954",
           stepSize: "0.00000000",
         },
         {
@@ -46467,7 +46467,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4787.63059722",
+          maxQty: "2937.08684722",
           stepSize: "0.00000000",
         },
         {
@@ -46536,7 +46536,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13904.14970138",
+          maxQty: "13218.45709027",
           stepSize: "0.00000000",
         },
         {
@@ -46605,7 +46605,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32775.55612500",
+          maxQty: "33044.43342817",
           stepSize: "0.00000000",
         },
         {
@@ -46674,7 +46674,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21.35667261",
+          maxQty: "13.58474355",
           stepSize: "0.00000000",
         },
         {
@@ -46743,7 +46743,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "336.65325902",
+          maxQty: "330.83274583",
           stepSize: "0.00000000",
         },
         {
@@ -46881,7 +46881,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "264.15113659",
+          maxQty: "145.26062361",
           stepSize: "0.00000000",
         },
         {
@@ -46950,7 +46950,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "208460.46388888",
+          maxQty: "157122.88472222",
           stepSize: "0.00000000",
         },
         {
@@ -47019,7 +47019,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4853955.28888888",
+          maxQty: "4009442.98750867",
           stepSize: "0.00000000",
         },
         {
@@ -47088,7 +47088,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1707304.65555555",
+          maxQty: "1041492.53819444",
           stepSize: "0.00000000",
         },
         {
@@ -47157,7 +47157,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "48.07665014",
+          maxQty: "54.57601188",
           stepSize: "0.00000000",
         },
         {
@@ -47226,7 +47226,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "548.48156854",
+          maxQty: "432.61140423",
           stepSize: "0.00000000",
         },
         {
@@ -47295,7 +47295,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1134.04667361",
+          maxQty: "1234.59704444",
           stepSize: "0.00000000",
         },
         {
@@ -47364,7 +47364,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "476236.55625000",
+          maxQty: "549856.40902777",
           stepSize: "0.00000000",
         },
         {
@@ -47433,7 +47433,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1880774.00972222",
+          maxQty: "2241509.41529166",
           stepSize: "0.00000000",
         },
         {
@@ -47502,7 +47502,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2384727.77556250",
+          maxQty: "2977373.67833448",
           stepSize: "0.00000000",
         },
         {
@@ -47571,7 +47571,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "89051.28611111",
+          maxQty: "68356.45833333",
           stepSize: "0.00000000",
         },
         {
@@ -47640,7 +47640,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "188472.96597222",
+          maxQty: "212362.26180555",
           stepSize: "0.00000000",
         },
         {
@@ -47709,7 +47709,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "716643.66597222",
+          maxQty: "1047386.93263888",
           stepSize: "0.00000000",
         },
         {
@@ -47847,7 +47847,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "40949.50486111",
+          maxQty: "66438.20138888",
           stepSize: "0.00000000",
         },
         {
@@ -47916,7 +47916,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "166099.22847222",
+          maxQty: "316846.21582234",
           stepSize: "0.00000000",
         },
         {
@@ -48606,7 +48606,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8258487.90069444",
+          maxQty: "20727439.08119361",
           stepSize: "0.00000000",
         },
         {
@@ -48675,7 +48675,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5746754.65000000",
+          maxQty: "6715367.41319444",
           stepSize: "0.00000000",
         },
         {
@@ -48744,7 +48744,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "78456.70555555",
+          maxQty: "29807.01034722",
           stepSize: "0.00000000",
         },
         {
@@ -48813,7 +48813,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "84303.81444444",
+          maxQty: "86888.39166666",
           stepSize: "0.00000000",
         },
         {
@@ -48882,7 +48882,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "261439.95381944",
+          maxQty: "482485.11604166",
           stepSize: "0.00000000",
         },
         {
@@ -48951,7 +48951,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "137771.06000000",
+          maxQty: "117443.69458333",
           stepSize: "0.00000000",
         },
         {
@@ -49020,7 +49020,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3797241.96083333",
+          maxQty: "3202326.81111111",
           stepSize: "0.00000000",
         },
         {
@@ -49158,7 +49158,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37313.38347222",
+          maxQty: "37427.89416666",
           stepSize: "0.00000000",
         },
         {
@@ -49227,7 +49227,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38564.65388888",
+          maxQty: "37708.43263888",
           stepSize: "0.00000000",
         },
         {
@@ -49296,7 +49296,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14195.15416666",
+          maxQty: "19336.04631944",
           stepSize: "0.00000000",
         },
         {
@@ -49434,7 +49434,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "308583.94652777",
+          maxQty: "406611.86051353",
           stepSize: "0.00000000",
         },
         {
@@ -49503,7 +49503,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "462887.76597222",
+          maxQty: "835792.86328938",
           stepSize: "0.00000000",
         },
         {
@@ -49572,7 +49572,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26140.64374305",
+          maxQty: "31165.84748611",
           stepSize: "0.00000000",
         },
         {
@@ -49641,7 +49641,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1398.71625972",
+          maxQty: "1674.26721235",
           stepSize: "0.00000000",
         },
         {
@@ -49710,7 +49710,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5912.30592361",
+          maxQty: "5227.52739070",
           stepSize: "0.00000000",
         },
         {
@@ -49779,7 +49779,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14601.16903472",
+          maxQty: "13200.48968055",
           stepSize: "0.00000000",
         },
         {
@@ -49848,7 +49848,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "55896.60041666",
+          maxQty: "57389.26770833",
           stepSize: "0.00000000",
         },
         {
@@ -50469,7 +50469,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "162295.80916030",
+          maxQty: "152535.27897293",
           stepSize: "0.00000000",
         },
         {
@@ -50538,7 +50538,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "128725.46750000",
+          maxQty: "146517.65263888",
           stepSize: "0.00000000",
         },
         {
@@ -50676,7 +50676,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "87309.80833333",
+          maxQty: "144850.98055555",
           stepSize: "0.00000000",
         },
         {
@@ -50745,7 +50745,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1101787.90423611",
+          maxQty: "1267929.48605135",
           stepSize: "0.00000000",
         },
         {
@@ -51090,7 +51090,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1967592.41736111",
+          maxQty: "2129934.02638888",
           stepSize: "0.00000000",
         },
         {
@@ -51159,7 +51159,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3445960.82928521",
+          maxQty: "4760644.63055555",
           stepSize: "0.00000000",
         },
         {
@@ -51297,7 +51297,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17516732.92569444",
+          maxQty: "66887955.31783483",
           stepSize: "0.00000000",
         },
         {
@@ -51366,7 +51366,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "131706.25833333",
+          maxQty: "140352.71111111",
           stepSize: "0.00000000",
         },
         {
@@ -51435,7 +51435,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "341956.23125000",
+          maxQty: "563888.31319444",
           stepSize: "0.00000000",
         },
         {
@@ -51504,7 +51504,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1039578.38611111",
+          maxQty: "2223808.30555555",
           stepSize: "0.00000000",
         },
         {
@@ -51573,7 +51573,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "444199.55579458",
+          maxQty: "415128.68819444",
           stepSize: "0.00000000",
         },
         {
@@ -51711,7 +51711,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28789.46034722",
+          maxQty: "44220.86388888",
           stepSize: "0.00000000",
         },
         {
@@ -51780,7 +51780,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1119.75504580",
+          maxQty: "1356.90719444",
           stepSize: "0.00000000",
         },
         {
@@ -51849,7 +51849,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2266.73513055",
+          maxQty: "3097.21842777",
           stepSize: "0.00000000",
         },
         {
@@ -52263,7 +52263,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "670808.35000000",
+          maxQty: "685936.46805555",
           stepSize: "0.00000000",
         },
         {
@@ -52332,7 +52332,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1221247.86305555",
+          maxQty: "1112899.76960444",
           stepSize: "0.00000000",
         },
         {
@@ -52953,7 +52953,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "255702.97222222",
+          maxQty: "298411.78402777",
           stepSize: "0.00000000",
         },
         {
@@ -53022,7 +53022,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "525639.52166666",
+          maxQty: "990580.92215277",
           stepSize: "0.00000000",
         },
         {
@@ -53091,7 +53091,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1811949.05576388",
+          maxQty: "3298361.25430555",
           stepSize: "0.00000000",
         },
         {
@@ -53229,7 +53229,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5608.93587500",
+          maxQty: "6051.85255555",
           stepSize: "0.00000000",
         },
         {
@@ -53298,7 +53298,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11902.07202083",
+          maxQty: "9029.06309722",
           stepSize: "0.00000000",
         },
         {
@@ -53367,7 +53367,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "81448.47938888",
+          maxQty: "68737.54186111",
           stepSize: "0.00000000",
         },
         {
@@ -53436,7 +53436,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "27170.42674305",
+          maxQty: "28794.94444136",
           stepSize: "0.00000000",
         },
         {
@@ -53574,7 +53574,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "101.18984444",
+          maxQty: "36.07781471",
           stepSize: "0.00000000",
         },
         {
@@ -53643,7 +53643,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68730.61587786",
+          maxQty: "89653.22469444",
           stepSize: "0.00000000",
         },
         {
@@ -53781,7 +53781,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "225093.57222222",
+          maxQty: "191515.94027777",
           stepSize: "0.00000000",
         },
         {
@@ -53850,7 +53850,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "770323.97680555",
+          maxQty: "648150.39486467",
           stepSize: "0.00000000",
         },
         {
@@ -53919,7 +53919,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "210977.95069444",
+          maxQty: "132651.48888888",
           stepSize: "0.00000000",
         },
         {
@@ -53988,7 +53988,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "235883.07777777",
+          maxQty: "210500.76458333",
           stepSize: "0.00000000",
         },
         {
@@ -54126,7 +54126,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "71837.81597222",
+          maxQty: "51062.78680555",
           stepSize: "0.00000000",
         },
         {
@@ -54195,7 +54195,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "104235.29652777",
+          maxQty: "141510.52083333",
           stepSize: "0.00000000",
         },
         {
@@ -54264,7 +54264,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "151817.77847222",
+          maxQty: "132603.36319444",
           stepSize: "0.00000000",
         },
         {
@@ -54333,7 +54333,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "297553.04791666",
+          maxQty: "233838.98472222",
           stepSize: "0.00000000",
         },
         {
@@ -54402,7 +54402,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1282563.68263888",
+          maxQty: "1087173.09305555",
           stepSize: "0.00000000",
         },
         {
@@ -54442,8 +54442,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "3.30200000",
-          maxPrice: "62.72000000",
+          minPrice: "5.10400000",
+          maxPrice: "96.96300000",
           tickSize: "0.00100000",
         },
         {
@@ -54480,7 +54480,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "151.00000000",
+          maxPosition: "98.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -54515,8 +54515,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00153700",
-          maxPrice: "0.02919000",
+          minPrice: "0.00099700",
+          maxPrice: "0.01893100",
           tickSize: "0.00000100",
         },
         {
@@ -54553,7 +54553,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "324760.00000000",
+          maxPosition: "500250.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -54617,7 +54617,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "159190.95208333",
+          maxQty: "213554.25277777",
           stepSize: "0.00000000",
         },
         {
@@ -54686,7 +54686,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "361080.93333333",
+          maxQty: "357135.24583333",
           stepSize: "0.00000000",
         },
         {
@@ -54893,7 +54893,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1002136.83958333",
+          maxQty: "1386461.64305555",
           stepSize: "0.00000000",
         },
         {
@@ -54962,7 +54962,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "698212.12152777",
+          maxQty: "976714.53319444",
           stepSize: "0.00000000",
         },
         {
@@ -55031,7 +55031,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "86230.71277777",
+          maxQty: "98830.21644691",
           stepSize: "0.00000000",
         },
         {
@@ -55100,7 +55100,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1983794.11055555",
+          maxQty: "5903711.92061068",
           stepSize: "0.00000000",
         },
         {
@@ -55238,7 +55238,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1681317.56835530",
+          maxQty: "2534133.57916666",
           stepSize: "0.00000000",
         },
         {
@@ -55307,7 +55307,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2436267.48722222",
+          maxQty: "5310627.02354166",
           stepSize: "0.00000000",
         },
         {
@@ -55376,7 +55376,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23068980.93819444",
+          maxQty: "13459285.38750000",
           stepSize: "0.00000000",
         },
         {
@@ -55445,7 +55445,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2625627.50381679",
+          maxQty: "2099423.46527777",
           stepSize: "0.00000000",
         },
         {
@@ -55514,7 +55514,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9898328.34444444",
+          maxQty: "11328026.33055555",
           stepSize: "0.00000000",
         },
         {
@@ -55583,7 +55583,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "59728.23875000",
+          maxQty: "42990.72479166",
           stepSize: "0.00000000",
         },
         {
@@ -55652,7 +55652,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "218385.48881944",
+          maxQty: "238720.23506944",
           stepSize: "0.00000000",
         },
         {
@@ -55790,7 +55790,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4961.64243750",
+          maxQty: "5515.86622916",
           stepSize: "0.00000000",
         },
         {
@@ -55859,7 +55859,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "211553.49236111",
+          maxQty: "336920.46527777",
           stepSize: "0.00000000",
         },
         {
@@ -55928,7 +55928,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "508244.41944444",
+          maxQty: "1249645.79861111",
           stepSize: "0.00000000",
         },
         {
@@ -56066,7 +56066,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2162523.61111111",
+          maxQty: "3981906.03263888",
           stepSize: "0.00000000",
         },
         {
@@ -56135,7 +56135,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63020.70575988",
+          maxQty: "95778.96944444",
           stepSize: "0.00000000",
         },
         {
@@ -56204,7 +56204,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "229765.36041666",
+          maxQty: "371931.41776544",
           stepSize: "0.00000000",
         },
         {
@@ -56273,7 +56273,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21.64388179",
+          maxQty: "21.53775355",
           stepSize: "0.00000000",
         },
         {
@@ -56342,7 +56342,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "180.05021194",
+          maxQty: "159.84847111",
           stepSize: "0.00000000",
         },
         {
@@ -56411,7 +56411,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "226428.66458333",
+          maxQty: "323753.60902777",
           stepSize: "0.00000000",
         },
         {
@@ -56480,7 +56480,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "343.47685277",
+          maxQty: "290.79390555",
           stepSize: "0.00000000",
         },
         {
@@ -56549,7 +56549,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "451097.63289382",
+          maxQty: "473885.53775156",
           stepSize: "0.00000000",
         },
         {
@@ -56618,7 +56618,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29064266.14583333",
+          maxQty: "12495901.45069444",
           stepSize: "0.00000000",
         },
         {
@@ -56687,7 +56687,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "823835.87161693",
+          maxQty: "1707538.27368055",
           stepSize: "0.00000000",
         },
         {
@@ -56756,7 +56756,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "0.75164183",
+          maxQty: "0.76550679",
           stepSize: "0.00000000",
         },
         {
@@ -56825,7 +56825,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "453742.80416666",
+          maxQty: "317633.35902777",
           stepSize: "0.00000000",
         },
         {
@@ -56894,7 +56894,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "903.35424722",
+          maxQty: "875.49785773",
           stepSize: "0.00000000",
         },
         {
@@ -57032,7 +57032,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "644.29414861",
+          maxQty: "1236.19359236",
           stepSize: "0.00000000",
         },
         {
@@ -57101,7 +57101,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4575.22701784",
+          maxQty: "4837.65270069",
           stepSize: "0.00000000",
         },
         {
@@ -57170,7 +57170,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16.97989172",
+          maxQty: "16.54887843",
           stepSize: "0.00000000",
         },
         {
@@ -57239,7 +57239,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "180.40385104",
+          maxQty: "158.47400006",
           stepSize: "0.00000000",
         },
         {
@@ -57308,7 +57308,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "541.05078819",
+          maxQty: "527.26243055",
           stepSize: "0.00000000",
         },
         {
@@ -57377,7 +57377,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "702079.25645833",
+          maxQty: "743083.77148507",
           stepSize: "0.00000000",
         },
         {
@@ -57446,7 +57446,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2701875.89445833",
+          maxQty: "1555285.51723108",
           stepSize: "0.00000000",
         },
         {
@@ -57653,7 +57653,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17439211.62361111",
+          maxQty: "16832150.58263888",
           stepSize: "0.00000000",
         },
         {
@@ -57722,7 +57722,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13113.42890277",
+          maxQty: "14121.43068702",
           stepSize: "0.00000000",
         },
         {
@@ -57791,7 +57791,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "100703.98506944",
+          maxQty: "173375.92097222",
           stepSize: "0.00000000",
         },
         {
@@ -57860,7 +57860,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24717.54638888",
+          maxQty: "24996.93930555",
           stepSize: "0.00000000",
         },
         {
@@ -57929,7 +57929,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63405.32027777",
+          maxQty: "82137.94108258",
           stepSize: "0.00000000",
         },
         {
@@ -57998,7 +57998,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15174.60708333",
+          maxQty: "20777.86173611",
           stepSize: "0.00000000",
         },
         {
@@ -58067,7 +58067,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7372.01020833",
+          maxQty: "5506.64722222",
           stepSize: "0.00000000",
         },
         {
@@ -58136,7 +58136,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17949.77597222",
+          maxQty: "20583.14020833",
           stepSize: "0.00000000",
         },
         {
@@ -58205,7 +58205,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "54501.36916666",
+          maxQty: "66066.49381944",
           stepSize: "0.00000000",
         },
         {
@@ -58245,8 +58245,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "2.20600000",
-          maxPrice: "41.91300000",
+          minPrice: "4.92300000",
+          maxPrice: "93.51900000",
           tickSize: "0.00100000",
         },
         {
@@ -58283,7 +58283,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "227.00000000",
+          maxPosition: "102.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58318,8 +58318,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.10990000",
-          maxPrice: "2.08640000",
+          minPrice: "0.04340000",
+          maxPrice: "0.82430000",
           tickSize: "0.00010000",
         },
         {
@@ -58347,7 +58347,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "151536.31368750",
+          maxQty: "287012.63852777",
           stepSize: "0.00000000",
         },
         {
@@ -58356,7 +58356,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "4555.00000000",
+          maxPosition: "11478.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58391,8 +58391,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.60000000",
-          maxPrice: "11.39900000",
+          minPrice: "1.58900000",
+          maxPrice: "30.17200000",
           tickSize: "0.00100000",
         },
         {
@@ -58420,7 +58420,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15576.32304166",
+          maxQty: "7072.36238723",
           stepSize: "0.00000000",
         },
         {
@@ -58429,7 +58429,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "416.00000000",
+          maxPosition: "158.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58464,8 +58464,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00093400",
-          maxPrice: "0.01773400",
+          minPrice: "0.00025400",
+          maxPrice: "0.00481900",
           tickSize: "0.00000100",
         },
         {
@@ -58493,7 +58493,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12551018.09359722",
+          maxQty: "33842376.27235947",
           stepSize: "0.00000000",
         },
         {
@@ -58502,7 +58502,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "267494.00000000",
+          maxPosition: "973520.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58537,8 +58537,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.01022000",
-          maxPrice: "0.19400000",
+          minPrice: "0.02099000",
+          maxPrice: "0.39879000",
           tickSize: "0.00001000",
         },
         {
@@ -58566,7 +58566,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "922327.00000000",
+          maxQty: "353082.81481250",
           stepSize: "0.00000000",
         },
         {
@@ -58575,7 +58575,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "24371.00000000",
+          maxPosition: "11887.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58610,8 +58610,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00152000",
-          maxPrice: "0.02887600",
+          minPrice: "0.00053100",
+          maxPrice: "0.01007300",
           tickSize: "0.00000100",
         },
         {
@@ -58648,7 +58648,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "164680.00000000",
+          maxPosition: "468604.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -58712,7 +58712,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7691261.19930555",
+          maxQty: "5106638.02569444",
           stepSize: "0.00000000",
         },
         {
@@ -58850,7 +58850,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29380010.73888888",
+          maxQty: "46511928.69861111",
           stepSize: "0.00000000",
         },
         {
@@ -58988,7 +58988,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4191737.96250000",
+          maxQty: "6945701.77041666",
           stepSize: "0.00000000",
         },
         {
@@ -59057,7 +59057,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "737080.64525694",
+          maxQty: "947382.28819444",
           stepSize: "0.00000000",
         },
         {
@@ -59126,7 +59126,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23852.37222222",
+          maxQty: "28396.79236111",
           stepSize: "0.00000000",
         },
         {
@@ -59195,7 +59195,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "243715.66013888",
+          maxQty: "437831.70388888",
           stepSize: "0.00000000",
         },
         {
@@ -59333,7 +59333,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "877470.17708333",
+          maxQty: "2313658.12430555",
           stepSize: "0.00000000",
         },
         {
@@ -59540,7 +59540,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "54.24820055",
+          maxQty: "57.01752555",
           stepSize: "0.00000000",
         },
         {
@@ -59609,7 +59609,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "104.01553097",
+          maxQty: "142.92773333",
           stepSize: "0.00000000",
         },
         {
@@ -59678,7 +59678,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61.54011590",
+          maxQty: "46.50307793",
           stepSize: "0.00000000",
         },
         {
@@ -60023,7 +60023,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20168.59229166",
+          maxQty: "16535.91243055",
           stepSize: "0.00000000",
         },
         {
@@ -60092,7 +60092,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53997.65041666",
+          maxQty: "64444.42505204",
           stepSize: "0.00000000",
         },
         {
@@ -60161,7 +60161,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67792.41493055",
+          maxQty: "62308.51187500",
           stepSize: "0.00000000",
         },
         {
@@ -60230,7 +60230,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "219048.22638888",
+          maxQty: "216287.03680555",
           stepSize: "0.00000000",
         },
         {
@@ -60299,7 +60299,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5651895.68368055",
+          maxQty: "9444731.00971547",
           stepSize: "0.00000000",
         },
         {
@@ -60437,7 +60437,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "75229.97152777",
+          maxQty: "80361.31922276",
           stepSize: "0.00000000",
         },
         {
@@ -60506,7 +60506,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1217.43875694",
+          maxQty: "1735.38592222",
           stepSize: "0.00000000",
         },
         {
@@ -60575,7 +60575,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "142536.71527777",
+          maxQty: "146709.91180555",
           stepSize: "0.00000000",
         },
         {
@@ -60782,7 +60782,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20.25053023",
+          maxQty: "21.16182751",
           stepSize: "0.00000000",
         },
         {
@@ -60851,7 +60851,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "233.21851755",
+          maxQty: "166.14917305",
           stepSize: "0.00000000",
         },
         {
@@ -60920,7 +60920,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "813208.12333333",
+          maxQty: "761521.13650242",
           stepSize: "0.00000000",
         },
         {
@@ -60989,7 +60989,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "135558.60763888",
+          maxQty: "207316.98750000",
           stepSize: "0.00000000",
         },
         {
@@ -61058,7 +61058,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "377387.20902777",
+          maxQty: "565327.02291666",
           stepSize: "0.00000000",
         },
         {
@@ -61127,7 +61127,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "377271.65833333",
+          maxQty: "435408.08680555",
           stepSize: "0.00000000",
         },
         {
@@ -61167,8 +61167,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "13.89000000",
-          maxPrice: "263.74000000",
+          minPrice: "22.04000000",
+          maxPrice: "418.58000000",
           tickSize: "0.01000000",
         },
         {
@@ -61205,7 +61205,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "36.00000000",
+          maxPosition: "23.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -61240,8 +61240,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00992000",
-          maxPrice: "0.18844000",
+          minPrice: "0.00591000",
+          maxPrice: "0.11228000",
           tickSize: "0.00001000",
         },
         {
@@ -61269,7 +61269,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "606223.31534722",
+          maxQty: "623020.34837500",
           stepSize: "0.00000000",
         },
         {
@@ -61278,7 +61278,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "50327.00000000",
+          maxPosition: "84488.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -61480,7 +61480,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18213.34843858",
+          maxQty: "17705.42673611",
           stepSize: "0.00000000",
         },
         {
@@ -61549,7 +61549,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "50943.89118055",
+          maxQty: "44552.62192921",
           stepSize: "0.00000000",
         },
         {
@@ -61618,7 +61618,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22513.12708333",
+          maxQty: "35784.14937500",
           stepSize: "0.00000000",
         },
         {
@@ -61825,7 +61825,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "119922.05555555",
+          maxQty: "196236.99444829",
           stepSize: "0.00000000",
         },
         {
@@ -61894,7 +61894,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "699882.36641221",
+          maxQty: "681720.66458333",
           stepSize: "0.00000000",
         },
         {
@@ -61963,7 +61963,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "172787.99513888",
+          maxQty: "205892.19027777",
           stepSize: "0.00000000",
         },
         {
@@ -62032,7 +62032,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "446.58635694",
+          maxQty: "428.05238402",
           stepSize: "0.00000000",
         },
         {
@@ -62101,7 +62101,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2816928.81236111",
+          maxQty: "2491555.68222222",
           stepSize: "0.00000000",
         },
         {
@@ -62239,7 +62239,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4454.16078472",
+          maxQty: "4395.47956250",
           stepSize: "0.00000000",
         },
         {
@@ -62308,7 +62308,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2949.86931944",
+          maxQty: "4525.62260416",
           stepSize: "0.00000000",
         },
         {
@@ -62446,7 +62446,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10.34552996",
+          maxQty: "7.89921349",
           stepSize: "0.00000000",
         },
         {
@@ -62515,7 +62515,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7.59084222",
+          maxQty: "10.02258295",
           stepSize: "0.00000000",
         },
         {
@@ -62584,7 +62584,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25.58876062",
+          maxQty: "24.44306009",
           stepSize: "0.00000000",
         },
         {
@@ -62791,7 +62791,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12473.66846527",
+          maxQty: "14782.47761111",
           stepSize: "0.00000000",
         },
         {
@@ -62860,7 +62860,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1492240.49375000",
+          maxQty: "1244043.77361111",
           stepSize: "0.00000000",
         },
         {
@@ -62929,7 +62929,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1280154.89027777",
+          maxQty: "2597795.27666666",
           stepSize: "0.00000000",
         },
         {
@@ -62998,7 +62998,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "222293.63086805",
+          maxQty: "291702.96944444",
           stepSize: "0.00000000",
         },
         {
@@ -63067,7 +63067,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10.85416138",
+          maxQty: "6.62453304",
           stepSize: "0.00000000",
         },
         {
@@ -63136,7 +63136,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "155.11147694",
+          maxQty: "111.07488493",
           stepSize: "0.00000000",
         },
         {
@@ -63205,7 +63205,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "257.76737777",
+          maxQty: "312.38949063",
           stepSize: "0.00000000",
         },
         {
@@ -63274,7 +63274,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1459796.77131944",
+          maxQty: "1211652.17680555",
           stepSize: "0.00000000",
         },
         {
@@ -63343,7 +63343,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "917871.04165277",
+          maxQty: "792886.58440277",
           stepSize: "0.00000000",
         },
         {
@@ -63481,7 +63481,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "843657.67361111",
+          maxQty: "957510.23263888",
           stepSize: "0.00000000",
         },
         {
@@ -63550,7 +63550,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1035830.66738376",
+          maxQty: "1655388.11693268",
           stepSize: "0.00000000",
         },
         {
@@ -63619,7 +63619,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2969877.58861111",
+          maxQty: "6098015.05600277",
           stepSize: "0.00000000",
         },
         {
@@ -63688,7 +63688,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16001.84236111",
+          maxQty: "14883.36437500",
           stepSize: "0.00000000",
         },
         {
@@ -63757,7 +63757,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33475.92180555",
+          maxQty: "29775.18216516",
           stepSize: "0.00000000",
         },
         {
@@ -63826,7 +63826,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37959.52222222",
+          maxQty: "54989.88854166",
           stepSize: "0.00000000",
         },
         {
@@ -63895,7 +63895,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "72674.86620402",
+          maxQty: "149495.60895833",
           stepSize: "0.00000000",
         },
         {
@@ -63964,7 +63964,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3844.25930555",
+          maxQty: "3656.24166666",
           stepSize: "0.00000000",
         },
         {
@@ -64033,7 +64033,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13930.26217904",
+          maxQty: "12478.51881944",
           stepSize: "0.00000000",
         },
         {
@@ -64102,7 +64102,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15666.65951388",
+          maxQty: "19759.50270833",
           stepSize: "0.00000000",
         },
         {
@@ -64171,7 +64171,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "69288.90548611",
+          maxQty: "99726.13770833",
           stepSize: "0.00000000",
         },
         {
@@ -64309,7 +64309,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "40088.95437500",
+          maxQty: "50169.79138888",
           stepSize: "0.00000000",
         },
         {
@@ -64378,7 +64378,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "66291.07881944",
+          maxQty: "78987.97944444",
           stepSize: "0.00000000",
         },
         {
@@ -64447,7 +64447,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "148122.20430555",
+          maxQty: "273836.08118055",
           stepSize: "0.00000000",
         },
         {
@@ -64516,7 +64516,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "42380.36710617",
+          maxQty: "49584.84444444",
           stepSize: "0.00000000",
         },
         {
@@ -64585,7 +64585,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "137723.60833333",
+          maxQty: "169582.73004857",
           stepSize: "0.00000000",
         },
         {
@@ -64654,7 +64654,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "847465.63194444",
+          maxQty: "546686.65926439",
           stepSize: "0.00000000",
         },
         {
@@ -64723,7 +64723,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "277898.34513888",
+          maxQty: "188595.44375000",
           stepSize: "0.00000000",
         },
         {
@@ -64792,7 +64792,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "47917.56944444",
+          maxQty: "78555.72708333",
           stepSize: "0.00000000",
         },
         {
@@ -64861,7 +64861,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "115773.24513888",
+          maxQty: "193648.44444444",
           stepSize: "0.00000000",
         },
         {
@@ -64930,7 +64930,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "104920.28333333",
+          maxQty: "206469.74166666",
           stepSize: "0.00000000",
         },
         {
@@ -64999,7 +64999,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "270759.39166666",
+          maxQty: "490509.77708333",
           stepSize: "0.00000000",
         },
         {
@@ -65068,7 +65068,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1596.04630555",
+          maxQty: "2356.94138888",
           stepSize: "0.00000000",
         },
         {
@@ -65137,7 +65137,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "507.33207638",
+          maxQty: "795.59364583",
           stepSize: "0.00000000",
         },
         {
@@ -65206,7 +65206,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4248.75274305",
+          maxQty: "4879.17818055",
           stepSize: "0.00000000",
         },
         {
@@ -65275,7 +65275,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16552.10077777",
+          maxQty: "19803.75341666",
           stepSize: "0.00000000",
         },
         {
@@ -65344,7 +65344,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "54326.77720833",
+          maxQty: "78028.14057638",
           stepSize: "0.00000000",
         },
         {
@@ -65413,7 +65413,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68173.11068055",
+          maxQty: "82992.57800694",
           stepSize: "0.00000000",
         },
         {
@@ -65482,7 +65482,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "266386.08388194",
+          maxQty: "312026.36643055",
           stepSize: "0.00000000",
         },
         {
@@ -65551,7 +65551,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7402.14351839",
+          maxQty: "7930.18495489",
           stepSize: "0.00000000",
         },
         {
@@ -65620,7 +65620,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15741.33545833",
+          maxQty: "16225.01526717",
           stepSize: "0.00000000",
         },
         {
@@ -65689,7 +65689,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34451.32902777",
+          maxQty: "29964.61676666",
           stepSize: "0.00000000",
         },
         {
@@ -65758,7 +65758,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "96685.64277083",
+          maxQty: "83932.65971527",
           stepSize: "0.00000000",
         },
         {
@@ -65827,7 +65827,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "502293.44861111",
+          maxQty: "604400.31736111",
           stepSize: "0.00000000",
         },
         {
@@ -65896,7 +65896,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "968401.74006944",
+          maxQty: "1005120.40013879",
           stepSize: "0.00000000",
         },
         {
@@ -65965,7 +65965,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1929201.33402777",
+          maxQty: "1410772.28958333",
           stepSize: "0.00000000",
         },
         {
@@ -66034,7 +66034,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "39881902.24861111",
+          maxQty: "36447778.13740458",
           stepSize: "0.00000000",
         },
         {
@@ -66103,7 +66103,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3978762.66645833",
+          maxQty: "4636682.00874999",
           stepSize: "0.00000000",
         },
         {
@@ -66172,7 +66172,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10559557.88513888",
+          maxQty: "15916279.35263888",
           stepSize: "0.00000000",
         },
         {
@@ -66241,7 +66241,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21.66812430",
+          maxQty: "17.56773247",
           stepSize: "0.00000000",
         },
         {
@@ -66310,7 +66310,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "174.88316013",
+          maxQty: "125.15321118",
           stepSize: "0.00000000",
         },
         {
@@ -66379,7 +66379,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "377.51417527",
+          maxQty: "307.80519423",
           stepSize: "0.00000000",
         },
         {
@@ -66448,7 +66448,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1559.60935082",
+          maxQty: "1034.16607411",
           stepSize: "0.00000000",
         },
         {
@@ -66533,7 +66533,7 @@ export default {
     },
     {
       symbol: "WNXMBTC",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "WNXM",
       baseAssetPrecision: 8,
       quoteAsset: "BTC",
@@ -66586,7 +66586,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "270.23072638",
+          maxQty: "491.33048611",
           stepSize: "0.00000000",
         },
         {
@@ -66724,7 +66724,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2255.10928472",
+          maxQty: "1135.29455239",
           stepSize: "0.00000000",
         },
         {
@@ -66862,7 +66862,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2156.92738194",
+          maxQty: "1624.29013888",
           stepSize: "0.00000000",
         },
         {
@@ -66931,7 +66931,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1784.67339583",
+          maxQty: "1888.04580555",
           stepSize: "0.00000000",
         },
         {
@@ -67000,7 +67000,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7850.64661111",
+          maxQty: "8058.12782638",
           stepSize: "0.00000000",
         },
         {
@@ -67138,7 +67138,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2441.42840972",
+          maxQty: "2710.38607217",
           stepSize: "0.00000000",
         },
         {
@@ -67207,7 +67207,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3163.47485416",
+          maxQty: "4130.27029166",
           stepSize: "0.00000000",
         },
         {
@@ -67621,7 +67621,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "178.85611243",
+          maxQty: "284.34180576",
           stepSize: "0.00000000",
         },
         {
@@ -67690,7 +67690,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7.18769352",
+          maxQty: "4.30299156",
           stepSize: "0.00000000",
         },
         {
@@ -67759,7 +67759,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19809.34527777",
+          maxQty: "13286.74166666",
           stepSize: "0.00000000",
         },
         {
@@ -67828,7 +67828,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "55361.83558333",
+          maxQty: "57910.28041666",
           stepSize: "0.00000000",
         },
         {
@@ -67897,7 +67897,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37953.21965277",
+          maxQty: "54188.99618055",
           stepSize: "0.00000000",
         },
         {
@@ -67966,7 +67966,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "139574.30513532",
+          maxQty: "154119.36062500",
           stepSize: "0.00000000",
         },
         {
@@ -68035,7 +68035,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7.47745895",
+          maxQty: "8.73814944",
           stepSize: "0.00000000",
         },
         {
@@ -68104,7 +68104,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26.76502173",
+          maxQty: "34.32838986",
           stepSize: "0.00000000",
         },
         {
@@ -68173,7 +68173,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9.49456923",
+          maxQty: "19.78348527",
           stepSize: "0.00000000",
         },
         {
@@ -68242,7 +68242,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "66.70645472",
+          maxQty: "59.74452284",
           stepSize: "0.00000000",
         },
         {
@@ -68311,7 +68311,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "175.16159027",
+          maxQty: "187.97052361",
           stepSize: "0.00000000",
         },
         {
@@ -68380,7 +68380,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "825.82660625",
+          maxQty: "709.45407361",
           stepSize: "0.00000000",
         },
         {
@@ -68449,7 +68449,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "637.51983472",
+          maxQty: "629.39035972",
           stepSize: "0.00000000",
         },
         {
@@ -68518,7 +68518,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2025.98375277",
+          maxQty: "2124.44962152",
           stepSize: "0.00000000",
         },
         {
@@ -68587,7 +68587,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "531.00600694",
+          maxQty: "498.36652083",
           stepSize: "0.00000000",
         },
         {
@@ -68656,7 +68656,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1349.63784027",
+          maxQty: "1598.12717361",
           stepSize: "0.00000000",
         },
         {
@@ -68725,7 +68725,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3986.89544444",
+          maxQty: "4036.63689104",
           stepSize: "0.00000000",
         },
         {
@@ -68794,7 +68794,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10007.17902083",
+          maxQty: "11188.48256944",
           stepSize: "0.00000000",
         },
         {
@@ -68932,7 +68932,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67414.14194444",
+          maxQty: "139743.36826388",
           stepSize: "0.00000000",
         },
         {
@@ -69001,7 +69001,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "65714.06756944",
+          maxQty: "40383.58465277",
           stepSize: "0.00000000",
         },
         {
@@ -69070,7 +69070,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "246312.40291666",
+          maxQty: "266588.49340277",
           stepSize: "0.00000000",
         },
         {
@@ -69139,7 +69139,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "225832.54826388",
+          maxQty: "183391.68069444",
           stepSize: "0.00000000",
         },
         {
@@ -69208,7 +69208,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1072525.67427083",
+          maxQty: "1790610.98125000",
           stepSize: "0.00000000",
         },
         {
@@ -69277,7 +69277,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12229.24208333",
+          maxQty: "9355.17708333",
           stepSize: "0.00000000",
         },
         {
@@ -69346,7 +69346,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "39470.39597222",
+          maxQty: "48896.75097222",
           stepSize: "0.00000000",
         },
         {
@@ -69524,8 +69524,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00632000",
-          maxPrice: "0.11998000",
+          minPrice: "0.00991000",
+          maxPrice: "0.18810000",
           tickSize: "0.00001000",
         },
         {
@@ -69562,7 +69562,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "79302.00000000",
+          maxPosition: "50505.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -69597,8 +69597,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "1.13400000",
-          maxPrice: "21.52800000",
+          minPrice: "0.69300000",
+          maxPrice: "13.16200000",
           tickSize: "0.00100000",
         },
         {
@@ -69626,7 +69626,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1658.97339583",
+          maxQty: "1531.18239417",
           stepSize: "0.00000000",
         },
         {
@@ -69635,7 +69635,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "441.00000000",
+          maxPosition: "720.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -69670,8 +69670,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.11780000",
-          maxPrice: "2.23640000",
+          minPrice: "0.14400000",
+          maxPrice: "2.73480000",
           tickSize: "0.00010000",
         },
         {
@@ -69699,7 +69699,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "220640.16655555",
+          maxQty: "189890.83659958",
           stepSize: "0.00000000",
         },
         {
@@ -69708,7 +69708,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "4252.00000000",
+          maxPosition: "3468.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -69743,8 +69743,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.00005190",
-          maxPrice: "0.00098590",
+          minPrice: "0.00003690",
+          maxPrice: "0.00069990",
           tickSize: "0.00000010",
         },
         {
@@ -69772,7 +69772,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "100000000.00000000",
+          maxQty: "95634111.68789584",
           stepSize: "0.00000000",
         },
         {
@@ -69781,7 +69781,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "9661836.00000000",
+          maxPosition: "13568521.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -69816,8 +69816,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "0.12080000",
-          maxPrice: "2.29470000",
+          minPrice: "0.20510000",
+          maxPrice: "3.89560000",
           tickSize: "0.00010000",
         },
         {
@@ -69845,7 +69845,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "204582.74141666",
+          maxQty: "140225.06865277",
           stepSize: "0.00000000",
         },
         {
@@ -69854,7 +69854,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "4137.00000000",
+          maxPosition: "2433.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -69889,8 +69889,8 @@ export default {
       filters: [
         {
           filterType: "PRICE_FILTER",
-          minPrice: "1.75100000",
-          maxPrice: "33.25400000",
+          minPrice: "0.70900000",
+          maxPrice: "13.46100000",
           tickSize: "0.00100000",
         },
         {
@@ -69918,7 +69918,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8462.27214583",
+          maxQty: "15616.11761111",
           stepSize: "0.00000000",
         },
         {
@@ -69927,7 +69927,7 @@ export default {
         },
         {
           filterType: "MAX_POSITION",
-          maxPosition: "286.00000000",
+          maxPosition: "708.00000000",
         },
         {
           filterType: "MAX_NUM_ALGO_ORDERS",
@@ -70129,7 +70129,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3700.80734722",
+          maxQty: "2991.25854166",
           stepSize: "0.00000000",
         },
         {
@@ -70198,7 +70198,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "85707.32131944",
+          maxQty: "30664.56554476",
           stepSize: "0.00000000",
         },
         {
@@ -70267,7 +70267,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21576.03513888",
+          maxQty: "29107.85923611",
           stepSize: "0.00000000",
         },
         {
@@ -70336,7 +70336,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28662.85777777",
+          maxQty: "28561.95465277",
           stepSize: "0.00000000",
         },
         {
@@ -70405,7 +70405,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21426.31790423",
+          maxQty: "24556.61736111",
           stepSize: "0.00000000",
         },
         {
@@ -70474,7 +70474,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "100333.77875000",
+          maxQty: "117556.36759195",
           stepSize: "0.00000000",
         },
         {
@@ -70612,7 +70612,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4385.82434027",
+          maxQty: "4115.75987500",
           stepSize: "0.00000000",
         },
         {
@@ -70819,7 +70819,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2769.74436111",
+          maxQty: "2981.21225000",
           stepSize: "0.00000000",
         },
         {
@@ -70888,7 +70888,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14552.92091666",
+          maxQty: "14077.15385416",
           stepSize: "0.00000000",
         },
         {
@@ -71164,7 +71164,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19728.89986111",
+          maxQty: "23260.50923611",
           stepSize: "0.00000000",
         },
         {
@@ -71233,7 +71233,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "548.88294027",
+          maxQty: "555.07246388",
           stepSize: "0.00000000",
         },
         {
@@ -71302,7 +71302,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3167.97283194",
+          maxQty: "3332.28566666",
           stepSize: "0.00000000",
         },
         {
@@ -71371,7 +71371,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9605.55146527",
+          maxQty: "8368.01525694",
           stepSize: "0.00000000",
         },
         {
@@ -71440,7 +71440,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29666.58667361",
+          maxQty: "29641.33063194",
           stepSize: "0.00000000",
         },
         {
@@ -71509,7 +71509,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32542.71875000",
+          maxQty: "48920.58795281",
           stepSize: "0.00000000",
         },
         {
@@ -71578,7 +71578,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "99872.32652777",
+          maxQty: "115574.74650000",
           stepSize: "0.00000000",
         },
         {
@@ -71716,7 +71716,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5229869.26881944",
+          maxQty: "12186069.14506944",
           stepSize: "0.00000000",
         },
         {
@@ -71785,7 +71785,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "290677.72638888",
+          maxQty: "406326.87083333",
           stepSize: "0.00000000",
         },
         {
@@ -71854,7 +71854,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "527791.42708333",
+          maxQty: "845737.96597222",
           stepSize: "0.00000000",
         },
         {
@@ -71992,7 +71992,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9480553.45555555",
+          maxQty: "7971726.49166666",
           stepSize: "0.00000000",
         },
         {
@@ -72061,7 +72061,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3133.14958333",
+          maxQty: "2688.70018055",
           stepSize: "0.00000000",
         },
         {
@@ -72130,7 +72130,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8773.36683333",
+          maxQty: "11655.23246356",
           stepSize: "0.00000000",
         },
         {
@@ -72199,7 +72199,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19467.94915972",
+          maxQty: "25681.75519444",
           stepSize: "0.00000000",
         },
         {
@@ -72268,7 +72268,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "80313.11372916",
+          maxQty: "105912.32993055",
           stepSize: "0.00000000",
         },
         {
@@ -72337,7 +72337,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3279.33498611",
+          maxQty: "5312.92763888",
           stepSize: "0.00000000",
         },
         {
@@ -72406,7 +72406,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28437.06846527",
+          maxQty: "61486.33093750",
           stepSize: "0.00000000",
         },
         {
@@ -72475,7 +72475,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61395.10791666",
+          maxQty: "28389.10840277",
           stepSize: "0.00000000",
         },
         {
@@ -72544,7 +72544,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21212.89354166",
+          maxQty: "27469.93166666",
           stepSize: "0.00000000",
         },
         {
@@ -72820,7 +72820,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "115245.10895211",
+          maxQty: "101523.09097222",
           stepSize: "0.00000000",
         },
         {
@@ -72836,7 +72836,7 @@ export default {
     },
     {
       symbol: "FLMBUSD",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "FLM",
       baseAssetPrecision: 8,
       quoteAsset: "BUSD",
@@ -72889,7 +72889,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "95463.40416666",
+          maxQty: "66463.02916666",
           stepSize: "0.00000000",
         },
         {
@@ -72958,7 +72958,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "478566.56094444",
+          maxQty: "695516.47777777",
           stepSize: "0.00000000",
         },
         {
@@ -73027,7 +73027,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "90472.81319444",
+          maxQty: "106888.93020833",
           stepSize: "0.00000000",
         },
         {
@@ -73096,7 +73096,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "62194.93888888",
+          maxQty: "53311.84583333",
           stepSize: "0.00000000",
         },
         {
@@ -73165,7 +73165,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17616.19038888",
+          maxQty: "14357.29176266",
           stepSize: "0.00000000",
         },
         {
@@ -73234,7 +73234,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "66677.85815625",
+          maxQty: "51053.65768055",
           stepSize: "0.00000000",
         },
         {
@@ -73303,7 +73303,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "547045.65486111",
+          maxQty: "632133.84177654",
           stepSize: "0.00000000",
         },
         {
@@ -73514,7 +73514,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13596.58659722",
+          maxQty: "13202.07104166",
           stepSize: "0.00000000",
         },
         {
@@ -73583,7 +73583,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34211.66479166",
+          maxQty: "56572.63875000",
           stepSize: "0.00000000",
         },
         {
@@ -73721,7 +73721,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33198.60652777",
+          maxQty: "51779.52409722",
           stepSize: "0.00000000",
         },
         {
@@ -73790,7 +73790,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "459466.78680555",
+          maxQty: "283443.25000000",
           stepSize: "0.00000000",
         },
         {
@@ -73859,7 +73859,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "673570.55517002",
+          maxQty: "1094856.32477446",
           stepSize: "0.00000000",
         },
         {
@@ -73928,7 +73928,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3554.12124219",
+          maxQty: "2988.42804861",
           stepSize: "0.00000000",
         },
         {
@@ -73997,7 +73997,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6368.92808333",
+          maxQty: "5756.56575694",
           stepSize: "0.00000000",
         },
         {
@@ -74066,7 +74066,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4129.89625000",
+          maxQty: "7463.31337959",
           stepSize: "0.00000000",
         },
         {
@@ -74135,7 +74135,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14393.89872222",
+          maxQty: "19592.05413888",
           stepSize: "0.00000000",
         },
         {
@@ -74204,7 +74204,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "104220.59513888",
+          maxQty: "86615.60555555",
           stepSize: "0.00000000",
         },
         {
@@ -74273,7 +74273,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "142768.20347222",
+          maxQty: "147817.91666666",
           stepSize: "0.00000000",
         },
         {
@@ -74342,7 +74342,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "170852.05784722",
+          maxQty: "244781.09791666",
           stepSize: "0.00000000",
         },
         {
@@ -74411,7 +74411,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "534955.37884722",
+          maxQty: "1402443.21374045",
           stepSize: "0.00000000",
         },
         {
@@ -74480,7 +74480,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112726.97777777",
+          maxQty: "92780.03611111",
           stepSize: "0.00000000",
         },
         {
@@ -74549,7 +74549,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "73648.92986111",
+          maxQty: "89476.46597222",
           stepSize: "0.00000000",
         },
         {
@@ -74618,7 +74618,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "486.79275694",
+          maxQty: "404.79218667",
           stepSize: "0.00000000",
         },
         {
@@ -74687,7 +74687,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29.57788017",
+          maxQty: "35.59665060",
           stepSize: "0.00000000",
         },
         {
@@ -74756,7 +74756,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2124228.83319444",
+          maxQty: "623820.04048611",
           stepSize: "0.00000000",
         },
         {
@@ -74825,7 +74825,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2452.90939764",
+          maxQty: "1997.93694170",
           stepSize: "0.00000000",
         },
         {
@@ -74894,7 +74894,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "733.27735208",
+          maxQty: "567.38821875",
           stepSize: "0.00000000",
         },
         {
@@ -74963,7 +74963,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2205.09373333",
+          maxQty: "2569.48602986",
           stepSize: "0.00000000",
         },
         {
@@ -75032,7 +75032,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4963.49285486",
+          maxQty: "7315.70332013",
           stepSize: "0.00000000",
         },
         {
@@ -75170,7 +75170,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10427.83118055",
+          maxQty: "5789.21436502",
           stepSize: "0.00000000",
         },
         {
@@ -75239,7 +75239,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "36812.99750000",
+          maxQty: "32273.88048611",
           stepSize: "0.00000000",
         },
         {
@@ -75308,7 +75308,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68002.02888888",
+          maxQty: "47824.61187500",
           stepSize: "0.00000000",
         },
         {
@@ -75377,7 +75377,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "267720.75496183",
+          maxQty: "244030.97291666",
           stepSize: "0.00000000",
         },
         {
@@ -75653,7 +75653,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2818.07444444",
+          maxQty: "3364.17571131",
           stepSize: "0.00000000",
         },
         {
@@ -75722,7 +75722,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5073.08477083",
+          maxQty: "6260.97173490",
           stepSize: "0.00000000",
         },
         {
@@ -75791,7 +75791,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11738.47277083",
+          maxQty: "14079.27607638",
           stepSize: "0.00000000",
         },
         {
@@ -75860,7 +75860,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11393.76716666",
+          maxQty: "20807.73236641",
           stepSize: "0.00000000",
         },
         {
@@ -75929,7 +75929,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112331.92937500",
+          maxQty: "151519.61582638",
           stepSize: "0.00000000",
         },
         {
@@ -76278,7 +76278,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6918.62479166",
+          maxQty: "8009.31068702",
           stepSize: "0.00000000",
         },
         {
@@ -76347,7 +76347,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10972.73687500",
+          maxQty: "13092.25701388",
           stepSize: "0.00000000",
         },
         {
@@ -76416,7 +76416,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11224.26097222",
+          maxQty: "11230.31777777",
           stepSize: "0.00000000",
         },
         {
@@ -76485,7 +76485,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "48972.45944444",
+          maxQty: "71995.85729166",
           stepSize: "0.00000000",
         },
         {
@@ -76554,7 +76554,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "220305.93680555",
+          maxQty: "159495.48472222",
           stepSize: "0.00000000",
         },
         {
@@ -76623,7 +76623,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "188653.67986111",
+          maxQty: "136261.35000000",
           stepSize: "0.00000000",
         },
         {
@@ -76692,7 +76692,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6795.10596527",
+          maxQty: "7720.11240972",
           stepSize: "0.00000000",
         },
         {
@@ -76761,7 +76761,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2026083.37416666",
+          maxQty: "2991180.15388888",
           stepSize: "0.00000000",
         },
         {
@@ -76899,7 +76899,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67145.55006944",
+          maxQty: "107399.90430555",
           stepSize: "0.00000000",
         },
         {
@@ -76968,7 +76968,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "91904.14502777",
+          maxQty: "131270.41701388",
           stepSize: "0.00000000",
         },
         {
@@ -77037,7 +77037,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "195812.41854166",
+          maxQty: "547016.17562500",
           stepSize: "0.00000000",
         },
         {
@@ -77106,7 +77106,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14835.03027777",
+          maxQty: "29593.37548611",
           stepSize: "0.00000000",
         },
         {
@@ -77175,7 +77175,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35291.78576388",
+          maxQty: "20270.74854166",
           stepSize: "0.00000000",
         },
         {
@@ -77244,7 +77244,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34373.22361111",
+          maxQty: "36064.07847222",
           stepSize: "0.00000000",
         },
         {
@@ -77313,7 +77313,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "119714.72312500",
+          maxQty: "166740.13948646",
           stepSize: "0.00000000",
         },
         {
@@ -77658,7 +77658,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "178.69243451",
+          maxQty: "193.69794267",
           stepSize: "0.00000000",
         },
         {
@@ -77727,7 +77727,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14162.22290972",
+          maxQty: "11649.43402498",
           stepSize: "0.00000000",
         },
         {
@@ -77796,7 +77796,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24500465.78750000",
+          maxQty: "32377515.58848022",
           stepSize: "0.00000000",
         },
         {
@@ -77865,7 +77865,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13072167.11597222",
+          maxQty: "9690946.38472222",
           stepSize: "0.00000000",
         },
         {
@@ -77934,7 +77934,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "101.50841666",
+          maxQty: "52.18981944",
           stepSize: "0.00000000",
         },
         {
@@ -78003,7 +78003,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "518.36375694",
+          maxQty: "509.98597916",
           stepSize: "0.00000000",
         },
         {
@@ -78072,7 +78072,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2530.06845833",
+          maxQty: "1495.46922276",
           stepSize: "0.00000000",
         },
         {
@@ -78141,7 +78141,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3843.60350000",
+          maxQty: "7754.18608333",
           stepSize: "0.00000000",
         },
         {
@@ -78210,7 +78210,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6773.88640972",
+          maxQty: "14884.97679861",
           stepSize: "0.00000000",
         },
         {
@@ -78279,7 +78279,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20534.67120833",
+          maxQty: "44280.96381250",
           stepSize: "0.00000000",
         },
         {
@@ -78348,7 +78348,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38973.95625000",
+          maxQty: "38433.27569444",
           stepSize: "0.00000000",
         },
         {
@@ -78417,7 +78417,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "86394.27430555",
+          maxQty: "74182.57430555",
           stepSize: "0.00000000",
         },
         {
@@ -78486,7 +78486,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "87032.76127777",
+          maxQty: "96100.97013888",
           stepSize: "0.00000000",
         },
         {
@@ -78555,7 +78555,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "260072.96388888",
+          maxQty: "371031.62430555",
           stepSize: "0.00000000",
         },
         {
@@ -78624,7 +78624,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "404.45928888",
+          maxQty: "442.62600972",
           stepSize: "0.00000000",
         },
         {
@@ -78693,7 +78693,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1140.23967986",
+          maxQty: "1348.96142361",
           stepSize: "0.00000000",
         },
         {
@@ -78762,7 +78762,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2.29919558",
+          maxQty: "1.04269519",
           stepSize: "0.00000000",
         },
         {
@@ -78900,7 +78900,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "272664.99097222",
+          maxQty: "1003563.35877862",
           stepSize: "0.00000000",
         },
         {
@@ -78969,7 +78969,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1048965.19930555",
+          maxQty: "3144253.60833333",
           stepSize: "0.00000000",
         },
         {
@@ -79038,7 +79038,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14057986.45694444",
+          maxQty: "12280569.10972222",
           stepSize: "0.00000000",
         },
         {
@@ -79107,7 +79107,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "408460.41423611",
+          maxQty: "565086.14659722",
           stepSize: "0.00000000",
         },
         {
@@ -79245,7 +79245,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26340.26597222",
+          maxQty: "18087.70763888",
           stepSize: "0.00000000",
         },
         {
@@ -79314,7 +79314,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53413.01930555",
+          maxQty: "83174.03097222",
           stepSize: "0.00000000",
         },
         {
@@ -79383,7 +79383,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "27771.58236111",
+          maxQty: "27837.87506944",
           stepSize: "0.00000000",
         },
         {
@@ -79452,7 +79452,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "27324.97069444",
+          maxQty: "23879.65419847",
           stepSize: "0.00000000",
         },
         {
@@ -79521,7 +79521,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26497.81444444",
+          maxQty: "19255.26340277",
           stepSize: "0.00000000",
         },
         {
@@ -79590,7 +79590,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112224.50722222",
+          maxQty: "114099.68361111",
           stepSize: "0.00000000",
         },
         {
@@ -79659,7 +79659,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1490323.69236111",
+          maxQty: "3793881.42708333",
           stepSize: "0.00000000",
         },
         {
@@ -79728,7 +79728,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "860095.09444444",
+          maxQty: "1195969.23444444",
           stepSize: "0.00000000",
         },
         {
@@ -79866,7 +79866,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6414.71965277",
+          maxQty: "5053.91506944",
           stepSize: "0.00000000",
         },
         {
@@ -79935,7 +79935,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5794.03479166",
+          maxQty: "8016.12748091",
           stepSize: "0.00000000",
         },
         {
@@ -80004,7 +80004,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25799.94159722",
+          maxQty: "23398.20041666",
           stepSize: "0.00000000",
         },
         {
@@ -80109,7 +80109,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -80142,7 +80142,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "130076.42430555",
+          maxQty: "141566.79861111",
           stepSize: "0.00000000",
         },
         {
@@ -80154,7 +80154,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "BCHABUSD",
@@ -80280,7 +80280,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1040138.94652777",
+          maxQty: "1470653.89312977",
           stepSize: "0.00000000",
         },
         {
@@ -80349,7 +80349,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2431040.64472222",
+          maxQty: "1829849.98194444",
           stepSize: "0.00000000",
         },
         {
@@ -80418,7 +80418,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2528487.36340277",
+          maxQty: "2491698.17987508",
           stepSize: "0.00000000",
         },
         {
@@ -80487,7 +80487,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6937.75934722",
+          maxQty: "7241.36906944",
           stepSize: "0.00000000",
         },
         {
@@ -80556,7 +80556,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "614531.34340277",
+          maxQty: "782033.90326388",
           stepSize: "0.00000000",
         },
         {
@@ -80625,7 +80625,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "93372.99861111",
+          maxQty: "76113.46409722",
           stepSize: "0.00000000",
         },
         {
@@ -80694,7 +80694,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "178579.18125000",
+          maxQty: "512858.46736111",
           stepSize: "0.00000000",
         },
         {
@@ -80763,7 +80763,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1792034.36079861",
+          maxQty: "2558889.81263011",
           stepSize: "0.00000000",
         },
         {
@@ -80901,7 +80901,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1254075.20208333",
+          maxQty: "1828366.54861111",
           stepSize: "0.00000000",
         },
         {
@@ -81108,7 +81108,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3246.87140972",
+          maxQty: "3071.73968055",
           stepSize: "0.00000000",
         },
         {
@@ -81177,7 +81177,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5252.73834027",
+          maxQty: "6897.48607638",
           stepSize: "0.00000000",
         },
         {
@@ -81246,7 +81246,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "111945.57708333",
+          maxQty: "85202.40180430",
           stepSize: "0.00000000",
         },
         {
@@ -81384,7 +81384,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "478188.15555555",
+          maxQty: "345320.50416666",
           stepSize: "0.00000000",
         },
         {
@@ -81453,7 +81453,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "312381.08333333",
+          maxQty: "313964.11805555",
           stepSize: "0.00000000",
         },
         {
@@ -81522,7 +81522,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1426696.41915336",
+          maxQty: "1340933.39861111",
           stepSize: "0.00000000",
         },
         {
@@ -81591,7 +81591,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "206.17735138",
+          maxQty: "217.70521041",
           stepSize: "0.00000000",
         },
         {
@@ -81660,7 +81660,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1.86927373",
+          maxQty: "2.58503931",
           stepSize: "0.00000000",
         },
         {
@@ -81729,7 +81729,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "726518.64722222",
+          maxQty: "702747.34236111",
           stepSize: "0.00000000",
         },
         {
@@ -81936,7 +81936,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "86651.62368055",
+          maxQty: "137789.91340277",
           stepSize: "0.00000000",
         },
         {
@@ -82143,7 +82143,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "125987.77916666",
+          maxQty: "92207.97777777",
           stepSize: "0.00000000",
         },
         {
@@ -82212,7 +82212,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "62102.05347222",
+          maxQty: "79891.63125000",
           stepSize: "0.00000000",
         },
         {
@@ -82281,7 +82281,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9733.85027777",
+          maxQty: "11090.72493055",
           stepSize: "0.00000000",
         },
         {
@@ -82350,7 +82350,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21228.10076388",
+          maxQty: "34083.33569444",
           stepSize: "0.00000000",
         },
         {
@@ -82695,7 +82695,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2576.06472222",
+          maxQty: "5644.63967383",
           stepSize: "0.00000000",
         },
         {
@@ -82833,7 +82833,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "466.65294027",
+          maxQty: "277.06666597",
           stepSize: "0.00000000",
         },
         {
@@ -82902,7 +82902,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "571338.47916666",
+          maxQty: "652749.21250000",
           stepSize: "0.00000000",
         },
         {
@@ -82971,7 +82971,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "432360.58680555",
+          maxQty: "515537.47430555",
           stepSize: "0.00000000",
         },
         {
@@ -83109,7 +83109,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "537104.71875000",
+          maxQty: "874988.40138888",
           stepSize: "0.00000000",
         },
         {
@@ -83178,7 +83178,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "350208.12152777",
+          maxQty: "363052.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -83247,7 +83247,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "137103.96597222",
+          maxQty: "120745.95416666",
           stepSize: "0.00000000",
         },
         {
@@ -83316,7 +83316,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1338714.94444444",
+          maxQty: "2399420.62664816",
           stepSize: "0.00000000",
         },
         {
@@ -83385,7 +83385,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4256.63022916",
+          maxQty: "7408.60145138",
           stepSize: "0.00000000",
         },
         {
@@ -83454,7 +83454,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3731.24270833",
+          maxQty: "6859.20269444",
           stepSize: "0.00000000",
         },
         {
@@ -83523,7 +83523,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23764.36049305",
+          maxQty: "27653.36855555",
           stepSize: "0.00000000",
         },
         {
@@ -83592,7 +83592,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4612.86161805",
+          maxQty: "3890.56771527",
           stepSize: "0.00000000",
         },
         {
@@ -83661,7 +83661,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3840.29170833",
+          maxQty: "3457.69935461",
           stepSize: "0.00000000",
         },
         {
@@ -83730,7 +83730,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19521.28300000",
+          maxQty: "14653.37536805",
           stepSize: "0.00000000",
         },
         {
@@ -83937,7 +83937,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "76500.29722222",
+          maxQty: "127380.41187500",
           stepSize: "0.00000000",
         },
         {
@@ -84006,7 +84006,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "197992.46423611",
+          maxQty: "279609.03479166",
           stepSize: "0.00000000",
         },
         {
@@ -84144,7 +84144,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20338965.51041666",
+          maxQty: "25288849.43263888",
           stepSize: "0.00000000",
         },
         {
@@ -84213,7 +84213,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6015.75875000",
+          maxQty: "8552.87833333",
           stepSize: "0.00000000",
         },
         {
@@ -84282,7 +84282,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53158.10242886",
+          maxQty: "50510.36444444",
           stepSize: "0.00000000",
         },
         {
@@ -84351,7 +84351,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5160.48692361",
+          maxQty: "5317.47138098",
           stepSize: "0.00000000",
         },
         {
@@ -84420,7 +84420,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22262.80700694",
+          maxQty: "16090.69263888",
           stepSize: "0.00000000",
         },
         {
@@ -84489,7 +84489,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5862.01791666",
+          maxQty: "13796.26701388",
           stepSize: "0.00000000",
         },
         {
@@ -84558,7 +84558,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35138.55694444",
+          maxQty: "34322.31943095",
           stepSize: "0.00000000",
         },
         {
@@ -84627,7 +84627,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35247.38937500",
+          maxQty: "28047.23597222",
           stepSize: "0.00000000",
         },
         {
@@ -84696,7 +84696,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "256831.54243055",
+          maxQty: "290725.67640527",
           stepSize: "0.00000000",
         },
         {
@@ -84765,7 +84765,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "366209.48263888",
+          maxQty: "2290896.54476058",
           stepSize: "0.00000000",
         },
         {
@@ -84834,7 +84834,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "382778.20471894",
+          maxQty: "392862.24097222",
           stepSize: "0.00000000",
         },
         {
@@ -84903,7 +84903,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "966667.56875000",
+          maxQty: "720417.18875780",
           stepSize: "0.00000000",
         },
         {
@@ -84972,7 +84972,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "155999.15902777",
+          maxQty: "161604.38055555",
           stepSize: "0.00000000",
         },
         {
@@ -85041,7 +85041,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3976.16007638",
+          maxQty: "5873.73402777",
           stepSize: "0.00000000",
         },
         {
@@ -85110,7 +85110,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "127352.42777777",
+          maxQty: "126282.51180555",
           stepSize: "0.00000000",
         },
         {
@@ -85179,7 +85179,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3171.98650694",
+          maxQty: "2458.60084027",
           stepSize: "0.00000000",
         },
         {
@@ -85248,7 +85248,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2130.71369444",
+          maxQty: "4171.22296527",
           stepSize: "0.00000000",
         },
         {
@@ -85317,7 +85317,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8895.07809722",
+          maxQty: "16139.22066666",
           stepSize: "0.00000000",
         },
         {
@@ -85386,7 +85386,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "530830.15555555",
+          maxQty: "338781.35347222",
           stepSize: "0.00000000",
         },
         {
@@ -85524,7 +85524,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "889471.32500000",
+          maxQty: "999101.75277777",
           stepSize: "0.00000000",
         },
         {
@@ -85593,7 +85593,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4159.98619708",
+          maxQty: "5055.00318750",
           stepSize: "0.00000000",
         },
         {
@@ -85662,7 +85662,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5428.75272916",
+          maxQty: "6370.09713194",
           stepSize: "0.00000000",
         },
         {
@@ -85731,7 +85731,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32400.73625000",
+          maxQty: "25394.51173611",
           stepSize: "0.00000000",
         },
         {
@@ -85800,7 +85800,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "336.10076875",
+          maxQty: "265.64166250",
           stepSize: "0.00000000",
         },
         {
@@ -85869,7 +85869,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8496135.30884722",
+          maxQty: "9940981.44589174",
           stepSize: "0.00000000",
         },
         {
@@ -85938,7 +85938,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1688525.48685416",
+          maxQty: "1507161.57243750",
           stepSize: "0.00000000",
         },
         {
@@ -86076,7 +86076,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52955057.72222222",
+          maxQty: "86064063.40694444",
           stepSize: "0.00000000",
         },
         {
@@ -86145,7 +86145,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2471610.00833333",
+          maxQty: "4175096.23125000",
           stepSize: "0.00000000",
         },
         {
@@ -86214,7 +86214,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7564535.55972222",
+          maxQty: "21950642.21027064",
           stepSize: "0.00000000",
         },
         {
@@ -86283,7 +86283,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "98803.59791666",
+          maxQty: "76391.05555555",
           stepSize: "0.00000000",
         },
         {
@@ -86352,7 +86352,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "162186.51700208",
+          maxQty: "234245.35069444",
           stepSize: "0.00000000",
         },
         {
@@ -86388,7 +86388,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -86421,7 +86421,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "405862.58194444",
+          maxQty: "642445.28541666",
           stepSize: "0.00000000",
         },
         {
@@ -86433,7 +86433,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "FIROBTC",
@@ -86490,7 +86490,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6834.62819444",
+          maxQty: "10492.28298611",
           stepSize: "0.00000000",
         },
         {
@@ -86628,7 +86628,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29704.51409722",
+          maxQty: "66770.97541666",
           stepSize: "0.00000000",
         },
         {
@@ -86697,7 +86697,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8694.03667076",
+          maxQty: "8089.49533875",
           stepSize: "0.00000000",
         },
         {
@@ -86766,7 +86766,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1091214.83263888",
+          maxQty: "1603568.15277777",
           stepSize: "0.00000000",
         },
         {
@@ -86835,7 +86835,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "939054.31805555",
+          maxQty: "1833148.76527777",
           stepSize: "0.00000000",
         },
         {
@@ -86904,7 +86904,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "434079.25312500",
+          maxQty: "565094.53888888",
           stepSize: "0.00000000",
         },
         {
@@ -86973,7 +86973,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "455868.58724305",
+          maxQty: "351101.33125000",
           stepSize: "0.00000000",
         },
         {
@@ -87111,7 +87111,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67722.72152777",
+          maxQty: "65279.92366412",
           stepSize: "0.00000000",
         },
         {
@@ -87180,7 +87180,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29715.64500000",
+          maxQty: "13824.04368055",
           stepSize: "0.00000000",
         },
         {
@@ -87249,7 +87249,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24890.96673611",
+          maxQty: "42418.69805555",
           stepSize: "0.00000000",
         },
         {
@@ -87318,7 +87318,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112853.53937500",
+          maxQty: "192875.45250000",
           stepSize: "0.00000000",
         },
         {
@@ -87456,7 +87456,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "79102.24430555",
+          maxQty: "63070.27682165",
           stepSize: "0.00000000",
         },
         {
@@ -87525,7 +87525,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28552.19375000",
+          maxQty: "37779.10138888",
           stepSize: "0.00000000",
         },
         {
@@ -87594,7 +87594,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "103044.28958333",
+          maxQty: "116468.20416666",
           stepSize: "0.00000000",
         },
         {
@@ -87663,7 +87663,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "370133.34166666",
+          maxQty: "332611.06315058",
           stepSize: "0.00000000",
         },
         {
@@ -87732,7 +87732,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "499652.99930555",
+          maxQty: "768863.15208333",
           stepSize: "0.00000000",
         },
         {
@@ -87801,7 +87801,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3522.21986111",
+          maxQty: "2774.18085357",
           stepSize: "0.00000000",
         },
         {
@@ -87870,7 +87870,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1625.73027777",
+          maxQty: "2340.75993055",
           stepSize: "0.00000000",
         },
         {
@@ -87939,7 +87939,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3391.23826388",
+          maxQty: "3955.13657182",
           stepSize: "0.00000000",
         },
         {
@@ -88008,7 +88008,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "94237.63465277",
+          maxQty: "90347.31915336",
           stepSize: "0.00000000",
         },
         {
@@ -88077,7 +88077,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "79171.15555555",
+          maxQty: "180526.53409722",
           stepSize: "0.00000000",
         },
         {
@@ -88146,7 +88146,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "247324.40229007",
+          maxQty: "552421.82194444",
           stepSize: "0.00000000",
         },
         {
@@ -88215,7 +88215,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "96606.56875000",
+          maxQty: "91750.72847222",
           stepSize: "0.00000000",
         },
         {
@@ -88353,7 +88353,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29809.51953472",
+          maxQty: "21324.20406662",
           stepSize: "0.00000000",
         },
         {
@@ -88422,7 +88422,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "120150.93453055",
+          maxQty: "129620.87029166",
           stepSize: "0.00000000",
         },
         {
@@ -88491,7 +88491,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "50426.71145833",
+          maxQty: "140945.45131944",
           stepSize: "0.00000000",
         },
         {
@@ -88560,7 +88560,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "148269.77777777",
+          maxQty: "96529.16041666",
           stepSize: "0.00000000",
         },
         {
@@ -88629,7 +88629,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "167140.74097222",
+          maxQty: "117342.88055555",
           stepSize: "0.00000000",
         },
         {
@@ -88698,7 +88698,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "59699.22916666",
+          maxQty: "74551.57131944",
           stepSize: "0.00000000",
         },
         {
@@ -88767,7 +88767,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17391.12958333",
+          maxQty: "19158.66495489",
           stepSize: "0.00000000",
         },
         {
@@ -88836,7 +88836,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "387176.06597222",
+          maxQty: "471534.45000000",
           stepSize: "0.00000000",
         },
         {
@@ -88905,7 +88905,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2957073.16541666",
+          maxQty: "4470811.25354166",
           stepSize: "0.00000000",
         },
         {
@@ -88974,7 +88974,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23234.10250000",
+          maxQty: "24792.30409722",
           stepSize: "0.00000000",
         },
         {
@@ -89043,7 +89043,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2614531.71986111",
+          maxQty: "6568385.44479166",
           stepSize: "0.00000000",
         },
         {
@@ -89112,7 +89112,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4524.08771686",
+          maxQty: "3452.35076388",
           stepSize: "0.00000000",
         },
         {
@@ -89181,7 +89181,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6744.31868055",
+          maxQty: "3452.84638888",
           stepSize: "0.00000000",
         },
         {
@@ -89250,7 +89250,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20518.88006944",
+          maxQty: "13244.87467036",
           stepSize: "0.00000000",
         },
         {
@@ -89319,7 +89319,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4626.87475000",
+          maxQty: "4279.55813194",
           stepSize: "0.00000000",
         },
         {
@@ -89388,7 +89388,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3793.89236111",
+          maxQty: "4025.01065972",
           stepSize: "0.00000000",
         },
         {
@@ -89457,7 +89457,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "175170.15416666",
+          maxQty: "139488.23541666",
           stepSize: "0.00000000",
         },
         {
@@ -89526,7 +89526,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "159044.38472222",
+          maxQty: "167200.95972222",
           stepSize: "0.00000000",
         },
         {
@@ -89595,7 +89595,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5930.96001388",
+          maxQty: "5911.95529166",
           stepSize: "0.00000000",
         },
         {
@@ -89664,7 +89664,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "192479.76743055",
+          maxQty: "214343.19132546",
           stepSize: "0.00000000",
         },
         {
@@ -89733,7 +89733,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "97206.89393055",
+          maxQty: "61863.32479166",
           stepSize: "0.00000000",
         },
         {
@@ -89802,7 +89802,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "126792.09127777",
+          maxQty: "141006.46363636",
           stepSize: "0.00000000",
         },
         {
@@ -89871,7 +89871,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "524760.88611111",
+          maxQty: "771257.67730742",
           stepSize: "0.00000000",
         },
         {
@@ -89940,7 +89940,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "531938.37361111",
+          maxQty: "594095.79236111",
           stepSize: "0.00000000",
         },
         {
@@ -90009,7 +90009,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2860.81963194",
+          maxQty: "3209.12430555",
           stepSize: "0.00000000",
         },
         {
@@ -90078,7 +90078,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2031.43541666",
+          maxQty: "4058.03123611",
           stepSize: "0.00000000",
         },
         {
@@ -90147,7 +90147,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15627.68138611",
+          maxQty: "17523.81195003",
           stepSize: "0.00000000",
         },
         {
@@ -90216,7 +90216,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34270.63333333",
+          maxQty: "59631.33448993",
           stepSize: "0.00000000",
         },
         {
@@ -90285,7 +90285,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28999.10694444",
+          maxQty: "43575.96736111",
           stepSize: "0.00000000",
         },
         {
@@ -90354,7 +90354,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "113331.54166666",
+          maxQty: "212034.07777777",
           stepSize: "0.00000000",
         },
         {
@@ -90423,7 +90423,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2652.71288194",
+          maxQty: "2371.24904861",
           stepSize: "0.00000000",
         },
         {
@@ -90492,7 +90492,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "102397.10138792",
+          maxQty: "115459.40375000",
           stepSize: "0.00000000",
         },
         {
@@ -90561,7 +90561,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31406020.15972222",
+          maxQty: "71513829.92638888",
           stepSize: "0.00000000",
         },
         {
@@ -90630,7 +90630,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1022.73919444",
+          maxQty: "989.12443750",
           stepSize: "0.00000000",
         },
         {
@@ -90699,7 +90699,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "519152.30000000",
+          maxQty: "590742.13532269",
           stepSize: "0.00000000",
         },
         {
@@ -90768,7 +90768,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "350023.56111111",
+          maxQty: "586481.18945176",
           stepSize: "0.00000000",
         },
         {
@@ -90837,7 +90837,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "865500.72569444",
+          maxQty: "1674298.04236111",
           stepSize: "0.00000000",
         },
         {
@@ -90906,7 +90906,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5433122.70902777",
+          maxQty: "6622799.10833333",
           stepSize: "0.00000000",
         },
         {
@@ -90975,7 +90975,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2652151.41970138",
+          maxQty: "3288935.04286111",
           stepSize: "0.00000000",
         },
         {
@@ -91044,7 +91044,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6107991.86614156",
+          maxQty: "8907160.74421527",
           stepSize: "0.00000000",
         },
         {
@@ -91113,7 +91113,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4692.19759722",
+          maxQty: "15960.03577083",
           stepSize: "0.00000000",
         },
         {
@@ -91182,7 +91182,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7105.74825000",
+          maxQty: "11004.80834722",
           stepSize: "0.00000000",
         },
         {
@@ -91251,7 +91251,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33545.63195138",
+          maxQty: "52403.17998611",
           stepSize: "0.00000000",
         },
         {
@@ -91320,7 +91320,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3812.99815972",
+          maxQty: "4781.25375694",
           stepSize: "0.00000000",
         },
         {
@@ -91458,7 +91458,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "300752.94236111",
+          maxQty: "208057.13185287",
           stepSize: "0.00000000",
         },
         {
@@ -91527,7 +91527,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5019.37790277",
+          maxQty: "7385.34257460",
           stepSize: "0.00000000",
         },
         {
@@ -91596,7 +91596,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "36867.57529493",
+          maxQty: "26435.28900763",
           stepSize: "0.00000000",
         },
         {
@@ -91665,7 +91665,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38052.20894517",
+          maxQty: "37065.99419153",
           stepSize: "0.00000000",
         },
         {
@@ -91734,7 +91734,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "177787.77459027",
+          maxQty: "163489.44039583",
           stepSize: "0.00000000",
         },
         {
@@ -91803,7 +91803,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1044546.46597222",
+          maxQty: "1069336.56319444",
           stepSize: "0.00000000",
         },
         {
@@ -91872,7 +91872,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "320762.67638888",
+          maxQty: "325890.69118667",
           stepSize: "0.00000000",
         },
         {
@@ -91941,7 +91941,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "205849.00069444",
+          maxQty: "178716.82847222",
           stepSize: "0.00000000",
         },
         {
@@ -92079,7 +92079,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34.99000416",
+          maxQty: "39.21398333",
           stepSize: "0.00000000",
         },
         {
@@ -92148,7 +92148,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12915285.34652777",
+          maxQty: "12579297.77361111",
           stepSize: "0.00000000",
         },
         {
@@ -92217,7 +92217,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1909352.83238194",
+          maxQty: "1843824.99452083",
           stepSize: "0.00000000",
         },
         {
@@ -92286,7 +92286,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7387483.81934722",
+          maxQty: "9222449.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -92355,7 +92355,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28357.01770833",
+          maxQty: "30964.79756944",
           stepSize: "0.00000000",
         },
         {
@@ -92424,7 +92424,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20734.00895833",
+          maxQty: "17248.82527777",
           stepSize: "0.00000000",
         },
         {
@@ -92493,7 +92493,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "54088.41694444",
+          maxQty: "50826.23893129",
           stepSize: "0.00000000",
         },
         {
@@ -92562,7 +92562,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "147932.80638888",
+          maxQty: "168438.03541666",
           stepSize: "0.00000000",
         },
         {
@@ -92631,7 +92631,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1728.90696527",
+          maxQty: "1544.24456250",
           stepSize: "0.00000000",
         },
         {
@@ -92700,7 +92700,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7852.77484027",
+          maxQty: "9236.02129861",
           stepSize: "0.00000000",
         },
         {
@@ -92769,7 +92769,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8455.65523611",
+          maxQty: "11994.80484027",
           stepSize: "0.00000000",
         },
         {
@@ -92838,7 +92838,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31795.02104027",
+          maxQty: "37233.40454166",
           stepSize: "0.00000000",
         },
         {
@@ -92907,7 +92907,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "517608.33263888",
+          maxQty: "325698.95416666",
           stepSize: "0.00000000",
         },
         {
@@ -92976,7 +92976,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "256516.54892435",
+          maxQty: "357074.21111111",
           stepSize: "0.00000000",
         },
         {
@@ -93045,7 +93045,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1270798.99861111",
+          maxQty: "1482276.32152777",
           stepSize: "0.00000000",
         },
         {
@@ -93114,7 +93114,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "92012.87500000",
+          maxQty: "50303.80833333",
           stepSize: "0.00000000",
         },
         {
@@ -93183,7 +93183,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "69093.51458333",
+          maxQty: "117794.20902777",
           stepSize: "0.00000000",
         },
         {
@@ -93252,7 +93252,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "420653.05277777",
+          maxQty: "727051.43164469",
           stepSize: "0.00000000",
         },
         {
@@ -93321,7 +93321,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "175062.10208333",
+          maxQty: "447240.68355308",
           stepSize: "0.00000000",
         },
         {
@@ -93390,7 +93390,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "165605.92013888",
+          maxQty: "395745.53125000",
           stepSize: "0.00000000",
         },
         {
@@ -93459,7 +93459,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1109947.88819444",
+          maxQty: "1961014.34027777",
           stepSize: "0.00000000",
         },
         {
@@ -93528,7 +93528,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29787.78167938",
+          maxQty: "23362.10562500",
           stepSize: "0.00000000",
         },
         {
@@ -93597,7 +93597,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17494.12909722",
+          maxQty: "16011.03625000",
           stepSize: "0.00000000",
         },
         {
@@ -93666,7 +93666,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "275.48494378",
+          maxQty: "442.95520972",
           stepSize: "0.00000000",
         },
         {
@@ -93735,7 +93735,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6289.12297916",
+          maxQty: "6497.52868680",
           stepSize: "0.00000000",
         },
         {
@@ -93804,7 +93804,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "722646.28738194",
+          maxQty: "723627.56534722",
           stepSize: "0.00000000",
         },
         {
@@ -93873,7 +93873,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10349.28687500",
+          maxQty: "19019.98147120",
           stepSize: "0.00000000",
         },
         {
@@ -93942,7 +93942,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4384648.35625000",
+          maxQty: "2601197.87147814",
           stepSize: "0.00000000",
         },
         {
@@ -94011,7 +94011,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "159758.20902777",
+          maxQty: "237528.23263888",
           stepSize: "0.00000000",
         },
         {
@@ -94080,7 +94080,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "149415.78888888",
+          maxQty: "323026.28402777",
           stepSize: "0.00000000",
         },
         {
@@ -94149,7 +94149,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "714958.12638888",
+          maxQty: "1344805.35555555",
           stepSize: "0.00000000",
         },
         {
@@ -94218,7 +94218,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "55.98709791",
+          maxQty: "62.01248263",
           stepSize: "0.00000000",
         },
         {
@@ -94287,7 +94287,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32.98070347",
+          maxQty: "49.08772013",
           stepSize: "0.00000000",
         },
         {
@@ -94356,7 +94356,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "185.81248402",
+          maxQty: "270.89270347",
           stepSize: "0.00000000",
         },
         {
@@ -94425,7 +94425,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28686.82326388",
+          maxQty: "33188.16000000",
           stepSize: "0.00000000",
         },
         {
@@ -94494,7 +94494,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "246330.25034722",
+          maxQty: "180692.84187500",
           stepSize: "0.00000000",
         },
         {
@@ -94563,7 +94563,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38616.33361111",
+          maxQty: "90018.04208333",
           stepSize: "0.00000000",
         },
         {
@@ -94632,7 +94632,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "195811.36829166",
+          maxQty: "270230.77604166",
           stepSize: "0.00000000",
         },
         {
@@ -94701,7 +94701,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "51956.98597222",
+          maxQty: "28689.50888888",
           stepSize: "0.00000000",
         },
         {
@@ -94770,7 +94770,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "135814.19833333",
+          maxQty: "105042.62375000",
           stepSize: "0.00000000",
         },
         {
@@ -94977,7 +94977,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7073414.53479166",
+          maxQty: "7838630.82874999",
           stepSize: "0.00000000",
         },
         {
@@ -95046,7 +95046,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "88267595.57569444",
+          maxQty: "113706729.14652777",
           stepSize: "0.00000000",
         },
         {
@@ -95115,7 +95115,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "816490.70277777",
+          maxQty: "992933.96252602",
           stepSize: "0.00000000",
         },
         {
@@ -95184,7 +95184,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "759864.89011111",
+          maxQty: "1263036.39513888",
           stepSize: "0.00000000",
         },
         {
@@ -95253,7 +95253,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4602767.10486111",
+          maxQty: "5998868.22692574",
           stepSize: "0.00000000",
         },
         {
@@ -95460,7 +95460,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "233.97542361",
+          maxQty: "491.65954198",
           stepSize: "0.00000000",
         },
         {
@@ -95529,7 +95529,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2095.74893055",
+          maxQty: "3239.02845833",
           stepSize: "0.00000000",
         },
         {
@@ -95598,7 +95598,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15609395.56020832",
+          maxQty: "23032627.71984734",
           stepSize: "0.00000000",
         },
         {
@@ -95667,7 +95667,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68.95687013",
+          maxQty: "68.30147013",
           stepSize: "0.00000000",
         },
         {
@@ -95736,7 +95736,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "42864.44375000",
+          maxQty: "67176.39236111",
           stepSize: "0.00000000",
         },
         {
@@ -95805,7 +95805,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2218024.16359027",
+          maxQty: "3291706.79358333",
           stepSize: "0.00000000",
         },
         {
@@ -95874,7 +95874,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "728731.56245833",
+          maxQty: "1312500.24297916",
           stepSize: "0.00000000",
         },
         {
@@ -95943,7 +95943,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "81685769.82581540",
+          maxQty: "84566372.76474670",
           stepSize: "0.00000000",
         },
         {
@@ -96012,7 +96012,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63495.27930555",
+          maxQty: "57283.94868055",
           stepSize: "0.00000000",
         },
         {
@@ -96081,7 +96081,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "67594.20423611",
+          maxQty: "78533.98320610",
           stepSize: "0.00000000",
         },
         {
@@ -96150,7 +96150,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "219386.59195003",
+          maxQty: "236133.18569444",
           stepSize: "0.00000000",
         },
         {
@@ -96219,7 +96219,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5539.72351388",
+          maxQty: "3429.55920138",
           stepSize: "0.00000000",
         },
         {
@@ -96288,7 +96288,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4758.37233333",
+          maxQty: "3438.51414583",
           stepSize: "0.00000000",
         },
         {
@@ -96357,7 +96357,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25185.64850000",
+          maxQty: "14284.40884722",
           stepSize: "0.00000000",
         },
         {
@@ -96426,7 +96426,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2767.24681944",
+          maxQty: "4541.56478834",
           stepSize: "0.00000000",
         },
         {
@@ -96495,7 +96495,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5555.17404861",
+          maxQty: "5281.97241666",
           stepSize: "0.00000000",
         },
         {
@@ -96564,7 +96564,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25703.21827083",
+          maxQty: "31550.88195138",
           stepSize: "0.00000000",
         },
         {
@@ -96633,7 +96633,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3156.30456250",
+          maxQty: "5501.58200694",
           stepSize: "0.00000000",
         },
         {
@@ -96702,7 +96702,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "262060.97083333",
+          maxQty: "259432.50972222",
           stepSize: "0.00000000",
         },
         {
@@ -96909,7 +96909,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13862.94875000",
+          maxQty: "26884.12602359",
           stepSize: "0.00000000",
         },
         {
@@ -96978,7 +96978,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10585.43701388",
+          maxQty: "10848.56939625",
           stepSize: "0.00000000",
         },
         {
@@ -97047,7 +97047,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "217442.55131944",
+          maxQty: "439541.28820263",
           stepSize: "0.00000000",
         },
         {
@@ -97116,7 +97116,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15761.52416666",
+          maxQty: "43321.99312500",
           stepSize: "0.00000000",
         },
         {
@@ -97185,7 +97185,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "58970.75423611",
+          maxQty: "122387.00819444",
           stepSize: "0.00000000",
         },
         {
@@ -97254,7 +97254,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23864348.53750000",
+          maxQty: "43849306.19652777",
           stepSize: "0.00000000",
         },
         {
@@ -97461,7 +97461,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "967820.87638888",
+          maxQty: "985248.50902777",
           stepSize: "0.00000000",
         },
         {
@@ -97530,7 +97530,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "626710.66701388",
+          maxQty: "982913.13722222",
           stepSize: "0.00000000",
         },
         {
@@ -97737,7 +97737,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11457.84652777",
+          maxQty: "10084.19904166",
           stepSize: "0.00000000",
         },
         {
@@ -97806,7 +97806,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5404.17197222",
+          maxQty: "3874.17647467",
           stepSize: "0.00000000",
         },
         {
@@ -97875,7 +97875,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18457.28021527",
+          maxQty: "17624.99402777",
           stepSize: "0.00000000",
         },
         {
@@ -97944,7 +97944,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "65817.77274305",
+          maxQty: "99217.45948646",
           stepSize: "0.00000000",
         },
         {
@@ -98139,7 +98139,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "15337913914.92",
+          maxQty: "16035027187.05",
           stepSize: "0.00",
         },
         {
@@ -98277,7 +98277,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1252.11941666",
+          maxQty: "1965.27893055",
           stepSize: "0.00000000",
         },
         {
@@ -98415,7 +98415,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "464019.35555555",
+          maxQty: "560747.92013888",
           stepSize: "0.00000000",
         },
         {
@@ -98484,7 +98484,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3513.92934027",
+          maxQty: "4398.72071527",
           stepSize: "0.00000000",
         },
         {
@@ -98553,7 +98553,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1362.54751388",
+          maxQty: "1233.77803472",
           stepSize: "0.00000000",
         },
         {
@@ -98622,7 +98622,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4722.55263194",
+          maxQty: "6769.80676388",
           stepSize: "0.00000000",
         },
         {
@@ -98691,7 +98691,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22443.67129861",
+          maxQty: "27043.75681250",
           stepSize: "0.00000000",
         },
         {
@@ -98760,7 +98760,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26265.07013888",
+          maxQty: "17603.85024288",
           stepSize: "0.00000000",
         },
         {
@@ -98829,7 +98829,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21436.41083333",
+          maxQty: "15891.71340277",
           stepSize: "0.00000000",
         },
         {
@@ -98898,7 +98898,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21528.12548611",
+          maxQty: "34640.91375000",
           stepSize: "0.00000000",
         },
         {
@@ -98967,7 +98967,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "91134.13861111",
+          maxQty: "94961.20173490",
           stepSize: "0.00000000",
         },
         {
@@ -99036,7 +99036,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "93720.72909722",
+          maxQty: "109183.83913948",
           stepSize: "0.00000000",
         },
         {
@@ -99174,7 +99174,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "80930.97500000",
+          maxQty: "160671.72986111",
           stepSize: "0.00000000",
         },
         {
@@ -99243,7 +99243,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "725148.75187500",
+          maxQty: "947816.07298611",
           stepSize: "0.00000000",
         },
         {
@@ -99312,7 +99312,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9072.76368055",
+          maxQty: "6884.13476752",
           stepSize: "0.00000000",
         },
         {
@@ -99381,7 +99381,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13905.49246527",
+          maxQty: "16665.45694444",
           stepSize: "0.00000000",
         },
         {
@@ -99450,7 +99450,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "77224.16037473",
+          maxQty: "71909.42590277",
           stepSize: "0.00000000",
         },
         {
@@ -99519,7 +99519,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2661.76661805",
+          maxQty: "2467.45748611",
           stepSize: "0.00000000",
         },
         {
@@ -99588,7 +99588,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1433.34604861",
+          maxQty: "960.88884722",
           stepSize: "0.00000000",
         },
         {
@@ -99657,7 +99657,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2333.65876388",
+          maxQty: "1298.01696527",
           stepSize: "0.00000000",
         },
         {
@@ -99726,7 +99726,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6722.59494101",
+          maxQty: "10181.11069444",
           stepSize: "0.00000000",
         },
         {
@@ -99795,7 +99795,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11.15115770",
+          maxQty: "13.44002097",
           stepSize: "0.00000000",
         },
         {
@@ -99864,7 +99864,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24837.74513888",
+          maxQty: "24239.21701388",
           stepSize: "0.00000000",
         },
         {
@@ -99933,7 +99933,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4214.91576388",
+          maxQty: "3187.39801388",
           stepSize: "0.00000000",
         },
         {
@@ -100002,7 +100002,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "4585006248.46",
+          maxQty: "5195202405.26",
           stepSize: "0.00",
         },
         {
@@ -100071,7 +100071,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1027241.50625000",
+          maxQty: "726124.54375000",
           stepSize: "0.00000000",
         },
         {
@@ -100140,7 +100140,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1270.72869444",
+          maxQty: "2982.75297709",
           stepSize: "0.00000000",
         },
         {
@@ -100209,7 +100209,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63409.82708333",
+          maxQty: "66897.16583333",
           stepSize: "0.00000000",
         },
         {
@@ -100278,7 +100278,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "26686701669.07",
+          maxQty: "42577994734.44",
           stepSize: "0.00",
         },
         {
@@ -100347,7 +100347,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49403.43486111",
+          maxQty: "46705.55562500",
           stepSize: "0.00000000",
         },
         {
@@ -100416,7 +100416,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12566.88298611",
+          maxQty: "15465.73256944",
           stepSize: "0.00000000",
         },
         {
@@ -100899,7 +100899,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2342769.23958333",
+          maxQty: "2755722.66180555",
           stepSize: "0.00000000",
         },
         {
@@ -100968,7 +100968,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4067.98052083",
+          maxQty: "3438.98820833",
           stepSize: "0.00000000",
         },
         {
@@ -101037,7 +101037,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1268.75456944",
+          maxQty: "1109.38227083",
           stepSize: "0.00000000",
         },
         {
@@ -101106,7 +101106,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "824958.77500000",
+          maxQty: "683359.89652777",
           stepSize: "0.00000000",
         },
         {
@@ -101175,7 +101175,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "85779.27041666",
+          maxQty: "104893.08833333",
           stepSize: "0.00000000",
         },
         {
@@ -101244,7 +101244,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "153618091.66666666",
+          maxQty: "204322131.94861111",
           stepSize: "0.00000000",
         },
         {
@@ -101313,7 +101313,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16856.21076388",
+          maxQty: "16355.22916666",
           stepSize: "0.00000000",
         },
         {
@@ -101451,7 +101451,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "138543.32777777",
+          maxQty: "69011.01180555",
           stepSize: "0.00000000",
         },
         {
@@ -101520,7 +101520,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38801.76319444",
+          maxQty: "60789.77307425",
           stepSize: "0.00000000",
         },
         {
@@ -101589,7 +101589,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "77153.55069444",
+          maxQty: "112177.58194444",
           stepSize: "0.00000000",
         },
         {
@@ -101658,7 +101658,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "372570.17916666",
+          maxQty: "547544.33102012",
           stepSize: "0.00000000",
         },
         {
@@ -101727,7 +101727,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6896.56979166",
+          maxQty: "4133.36305555",
           stepSize: "0.00000000",
         },
         {
@@ -101865,7 +101865,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4176.31256944",
+          maxQty: "5992.11666666",
           stepSize: "0.00000000",
         },
         {
@@ -101934,7 +101934,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "23624.67069444",
+          maxQty: "39423.13941707",
           stepSize: "0.00000000",
         },
         {
@@ -102003,7 +102003,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "633.61610416",
+          maxQty: "1416.46229007",
           stepSize: "0.00000000",
         },
         {
@@ -102141,7 +102141,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2046.32212500",
+          maxQty: "1883.14759027",
           stepSize: "0.00000000",
         },
         {
@@ -102210,7 +102210,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9151.54088888",
+          maxQty: "9210.15068750",
           stepSize: "0.00000000",
         },
         {
@@ -102279,7 +102279,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46819.16729166",
+          maxQty: "35688.34347222",
           stepSize: "0.00000000",
         },
         {
@@ -102417,7 +102417,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1162.28554861",
+          maxQty: "1127.03700694",
           stepSize: "0.00000000",
         },
         {
@@ -102486,7 +102486,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "64820.08916666",
+          maxQty: "132188.02574600",
           stepSize: "0.00000000",
         },
         {
@@ -102555,7 +102555,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "338688.02638888",
+          maxQty: "681927.07564191",
           stepSize: "0.00000000",
         },
         {
@@ -102900,7 +102900,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2243.27310416",
+          maxQty: "1460.99134722",
           stepSize: "0.00000000",
         },
         {
@@ -102969,7 +102969,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5568.23736111",
+          maxQty: "4894.31472222",
           stepSize: "0.00000000",
         },
         {
@@ -103038,7 +103038,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "860.93433032",
+          maxQty: "690.67127083",
           stepSize: "0.00000000",
         },
         {
@@ -103107,7 +103107,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3453605.26944444",
+          maxQty: "2745051.00972222",
           stepSize: "0.00000000",
         },
         {
@@ -103176,7 +103176,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "243128.65440666",
+          maxQty: "231815.96250000",
           stepSize: "0.00000000",
         },
         {
@@ -103245,7 +103245,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2188171.68194444",
+          maxQty: "2225971.38402777",
           stepSize: "0.00000000",
         },
         {
@@ -103314,7 +103314,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9045.83536433",
+          maxQty: "13078.83858431",
           stepSize: "0.00000000",
         },
         {
@@ -103383,7 +103383,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7372.91586805",
+          maxQty: "8125.24295628",
           stepSize: "0.00000000",
         },
         {
@@ -103452,7 +103452,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "563746.74861111",
+          maxQty: "796614.65763888",
           stepSize: "0.00000000",
         },
         {
@@ -103521,7 +103521,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "65701.36673611",
+          maxQty: "67810.33680555",
           stepSize: "0.00000000",
         },
         {
@@ -103590,7 +103590,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8694.29236111",
+          maxQty: "3995.75468424",
           stepSize: "0.00000000",
         },
         {
@@ -103659,7 +103659,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8852.45375000",
+          maxQty: "7250.78722222",
           stepSize: "0.00000000",
         },
         {
@@ -103728,7 +103728,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28053.78312500",
+          maxQty: "47641.57638888",
           stepSize: "0.00000000",
         },
         {
@@ -103797,7 +103797,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "42137.39631944",
+          maxQty: "38035.83986111",
           stepSize: "0.00000000",
         },
         {
@@ -103866,7 +103866,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15771.26875000",
+          maxQty: "30733.01597222",
           stepSize: "0.00000000",
         },
         {
@@ -103935,7 +103935,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "86366.57555555",
+          maxQty: "82140.25680555",
           stepSize: "0.00000000",
         },
         {
@@ -104004,7 +104004,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "313783.92048611",
+          maxQty: "829044.97187500",
           stepSize: "0.00000000",
         },
         {
@@ -104073,7 +104073,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8067.37000000",
+          maxQty: "12499.20388619",
           stepSize: "0.00000000",
         },
         {
@@ -104142,7 +104142,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "51107.22361111",
+          maxQty: "60819.06152777",
           stepSize: "0.00000000",
         },
         {
@@ -104211,7 +104211,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "872.22555170",
+          maxQty: "1141.57933333",
           stepSize: "0.00000000",
         },
         {
@@ -104280,7 +104280,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "212447.64375000",
+          maxQty: "231374.32222222",
           stepSize: "0.00000000",
         },
         {
@@ -104349,7 +104349,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1920905.60902777",
+          maxQty: "1852918.92361111",
           stepSize: "0.00000000",
         },
         {
@@ -104418,7 +104418,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "622991.60000000",
+          maxQty: "678432.91597222",
           stepSize: "0.00000000",
         },
         {
@@ -104487,7 +104487,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "321.77031250",
+          maxQty: "363.24731944",
           stepSize: "0.00000000",
         },
         {
@@ -104625,7 +104625,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "163260.26041666",
+          maxQty: "73524.53125000",
           stepSize: "0.00000000",
         },
         {
@@ -104694,7 +104694,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5288.82234722",
+          maxQty: "4066.67092361",
           stepSize: "0.00000000",
         },
         {
@@ -104832,7 +104832,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2395.48180555",
+          maxQty: "4052.37402498",
           stepSize: "0.00000000",
         },
         {
@@ -104901,7 +104901,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13426.48125694",
+          maxQty: "14167.12582638",
           stepSize: "0.00000000",
         },
         {
@@ -104970,7 +104970,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "412.21606041",
+          maxQty: "770.60808466",
           stepSize: "0.00000000",
         },
         {
@@ -105039,7 +105039,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "354.00151458",
+          maxQty: "551.56160305",
           stepSize: "0.00000000",
         },
         {
@@ -105108,7 +105108,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "525.91060138",
+          maxQty: "629.70675972",
           stepSize: "0.00000000",
         },
         {
@@ -105177,7 +105177,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1757.07499166",
+          maxQty: "2292.28317222",
           stepSize: "0.00000000",
         },
         {
@@ -105246,7 +105246,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112437.53472222",
+          maxQty: "189653.33958333",
           stepSize: "0.00000000",
         },
         {
@@ -105453,7 +105453,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3266.09990978",
+          maxQty: "2916.98569049",
           stepSize: "0.00000000",
         },
         {
@@ -105660,7 +105660,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12077.59791117",
+          maxQty: "23897.48597222",
           stepSize: "0.00000000",
         },
         {
@@ -105729,7 +105729,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "192309.04027777",
+          maxQty: "210454.12500000",
           stepSize: "0.00000000",
         },
         {
@@ -105798,7 +105798,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "106116.43680555",
+          maxQty: "139504.72986111",
           stepSize: "0.00000000",
         },
         {
@@ -105867,7 +105867,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "110.74998750",
+          maxQty: "66.11599166",
           stepSize: "0.00000000",
         },
         {
@@ -106005,7 +106005,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "266.87451250",
+          maxQty: "282.42540041",
           stepSize: "0.00000000",
         },
         {
@@ -106074,7 +106074,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "209044.68312500",
+          maxQty: "327378.07854166",
           stepSize: "0.00000000",
         },
         {
@@ -106143,7 +106143,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "50133.78027777",
+          maxQty: "74637.22713393",
           stepSize: "0.00000000",
         },
         {
@@ -106212,7 +106212,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16528.42104166",
+          maxQty: "20524.11881944",
           stepSize: "0.00000000",
         },
         {
@@ -106281,7 +106281,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26203.21055555",
+          maxQty: "35973.39375000",
           stepSize: "0.00000000",
         },
         {
@@ -106350,7 +106350,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "76551.13875000",
+          maxQty: "107412.48895833",
           stepSize: "0.00000000",
         },
         {
@@ -106419,7 +106419,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57097.45048611",
+          maxQty: "57341.19881944",
           stepSize: "0.00000000",
         },
         {
@@ -106488,7 +106488,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "119760.63180555",
+          maxQty: "212424.47048611",
           stepSize: "0.00000000",
         },
         {
@@ -106557,7 +106557,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "482254.08104166",
+          maxQty: "635787.20361111",
           stepSize: "0.00000000",
         },
         {
@@ -106626,7 +106626,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1475.69502986",
+          maxQty: "1715.96043888",
           stepSize: "0.00000000",
         },
         {
@@ -106695,7 +106695,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "354.70340763",
+          maxQty: "292.58808049",
           stepSize: "0.00000000",
         },
         {
@@ -106764,7 +106764,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1512.25140625",
+          maxQty: "1276.60461388",
           stepSize: "0.00000000",
         },
         {
@@ -106833,7 +106833,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7062.80712291",
+          maxQty: "4156.80984652",
           stepSize: "0.00000000",
         },
         {
@@ -106902,7 +106902,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6994.68004861",
+          maxQty: "12833.86339347",
           stepSize: "0.00000000",
         },
         {
@@ -106971,7 +106971,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4106.02921527",
+          maxQty: "9614.70245138",
           stepSize: "0.00000000",
         },
         {
@@ -107040,7 +107040,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13325.21358333",
+          maxQty: "34003.80509722",
           stepSize: "0.00000000",
         },
         {
@@ -107109,7 +107109,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "58455.77546527",
+          maxQty: "126674.00965972",
           stepSize: "0.00000000",
         },
         {
@@ -107178,7 +107178,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "1199548118.20",
+          maxQty: "1227668785.00",
           stepSize: "0.00",
         },
         {
@@ -107247,7 +107247,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "580.32013194",
+          maxQty: "1041.37278472",
           stepSize: "0.00000000",
         },
         {
@@ -107316,7 +107316,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "360.16395138",
+          maxQty: "543.40446527",
           stepSize: "0.00000000",
         },
         {
@@ -107385,7 +107385,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1476454.95625000",
+          maxQty: "1577004.87647467",
           stepSize: "0.00000000",
         },
         {
@@ -107454,7 +107454,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46241.69312500",
+          maxQty: "44063.31763888",
           stepSize: "0.00000000",
         },
         {
@@ -107523,7 +107523,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16546.61590277",
+          maxQty: "15863.45465277",
           stepSize: "0.00000000",
         },
         {
@@ -107592,7 +107592,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63773.26805555",
+          maxQty: "98045.91208333",
           stepSize: "0.00000000",
         },
         {
@@ -107661,7 +107661,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "184926.31555555",
+          maxQty: "568623.21875000",
           stepSize: "0.00000000",
         },
         {
@@ -107730,7 +107730,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20712.26930555",
+          maxQty: "14322.90555555",
           stepSize: "0.00000000",
         },
         {
@@ -107799,7 +107799,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16711.44291666",
+          maxQty: "15686.03597222",
           stepSize: "0.00000000",
         },
         {
@@ -107868,7 +107868,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31550.40048611",
+          maxQty: "59132.12491325",
           stepSize: "0.00000000",
         },
         {
@@ -107937,7 +107937,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "328.04001319",
+          maxQty: "320.34243541",
           stepSize: "0.00000000",
         },
         {
@@ -108006,7 +108006,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "172.61088611",
+          maxQty: "180.66197361",
           stepSize: "0.00000000",
         },
         {
@@ -108075,7 +108075,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "478.16592222",
+          maxQty: "675.10806250",
           stepSize: "0.00000000",
         },
         {
@@ -108144,7 +108144,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2253.37734236",
+          maxQty: "2816.10057361",
           stepSize: "0.00000000",
         },
         {
@@ -108213,7 +108213,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49186.79013888",
+          maxQty: "60204.86243055",
           stepSize: "0.00000000",
         },
         {
@@ -108351,7 +108351,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "167843.43958333",
+          maxQty: "109676.71256944",
           stepSize: "0.00000000",
         },
         {
@@ -108420,7 +108420,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "226938.60423611",
+          maxQty: "293128.61763888",
           stepSize: "0.00000000",
         },
         {
@@ -108489,7 +108489,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "886257.24305555",
+          maxQty: "1711863.29077029",
           stepSize: "0.00000000",
         },
         {
@@ -108558,7 +108558,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "711.99473263",
+          maxQty: "655.22082916",
           stepSize: "0.00000000",
         },
         {
@@ -108627,7 +108627,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6015.26215277",
+          maxQty: "9768.05868055",
           stepSize: "0.00000000",
         },
         {
@@ -108696,7 +108696,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28271.76583333",
+          maxQty: "19854.01312500",
           stepSize: "0.00000000",
         },
         {
@@ -108765,7 +108765,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18452.15058986",
+          maxQty: "23311.54812500",
           stepSize: "0.00000000",
         },
         {
@@ -108834,7 +108834,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68697.40333333",
+          maxQty: "94845.09472222",
           stepSize: "0.00000000",
         },
         {
@@ -108903,7 +108903,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "263161.05868055",
+          maxQty: "286152.41623872",
           stepSize: "0.00000000",
         },
         {
@@ -108972,7 +108972,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28047.44270833",
+          maxQty: "80470.10763888",
           stepSize: "0.00000000",
         },
         {
@@ -109041,7 +109041,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29427.96451388",
+          maxQty: "32163.32888888",
           stepSize: "0.00000000",
         },
         {
@@ -109110,7 +109110,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3053058.12986111",
+          maxQty: "3517568.66597222",
           stepSize: "0.00000000",
         },
         {
@@ -109179,7 +109179,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "622001.77291666",
+          maxQty: "877111.21319444",
           stepSize: "0.00000000",
         },
         {
@@ -109248,7 +109248,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53688.92500000",
+          maxQty: "165194.48709229",
           stepSize: "0.00000000",
         },
         {
@@ -109317,7 +109317,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38428.63402777",
+          maxQty: "79414.27083333",
           stepSize: "0.00000000",
         },
         {
@@ -109386,7 +109386,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "27756.26000000",
+          maxQty: "23404.42748091",
           stepSize: "0.00000000",
         },
         {
@@ -109455,7 +109455,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "889837.67244968",
+          maxQty: "1039962.67638888",
           stepSize: "0.00000000",
         },
         {
@@ -109524,7 +109524,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "244263.80208333",
+          maxQty: "359755.57291666",
           stepSize: "0.00000000",
         },
         {
@@ -109593,7 +109593,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "136336.52916666",
+          maxQty: "133713.36944444",
           stepSize: "0.00000000",
         },
         {
@@ -109662,7 +109662,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "83578.24722222",
+          maxQty: "119212.41944444",
           stepSize: "0.00000000",
         },
         {
@@ -109731,7 +109731,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15092.92361111",
+          maxQty: "53448.63150589",
           stepSize: "0.00000000",
         },
         {
@@ -109869,7 +109869,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38922.18819444",
+          maxQty: "74122.38029146",
           stepSize: "0.00000000",
         },
         {
@@ -109938,7 +109938,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "175441.52847222",
+          maxQty: "468006.69236111",
           stepSize: "0.00000000",
         },
         {
@@ -110007,7 +110007,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "178.87977708",
+          maxQty: "309.17003194",
           stepSize: "0.00000000",
         },
         {
@@ -110023,7 +110023,7 @@ export default {
     },
     {
       symbol: "GNOBUSD",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "GNO",
       baseAssetPrecision: 8,
       quoteAsset: "BUSD",
@@ -110076,7 +110076,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "48.96666458",
+          maxQty: "70.04020277",
           stepSize: "0.00000000",
         },
         {
@@ -110214,7 +110214,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "39.43901666",
+          maxQty: "66.19912916",
           stepSize: "0.00000000",
         },
         {
@@ -110283,7 +110283,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1458316.28958333",
+          maxQty: "2459483.48958333",
           stepSize: "0.00000000",
         },
         {
@@ -110352,7 +110352,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3388.49909027",
+          maxQty: "3130.54558333",
           stepSize: "0.00000000",
         },
         {
@@ -110421,7 +110421,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18142.82097222",
+          maxQty: "14398.81097222",
           stepSize: "0.00000000",
         },
         {
@@ -110490,7 +110490,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "126176.48243055",
+          maxQty: "175970.36541666",
           stepSize: "0.00000000",
         },
         {
@@ -110559,7 +110559,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "1815348966.25",
+          maxQty: "3433118605.80",
           stepSize: "0.00",
         },
         {
@@ -110628,7 +110628,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12576.86833333",
+          maxQty: "13899.74284722",
           stepSize: "0.00000000",
         },
         {
@@ -110697,7 +110697,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1890.22890208",
+          maxQty: "1144.62885694",
           stepSize: "0.00000000",
         },
         {
@@ -110766,7 +110766,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "70477.21111111",
+          maxQty: "90915.84913254",
           stepSize: "0.00000000",
         },
         {
@@ -110835,7 +110835,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49218.42208333",
+          maxQty: "49616.57076388",
           stepSize: "0.00000000",
         },
         {
@@ -110904,7 +110904,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "227125.96729166",
+          maxQty: "213458.18487161",
           stepSize: "0.00000000",
         },
         {
@@ -110973,7 +110973,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "109821.33047916",
+          maxQty: "254401.95160416",
           stepSize: "0.00000000",
         },
         {
@@ -111042,7 +111042,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29513.62123611",
+          maxQty: "43644.65399305",
           stepSize: "0.00000000",
         },
         {
@@ -111111,7 +111111,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9423.60125000",
+          maxQty: "7958.09519444",
           stepSize: "0.00000000",
         },
         {
@@ -111180,7 +111180,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26062.14480555",
+          maxQty: "16884.41874305",
           stepSize: "0.00000000",
         },
         {
@@ -111249,7 +111249,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61985.02937500",
+          maxQty: "66581.96986111",
           stepSize: "0.00000000",
         },
         {
@@ -111318,7 +111318,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "185125.44826388",
+          maxQty: "302322.90576388",
           stepSize: "0.00000000",
         },
         {
@@ -111387,7 +111387,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1323082.83687500",
+          maxQty: "2436761.29895833",
           stepSize: "0.00000000",
         },
         {
@@ -111456,7 +111456,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "210415.04201388",
+          maxQty: "312798.07194444",
           stepSize: "0.00000000",
         },
         {
@@ -111525,7 +111525,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1043.19671840",
+          maxQty: "500.27938333",
           stepSize: "0.00000000",
         },
         {
@@ -111594,7 +111594,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "112.49696041",
+          maxQty: "218.54490555",
           stepSize: "0.00000000",
         },
         {
@@ -111663,7 +111663,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7.72675561",
+          maxQty: "6.74230140",
           stepSize: "0.00000000",
         },
         {
@@ -111732,7 +111732,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "81.81089076",
+          maxQty: "67.62759902",
           stepSize: "0.00000000",
         },
         {
@@ -111801,7 +111801,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "827.16434513",
+          maxQty: "573.19165416",
           stepSize: "0.00000000",
         },
         {
@@ -111870,7 +111870,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1813951.95336805",
+          maxQty: "1240818.07359722",
           stepSize: "0.00000000",
         },
         {
@@ -111939,7 +111939,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1880665.92420833",
+          maxQty: "2018399.95585704",
           stepSize: "0.00000000",
         },
         {
@@ -112008,7 +112008,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9342978.02986111",
+          maxQty: "8893315.93472222",
           stepSize: "0.00000000",
         },
         {
@@ -112077,7 +112077,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2435624.82083333",
+          maxQty: "2645179.41388888",
           stepSize: "0.00000000",
         },
         {
@@ -112146,7 +112146,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "594917.62708333",
+          maxQty: "634648.57569444",
           stepSize: "0.00000000",
         },
         {
@@ -112215,7 +112215,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1631494.67430555",
+          maxQty: "3661340.80846634",
           stepSize: "0.00000000",
         },
         {
@@ -112284,7 +112284,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28507.38347222",
+          maxQty: "31030.25715277",
           stepSize: "0.00000000",
         },
         {
@@ -112629,7 +112629,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2198988.37569444",
+          maxQty: "2375389.59583333",
           stepSize: "0.00000000",
         },
         {
@@ -112698,7 +112698,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "293.00049444",
+          maxQty: "341.13943125",
           stepSize: "0.00000000",
         },
         {
@@ -112767,7 +112767,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "120.20154791",
+          maxQty: "165.63385912",
           stepSize: "0.00000000",
         },
         {
@@ -112836,7 +112836,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "56.02605347",
+          maxQty: "110.45095972",
           stepSize: "0.00000000",
         },
         {
@@ -112905,7 +112905,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "118.31453541",
+          maxQty: "123.38900625",
           stepSize: "0.00000000",
         },
         {
@@ -112974,7 +112974,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "210933.11172796",
+          maxQty: "221361.60860513",
           stepSize: "0.00000000",
         },
         {
@@ -113043,7 +113043,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "69326.37930555",
+          maxQty: "124962.60624566",
           stepSize: "0.00000000",
         },
         {
@@ -113112,7 +113112,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19333.16013888",
+          maxQty: "27838.10673611",
           stepSize: "0.00000000",
         },
         {
@@ -113181,7 +113181,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13574.44562500",
+          maxQty: "11583.59181124",
           stepSize: "0.00000000",
         },
         {
@@ -113250,7 +113250,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17935.87555555",
+          maxQty: "21242.07786259",
           stepSize: "0.00000000",
         },
         {
@@ -113319,7 +113319,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "37300.85944444",
+          maxQty: "35813.54722222",
           stepSize: "0.00000000",
         },
         {
@@ -113388,7 +113388,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "662770.18194444",
+          maxQty: "671578.12986111",
           stepSize: "0.00000000",
         },
         {
@@ -113457,7 +113457,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "679349.85912560",
+          maxQty: "2136661.44482997",
           stepSize: "0.00000000",
         },
         {
@@ -113526,7 +113526,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3061.07337500",
+          maxQty: "2637.65525000",
           stepSize: "0.00000000",
         },
         {
@@ -113595,7 +113595,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "190621.45902777",
+          maxQty: "394084.93337959",
           stepSize: "0.00000000",
         },
         {
@@ -113664,7 +113664,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "156.58914375",
+          maxQty: "153.03210270",
           stepSize: "0.00000000",
         },
         {
@@ -113733,7 +113733,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "302543.58402777",
+          maxQty: "330099.82026370",
           stepSize: "0.00000000",
         },
         {
@@ -113802,7 +113802,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "776887.42430555",
+          maxQty: "834324.24437500",
           stepSize: "0.00000000",
         },
         {
@@ -113871,7 +113871,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7153.20500000",
+          maxQty: "7669.61534722",
           stepSize: "0.00000000",
         },
         {
@@ -113940,7 +113940,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "347.37809027",
+          maxQty: "428.15932638",
           stepSize: "0.00000000",
         },
         {
@@ -114009,7 +114009,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3233.53850694",
+          maxQty: "2850.25956944",
           stepSize: "0.00000000",
         },
         {
@@ -114078,7 +114078,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "77408.76076388",
+          maxQty: "117922.87701388",
           stepSize: "0.00000000",
         },
         {
@@ -114147,7 +114147,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25812.97409722",
+          maxQty: "31357.07333333",
           stepSize: "0.00000000",
         },
         {
@@ -114285,7 +114285,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21922.84923611",
+          maxQty: "33082.69118667",
           stepSize: "0.00000000",
         },
         {
@@ -114354,7 +114354,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14499112.95277777",
+          maxQty: "19785639.13601665",
           stepSize: "0.00000000",
         },
         {
@@ -114423,7 +114423,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "253049.54791666",
+          maxQty: "339972.48402777",
           stepSize: "0.00000000",
         },
         {
@@ -114492,7 +114492,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "89952.61791666",
+          maxQty: "192748.92520833",
           stepSize: "0.00000000",
         },
         {
@@ -114561,7 +114561,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "41938.90895833",
+          maxQty: "38299.82868055",
           stepSize: "0.00000000",
         },
         {
@@ -114630,7 +114630,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21731.68409722",
+          maxQty: "19282.59437890",
           stepSize: "0.00000000",
         },
         {
@@ -114699,7 +114699,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "44682.95305555",
+          maxQty: "29808.30229007",
           stepSize: "0.00000000",
         },
         {
@@ -114768,7 +114768,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "113891.05229166",
+          maxQty: "135614.45298611",
           stepSize: "0.00000000",
         },
         {
@@ -114837,7 +114837,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5795.68243055",
+          maxQty: "8963.73486111",
           stepSize: "0.00000000",
         },
         {
@@ -114906,7 +114906,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5153.09965277",
+          maxQty: "6360.59021512",
           stepSize: "0.00000000",
         },
         {
@@ -114975,7 +114975,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6087.99493055",
+          maxQty: "11392.75260235",
           stepSize: "0.00000000",
         },
         {
@@ -115011,7 +115011,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -115044,7 +115044,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20948.43194444",
+          maxQty: "58502.61569444",
           stepSize: "0.00000000",
         },
         {
@@ -115056,7 +115056,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "UNIAUD",
@@ -115182,7 +115182,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16889.35000000",
+          maxQty: "15311.69882026",
           stepSize: "0.00000000",
         },
         {
@@ -115251,7 +115251,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "41685.04055555",
+          maxQty: "90227.02187500",
           stepSize: "0.00000000",
         },
         {
@@ -115320,7 +115320,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "113456.86527777",
+          maxQty: "161095.56736111",
           stepSize: "0.00000000",
         },
         {
@@ -115389,7 +115389,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "68727.43095072",
+          maxQty: "105741.08466342",
           stepSize: "0.00000000",
         },
         {
@@ -115458,7 +115458,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "169119.33055555",
+          maxQty: "392103.20194309",
           stepSize: "0.00000000",
         },
         {
@@ -115527,7 +115527,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "736991.03194444",
+          maxQty: "446837.60208333",
           stepSize: "0.00000000",
         },
         {
@@ -115596,7 +115596,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "4223020392.35",
+          maxQty: "5766993549.65",
           stepSize: "0.00",
         },
         {
@@ -115665,7 +115665,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "39940.84305555",
+          maxQty: "49251.37397640",
           stepSize: "0.00000000",
         },
         {
@@ -115734,7 +115734,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "16489.89097222",
+          maxQty: "62484.33881944",
           stepSize: "0.00000000",
         },
         {
@@ -115803,7 +115803,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52758.06298611",
+          maxQty: "131409.31201388",
           stepSize: "0.00000000",
         },
         {
@@ -115872,7 +115872,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "231504.80305555",
+          maxQty: "528018.85468424",
           stepSize: "0.00000000",
         },
         {
@@ -115941,7 +115941,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "611.18313194",
+          maxQty: "667.17631505",
           stepSize: "0.00000000",
         },
         {
@@ -116010,7 +116010,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "600.85403472",
+          maxQty: "978.41701596",
           stepSize: "0.00000000",
         },
         {
@@ -116079,7 +116079,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1289.95295138",
+          maxQty: "1352.48627083",
           stepSize: "0.00000000",
         },
         {
@@ -116148,7 +116148,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5497749.87222222",
+          maxQty: "5223350.22430555",
           stepSize: "0.00000000",
         },
         {
@@ -116217,7 +116217,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1077.92688402",
+          maxQty: "1580.41651908",
           stepSize: "0.00000000",
         },
         {
@@ -116286,7 +116286,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "98722.25631944",
+          maxQty: "421719.49694444",
           stepSize: "0.00000000",
         },
         {
@@ -116355,7 +116355,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4630.90986527",
+          maxQty: "9073.87743611",
           stepSize: "0.00000000",
         },
         {
@@ -116424,7 +116424,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6557.44552083",
+          maxQty: "8226.66106944",
           stepSize: "0.00000000",
         },
         {
@@ -116493,7 +116493,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2119.39340277",
+          maxQty: "4079.63064583",
           stepSize: "0.00000000",
         },
         {
@@ -116562,7 +116562,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "22612.37388194",
+          maxQty: "43218.65016666",
           stepSize: "0.00000000",
         },
         {
@@ -116631,7 +116631,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2554.74514920",
+          maxQty: "3797.23545833",
           stepSize: "0.00000000",
         },
         {
@@ -116700,7 +116700,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6158.39457638",
+          maxQty: "11022.29893129",
           stepSize: "0.00000000",
         },
         {
@@ -116769,7 +116769,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63723.11097916",
+          maxQty: "58281.09947916",
           stepSize: "0.00000000",
         },
         {
@@ -116838,7 +116838,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24280.11465277",
+          maxQty: "29854.59819444",
           stepSize: "0.00000000",
         },
         {
@@ -116907,7 +116907,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14080.75472222",
+          maxQty: "28507.29069444",
           stepSize: "0.00000000",
         },
         {
@@ -116976,7 +116976,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "56543.46430555",
+          maxQty: "76766.22159722",
           stepSize: "0.00000000",
         },
         {
@@ -117045,7 +117045,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "268226.69618320",
+          maxQty: "389268.55405968",
           stepSize: "0.00000000",
         },
         {
@@ -117114,7 +117114,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46520.53263888",
+          maxQty: "45559.47638888",
           stepSize: "0.00000000",
         },
         {
@@ -117183,7 +117183,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "27106.17154753",
+          maxQty: "32167.83423611",
           stepSize: "0.00000000",
         },
         {
@@ -117252,7 +117252,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "43689.87847222",
+          maxQty: "37474.75461485",
           stepSize: "0.00000000",
         },
         {
@@ -117321,7 +117321,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "191842.29375000",
+          maxQty: "273508.17973629",
           stepSize: "0.00000000",
         },
         {
@@ -117390,7 +117390,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6271.89054166",
+          maxQty: "12367.34886805",
           stepSize: "0.00000000",
         },
         {
@@ -117459,7 +117459,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "53509.51305555",
+          maxQty: "74221.34680555",
           stepSize: "0.00000000",
         },
         {
@@ -117528,7 +117528,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11154.95402777",
+          maxQty: "9611.26645833",
           stepSize: "0.00000000",
         },
         {
@@ -117735,7 +117735,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5150460.79236111",
+          maxQty: "7312672.80625000",
           stepSize: "0.00000000",
         },
         {
@@ -117751,7 +117751,7 @@ export default {
     },
     {
       symbol: "REEFBIDR",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "REEF",
       baseAssetPrecision: 8,
       quoteAsset: "BIDR",
@@ -117804,7 +117804,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1421787.29444444",
+          maxQty: "1012017.90416666",
           stepSize: "0.00000000",
         },
         {
@@ -117873,7 +117873,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00",
-          maxQty: "12393458240.05",
+          maxQty: "18077329388.95",
           stepSize: "0.00",
         },
         {
@@ -117942,7 +117942,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "470759.28383067",
+          maxQty: "735903.59027777",
           stepSize: "0.00000000",
         },
         {
@@ -118011,7 +118011,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "89126.06944444",
+          maxQty: "249624.16250000",
           stepSize: "0.00000000",
         },
         {
@@ -118080,7 +118080,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "47097.51111111",
+          maxQty: "37895.11111111",
           stepSize: "0.00000000",
         },
         {
@@ -118149,7 +118149,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "75658.46666666",
+          maxQty: "78550.10902777",
           stepSize: "0.00000000",
         },
         {
@@ -118218,7 +118218,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "415.75022414",
+          maxQty: "519.54016041",
           stepSize: "0.00000000",
         },
         {
@@ -118287,7 +118287,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "506.12950625",
+          maxQty: "397.52769305",
           stepSize: "0.00000000",
         },
         {
@@ -118356,7 +118356,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "863.95326578",
+          maxQty: "1394.36612986",
           stepSize: "0.00000000",
         },
         {
@@ -118425,7 +118425,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7232.78069166",
+          maxQty: "9075.36839444",
           stepSize: "0.00000000",
         },
         {
@@ -118441,7 +118441,7 @@ export default {
     },
     {
       symbol: "RGTUSDT",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "RGT",
       baseAssetPrecision: 8,
       quoteAsset: "USDT",
@@ -118494,7 +118494,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2821.80902083",
+          maxQty: "2748.30227777",
           stepSize: "0.00000000",
         },
         {
@@ -118510,7 +118510,7 @@ export default {
     },
     {
       symbol: "RGTBTC",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "RGT",
       baseAssetPrecision: 8,
       quoteAsset: "BTC",
@@ -118563,7 +118563,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "703.11443750",
+          maxQty: "680.70686111",
           stepSize: "0.00000000",
         },
         {
@@ -118579,7 +118579,7 @@ export default {
     },
     {
       symbol: "RGTBUSD",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "RGT",
       baseAssetPrecision: 8,
       quoteAsset: "BUSD",
@@ -118632,7 +118632,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "778.23625260",
+          maxQty: "891.38709722",
           stepSize: "0.00000000",
         },
         {
@@ -118648,7 +118648,7 @@ export default {
     },
     {
       symbol: "RGTBNB",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "RGT",
       baseAssetPrecision: 8,
       quoteAsset: "BNB",
@@ -118701,7 +118701,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1075.49250694",
+          maxQty: "1077.00952777",
           stepSize: "0.00000000",
         },
         {
@@ -118770,7 +118770,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11640.30343750",
+          maxQty: "15844.25731250",
           stepSize: "0.00000000",
         },
         {
@@ -118839,7 +118839,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "75311.93263888",
+          maxQty: "106443.34513888",
           stepSize: "0.00000000",
         },
         {
@@ -118908,7 +118908,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "80711.31583333",
+          maxQty: "109976.26395833",
           stepSize: "0.00000000",
         },
         {
@@ -118977,7 +118977,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14308.51750000",
+          maxQty: "15664.79368494",
           stepSize: "0.00000000",
         },
         {
@@ -119115,7 +119115,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "565.10665972",
+          maxQty: "347.53943750",
           stepSize: "0.00000000",
         },
         {
@@ -119184,7 +119184,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "345286.28472222",
+          maxQty: "268125.86736111",
           stepSize: "0.00000000",
         },
         {
@@ -119253,7 +119253,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "544.82654791",
+          maxQty: "430.01715486",
           stepSize: "0.00000000",
         },
         {
@@ -119269,7 +119269,7 @@ export default {
     },
     {
       symbol: "MOVRBNB",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "MOVR",
       baseAssetPrecision: 8,
       quoteAsset: "BNB",
@@ -119322,7 +119322,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "523.76628680",
+          maxQty: "369.10205000",
           stepSize: "0.00000000",
         },
         {
@@ -119391,7 +119391,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "482.07858680",
+          maxQty: "947.62504441",
           stepSize: "0.00000000",
         },
         {
@@ -119460,7 +119460,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2732.65686111",
+          maxQty: "4869.85737708",
           stepSize: "0.00000000",
         },
         {
@@ -119529,7 +119529,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2922.09749305",
+          maxQty: "3842.70050694",
           stepSize: "0.00000000",
         },
         {
@@ -119598,7 +119598,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2430.04813194",
+          maxQty: "1876.46272916",
           stepSize: "0.00000000",
         },
         {
@@ -119667,7 +119667,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4090.44932638",
+          maxQty: "2934.00355555",
           stepSize: "0.00000000",
         },
         {
@@ -119736,7 +119736,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17040.45354861",
+          maxQty: "19751.60234722",
           stepSize: "0.00000000",
         },
         {
@@ -119805,7 +119805,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6156.72573611",
+          maxQty: "6588.48517002",
           stepSize: "0.00000000",
         },
         {
@@ -119874,7 +119874,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1812.70542361",
+          maxQty: "1896.99863888",
           stepSize: "0.00000000",
         },
         {
@@ -119943,7 +119943,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8152.99609027",
+          maxQty: "7543.95655555",
           stepSize: "0.00000000",
         },
         {
@@ -120012,7 +120012,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "42345.21790277",
+          maxQty: "46077.21200694",
           stepSize: "0.00000000",
         },
         {
@@ -120081,7 +120081,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "28734.36041666",
+          maxQty: "29752.10284524",
           stepSize: "0.00000000",
         },
         {
@@ -120150,7 +120150,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17949.40204166",
+          maxQty: "13725.82237335",
           stepSize: "0.00000000",
         },
         {
@@ -120219,7 +120219,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "150392.25208333",
+          maxQty: "109261.98451388",
           stepSize: "0.00000000",
         },
         {
@@ -120288,7 +120288,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "844253.07881944",
+          maxQty: "750088.41812500",
           stepSize: "0.00000000",
         },
         {
@@ -120357,7 +120357,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "62113.21812500",
+          maxQty: "48890.77425399",
           stepSize: "0.00000000",
         },
         {
@@ -120426,7 +120426,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10537.47138888",
+          maxQty: "17933.79451388",
           stepSize: "0.00000000",
         },
         {
@@ -120495,7 +120495,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1558.00695833",
+          maxQty: "1221.61047916",
           stepSize: "0.00000000",
         },
         {
@@ -120531,7 +120531,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -120564,7 +120564,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2651393.00555555",
+          maxQty: "5197095.52671755",
           stepSize: "0.00000000",
         },
         {
@@ -120576,7 +120576,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "QIBUSD",
@@ -120633,7 +120633,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "602134.40138888",
+          maxQty: "1164976.76875000",
           stepSize: "0.00000000",
         },
         {
@@ -120702,7 +120702,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "255189.30833333",
+          maxQty: "447218.65694444",
           stepSize: "0.00000000",
         },
         {
@@ -120771,7 +120771,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "736685.15208333",
+          maxQty: "655988.54722222",
           stepSize: "0.00000000",
         },
         {
@@ -120840,7 +120840,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18967.02126388",
+          maxQty: "13719.41258333",
           stepSize: "0.00000000",
         },
         {
@@ -120909,7 +120909,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "45731.40065972",
+          maxQty: "36126.89375694",
           stepSize: "0.00000000",
         },
         {
@@ -120978,7 +120978,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21920.26910416",
+          maxQty: "13573.13257638",
           stepSize: "0.00000000",
         },
         {
@@ -121047,7 +121047,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17409.90868055",
+          maxQty: "12935.93998611",
           stepSize: "0.00000000",
         },
         {
@@ -121116,7 +121116,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "318249.63125000",
+          maxQty: "325240.08263888",
           stepSize: "0.00000000",
         },
         {
@@ -121185,7 +121185,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "122033.07430555",
+          maxQty: "109471.96807772",
           stepSize: "0.00000000",
         },
         {
@@ -121254,7 +121254,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3887.61816666",
+          maxQty: "8823.07476388",
           stepSize: "0.00000000",
         },
         {
@@ -121323,7 +121323,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9881396.96944444",
+          maxQty: "13116438.86250000",
           stepSize: "0.00000000",
         },
         {
@@ -121461,7 +121461,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "115295.59847222",
+          maxQty: "138487.04125000",
           stepSize: "0.00000000",
         },
         {
@@ -121530,7 +121530,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "70176.52458333",
+          maxQty: "76820.26419153",
           stepSize: "0.00000000",
         },
         {
@@ -121668,7 +121668,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52747.98348369",
+          maxQty: "100700.97444444",
           stepSize: "0.00000000",
         },
         {
@@ -121737,7 +121737,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "301709.21944444",
+          maxQty: "451448.18888888",
           stepSize: "0.00000000",
         },
         {
@@ -121806,7 +121806,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61067644.61263011",
+          maxQty: "77761804.05965277",
           stepSize: "0.00000000",
         },
         {
@@ -121875,7 +121875,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7977421.71062500",
+          maxQty: "11900899.91305555",
           stepSize: "0.00000000",
         },
         {
@@ -121944,7 +121944,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2070533.97460097",
+          maxQty: "3428322.44750000",
           stepSize: "0.00000000",
         },
         {
@@ -122013,7 +122013,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33983991.58368055",
+          maxQty: "20465493.01222222",
           stepSize: "0.00000000",
         },
         {
@@ -122082,7 +122082,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2963810.71250000",
+          maxQty: "7336790.42291666",
           stepSize: "0.00000000",
         },
         {
@@ -122151,7 +122151,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1091464.60416666",
+          maxQty: "1191902.41666666",
           stepSize: "0.00000000",
         },
         {
@@ -122220,7 +122220,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1882150.41875000",
+          maxQty: "2980488.69166666",
           stepSize: "0.00000000",
         },
         {
@@ -122289,7 +122289,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3026687.01597222",
+          maxQty: "8462145.59722222",
           stepSize: "0.00000000",
         },
         {
@@ -122358,7 +122358,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "38016.40611111",
+          maxQty: "32444.33512500",
           stepSize: "0.00000000",
         },
         {
@@ -122427,7 +122427,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24634.69558333",
+          maxQty: "26457.73849305",
           stepSize: "0.00000000",
         },
         {
@@ -122496,7 +122496,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "30245.66172796",
+          maxQty: "28989.11661805",
           stepSize: "0.00000000",
         },
         {
@@ -122565,7 +122565,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "99336.94366666",
+          maxQty: "201769.11727777",
           stepSize: "0.00000000",
         },
         {
@@ -122634,7 +122634,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7985.25516805",
+          maxQty: "6381.46753958",
           stepSize: "0.00000000",
         },
         {
@@ -122703,7 +122703,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9330.38799722",
+          maxQty: "14602.90036805",
           stepSize: "0.00000000",
         },
         {
@@ -122772,7 +122772,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35109.94271875",
+          maxQty: "35192.75899791",
           stepSize: "0.00000000",
         },
         {
@@ -122841,7 +122841,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "43592.25535416",
+          maxQty: "38414.14785416",
           stepSize: "0.00000000",
         },
         {
@@ -122910,7 +122910,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "93496.70725000",
+          maxQty: "126977.13968750",
           stepSize: "0.00000000",
         },
         {
@@ -122979,7 +122979,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "19621.62088888",
+          maxQty: "32042.71931250",
           stepSize: "0.00000000",
         },
         {
@@ -123048,7 +123048,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "282.83356555",
+          maxQty: "283.19570215",
           stepSize: "0.00000000",
         },
         {
@@ -123117,7 +123117,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "111.16989284",
+          maxQty: "152.02773916",
           stepSize: "0.00000000",
         },
         {
@@ -123186,7 +123186,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "887.02438888",
+          maxQty: "1015.47285284",
           stepSize: "0.00000000",
         },
         {
@@ -123255,7 +123255,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6937.24748611",
+          maxQty: "7081.42665972",
           stepSize: "0.00000000",
         },
         {
@@ -123324,7 +123324,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52159.43632638",
+          maxQty: "29276.33422916",
           stepSize: "0.00000000",
         },
         {
@@ -123393,7 +123393,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2995.97927083",
+          maxQty: "4016.20018750",
           stepSize: "0.00000000",
         },
         {
@@ -123462,7 +123462,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14576.48245138",
+          maxQty: "12238.43667361",
           stepSize: "0.00000000",
         },
         {
@@ -123531,7 +123531,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11738.31980555",
+          maxQty: "13486.33687500",
           stepSize: "0.00000000",
         },
         {
@@ -123600,7 +123600,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "30355.89245138",
+          maxQty: "18038.43827203",
           stepSize: "0.00000000",
         },
         {
@@ -123669,7 +123669,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61134.28300694",
+          maxQty: "60554.08172222",
           stepSize: "0.00000000",
         },
         {
@@ -123738,7 +123738,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34231.75283333",
+          maxQty: "19792.42880555",
           stepSize: "0.00000000",
         },
         {
@@ -123807,7 +123807,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "43138.05277777",
+          maxQty: "54532.89930555",
           stepSize: "0.00000000",
         },
         {
@@ -123876,7 +123876,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17486592.75763888",
+          maxQty: "16231861.36597222",
           stepSize: "0.00000000",
         },
         {
@@ -123945,7 +123945,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "25767.42422222",
+          maxQty: "26563.30148611",
           stepSize: "0.00000000",
         },
         {
@@ -124014,7 +124014,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "362.08206736",
+          maxQty: "382.83886250",
           stepSize: "0.00000000",
         },
         {
@@ -124083,7 +124083,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7968.21250000",
+          maxQty: "14626.86111111",
           stepSize: "0.00000000",
         },
         {
@@ -124152,7 +124152,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2363297.25763888",
+          maxQty: "3652426.08402777",
           stepSize: "0.00000000",
         },
         {
@@ -124168,7 +124168,7 @@ export default {
     },
     {
       symbol: "ANYBTC",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "ANY",
       baseAssetPrecision: 8,
       quoteAsset: "BTC",
@@ -124221,7 +124221,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3721.24581250",
+          maxQty: "4878.32598717",
           stepSize: "0.00000000",
         },
         {
@@ -124237,7 +124237,7 @@ export default {
     },
     {
       symbol: "ANYBUSD",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "ANY",
       baseAssetPrecision: 8,
       quoteAsset: "BUSD",
@@ -124290,7 +124290,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4869.64563888",
+          maxQty: "20897.51375641",
           stepSize: "0.00000000",
         },
         {
@@ -124306,7 +124306,7 @@ export default {
     },
     {
       symbol: "ANYUSDT",
-      status: "TRADING",
+      status: "BREAK",
       baseAsset: "ANY",
       baseAssetPrecision: 8,
       quoteAsset: "USDT",
@@ -124359,7 +124359,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14142.36336805",
+          maxQty: "27135.43097435",
           stepSize: "0.00000000",
         },
         {
@@ -124428,7 +124428,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "33654.85495138",
+          maxQty: "46292.29978472",
           stepSize: "0.00000000",
         },
         {
@@ -124497,7 +124497,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "54902.59509027",
+          maxQty: "74542.04151977",
           stepSize: "0.00000000",
         },
         {
@@ -124566,7 +124566,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "206770.00311111",
+          maxQty: "208253.70102083",
           stepSize: "0.00000000",
         },
         {
@@ -124635,7 +124635,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "34372.40986805",
+          maxQty: "34481.67700000",
           stepSize: "0.00000000",
         },
         {
@@ -124704,7 +124704,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "66955.69920833",
+          maxQty: "60716.46422916",
           stepSize: "0.00000000",
         },
         {
@@ -124773,7 +124773,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "176152.70201388",
+          maxQty: "195846.28295833",
           stepSize: "0.00000000",
         },
         {
@@ -124842,7 +124842,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8338.08997500",
+          maxQty: "5459.49415752",
           stepSize: "0.00000000",
         },
         {
@@ -124911,7 +124911,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "9468.48784722",
+          maxQty: "16282.97958333",
           stepSize: "0.00000000",
         },
         {
@@ -124980,7 +124980,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "178670.49076388",
+          maxQty: "287787.10416666",
           stepSize: "0.00000000",
         },
         {
@@ -125049,7 +125049,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "507848.75736111",
+          maxQty: "822589.48847222",
           stepSize: "0.00000000",
         },
         {
@@ -125118,7 +125118,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1027.61813958",
+          maxQty: "629.32025208",
           stepSize: "0.00000000",
         },
         {
@@ -125187,7 +125187,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "44191.38029146",
+          maxQty: "68306.20902777",
           stepSize: "0.00000000",
         },
         {
@@ -125256,7 +125256,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6260.26379861",
+          maxQty: "11819.54018043",
           stepSize: "0.00000000",
         },
         {
@@ -125325,7 +125325,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10819.28388194",
+          maxQty: "9461.65561111",
           stepSize: "0.00000000",
         },
         {
@@ -125394,7 +125394,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7341.05050000",
+          maxQty: "5736.79158333",
           stepSize: "0.00000000",
         },
         {
@@ -125463,7 +125463,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46756.21291666",
+          maxQty: "42647.07826388",
           stepSize: "0.00000000",
         },
         {
@@ -125532,7 +125532,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "42024.35506944",
+          maxQty: "37657.55500000",
           stepSize: "0.00000000",
         },
         {
@@ -125601,7 +125601,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "90535.77895833",
+          maxQty: "107896.08395833",
           stepSize: "0.00000000",
         },
         {
@@ -125670,7 +125670,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "322615.26034722",
+          maxQty: "313503.73680555",
           stepSize: "0.00000000",
         },
         {
@@ -125739,7 +125739,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2174195.56675919",
+          maxQty: "2567077.69423611",
           stepSize: "0.00000000",
         },
         {
@@ -125808,7 +125808,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "123187.15416666",
+          maxQty: "115802.57916666",
           stepSize: "0.00000000",
         },
         {
@@ -125877,7 +125877,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "114395.41504166",
+          maxQty: "78158.02425000",
           stepSize: "0.00000000",
         },
         {
@@ -125946,7 +125946,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20238.96288194",
+          maxQty: "20506.88213194",
           stepSize: "0.00000000",
         },
         {
@@ -126015,7 +126015,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35197.90163888",
+          maxQty: "48091.06101388",
           stepSize: "0.00000000",
         },
         {
@@ -126084,7 +126084,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5709.97139583",
+          maxQty: "6020.41045138",
           stepSize: "0.00000000",
         },
         {
@@ -126153,7 +126153,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6558.23643580",
+          maxQty: "7790.18780833",
           stepSize: "0.00000000",
         },
         {
@@ -126222,7 +126222,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10081.47625833",
+          maxQty: "24812.59639097",
           stepSize: "0.00000000",
         },
         {
@@ -126291,7 +126291,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49335.72446875",
+          maxQty: "77192.91928194",
           stepSize: "0.00000000",
         },
         {
@@ -126360,7 +126360,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "880.24625347",
+          maxQty: "3789.49360833",
           stepSize: "0.00000000",
         },
         {
@@ -126429,7 +126429,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1426.47514652",
+          maxQty: "2449.52955486",
           stepSize: "0.00000000",
         },
         {
@@ -126498,7 +126498,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8456.13151875",
+          maxQty: "6731.03244968",
           stepSize: "0.00000000",
         },
         {
@@ -126567,7 +126567,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1506290.40625000",
+          maxQty: "1830331.82819444",
           stepSize: "0.00000000",
         },
         {
@@ -126636,7 +126636,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2296266.56972222",
+          maxQty: "2958519.25256944",
           stepSize: "0.00000000",
         },
         {
@@ -126705,7 +126705,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11386480.83993055",
+          maxQty: "14478666.19902777",
           stepSize: "0.00000000",
         },
         {
@@ -126774,7 +126774,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6178393.05274115",
+          maxQty: "9320511.19097222",
           stepSize: "0.00000000",
         },
         {
@@ -126843,7 +126843,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14513415.95972222",
+          maxQty: "37753901.16041666",
           stepSize: "0.00000000",
         },
         {
@@ -126912,7 +126912,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "61926.93256250",
+          maxQty: "48230.97640277",
           stepSize: "0.00000000",
         },
         {
@@ -126981,7 +126981,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15286.27076388",
+          maxQty: "19694.28197779",
           stepSize: "0.00000000",
         },
         {
@@ -127050,7 +127050,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3389.78815763",
+          maxQty: "5178.63808125",
           stepSize: "0.00000000",
         },
         {
@@ -127119,7 +127119,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4471.40780000",
+          maxQty: "3704.52756696",
           stepSize: "0.00000000",
         },
         {
@@ -127188,7 +127188,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "439375.54013888",
+          maxQty: "721604.18993754",
           stepSize: "0.00000000",
         },
         {
@@ -127257,7 +127257,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57631.44444444",
+          maxQty: "75157.97013888",
           stepSize: "0.00000000",
         },
         {
@@ -127395,7 +127395,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46576525.59027777",
+          maxQty: "92141578.00000000",
           stepSize: "0.00000000",
         },
         {
@@ -127464,7 +127464,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12943955.32500000",
+          maxQty: "39902454.29097222",
           stepSize: "0.00000000",
         },
         {
@@ -127500,7 +127500,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -127533,7 +127533,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "301790.89738194",
+          maxQty: "288517.43264583",
           stepSize: "0.00000000",
         },
         {
@@ -127545,7 +127545,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "USTBUSD",
@@ -127602,7 +127602,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2327953.30486111",
+          maxQty: "1927209.71805555",
           stepSize: "0.00000000",
         },
         {
@@ -127638,7 +127638,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -127671,7 +127671,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7888177.62083333",
+          maxQty: "4834133.92708333",
           stepSize: "0.00000000",
         },
         {
@@ -127683,7 +127683,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "JOEBTC",
@@ -127740,7 +127740,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "30015.13700694",
+          maxQty: "18301.89066666",
           stepSize: "0.00000000",
         },
         {
@@ -127809,7 +127809,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "40296.70668750",
+          maxQty: "38241.66346527",
           stepSize: "0.00000000",
         },
         {
@@ -127878,7 +127878,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "155759.54350694",
+          maxQty: "151073.65318055",
           stepSize: "0.00000000",
         },
         {
@@ -127947,7 +127947,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3813.61364166",
+          maxQty: "3584.10196527",
           stepSize: "0.00000000",
         },
         {
@@ -128016,7 +128016,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "91118.87083333",
+          maxQty: "168883.12708333",
           stepSize: "0.00000000",
         },
         {
@@ -128085,7 +128085,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "322.12689784",
+          maxQty: "538.81098479",
           stepSize: "0.00000000",
         },
         {
@@ -128154,7 +128154,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1814.30496666",
+          maxQty: "3037.12141082",
           stepSize: "0.00000000",
         },
         {
@@ -128223,7 +128223,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "403.55986944",
+          maxQty: "606.99241458",
           stepSize: "0.00000000",
         },
         {
@@ -128292,7 +128292,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5244.70314583",
+          maxQty: "3359.19779319",
           stepSize: "0.00000000",
         },
         {
@@ -128361,7 +128361,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "7929.53097500",
+          maxQty: "6261.72613263",
           stepSize: "0.00000000",
         },
         {
@@ -128430,7 +128430,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "113875.68805555",
+          maxQty: "122692.59000000",
           stepSize: "0.00000000",
         },
         {
@@ -128499,7 +128499,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14413.36206250",
+          maxQty: "21727.30089583",
           stepSize: "0.00000000",
         },
         {
@@ -128568,7 +128568,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8669.55454027",
+          maxQty: "6611.25841736",
           stepSize: "0.00000000",
         },
         {
@@ -128637,7 +128637,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1476.75920902",
+          maxQty: "1486.96928680",
           stepSize: "0.00000000",
         },
         {
@@ -128673,7 +128673,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -128706,7 +128706,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "107.91982854",
+          maxQty: "104.56427716",
           stepSize: "0.00000000",
         },
         {
@@ -128718,7 +128718,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "GALAAUD",
@@ -128775,7 +128775,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "130144.33333333",
+          maxQty: "183946.33125000",
           stepSize: "0.00000000",
         },
         {
@@ -128844,7 +128844,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "40350.95745138",
+          maxQty: "26932.10934722",
           stepSize: "0.00000000",
         },
         {
@@ -128913,7 +128913,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "359126.26430555",
+          maxQty: "298153.01312500",
           stepSize: "0.00000000",
         },
         {
@@ -128982,7 +128982,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3233590.18528799",
+          maxQty: "2118242.40347222",
           stepSize: "0.00000000",
         },
         {
@@ -129051,7 +129051,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1179014.72222222",
+          maxQty: "2231727.39861111",
           stepSize: "0.00000000",
         },
         {
@@ -129120,7 +129120,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1321333.82916666",
+          maxQty: "2303967.81818181",
           stepSize: "0.00000000",
         },
         {
@@ -129189,7 +129189,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "3812668.17013888",
+          maxQty: "9848319.37638888",
           stepSize: "0.00000000",
         },
         {
@@ -129258,7 +129258,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "51070.66981250",
+          maxQty: "36075.29365277",
           stepSize: "0.00000000",
         },
         {
@@ -129327,7 +129327,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "95670.61089583",
+          maxQty: "118836.95302777",
           stepSize: "0.00000000",
         },
         {
@@ -129396,7 +129396,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "380263.90272916",
+          maxQty: "356447.60900694",
           stepSize: "0.00000000",
         },
         {
@@ -129465,7 +129465,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "20825.50979166",
+          maxQty: "28173.39194444",
           stepSize: "0.00000000",
         },
         {
@@ -129534,7 +129534,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32825.23062500",
+          maxQty: "58076.43152777",
           stepSize: "0.00000000",
         },
         {
@@ -129603,7 +129603,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "151561.17356002",
+          maxQty: "139073.35701388",
           stepSize: "0.00000000",
         },
         {
@@ -129672,7 +129672,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "561.01524722",
+          maxQty: "654.82748263",
           stepSize: "0.00000000",
         },
         {
@@ -129741,7 +129741,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "4950.35075641",
+          maxQty: "5840.27302083",
           stepSize: "0.00000000",
         },
         {
@@ -129810,7 +129810,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "180.01374534",
+          maxQty: "285.19759819",
           stepSize: "0.00000000",
         },
         {
@@ -129879,7 +129879,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "571597.16875000",
+          maxQty: "729043.14503816",
           stepSize: "0.00000000",
         },
         {
@@ -129948,7 +129948,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1248.12483194",
+          maxQty: "1620.13959264",
           stepSize: "0.00000000",
         },
         {
@@ -130017,7 +130017,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1889080.92222222",
+          maxQty: "2831189.36388888",
           stepSize: "0.00000000",
         },
         {
@@ -130086,7 +130086,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1036134.93888888",
+          maxQty: "913194.25625000",
           stepSize: "0.00000000",
         },
         {
@@ -130155,7 +130155,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2315437.83541666",
+          maxQty: "1983545.97362942",
           stepSize: "0.00000000",
         },
         {
@@ -130224,7 +130224,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "146038.58701388",
+          maxQty: "173738.42187500",
           stepSize: "0.00000000",
         },
         {
@@ -130293,7 +130293,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "10446.82250000",
+          maxQty: "7702.50451388",
           stepSize: "0.00000000",
         },
         {
@@ -130362,7 +130362,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8410.23669722",
+          maxQty: "5863.45034420",
           stepSize: "0.00000000",
         },
         {
@@ -130431,7 +130431,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11580.44321527",
+          maxQty: "25899.47356250",
           stepSize: "0.00000000",
         },
         {
@@ -130500,7 +130500,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "46489.13166666",
+          maxQty: "45287.41312500",
           stepSize: "0.00000000",
         },
         {
@@ -130569,7 +130569,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "32644.90354166",
+          maxQty: "59319.20506592",
           stepSize: "0.00000000",
         },
         {
@@ -130638,7 +130638,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "99625.35618055",
+          maxQty: "90823.90166666",
           stepSize: "0.00000000",
         },
         {
@@ -130707,7 +130707,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "236330.55902777",
+          maxQty: "112849.66243055",
           stepSize: "0.00000000",
         },
         {
@@ -130776,7 +130776,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "583.17121111",
+          maxQty: "747.80371875",
           stepSize: "0.00000000",
         },
         {
@@ -130845,7 +130845,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "198.34081875",
+          maxQty: "265.98310347",
           stepSize: "0.00000000",
         },
         {
@@ -130914,7 +130914,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "12202.89888194",
+          maxQty: "27032.23265972",
           stepSize: "0.00000000",
         },
         {
@@ -130983,7 +130983,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5788.91363888",
+          maxQty: "6401.79852083",
           stepSize: "0.00000000",
         },
         {
@@ -131052,7 +131052,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1008.61259305",
+          maxQty: "892.01006597",
           stepSize: "0.00000000",
         },
         {
@@ -131121,7 +131121,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "120843.57173611",
+          maxQty: "142530.38792505",
           stepSize: "0.00000000",
         },
         {
@@ -131190,7 +131190,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "44193.62854166",
+          maxQty: "55131.48256944",
           stepSize: "0.00000000",
         },
         {
@@ -131259,7 +131259,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "24766.95793055",
+          maxQty: "17927.82730555",
           stepSize: "0.00000000",
         },
         {
@@ -131328,7 +131328,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "26145.45817361",
+          maxQty: "19954.99427777",
           stepSize: "0.00000000",
         },
         {
@@ -131397,7 +131397,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "96067.74777083",
+          maxQty: "73078.93555170",
           stepSize: "0.00000000",
         },
         {
@@ -131535,7 +131535,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.0",
-          maxQty: "6356774390.5",
+          maxQty: "4970943815.2",
           stepSize: "0.0",
         },
         {
@@ -131673,7 +131673,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21885.48350000",
+          maxQty: "39895.19078417",
           stepSize: "0.00000000",
         },
         {
@@ -131742,7 +131742,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29133.18658333",
+          maxQty: "53940.36866065",
           stepSize: "0.00000000",
         },
         {
@@ -131811,7 +131811,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "162273.17072916",
+          maxQty: "252414.22338888",
           stepSize: "0.00000000",
         },
         {
@@ -131880,7 +131880,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "31596.45129861",
+          maxQty: "28003.56084027",
           stepSize: "0.00000000",
         },
         {
@@ -131916,7 +131916,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -131949,7 +131949,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29328.62923611",
+          maxQty: "65989.45126388",
           stepSize: "0.00000000",
         },
         {
@@ -131961,7 +131961,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "ANCUSDT",
@@ -131985,7 +131985,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -132018,7 +132018,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "125500.02137500",
+          maxQty: "277264.11118750",
           stepSize: "0.00000000",
         },
         {
@@ -132030,7 +132030,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "BDOTDOT",
@@ -132087,7 +132087,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "66176.81199097",
+          maxQty: "191880.14414930",
           stepSize: "0.00000000",
         },
         {
@@ -132156,7 +132156,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13017.42914583",
+          maxQty: "19272.88655555",
           stepSize: "0.00000000",
         },
         {
@@ -132225,7 +132225,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "29088.53357638",
+          maxQty: "18043.48083333",
           stepSize: "0.00000000",
         },
         {
@@ -132294,7 +132294,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "21557.67120138",
+          maxQty: "29396.42279166",
           stepSize: "0.00000000",
         },
         {
@@ -132363,7 +132363,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "52786.55992361",
+          maxQty: "90466.59362500",
           stepSize: "0.00000000",
         },
         {
@@ -132432,7 +132432,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1308544.38472222",
+          maxQty: "3789182.36319444",
           stepSize: "0.00000000",
         },
         {
@@ -132501,7 +132501,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5775.27732130",
+          maxQty: "10731.06043055",
           stepSize: "0.00000000",
         },
         {
@@ -132570,7 +132570,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "17904.41776388",
+          maxQty: "12763.78265277",
           stepSize: "0.00000000",
         },
         {
@@ -132639,7 +132639,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "197377.57423611",
+          maxQty: "226585.67152777",
           stepSize: "0.00000000",
         },
         {
@@ -132708,7 +132708,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "57948.57597222",
+          maxQty: "62807.65968077",
           stepSize: "0.00000000",
         },
         {
@@ -132777,7 +132777,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "73571.36847222",
+          maxQty: "109737.14541666",
           stepSize: "0.00000000",
         },
         {
@@ -132846,7 +132846,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "63167.55336571",
+          maxQty: "94668.16578764",
           stepSize: "0.00000000",
         },
         {
@@ -132915,7 +132915,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "428829.07611111",
+          maxQty: "480489.64298611",
           stepSize: "0.00000000",
         },
         {
@@ -132984,7 +132984,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "511518.42361111",
+          maxQty: "522492.71527777",
           stepSize: "0.00000000",
         },
         {
@@ -133053,7 +133053,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "749458.72449687",
+          maxQty: "732482.97501734",
           stepSize: "0.00000000",
         },
         {
@@ -133122,7 +133122,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5313936.58125000",
+          maxQty: "11252189.69027777",
           stepSize: "0.00000000",
         },
         {
@@ -133191,7 +133191,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5495047.93684941",
+          maxQty: "6418030.19222761",
           stepSize: "0.00000000",
         },
         {
@@ -133260,7 +133260,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "13101977.04027777",
+          maxQty: "23561659.79597501",
           stepSize: "0.00000000",
         },
         {
@@ -133329,7 +133329,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "223951.66736111",
+          maxQty: "157134.22291666",
           stepSize: "0.00000000",
         },
         {
@@ -133398,7 +133398,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "386.52887083",
+          maxQty: "628.55344513",
           stepSize: "0.00000000",
         },
         {
@@ -133467,7 +133467,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "49798.29002777",
+          maxQty: "160569.76029166",
           stepSize: "0.00000000",
         },
         {
@@ -133536,7 +133536,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1826.86045000",
+          maxQty: "2080.34602777",
           stepSize: "0.00000000",
         },
         {
@@ -133605,7 +133605,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "109966.48180555",
+          maxQty: "178286.83326388",
           stepSize: "0.00000000",
         },
         {
@@ -133674,7 +133674,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5053.51346527",
+          maxQty: "5862.20430555",
           stepSize: "0.00000000",
         },
         {
@@ -133743,7 +133743,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "41022.24069444",
+          maxQty: "29550.34632638",
           stepSize: "0.00000000",
         },
         {
@@ -133812,7 +133812,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "103818.41524305",
+          maxQty: "37564.62828472",
           stepSize: "0.00000000",
         },
         {
@@ -133881,7 +133881,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "8477.60110416",
+          maxQty: "8718.67447222",
           stepSize: "0.00000000",
         },
         {
@@ -133950,7 +133950,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1320691.30291666",
+          maxQty: "4275135.03048611",
           stepSize: "0.00000000",
         },
         {
@@ -134019,7 +134019,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "208795.32958333",
+          maxQty: "817222.45888888",
           stepSize: "0.00000000",
         },
         {
@@ -134088,7 +134088,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5855.34739583",
+          maxQty: "7887.37781250",
           stepSize: "0.00000000",
         },
         {
@@ -134157,7 +134157,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "35476.12027777",
+          maxQty: "51345.00597222",
           stepSize: "0.00000000",
         },
         {
@@ -134226,7 +134226,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5027.69681944",
+          maxQty: "3680.63475364",
           stepSize: "0.00000000",
         },
         {
@@ -134295,7 +134295,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "247453.76805555",
+          maxQty: "280776.38098542",
           stepSize: "0.00000000",
         },
         {
@@ -134364,7 +134364,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "796494.00409722",
+          maxQty: "1300559.11908396",
           stepSize: "0.00000000",
         },
         {
@@ -134433,7 +134433,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1958611.60993055",
+          maxQty: "2190863.15135322",
           stepSize: "0.00000000",
         },
         {
@@ -134502,7 +134502,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "5174.34710416",
+          maxQty: "6995.40212500",
           stepSize: "0.00000000",
         },
         {
@@ -134571,7 +134571,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "15170.06865972",
+          maxQty: "11399.30001388",
           stepSize: "0.00000000",
         },
         {
@@ -134640,7 +134640,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "18332.04368055",
+          maxQty: "21514.49818750",
           stepSize: "0.00000000",
         },
         {
@@ -134709,7 +134709,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "281306.14791666",
+          maxQty: "521107.67708333",
           stepSize: "0.00000000",
         },
         {
@@ -134778,7 +134778,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "491271.16180555",
+          maxQty: "570020.18390006",
           stepSize: "0.00000000",
         },
         {
@@ -134847,7 +134847,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "503705.41298611",
+          maxQty: "196765.92206800",
           stepSize: "0.00000000",
         },
         {
@@ -134916,7 +134916,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "269696.66520833",
+          maxQty: "77761.40833333",
           stepSize: "0.00000000",
         },
         {
@@ -134952,7 +134952,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -134985,7 +134985,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "1585077.55638888",
+          maxQty: "447992.47611111",
           stepSize: "0.00000000",
         },
         {
@@ -134997,7 +134997,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "GMTUSDT",
@@ -135021,7 +135021,7 @@ export default {
       quoteOrderQtyMarketAllowed: true,
       allowTrailingStop: false,
       isSpotTradingAllowed: true,
-      isMarginTradingAllowed: false,
+      isMarginTradingAllowed: true,
       filters: [
         {
           filterType: "PRICE_FILTER",
@@ -135054,7 +135054,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "6533151.94222222",
+          maxQty: "828283.07256944",
           stepSize: "0.00000000",
         },
         {
@@ -135066,7 +135066,7 @@ export default {
           maxNumAlgoOrders: 5,
         },
       ],
-      permissions: ["SPOT"],
+      permissions: ["SPOT", "MARGIN"],
     },
     {
       symbol: "ANCBNB",
@@ -135123,7 +135123,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "11558.07528105",
+          maxQty: "15141.55382638",
           stepSize: "0.00000000",
         },
         {
@@ -135192,7 +135192,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "563.65359722",
+          maxQty: "1204.77291666",
           stepSize: "0.00000000",
         },
         {
@@ -135261,7 +135261,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "70611.95000000",
+          maxQty: "121579.28402777",
           stepSize: "0.00000000",
         },
         {
@@ -135330,7 +135330,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "119.78290423",
+          maxQty: "171.17773553",
           stepSize: "0.00000000",
         },
         {
@@ -135399,7 +135399,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2755.66634722",
+          maxQty: "6459.23738194",
           stepSize: "0.00000000",
         },
         {
@@ -135468,7 +135468,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "2836.32597916",
+          maxQty: "8706.02752777",
           stepSize: "0.00000000",
         },
         {
@@ -135537,7 +135537,7 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "14572.20993750",
+          maxQty: "31525.78299305",
           stepSize: "0.00000000",
         },
         {
@@ -135606,7 +135606,1732 @@ export default {
         {
           filterType: "MARKET_LOT_SIZE",
           minQty: "0.00000000",
-          maxQty: "60077.61275000",
+          maxQty: "142728.25593750",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APEUSDT",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "USDT",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: true,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "238074.41766666",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT", "MARGIN"],
+    },
+    {
+      symbol: "APEBUSD",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "BUSD",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: true,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "138077.74550694",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT", "MARGIN"],
+    },
+    {
+      symbol: "APEBTC",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "BTC",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00000001",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00000001",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.00010000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "37335.80016666",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "ALPINEBUSD",
+      status: "TRADING",
+      baseAsset: "ALPINE",
+      baseAssetPrecision: 8,
+      quoteAsset: "BUSD",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "8248.85897987",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "LUNAGBP",
+      status: "TRADING",
+      baseAsset: "LUNA",
+      baseAssetPrecision: 8,
+      quoteAsset: "GBP",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.01000000",
+          maxPrice: "10000.00000000",
+          tickSize: "0.01000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "90000.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "415.18595138",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "NEAREUR",
+      status: "TRADING",
+      baseAsset: "NEAR",
+      baseAssetPrecision: 8,
+      quoteAsset: "EUR",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00100000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00100000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "900000.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "1428.58444444",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "TWTTRY",
+      status: "TRADING",
+      baseAsset: "TWT",
+      baseAssetPrecision: 8,
+      quoteAsset: "TRY",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.01000000",
+          maxPrice: "10000.00000000",
+          tickSize: "0.01000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "9222449.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "42800.25773611",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "WAVESEUR",
+      status: "TRADING",
+      baseAsset: "WAVES",
+      baseAssetPrecision: 8,
+      quoteAsset: "EUR",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.01000000",
+          maxPrice: "10000.00000000",
+          tickSize: "0.01000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "90000.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "569.65779166",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APEEUR",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "EUR",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "5052.82461111",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APEGBP",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "GBP",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "3137.71446527",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APETRY",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "TRY",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.10000000",
+          maxPrice: "100000.00000000",
+          tickSize: "0.10000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.00100000",
+          maxQty: "922327.00000000",
+          stepSize: "0.00100000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "7993.73885972",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "BSWUSDT",
+      status: "TRADING",
+      baseAsset: "BSW",
+      baseAssetPrecision: 8,
+      quoteAsset: "USDT",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: true,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "1442439.64587092",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT", "MARGIN"],
+    },
+    {
+      symbol: "BSWBUSD",
+      status: "TRADING",
+      baseAsset: "BSW",
+      baseAssetPrecision: 8,
+      quoteAsset: "BUSD",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: true,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "250057.15256944",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT", "MARGIN"],
+    },
+    {
+      symbol: "BSWBNB",
+      status: "TRADING",
+      baseAsset: "BSW",
+      baseAssetPrecision: 8,
+      quoteAsset: "BNB",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00000010",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00000010",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.05000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "34766.26854166",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APEBNB",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "BNB",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00001000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00001000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.00100000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.00100000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.05000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "4900.78270277",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "GMTBRL",
+      status: "TRADING",
+      baseAsset: "GMT",
+      baseAssetPrecision: 8,
+      quoteAsset: "BRL",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00100000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00100000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "28373.82055555",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "GMTETH",
+      status: "TRADING",
+      baseAsset: "GMT",
+      baseAssetPrecision: 8,
+      quoteAsset: "ETH",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00000010",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00000010",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.00500000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "44109.23590277",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "JASMYTRY",
+      status: "TRADING",
+      baseAsset: "JASMY",
+      baseAssetPrecision: 8,
+      quoteAsset: "TRY",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "1.00000000",
+          maxQty: "92141578.00000000",
+          stepSize: "1.00000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "7543544.01388888",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "SANTOSBUSD",
+      status: "TRADING",
+      baseAsset: "SANTOS",
+      baseAssetPrecision: 8,
+      quoteAsset: "BUSD",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00100000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00100000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "4266.18538194",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "APEAUD",
+      status: "TRADING",
+      baseAsset: "APE",
+      baseAssetPrecision: 8,
+      quoteAsset: "AUD",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00010000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00010000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "2585.09369882",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "BIFIUSDT",
+      status: "TRADING",
+      baseAsset: "BIFI",
+      baseAssetPrecision: 8,
+      quoteAsset: "USDT",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.10000000",
+          maxPrice: "100000.00000000",
+          tickSize: "0.10000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.00100000",
+          maxQty: "90000.00000000",
+          stepSize: "0.00100000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "23.29188263",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "GMTEUR",
+      status: "TRADING",
+      baseAsset: "GMT",
+      baseAssetPrecision: 8,
+      quoteAsset: "EUR",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00001000",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00001000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.10000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.10000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "15401.92609299",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "IMXBNB",
+      status: "TRADING",
+      baseAsset: "IMX",
+      baseAssetPrecision: 8,
+      quoteAsset: "BNB",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00000100",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00000100",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.05000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "15024.90102083",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "RUNEETH",
+      status: "TRADING",
+      baseAsset: "RUNE",
+      baseAssetPrecision: 8,
+      quoteAsset: "ETH",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.00000100",
+          maxPrice: "1000.00000000",
+          tickSize: "0.00000100",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.00100000",
+          maxQty: "92141578.00000000",
+          stepSize: "0.00100000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "0.00500000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "4235.07312013",
+          stepSize: "0.00000000",
+        },
+        {
+          filterType: "MAX_NUM_ORDERS",
+          maxNumOrders: 200,
+        },
+        {
+          filterType: "MAX_NUM_ALGO_ORDERS",
+          maxNumAlgoOrders: 5,
+        },
+      ],
+      permissions: ["SPOT"],
+    },
+    {
+      symbol: "AVAXGBP",
+      status: "TRADING",
+      baseAsset: "AVAX",
+      baseAssetPrecision: 8,
+      quoteAsset: "GBP",
+      quotePrecision: 8,
+      quoteAssetPrecision: 8,
+      baseCommissionPrecision: 8,
+      quoteCommissionPrecision: 8,
+      orderTypes: [
+        "LIMIT",
+        "LIMIT_MAKER",
+        "MARKET",
+        "STOP_LOSS_LIMIT",
+        "TAKE_PROFIT_LIMIT",
+      ],
+      icebergAllowed: true,
+      ocoAllowed: true,
+      quoteOrderQtyMarketAllowed: true,
+      allowTrailingStop: false,
+      isSpotTradingAllowed: true,
+      isMarginTradingAllowed: false,
+      filters: [
+        {
+          filterType: "PRICE_FILTER",
+          minPrice: "0.01000000",
+          maxPrice: "10000.00000000",
+          tickSize: "0.01000000",
+        },
+        {
+          filterType: "PERCENT_PRICE",
+          multiplierUp: "5",
+          multiplierDown: "0.2",
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "LOT_SIZE",
+          minQty: "0.01000000",
+          maxQty: "90000.00000000",
+          stepSize: "0.01000000",
+        },
+        {
+          filterType: "MIN_NOTIONAL",
+          minNotional: "10.00000000",
+          applyToMarket: true,
+          avgPriceMins: 5,
+        },
+        {
+          filterType: "ICEBERG_PARTS",
+          limit: 10,
+        },
+        {
+          filterType: "MARKET_LOT_SIZE",
+          minQty: "0.00000000",
+          maxQty: "268.82040277",
           stepSize: "0.00000000",
         },
         {
