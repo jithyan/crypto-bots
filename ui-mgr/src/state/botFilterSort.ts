@@ -8,7 +8,7 @@ import {
 } from "recoil";
 import { botRegistry, getBotInfo, ImmutableBotMap } from "./botRegistry";
 
-export function useSortedBotList() {
+export function useSortedAndFilteredBots() {
   return useRecoilValue(sortedBotData);
 }
 

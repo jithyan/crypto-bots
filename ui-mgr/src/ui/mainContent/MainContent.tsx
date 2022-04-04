@@ -3,7 +3,7 @@ import { BotEventData, useBotStream } from "../../api";
 import {
   useUpdateBotRegistry,
   useBotFeed,
-  useSortedBotList,
+  useSortedAndFilteredBots,
 } from "../../state";
 import { ControlPanel } from "../controlPanel";
 import { Dashboard } from "../dashboard";
@@ -25,7 +25,7 @@ export function MainContent() {
   });
 
   const loading = useBotStream(updateState.current);
-  const sortedData = useSortedBotList();
+  const sortedData = useSortedAndFilteredBots();
 
   return loading ? (
     <TableLoading />

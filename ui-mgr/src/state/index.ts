@@ -7,7 +7,7 @@ export {
 export { useBotFeed } from "./botUpdateFeed";
 export {
   useBotSortMethod,
-  useSortedBotList,
+  useSortedAndFilteredBots,
   useBotFilter,
-} from "./sortedBotList";
+} from "./botFilterSort";
 export type { ImmutableBotMap as ImmutableBotInfo } from "./botRegistry";
