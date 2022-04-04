@@ -1,6 +1,7 @@
 //@ts-ignore
 import React, { useEffect, useState, startTransition } from "react";
-import { parseISO, formatDistanceStrict, add } from "date-fns";
+import { getSecondsTillNextCheckIn } from "../../utils/date";
+import { Badge } from "./Badges";
 
 export function BotUpdateCountdown({
   sleepStrategy,
@@ -11,46 +12,41 @@ export function BotUpdateCountdown({
   checkInIsoDate: string;
   status: string;
 }) {
-  const checkIn = parseISO(checkInIsoDate);
-  const addConfig =
-    sleepStrategy === "1hr"
-      ? { hours: 1 }
-      : { minutes: parseInt(sleepStrategy) };
-
-  const nextCheckIn = add(checkIn, addConfig);
-  const [nextCheckInFormatted, setNextCheckIn] = useState(
-    formatDistanceStrict(new Date(), nextCheckIn, { unit: "second" })
+  const [secondsLeft, setSecondsLeft] = useState(
+    getSecondsTillNextCheckIn(checkInIsoDate, sleepStrategy)
   );
 
   useEffect(() => {
-    if (nextCheckInFormatted !== "0 seconds") {
+    if (secondsLeft !== 0) {
       const id = setTimeout(
-        () =>
-          startTransition(() =>
-            setNextCheckIn(`${parseInt(nextCheckInFormatted) - 1} seconds`)
-          ),
+        () => startTransition(() => setSecondsLeft(secondsLeft - 1)),
         1000
       );
       return () => clearTimeout(id);
     }
-  }, [nextCheckInFormatted]);
-  const isZero = nextCheckInFormatted === "0 seconds";
+  }, [secondsLeft]);
 
-  const seconds = `${parseInt(nextCheckInFormatted) % 60}s`;
-  const minutes = `${Math.trunc(parseInt(nextCheckInFormatted) / 60)}m`;
+  let color: "info" | "warning" | "danger" = "info";
+  if (secondsLeft === 0) {
+    color = "danger";
+  } else if (secondsLeft < 30) {
+    color = "warning";
+  }
+  const textColor = secondsLeft === 0 ? "light" : "dark";
+
+  const minutesDisplay =
+    Math.trunc(secondsLeft / 60) < 1 ? "" : `${Math.trunc(secondsLeft / 60)}m `;
+  const secondsDisplay = `${secondsLeft % 60}s`;
 
   return status !== "OFFLINE" ? (
-    <span
+    <Badge
+      rounded={true}
       style={{ marginLeft: "4px" }}
-      className={`badge rounded-pill bg-${
-        nextCheckInFormatted === "0 seconds"
-          ? "danger"
-          : minutes === "0m" && parseInt(seconds) < 30
-          ? "warning"
-          : "info"
-      } text-${nextCheckInFormatted === "0 seconds" ? "light" : "dark"}`}
+      color={color}
+      textColor={textColor}
     >
-      {`${minutes === "0m" ? "" : `${minutes} `}${seconds}`}
-    </span>
+      {minutesDisplay}
+      {secondsDisplay}
+    </Badge>
   ) : null;
 }
