@@ -1,6 +1,6 @@
 import Big from "big.js";
 import type { IBotStateDetails, TBotStatus } from "common-util";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { formatAsUsd, formatIsoDate, formatPct } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import {
@@ -9,7 +9,7 @@ import {
   LastPurchasePriceBadge,
   PctChangeBadge,
 } from "./Badges";
-import { PriceTrendIcon } from "./Icons";
+import { contractIcon, expandIcon, PriceTrendIcon } from "./Icons";
 import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
 
 export type IBotStateProps = IBotStateDetails & {
@@ -20,15 +20,15 @@ export type IBotStateProps = IBotStateDetails & {
 
 export const BotState = React.memo((props: IBotStateProps) => {
   const [showCompact, setShowCompact] = useState(true);
+  const onToggleViewClicked = useCallback(
+    () => setShowCompact((prev) => !prev),
+    []
+  );
 
-  return (
-    <span onClick={() => setShowCompact((prev) => !prev)}>
-      {showCompact ? (
-        <CompactStateView {...props} />
-      ) : (
-        <ExpandedView {...props} />
-      )}
-    </span>
+  return showCompact ? (
+    <CompactStateView {...props} onToggleViewClicked={onToggleViewClicked} />
+  ) : (
+    <ExpandedView {...props} onToggleViewClicked={onToggleViewClicked} />
   );
 });
 
@@ -39,8 +39,10 @@ function CompactStateView({
   lastPurchasePrice = "",
   symbol,
   iteration,
+  onToggleViewClicked,
 }: {
   symbol: string;
+  onToggleViewClicked: () => void;
 } & IBotStateDetails) {
   const holdsVolatileAsset = state.includes("Volatile");
   const formattedTickerPrice = useAnimateNumber(tickerPrice, 3);
@@ -59,7 +61,15 @@ function CompactStateView({
 
   return (
     <>
-      {" "}
+      <Badge
+        color="dark"
+        textColor="light"
+        border={true}
+        onClick={onToggleViewClicked}
+        style={{ marginRight: "8px", padding: "2px" }}
+      >
+        {expandIcon}
+      </Badge>{" "}
       <AssetStateBadge assetState={state} />{" "}
       <PriceTrendIcon trendState={priceTrendState} />{" "}
       <strong>{formatAsUsd(formattedTickerPrice, 3)}</strong>{" "}
@@ -91,7 +101,10 @@ export const ExpandedView = React.memo(
     lastCheckIn,
     status,
     iteration,
-  }: IBotStateProps): JSX.Element => {
+    onToggleViewClicked,
+  }: IBotStateProps & {
+    onToggleViewClicked: () => void;
+  }): JSX.Element => {
     const isNotPriceBot = state !== "PriceBot";
     const cardNormalStyle =
       status === "ONLINE"
@@ -115,6 +128,15 @@ export const ExpandedView = React.memo(
       return (
         <div className={cardStyle} style={{ width: "24rem" }}>
           <div className="card-header">
+            <Badge
+              color="light"
+              textColor="dark"
+              border={true}
+              onClick={onToggleViewClicked}
+              style={{ marginRight: "8px", padding: "2px" }}
+            >
+              {contractIcon}
+            </Badge>
             <strong>{state}</strong> <AssetStateBadge assetState={state} />
           </div>
           {isNotPriceBot ? (

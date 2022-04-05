@@ -9,23 +9,34 @@ export function Badge({
   color,
   rounded = false,
   textColor,
+  border = false,
   style,
+  onClick,
 }: PropsWithChildren<{
   color: ThemeColor;
   textColor?: ThemeColor;
   rounded?: boolean;
   style?: React.CSSProperties;
+  border?: boolean;
+  onClick?: () => void;
 }>) {
   const bgColorClass = `bg-${color}`;
   const txtColorClass = textColor ? `text-${textColor}` : "";
   const roundedPillClass = rounded ? "rounded-pill" : "";
+  const borderClass = border ? "border" : "";
 
-  const className = ["badge", bgColorClass, txtColorClass, roundedPillClass]
+  const className = [
+    "badge",
+    bgColorClass,
+    txtColorClass,
+    roundedPillClass,
+    borderClass,
+  ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <span style={style} className={className}>
+    <span onClick={onClick} style={style} className={className}>
       {children}
     </span>
   );

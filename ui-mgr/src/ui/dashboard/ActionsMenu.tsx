@@ -2,7 +2,7 @@ import type { TBotActions, TBotAvailableActions } from "common-util";
 import React from "react";
 import { sendCommandToBot } from "../../api";
 import { usePasswordContext } from "../password";
-import { ThreeDotsVertical } from "./Icons";
+import { threeDotsVertical } from "./Icons";
 
 export const ActionsMenu = ({
   id,
@@ -20,7 +20,7 @@ export const ActionsMenu = ({
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <ThreeDotsVertical />
+        {threeDotsVertical}
       </button>
       <ul className="dropdown-menu" aria-labelledby={`${id}-bot-actions`}>
         {Object.keys(actions).map((action) => (
