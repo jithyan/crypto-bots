@@ -1,9 +1,19 @@
+import Big from "big.js";
+
 export function formatIsoDate(date: string): string {
   return new Date(date)
     .toLocaleString("en-AU", {
       timeZone: "Australia/Sydney",
     })
     .split(", ")[1];
+}
+
+export function formatPct(value: string, decimals: number): string {
+  return `${new Big(value)
+    .mul("100")
+    .minus("100")
+    .round(decimals)
+    .toString()}%`;
 }
 
 export function formatAsUsd(

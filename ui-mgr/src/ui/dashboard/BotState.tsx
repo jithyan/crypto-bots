@@ -1,8 +1,7 @@
 import Big from "big.js";
 import type { IBotStateDetails, TBotStatus } from "common-util";
 import React, { useState } from "react";
-import { getBotInfo } from "../../state";
-import { formatAsUsd, formatIsoDate } from "../../utils/format";
+import { formatAsUsd, formatIsoDate, formatPct } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import {
   Badge,
@@ -91,6 +90,7 @@ export const ExpandedView = React.memo(
     tickerPrice,
     lastCheckIn,
     status,
+    iteration,
   }: IBotStateProps): JSX.Element => {
     const isNotPriceBot = state !== "PriceBot";
     const cardNormalStyle =
@@ -129,34 +129,42 @@ export const ExpandedView = React.memo(
                     <strong>Last ticker price:</strong> $
                     {new Big(tickerPrice).round(3).toString()}
                   </li>
-                  {state !== "HoldStableAsset" && (
-                    <li className="list-group-item">
-                      <strong>Last purchase price:</strong>
-                      <LastPurchasePriceBadge
-                        lastPurchasePrice={lastPurchasePrice}
-                        tickerPrice={tickerPrice}
-                      />
-                    </li>
-                  )}
-                  <li className="list-group-item">
-                    <strong>Last check in:</strong>{" "}
-                    <mark>{formatIsoDate(lastCheckIn)}</mark>
-                  </li>
+                  {state !== "HoldStableAsset" && state !== "PostSellStasis" ? (
+                    <>
+                      <li className="list-group-item">
+                        <strong>Last purchase price:</strong>
+                        <LastPurchasePriceBadge
+                          lastPurchasePrice={lastPurchasePrice}
+                          tickerPrice={tickerPrice}
+                        />
+                      </li>
+                      <li className="list-group-item">
+                        <strong>Percent change since last purchase:</strong>
+
+                        <PctChangeBadge
+                          lastPurchasePrice={lastPurchasePrice}
+                          tickerPrice={tickerPrice}
+                        />
+                      </li>
+                    </>
+                  ) : null}
+                  {state === "PostSellStasis" ? (
+                    <Badge color="dark" textColor="light">
+                      Sleeping after selling. {4 - iteration!} hours left
+                    </Badge>
+                  ) : null}
                 </ul>
               </div>
               <div className="card-footer">
                 <p>
-                  Using <mark>{sleepStrategy}</mark> sleep strategy
+                  Sleeping every <mark>{sleepStrategy}</mark>
                   <br />
                   <small>
-                    Inc: {parseFloat(priceHasIncreased).toFixed(4)} | Dec:{" "}
-                    {parseFloat(priceHasDecreased).toFixed(4)} | Stop loss:{" "}
-                    {(parseFloat(stopLoss) * 100).toFixed(0)}% | Min inc:{" "}
-                    {(
-                      parseFloat(minPercentIncreaseForSell) * 100 -
-                      100
-                    ).toFixed(1)}
-                    % | Max buy: ${maxBuyAmount}
+                    Inc: {formatPct(priceHasIncreased, 4)} | Dec:{" "}
+                    {formatPct(priceHasDecreased, 4)} | Stop loss:{" "}
+                    {Math.trunc(Number(stopLoss) * 100)}% | Min inc:{" "}
+                    {formatPct(minPercentIncreaseForSell, 4)} | Max buy: $
+                    {maxBuyAmount}
                   </small>
                 </p>
               </div>
