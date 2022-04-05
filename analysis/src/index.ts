@@ -41,7 +41,7 @@ if (action.do === "Analyze price bot") {
           !ignoreSymbols.some((pref) => fn.split("/").pop()?.startsWith(pref))
       )
       .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
-    const numProcesses = 120;
+    const numProcesses = 112;
     const simulArgs = volatileSymbols.map((vol) => [numProcesses, vol]);
     console.log(simulArgs);
     console.time("simul");

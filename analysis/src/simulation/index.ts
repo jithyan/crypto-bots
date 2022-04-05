@@ -23,7 +23,7 @@ export async function startSimulations(
   );
   const finalResults = allResults.flatMap((x) => x);
   finalResults.sort((a, b) => Number(b.profit) - Number(a.profit));
-
+  console.log("Completed symbol: ", volatileAsset);
   fs.writeFileSync(
     `./data/${volatileAsset}_results.json`,
     JSON.stringify(finalResults, undefined, 2),
