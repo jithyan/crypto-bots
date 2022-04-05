@@ -17,6 +17,9 @@ const ignoreSymbols = [
   // These two symbols are temporarily disabled
   "any",
   "multi",
+  "aca",
+  "1inch",
+  "aave",
   "zec",
   "xmr",
   "dash",
@@ -41,7 +44,7 @@ if (action.do === "Analyze price bot") {
           !ignoreSymbols.some((pref) => fn.split("/").pop()?.startsWith(pref))
       )
       .map((fn) => fn.split("/").pop()?.replace("busd.json", "").trim());
-    const numProcesses = 112;
+    const numProcesses = 96;
     const simulArgs = volatileSymbols.map((vol) => [numProcesses, vol]);
     console.log(simulArgs);
     console.time("simul");
