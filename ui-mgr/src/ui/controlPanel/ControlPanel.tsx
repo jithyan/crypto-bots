@@ -51,6 +51,8 @@ export function ControlPanel() {
     numBotsHoldingVolatileAssets,
     numBotsPlacedOrders,
     numBotsSleeping,
+    capitalFree,
+    capitalDeployed,
   } = useBotStats();
 
   const setFilter = useBotFilter();
@@ -287,6 +289,12 @@ export function ControlPanel() {
                     </BadgeListItem>
                     <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
                       {numBotsPlacedOrders} bots have placed orders
+                    </BadgeListItem>
+                    <BadgeListItem show={true} bg={"light"}>
+                      ${capitalFree} capital available
+                    </BadgeListItem>
+                    <BadgeListItem show={true} bg={"light"}>
+                      ${capitalDeployed} capital deployed
                     </BadgeListItem>
                   </ul>
                 </div>

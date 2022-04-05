@@ -23,7 +23,7 @@ if (Config.RUN_BOT_ON_STARTUP) {
     enableResume: Config.ENABLE_RESUME,
     sleepStrategy: Config.SLEEP_STRATEGY,
     decisionConfig: {
-      MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.0132").toFixed(3),
+      MIN_PERCENT_INCREASE_FOR_SELL: new Big("1.0105").toFixed(5),
       PRICE_HAS_INCREASED_THRESHOLD: new Big(
         Config.PRICE_HAS_INCREASED_THRESHOLD
       ).toFixed(5),

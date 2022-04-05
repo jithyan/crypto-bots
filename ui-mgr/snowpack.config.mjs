@@ -4,6 +4,7 @@ export default {
     public: { url: "/", static: true },
     src: { url: "/dist" },
   },
+  knownEntrypoints: ["react-dom"],
   plugins: [
     "@snowpack/plugin-react-refresh",
     "@snowpack/plugin-dotenv",

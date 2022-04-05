@@ -60,6 +60,8 @@ export const atomBotStats = selector<{
   numBotsPlacedOrders: number;
   numBotsHoldingVolatileAssets: number;
   numBotsSleeping: number;
+  capitalDeployed: number;
+  capitalFree: number;
 }>({
   key: "botStats",
   get: ({ get }) => {
@@ -123,6 +125,45 @@ export const atomBotStats = selector<{
       }
     }, 0);
 
+    const capitalDeployed = bots.reduce((prev, curr) => {
+      const symbol = getBotInfo(curr, "symbol").toUpperCase();
+      const state = getBotInfo(curr, "state")?.state ?? "";
+      const status = getBotInfo(curr, "status");
+      // TODO fix this - upgrade BATBUSD
+      const maxBuyAmount = parseInt(
+        getBotInfo(curr, "state").config?.maxBuyAmount ?? "0"
+      );
+
+      if (
+        state.includes("Volatile") &&
+        status === "ONLINE" &&
+        symbol !== "PRICEBOT"
+      ) {
+        return prev + maxBuyAmount;
+      } else {
+        return prev;
+      }
+    }, 0);
+
+    const capitalFree = bots.reduce((prev, curr) => {
+      const symbol = getBotInfo(curr, "symbol").toUpperCase();
+      const state = getBotInfo(curr, "state")?.state ?? "";
+      const status = getBotInfo(curr, "status");
+      const maxBuyAmount = parseInt(
+        getBotInfo(curr, "state").config?.maxBuyAmount ?? "0"
+      );
+
+      if (
+        state.includes("HoldStable") &&
+        status === "ONLINE" &&
+        symbol !== "PRICEBOT"
+      ) {
+        return prev + maxBuyAmount;
+      } else {
+        return prev;
+      }
+    }, 0);
+
     return {
       totalProfit,
       totalBots,
@@ -133,6 +174,8 @@ export const atomBotStats = selector<{
       numBotsPlacedOrders,
       numBotsHoldingVolatileAssets,
       numBotsSleeping,
+      capitalDeployed,
+      capitalFree,
     };
   },
 });

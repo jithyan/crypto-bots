@@ -22,7 +22,6 @@ export const BotRow = React.memo(
     const symbol = getBotInfo(bot, "symbol");
     const lastState = getBotInfo(bot, "state");
     const version = getBotInfo(bot, "version");
-    const profit = useAnimateNumber(lastState.profit ?? "0", 3);
     const actions = getBotInfo(bot, "actions");
 
     const sleepStrategy = lastState.state?.includes("Stasis")
@@ -45,7 +44,9 @@ export const BotRow = React.memo(
       statusBgColor = "#dc3545";
     }
 
-    const profitBgColor = profit.startsWith("-") ? "bg-danger" : "bg-success";
+    const profitBgColor = lastState.profit?.startsWith("-")
+      ? "bg-danger"
+      : "bg-success";
 
     const [borderColor, setBorderColor] = useState("dark");
 
@@ -87,7 +88,7 @@ export const BotRow = React.memo(
           </BotColItem>
 
           <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
-            {formatAsUsd(profit, 3)}
+            <Profit value={lastState.profit} />
           </BotColItem>
 
           <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
@@ -120,6 +121,11 @@ export const BotRow = React.memo(
     );
   }
 );
+
+const Profit = React.memo(({ value }: { value: string }) => {
+  const profit = useAnimateNumber(value ?? "0", 3);
+  return <>{formatAsUsd(profit, 3)}</>;
+});
 
 export function BotColItem({
   bgColor,
