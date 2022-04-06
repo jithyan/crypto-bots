@@ -288,12 +288,6 @@ export function ControlPanel() {
                     <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
                       {numBotsPlacedOrders} bots have placed orders
                     </BadgeListItem>
-                    <BadgeListItem show={true} bg={"light"}>
-                      ${capitalFree} capital available
-                    </BadgeListItem>
-                    <BadgeListItem show={true} bg={"light"}>
-                      ${capitalDeployed} capital deployed
-                    </BadgeListItem>
                   </ul>
                 </div>
               </div>
