@@ -1,6 +1,5 @@
-import Big from "big.js";
 import type { IBotStateDetails, TBotStatus } from "common-util";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { formatAsUsd, formatPct } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import {
@@ -11,6 +10,21 @@ import {
 } from "./Badges";
 import { collapseIcon, expandIcon, PriceTrendIcon } from "./Icons";
 import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";
+import { ErrorBoundary } from "react-error-boundary";
+
+function StateErrorBoundary({ children }: React.PropsWithChildren<{}>) {
+  return (
+    <ErrorBoundary
+      fallback={
+        <div className="bg-danger text-light">
+          Something went wrong displaying state data
+        </div>
+      }
+    >
+      {children}
+    </ErrorBoundary>
+  );
+}
 
 export type IBotStateProps = IBotStateDetails & {
   symbol: string;
@@ -84,7 +98,7 @@ function CompactStateView({
     return null;
   } else if (state.includes("Stasis")) {
     return (
-      <>
+      <StateErrorBoundary>
         <ToggleStateButton
           onToggleViewClicked={onToggleViewClicked}
           state="expand"
@@ -92,12 +106,12 @@ function CompactStateView({
         <Badge color="dark" textColor="light">
           Zzz.. {4 - iteration!}h left
         </Badge>
-      </>
+      </StateErrorBoundary>
     );
   }
 
   return (
-    <>
+    <StateErrorBoundary>
       <ToggleStateButton
         onToggleViewClicked={onToggleViewClicked}
         state="expand"
@@ -117,7 +131,7 @@ function CompactStateView({
           />
         </>
       ) : null}
-    </>
+    </StateErrorBoundary>
   );
 }
 
@@ -135,94 +149,185 @@ export const ExpandedView = React.memo(
   }: IBotStateProps & {
     onToggleViewClicked: () => void;
   }): JSX.Element => {
-    const isNotPriceBot = state !== "PriceBot";
-    const cardNormalStyle =
-      status === "ONLINE"
-        ? "card bg-light text-dark mb-3"
-        : "card text-white bg-secondary mb-3";
+    const isInPostSellStasis = state === "PostSellStasis";
+    const isHoldingVolatileAsset =
+      state !== "HoldStableAsset" && state !== "PostSellStasis";
 
-    const isUpdating = useIsUpdatingOnChange(lastCheckIn);
-    const cardStyle = isUpdating
-      ? "card text-white bg-warning mb-3"
-      : cardNormalStyle;
+    return (
+      <StateErrorBoundary>
+        <ExpandedViewCard
+          onToggleViewClicked={onToggleViewClicked}
+          state={state}
+          lastCheckIn={lastCheckIn}
+          status={status}
+          config={config}
+        >
+          <CardBodyItem heading={priceTrendState} headingStyle="italic">
+            <PriceTrendIcon trendState={priceTrendState} />
+          </CardBodyItem>
 
-    const {
-      priceHasDecreased,
-      priceHasIncreased,
-      sleepStrategy,
-      stopLoss,
-      minPercentIncreaseForSell,
-      maxBuyAmount,
-    } = config;
+          <CardBodyItem heading="Last ticker price:" headingStyle="bold">
+            {formatAsUsd(tickerPrice, 3)}
+          </CardBodyItem>
 
-    if (typeof state === "string") {
-      return (
-        <div className={cardStyle} style={{ width: "24rem" }}>
-          <div className="card-header">
-            <ToggleStateButton
-              onToggleViewClicked={onToggleViewClicked}
-              state="collapse"
+          <CardBodyItem
+            show={isHoldingVolatileAsset}
+            heading="Last purchase price:"
+            headingStyle="bold"
+          >
+            <LastPurchasePriceBadge
+              lastPurchasePrice={lastPurchasePrice}
+              tickerPrice={tickerPrice}
             />
-            <strong>{state}</strong> <AssetStateBadge assetState={state} />
-          </div>
-          {isNotPriceBot ? (
-            <>
-              <div className="card-body">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">
-                    <em>{priceTrendState}</em>{" "}
-                    <PriceTrendIcon trendState={priceTrendState} />
-                  </li>
-                  <li className="list-group-item">
-                    <strong>Last ticker price:</strong> $
-                    {new Big(tickerPrice).round(3).toString()}
-                  </li>
-                  {state !== "HoldStableAsset" && state !== "PostSellStasis" ? (
-                    <>
-                      <li className="list-group-item">
-                        <strong>Last purchase price:</strong>
-                        <LastPurchasePriceBadge
-                          lastPurchasePrice={lastPurchasePrice}
-                          tickerPrice={tickerPrice}
-                        />
-                      </li>
-                      <li className="list-group-item">
-                        <strong>Percent change since last purchase:</strong>
-
-                        <PctChangeBadge
-                          lastPurchasePrice={lastPurchasePrice}
-                          tickerPrice={tickerPrice}
-                        />
-                      </li>
-                    </>
-                  ) : null}
-                  {state === "PostSellStasis" ? (
-                    <Badge color="dark" textColor="light">
-                      Sleeping after selling. {4 - iteration!} hours left
-                    </Badge>
-                  ) : null}
-                </ul>
-              </div>
-              <div className="card-footer">
-                <p>
-                  Sleeping every <mark>{sleepStrategy}</mark>
-                  <br />
-                  <small>
-                    Inc: {formatPct(priceHasIncreased, 4)} | Dec:{" "}
-                    {formatPct(priceHasDecreased, 4)} | Stop loss:{" "}
-                    {Math.trunc(Number(stopLoss) * 100)}% | Min inc:{" "}
-                    {formatPct(minPercentIncreaseForSell, 4)} | Max buy: $
-                    {maxBuyAmount}
-                  </small>
-                </p>
-              </div>
-            </>
-          ) : null}
-        </div>
-      );
-    } else {
-      console.error("Invalid state", state);
-      return <span>Unknown</span>;
-    }
+          </CardBodyItem>
+          <CardBodyItem
+            show={isHoldingVolatileAsset}
+            heading="Percent change since last purchase:"
+            headingStyle="bold"
+          >
+            <PctChangeBadge
+              lastPurchasePrice={lastPurchasePrice}
+              tickerPrice={tickerPrice}
+            />
+          </CardBodyItem>
+          <CardBodyItem show={isInPostSellStasis}>
+            <Badge color="dark" textColor="light">
+              Sleeping after selling. {4 - iteration!} hours left
+            </Badge>
+          </CardBodyItem>
+        </ExpandedViewCard>
+      </StateErrorBoundary>
+    );
   }
 );
+
+function ExpandedViewCard({
+  onToggleViewClicked,
+  state,
+  lastCheckIn,
+  status,
+  children,
+  config,
+}: React.PropsWithChildren<
+  Omit<
+    IBotStateProps,
+    "symbol" | "iteration" | "profit" | "priceTrendState" | "tickerPrice"
+  > & {
+    onToggleViewClicked: () => void;
+  }
+>) {
+  if (typeof state !== "string") {
+    console.error("Invalid state", state);
+    throw new Error("Invalid state in ExpandedViewCard");
+  }
+
+  return (
+    <ExpandedCardContainer lastCheckIn={lastCheckIn} status={status}>
+      <div className="card-header">
+        <ToggleStateButton
+          onToggleViewClicked={onToggleViewClicked}
+          state="collapse"
+        />
+        <strong>{state}</strong> <AssetStateBadge assetState={state} />
+      </div>
+      {state === "PriceBot" ? null : (
+        <div className="card-body">
+          <ul className="list-group list-group-flush">{children}</ul>
+        </div>
+      )}
+      <CardFooter {...config} />
+    </ExpandedCardContainer>
+  );
+}
+
+export function CardBodyItem({
+  children,
+  show = true,
+  heading,
+  headingStyle = "bold",
+}: React.PropsWithChildren<{
+  show?: boolean;
+  heading?: string;
+  headingStyle?: "bold" | "italic";
+}>) {
+  let head = null;
+
+  if (heading) {
+    if (headingStyle === "italic") {
+      head = <em style={{ marginRight: "4px" }}>{heading}</em>;
+    } else {
+      head = <strong style={{ marginRight: "4px" }}>{heading}</strong>;
+    }
+  }
+
+  return show ? (
+    <li className="list-group-item">
+      {head}
+      {children}
+    </li>
+  ) : null;
+}
+
+const CardFooter = React.memo((props: IBotStateDetails["config"]) => {
+  const {
+    priceHasDecreased,
+    priceHasIncreased,
+    sleepStrategy,
+    stopLoss,
+    minPercentIncreaseForSell,
+    maxBuyAmount,
+  } = props;
+
+  const items: Record<"desc" | "val", string | JSX.Element>[] = [
+    { desc: "Sleep interval", val: <mark>{sleepStrategy}</mark> },
+    { desc: "Is an increase", val: formatPct(priceHasIncreased, 4) },
+    { desc: "Is a decrease", val: formatPct(priceHasDecreased, 4) },
+    {
+      desc: "Minimum price increase",
+      val: formatPct(minPercentIncreaseForSell, 4),
+    },
+    { desc: "Stop loss", val: `${Math.trunc(Number(stopLoss) * 100)}%` },
+    { desc: "Max buy amount", val: `$${maxBuyAmount}` },
+  ];
+
+  return (
+    <div className="card-footer">
+      <table className="table table-sm">
+        <tbody>
+          {items.map(({ val, desc }) => (
+            <tr>
+              <th scope="row">
+                <small>{desc}</small>
+              </th>
+              <td>
+                <small>{val}</small>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+});
+
+function ExpandedCardContainer({
+  children,
+  status,
+  lastCheckIn,
+}: React.PropsWithChildren<{ lastCheckIn: string; status: string }>) {
+  const cardNormalStyle =
+    status === "ONLINE"
+      ? "card bg-light text-dark mb-3"
+      : "card text-white bg-secondary mb-3";
+
+  const isUpdating = useIsUpdatingOnChange(lastCheckIn);
+  const cardStyle = isUpdating
+    ? "card text-white bg-warning mb-3"
+    : cardNormalStyle;
+
+  return (
+    <div className={cardStyle} style={{ width: "24rem" }}>
+      {children}
+    </div>
+  );
+}
