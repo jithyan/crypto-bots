@@ -46,86 +46,94 @@ export const BotRow = React.memo(
       ? "bg-danger"
       : "bg-success";
 
-    const [borderColor, setBorderColor] = useState("dark");
-
     return (
-      <div
-        onMouseEnter={() => startTransition(() => setBorderColor("light"))}
-        onMouseLeave={() => startTransition(() => setBorderColor("dark"))}
-        className="row"
-        style={{ padding: "4px" }}
-      >
-        <ul
-          className={`list-group border border-${borderColor} list-group-horizontal`}
+      <Row>
+        <Col minWidth="128px" width="168px" classNames={bgStyle}>
+          <small>
+            <Badge
+              style={{ marginRight: "4px" }}
+              rounded={true}
+              color="dark"
+              textColor="light"
+            >
+              <strong>{index}</strong>
+            </Badge>
+          </small>
+          <span style={{ paddingTop: "8px" }}>{symbol}</span>
+        </Col>
+
+        <Col
+          bgColor={statusBgColor}
+          minWidth="104px"
+          width="144px"
+          classNames={"text-light"}
         >
-          <BotColItem minWidth="128px" width="168px" classNames={bgStyle}>
-            <small>
-              <Badge
-                style={{ marginRight: "4px" }}
-                rounded={true}
-                color="dark"
-                textColor="light"
-              >
-                <strong>{index}</strong>
-              </Badge>
-            </small>
-            <span style={{ paddingTop: "8px" }}>{symbol}</span>
-          </BotColItem>
+          {status}
+        </Col>
 
-          <BotColItem
-            bgColor={statusBgColor}
-            minWidth="104px"
-            width="144px"
-            classNames={"text-light"}
-          >
-            {status}
-          </BotColItem>
+        <Col minWidth="92px" width="104px" classNames={bgStyle}>
+          {version}
+        </Col>
 
-          <BotColItem minWidth="92px" width="104px" classNames={bgStyle}>
-            {version}
-          </BotColItem>
+        <Col width="86px" classNames={`${profitBgColor} text-light`}>
+          <Profit value={lastState.profit} />
+        </Col>
 
-          <BotColItem width="86px" classNames={`${profitBgColor} text-light`}>
-            <Profit value={lastState.profit} />
-          </BotColItem>
+        <Col minWidth="128px" width="152px" classNames={bgStyle}>
+          <CheckInAndSleepStrategy
+            sleepStrategy={sleepStrategy}
+            checkIn={checkIn}
+          />
+          <BotUpdateCountdown
+            status={status}
+            key={`${id}-${getBotInfo(bot, "lastCheckIn")}-${sleepStrategy}`}
+            sleepStrategy={sleepStrategy as any}
+            checkInIsoDate={getBotInfo(bot, "lastCheckIn")}
+          />
+        </Col>
 
-          <BotColItem minWidth="128px" width="152px" classNames={bgStyle}>
-            <CheckInAndSleepStrategy
-              sleepStrategy={sleepStrategy}
-              checkIn={checkIn}
-            />
-            <BotUpdateCountdown
-              status={status}
-              key={`${id}-${getBotInfo(bot, "lastCheckIn")}-${sleepStrategy}`}
-              sleepStrategy={sleepStrategy as any}
-              checkInIsoDate={getBotInfo(bot, "lastCheckIn")}
-            />
-          </BotColItem>
+        <Col minWidth="76px" width="76px" classNames={bgStyle}>
+          <ActionsMenu id={id} actions={actions} />
+        </Col>
 
-          <BotColItem minWidth="76px" width="76px" classNames={bgStyle}>
-            <ActionsMenu id={id} actions={actions} />
-          </BotColItem>
-
-          <BotColItem minWidth="128px" classNames={bgStyle}>
-            <BotState
-              lastCheckIn={getBotInfo(bot, "lastCheckIn")}
-              status={status}
-              symbol={symbol}
-              {...lastState}
-            />
-          </BotColItem>
-        </ul>
-      </div>
+        <Col minWidth="128px" classNames={bgStyle}>
+          <BotState
+            lastCheckIn={getBotInfo(bot, "lastCheckIn")}
+            status={status}
+            symbol={symbol}
+            {...lastState}
+          />
+        </Col>
+      </Row>
     );
   }
 );
 
-const Profit = React.memo(({ value }: { value: string }) => {
+function Row({ children }: React.PropsWithChildren<{}>) {
+  const [borderColor, setBorderColor] = useState("dark");
+
+  return (
+    <div
+      onMouseEnter={() => startTransition(() => setBorderColor("light"))}
+      onMouseLeave={() => startTransition(() => setBorderColor("dark"))}
+      className="row"
+      style={{ padding: "4px" }}
+    >
+      <ul
+        className={`list-group border border-${borderColor} list-group-horizontal`}
+      >
+        {children}
+      </ul>
+    </div>
+  );
+}
+
+const Profit = ({ value }: { value: string }) => {
   const profit = useAnimateNumber(value ?? "0", 3);
   return <>{formatAsUsd(profit, 3)}</>;
-});
+};
 
-export function BotColItem({
+export function Col({
   bgColor,
   width,
   children,
@@ -150,19 +158,16 @@ export function BotColItem({
   );
 }
 
-export const CheckInAndSleepStrategy = React.memo(
-  ({ sleepStrategy, checkIn }: Record<"sleepStrategy" | "checkIn", string>) => {
-    return (
-      <small>
-        {checkIn}{" "}
-        <Badge
-          style={{ padding: "1px 2px" }}
-          color="secondary"
-          textColor="light"
-        >
-          {sleepStrategy}
-        </Badge>
-      </small>
-    );
-  }
-);
+export const CheckInAndSleepStrategy = ({
+  sleepStrategy,
+  checkIn,
+}: Record<"sleepStrategy" | "checkIn", string>) => {
+  return (
+    <small>
+      {checkIn}{" "}
+      <Badge style={{ padding: "1px 2px" }} color="secondary" textColor="light">
+        {sleepStrategy}
+      </Badge>
+    </small>
+  );
+};

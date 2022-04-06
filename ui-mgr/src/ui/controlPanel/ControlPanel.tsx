@@ -7,37 +7,35 @@ import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { formatAsUsd } from "../../utils/format";
 
-const BadgeListItem = React.memo(
-  ({
-    show = true,
-    children,
-    bg,
-  }: PropsWithChildren<{
-    bg:
-      | "light"
-      | "dark"
-      | "info"
-      | "warning"
-      | "danger"
-      | "success"
-      | "secondary"
-      | "primary";
-    show?: boolean;
-  }>) => {
-    return show ? (
-      <li>
-        <h5>
-          <span
-            className={`badge bg-${bg}${bg === "light" ? "text-dark" : ""}`}
-            style={{ marginLeft: "16px" }}
-          >
-            {children}
-          </span>
-        </h5>
-      </li>
-    ) : null;
-  }
-);
+const BadgeListItem = ({
+  show = true,
+  children,
+  bg,
+}: PropsWithChildren<{
+  bg:
+    | "light"
+    | "dark"
+    | "info"
+    | "warning"
+    | "danger"
+    | "success"
+    | "secondary"
+    | "primary";
+  show?: boolean;
+}>) => {
+  return show ? (
+    <li>
+      <h5>
+        <span
+          className={`badge bg-${bg}${bg === "light" ? "text-dark" : ""}`}
+          style={{ marginLeft: "16px" }}
+        >
+          {children}
+        </span>
+      </h5>
+    </li>
+  ) : null;
+};
 
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();

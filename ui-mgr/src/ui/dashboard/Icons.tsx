@@ -60,17 +60,15 @@ const upwardsPriceTrendIcon = (
   </span>
 );
 
-export const PriceTrendIcon = React.memo(
-  ({ trendState }: { trendState: string }) => {
-    if (trendState.includes("Confirm")) {
-      return upwardsPriceTrendConfirmedIcon;
-    } else if (trendState.startsWith("Up")) {
-      return upwardsPriceTrendIcon;
-    } else {
-      return downwardsPriceIcon;
-    }
+export const PriceTrendIcon = ({ trendState }: { trendState: string }) => {
+  if (trendState.includes("Confirm")) {
+    return upwardsPriceTrendConfirmedIcon;
+  } else if (trendState.startsWith("Up")) {
+    return upwardsPriceTrendIcon;
+  } else {
+    return downwardsPriceIcon;
   }
-);
+};
 
 export const expandIcon = (
   <svg

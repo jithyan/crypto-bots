@@ -58,17 +58,15 @@ const holdVolatileAssetIcon = (
   </Badge>
 );
 
-export const AssetStateBadge = React.memo(
-  ({ assetState }: { assetState: string }) => {
-    if (assetState.includes("HoldStable")) {
-      return holdStableAssetIcon;
-    } else if (assetState.includes("Order")) {
-      return orderPlacedIcon;
-    } else {
-      return holdVolatileAssetIcon;
-    }
+export const AssetStateBadge = ({ assetState }: { assetState: string }) => {
+  if (assetState.includes("HoldStable")) {
+    return holdStableAssetIcon;
+  } else if (assetState.includes("Order")) {
+    return orderPlacedIcon;
+  } else {
+    return holdVolatileAssetIcon;
   }
-);
+};
 
 function getBgColorFromPriceDifference({
   lastPurchasePrice,
@@ -86,70 +84,66 @@ function getBgColorFromPriceDifference({
   }
 }
 
-export const PctChangeBadge = React.memo(
-  ({
-    lastPurchasePrice,
-    tickerPrice,
-  }: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
-    if (!tickerPrice || !lastPurchasePrice) {
-      console.error("PctChangeBadge called with no required args", {
-        lastPurchasePrice,
-        tickerPrice,
-      });
-      return null;
-    }
-
-    const lastTickerPriceAsBig = new Big(tickerPrice);
-    const lastPurchasePriceAsBig = new Big(lastPurchasePrice);
-    const purchasePriceBgColor = getBgColorFromPriceDifference({
-      lastPurchasePrice: lastPurchasePriceAsBig,
-      tickerPrice: lastTickerPriceAsBig,
+export const PctChangeBadge = ({
+  lastPurchasePrice,
+  tickerPrice,
+}: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
+  if (!tickerPrice || !lastPurchasePrice) {
+    console.error("PctChangeBadge called with no required args", {
+      lastPurchasePrice,
+      tickerPrice,
     });
-
-    const pctChange = useAnimateNumber(
-      new Big("1")
-        .minus(lastTickerPriceAsBig.div(lastPurchasePriceAsBig))
-        .mul("-100")
-        .toString(),
-      2
-    );
-
-    return (
-      <Badge
-        style={{ margin: "1px" }}
-        rounded={true}
-        color="light"
-        textColor={purchasePriceBgColor}
-      >
-        {pctChange}%
-      </Badge>
-    );
+    return null;
   }
-);
 
-export const LastPurchasePriceBadge = React.memo(
-  ({
-    lastPurchasePrice,
-    tickerPrice,
-  }: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
-    if (!tickerPrice || !lastPurchasePrice) {
-      console.error("LastPurchasePriceBadge called with no required args", {
-        lastPurchasePrice,
-        tickerPrice,
-      });
-      return null;
-    }
+  const lastTickerPriceAsBig = new Big(tickerPrice);
+  const lastPurchasePriceAsBig = new Big(lastPurchasePrice);
+  const purchasePriceBgColor = getBgColorFromPriceDifference({
+    lastPurchasePrice: lastPurchasePriceAsBig,
+    tickerPrice: lastTickerPriceAsBig,
+  });
 
-    const lastPurchasePriceAsBig = new Big(lastPurchasePrice);
-    const purchasePriceBgColor = getBgColorFromPriceDifference({
-      lastPurchasePrice: lastPurchasePriceAsBig,
-      tickerPrice: new Big(tickerPrice),
+  const pctChange = useAnimateNumber(
+    new Big("1")
+      .minus(lastTickerPriceAsBig.div(lastPurchasePriceAsBig))
+      .mul("-100")
+      .toString(),
+    2
+  );
+
+  return (
+    <Badge
+      style={{ margin: "1px" }}
+      rounded={true}
+      color="light"
+      textColor={purchasePriceBgColor}
+    >
+      {pctChange}%
+    </Badge>
+  );
+};
+
+export const LastPurchasePriceBadge = ({
+  lastPurchasePrice,
+  tickerPrice,
+}: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
+  if (!tickerPrice || !lastPurchasePrice) {
+    console.error("LastPurchasePriceBadge called with no required args", {
+      lastPurchasePrice,
+      tickerPrice,
     });
-
-    return (
-      <Badge style={{ margin: "1px" }} color={purchasePriceBgColor}>
-        {formatAsUsd(lastPurchasePriceAsBig.toString(), 3)}
-      </Badge>
-    );
+    return null;
   }
-);
+
+  const lastPurchasePriceAsBig = new Big(lastPurchasePrice);
+  const purchasePriceBgColor = getBgColorFromPriceDifference({
+    lastPurchasePrice: lastPurchasePriceAsBig,
+    tickerPrice: new Big(tickerPrice),
+  });
+
+  return (
+    <Badge style={{ margin: "1px" }} color={purchasePriceBgColor}>
+      {formatAsUsd(lastPurchasePriceAsBig.toString(), 3)}
+    </Badge>
+  );
+};
