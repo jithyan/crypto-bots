@@ -1,7 +1,7 @@
 //@ts-ignore
-import React, { useEffect, useState, startTransition } from "react";
+import React, { useState, startTransition } from "react";
 import { formatAsUsd, formatIsoDate } from "../../utils/format";
-import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
+import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";
 import { Badge } from "./Badges";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { getBotInfo, useBotDetails } from "../../state";
@@ -28,10 +28,8 @@ export const BotRow = React.memo(
       ? "1hr"
       : lastState.config.sleepStrategy;
 
-    const bgStyle = useUpdateStyleOnCheckIn(checkIn, {
-      normalStyle: "bg-dark text-light",
-      updatedStyle: "bg-info",
-    });
+    const isUpdating = useIsUpdatingOnChange(checkIn);
+    const bgStyle = isUpdating ? "bg-info" : "bg-dark text-light";
 
     let statusBgColor = "";
     if (status === "ONLINE") {

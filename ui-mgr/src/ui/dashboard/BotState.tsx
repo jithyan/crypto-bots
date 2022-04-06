@@ -1,7 +1,7 @@
 import Big from "big.js";
 import type { IBotStateDetails, TBotStatus } from "common-util";
 import React, { useCallback, useState } from "react";
-import { formatAsUsd, formatIsoDate, formatPct } from "../../utils/format";
+import { formatAsUsd, formatPct } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import {
   Badge,
@@ -10,7 +10,7 @@ import {
   PctChangeBadge,
 } from "./Badges";
 import { contractIcon, expandIcon, PriceTrendIcon } from "./Icons";
-import { useUpdateStyleOnCheckIn } from "./useUpdateStyleOnCheckIn";
+import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";
 
 export type IBotStateProps = IBotStateDetails & {
   symbol: string;
@@ -53,9 +53,20 @@ function CompactStateView({
     return null;
   } else if (state.includes("Stasis")) {
     return (
-      <Badge color="dark" textColor="light">
-        Zzz.. {4 - iteration!}h left
-      </Badge>
+      <>
+        <Badge
+          color="dark"
+          textColor="light"
+          border={true}
+          onClick={onToggleViewClicked}
+          style={{ marginRight: "8px", padding: "2px" }}
+        >
+          {expandIcon}
+        </Badge>{" "}
+        <Badge color="dark" textColor="light">
+          Zzz.. {4 - iteration!}h left
+        </Badge>
+      </>
     );
   }
 
@@ -89,8 +100,6 @@ function CompactStateView({
   );
 }
 
-const cardHasJustBeenUpdatedStyle = "card text-white bg-warning mb-3";
-
 export const ExpandedView = React.memo(
   ({
     state,
@@ -111,10 +120,11 @@ export const ExpandedView = React.memo(
         ? "card bg-light text-dark mb-3"
         : "card text-white bg-secondary mb-3";
 
-    const cardStyle = useUpdateStyleOnCheckIn(lastCheckIn, {
-      normalStyle: cardNormalStyle,
-      updatedStyle: cardHasJustBeenUpdatedStyle,
-    });
+    const isUpdating = useIsUpdatingOnChange(lastCheckIn);
+    const cardStyle = isUpdating
+      ? "card text-white bg-warning mb-3"
+      : cardNormalStyle;
+
     const {
       priceHasDecreased,
       priceHasIncreased,
