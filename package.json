@@ -24,7 +24,7 @@
     "upgrade:ui": "yarn ui add --dev typescript snowpack @types/react @types/react-dom && yarn ui add react react-dom",
     "upgrade:util": "yarn util add --dev typescript",
     "upgrade:anal": "yarn anal add --dev typescript",
-    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal",
+    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal && yarn upgrade:db",
     "format": "prettier --write \"**/src/**/*.ts*\"",
     "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\"",
     "build:ui:cloud": "gcloud builds submit --tag gcr.io/crypto-bot-341604/crypto-ui",
