@@ -3,6 +3,8 @@ import "zx/globals";
 import { h32 } from "xxhashjs";
 const SEED = 2048;
 
+const bannedPorts = new Set([2000, 80, 3306]);
+
 function parseConfig() {
   const config = JSON.parse(fs.readFileSync("./botConfig.json", "utf8"));
   const skipped = [];
@@ -28,6 +30,18 @@ function parseCloudEnvFile() {
     .filter((envLine) => Boolean(envLine));
 }
 
+function getPort(volatileCoin, stableCoin) {
+  const port =
+    (h32([volatileCoin, stableCoin, "binance"].join(":"), SEED).toNumber() %
+      65000) +
+    1025;
+
+  if (bannedPorts.has(port)) {
+    throw new Error("Banned port for", { volatileCoin, stableCoin, port });
+  }
+  return port;
+}
+
 function mergeCloudEnvWithConfigEnv(configForSymbol, port) {
   const configEnvs = new Set(Object.keys(configForSymbol));
   const configEnvLines = Object.keys(configForSymbol).map(
@@ -45,24 +59,19 @@ function mergeCloudEnvWithConfigEnv(configForSymbol, port) {
 }
 
 async function buildFromConfig() {
-  const upload = (await question("Do you want to upload on build complete? (y/n) "))
-  .toLowerCase()
-  .startsWith("y");
+  const upload = (
+    await question("Do you want to upload on build complete? (y/n) ")
+  )
+    .toLowerCase()
+    .startsWith("y");
 
   const config = parseConfig();
 
   const buildBotAsyncFns = Object.keys(config).map((key) => async () => {
-    const port =
-      (h32(
-        [
-          config[key]["VOLATILE_COIN"],
-          config[key]["STABLE_COIN"],
-          "binance",
-        ].join(":"),
-        SEED
-      ).toNumber() %
-        65000) +
-      1025;
+    const port = getPort(
+      config[key]["VOLATILE_COIN"],
+      config[key]["STABLE_COIN"]
+    );
 
     await $`mkdir -p bin/${key.toLowerCase()}/`;
     const filename = `${port}_${key}_bot`.toLowerCase();
@@ -87,7 +96,7 @@ async function buildFromConfig() {
   if (upload) {
     await $`gcloud compute scp --recurse ./bin/* jithya_n@instance-1:~/bots --zone=asia-northeast1-b`;
   } else {
-    console.log(chalk.yellow("Skipping upload"))
+    console.log(chalk.yellow("Skipping upload"));
   }
 
   console.log(chalk.cyan("Finished"));
@@ -137,9 +146,8 @@ async function oldFlow() {
   ]);
 
   for (const volatile of volatileList) {
-    const port =
-      (h32([volatile, stable, "binance"].join(":"), SEED).toNumber() % 65000) +
-      1025;
+    const port = getPort(volatile, stable);
+
     await $`mkdir -p ${dir}${volatile.toLowerCase()}${stable.toLowerCase()}/`;
     filename = `${port}_${volatile}${stable}_bot`.toLowerCase();
     const env = fs
