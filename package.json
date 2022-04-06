@@ -34,5 +34,10 @@
     "concurrently": "^7.0.0",
     "prettier": "^2.5.1",
     "zx": "5.1.0"
+  },
+  "dependencies": {
+    "db": "workspace:^",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1"
   }
 }
