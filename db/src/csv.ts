@@ -34,7 +34,7 @@ function mapCsvRowToDbObject(csv: TradeCsv): ITradeDbRow {
     busd_value: csv[4],
     from_coin: csv[5],
     to_coin: csv[6],
-    profit: csv[7] === "N/A" ? "0" : csv[7],
+    profit: csv[7].trim() === "N/A" ? "0" : csv[7],
     aud_value: csv[8],
     aud_busd: csv[9],
     commission: new Big(csv[8]).mul("0.001").toFixed(8),
@@ -52,13 +52,8 @@ function mapToInsertStmt(row: ITradeDbRow) {
 }
 
 function getAllFiles() {
-  const botConfig = JSON.parse(
-    fs.readFileSync("../bot/botConfig.json", "utf8")
-  );
-  const symbols = Object.keys(botConfig);
-  return symbols
-    .map((symbol) => getFilesInDir(`./data/${symbol}`))
-    .flatMap((f) => f);
+  const folders = getFilesInDir(`./data/bots`);
+  return folders.map(getFilesInDir).flatMap((f) => f);
 }
 
 export function getFilesInDir(dir: string): string[] {

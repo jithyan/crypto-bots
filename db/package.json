@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dl": "zx scripts/csv.mjs",
+    "temp": "zx scripts/temp.mjs",
     "dev": "rimraf build && tsc && concurrently \"tsc --watch\" \"nodemon -r dotenv/config build/index.js\"",
     "cleanup": "rimraf build && rimraf dist"
   },
