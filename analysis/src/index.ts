@@ -17,9 +17,6 @@ const ignoreSymbols = [
   // These two symbols are temporarily disabled
   "any",
   "multi",
-  "aca",
-  "1inch",
-  "aave",
   "zec",
   "xmr",
   "dash",

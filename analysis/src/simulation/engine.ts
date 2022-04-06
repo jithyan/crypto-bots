@@ -6,7 +6,7 @@ import {
   getTradeStats,
 } from "../parse/csv";
 import { makeMockServer } from "../mock/mockApi";
-import { getTodayInLogDateFormat } from "../utils";
+import { getFilesInDir } from "../utils";
 
 const runCryptoBot = require("./bot.js").default;
 
@@ -69,8 +69,8 @@ async function startEngine() {
 }
 
 function calculateStatsFromTrades() {
-  const csvTradeFile = `${getTodayInLogDateFormat()}-trades.csv`;
-  const csv = getCsvDataFromFiles([csvTradeFile]);
+  const csvFiles = getFilesInDir("./").filter((file) => file.endsWith(".csv"));
+  const csv = getCsvDataFromFiles(csvFiles);
   const profit = calculateProfit(csv);
   const stats = getTradeStats(csv);
 
@@ -81,12 +81,18 @@ function calculateStatsFromTrades() {
 }
 
 function clearBotLogs() {
-  fs.writeFileSync(`${getTodayInLogDateFormat()}-trades.csv`, "", "utf8");
+  const files = getFilesInDir("./");
+  files
+    .filter((file) => file.endsWith(".csv"))
+    .forEach((file) => {
+      fs.writeFileSync(file, "", "utf8");
+    });
   try {
-    fs.unlinkSync(`${getTodayInLogDateFormat()}-general.log`);
-    fs.unlinkSync(`${getTodayInLogDateFormat()}-pricestats.log`);
-    fs.unlinkSync(`${getTodayInLogDateFormat()}-state.log`);
-    fs.unlinkSync(`${getTodayInLogDateFormat()}-api.log`);
+    files
+      .filter((file) => file.endsWith(".log") || file.endsWith(".gz"))
+      .forEach((file) => {
+        fs.unlinkSync(file);
+      });
   } catch (err) {}
 }
 
