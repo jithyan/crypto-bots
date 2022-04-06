@@ -15,6 +15,9 @@ execute("Analyze price bot");
 
 const ignoreSymbols = [
   // These two symbols are temporarily disabled
+  "aca",
+  "1inch",
+  "aave",
   "any",
   "multi",
   "zec",
