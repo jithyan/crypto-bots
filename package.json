@@ -18,6 +18,7 @@
     "util": "yarn workspace common-util",
     "anal": "yarn workspace analysis",
     "db": "yarn workspace db",
+    "upgrade:db": "yarn db add --dev typescript esbuild pkg",
     "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
     "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
     "upgrade:ui": "yarn ui add --dev typescript snowpack @types/react @types/react-dom && yarn ui add react react-dom",

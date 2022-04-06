@@ -9,8 +9,8 @@ export const db: Record<"pool", Pool | null> = {
 function getConnection(): Promise<PoolConnection> {
   if (!db.pool) {
     db.pool = mariadb.createPool({
-      user: process.env.DB_ADMIN,
-      password: process.env.DB_PWD,
+      user: process.env.DB_USER?.trim(),
+      password: process.env.DB_PWD?.trim(),
       connectionLimit: 5,
       database: "trades_db",
     });
