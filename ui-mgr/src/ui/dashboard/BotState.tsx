@@ -1,6 +1,6 @@
 import Big from "big.js";
 import type { IBotStateDetails, TBotStatus } from "common-util";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { formatAsUsd, formatPct } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import {
@@ -9,7 +9,7 @@ import {
   LastPurchasePriceBadge,
   PctChangeBadge,
 } from "./Badges";
-import { contractIcon, expandIcon, PriceTrendIcon } from "./Icons";
+import { collapseIcon, expandIcon, PriceTrendIcon } from "./Icons";
 import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";
 
 export type IBotStateProps = IBotStateDetails & {
@@ -31,6 +31,37 @@ export const BotState = React.memo((props: IBotStateProps) => {
     <ExpandedView {...props} onToggleViewClicked={onToggleViewClicked} />
   );
 });
+
+const ToggleStateButton = React.memo(
+  ({
+    state,
+    onToggleViewClicked,
+  }: {
+    state: "expand" | "collapse";
+    onToggleViewClicked: () => void;
+  }) =>
+    state === "expand" ? (
+      <Badge
+        color="dark"
+        textColor="light"
+        border={true}
+        onClick={onToggleViewClicked}
+        style={{ marginRight: "8px", padding: "2px" }}
+      >
+        {expandIcon}
+      </Badge>
+    ) : (
+      <Badge
+        color="light"
+        textColor="dark"
+        border={true}
+        onClick={onToggleViewClicked}
+        style={{ marginRight: "8px", padding: "2px" }}
+      >
+        {collapseIcon}
+      </Badge>
+    )
+);
 
 function CompactStateView({
   priceTrendState = "",
@@ -54,15 +85,10 @@ function CompactStateView({
   } else if (state.includes("Stasis")) {
     return (
       <>
-        <Badge
-          color="dark"
-          textColor="light"
-          border={true}
-          onClick={onToggleViewClicked}
-          style={{ marginRight: "8px", padding: "2px" }}
-        >
-          {expandIcon}
-        </Badge>{" "}
+        <ToggleStateButton
+          onToggleViewClicked={onToggleViewClicked}
+          state="expand"
+        />
         <Badge color="dark" textColor="light">
           Zzz.. {4 - iteration!}h left
         </Badge>
@@ -72,15 +98,10 @@ function CompactStateView({
 
   return (
     <>
-      <Badge
-        color="dark"
-        textColor="light"
-        border={true}
-        onClick={onToggleViewClicked}
-        style={{ marginRight: "8px", padding: "2px" }}
-      >
-        {expandIcon}
-      </Badge>{" "}
+      <ToggleStateButton
+        onToggleViewClicked={onToggleViewClicked}
+        state="expand"
+      />
       <AssetStateBadge assetState={state} />{" "}
       <PriceTrendIcon trendState={priceTrendState} />{" "}
       <strong>{formatAsUsd(formattedTickerPrice, 3)}</strong>{" "}
@@ -138,15 +159,10 @@ export const ExpandedView = React.memo(
       return (
         <div className={cardStyle} style={{ width: "24rem" }}>
           <div className="card-header">
-            <Badge
-              color="light"
-              textColor="dark"
-              border={true}
-              onClick={onToggleViewClicked}
-              style={{ marginRight: "8px", padding: "2px" }}
-            >
-              {contractIcon}
-            </Badge>
+            <ToggleStateButton
+              onToggleViewClicked={onToggleViewClicked}
+              state="collapse"
+            />
             <strong>{state}</strong> <AssetStateBadge assetState={state} />
           </div>
           {isNotPriceBot ? (
