@@ -3,7 +3,7 @@ import "zx/globals";
 import { h32 } from "xxhashjs";
 const SEED = 2048;
 
-const bannedPorts = new Set([2000, 80, 3306]);
+const bannedPorts = new Set([2000, 80, 3306, 2001]);
 
 function parseConfig() {
   const config = JSON.parse(fs.readFileSync("./botConfig.json", "utf8"));

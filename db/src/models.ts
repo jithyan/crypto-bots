@@ -13,6 +13,23 @@ const TradeDbRow = z.object({
   aud_value: z.string(),
   aud_busd: z.string(),
   commission: z.string(),
+  trade_id: z.string(),
 });
 
 export type ITradeDbRow = z.infer<typeof TradeDbRow>;
+
+export type TradeRowValues = [
+  trade_id: string,
+  symbol: string,
+  at_timestamp: string,
+  action: string,
+  price: string,
+  amount: string,
+  busd_value: string,
+  from_coin: string,
+  to_coin: string,
+  profit: string,
+  aud_value: string,
+  aud_busd: string,
+  commission: string
+];

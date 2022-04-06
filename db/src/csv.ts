@@ -1,7 +1,8 @@
 import fs from "fs";
 import Big from "big.js";
-import { parse, format } from "date-fns";
-import crypto from "crypto";
+import { parse } from "date-fns";
+import { toMySqlDate, generateId } from "./dbUtils.js";
+import { ITradeDbRow } from "./models.js";
 
 type TradeCsv = [
   timestamp: string,
@@ -18,40 +19,13 @@ type TradeCsv = [
 
 export function getAllCsvData() {
   const vals = getCsvDataFromFiles(getAllFiles())
-    .map(mapToDbObject)
+    .map(mapCsvRowToDbObject)
     .map(mapToInsertStmt)
     .join(",");
   return `INSERT INTO trades VALUES ${vals};`;
 }
 
-export type TradeDbRow = Record<
-  | "symbol"
-  | "at_timestamp"
-  | "action"
-  | "price"
-  | "amount"
-  | "busd_value"
-  | "from_coin"
-  | "to_coin"
-  | "profit"
-  | "aud_value"
-  | "aud_busd"
-  | "commission",
-  string
->;
-
-export function toMySqlDate(date: Date) {
-  return format(date, "yyyy-MM-dd HH:mm:ss");
-}
-
-export function generateId(trade: TradeDbRow): string {
-  const hasher = crypto.createHash("sha512");
-  hasher.update(trade.symbol, "utf8");
-  hasher.update(trade.at_timestamp, "utf8");
-  return hasher.digest("hex");
-}
-
-function mapToDbObject(csv: TradeCsv): TradeDbRow & { trade_id: string } {
+function mapCsvRowToDbObject(csv: TradeCsv): ITradeDbRow {
   const newRow = {
     at_timestamp: toMySqlDate(parse(csv[0], "yyyy-MM-dd h:m:s aa", new Date())),
     action: csv[1],
@@ -66,14 +40,14 @@ function mapToDbObject(csv: TradeCsv): TradeDbRow & { trade_id: string } {
     commission: new Big(csv[8]).mul("0.001").toFixed(8),
     symbol: csv[1] === "BUY" ? `${csv[6]}${csv[5]}` : `${csv[5]}${csv[6]}`,
   };
-  console.log(generateId(newRow).length);
+
   return {
     trade_id: generateId(newRow),
     ...newRow,
   };
 }
 
-function mapToInsertStmt(row: TradeDbRow & { trade_id: string }) {
+function mapToInsertStmt(row: ITradeDbRow) {
   return `('${row.trade_id}','${row.symbol}','${row.at_timestamp}','${row.action}',${row.price},${row.amount},${row.busd_value},'${row.from_coin}','${row.to_coin}',${row.profit},${row.aud_value},${row.aud_busd},${row.commission})`;
 }
 
