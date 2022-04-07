@@ -2,11 +2,12 @@
   "name": "db",
   "packageManager": "yarn@3.2.0",
   "type": "module",
+  "bin": "dist/index.js",
   "scripts": {
     "dl": "zx scripts/csv.mjs",
     "temp": "zx scripts/temp.mjs",
     "dev": "rimraf build && tsc && concurrently \"tsc --watch\" \"nodemon -r dotenv/config build/index.js\"",
-    "cleanup": "rimraf build && rimraf dist",
+    "cleanup": "rimraf .*-audit.json & rimraf *.log & rimraf build && rimraf dist && rimraf bin",
     "build": "yarn cleanup && yarn node -r dotenv/config esbuild.config.cjs",
     "pkg:linux": "yarn build && pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "make": "zx make.mjs"

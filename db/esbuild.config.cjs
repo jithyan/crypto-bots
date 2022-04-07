@@ -9,8 +9,8 @@ const revision =
 const define = {
   "process.env.NODE_ENV": `"production"`,
   "process.env.APP_VERSION": `"${revision}"`,
-  "process.env.BOT_DIR": `"${process.env.DB_USER}"`,
-  "process.env.MGR_PASSWORD": `"${process.env.DB_PWD}"`,
+  "process.env.DB_USER": `"${process.env.DB_USER}"`,
+  "process.env.DB_PWD": `"${process.env.DB_PWD}"`,
 };
 
 console.log("Starting build version", revision);

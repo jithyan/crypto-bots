@@ -39,15 +39,23 @@ app.post("/trade/add", async (req, res) => {
 });
 
 app.get("/trade/year", async (req, res) => {
-  const result = await getYearToDateProfit();
-  return res.status(200).json(result);
+  try {
+    const result = await getYearToDateProfit();
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(500).json({ status: "Failed", error });
+  }
 });
 
 app.get("/trade/year/:symbol", async (req, res) => {
-  const symbol = req.params.symbol;
-  const result = await getYearToDateProfitForSymbol(symbol);
+  try {
+    const symbol = req.params.symbol;
+    const result = await getYearToDateProfitForSymbol(symbol);
 
-  return res.status(200).json(result);
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(500).json({ status: "Failed", error });
+  }
 });
 
 app.listen(2001, () => {
