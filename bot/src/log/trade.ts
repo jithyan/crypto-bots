@@ -6,6 +6,7 @@ import DailyRotateFile from "winston-daily-rotate-file";
 import type { IWallet, TSupportedCoins } from "../exchange/index.js";
 import axios from "axios";
 import { generalLogger } from "./general.js";
+import { IDbTradePayload } from "common-util";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",
@@ -101,13 +102,24 @@ export const logTrade = async (
   return profit;
 };
 
-async function logToTradeDb(data: Record<keyof typeof csvHeaders, string>) {
+function toDbRequestPayload(
+  data: Record<keyof typeof csvHeaders, string>
+): IDbTradePayload {
+  return {
+    ...data,
+    type: data.action as "SELL" | "BUY",
+  };
+}
+
+async function logToTradeDb(trade: Record<keyof typeof csvHeaders, string>) {
+  const data = toDbRequestPayload(trade);
+
   return axios
     .post("http://0.0.0.0:2001/trade/add", data)
     .then((res) => {
       generalLogger.info("Succesfully logged trade to DB", res.data);
     })
     .catch((e) => {
-      generalLogger.error("Succesfully logged trade to DB", e);
+      generalLogger.error("Log trade failed", e);
     });
 }
