@@ -13,13 +13,43 @@ const execute = (arg: Actions) => {
 
 execute("Analyze price bot");
 
-const ignoreSymbols = [
-  // These two symbols are temporarily disabled
-  "aca",
-  "1inch",
-  "aave",
+const alreadyAnalyzed = [
+  "auction",
+  "atom",
+  "atm",
+  "ata",
+  "astr",
+  "arpa",
+  "ar",
+  "api3",
+  "ape",
   "any",
+  "ant",
+  "ankr",
+  "anc",
+  "amp",
+  "alpine",
+  "alpha",
+  "alpaca",
+  "alice",
+  "algo",
+  "alcx",
+  "aion",
+  "agld",
+  "aergo",
+  "adx",
+  "ada",
+  "acm",
+  "ach",
+  "aca",
+  "aave",
+  "1inch",
   "multi",
+];
+
+const ignoreSymbols: string[] = [
+  ...alreadyAnalyzed,
+  "aud",
   "zec",
   "xmr",
   "dash",

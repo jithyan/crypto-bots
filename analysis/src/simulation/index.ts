@@ -129,10 +129,10 @@ function generateSimulationCombinations(
 ): SimulationParams[] {
   const stopLosses = ["0.05", "0.07", "0.11", "0.15"];
   const decreases = ["0.98", "0.985", "0.995", "0.999"];
-  const increases = ["1.001", "1.00175", "1.0035", "1.005", "1.01"];
+  const increases = ["1.001", "1.00175", "1.0035", "1.005"];
   const intervalsSubset: Intervals[] = ["m3", "m6", "m9", "m15"];
-  const postSellSleepDuration: string[] = ["4", "6", "9", "12"];
-  const pumpSignals: string[] = ["", "1.015", "1.02"];
+  const postSellSleepDuration: string[] = ["4", "6", "12"];
+  const pumpSignals: string[] = ["", "1.015"];
 
   const combinations = stopLosses
     .map((stopLoss) =>
