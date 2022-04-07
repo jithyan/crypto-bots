@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
+import { useRecoilRefresher_UNSTABLE } from "recoil";
 import { BotEventData, useBotStream } from "../../api";
 import {
+  queryProfit,
   useUpdateBotRegistry,
   useBotFeed,
   useSortedAndFilteredBots,
@@ -12,12 +14,14 @@ import { TableLoading } from "./TableLoading";
 export function MainContent() {
   const updateBotRegistry = useUpdateBotRegistry();
   const [feed, updateFeed] = useBotFeed();
+  const refresh = useRecoilRefresher_UNSTABLE(queryProfit);
 
   const updateState = useRef((action: BotEventData) => {
     if (action.event === "botupdate") {
       setTimeout(() => {
         updateFeed(action.data);
         updateBotRegistry(action);
+        refresh();
       }, 0);
     } else {
       updateBotRegistry(action);

@@ -6,12 +6,6 @@ import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { BadgeListItem } from "./BadgeListItem";
 import { Profit } from "./Profit";
 
-export const spinner = (
-  <div className="spinner-border text-success" role="status">
-    <span className="visually-hidden">Loading...</span>
-  </div>
-);
-
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
   const {
@@ -198,9 +192,7 @@ export function ControlPanel() {
               </ul>
 
               <ul className="navbar-nav">
-                <React.Suspense fallback={spinner}>
-                  <Profit />
-                </React.Suspense>
+                <Profit />
                 <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
                 <BadgeListItem show={onlineBots > 0} bg={"primary"}>
                   {onlineBots} bots online

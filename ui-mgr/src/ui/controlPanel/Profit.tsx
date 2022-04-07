@@ -1,43 +1,33 @@
-import React from "react";
-import { axios } from "../../api/axios";
+import React, { Suspense } from "react";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { formatAsUsd } from "../../utils/format";
 import { BadgeListItem } from "./BadgeListItem";
+import { useRecoilValue } from "recoil";
+import { ErrorBoundary } from "react-error-boundary";
+import { queryProfit } from "../../state/profit";
 
-const currentProfit: Record<"value", string | Promise<string> | null> = {
-  value: null,
-};
-
-function getProfit(refetch = false): string | Promise<string> {
-  if (!currentProfit.value || refetch) {
-    currentProfit.value = axios
-      .get<{ profit: string }>("/db/profit")
-      .then((resp) => {
-        currentProfit.value = resp.data.profit;
-        return resp.data.profit;
-      })
-      .catch((err) => {
-        console.log(err);
-        currentProfit.value = "error";
-        throw err;
-      });
-  }
-
-  return currentProfit.value;
-}
-
-function isPromise(obj: any): obj is Promise<any> {
-  return typeof obj?.then === "function";
-}
+export const spinner = (
+  <div className="spinner-border text-success" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+);
 
 export function Profit() {
-  const totalProfit = getProfit();
+  return (
+    <Suspense fallback={spinner}>
+      <ErrorBoundary
+        fallback={
+          <BadgeListItem bg={"danger"}>Failed to load profit</BadgeListItem>
+        }
+      >
+        <ProfitChild />
+      </ErrorBoundary>
+    </Suspense>
+  );
+}
 
-  if (isPromise(totalProfit)) {
-    throw totalProfit;
-  } else if (isNaN(Number(totalProfit))) {
-    return <BadgeListItem bg={"danger"}>Failed to load profit</BadgeListItem>;
-  }
+export function ProfitChild() {
+  const totalProfit = useRecoilValue(queryProfit);
 
   const animatedTotalProfit = useAnimateNumber(totalProfit, 3, {
     steps: 25,

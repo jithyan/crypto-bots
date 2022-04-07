@@ -8,7 +8,6 @@ import {
 import { Collection, Map } from "immutable";
 import type { IBotInfoStream } from "common-util";
 import { useCallback, useMemo } from "react";
-import Big from "big.js";
 import type { BotEventData } from "../api/botDataSocket";
 
 export function useUpdateBotRegistry() {
@@ -51,7 +50,6 @@ export const botInfoFor = selectorFamily({
 });
 
 export const atomBotStats = selector<{
-  totalProfit: string;
   totalBots: number;
   onlineBots: number;
   botsNotWorking: number;
@@ -66,12 +64,6 @@ export const atomBotStats = selector<{
   key: "botStats",
   get: ({ get }) => {
     const bots = get(botRegistry);
-    const totalProfit = bots
-      .reduce(
-        (prev, curr) => new Big(getBotInfo(curr, "state").profit).add(prev),
-        new Big("0")
-      )
-      .toFixed(3);
 
     const totalBots = bots.size;
     const onlineBots = bots.filter(
@@ -165,7 +157,6 @@ export const atomBotStats = selector<{
     }, 0);
 
     return {
-      totalProfit,
       totalBots,
       onlineBots,
       botsNotWorking,
