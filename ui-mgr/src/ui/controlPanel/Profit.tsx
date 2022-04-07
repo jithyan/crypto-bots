@@ -11,7 +11,7 @@ const currentProfit: Record<"value", string | Promise<string> | null> = {
 function getProfit(refetch = false): string | Promise<string> {
   if (!currentProfit.value || refetch) {
     currentProfit.value = axios
-      .get<{ profit: string }>("/stats/profit")
+      .get<{ profit: string }>("/db/profit")
       .then((resp) => {
         currentProfit.value = resp.data.profit;
         return resp.data.profit;

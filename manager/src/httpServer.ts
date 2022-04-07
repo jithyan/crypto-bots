@@ -103,6 +103,16 @@ app.post("/register", async (req, res) => {
   }
 });
 
+app.get("/db/profit", async (req, res) => {
+  try {
+    const profit = await getAllTimeProfit();
+    res.status(200).json({ profit });
+  } catch (err) {
+    logger.error("Failed getting total profit", err);
+    return res.status(500).json({ status: "Failed" });
+  }
+});
+
 app.use((req, res, next) => {
   try {
     const { token } = req.query;
@@ -120,16 +130,6 @@ app.use((req, res, next) => {
     throw new Error("Unauthorized");
   } catch (err) {
     return res.status(403).json({ code: 403, status: "Unauthorized" });
-  }
-});
-
-app.get("/db/profit", async (req, res) => {
-  try {
-    const profit = await getAllTimeProfit();
-    res.status(200).json({ profit });
-  } catch (err) {
-    logger.error("Failed getting total profit", err);
-    return res.status(500).json({ status: "Failed" });
   }
 });
 
