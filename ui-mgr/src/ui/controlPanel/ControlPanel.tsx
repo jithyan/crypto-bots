@@ -1,47 +1,22 @@
 //@ts-ignore
 import React, { startTransition, useState } from "react";
-import type { PropsWithChildren } from "react";
 import { usePasswordContext } from "../password";
 import { useBotFilter, useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
-import { useAnimateNumber } from "../../utils/useAnimateNumber";
-import { formatAsUsd } from "../../utils/format";
+import { BadgeListItem } from "./BadgeListItem";
+import { Profit } from "./Profit";
 
-const BadgeListItem = ({
-  show = true,
-  children,
-  bg,
-}: PropsWithChildren<{
-  bg:
-    | "light"
-    | "dark"
-    | "info"
-    | "warning"
-    | "danger"
-    | "success"
-    | "secondary"
-    | "primary";
-  show?: boolean;
-}>) => {
-  return show ? (
-    <li>
-      <h5>
-        <span
-          className={`badge bg-${bg}${bg === "light" ? "text-dark" : ""}`}
-          style={{ marginLeft: "16px" }}
-        >
-          {children}
-        </span>
-      </h5>
-    </li>
-  ) : null;
-};
+export const spinner = (
+  <div className="spinner-border text-success" role="status">
+    <span className="visually-hidden">Loading...</span>
+  </div>
+);
 
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
   const {
     totalBots,
-    totalProfit,
+
     botsNotWorking,
     onlineBots,
     offlineBots,
@@ -55,11 +30,6 @@ export function ControlPanel() {
 
   const setFilter = useBotFilter();
   const [filterValue, setFilterValue] = useState("");
-
-  const animatedTotalProfit = useAnimateNumber(totalProfit, 3, {
-    steps: 25,
-    ms: 200,
-  });
 
   const checkPassword = (func: () => void) => () => {
     if (password) {
@@ -228,11 +198,9 @@ export function ControlPanel() {
               </ul>
 
               <ul className="navbar-nav">
-                <BadgeListItem
-                  bg={Number(totalProfit) > 0 ? "success" : "danger"}
-                >
-                  Total profit: {formatAsUsd(animatedTotalProfit, 3)}
-                </BadgeListItem>
+                <React.Suspense fallback={spinner}>
+                  <Profit />
+                </React.Suspense>
                 <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
                 <BadgeListItem show={onlineBots > 0} bg={"primary"}>
                   {onlineBots} bots online
