@@ -29,6 +29,7 @@ import {
   getBotUpdate,
 } from "./socketStream.js";
 import rateLimit from "express-rate-limit";
+import { getProfitForSymbol } from "./tradeDb.js";
 
 const apiLimiter = rateLimit({
   windowMs: 3 * 60 * 1000, // 10 minutes
@@ -76,7 +77,7 @@ function recreateToken(path: string, salt: number): string {
   return encodeURIComponent(new TextDecoder().decode(hash));
 }
 
-app.post("/register", (req, res) => {
+app.post("/register", async (req, res) => {
   try {
     const botInfo = BotInfoReq.parse(req.body);
 
@@ -88,6 +89,8 @@ app.post("/register", (req, res) => {
       status: botInfo.status ?? "ONLINE",
       lastCheckIn: new Date(),
     };
+    const profit = await getProfitForSymbol(data.symbol);
+    data.lastState.stats.usdProfitToDate = profit;
 
     botRegister.state[id] = data;
     saveState();
