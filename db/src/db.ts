@@ -11,8 +11,9 @@ function getConnection(): Promise<PoolConnection> {
     db.pool = mariadb.createPool({
       user: process.env.DB_USER?.trim(),
       password: process.env.DB_PWD?.trim(),
-      connectionLimit: 5,
+      connectionLimit: 6,
       database: "trades_db",
+      idleTimeout: 120,
     });
   }
 
@@ -27,6 +28,7 @@ export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
       `INSERT INTO trades VALUES (${values.map(() => "?").join(", ")})`,
       values
     );
+    conn.end();
     logger.info("Successfully added trade row", data);
   } catch (err: any) {
     logger.error("Failed to add trade row", err);
@@ -58,6 +60,7 @@ export async function getYearToDateProfit(): Promise<ITotalProfitResult> {
     const res = await conn.query(
       `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022`
     );
+    conn.end();
 
     return parseProfitResult(res);
   } catch (err: any) {
@@ -75,6 +78,7 @@ export async function getYearToDateProfitForSymbol(
       `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022 AND symbol=?`,
       [symbol?.toUpperCase() ?? ""]
     );
+    conn.end();
 
     return parseProfitResult(res);
   } catch (err: any) {
