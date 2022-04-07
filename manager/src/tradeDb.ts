@@ -6,7 +6,7 @@ export async function getProfitForSymbol(symbol: string): Promise<string> {
     const resp = await request<{ total_profit: string }>({
       baseURL: "http://0.0.0.0:2001",
       url: `/trade/year/${symbol}`,
-      method: "POST",
+      method: "GET",
     });
     return resp.data.total_profit;
   } catch (e) {
