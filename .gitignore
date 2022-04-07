@@ -17,6 +17,9 @@ bin
 /analysis/*.csv
 /analysis/*-audit.json
 /analysis/*.gz
+/db/*-audit.json
+/analysis/*.log
+
 
 !/.yarn/patches
 !/.yarn/plugins

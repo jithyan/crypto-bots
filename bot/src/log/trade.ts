@@ -4,6 +4,8 @@ import { createLogger } from "winston";
 import Big from "big.js";
 import DailyRotateFile from "winston-daily-rotate-file";
 import type { IWallet, TSupportedCoins } from "../exchange/index.js";
+import axios from "axios";
+import { generalLogger } from "./general.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",
@@ -66,7 +68,8 @@ export const logTrade = async (
   { lastPurchasePrice, ...data }: TLogTradeData,
   client: IWallet
 ): Promise<string> => {
-  const timestamp = new Date()
+  const now = new Date();
+  const timestamp = now
     .toLocaleString("en-AU", {
       timeZone: "Australia/Sydney",
     })
@@ -93,6 +96,18 @@ export const logTrade = async (
   };
 
   csvLogger.log("info", logData);
+  logToTradeDb({ ...logData, timestamp: now.toISOString() });
 
   return profit;
 };
+
+async function logToTradeDb(data: Record<keyof typeof csvHeaders, string>) {
+  return axios
+    .post("http://0.0.0.0:2001/trade/add", data)
+    .then((res) => {
+      generalLogger.info("Succesfully logged trade to DB", res.data);
+    })
+    .catch((e) => {
+      generalLogger.error("Succesfully logged trade to DB", e);
+    });
+}

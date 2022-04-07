@@ -34,11 +34,49 @@ export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
   }
 }
 
-export async function getAllDailyTrades() {
+export interface ITotalProfitResult {
+  total_profit: string;
+}
+
+export function parseProfitResult(
+  result: [
+    {
+      total_profit: string | null;
+    }
+  ]
+): ITotalProfitResult {
+  if (result[0].total_profit) {
+    return result[0] as ITotalProfitResult;
+  } else {
+    return { total_profit: "0" };
+  }
+}
+
+export async function getYearToDateProfit(): Promise<ITotalProfitResult> {
   try {
     const conn = await getConnection();
-    const res = await conn.query(`SELECT * FROM trades`);
-    return res;
+    const res = await conn.query(
+      `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022`
+    );
+
+    return parseProfitResult(res);
+  } catch (err: any) {
+    logger.error("Failed to get trades", err);
+    throw err;
+  }
+}
+
+export async function getYearToDateProfitForSymbol(
+  symbol: string
+): Promise<ITotalProfitResult> {
+  try {
+    const conn = await getConnection();
+    const res = await conn.query(
+      `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022 AND symbol=?`,
+      [symbol?.toUpperCase() ?? ""]
+    );
+
+    return parseProfitResult(res);
   } catch (err: any) {
     logger.error("Failed to get trades", err);
     throw err;

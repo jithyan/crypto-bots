@@ -2,13 +2,17 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import http from "http";
-import { parse } from "date-fns";
+import { parseISO } from "date-fns";
 import Big from "big.js";
 import { IDbTradePayload, DbTradePayload } from "common-util";
 import { generateId, toMySqlDate } from "./dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 import { logger } from "./log.js";
-import { addNewTradeToDb, getAllDailyTrades } from "./db.js";
+import {
+  addNewTradeToDb,
+  getYearToDateProfit,
+  getYearToDateProfitForSymbol,
+} from "./db.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -34,9 +38,16 @@ app.post("/trade/add", async (req, res) => {
   }
 });
 
-app.get("/trade/daily", async (req, res) => {
-  await getAllDailyTrades();
-  return res.status(200).json({ status: "SUCCESS" });
+app.get("/trade/year", async (req, res) => {
+  const result = await getYearToDateProfit();
+  return res.status(200).json(result);
+});
+
+app.get("/trade/year/:symbol", async (req, res) => {
+  const symbol = req.params.symbol;
+  const result = await getYearToDateProfitForSymbol(symbol);
+
+  return res.status(200).json(result);
 });
 
 app.listen(2001, () => {
@@ -45,9 +56,7 @@ app.listen(2001, () => {
 
 function mapTradePayloadToDbObject(data: IDbTradePayload): ITradeDbRow {
   const newRow = {
-    at_timestamp: toMySqlDate(
-      parse(data.timestamp, "yyyy-MM-dd h:m:s aa", new Date())
-    ),
+    at_timestamp: toMySqlDate(parseISO(data.timestamp)),
     action: data.type,
     price: data.price,
     amount: data.amount,
