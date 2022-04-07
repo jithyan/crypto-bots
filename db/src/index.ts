@@ -8,11 +8,7 @@ import { IDbTradePayload, DbTradePayload } from "common-util";
 import { generateId, toMySqlDate } from "./dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 import { logger } from "./log.js";
-import {
-  addNewTradeToDb,
-  getYearToDateProfit,
-  getYearToDateProfitForSymbol,
-} from "./db.js";
+import { addNewTradeToDb, allTimeProfitForSymbol } from "./db.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -38,19 +34,10 @@ app.post("/trade/add", async (req, res) => {
   }
 });
 
-app.get("/trade/year", async (req, res) => {
-  try {
-    const result = await getYearToDateProfit();
-    return res.status(200).json(result);
-  } catch (error) {
-    return res.status(500).json({ status: "Failed", error });
-  }
-});
-
-app.get("/trade/year/:symbol", async (req, res) => {
+app.get("/trade/profit/:symbol", async (req, res) => {
   try {
     const symbol = req.params.symbol;
-    const result = await getYearToDateProfitForSymbol(symbol);
+    const result = await allTimeProfitForSymbol(symbol);
 
     return res.status(200).json(result);
   } catch (error) {

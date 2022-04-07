@@ -54,28 +54,13 @@ export function parseProfitResult(
   }
 }
 
-export async function getYearToDateProfit(): Promise<ITotalProfitResult> {
-  try {
-    const conn = await getConnection();
-    const res = await conn.query(
-      `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022`
-    );
-    conn.end();
-
-    return parseProfitResult(res);
-  } catch (err: any) {
-    logger.error("Failed to get trades", err);
-    throw err;
-  }
-}
-
-export async function getYearToDateProfitForSymbol(
+export async function allTimeProfitForSymbol(
   symbol: string
 ): Promise<ITotalProfitResult> {
   try {
     const conn = await getConnection();
     const res = await conn.query(
-      `SELECT SUM(profit) AS total_profit FROM daily_stats WHERE ytd=2022 AND symbol=?`,
+      `SELECT SUM(profit) AS total_profit FROM trades GROUP BY symbol HAVING symbol=?`,
       [symbol?.toUpperCase() ?? ""]
     );
     conn.end();
