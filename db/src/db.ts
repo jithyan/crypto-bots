@@ -36,24 +36,6 @@ export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
   }
 }
 
-export interface ITotalProfitResult {
-  total_profit: string;
-}
-
-export function parseProfitResult(
-  result: [
-    {
-      total_profit: string | null;
-    }
-  ]
-): ITotalProfitResult {
-  if (result[0].total_profit) {
-    return result[0] as ITotalProfitResult;
-  } else {
-    return { total_profit: "0" };
-  }
-}
-
 export async function allTimeProfitForSymbol(
   symbol: string
 ): Promise<ITotalProfitResult> {
@@ -69,5 +51,38 @@ export async function allTimeProfitForSymbol(
   } catch (err: any) {
     logger.error("Failed to get trades", err);
     throw err;
+  }
+}
+
+export async function allTimeProfit(): Promise<ITotalProfitResult> {
+  try {
+    const conn = await getConnection();
+    const res = await conn.query(
+      "SELECT SUM(profit) AS total_profit FROM trades"
+    );
+    conn.end();
+
+    return parseProfitResult(res);
+  } catch (err: any) {
+    logger.error("Failed to get trades", err);
+    throw err;
+  }
+}
+
+export interface ITotalProfitResult {
+  total_profit: string;
+}
+
+export function parseProfitResult(
+  result: [
+    {
+      total_profit: string | null;
+    }
+  ]
+): ITotalProfitResult {
+  if (result[0].total_profit) {
+    return result[0] as ITotalProfitResult;
+  } else {
+    return { total_profit: "0" };
   }
 }

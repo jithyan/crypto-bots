@@ -8,7 +8,11 @@ import { IDbTradePayload, DbTradePayload } from "common-util";
 import { generateId, toMySqlDate } from "./dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 import { logger } from "./log.js";
-import { addNewTradeToDb, allTimeProfitForSymbol } from "./db.js";
+import {
+  addNewTradeToDb,
+  allTimeProfit,
+  allTimeProfitForSymbol,
+} from "./db.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -31,6 +35,16 @@ app.post("/trade/add", async (req, res) => {
   } catch (e: any) {
     logger.error("Add new trade failed", e);
     return res.status(500).json({ msg: "Failed to add new trade" });
+  }
+});
+
+app.get("/trade/profit", async (req, res) => {
+  try {
+    const result = await allTimeProfit();
+
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(500).json({ status: "Failed", error });
   }
 });
 

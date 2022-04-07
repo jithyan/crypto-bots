@@ -29,7 +29,7 @@ import {
   getBotUpdate,
 } from "./socketStream.js";
 import rateLimit from "express-rate-limit";
-import { getProfitForSymbol } from "./tradeDb.js";
+import { getAllTimeProfit, getProfitForSymbol } from "./tradeDb.js";
 
 const apiLimiter = rateLimit({
   windowMs: 3 * 60 * 1000, // 10 minutes
@@ -120,6 +120,16 @@ app.use((req, res, next) => {
     throw new Error("Unauthorized");
   } catch (err) {
     return res.status(403).json({ code: 403, status: "Unauthorized" });
+  }
+});
+
+app.get("/db/profit", async (req, res) => {
+  try {
+    const profit = await getAllTimeProfit();
+    res.status(200).json({ profit });
+  } catch (err) {
+    logger.error("Failed getting total profit", err);
+    return res.status(500).json({ status: "Failed" });
   }
 });
 
