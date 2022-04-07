@@ -503,11 +503,11 @@
     "STOP_LOSS_THRESHOLD": " 0.15",
     "SLEEP_STRATEGY": "15m"
   },
-  "anybusd": {
+  "multibusd": {
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "50",
-    "VOLATILE_COIN": "ANY",
+    "VOLATILE_COIN": "MULTI",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.0015",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
