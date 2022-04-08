@@ -70,11 +70,11 @@ const getBotStats = selector<{
       }
     }, 0);
 
+    let i = 0;
     const capitalDeployed = bots.reduce((prev, curr) => {
       const symbol = getBotInfo(curr, "symbol").toUpperCase();
       const state = getBotInfo(curr, "state")?.state ?? "";
       const status = getBotInfo(curr, "status");
-      // TODO fix this - upgrade BATBUSD
       const maxBuyAmount = parseInt(
         getBotInfo(curr, "state").config?.maxBuyAmount ?? "0"
       );
@@ -99,7 +99,7 @@ const getBotStats = selector<{
       );
 
       if (
-        state.includes("HoldStable") &&
+        (state.includes("HoldStable") || state.includes("Stasis")) &&
         status === "ONLINE" &&
         symbol !== "PRICEBOT"
       ) {
