@@ -1,7 +1,7 @@
 import fs from "fs";
 import Big from "big.js";
 import { parse } from "date-fns";
-import { toMySqlDate, generateId } from "./dbUtils.js";
+import { toMySqlDate, generateId } from "./db/dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 
 type TradeCsv = [

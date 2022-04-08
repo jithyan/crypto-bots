@@ -1,7 +1,13 @@
 import mariadb, { Pool, PoolConnection } from "mariadb";
-import { mapToInsertValues } from "./dbUtils.js";
-import { logger } from "./log.js";
-import { ITradeDbRow } from "./models.js";
+import { generateId, mapToInsertValues } from "./dbUtils.js";
+import { logger } from "../log.js";
+import { ITradeDbRow } from "../models.js";
+import {
+  dbCache,
+  getAllTimeProfitFromCache,
+  setAllTimeProfitCache,
+  updateCacheOnNewTrade,
+} from "./cache.js";
 
 export const db: Record<"pool", Pool | null> = {
   pool: null,
@@ -20,8 +26,11 @@ function getConnection(): Promise<PoolConnection> {
   return db.pool.getConnection();
 }
 
-export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
+export async function addNewTradeToDb(
+  trade: Omit<ITradeDbRow, "trade_id">
+): Promise<void> {
   try {
+    const data = { ...trade, trade_id: generateId(trade) } as ITradeDbRow;
     const values = mapToInsertValues(data);
     const conn = await getConnection();
     await conn.query(
@@ -29,7 +38,9 @@ export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
       values
     );
     conn.end();
+
     logger.info("Successfully added trade row", data);
+    updateCacheOnNewTrade(data.symbol);
   } catch (err: any) {
     logger.error("Failed to add trade row", err);
     throw err;
@@ -39,6 +50,11 @@ export async function addNewTradeToDb(data: ITradeDbRow): Promise<void> {
 export async function allTimeProfitForSymbol(
   symbol: string
 ): Promise<ITotalProfitResult> {
+  const cachedResult = dbCache.get(symbol);
+  if (typeof cachedResult === "string") {
+    return { total_profit: cachedResult };
+  }
+
   try {
     const conn = await getConnection();
     const res = await conn.query(
@@ -47,7 +63,10 @@ export async function allTimeProfitForSymbol(
     );
     conn.end();
 
-    return parseProfitResult(res);
+    const profit = parseProfitResult(res);
+    dbCache.set(symbol, profit.total_profit);
+
+    return profit;
   } catch (err: any) {
     logger.error("Failed to get trades", err);
     throw err;
@@ -55,6 +74,11 @@ export async function allTimeProfitForSymbol(
 }
 
 export async function allTimeProfit(): Promise<ITotalProfitResult> {
+  const cachedResult = getAllTimeProfitFromCache();
+  if (cachedResult) {
+    return { total_profit: cachedResult };
+  }
+
   try {
     const conn = await getConnection();
     const res = await conn.query(
@@ -62,7 +86,9 @@ export async function allTimeProfit(): Promise<ITotalProfitResult> {
     );
     conn.end();
 
-    return parseProfitResult(res);
+    const result = parseProfitResult(res);
+    setAllTimeProfitCache(result.total_profit);
+    return result;
   } catch (err: any) {
     logger.error("Failed to get trades", err);
     throw err;
@@ -80,7 +106,7 @@ export function parseProfitResult(
     }
   ]
 ): ITotalProfitResult {
-  if (result[0]?.total_profit) {
+  if (result?.[0]?.total_profit) {
     return result[0] as ITotalProfitResult;
   } else {
     return { total_profit: "0" };

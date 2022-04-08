@@ -1,6 +1,6 @@
 import crypto from "crypto";
 import { format } from "date-fns";
-import { ITradeDbRow, TradeRowValues } from "./models.js";
+import { ITradeDbRow, TradeRowValues } from "../models.js";
 
 export function generateId(trade: Omit<ITradeDbRow, "trade_id">): string {
   const hasher = crypto.createHash("sha512");

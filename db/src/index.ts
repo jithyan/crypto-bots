@@ -5,14 +5,14 @@ import http from "http";
 import { parseISO } from "date-fns";
 import Big from "big.js";
 import { IDbTradePayload, DbTradePayload } from "common-util";
-import { generateId, toMySqlDate } from "./dbUtils.js";
+import { toMySqlDate } from "./db/dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 import { logger } from "./log.js";
 import {
   addNewTradeToDb,
   allTimeProfit,
   allTimeProfitForSymbol,
-} from "./db.js";
+} from "./db/db.js";
 
 const app = express();
 export const httpServer = http.createServer(app);
@@ -63,8 +63,10 @@ app.listen(2001, () => {
   console.log("Db service listening on port 2001");
 });
 
-function mapTradePayloadToDbObject(data: IDbTradePayload): ITradeDbRow {
-  const newRow = {
+function mapTradePayloadToDbObject(
+  data: IDbTradePayload
+): Omit<ITradeDbRow, "trade_id"> {
+  return {
     at_timestamp: toMySqlDate(parseISO(data.timestamp)),
     action: data.type,
     price: data.price,
@@ -78,10 +80,5 @@ function mapTradePayloadToDbObject(data: IDbTradePayload): ITradeDbRow {
     commission: new Big(data.audValue).mul("0.001").toFixed(8),
     symbol:
       data.type === "BUY" ? `${data.to}${data.from}` : `${data.from}${data.to}`,
-  };
-
-  return {
-    trade_id: generateId(newRow),
-    ...newRow,
   };
 }
