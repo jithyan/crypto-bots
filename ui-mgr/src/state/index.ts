@@ -1,9 +1,4 @@
-export {
-  useUpdateBotRegistry,
-  useBotStats,
-  getBotInfo,
-  useBotDetails,
-} from "./botRegistry";
+export { useUpdateBotRegistry, getBotInfo, useBotDetails } from "./botRegistry";
 export { useBotFeed } from "./botUpdateFeed";
 export {
   useBotSortMethod,
@@ -12,3 +7,4 @@ export {
 } from "./botFilterSort";
 export { queryProfit } from "./profit";
 export type { ImmutableBotMap as ImmutableBotInfo } from "./botRegistry";
+export { useBotStats } from "./botStats";
