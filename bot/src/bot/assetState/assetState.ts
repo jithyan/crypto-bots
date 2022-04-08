@@ -84,6 +84,13 @@ export class AssetState<
     this.numberOfTimeouts = 0;
     this.postSellSleep = Number(postSellSleep);
 
+    if (isNaN(this.postSellSleep)) {
+      console.error("postSellSleep must be a number: ", postSellSleep);
+      throw new Error(
+        "postSellSleep should be a valid number: " + postSellSleep
+      );
+    }
+
     stateLogger.info(`CREATE new ${this.state}:${this.symbol}`, this);
   }
 
