@@ -2484,6 +2484,8 @@ __metadata:
     typescript: ^4.6.3
     zod: ^3.14.2
     zx: ^6.0.7
+  bin:
+    db: dist/index.js
   languageName: unknown
   linkType: soft
 

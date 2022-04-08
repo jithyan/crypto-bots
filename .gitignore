@@ -17,6 +17,7 @@ bin
 /analysis/*.csv
 /analysis/*-audit.json
 /analysis/*.gz
+/analysis/data/april2022/*.json
 /db/*-audit.json
 /analysis/*.log
 

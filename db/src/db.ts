@@ -11,9 +11,9 @@ function getConnection(): Promise<PoolConnection> {
     db.pool = mariadb.createPool({
       user: process.env.DB_USER?.trim(),
       password: process.env.DB_PWD?.trim(),
-      connectionLimit: 6,
+      connectionLimit: 10,
       database: "trades_db",
-      idleTimeout: 120,
+      idleTimeout: 180,
     });
   }
 
