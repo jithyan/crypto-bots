@@ -1,5 +1,4 @@
 import React from "react";
-import type { IBotStateDetails } from "common-util";
 import type { List } from "immutable";
 import { BotFeed } from "./BotFeed";
 import { BotRow } from "./BotRow";

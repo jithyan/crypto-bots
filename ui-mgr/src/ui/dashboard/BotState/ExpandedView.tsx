@@ -152,6 +152,8 @@ const CardFooter = (props: IBotStateDetails["config"]) => {
     stopLoss,
     minPercentIncreaseForSell,
     maxBuyAmount,
+    postSellSleep,
+    pumpInc,
   } = props;
 
   const items: Record<"desc" | "val", string | JSX.Element>[] = [
@@ -164,6 +166,8 @@ const CardFooter = (props: IBotStateDetails["config"]) => {
     },
     { desc: "Stop loss", val: `${Math.trunc(Number(stopLoss) * 100)}%` },
     { desc: "Max buy amount", val: `$${maxBuyAmount}` },
+    { desc: "Post sell sleep", val: postSellSleep },
+    { desc: "Pump signal", val: pumpInc },
   ];
 
   return (
