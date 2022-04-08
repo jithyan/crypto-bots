@@ -65,6 +65,8 @@ export const BotStateDetails = z.object({
     minPercentIncreaseForSell: z.string(),
     sleepStrategy: z.string(),
     maxBuyAmount: z.string(),
+    postSellSleep: z.string(),
+    pumpInc: z.string(),
   }),
 });
 
@@ -91,6 +93,7 @@ export function mapBotLastStateToStateDetails(
     PRICE_HAS_INCREASED_THRESHOLD = "missing",
     STOP_LOSS_THRESHOLD = "missing",
     MIN_PERCENT_INCREASE_FOR_SELL = "missing",
+    PUMP_INC = "missing",
   } = bot.lastState?.decisionEngine?.decisionConfig ?? {};
 
   return {
@@ -105,8 +108,10 @@ export function mapBotLastStateToStateDetails(
       priceHasDecreased: PRICE_HAS_DECREASED_THRESHOLD,
       stopLoss: STOP_LOSS_THRESHOLD,
       minPercentIncreaseForSell: MIN_PERCENT_INCREASE_FOR_SELL,
+      pumpInc: PUMP_INC,
       sleepStrategy: bot?.lastState?.sleep?.sleepStrategy,
       maxBuyAmount: bot?.maxBuyAmount ?? "",
+      postSellSleep: bot?.lastState?.postSellSleep?.toString() ?? "",
     },
   };
 }
