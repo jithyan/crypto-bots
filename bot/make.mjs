@@ -13,6 +13,7 @@ function parseConfig() {
       skipped.push(key);
       delete config[key];
     } else {
+      validateBotConfig(key, config[key]);
       delete config[key].skip;
     }
   });
@@ -182,5 +183,28 @@ async function oldFlow() {
     await $`gcloud compute scp --recurse ./bin/* jithya_n@instance-1:~/bots --zone=asia-northeast1-b`;
 
     console.log(chalk.cyan("Finished"));
+  }
+}
+
+function validateBotConfig(key, config) {
+  let hasError = false;
+  if (!key.toUpperCase().includes(config.VOLATILE_COIN)) {
+    console.error("Invalid config", {
+      key,
+      volatileCoin: config.VOLATILE_COIN,
+    });
+    hasError = true;
+  }
+
+  if (!key.toUpperCase().includes(config.VOLATILE_COIN)) {
+    console.error("Invalid config", {
+      key,
+      stableCoin: config.STABLE_COIN,
+    });
+    hasError = true;
+  }
+
+  if (hasError) {
+    throw new Error("Invalid config");
   }
 }
