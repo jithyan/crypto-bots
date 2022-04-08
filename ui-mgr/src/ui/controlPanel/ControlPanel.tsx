@@ -5,12 +5,14 @@ import { useBotFilter, useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { BadgeListItem } from "./BadgeListItem";
 import { Profit } from "./Profit";
+import { NavBarDropdownItem } from "./NavBarDropdownItem";
+import { NavBarDropdown } from "./NavBarDropdown";
+import { NavBarPanel } from "./NavBarPanel";
 
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
   const {
     totalBots,
-
     botsNotWorking,
     onlineBots,
     offlineBots,
@@ -36,178 +38,107 @@ export function ControlPanel() {
 
   return (
     <>
-      <div className="row">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              Manager Panel
-            </a>
+      <NavBarPanel heading="Manager Panel" id="navbarNavDarkDropdown">
+        <NavBarDropdown id="navbarDarkDropdownMenuLink" heading="Commands">
+          <NavBarDropdownItem>
             <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDarkDropdown"
-              aria-controls="navbarNavDarkDropdown"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              className="btn btn-outline-info"
+              onClick={checkPassword(startupAllBots)}
             >
-              <span className="navbar-toggler-icon"></span>
+              Start all bots
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarNavDarkDropdown"
+          </NavBarDropdownItem>
+          <NavBarDropdownItem>
+            <button
+              className="btn btn-outline-warning"
+              onClick={checkPassword(shutdownAllBots)}
             >
-              <ul className="navbar-nav">
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDarkDropdownMenuLink"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Commands
-                  </a>
-                  <ul
-                    className="dropdown-menu dropdown-menu-dark"
-                    aria-labelledby="navbarDarkDropdownMenuLink"
-                  >
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn btn-outline-info"
-                          onClick={checkPassword(startupAllBots)}
-                        >
-                          Start all bots
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn btn-outline-warning"
-                          onClick={checkPassword(shutdownAllBots)}
-                        >
-                          Shutdown all bots
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn btn-outline-danger"
-                          onClick={checkPassword(shutdownManager)}
-                        >
-                          Shutdown Manager
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              Shutdown all bots
+            </button>
+          </NavBarDropdownItem>
+          <NavBarDropdownItem>
+            <button
+              className="btn btn-outline-danger"
+              onClick={checkPassword(shutdownManager)}
+            >
+              Shutdown Manager
+            </button>
+          </NavBarDropdownItem>
+        </NavBarDropdown>
 
-              <ul className="navbar-nav">
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="sortAndFilterDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Sort & Filter
-                  </a>
-                  <ul
-                    className="dropdown-menu dropdown-menu-dark"
-                    aria-labelledby="sortAndFilterDropdown"
-                  >
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn btn-outline-light"
-                          onClick={() =>
-                            setSortMethod((prev) =>
-                              prev === "statusDesc" ? "statusAsc" : "statusDesc"
-                            )
-                          }
-                        >
-                          Status
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn small btn-outline-light"
-                          onClick={() =>
-                            setSortMethod((prev) =>
-                              prev === "symbolDesc" ? "symbolAsc" : "symbolDesc"
-                            )
-                          }
-                        >
-                          Symbol
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown-item">
-                        <button
-                          className="btn btn-outline-light"
-                          onClick={() =>
-                            setSortMethod((prev) =>
-                              prev === "profitDesc" ? "profitAsc" : "profitDesc"
-                            )
-                          }
-                        >
-                          Profit
-                        </button>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown-item">
-                        <label className="form-label">
-                          Filter by symbol
-                          <input
-                            className="form-control"
-                            type="text"
-                            value={filterValue}
-                            onChange={(e) => {
-                              const value = e.target.value ?? "";
-                              setFilterValue(value);
-                              startTransition(() =>
-                                setFilter({
-                                  method: "symbol",
-                                  value,
-                                })
-                              );
-                            }}
-                          />
-                        </label>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+        <NavBarDropdown id="sortAndFilterDropdown" heading="Sort and Filter">
+          <NavBarDropdownItem>
+            <button
+              className="btn btn-outline-light"
+              onClick={() =>
+                setSortMethod((prev) =>
+                  prev === "statusDesc" ? "statusAsc" : "statusDesc"
+                )
+              }
+            >
+              Status
+            </button>
+          </NavBarDropdownItem>
+          <NavBarDropdownItem>
+            <button
+              className="btn small btn-outline-light"
+              onClick={() =>
+                setSortMethod((prev) =>
+                  prev === "symbolDesc" ? "symbolAsc" : "symbolDesc"
+                )
+              }
+            >
+              Symbol
+            </button>
+          </NavBarDropdownItem>
+          <NavBarDropdownItem>
+            <button
+              className="btn btn-outline-light"
+              onClick={() =>
+                setSortMethod((prev) =>
+                  prev === "profitDesc" ? "profitAsc" : "profitDesc"
+                )
+              }
+            >
+              Profit
+            </button>
+          </NavBarDropdownItem>
+          <NavBarDropdownItem>
+            <label className="form-label">
+              Filter by symbol
+              <input
+                className="form-control"
+                type="text"
+                value={filterValue}
+                onChange={(e) => {
+                  const value = e.target.value ?? "";
+                  setFilterValue(value);
+                  startTransition(() =>
+                    setFilter({
+                      method: "symbol",
+                      value,
+                    })
+                  );
+                }}
+              />
+            </label>
+          </NavBarDropdownItem>
+        </NavBarDropdown>
 
-              <ul className="navbar-nav">
-                <Profit />
-                <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
-                <BadgeListItem show={onlineBots > 0} bg={"primary"}>
-                  {onlineBots} bots online
-                </BadgeListItem>
-                <BadgeListItem show={offlineBots > 0} bg={"secondary"}>
-                  {offlineBots} bots offline{" "}
-                </BadgeListItem>
-                <BadgeListItem show={botsNotWorking > 0} bg={"danger"}>
-                  {botsNotWorking} bots not working
-                </BadgeListItem>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+        <ul className="navbar-nav">
+          <Profit />
+          <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
+          <BadgeListItem show={onlineBots > 0} bg={"primary"}>
+            {onlineBots} bots online
+          </BadgeListItem>
+          <BadgeListItem show={offlineBots > 0} bg={"secondary"}>
+            {offlineBots} bots offline{" "}
+          </BadgeListItem>
+          <BadgeListItem show={botsNotWorking > 0} bg={"danger"}>
+            {botsNotWorking} bots not working
+          </BadgeListItem>
+        </ul>
+      </NavBarPanel>
 
       <div className="row">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
