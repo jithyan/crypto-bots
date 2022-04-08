@@ -89,12 +89,15 @@ app.post("/register", async (req, res) => {
       status: botInfo.status ?? "ONLINE",
       lastCheckIn: new Date(),
     };
-    const profit = await getProfitForSymbol(data.symbol);
-    data.lastState.stats.usdProfitToDate = profit;
 
-    botRegister.state[id] = data;
-    saveState();
-    broadcastBotUpdate(id);
+    setImmediate(async () => {
+      const profit = await getProfitForSymbol(data.symbol);
+      data.lastState.stats.usdProfitToDate = profit;
+
+      botRegister.state[id] = data;
+      saveState();
+      broadcastBotUpdate(id);
+    });
 
     return res.status(201).json({ status: "SUCCESS" });
   } catch (err: any) {

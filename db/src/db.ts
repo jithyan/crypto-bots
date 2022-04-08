@@ -80,7 +80,7 @@ export function parseProfitResult(
     }
   ]
 ): ITotalProfitResult {
-  if (result[0].total_profit) {
+  if (result[0]?.total_profit) {
     return result[0] as ITotalProfitResult;
   } else {
     return { total_profit: "0" };
