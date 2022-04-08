@@ -2,18 +2,21 @@ import { useMemo } from "react";
 import { selector, useRecoilValue } from "recoil";
 import { botRegistry, getBotInfo } from "./botRegistry";
 
-const getBotStats = selector<{
-  totalBots: number;
-  onlineBots: number;
-  botsNotWorking: number;
-  offlineBots: number;
-  numBotsHoldStable: number;
-  numBotsPlacedOrders: number;
-  numBotsHoldingVolatileAssets: number;
-  numBotsSleeping: number;
-  capitalDeployed: number;
-  capitalFree: number;
-}>({
+type IBotStats = Record<
+  | "totalBots"
+  | "onlineBots"
+  | "botsNotWorking"
+  | "offlineBots"
+  | "numBotsHoldStable"
+  | "numBotsPlacedOrders"
+  | "numBotsHoldingVolatileAssets"
+  | "numBotsSleeping"
+  | "capitalDeployed"
+  | "capitalFree",
+  number
+>;
+
+const getBotStats = selector<IBotStats>({
   key: "botStats",
   get: ({ get }) => {
     const bots = get(botRegistry);
@@ -70,7 +73,6 @@ const getBotStats = selector<{
       }
     }, 0);
 
-    let i = 0;
     const capitalDeployed = bots.reduce((prev, curr) => {
       const symbol = getBotInfo(curr, "symbol").toUpperCase();
       const state = getBotInfo(curr, "state")?.state ?? "";
@@ -120,12 +122,19 @@ const getBotStats = selector<{
       numBotsSleeping,
       capitalDeployed,
       capitalFree,
-    };
+    } as IBotStats;
   },
 });
 
-export function useBotStats() {
+export function useBotStats<K extends keyof IBotStats>(
+  ...subscribeToFields: K[]
+): Pick<IBotStats, K> {
   const botStats = useRecoilValue(getBotStats);
 
-  return useMemo(() => botStats, Object.values(botStats));
+  return useMemo(
+    () => botStats,
+    subscribeToFields.length === 0
+      ? Object.values(botStats)
+      : subscribeToFields.map((k) => botStats[k])
+  );
 }

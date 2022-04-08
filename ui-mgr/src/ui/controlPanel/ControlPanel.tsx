@@ -4,9 +4,9 @@ import { usePasswordContext } from "../password";
 import { useBotFilter, useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { Profit } from "./Profit";
-import { NavBarDropdown, NavBarDropdownItem } from "./NavBarDropdown";
-import { NavBarPanel } from "./NavBarPanel";
-import { BadgeListItem, NavBarList } from "./NavBarList";
+import { NavBarDropdown, NavBarDropdownItem } from "./NavBar/NavBarDropdown";
+import { NavBarPanel } from "./NavBar/NavBarPanel";
+import { BadgeListItem, NavBarList } from "./NavBar/NavBarList";
 
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
@@ -141,58 +141,28 @@ export function ControlPanel() {
         </NavBarList>
       </NavBarPanel>
 
-      <div className="row">
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div className="container-fluid">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-              <a className="navbar-brand" href="#">
-                Bot Stats
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDarkDropdown2"
-                aria-controls="navbarNavDarkDropdown2"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="container-fluid">
-                <div
-                  className="collapse navbar-collapse"
-                  id="navbarNavDarkDropdown2"
-                >
-                  <ul className="navbar-nav">
-                    <BadgeListItem show={numBotsHoldStable > 0} bg={"light"}>
-                      {numBotsHoldStable} online bots not bought anything
-                    </BadgeListItem>
-                    <BadgeListItem
-                      show={numBotsHoldingVolatileAssets > 0}
-                      bg={"light"}
-                    >
-                      {numBotsHoldingVolatileAssets} online bots holding crypto{" "}
-                    </BadgeListItem>
-                    <BadgeListItem show={numBotsSleeping > 0} bg={"light"}>
-                      {numBotsSleeping} online bots asleep
-                    </BadgeListItem>
-                    <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
-                      {numBotsPlacedOrders} bots have placed orders
-                    </BadgeListItem>
-                    <BadgeListItem bg={"light"}>
-                      ${capitalFree} capital free
-                    </BadgeListItem>
-                    <BadgeListItem bg={"light"}>
-                      ${capitalDeployed} capital deployed
-                    </BadgeListItem>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </nav>
-      </div>
+      <NavBarPanel id="navbarNavDarkDropdown2" heading="Bot Stats">
+        <NavBarList>
+          <BadgeListItem show={numBotsHoldStable > 0} bg={"light"}>
+            {numBotsHoldStable} online bots not bought anything
+          </BadgeListItem>
+          <BadgeListItem show={numBotsHoldingVolatileAssets > 0} bg={"light"}>
+            {numBotsHoldingVolatileAssets} online bots holding crypto{" "}
+          </BadgeListItem>
+          <BadgeListItem show={numBotsSleeping > 0} bg={"light"}>
+            {numBotsSleeping} online bots asleep
+          </BadgeListItem>
+          <BadgeListItem show={numBotsPlacedOrders > 0} bg={"light"}>
+            {numBotsPlacedOrders} bots have placed orders
+          </BadgeListItem>
+          <BadgeListItem bg={"light"}>
+            ${capitalFree} capital free
+          </BadgeListItem>
+          <BadgeListItem bg={"light"}>
+            ${capitalDeployed} capital deployed
+          </BadgeListItem>
+        </NavBarList>
+      </NavBarPanel>
     </>
   );
 }

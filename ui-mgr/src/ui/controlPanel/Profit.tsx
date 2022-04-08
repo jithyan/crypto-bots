@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 import { formatAsUsd } from "../../utils/format";
-import { BadgeListItem } from "./NavBarList";
+import { BadgeListItem } from "./NavBar/NavBarList";
 import { useRecoilValue } from "recoil";
 import { ErrorBoundary } from "react-error-boundary";
 import { queryProfit } from "../../state/profit";
