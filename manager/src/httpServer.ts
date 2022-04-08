@@ -91,8 +91,10 @@ app.post("/register", async (req, res) => {
     };
 
     setImmediate(async () => {
-      const profit = await getProfitForSymbol(data.symbol);
-      data.lastState.stats.usdProfitToDate = profit;
+      if (data.symbol !== "PRICEBOT") {
+        const profit = await getProfitForSymbol(data.symbol);
+        data.lastState.stats.usdProfitToDate = profit;
+      }
 
       botRegister.state[id] = data;
       saveState();
