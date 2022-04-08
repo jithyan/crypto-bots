@@ -3,11 +3,10 @@ import React, { startTransition, useState } from "react";
 import { usePasswordContext } from "../password";
 import { useBotFilter, useBotSortMethod, useBotStats } from "../../state";
 import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
-import { BadgeListItem } from "./BadgeListItem";
 import { Profit } from "./Profit";
-import { NavBarDropdownItem } from "./NavBarDropdownItem";
-import { NavBarDropdown } from "./NavBarDropdown";
+import { NavBarDropdown, NavBarDropdownItem } from "./NavBarDropdown";
 import { NavBarPanel } from "./NavBarPanel";
+import { BadgeListItem, NavBarList } from "./NavBarList";
 
 export function ControlPanel() {
   const { setShowPasswordModal, password } = usePasswordContext();
@@ -125,11 +124,13 @@ export function ControlPanel() {
           </NavBarDropdownItem>
         </NavBarDropdown>
 
-        <ul className="navbar-nav">
+        <NavBarList>
           <Profit />
           <BadgeListItem bg={"info"}>{totalBots} bots</BadgeListItem>
           <BadgeListItem show={onlineBots > 0} bg={"primary"}>
-            {onlineBots} bots online
+            {onlineBots === totalBots
+              ? "All bots online"
+              : `${onlineBots} bots online`}
           </BadgeListItem>
           <BadgeListItem show={offlineBots > 0} bg={"secondary"}>
             {offlineBots} bots offline{" "}
@@ -137,7 +138,7 @@ export function ControlPanel() {
           <BadgeListItem show={botsNotWorking > 0} bg={"danger"}>
             {botsNotWorking} bots not working
           </BadgeListItem>
-        </ul>
+        </NavBarList>
       </NavBarPanel>
 
       <div className="row">

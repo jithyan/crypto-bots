@@ -638,10 +638,7 @@
     "PUMP_INC": "",
     "POST_SELL_SLEEP": "6"
   },
-  "comment": {
-    "skip": true,
-    "number of bots left": 28
-  },
+
   "dydxbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -669,5 +666,23 @@
     "SLEEP_STRATEGY": "9m",
     "PUMP_INC": "",
     "POST_SELL_SLEEP": "6"
+  },
+  "etcbusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "VOLATILE_COIN": "ETC",
+    "STABLE_COIN": "BUSD",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": " 0.11",
+    "SLEEP_STRATEGY": "3m",
+    "PUMP_INC": "1.015",
+    "POST_SELL_SLEEP": "4"
+  },
+  "comment": {
+    "skip": true,
+    "number of bots left": 27
   }
 }

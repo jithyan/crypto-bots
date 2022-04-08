@@ -1,10 +1,14 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
+
+export function NavBarList({ children }: React.PropsWithChildren<{}>) {
+  return <ul className="navbar-nav">{children}</ul>;
+}
 
 export const BadgeListItem = ({
   show = true,
   children,
   bg,
-}: PropsWithChildren<{
+}: React.PropsWithChildren<{
   bg:
     | "light"
     | "dark"
