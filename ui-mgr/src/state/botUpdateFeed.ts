@@ -92,6 +92,10 @@ function tickerPriceChange(
   const oldTickerPrice = new Big(
     getBotInfo(oldBot, "state")?.tickerPrice ?? "0"
   );
+  if (oldTickerPrice.eq("0")) {
+    return "";
+  }
+
   const newTickerPrice = new Big(currentBot?.state?.tickerPrice ?? "0");
   const pctChange = new Big("1")
     .minus(newTickerPrice.div(oldTickerPrice))

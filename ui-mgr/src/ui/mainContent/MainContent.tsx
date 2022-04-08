@@ -21,7 +21,9 @@ export function MainContent() {
       setTimeout(() => {
         updateFeed(action.data);
         updateBotRegistry(action);
-        refresh();
+        if (action.data?.state?.state?.includes("Stasis")) {
+          refresh();
+        }
       }, 0);
     } else {
       updateBotRegistry(action);
@@ -32,10 +34,14 @@ export function MainContent() {
   const sortedData = useSortedAndFilteredBots();
 
   return loading ? (
-    <TableLoading />
+    <>
+      <ControlPanel />
+      <TableLoading />
+    </>
   ) : (
     <>
       <ControlPanel />
+
       <Dashboard data={sortedData} changes={feed} />
     </>
   );
