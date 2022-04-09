@@ -14,7 +14,7 @@ import { TableLoading } from "./TableLoading";
 export function MainContent() {
   const updateBotRegistry = useUpdateBotRegistry();
   const [feed, updateFeed] = useBotFeed();
-  const refresh = useRecoilRefresher_UNSTABLE(queryProfit);
+  const refreshProfit = useRecoilRefresher_UNSTABLE(queryProfit);
 
   const updateState = useRef((action: BotEventData) => {
     if (action.event === "botupdate") {
@@ -22,7 +22,7 @@ export function MainContent() {
         updateFeed(action.data);
         updateBotRegistry(action);
         if (action.data?.state?.state?.includes("Stasis")) {
-          refresh();
+          refreshProfit();
         }
       }, 0);
     } else {
