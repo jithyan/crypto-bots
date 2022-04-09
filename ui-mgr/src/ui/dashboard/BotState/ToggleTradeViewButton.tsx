@@ -6,7 +6,7 @@ export function ToggleTradeViewButton({
   state,
   onClick,
 }: {
-  state: "trade" | "expand" | "collapse";
+  state: "trade" | "back";
   onClick: () => void;
 }) {
   if (state === "trade") {
@@ -21,7 +21,7 @@ export function ToggleTradeViewButton({
         {tradeIcon}
       </Badge>
     );
-  } else if (state === "collapse") {
+  } else if (state === "back") {
     return (
       <Badge
         color="light"

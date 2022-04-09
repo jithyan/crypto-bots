@@ -21,7 +21,9 @@ export const BotState = React.memo((props: IBotStateProps) => {
   } else if (viewState === "expanded") {
     return <ExpandedView {...props} changeViewState={changeViewState} />;
   } else if (viewState === "trade") {
-    return <TradeView />;
+    return (
+      <TradeView symbol={props.symbol} changeViewState={changeViewState} />
+    );
   } else {
     throw new Error("Unrecognized view state: " + viewState);
   }
