@@ -25,8 +25,7 @@ export const tradesCache = new NodeCache({
 }) as INodeCached<string, ITradeStatsResponse>;
 
 function getTradeCacheKey(symbol: string): string {
-  const today = toMySqlDate(new Date()).split(" ")[0];
-  return `${symbol}-${today}`;
+  return `${symbol}-trades`;
 }
 
 export function getTradeStatsForSymbolFromCache(symbol: string) {

@@ -50,8 +50,8 @@ export async function getTradeStatsForSymbol(
       [symbol, symbol]
     );
     const tradesRes = await conn.query(
-      "SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ? AND DATE(at_timestamp) = CURRENT_DATE();",
-      [symbol, symbol]
+      "SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ? AND DATE(at_timestamp) = CURRENT_DATE() ORDER BY at_timestamp DESC;",
+      [symbol]
     );
     conn.end();
 
