@@ -40,6 +40,10 @@ export function CompactStateView({
           onToggleViewClicked={() => changeViewState("expanded")}
           state="expand"
         />
+        <ToggleTradeViewButton
+          state="trade"
+          onClick={() => changeViewState("trade")}
+        />
         <Badge color="dark" textColor="light">
           Zzz.. {4 - iteration!}h left
         </Badge>

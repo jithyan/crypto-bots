@@ -4,6 +4,7 @@ import { TChangeViewState } from "./BotState";
 import { ToggleTradeViewButton } from "./ToggleTradeViewButton";
 import { ErrorBoundary } from "react-error-boundary";
 import axios from "axios";
+import Big from "big.js";
 
 export interface ITradeStatsResponse extends IAggregateTradeStats {
   trades: ITradeResponse;
@@ -135,7 +136,7 @@ export function TradeViewContainer({
 
 function TodaysTrades({ trades }: { trades: ITradeResponse }) {
   return (
-    <table className="table table-sm">
+    <table className="table table-striped table-sm">
       <thead>
         <th>
           <small>Time</small>
@@ -157,19 +158,21 @@ function TodaysTrades({ trades }: { trades: ITradeResponse }) {
         {trades.map(({ timestamp, value, price, profit, action }) => (
           <tr>
             <th scope="row">
-              <small>{timestamp}</small>
+              <small>{timestamp.split("T")[1].split(".")[0]}</small>
             </th>
             <td>
               <small>{action}</small>
             </td>
             <td>
-              <small>{price}</small>
+              <small>{new Big(price).round(4).toString()}</small>
             </td>
             <td>
-              <small>{value}</small>
+              <small>{new Big(value).round(2).toString()}</small>
             </td>
             <td>
-              <small>{profit}</small>
+              <small>
+                {action === "BUY" ? "N/A" : new Big(profit).round(3).toString()}
+              </small>
             </td>
           </tr>
         ))}
