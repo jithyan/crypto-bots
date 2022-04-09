@@ -3,6 +3,7 @@ import { selectorFamily, useRecoilValue } from "recoil";
 import { TChangeViewState } from "./BotState";
 import { ToggleTradeViewButton } from "./ToggleTradeViewButton";
 import { ErrorBoundary } from "react-error-boundary";
+import axios from "axios";
 
 export interface ITradeStatsResponse extends IAggregateTradeStats {
   trades: ITradeResponse;
@@ -18,31 +19,12 @@ export type ITradeResponse = Record<
 
 const getTradeStats = selectorFamily<ITradeStatsResponse, string>({
   key: "getTradeStats",
-  get: (symbol: string) => async () => {
-    await new Promise((res) => setTimeout(res, 1000));
-    return Promise.resolve({
-      numSold: "10",
-      numProfitableTrades: "9",
-      trades: [
-        {
-          timestamp: "12:30PM",
-          action: "BUY",
-          price: "240",
-          value: "24",
-          profit: "0",
-          amount: "0.1",
-        },
-        {
-          timestamp: "2:30PM",
-          action: "SELL",
-          amount: "0.1",
-          value: "48",
-          price: "480",
-          profit: "24",
-        },
-      ],
-    });
-  },
+  get: (symbol: string) => () =>
+    axios
+      .get<ITradeStatsResponse>(
+        `http://35.243.104.152:2000/db/tradestats/${symbol}`
+      )
+      .then((resp) => resp.data),
 });
 
 const spinner = (
