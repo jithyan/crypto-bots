@@ -1,5 +1,17 @@
 import z from "zod";
 
+export interface ITradeStatsResponse extends IAggregateTradeStats {
+  trades: ITradeResponse;
+}
+export type IAggregateTradeStats = Record<
+  "numSold" | "numProfitableTrades",
+  string
+>;
+export type ITradeResponse = Record<
+  "timestamp" | "action" | "price" | "value" | "profit" | "amount",
+  string
+>[];
+
 const TradeDbRow = z.object({
   symbol: z.string(),
   at_timestamp: z.string(),

@@ -12,6 +12,7 @@ import {
   addNewTradeToDb,
   allTimeProfit,
   allTimeProfitForSymbol,
+  getTradeStatsForSymbol,
 } from "./db/db.js";
 
 const app = express();
@@ -55,6 +56,21 @@ app.get("/trade/profit/:symbol", async (req, res) => {
 
     return res.status(200).json(result);
   } catch (error) {
+    return res.status(500).json({ status: "Failed", error });
+  }
+});
+
+app.get("/trade/stats/:symbol", async (req, res) => {
+  try {
+    const symbol = req.params.symbol;
+    const result = await getTradeStatsForSymbol(symbol);
+
+    return res.status(200).json(result);
+  } catch (error) {
+    logger.error("Failed getting agg trade stats", {
+      error,
+      symbol: req.params.symbol,
+    });
     return res.status(500).json({ status: "Failed", error });
   }
 });

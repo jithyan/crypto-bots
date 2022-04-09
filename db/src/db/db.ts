@@ -1,7 +1,12 @@
 import mariadb, { Pool, PoolConnection } from "mariadb";
 import { generateId, mapToInsertValues } from "./dbUtils.js";
 import { logger } from "../log.js";
-import { ITradeDbRow } from "../models.js";
+import {
+  IAggregateTradeStats,
+  ITradeDbRow,
+  ITradeStatsResponse,
+  ITradeResponse,
+} from "../models.js";
 import {
   dbCache,
   getAllTimeProfitFromCache,
@@ -24,6 +29,67 @@ function getConnection(): Promise<PoolConnection> {
   }
 
   return db.pool.getConnection();
+}
+
+export async function getTradeStatsForSymbol(
+  inputSymbol: string
+): Promise<any> {
+  const symbol = inputSymbol?.toUpperCase().trim() ?? "";
+
+  try {
+    const conn = await getConnection();
+    const aggRes = await conn.query(
+      'SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL") AS A JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0) AS B ON A.symbol = B.symbol;',
+      [symbol, symbol]
+    );
+    const tradesRes = await conn.query(
+      "SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ?;",
+      [symbol, symbol]
+    );
+    conn.end();
+
+    const aggStats = parseAggTradeStats(aggRes);
+    const trades = parseTodaysTrades(tradesRes);
+
+    const result: ITradeStatsResponse = {
+      ...aggStats,
+      trades,
+    };
+
+    return result;
+  } catch (err) {
+    logger.error("Failed getting aggregate trade stats for symbol", err);
+  }
+}
+
+function parseAggTradeStats(res: any): IAggregateTradeStats {
+  const data = res?.[0];
+  if (!data) {
+    return {
+      numSold: "0",
+      numProfitableTrades: "0",
+    };
+  }
+
+  return {
+    numSold: data.num_sold?.toString() ?? "0",
+    numProfitableTrades: data.num_profitable?.toString() ?? "0",
+  };
+}
+
+function parseTodaysTrades(res: any): ITradeResponse {
+  if (!res || !Array.isArray(res)) {
+    return [];
+  }
+
+  return res.map((d: any) => ({
+    timestamp: d.at_timestamp ?? "",
+    action: d.action ?? "",
+    price: d.price?.toString() ?? "",
+    value: d.busd_value?.toString() ?? "",
+    profit: d.profit?.toString() ?? "",
+    amount: d.amount?.toString() ?? "",
+  }));
 }
 
 export async function addNewTradeToDb(
