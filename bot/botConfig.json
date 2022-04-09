@@ -1,8 +1,4 @@
 {
-  "comment": {
-    "skip": true,
-    "number of bots left": 0
-  },
   "nulsbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -44,5 +40,9 @@
     "SLEEP_STRATEGY": "3m",
     "POST_SELL_SLEEP": "6",
     "PUMP_INC": "1.015"
+  },
+  "comment": {
+    "skip": true,
+    "number of bots left": 3
   }
 }
