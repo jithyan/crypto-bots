@@ -1,4 +1,5 @@
 import NodeCache from "node-cache";
+import { toMySqlDate } from "./dbUtils";
 
 interface INodeCached<K, V> {
   get: (key: K) => V | undefined;
@@ -6,7 +7,7 @@ interface INodeCached<K, V> {
   del: (key: K) => number;
 }
 
-export const dbCache = new NodeCache({
+export const profitCache = new NodeCache({
   stdTTL: 60 * 60 * 24,
   useClones: true,
   checkperiod: 60 * 60 * 12,
@@ -14,17 +15,39 @@ export const dbCache = new NodeCache({
   maxKeys: 325,
 }) as INodeCached<"profit_allsymbols" | string, string>;
 
+export const tradesCache = new NodeCache({
+  stdTTL: 60 * 60 * 24,
+  useClones: true,
+  checkperiod: 60 * 60 * 24,
+  deleteOnExpire: true,
+  maxKeys: 325,
+});
+
+function getTradeCacheKey(symbol: string): string {
+  const today = toMySqlDate(new Date()).split(" ")[0];
+  return `${symbol}-${today}`;
+}
+
+export function getTradeStatsForSymbolFromCache(symbol: string) {
+  return tradesCache.get(getTradeCacheKey(symbol));
+}
+
+export function setTradeStatsForSymbolFromCache(symbol: string, newValue: any) {
+  tradesCache.set(getTradeCacheKey(symbol), newValue);
+}
+
 export function getAllTimeProfitFromCache(): string | undefined {
-  const res = dbCache.get("profit_allsymbols");
+  const res = profitCache.get("profit_allsymbols");
 
   return typeof res === "string" ? res : undefined;
 }
 
 export function setAllTimeProfitCache(newValue: string): void {
-  dbCache.set("profit_allsymbols", newValue);
+  profitCache.set("profit_allsymbols", newValue);
 }
 
 export function updateCacheOnNewTrade(symbol: string) {
-  dbCache.del("profit_allsymbols");
-  dbCache.del(symbol);
+  profitCache.del("profit_allsymbols");
+  profitCache.del(symbol);
+  profitCache.del(getTradeCacheKey(symbol));
 }

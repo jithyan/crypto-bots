@@ -8,7 +8,7 @@ import {
   ITradeResponse,
 } from "../models.js";
 import {
-  dbCache,
+  profitCache,
   getAllTimeProfitFromCache,
   setAllTimeProfitCache,
   updateCacheOnNewTrade,
@@ -116,7 +116,7 @@ export async function addNewTradeToDb(
 export async function allTimeProfitForSymbol(
   symbol: string
 ): Promise<ITotalProfitResult> {
-  const cachedResult = dbCache.get(symbol);
+  const cachedResult = profitCache.get(symbol);
   if (typeof cachedResult === "string") {
     return { total_profit: cachedResult };
   }
@@ -130,7 +130,7 @@ export async function allTimeProfitForSymbol(
     conn.end();
 
     const profit = parseProfitResult(res);
-    dbCache.set(symbol, profit.total_profit);
+    profitCache.set(symbol, profit.total_profit);
 
     return profit;
   } catch (err: any) {
