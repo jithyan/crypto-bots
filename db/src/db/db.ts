@@ -12,6 +12,8 @@ import {
   getAllTimeProfitFromCache,
   setAllTimeProfitCache,
   updateCacheOnNewTrade,
+  getTradeStatsForSymbolFromCache,
+  setTradeStatsForSymbolFromCache,
 } from "./cache.js";
 
 export const db: Record<"pool", Pool | null> = {
@@ -36,6 +38,11 @@ export async function getTradeStatsForSymbol(
 ): Promise<any> {
   const symbol = inputSymbol?.toUpperCase().trim() ?? "";
 
+  const cachedRes = getTradeStatsForSymbolFromCache(symbol);
+  if (cachedRes) {
+    return cachedRes;
+  }
+
   try {
     const conn = await getConnection();
     const aggRes = await conn.query(
@@ -55,6 +62,8 @@ export async function getTradeStatsForSymbol(
       ...aggStats,
       trades,
     };
+
+    setTradeStatsForSymbolFromCache(symbol, result);
 
     return result;
   } catch (err) {

@@ -1,4 +1,5 @@
 import NodeCache from "node-cache";
+import { ITradeStatsResponse } from "../models";
 import { toMySqlDate } from "./dbUtils";
 
 interface INodeCached<K, V> {
@@ -21,7 +22,7 @@ export const tradesCache = new NodeCache({
   checkperiod: 60 * 60 * 24,
   deleteOnExpire: true,
   maxKeys: 325,
-});
+}) as INodeCached<string, ITradeStatsResponse>;
 
 function getTradeCacheKey(symbol: string): string {
   const today = toMySqlDate(new Date()).split(" ")[0];
@@ -32,7 +33,10 @@ export function getTradeStatsForSymbolFromCache(symbol: string) {
   return tradesCache.get(getTradeCacheKey(symbol));
 }
 
-export function setTradeStatsForSymbolFromCache(symbol: string, newValue: any) {
+export function setTradeStatsForSymbolFromCache(
+  symbol: string,
+  newValue: ITradeStatsResponse
+) {
   tradesCache.set(getTradeCacheKey(symbol), newValue);
 }
 
