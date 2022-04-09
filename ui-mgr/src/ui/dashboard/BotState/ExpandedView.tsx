@@ -69,7 +69,8 @@ export const ExpandedView = ({
         </CardBodyItem>
         <CardBodyItem show={isInPostSellStasis}>
           <Badge color="dark" textColor="light">
-            Sleeping after selling. {4 - iteration!} hours left
+            Sleeping after selling.{" "}
+            {parseInt(config.postSellSleep) - iteration!} hours left: ;
           </Badge>
         </CardBodyItem>
       </ExpandedViewCard>

@@ -22,6 +22,7 @@ export function CompactStateView({
   symbol,
   iteration,
   changeViewState,
+  config,
 }: {
   symbol: string;
   changeViewState: TChangeViewState;
@@ -45,7 +46,7 @@ export function CompactStateView({
           onClick={() => changeViewState("trade")}
         />
         <Badge color="dark" textColor="light">
-          Zzz.. {4 - iteration!}h left
+          Zzz.. {parseInt(config.postSellSleep) - iteration!}h left
         </Badge>
       </StateErrorBoundary>
     );
