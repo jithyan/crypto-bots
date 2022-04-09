@@ -29,7 +29,11 @@ import {
   getBotUpdate,
 } from "./socketStream.js";
 import rateLimit from "express-rate-limit";
-import { getAllTimeProfit, getProfitForSymbol } from "./tradeDb.js";
+import {
+  getAllTimeProfit,
+  getProfitForSymbol,
+  getTradeStatsForSymbol,
+} from "./tradeDb.js";
 
 const apiLimiter = rateLimit({
   windowMs: 3 * 60 * 1000, // 10 minutes
@@ -112,6 +116,16 @@ app.get("/db/profit", async (req, res) => {
   try {
     const profit = await getAllTimeProfit();
     res.status(200).json({ profit });
+  } catch (err) {
+    logger.error("Failed getting total profit", err);
+    return res.status(500).json({ status: "Failed" });
+  }
+});
+
+app.get("/db/tradestats/:symbol", async (req, res) => {
+  try {
+    const resp = await getTradeStatsForSymbol(req.params.symbol ?? "not-set");
+    res.status(200).json(resp);
   } catch (err) {
     logger.error("Failed getting total profit", err);
     return res.status(500).json({ status: "Failed" });

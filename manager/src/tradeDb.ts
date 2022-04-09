@@ -28,3 +28,12 @@ export async function getAllTimeProfit(): Promise<string> {
     return "0";
   }
 }
+
+export async function getTradeStatsForSymbol(symbol: string): Promise<any> {
+  const resp = await request<{ total_profit: string }>({
+    baseURL: "http://0.0.0.0:2001",
+    url: `/trade/stats/${symbol}`,
+    method: "GET",
+  });
+  return resp.data;
+}
