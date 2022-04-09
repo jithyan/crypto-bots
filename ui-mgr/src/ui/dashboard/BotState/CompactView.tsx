@@ -11,6 +11,8 @@ import {
 import { PriceTrendIcon } from "../Icons";
 import { StateErrorBoundary } from "./BotStateErrorBoundary";
 import { ToggleStateButton } from "./ToggleStateViewButton";
+import { ToggleTradeViewButton } from "./ToggleTradeViewButton";
+import { TChangeViewState } from "./BotState";
 
 export function CompactStateView({
   priceTrendState = "",
@@ -19,10 +21,10 @@ export function CompactStateView({
   lastPurchasePrice = "",
   symbol,
   iteration,
-  onToggleViewClicked,
+  changeViewState,
 }: {
   symbol: string;
-  onToggleViewClicked: () => void;
+  changeViewState: TChangeViewState;
 } & IBotStateDetails) {
   const holdsVolatileAsset = state.includes("Volatile");
   const formattedTickerPrice = useAnimateNumber(tickerPrice, 3);
@@ -35,7 +37,7 @@ export function CompactStateView({
     return (
       <StateErrorBoundary>
         <ToggleStateButton
-          onToggleViewClicked={onToggleViewClicked}
+          onToggleViewClicked={() => changeViewState("expanded")}
           state="expand"
         />
         <Badge color="dark" textColor="light">
@@ -48,8 +50,12 @@ export function CompactStateView({
   return (
     <StateErrorBoundary>
       <ToggleStateButton
-        onToggleViewClicked={onToggleViewClicked}
+        onToggleViewClicked={() => changeViewState("expanded")}
         state="expand"
+      />
+      <ToggleTradeViewButton
+        state="trade"
+        onClick={() => changeViewState("trade")}
       />
       <AssetStateBadge assetState={state} />{" "}
       <PriceTrendIcon trendState={priceTrendState} />{" "}

@@ -9,7 +9,7 @@ import {
 } from "../Badges";
 import { PriceTrendIcon } from "../Icons";
 import { useIsUpdatingOnChange } from "../useIsUpdatingOnChange";
-import type { IBotStateProps } from "./BotState";
+import type { IBotStateProps, TChangeViewState } from "./BotState";
 import { StateErrorBoundary } from "./BotStateErrorBoundary";
 import { ToggleStateButton } from "./ToggleStateViewButton";
 
@@ -22,9 +22,9 @@ export const ExpandedView = ({
   lastCheckIn,
   status,
   iteration,
-  onToggleViewClicked,
+  changeViewState,
 }: IBotStateProps & {
-  onToggleViewClicked: () => void;
+  changeViewState: TChangeViewState;
 }): JSX.Element => {
   const isInPostSellStasis = state === "PostSellStasis";
   const isHoldingVolatileAsset =
@@ -33,7 +33,7 @@ export const ExpandedView = ({
   return (
     <StateErrorBoundary>
       <ExpandedViewCard
-        onToggleViewClicked={onToggleViewClicked}
+        onToggleViewClicked={() => changeViewState("compact")}
         state={state}
         lastCheckIn={lastCheckIn}
         status={status}
@@ -190,7 +190,7 @@ const CardFooter = (props: IBotStateDetails["config"]) => {
   );
 };
 
-function ExpandedCardContainer({
+export function ExpandedCardContainer({
   children,
   status,
   lastCheckIn,
