@@ -1077,10 +1077,6 @@
     "POST_SELL_SLEEP": "6",
     "PUMP_INC": "1.015"
   },
-  "comment": {
-    "skip": true,
-    "number of bots left": 0
-  },
   "sklbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -1314,6 +1310,24 @@
     "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
     "STOP_LOSS_THRESHOLD": " 0.15",
     "SLEEP_STRATEGY": "15m",
+    "POST_SELL_SLEEP": "4",
+    "PUMP_INC": "1.015"
+  },
+  "comment": {
+    "skip": true,
+    "number of bots left": 4
+  },
+  "stmxbusd": {
+    "skip": false,
+    "EXCHANGE": "binance",
+    "RUN_BOT_ON_STARTUP": "true",
+    "MAX_BUY_AMOUNT": "25",
+    "VOLATILE_COIN": "STMX",
+    "STABLE_COIN": "BUSD",
+    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
+    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
+    "STOP_LOSS_THRESHOLD": " 0.15",
+    "SLEEP_STRATEGY": "6m",
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": "1.015"
   }
