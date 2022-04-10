@@ -57,12 +57,19 @@ const holdVolatileAssetIcon = (
     V
   </Badge>
 );
+const postSellStasisIcon = (
+  <Badge rounded={true} color="dark" textColor="light">
+    Zzz..
+  </Badge>
+);
 
 export const AssetStateBadge = ({ assetState }: { assetState: string }) => {
   if (assetState.includes("HoldStable")) {
     return holdStableAssetIcon;
   } else if (assetState.includes("Order")) {
     return orderPlacedIcon;
+  } else if (assetState.includes("Stasis")) {
+    return postSellStasisIcon;
   } else {
     return holdVolatileAssetIcon;
   }
