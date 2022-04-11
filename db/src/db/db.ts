@@ -46,7 +46,7 @@ export async function getTradeStatsForSymbol(
   try {
     const conn = await getConnection();
     const aggRes = await conn.query(
-      'SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL") AS A JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0) AS B ON A.symbol = B.symbol;',
+      'SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL") AS A CROSS JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0) AS B;',
       [symbol, symbol]
     );
     const tradesRes = await conn.query(
