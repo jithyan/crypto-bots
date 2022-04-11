@@ -365,7 +365,7 @@
     "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "100",
+    "MAX_BUY_AMOUNT": "25",
     "VOLATILE_COIN": "BICO",
     "STABLE_COIN": "BUSD",
     "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
