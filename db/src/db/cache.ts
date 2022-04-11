@@ -1,6 +1,5 @@
 import NodeCache from "node-cache";
 import { ITradeStatsResponse } from "../models";
-import { toMySqlDate } from "./dbUtils";
 
 interface INodeCached<K, V> {
   get: (key: K) => V | undefined;
@@ -9,22 +8,23 @@ interface INodeCached<K, V> {
 }
 
 export const profitCache = new NodeCache({
-  stdTTL: 60 * 60 * 24,
+  stdTTL: 60 * 60 * 12,
   useClones: true,
-  checkperiod: 60 * 60 * 12,
+  checkperiod: 60 * 60 * 6,
   deleteOnExpire: true,
   maxKeys: 325,
 }) as INodeCached<"profit_allsymbols" | string, string>;
+const ALL_SYMBOLS_PROFITS_KEY = "profit_allsymbols";
 
 export const tradesCache = new NodeCache({
-  stdTTL: 60 * 60 * 24,
+  stdTTL: 60 * 60 * 12,
   useClones: true,
-  checkperiod: 60 * 60 * 24,
+  checkperiod: 60 * 60 * 6,
   deleteOnExpire: true,
-  maxKeys: 325,
 }) as INodeCached<string, ITradeStatsResponse>;
 
-function getTradeCacheKey(symbol: string): string {
+function getTradeCacheKey(inputSymbol: string): string {
+  const symbol = inputSymbol.toUpperCase();
   return `${symbol}-trades`;
 }
 
@@ -33,24 +33,26 @@ export function getTradeStatsForSymbolFromCache(symbol: string) {
 }
 
 export function setTradeStatsForSymbolFromCache(
-  symbol: string,
+  inputSymbol: string,
   newValue: ITradeStatsResponse
 ) {
+  const symbol = inputSymbol.toUpperCase();
   tradesCache.set(getTradeCacheKey(symbol), newValue);
 }
 
 export function getAllTimeProfitFromCache(): string | undefined {
-  const res = profitCache.get("profit_allsymbols");
+  const res = profitCache.get(ALL_SYMBOLS_PROFITS_KEY);
 
   return typeof res === "string" ? res : undefined;
 }
 
 export function setAllTimeProfitCache(newValue: string): void {
-  profitCache.set("profit_allsymbols", newValue);
+  profitCache.set(ALL_SYMBOLS_PROFITS_KEY, newValue);
 }
 
-export function updateCacheOnNewTrade(symbol: string) {
-  profitCache.del("profit_allsymbols");
+export function updateCacheOnNewTrade(inputSymbol: string) {
+  const symbol = inputSymbol.toUpperCase();
+  profitCache.del(ALL_SYMBOLS_PROFITS_KEY);
   profitCache.del(symbol);
-  profitCache.del(getTradeCacheKey(symbol));
+  tradesCache.del(getTradeCacheKey(symbol));
 }
