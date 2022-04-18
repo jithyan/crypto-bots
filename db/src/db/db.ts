@@ -68,6 +68,7 @@ ORDER BY C.total_profit, success_rate, A.num_sold DESC;
 `;
     const conn = await getConnection();
     const result = await conn.execute(query);
+    conn.end();
   } catch (e) {}
 }
 
