@@ -33,6 +33,44 @@ function getConnection(): Promise<PoolConnection> {
   return db.pool.getConnection();
 }
 
+export async function performanceReport() {
+  try {
+    const query = `
+SELECT 
+  A.symbol,
+  C.total_profit, 
+  ((B.num_profitable/A.num_sold) * 100.0) AS success_rate, 
+  A.num_sold 
+FROM 
+  (SELECT 
+    symbol, 
+    COUNT(action) as num_sold 
+  FROM trades 
+  WHERE action="SELL" 
+  GROUP BY symbol) AS A 
+  CROSS JOIN (
+    SELECT 
+      symbol, 
+      COUNT(action) as num_profitable 
+    FROM trades 
+    WHERE action="SELL" AND profit > 0 
+    GROUP BY symbol) AS B 
+  ON B.symbol = A.symbol
+  CROSS JOIN (
+    SELECT 
+      symbol, 
+      SUM(profit) AS total_profit 
+    FROM trades 
+    WHERE action = "SELL" 
+    GROUP BY symbol HAVING total_profit < 0) AS C 
+  ON A.symbol=C.symbol
+ORDER BY C.total_profit, success_rate, A.num_sold DESC;
+`;
+    const conn = await getConnection();
+    const result = await conn.execute(query);
+  } catch (e) {}
+}
+
 export async function getTradeStatsForSymbol(
   inputSymbol: string
 ): Promise<any> {
