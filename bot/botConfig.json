@@ -847,21 +847,6 @@
     "POST_SELL_SLEEP": "6",
     "PUMP_INC": "1.015"
   },
-  "sklbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "SKL",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.98",
-    "STOP_LOSS_THRESHOLD": " 0.05",
-    "SLEEP_STRATEGY": "3m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "12"
-  },
-
   "multibusd": {
     "skip": false,
     "EXCHANGE": "binance",
