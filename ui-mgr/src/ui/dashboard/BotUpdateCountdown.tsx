@@ -1,4 +1,3 @@
-//@ts-ignore
 import React, { useEffect, useState, startTransition } from "react";
 import { getSecondsTillNextCheckIn } from "../../utils/date";
 import { Badge } from "./Badges";

@@ -1,7 +1,5 @@
 import Big from "big.js";
-import { useState, useEffect } from "react";
-//@ts-ignore
-import { startTransition } from "react";
+import { useState, useEffect, startTransition } from "react";
 
 export function useAnimateNumber(
   num: string,

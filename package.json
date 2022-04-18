@@ -18,13 +18,10 @@
     "util": "yarn workspace common-util",
     "anal": "yarn workspace analysis",
     "db": "yarn workspace db",
-    "upgrade:db": "yarn db add --dev typescript esbuild pkg",
-    "upgrade:bot": "yarn bot add --dev typescript esbuild pkg",
-    "upgrade:mgr": "yarn mgr add --dev typescript esbuild pkg",
-    "upgrade:ui": "yarn ui add --dev typescript snowpack @types/react @types/react-dom && yarn ui add react react-dom",
-    "upgrade:util": "yarn util add --dev typescript",
-    "upgrade:anal": "yarn anal add --dev typescript",
-    "upgrade-devdeps": "yarn upgrade:ui && yarn upgrade:util && yarn upgrade:bot && yarn upgrade:mgr && yarn upgrade:anal && yarn upgrade:db",
+    "upgrade:typescript": "yarn workspaces foreach add --dev typescript",
+    "upgrade:build": "yarn workspaces foreach --exclude '{common-util,analysis,ui}' add --dev esbuild pkg",
+    "upgrade:ui": "yarn upgrade:typescript && yarn ui add --dev snowpack @types/react @types/react-dom && yarn ui add react react-dom",
+    "upgrade-devdeps": "yarn upgrade:typescript && yarn upgrade:build && yarn upgrade:ui",
     "format": "prettier --write \"**/src/**/*.ts*\"",
     "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\"",
     "build:ui:cloud": "gcloud builds submit --tag gcr.io/crypto-bot-341604/crypto-ui",
@@ -33,7 +30,10 @@
   "devDependencies": {
     "@types/event-stream": "^4.0.0",
     "concurrently": "^7.0.0",
+    "esbuild": "^0.14.36",
+    "pkg": "^5.6.0",
     "prettier": "^2.5.1",
+    "typescript": "^4.6.3",
     "zx": "5.1.0"
   },
   "dependencies": {

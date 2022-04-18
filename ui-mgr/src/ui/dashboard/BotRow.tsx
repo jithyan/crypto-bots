@@ -1,4 +1,3 @@
-//@ts-ignore
 import React, { useState, startTransition } from "react";
 import { formatAsUsd, formatIsoDate } from "../../utils/format";
 import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";

@@ -1,4 +1,3 @@
-//@ts-ignore
 import React, { useState, startTransition } from "react";
 import { useBotFilter, useBotSortMethod } from "../../state";
 import { NavBarDropdown, NavBarDropdownItem } from "./NavBar/NavBarDropdown";
