@@ -5,7 +5,9 @@
   "version": "9.1.0",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "pkg": "yarn build && yarn pack --out ./%s-%v.tgz",
+    "pkg:patch": "yarn build && yarn version patch && yarn pack --out ./%s-%v.tgz",
+    "pkg:minor": "yarn build && yarn version minor && yarn pack --out ./%s-%v.tgz",
+    "pkg:major": "yarn build && yarn version major && yarn pack --out ./%s-%v.tgz",
     "build": "tsc"
   },
   "dependencies": {
