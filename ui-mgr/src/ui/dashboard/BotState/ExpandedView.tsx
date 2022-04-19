@@ -1,4 +1,4 @@
-import type { IBotStateDetails } from "common-util";
+import type { IBotStateDetails } from "@jithyan/lib";
 import React from "react";
 import { formatAsUsd, formatPct } from "../../../utils/format";
 import {

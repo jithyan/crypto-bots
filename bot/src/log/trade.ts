@@ -6,7 +6,7 @@ import DailyRotateFile from "winston-daily-rotate-file";
 import type { IWallet, TSupportedCoins } from "../exchange/index.js";
 import axios from "axios";
 import { generalLogger } from "./general.js";
-import { IDbTradePayload } from "common-util";
+import { IDbTradePayload } from "@jithyan/lib";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",

@@ -1,5 +1,5 @@
-import type { IBotStateDetails, TBotStatus } from "common-util";
-import React, { useCallback, useState } from "react";
+import type { IBotStateDetails, TBotStatus } from "@jithyan/lib";
+import React, { useState } from "react";
 import { CompactStateView } from "./CompactView";
 import { ExpandedView } from "./ExpandedView";
 import { TradeView } from "./TradeView";

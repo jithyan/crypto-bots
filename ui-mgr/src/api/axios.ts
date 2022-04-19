@@ -1,5 +1,5 @@
 import axiosDefault from "axios";
-import { getTimestampPepper } from "common-util";
+import { getTimestampPepper } from "@jithyan/lib";
 import { Password } from "../ui/password/PasswordContext";
 
 export const axios = axiosDefault.create({

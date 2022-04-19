@@ -1,4 +1,4 @@
-import type { TBotStatus } from "common-util";
+import type { TBotStatus } from "@jithyan/lib";
 import {
   atom,
   selector,

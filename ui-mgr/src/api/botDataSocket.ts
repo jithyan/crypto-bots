@@ -5,7 +5,7 @@ import type {
   IBotInfoStream,
   IBotStatusUpdate,
   IBotRemovalUpdate,
-} from "common-util";
+} from "@jithyan/lib";
 
 const socket = io("ws://35.243.104.152:2000");
 

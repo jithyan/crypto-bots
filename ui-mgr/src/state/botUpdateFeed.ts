@@ -1,6 +1,6 @@
 import { atom, selector, useRecoilState } from "recoil";
 import { List } from "immutable";
-import type { IBotInfoStream } from "common-util";
+import type { IBotInfoStream } from "@jithyan/lib";
 import Big from "big.js";
 import { botInfoFor, getBotInfo, ImmutableBotMap } from "./botRegistry";
 import { formatIsoDate } from "../utils/format";

@@ -5,8 +5,8 @@ import {
   useSetRecoilState,
 } from "recoil";
 import { Collection, Map } from "immutable";
-import type { IBotInfoStream } from "common-util";
-import { useCallback, useMemo } from "react";
+import type { IBotInfoStream } from "@jithyan/lib";
+import { useCallback } from "react";
 import type { BotEventData } from "../api/botDataSocket";
 
 export function useUpdateBotRegistry() {

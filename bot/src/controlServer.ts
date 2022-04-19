@@ -1,6 +1,6 @@
 import express from "express";
 import helmet from "helmet";
-import { getBotFilePath } from "common-util";
+import { getBotFilePath } from "@jithyan/lib";
 import { Config } from "./config.js";
 import { generalLogger } from "./log/index.js";
 import axios, { AxiosError } from "axios";

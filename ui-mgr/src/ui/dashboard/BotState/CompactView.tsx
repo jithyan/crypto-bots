@@ -1,5 +1,5 @@
 import React from "react";
-import type { IBotStateDetails } from "common-util";
+import type { IBotStateDetails } from "@jithyan/lib";
 import { formatAsUsd } from "../../../utils/format";
 import { useAnimateNumber } from "../../../utils/useAnimateNumber";
 import {

@@ -20,7 +20,7 @@ import {
   getTimestampPepper,
   TBotStatus,
   TBotStatusEvent,
-} from "common-util";
+} from "@jithyan/lib";
 import { saveState } from "./tasks/saveState.js";
 import {
   getBotRemovalUpdate,

@@ -1,5 +1,5 @@
 import h from "xxhashjs";
-import { TBotInfoReq, TBotStatus } from "common-util";
+import { TBotInfoReq, TBotStatus } from "@jithyan/lib";
 
 export interface IBotInfo extends TBotInfoReq {
   status: TBotStatus;

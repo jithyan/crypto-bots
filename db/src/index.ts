@@ -4,7 +4,7 @@ import helmet from "helmet";
 import http from "http";
 import { parseISO } from "date-fns";
 import Big from "big.js";
-import { IDbTradePayload, DbTradePayload } from "common-util";
+import { IDbTradePayload, DbTradePayload } from "@jithyan/lib";
 import { toMySqlDate } from "./db/dbUtils.js";
 import { ITradeDbRow } from "./models.js";
 import { logger } from "./log.js";

@@ -20,7 +20,7 @@
     "@types/node-cache": "^4.2.5",
     "concurrently": "^7.0.0",
     "dotenv": "^16.0.0",
-    "esbuild": "^0.14.36",
+    "esbuild": "^0.14.37",
     "nodemon": "^2.0.15",
     "pkg": "^5.6.0",
     "rimraf": "^3.0.2",
@@ -29,7 +29,6 @@
   },
   "dependencies": {
     "big.js": "^6.1.1",
-    "common-util": "../common-util/common-util-9.1.0.tgz",
     "cors": "^2.8.5",
     "date-fns": "^2.28.0",
     "express": "^4.17.3",

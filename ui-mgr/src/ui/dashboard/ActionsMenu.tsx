@@ -1,4 +1,4 @@
-import type { TBotActions, TBotAvailableActions } from "common-util";
+import type { TBotActions, TBotAvailableActions } from "@jithyan/lib";
 import React from "react";
 import { sendCommandToBot } from "../../api";
 import { usePasswordContext } from "../password";

@@ -5,7 +5,7 @@ import {
   mapBotLastStateToStateDetails,
   TBotAvailableActions,
   TBotStatus,
-} from "common-util";
+} from "@jithyan/lib";
 import { getBotRegisterIds, botRegister } from "./models.js";
 
 function getAvailableActionsForBot(status: TBotStatus): TBotAvailableActions {

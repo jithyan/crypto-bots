@@ -1,0 +1,21 @@
+{
+  "name": "lib",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "version": "9.1.0",
+  "packageManager": "yarn@3.2.0",
+  "scripts": {
+    "pkg:patch": "yarn build && yarn version patch && yarn pack --out ./%s-%v.tgz",
+    "pkg:minor": "yarn build && yarn version minor && yarn pack --out ./%s-%v.tgz",
+    "pkg:major": "yarn build && yarn version major && yarn pack --out ./%s-%v.tgz",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "xxhashjs": "^0.2.2",
+    "zod": "^3.14.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "typescript": "^4.6.3"
+  }
+}
