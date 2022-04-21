@@ -1063,7 +1063,7 @@
     "PUMP_INC": "1.015"
   },
   "quickbusd": {
-    "skip": true,
+    "skip": false,
     "EXCHANGE": "binance",
     "RUN_BOT_ON_STARTUP": "true",
     "MAX_BUY_AMOUNT": "25",
