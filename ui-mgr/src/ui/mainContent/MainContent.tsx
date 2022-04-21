@@ -41,7 +41,6 @@ export function MainContent() {
   ) : (
     <>
       <ControlPanel />
-
       <Dashboard data={sortedData} changes={feed} />
     </>
   );

@@ -4,6 +4,7 @@ export {
   useBotSortMethod,
   useSortedAndFilteredBots,
   useBotFilter,
+  useBotFilterQueryValue,
 } from "./botFilterSort";
 export { queryProfit } from "./profit";
 export type { ImmutableBotMap as ImmutableBotInfo } from "./botRegistry";

@@ -55,6 +55,10 @@ export const filteredBotData = selector({
   },
 });
 
+export function useBotFilterQueryValue() {
+  return useRecoilValue(filterMethod).value;
+}
+
 export function useBotFilter() {
   return useSetRecoilState(filterMethod);
 }
