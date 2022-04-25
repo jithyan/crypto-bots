@@ -18,6 +18,7 @@ import { Config } from "./config.js";
 import {
   BotInfoReq,
   getTimestampPepper,
+  IBotStatusUpdate,
   TBotStatus,
   TBotStatusEvent,
 } from "@jithyan/lib";
@@ -240,11 +241,12 @@ app.post("/bots/shutdown/all", async (req, res) => {
   }
 });
 
+const validStartupStates: Set<TBotStatus> = new Set(["OFFLINE", "NOT WORKING"]);
 app.post("/bots/startup", (req, res) => {
   const { id } = BotActionRequest.parse(req.body);
   if (!botRegister.state.hasOwnProperty(id)) {
     return res.status(404).json({ status: "Id not found" });
-  } else if (botRegister.state[id].status !== "OFFLINE") {
+  } else if (!validStartupStates.has(botRegister.state[id].status)) {
     return res
       .status(400)
       .json({ status: "Bot needs to be offline to start up" });
