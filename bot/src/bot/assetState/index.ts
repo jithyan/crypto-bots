@@ -90,9 +90,7 @@ export function hydrate(
     isStableAssetClass,
     decisionEngine,
     sleep: getSleepStrategy(sleepStrategy),
-    postSellSleep: Number(
-      postSellSleep ? postSellSleep : Config.POST_SELL_SLEEP
-    ),
+    postSellSleep: Number(Config.POST_SELL_SLEEP),
   };
 
   switch (state as TAssetStates) {

@@ -20,7 +20,7 @@
     "db": "yarn workspace db",
     "build:mgr": "nx run manager:make",
     "build:db": "nx run db:make",
-    "build:ui": "nx run ui-mgr:build",
+    "build:ui": "nx run ui:build",
     "upgrade:typescript": "yarn workspaces foreach add --dev typescript",
     "upgrade:build": "yarn workspaces foreach --exclude '{lib,analysis,ui}' add --dev esbuild pkg",
     "upgrade:ui": "yarn upgrade:typescript && yarn ui add --dev vite @vitejs/plugin-react @types/react @types/react-dom && yarn ui add react react-dom",
