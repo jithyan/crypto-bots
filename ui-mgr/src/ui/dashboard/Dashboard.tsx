@@ -14,7 +14,7 @@ export function Dashboard({
 }) {
   const filterQuery = useBotFilterQueryValue();
   const [sortMethod] = useBotSortMethod();
-  const deferredFilterQuery = useDeferredValue(filterQuery);
+  const deferredDataListChange = useDeferredValue(data.count());
 
   const deferredBotRows = useMemo(() => {
     let index = 0;
@@ -23,7 +23,7 @@ export function Dashboard({
         <BotRow key={`row-${++index}-${id}`} index={index} id={id} />
       ))
       .toList();
-  }, [sortMethod, deferredFilterQuery]);
+  }, [sortMethod, deferredDataListChange]);
 
   return (
     <>
