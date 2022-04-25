@@ -80,20 +80,7 @@
     "PUMP_INC": "1.02",
     "POST_SELL_SLEEP": "12"
   },
-  "alphabusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "ALPHA",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "15m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "12"
-  },
+
   "antbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -122,20 +109,7 @@
     "PUMP_INC": "",
     "POST_SELL_SLEEP": "12"
   },
-  "api3busd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "API3",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "6m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "4"
-  },
+
   "arbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -178,20 +152,7 @@
     "PUMP_INC": "",
     "POST_SELL_SLEEP": "6"
   },
-  "atmbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "ATM",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "15m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "9"
-  },
+
   "atombusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -207,20 +168,6 @@
     "POST_SELL_SLEEP": "9"
   },
 
-  "bakebusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "BAKE",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "6m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "4"
-  },
   "batbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -233,34 +180,6 @@
     "STOP_LOSS_THRESHOLD": " 0.15",
     "SLEEP_STRATEGY": "3m",
     "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "4"
-  },
-  "betabusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "BETA",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "15m",
-    "PUMP_INC": "",
-    "POST_SELL_SLEEP": "6"
-  },
-  "bicobusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "BICO",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "3m",
-    "PUMP_INC": "",
     "POST_SELL_SLEEP": "4"
   },
 
@@ -363,20 +282,6 @@
     "PUMP_INC": "1.015",
     "POST_SELL_SLEEP": "4"
   },
-  "cosbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "COS",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "3m",
-    "PUMP_INC": "",
-    "POST_SELL_SLEEP": "4"
-  },
 
   "clvbusd": {
     "skip": false,
@@ -421,20 +326,6 @@
     "PUMP_INC": "",
     "POST_SELL_SLEEP": "4"
   },
-  "dentbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "DENT",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "15m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "12"
-  },
 
   "dntbusd": {
     "skip": false,
@@ -465,48 +356,7 @@
     "PUMP_INC": "1.015",
     "POST_SELL_SLEEP": "4"
   },
-  "farmbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "FARM",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.07",
-    "SLEEP_STRATEGY": "9m",
-    "PUMP_INC": "",
-    "POST_SELL_SLEEP": "4"
-  },
-  "hntbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "HNT",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "9m",
-    "PUMP_INC": "",
-    "POST_SELL_SLEEP": "4"
-  },
-  "hotbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "HOT",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "9m",
-    "PUMP_INC": "1.015",
-    "POST_SELL_SLEEP": "6"
-  },
+
   "icpbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -550,20 +400,7 @@
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": ""
   },
-  "glmrbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "GLMR",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "6m",
-    "POST_SELL_SLEEP": "6",
-    "PUMP_INC": "1.015"
-  },
+
   "gmtbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -593,20 +430,6 @@
     "PUMP_INC": ""
   },
 
-  "galabusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "GALA",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "15m",
-    "POST_SELL_SLEEP": "12",
-    "PUMP_INC": "1.015"
-  },
   "lskbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -677,34 +500,7 @@
     "POST_SELL_SLEEP": "6",
     "PUMP_INC": ""
   },
-  "ksmbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "KSM",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "15m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": ""
-  },
-  "ltobusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "LTO",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "6m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": "1.015"
-  },
+
   "maskbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -715,20 +511,6 @@
     "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
     "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
     "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "6m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": "1.015"
-  },
-  "minabusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "MINA",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
     "SLEEP_STRATEGY": "6m",
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": "1.015"
@@ -789,20 +571,6 @@
     "SLEEP_STRATEGY": "6m",
     "POST_SELL_SLEEP": "12"
   },
-  "rvnbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "RVN",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "3m",
-    "POST_SELL_SLEEP": "6",
-    "PUMP_INC": ""
-  },
 
   "renbusd": {
     "skip": false,
@@ -832,20 +600,7 @@
     "POST_SELL_SLEEP": "12",
     "PUMP_INC": "1.015"
   },
-  "qibusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "QI",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "15m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": "1.015"
-  },
+
   "pyrbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -860,20 +615,7 @@
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": "1.015"
   },
-  "prombusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "PROM",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "6m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": "1.015"
-  },
+
   "omgbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -961,20 +703,7 @@
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": "1.015"
   },
-  "sunbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "SUN",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.00175",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "9m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": ""
-  },
+
   "tbusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -1007,20 +736,7 @@
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": "1.015"
   },
-  "quickbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "QUICK",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "15m",
-    "POST_SELL_SLEEP": "12",
-    "PUMP_INC": "1.015"
-  },
+
   "rarebusd": {
     "skip": true,
     "EXCHANGE": "binance",
@@ -1035,34 +751,7 @@
     "POST_SELL_SLEEP": "4",
     "PUMP_INC": ""
   },
-  "runebusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "RUNE",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.005",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "9m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": "1.015"
-  },
-  "psgbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "PSG",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.11",
-    "SLEEP_STRATEGY": "3m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": ""
-  },
+
   "peoplebusd": {
     "skip": false,
     "EXCHANGE": "binance",
@@ -1077,48 +766,7 @@
     "POST_SELL_SLEEP": "12",
     "PUMP_INC": ""
   },
-  "kncbusd": {
-    "skip": true,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "KNC",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "3m",
-    "POST_SELL_SLEEP": "6",
-    "PUMP_INC": ""
-  },
-  "gtcbusd": {
-    "skip": true,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "GTC",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.0035",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.995",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "15m",
-    "POST_SELL_SLEEP": "6",
-    "PUMP_INC": "1.015"
-  },
-  "dockbusd": {
-    "skip": true,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "DOCK",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.985",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "6m",
-    "POST_SELL_SLEEP": "4",
-    "PUMP_INC": ""
-  },
+
   "diabusd": {
     "skip": true,
     "EXCHANGE": "binance",
@@ -1203,20 +851,7 @@
     "POST_SELL_SLEEP": "6",
     "PUMP_INC": "1.015"
   },
-  "tlmbusd": {
-    "skip": false,
-    "EXCHANGE": "binance",
-    "RUN_BOT_ON_STARTUP": "true",
-    "MAX_BUY_AMOUNT": "25",
-    "VOLATILE_COIN": "TLM",
-    "STABLE_COIN": "BUSD",
-    "PRICE_HAS_INCREASED_THRESHOLD": "1.001",
-    "PRICE_HAS_DECREASED_THRESHOLD": "0.999",
-    "STOP_LOSS_THRESHOLD": " 0.15",
-    "SLEEP_STRATEGY": "3m",
-    "POST_SELL_SLEEP": "6",
-    "PUMP_INC": ""
-  },
+
   "sysbusd": {
     "skip": false,
     "EXCHANGE": "binance",
