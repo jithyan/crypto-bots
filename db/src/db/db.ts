@@ -33,7 +33,7 @@ function getConnection(): Promise<PoolConnection> {
   return db.pool.getConnection();
 }
 
-export async function performanceReport() {
+export async function getPerformanceReport() {
   try {
     const query = `
 SELECT 
@@ -69,7 +69,23 @@ ORDER BY C.total_profit, success_rate, A.num_sold DESC;
     const conn = await getConnection();
     const result = await conn.execute(query);
     conn.end();
-  } catch (e) {}
+    return parsePerfReport(result);
+  } catch (err) {
+    logger.error("Failed generating perf report from DB", err);
+  }
+}
+
+function parsePerfReport(res: any): Record<string, string>[] {
+  if (!res || !Array.isArray(res)) {
+    return [];
+  }
+
+  return res.map((d: any) => ({
+    symbol: d.symbol ?? "",
+    totalProfit: d.total_profit?.toString() ?? "",
+    successRate: d.success_rate?.toString() ?? "",
+    numSold: d.num_sold?.toString() ?? "",
+  }));
 }
 
 export async function getTradeStatsForSymbol(
@@ -84,14 +100,15 @@ export async function getTradeStatsForSymbol(
 
   try {
     const conn = await getConnection();
-    const aggRes = await conn.query(
+    const aggPromise = conn.query(
       'SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL") AS A CROSS JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0) AS B;',
       [symbol, symbol]
     );
-    const tradesRes = await conn.query(
+    const tradesPromise = conn.query(
       "SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ? AND DATE(at_timestamp) = CURRENT_DATE() ORDER BY at_timestamp DESC;",
       [symbol]
     );
+    const [aggRes, tradesRes] = await Promise.all([aggPromise, tradesPromise]);
     conn.end();
 
     const aggStats = parseAggTradeStats(aggRes);
@@ -107,6 +124,7 @@ export async function getTradeStatsForSymbol(
     return result;
   } catch (err) {
     logger.error("Failed getting aggregate trade stats for symbol", err);
+    throw err;
   }
 }
 

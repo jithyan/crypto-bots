@@ -18,7 +18,6 @@ import { Config } from "./config.js";
 import {
   BotInfoReq,
   getTimestampPepper,
-  IBotStatusUpdate,
   TBotStatus,
   TBotStatusEvent,
 } from "@jithyan/lib";
@@ -32,6 +31,7 @@ import {
 import rateLimit from "express-rate-limit";
 import {
   getAllTimeProfit,
+  getPerformanceReport,
   getProfitForSymbol,
   getTradeStatsForSymbol,
 } from "./tradeDb.js";
@@ -126,6 +126,16 @@ app.get("/db/profit", async (req, res) => {
 app.get("/db/tradestats/:symbol", async (req, res) => {
   try {
     const resp = await getTradeStatsForSymbol(req.params.symbol ?? "not-set");
+    res.status(200).json(resp);
+  } catch (err) {
+    logger.error("Failed getting total profit", err);
+    return res.status(500).json({ status: "Failed" });
+  }
+});
+
+app.get("/db/report", async (req, res) => {
+  try {
+    const resp = await getPerformanceReport();
     res.status(200).json(resp);
   } catch (err) {
     logger.error("Failed getting total profit", err);

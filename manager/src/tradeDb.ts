@@ -37,3 +37,12 @@ export async function getTradeStatsForSymbol(symbol: string): Promise<any> {
   });
   return resp.data;
 }
+
+export async function getPerformanceReport(): Promise<any> {
+  const resp = await request({
+    baseURL: "http://0.0.0.0:2001",
+    url: `/trade/report`,
+    method: "GET",
+  });
+  return resp.data;
+}
