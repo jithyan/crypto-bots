@@ -17,7 +17,7 @@ export function Dashboard({
   const deferredDataListChange = useDeferredValue(data.count());
 
   const deferredBotRows = useMemo(() => {
-    let index = 0;
+    let index = 1;
     return data
       .map((_, id) => (
         <BotRow key={`row-${++index}-${id}`} index={index} id={id} />

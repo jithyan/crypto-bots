@@ -44,7 +44,10 @@ const getBotStats = selector<IBotStats>({
     }, 0);
 
     const numBotsPlacedOrders = bots.reduce((prev, curr) => {
-      if (getBotInfo(curr, "state")?.state?.includes("Order")) {
+      if (
+        getBotInfo(curr, "status") === "ONLINE" &&
+        getBotInfo(curr, "state")?.state?.includes("Order")
+      ) {
         return prev + 1;
       } else {
         return prev;
