@@ -26,6 +26,8 @@ export const Config = {
   ENABLE_RESUME: (process.env.ENABLE_RESUME?.trim() ?? "true") === "true",
   POST_SELL_SLEEP: process.env.POST_SELL_SLEEP?.trim() ?? "4",
   PUMP_INC: process.env.PUMP_INC?.trim() ?? "",
+  BINANCE_BASE_URL:
+    process.env.BINANCE_BASE_URL?.trim() ?? "https://api.binance.com",
 } as {
   APP_VERSION: string;
   EXCHANGE: TExchange;
@@ -43,4 +45,5 @@ export const Config = {
   ENABLE_RESUME: boolean;
   POST_SELL_SLEEP: string;
   PUMP_INC: string;
+  BINANCE_BASE_URL: string;
 };

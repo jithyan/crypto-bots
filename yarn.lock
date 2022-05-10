@@ -551,13 +551,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@binance/connector@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "@binance/connector@npm:1.7.0"
+"@binance/connector@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "@binance/connector@npm:1.9.2"
   dependencies:
     axios: ^0.21.4
     ws: ^7.5.0
-  checksum: 9bbc3c2fab092c717f07f111e380a02d711607c2ec359de6df772267044e6cf4791d4ff203404c6e174fcba72f9d481ddcf5af5a28ec5eb224f78d7a788ba12a
+  checksum: e1fae6c8657879d222b18a67abb064cfd073394ba3bf36ef97ccb207bee39ebe70538574d994436621ec0e885dd6da8b17893e7b034c04eedd00a4898e6b3463
   languageName: node
   linkType: hard
 
@@ -2238,7 +2238,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bot@workspace:bot"
   dependencies:
-    "@binance/connector": ^1.7.0
+    "@binance/connector": ^1.9.2
     "@types/big.js": ^6.1.3
     "@types/express": ^4.17.13
     "@types/node": ^17.0.16

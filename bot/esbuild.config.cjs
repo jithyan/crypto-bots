@@ -25,6 +25,7 @@ const define = {
   "process.env.ENABLE_RESUME": `"${process.env.ENABLE_RESUME}"`,
   "process.env.POST_SELL_SLEEP": `"${process.env.POST_SELL_SLEEP}"`,
   "process.env.PUMP_INC": `"${process.env.PUMP_INC}"`,
+  "process.env.BINANCE_BASE_URL": `"${process.env.BINANCE_BASE_URL}"`,
 };
 
 console.log("Starting build version", revision);

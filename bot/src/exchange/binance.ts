@@ -3,7 +3,6 @@ import { Spot } from "@binance/connector";
 import NodeCache from "node-cache";
 import { AxiosError, AxiosResponse } from "axios";
 import type {
-  IBinance24hrTicker,
   IBinanceAccountInfo,
   IBinanceExchangeInfo,
   IBinanceOrderDetails,
@@ -14,6 +13,7 @@ import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
 import Big from "big.js";
 import { getMaxNumberOfDecimalPlaces } from "../utils.js";
+import { Config } from "../config";
 
 type TFilterRulesField = "min" | "max" | "stepSize";
 type TImportantFilterFields = "priceFilter" | "lotSizeFilter";
@@ -53,7 +53,9 @@ export class BinanceApi implements IWallet {
       apiLogger.error("No binance key or secret provided");
       throw new Error("No binance key or secret provided");
     }
-    this.client = new Spot(key, secret);
+    this.client = new Spot(key, secret, {
+      baseURL: Config.BINANCE_BASE_URL,
+    });
   }
 
   getAudUsdValue = async () => {
@@ -204,40 +206,6 @@ export class BinanceApi implements IWallet {
     } else {
       throw new Error("Unexpected price response");
     }
-  };
-
-  get24hrPriceChangeStats = async (
-    volatileAsset: TSupportedCoins,
-    stableAsset: TSupportedCoins
-  ) => {
-    return this.client
-      .ticker24hr(`${volatileAsset}${stableAsset}`)
-      .then((resp) => resp.data);
-  };
-
-  getKlines = async (
-    volatileAsset: TSupportedCoins,
-    stableAsset: TSupportedCoins,
-    period: TBinanceIntervalValue
-  ) => {
-    const { data } = await this.client.klines(
-      `${volatileAsset}${stableAsset}`,
-      period,
-      { limit: 240 }
-    );
-    return data.map((candle) => ({
-      "Open time": candle[0],
-      Open: candle[1],
-      High: candle[2],
-      Low: candle[3],
-      Close: candle[4],
-      Volume: candle[5],
-      "Close time": candle[6],
-      "Quote asset volume": candle[7],
-      "Number of trades": candle[8],
-      "Taker buy base asset volume": candle[9],
-      "Taker buy quote asset volume": candle[10],
-    }));
   };
 
   balance = async (coin: TSupportedCoins): Promise<string> => {
@@ -468,14 +436,6 @@ interface BinanceConnectorClient {
   tickerPrice: (
     coin?: TCoinPair
   ) => Promise<AxiosResponse<TTickerPriceResponse>>;
-
-  ticker24hr: (coin: TCoinPair) => Promise<AxiosResponse<IBinance24hrTicker>>;
-
-  klines: (
-    coin: TCoinPair,
-    interval: TBinanceIntervalValue,
-    opt: { limit: number }
-  ) => Promise<AxiosResponse<(number | string)[][]>>;
 
   exchangeInfo: (opts: {
     symbol: TCoinPair;

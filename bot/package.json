@@ -18,7 +18,7 @@
     "make": "rimraf bin & zx make.mjs"
   },
   "dependencies": {
-    "@binance/connector": "^1.7.0",
+    "@binance/connector": "^1.9.2",
     "axios": "^0.26.0",
     "big.js": "^6.1.1",
     "express": "^4.17.3",
