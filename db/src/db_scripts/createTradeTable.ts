@@ -12,5 +12,6 @@ export const createTradeTable = `CREATE TABLE IF NOT EXISTS trades (
   aud_value DECIMAL(16,8),
   aud_busd DECIMAL(16,8),
   commission DECIMAL(16,8),
-  INDEX(symbol,at_timestamp,action)
+  is_test BOOLEAN DEFAULT 0,
+  INDEX(symbol,at_timestamp,action,is_test)
 );`;
