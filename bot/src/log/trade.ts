@@ -7,6 +7,7 @@ import type { IWallet, TSupportedCoins } from "../exchange/index.js";
 import axios from "axios";
 import { generalLogger } from "./general.js";
 import { IDbTradePayload } from "@jithyan/lib";
+import { Config } from "../config.js";
 
 const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
   filename: "%DATE%-trades.csv",
@@ -107,6 +108,7 @@ function toDbRequestPayload(
 ): IDbTradePayload {
   return {
     ...data,
+    isTestNet: Config.BINANCE_BASE_URL?.includes("test") ? "1" : "0",
     type: data.action as "SELL" | "BUY",
   };
 }

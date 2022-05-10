@@ -11,6 +11,7 @@ export const DbTradePayload = z.object({
   profit: z.string(),
   audValue: z.string(),
   audBusd: z.string(),
+  isTestNet: z.union([z.literal("0"), z.literal("1")]),
 });
 
 export type IDbTradePayload = z.infer<typeof DbTradePayload>;

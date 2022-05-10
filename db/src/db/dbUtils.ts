@@ -24,6 +24,7 @@ export function mapToInsertValues(row: ITradeDbRow): TradeRowValues {
     row.aud_value,
     row.aud_busd,
     row.commission,
+    row.is_test,
   ];
 }
 

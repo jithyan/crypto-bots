@@ -42,7 +42,10 @@ app.post("/trade/add", async (req, res) => {
 
 app.get("/trade/profit", async (req, res) => {
   try {
-    const result = await allTimeProfit();
+    const includeTestNet = req.query.include_test !== "0";
+    const result = await allTimeProfit({
+      includeTestNet,
+    });
 
     return res.status(200).json(result);
   } catch (error) {
@@ -53,7 +56,8 @@ app.get("/trade/profit", async (req, res) => {
 app.get("/trade/profit/:symbol", async (req, res) => {
   try {
     const symbol = req.params.symbol;
-    const result = await allTimeProfitForSymbol(symbol);
+    const includeTestNet = req.query.include_test !== "0";
+    const result = await allTimeProfitForSymbol(symbol, includeTestNet);
 
     return res.status(200).json(result);
   } catch (error) {
@@ -64,7 +68,8 @@ app.get("/trade/profit/:symbol", async (req, res) => {
 app.get("/trade/stats/:symbol", async (req, res) => {
   try {
     const symbol = req.params.symbol;
-    const result = await getTradeStatsForSymbol(symbol);
+    const includeTestNet = req.query.include_test !== "0";
+    const result = await getTradeStatsForSymbol(symbol, includeTestNet);
 
     return res.status(200).json(result);
   } catch (error) {
@@ -110,5 +115,6 @@ function mapTradePayloadToDbObject(
     commission: new Big(data.audValue).mul("0.001").toFixed(8),
     symbol:
       data.type === "BUY" ? `${data.to}${data.from}` : `${data.from}${data.to}`,
+    is_test: data.isTestNet ? "0" : data.isTestNet,
   };
 }

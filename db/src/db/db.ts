@@ -89,7 +89,8 @@ function parsePerfReport(res: any): Record<string, string>[] {
 }
 
 export async function getTradeStatsForSymbol(
-  inputSymbol: string
+  inputSymbol: string,
+  includeTestNet: boolean = true
 ): Promise<any> {
   const symbol = inputSymbol?.toUpperCase().trim() ?? "";
 
@@ -99,13 +100,14 @@ export async function getTradeStatsForSymbol(
   }
 
   try {
+    const testNetFilter = !includeTestNet ? " AND is_test=0" : "";
     const conn = await getConnection();
     const aggPromise = conn.query(
-      'SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL") AS A CROSS JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0) AS B;',
+      `SELECT A.symbol, A.num_sold, B.num_profitable FROM (SELECT symbol, COUNT(action) as num_sold FROM trades WHERE symbol = ? AND action="SELL"${testNetFilter}) AS A CROSS JOIN (SELECT symbol, COUNT(action) as num_profitable FROM trades WHERE symbol = ? AND action="SELL" AND profit > 0${testNetFilter}) AS B;`,
       [symbol, symbol]
     );
     const tradesPromise = conn.query(
-      "SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ? AND DATE(at_timestamp) = CURRENT_DATE() ORDER BY at_timestamp DESC;",
+      `SELECT at_timestamp, action, amount, price, busd_value, profit FROM trades WHERE symbol = ? AND DATE(at_timestamp) = CURRENT_DATE()${testNetFilter} ORDER BY at_timestamp DESC;`,
       [symbol]
     );
     const [aggRes, tradesRes] = await Promise.all([aggPromise, tradesPromise]);
@@ -180,7 +182,8 @@ export async function addNewTradeToDb(
 }
 
 export async function allTimeProfitForSymbol(
-  symbol: string
+  symbol: string,
+  includeTestNet = true
 ): Promise<ITotalProfitResult> {
   const cachedResult = profitCache.get(symbol);
   if (typeof cachedResult === "string") {
@@ -190,7 +193,9 @@ export async function allTimeProfitForSymbol(
   try {
     const conn = await getConnection();
     const res = await conn.query(
-      `SELECT SUM(profit) AS total_profit FROM trades GROUP BY symbol HAVING symbol=?`,
+      `SELECT SUM(profit) AS total_profit FROM trades ${
+        !includeTestNet ? "AND is_test=0" : ""
+      }GROUP BY symbol HAVING symbol=?;`,
       [symbol?.toUpperCase() ?? ""]
     );
     conn.end();
@@ -205,7 +210,9 @@ export async function allTimeProfitForSymbol(
   }
 }
 
-export async function allTimeProfit(): Promise<ITotalProfitResult> {
+export async function allTimeProfit({
+  includeTestNet = true,
+}): Promise<ITotalProfitResult> {
   const cachedResult = getAllTimeProfitFromCache();
   if (cachedResult) {
     return { total_profit: cachedResult };
@@ -214,7 +221,9 @@ export async function allTimeProfit(): Promise<ITotalProfitResult> {
   try {
     const conn = await getConnection();
     const res = await conn.query(
-      "SELECT SUM(profit) AS total_profit FROM trades"
+      `SELECT SUM(profit) AS total_profit FROM trades${
+        includeTestNet ? " WHERE is_test = 0" : ""
+      };`
     );
     conn.end();
 

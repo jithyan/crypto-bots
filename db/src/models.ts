@@ -26,6 +26,7 @@ const TradeDbRow = z.object({
   aud_busd: z.string(),
   commission: z.string(),
   trade_id: z.string(),
+  is_test: z.union([z.literal("0"), z.literal("1")]),
 });
 
 export type ITradeDbRow = z.infer<typeof TradeDbRow>;
@@ -43,5 +44,6 @@ export type TradeRowValues = [
   profit: string,
   aud_value: string,
   aud_busd: string,
-  commission: string
+  commission: string,
+  is_test: "0" | "1"
 ];
