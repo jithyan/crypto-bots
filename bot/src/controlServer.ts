@@ -12,6 +12,7 @@ controlServer.disable("x-powered-by");
 
 export const SERVER_CONTROL = {
   shutdown: false,
+  liquidate: false,
 };
 
 export async function registerWithBotManager(
@@ -50,6 +51,12 @@ controlServer.post("/shutdown", (req, res, next) => {
   generalLogger.info("Server shutdown request received, initiating...");
   SERVER_CONTROL.shutdown = true;
   return res.json({ status: "Acknowledged. Shutting down." });
+});
+
+controlServer.post("/liquidate", (req, res, next) => {
+  generalLogger.info("Liquidation request received, initiating...");
+  SERVER_CONTROL.liquidate = true;
+  return res.json({ status: "Acknowledged. Will liquidate." });
 });
 
 export function startControlServer() {

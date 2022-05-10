@@ -31,6 +31,7 @@ export const BotActions = z.union([
   z.literal("shutdown"),
   z.literal("startup"),
   z.literal("remove"),
+  z.literal("liquidate"),
 ]);
 export type TBotActions = z.infer<typeof BotActions>;
 
@@ -38,6 +39,7 @@ export const BotActionsPath = z.union([
   z.literal("/bots/shutdown"),
   z.literal("/bots/startup"),
   z.literal("/bots/remove"),
+  z.literal("/bots/liquidate"),
 ]);
 export type TBotActionsPath = z.infer<typeof BotActionsPath>;
 

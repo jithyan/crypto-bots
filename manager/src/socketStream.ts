@@ -9,21 +9,28 @@ import {
 import { getBotRegisterIds, botRegister } from "./models.js";
 
 function getAvailableActionsForBot(status: TBotStatus): TBotAvailableActions {
-  const actions: TBotAvailableActions = {};
+  switch (status) {
+    case "ONLINE":
+      return {
+        shutdown: "/bots/shutdown",
+        liquidate: "/bots/liquidate",
+      };
 
-  if (status === "ONLINE") {
-    actions.shutdown = "/bots/shutdown";
-  }
-  if (status === "OFFLINE") {
-    actions.startup = "/bots/startup";
-    actions.remove = "/bots/remove";
-  }
-  if (status === "NOT WORKING") {
-    actions.startup = "/bots/startup";
-    actions.shutdown = "/bots/shutdown";
-  }
+    case "NOT WORKING":
+      return {
+        startup: "/bots/startup",
+        shutdown: "/bots/shutdown",
+      };
 
-  return actions;
+    case "OFFLINE":
+      return {
+        startup: "/bots/startup",
+        remove: "/bots/remove",
+      };
+
+    default:
+      return {};
+  }
 }
 
 export const getBotUpdate = (id: string): IBotInfoStream => {

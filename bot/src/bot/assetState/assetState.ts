@@ -13,6 +13,7 @@ import { IDecisionEngine } from "../decisionEngine/priceTrendDecision.js";
 import { Config } from "../../config.js";
 import { ISleepStrategy } from "../sleep/index.js";
 import { TLogTradeData } from "../../log/trade.js";
+import { SERVER_CONTROL } from "bot/src/controlServer.js";
 
 const binanceClient = getExchangeClient(Config.EXCHANGE);
 
@@ -269,7 +270,7 @@ export class HoldVolatileAsset<
       const { sell, nextDecision } =
         this.decisionEngine.shouldSell(latestPrice);
 
-      if (sell) {
+      if (sell || SERVER_CONTROL.liquidate) {
         const volatileAssetBalance = await this.getBalance();
 
         const { clientOrderId, orderPrice, qtySold } = await binanceClient.sell(
@@ -291,7 +292,12 @@ export class HoldVolatileAsset<
           price: orderPrice,
           quantity: qtySold,
           clientOrderId,
+          isLiquidationRequest: SERVER_CONTROL.liquidate,
         });
+
+        if (SERVER_CONTROL.liquidate) {
+          SERVER_CONTROL.liquidate = false;
+        }
 
         await this.sleep.onPlacedVolatileAssetSellOrder();
         return nextState;

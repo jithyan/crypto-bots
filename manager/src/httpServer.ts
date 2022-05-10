@@ -251,6 +251,27 @@ app.post("/bots/shutdown/all", async (req, res) => {
   }
 });
 
+app.post("/bots/liquidate", async (req, res) => {
+  const { id } = BotActionRequest.parse(req.body);
+  if (!botRegister.state.hasOwnProperty(id)) {
+    return res.status(404).json({ status: "Id not found" });
+  } else if (botRegister.state[id].status !== "ONLINE") {
+    return res
+      .status(400)
+      .json({ status: "Bot needs to be online to liquidate up" });
+  }
+
+  try {
+    await request(buildBotRequest(botRegister.state[id], "/liquidate"));
+    return res.json({ status: "OK" });
+  } catch (err) {
+    logger.error("Bot liquidation failed", err);
+    return res
+      .status(500)
+      .json({ status: "Failed to trigger liquidation on bot" });
+  }
+});
+
 const validStartupStates: Set<TBotStatus> = new Set(["OFFLINE", "NOT WORKING"]);
 app.post("/bots/startup", (req, res) => {
   const { id } = BotActionRequest.parse(req.body);
