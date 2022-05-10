@@ -69,6 +69,7 @@ export const BotStateDetails = z.object({
     maxBuyAmount: z.string(),
     postSellSleep: z.string(),
     pumpInc: z.string(),
+    isTestNet: z.boolean().optional(),
   }),
 });
 
@@ -114,6 +115,7 @@ export function mapBotLastStateToStateDetails(
       sleepStrategy: bot?.lastState?.sleep?.sleepStrategy,
       maxBuyAmount: bot?.maxBuyAmount ?? "",
       postSellSleep: bot?.lastState?.postSellSleep?.toString() ?? "",
+      isTestNet: bot?.lastState?.isTestNet ?? "",
     },
   };
 }
