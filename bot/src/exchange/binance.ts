@@ -13,7 +13,6 @@ import { IWallet, AddressBook, TSupportedCoins, TCoinPair } from "./index.js";
 import { apiLogger } from "../log/index.js";
 import Big from "big.js";
 import { getMaxNumberOfDecimalPlaces } from "../utils.js";
-import { Config } from "../config";
 
 type TFilterRulesField = "min" | "max" | "stepSize";
 type TImportantFilterFields = "priceFilter" | "lotSizeFilter";
@@ -27,7 +26,7 @@ interface INodeCached<K, V> {
 }
 
 export class BinanceApi implements IWallet {
-  private client: BinanceConnectorClient;
+  protected client: BinanceConnectorClient;
   private readonly configCache: INodeCached<TCoinPair, TFilterRulesConfig> =
     new NodeCache({
       stdTTL: 60 * 60 * 24,
@@ -53,9 +52,7 @@ export class BinanceApi implements IWallet {
       apiLogger.error("No binance key or secret provided");
       throw new Error("No binance key or secret provided");
     }
-    this.client = new Spot(key, secret, {
-      baseURL: Config.BINANCE_BASE_URL,
-    });
+    this.client = new Spot(key, secret);
   }
 
   getAudUsdValue = async () => {

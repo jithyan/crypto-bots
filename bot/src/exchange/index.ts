@@ -1,4 +1,5 @@
 import { BinanceApi } from "./binance.js";
+import { Simulation } from "./simulation.js";
 
 export enum AddressBook {
   AARON_CSPOT_BEP20 = "0x02770a548f1c66c0d6fe4bab5db00183ac18a027",
@@ -21,7 +22,7 @@ export type TVolatileCoins =
 export type TStableCoins = "UST" | "USDT" | "BUSD" | "USDC" | "AUD";
 export type TSupportedCoins = TStableCoins | TVolatileCoins;
 export type TCoinPair = `${TSupportedCoins}${TSupportedCoins}`;
-export type TExchange = "binance";
+export type TExchange = "binance" | "simulation";
 
 export interface IWallet {
   getAudUsdValue: () => Promise<string>;
@@ -39,6 +40,8 @@ export interface IWallet {
 export function getExchangeClient(exchange: TExchange) {
   if (exchange === "binance") {
     return new BinanceApi();
+  } else if (exchange === "simulation") {
+    return new Simulation();
   } else {
     throw new Error("Invalid exchange:" + exchange);
   }
