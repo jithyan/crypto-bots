@@ -108,7 +108,7 @@ function toDbRequestPayload(
 ): IDbTradePayload {
   return {
     ...data,
-    isTestNet: Config.BINANCE_BASE_URL?.includes("test") ? "1" : "0",
+    isTestNet: Config.EXCHANGE === "simulation" ? "1" : "0",
     type: data.action as "SELL" | "BUY",
   };
 }

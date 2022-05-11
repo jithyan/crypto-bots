@@ -1,6 +1,6 @@
 import Big from "big.js";
 import React, { PropsWithChildren } from "react";
-import type { ThemeColor } from "src/utils/types";
+import type { ThemeColor } from "../../utils/types";
 import { formatAsUsd } from "../../utils/format";
 import { useAnimateNumber } from "../../utils/useAnimateNumber";
 
@@ -41,6 +41,12 @@ export function Badge({
     </span>
   );
 }
+
+export const isSimulationIcon = (
+  <Badge style={{ margin: "1px" }} rounded={true} color="warning">
+    SIM
+  </Badge>
+);
 
 const holdStableAssetIcon = (
   <Badge style={{ margin: "1px" }} rounded={true} color="secondary">

@@ -60,6 +60,7 @@ export const BotStateDetails = z.object({
   tickerPrice: z.string(),
   lastPurchasePrice: z.string().optional(),
   iteration: z.number(),
+  isSimulation: z.boolean().optional(),
   config: z.object({
     priceHasIncreased: z.string(),
     priceHasDecreased: z.string(),
@@ -69,7 +70,6 @@ export const BotStateDetails = z.object({
     maxBuyAmount: z.string(),
     postSellSleep: z.string(),
     pumpInc: z.string(),
-    isTestNet: z.boolean().optional(),
   }),
 });
 
@@ -106,6 +106,7 @@ export function mapBotLastStateToStateDetails(
     tickerPrice: bot.lastState?.decisionEngine?.lastTickerPrice ?? "0",
     lastPurchasePrice: bot.lastState?.decisionEngine?.lastPurchasePrice,
     iteration: bot.lastState?.iteration ?? 0,
+    isSimulation: Boolean(bot?.lastState?.isSimulation),
     config: {
       priceHasIncreased: PRICE_HAS_INCREASED_THRESHOLD,
       priceHasDecreased: PRICE_HAS_DECREASED_THRESHOLD,
@@ -115,7 +116,6 @@ export function mapBotLastStateToStateDetails(
       sleepStrategy: bot?.lastState?.sleep?.sleepStrategy,
       maxBuyAmount: bot?.maxBuyAmount ?? "",
       postSellSleep: bot?.lastState?.postSellSleep?.toString() ?? "",
-      isTestNet: bot?.lastState?.isTestNet ?? "",
     },
   };
 }

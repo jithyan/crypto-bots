@@ -62,7 +62,7 @@ export class AssetState<
   readonly sleep: ISleepStrategy;
   readonly stats: { usdProfitToDate: string };
   readonly postSellSleep: number;
-  readonly isTestNet: boolean;
+  readonly isSimulation: boolean;
   numberOfTimeouts: number;
 
   constructor({
@@ -85,7 +85,7 @@ export class AssetState<
     this.stats = stats;
     this.numberOfTimeouts = 0;
     this.postSellSleep = Number(postSellSleep);
-    this.isTestNet = Boolean(Config.BINANCE_BASE_URL?.includes("test"));
+    this.isSimulation = Config.EXCHANGE === "simulation";
 
     if (isNaN(this.postSellSleep)) {
       console.error("postSellSleep must be a number: ", postSellSleep);

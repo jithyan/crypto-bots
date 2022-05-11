@@ -5,6 +5,7 @@ import { useAnimateNumber } from "../../../utils/useAnimateNumber";
 import {
   AssetStateBadge,
   Badge,
+  isSimulationIcon,
   LastPurchasePriceBadge,
   PctChangeBadge,
 } from "../Badges";
@@ -23,6 +24,7 @@ export function CompactStateView({
   iteration,
   changeViewState,
   config,
+  isSimulation,
 }: {
   symbol: string;
   changeViewState: TChangeViewState;
@@ -77,6 +79,7 @@ export function CompactStateView({
           />
         </>
       ) : null}
+      {isSimulation ? isSimulationIcon : null}
     </StateErrorBoundary>
   );
 }
