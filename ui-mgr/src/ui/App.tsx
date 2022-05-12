@@ -36,12 +36,16 @@ export function Header() {
         style={{ paddingBottom: "0", marginBottom: "0" }}
       >
         <em>
-          Bots trading crypto scam tokens using a momentum based trading
+          Bots trading crypto scam tokens using a dumb momentum based trading
           strategy.
         </em>
       </p>
       <p className="text-center text-light">
         By <a href="https://www.linkedin.com/in/jithyan">Jithya Nanayakkara</a>
+      </p>
+      <p className="text-center text-light">
+        (Due to the crypto crash, they no longer make actual trades, but
+        simulated trades against the actual price on Binance.)
       </p>
     </header>
   );
