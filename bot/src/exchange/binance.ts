@@ -20,7 +20,7 @@ type TFilterRulesConfig = Record<
   TImportantFilterFields,
   Record<TFilterRulesField, Big> & { precision: number }
 >;
-interface INodeCached<K, V> {
+export interface INodeCached<K, V> {
   get: (key: K) => V | undefined;
   set: (key: K, value: V, ttl?: number) => boolean;
 }
