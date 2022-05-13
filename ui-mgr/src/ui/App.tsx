@@ -40,8 +40,15 @@ export function Header() {
           strategy.
         </em>
       </p>
+
       <p className="text-center text-light">
-        By <a href="https://www.linkedin.com/in/jithyan">Jithya Nanayakkara</a>
+        by{" "}
+        <a
+          style={{ color: "#7CB9E8" }}
+          href="https://www.linkedin.com/in/jithyan"
+        >
+          Jithya Nanayakkara
+        </a>
       </p>
       <p className="text-center text-light">
         (Due to the crypto crash, they no longer make actual trades, but
