@@ -21,13 +21,16 @@ export class Simulation extends BinanceApi {
   });
 
   balance = async (coin: TSupportedCoins): Promise<string> => {
-    const volatileCoin = Config.SYMBOL.replace(/BUSD/i, "") as TSupportedCoins;
-    const price = await this.getLatestPrice(volatileCoin, "BUSD");
+    if (coin === "BUSD") {
+      return Promise.resolve(Config.MAX_BUY_AMOUNT.toFixed(0));
+    }
+
+    const price = await this.getLatestPrice(coin, "BUSD");
     const bal = new Big(Config.MAX_BUY_AMOUNT)
       .div(price)
       .round(8, Big.roundDown);
 
-    const filterRules = await this.getExchangeConfig(volatileCoin, "BUSD");
+    const filterRules = await this.getExchangeConfig(coin, "BUSD");
     const correctedQty = this.getValidQtyPrecision(
       new Big(bal.toString()),
       filterRules
