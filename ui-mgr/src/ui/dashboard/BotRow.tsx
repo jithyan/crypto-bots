@@ -1,4 +1,4 @@
-import React, { useState, startTransition } from "react";
+import React, { useState, startTransition, useLayoutEffect } from "react";
 import { formatAsUsd, formatIsoDate } from "../../utils/format";
 import { useIsUpdatingOnChange } from "./useIsUpdatingOnChange";
 import { Badge } from "./Badges";
@@ -29,6 +29,97 @@ export function BotRow(props: IBotRowProps) {
     <ErrorBoundary fallback={errorRow}>
       <BotRowNoErrorBoundary {...props} />
     </ErrorBoundary>
+  );
+}
+
+function useHighlightOnMount(): boolean {
+  const [highlightOnMount, setHighlightOnMount] = useState(true);
+
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      startTransition(() => setHighlightOnMount(false));
+    }, 1000);
+  }, []);
+
+  return highlightOnMount;
+}
+
+function BotSymbolAndIndex({
+  index,
+  symbol,
+}: {
+  index: number;
+  symbol: string;
+}) {
+  const highlightOnMount = useHighlightOnMount();
+
+  return (
+    <>
+      <small>
+        <Badge
+          style={{ marginRight: "4px" }}
+          rounded={true}
+          color={highlightOnMount ? "light" : "dark"}
+          textColor={highlightOnMount ? "dark" : "light"}
+        >
+          <strong>{index}</strong>
+        </Badge>
+      </small>
+      <span
+        className={`text-${highlightOnMount ? "warning" : "light"}`}
+        style={{ paddingTop: "8px" }}
+      >
+        {symbol}
+      </span>
+    </>
+  );
+}
+
+export function BotHeader() {
+  return (
+    <Row>
+      <Col
+        minWidth="128px"
+        width="168px"
+        classNames={"bg-secondary text-light border-dark"}
+      >
+        Bot Symbol
+      </Col>
+      <Col
+        minWidth="104px"
+        width="144px"
+        classNames={"bg-secondary text-light border-dark"}
+      >
+        Status
+      </Col>
+      <Col
+        minWidth="92px"
+        width="104px"
+        classNames={"bg-secondary text-light border-dark"}
+      >
+        Version
+      </Col>
+      <Col width="86px" classNames={"bg-secondary text-light border-dark"}>
+        Profit
+      </Col>
+      <Col
+        minWidth="128px"
+        width="152px"
+        classNames={"bg-secondary text-light border-dark"}
+      >
+        Last check in
+      </Col>
+      <Col
+        minWidth="76px"
+        width="76px"
+        classNames={"bg-secondary text-light border-dark"}
+      >
+        Actions
+      </Col>
+      <Col minWidth="128px" classNames={"bg-secondary text-light border-dark"}>
+        State
+      </Col>
+    </Row>
   );
 }
 
@@ -71,17 +162,7 @@ const BotRowNoErrorBoundary = React.memo(({ id, index }: IBotRowProps) => {
   return (
     <Row>
       <Col minWidth="128px" width="168px" classNames={bgStyle}>
-        <small>
-          <Badge
-            style={{ marginRight: "4px" }}
-            rounded={true}
-            color="dark"
-            textColor="light"
-          >
-            <strong>{index}</strong>
-          </Badge>
-        </small>
-        <span style={{ paddingTop: "8px" }}>{symbol}</span>
+        <BotSymbolAndIndex index={index} symbol={symbol} />
       </Col>
 
       <Col
@@ -132,6 +213,7 @@ const BotRowNoErrorBoundary = React.memo(({ id, index }: IBotRowProps) => {
 
 function Row({ children }: React.PropsWithChildren<{}>) {
   const [borderColor, setBorderColor] = useState("dark");
+  const highlightOnMount = useHighlightOnMount();
 
   return (
     <div
@@ -141,7 +223,9 @@ function Row({ children }: React.PropsWithChildren<{}>) {
       style={{ padding: "4px" }}
     >
       <ul
-        className={`list-group border border-${borderColor} list-group-horizontal`}
+        className={`list-group border border-${
+          highlightOnMount ? "secondary" : borderColor
+        } list-group-horizontal`}
       >
         {children}
       </ul>

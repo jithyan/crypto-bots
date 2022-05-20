@@ -6,6 +6,7 @@ import {
   useRecoilState,
   useSetRecoilState,
 } from "recoil";
+import { getSecondsTillNextCheckIn } from "../utils/date";
 import { botRegistry, getBotInfo, ImmutableBotMap } from "./botRegistry";
 
 export function useSortedAndFilteredBots() {
@@ -23,9 +24,10 @@ const sortBotMethod = atom<
   | "profitDesc"
   | "symbolAsc"
   | "symbolDesc"
+  | "updateTime"
 >({
   key: "sortBotMethod",
-  default: "statusDesc",
+  default: "updateTime",
 });
 
 export const filterMethod = atom<{ method: "" | "symbol"; value: string }>({
@@ -82,11 +84,27 @@ export const sortedBotData = selector({
         return bots.sort(sortBySymbol);
       case "symbolDesc":
         return bots.sort((a, b) => sortBySymbol(a, b) * -1);
+      case "updateTime":
+        return bots.sort(sortByUpdateTime);
       default:
         return bots;
     }
   },
 });
+
+function sortByUpdateTime(a: ImmutableBotMap, b: ImmutableBotMap): number {
+  const botASecondsLeft = getSecondsTillNextCheckIn(
+    getBotInfo(a, "lastCheckIn"),
+    (getBotInfo(a, "state")?.config?.sleepStrategy as any) ?? "1hr"
+  );
+  const botBSecondsLeft = getSecondsTillNextCheckIn(
+    getBotInfo(b, "lastCheckIn"),
+    getBotInfo(b, "state").state.endsWith("Stasis")
+      ? "1hr"
+      : (getBotInfo(b, "state").config.sleepStrategy as any)
+  );
+  return botASecondsLeft - botBSecondsLeft;
+}
 
 const statusSortScore: Record<TBotStatus, number> = {
   "NOT WORKING": 5,

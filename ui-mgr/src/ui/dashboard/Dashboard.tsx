@@ -1,7 +1,13 @@
-import React, { useDeferredValue, useMemo } from "react";
+import React, {
+  startTransition,
+  useDeferredValue,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from "react";
 import type { List } from "immutable";
 import { BotFeed } from "./BotFeed";
-import { BotRow } from "./BotRow";
+import { BotHeader, BotRow } from "./BotRow";
 import type { ImmutableBotCollection } from "../../state/botRegistry";
 import { useBotFilterQueryValue, useBotSortMethod } from "ui-mgr/src/state";
 
@@ -12,18 +18,35 @@ export function Dashboard({
   data: ImmutableBotCollection;
   changes: List<string>;
 }) {
-  const filterQuery = useBotFilterQueryValue();
   const [sortMethod] = useBotSortMethod();
   const deferredDataListChange = useDeferredValue(data.count());
 
-  const deferredBotRows = useMemo(() => {
+  const [
+    delayUpdateBotsWhenSortedByUpdateTime,
+    setdelayUpdateBotsWhenSortedByUpdateTime,
+  ] = useState(0);
+  useLayoutEffect(() => {
+    if (sortMethod === "updateTime") {
+      setTimeout(() => {
+        startTransition(() =>
+          setdelayUpdateBotsWhenSortedByUpdateTime((prev) => prev + 1)
+        );
+      }, 5500);
+    }
+  }, [data, sortMethod]);
+
+  const defferedBotRows = useMemo(() => {
     let index = 1;
     return data
       .map((_, id) => (
         <BotRow key={`row-${++index}-${id}`} index={index} id={id} />
       ))
       .toList();
-  }, [sortMethod, deferredDataListChange]);
+  }, [
+    sortMethod,
+    deferredDataListChange,
+    delayUpdateBotsWhenSortedByUpdateTime,
+  ]);
 
   return (
     <>
@@ -32,7 +55,8 @@ export function Dashboard({
           <BotFeed changes={changes} />
         </div>
       </div>
-      {deferredBotRows}
+      <BotHeader />
+      {defferedBotRows}
     </>
   );
 }

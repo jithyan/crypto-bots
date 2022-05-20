@@ -47,6 +47,14 @@ export function SortFilterDropdown() {
         </button>
       </NavBarDropdownItem>
       <NavBarDropdownItem>
+        <button
+          className="btn btn-outline-light"
+          onClick={() => setSortMethod("updateTime")}
+        >
+          Next update
+        </button>
+      </NavBarDropdownItem>
+      <NavBarDropdownItem>
         <label className="form-label">
           Filter by symbol
           <input
