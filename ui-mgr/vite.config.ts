@@ -5,4 +5,14 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [tsconfigPaths(), react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          reactModal: ["react-modal"],
+          axios: ["axios"],
+        },
+      },
+    },
+  },
 });

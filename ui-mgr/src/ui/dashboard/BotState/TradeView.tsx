@@ -10,6 +10,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import axios from "axios";
 import Big from "big.js";
 import { Badge } from "../Badges";
+import { spinner } from "../loading";
 
 export interface ITradeStatsResponse extends IAggregateTradeStats {
   trades: ITradeResponse;
@@ -32,35 +33,6 @@ export const getTradeStats = selectorFamily<ITradeStatsResponse, string>({
       )
       .then((resp) => resp.data),
 });
-
-const spinner = (
-  <div
-    className="text-center"
-    style={{ paddingTop: "4px", paddingBottom: "4px" }}
-  >
-    <div
-      style={{ margin: "4px" }}
-      className="spinner-grow text-primary"
-      role="status"
-    >
-      <span className="visually-hidden">Loading...</span>
-    </div>
-    <div
-      style={{ margin: "4px" }}
-      className="spinner-grow text-secondary"
-      role="status"
-    >
-      <span className="visually-hidden">Loading...</span>
-    </div>
-    <div
-      style={{ margin: "4px" }}
-      className="spinner-grow text-success"
-      role="status"
-    >
-      <span className="visually-hidden">Loading...</span>
-    </div>
-  </div>
-);
 
 export const TradeView = React.memo(
   (props: { changeViewState: TChangeViewState; symbol: string }) => {
@@ -216,3 +188,5 @@ function TodaysTrades({ trades }: { trades: ITradeResponse }) {
     </table>
   );
 }
+
+export default TradeView;

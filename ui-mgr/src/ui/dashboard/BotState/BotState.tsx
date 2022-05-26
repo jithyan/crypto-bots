@@ -1,8 +1,9 @@
 import type { IBotStateDetails, TBotStatus } from "@jithyan/lib";
 import React, { useState } from "react";
+import { spinner } from "../../controlPanel/Profit";
 import { CompactStateView } from "./CompactView";
 import { ExpandedView } from "./ExpandedView";
-import { TradeView } from "./TradeView";
+const TradeView = React.lazy(() => import("./TradeView"));
 
 export type IBotStateProps = IBotStateDetails & {
   symbol: string;
@@ -22,7 +23,9 @@ export const BotState = React.memo((props: IBotStateProps) => {
     return <ExpandedView {...props} changeViewState={changeViewState} />;
   } else if (viewState === "trade") {
     return (
-      <TradeView symbol={props.symbol} changeViewState={changeViewState} />
+      <React.Suspense fallback={spinner}>
+        <TradeView symbol={props.symbol} changeViewState={changeViewState} />
+      </React.Suspense>
     );
   } else {
     throw new Error("Unrecognized view state: " + viewState);
