@@ -12,12 +12,14 @@ export function Badge({
   border = false,
   style,
   onClick,
+  title = "",
 }: PropsWithChildren<{
   color: ThemeColor;
   textColor?: ThemeColor;
   rounded?: boolean;
   style?: React.CSSProperties;
   border?: boolean;
+  title?: string;
   onClick?: () => void;
 }>) {
   const bgColorClass = `bg-${color}`;
@@ -35,36 +37,65 @@ export function Badge({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <span onClick={onClick} style={style} className={className}>
+  return onClick ? (
+    <button title={title} onClick={onClick} style={style} className={className}>
+      {children}
+    </button>
+  ) : (
+    <span title={title} onClick={onClick} style={style} className={className}>
       {children}
     </span>
   );
 }
 
 export const isSimulationIcon = (
-  <Badge style={{ margin: "1px" }} rounded={true} color="warning">
+  <Badge
+    title="Bot is only simulating trades"
+    style={{ margin: "1px" }}
+    rounded={true}
+    color="warning"
+  >
     SIM
   </Badge>
 );
 
 const holdStableAssetIcon = (
-  <Badge style={{ margin: "1px" }} rounded={true} color="secondary">
+  <Badge
+    title="Bot is holding a stable coin (BUSD)"
+    style={{ margin: "1px" }}
+    rounded={true}
+    color="secondary"
+  >
     S
   </Badge>
 );
 const orderPlacedIcon = (
-  <Badge style={{ margin: "1px" }} rounded={true} color="warning">
+  <Badge
+    title="Bot has placed an order"
+    style={{ margin: "1px" }}
+    rounded={true}
+    color="warning"
+  >
     O
   </Badge>
 );
 const holdVolatileAssetIcon = (
-  <Badge style={{ margin: "1px" }} rounded={true} color="primary">
+  <Badge
+    title="Bot is holding a volatile crypto coin"
+    style={{ margin: "1px" }}
+    rounded={true}
+    color="primary"
+  >
     V
   </Badge>
 );
 const postSellStasisIcon = (
-  <Badge rounded={true} color="dark" textColor="light">
+  <Badge
+    title="Sleeping after selling a coin"
+    rounded={true}
+    color="dark"
+    textColor="light"
+  >
     Zzz..
   </Badge>
 );
@@ -130,6 +161,7 @@ export const PctChangeBadge = ({
       rounded={true}
       color="light"
       textColor={purchasePriceBgColor}
+      title="Current profit percentage"
     >
       {pctChange}%
     </Badge>
@@ -155,7 +187,11 @@ export const LastPurchasePriceBadge = ({
   });
 
   return (
-    <Badge style={{ margin: "1px" }} color={purchasePriceBgColor}>
+    <Badge
+      title="Last purchase price"
+      style={{ margin: "1px" }}
+      color={purchasePriceBgColor}
+    >
       {formatAsUsd(lastPurchasePriceAsBig.toString(), 3)}
     </Badge>
   );

@@ -43,6 +43,7 @@ export function BotUpdateCountdown({
       style={{ marginLeft: "4px" }}
       color={color}
       textColor={textColor}
+      title="Time to next check in from bot"
     >
       {minutesDisplay}
       {secondsDisplay}

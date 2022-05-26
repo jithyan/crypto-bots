@@ -47,7 +47,11 @@ export function CompactStateView({
           state="trade"
           onClick={() => changeViewState("trade")}
         />
-        <Badge color="dark" textColor="light">
+        <Badge
+          title="Time left before bot is active for trading"
+          color="dark"
+          textColor="light"
+        >
           Zzz.. {parseInt(config.postSellSleep) - iteration!}h left
         </Badge>
       </StateErrorBoundary>

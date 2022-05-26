@@ -11,6 +11,7 @@ export const ToggleStateButton = ({
 }) =>
   state === "expand" ? (
     <Badge
+      title="Expand to view detailed bot state"
       color="dark"
       textColor="light"
       border={true}
@@ -21,6 +22,7 @@ export const ToggleStateButton = ({
     </Badge>
   ) : (
     <Badge
+      title="Collapse to compact bot state view"
       color="light"
       textColor="dark"
       border={true}

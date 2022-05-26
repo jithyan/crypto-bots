@@ -12,6 +12,7 @@ export function ToggleTradeViewButton({
   if (state === "trade") {
     return (
       <Badge
+        title="View trades"
         color="dark"
         textColor="light"
         border={true}
@@ -24,6 +25,7 @@ export function ToggleTradeViewButton({
   } else if (state === "back") {
     return (
       <Badge
+        title="Back to bot state view"
         color="light"
         textColor="dark"
         border={true}

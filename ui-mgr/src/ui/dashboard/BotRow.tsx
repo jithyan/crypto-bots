@@ -270,7 +270,12 @@ export const CheckInAndSleepStrategy = ({
   return (
     <small>
       {checkIn}{" "}
-      <Badge style={{ padding: "1px 2px" }} color="secondary" textColor="light">
+      <Badge
+        title="How long the bot sleeps between price updates"
+        style={{ padding: "1px 2px" }}
+        color="secondary"
+        textColor="light"
+      >
         {sleepStrategy}
       </Badge>
     </small>

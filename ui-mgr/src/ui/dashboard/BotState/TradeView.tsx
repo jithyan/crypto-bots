@@ -97,6 +97,7 @@ function RefreshButton(props: { onClick: () => void }) {
       border={true}
       style={{ padding: "2px", marginRight: "4px" }}
       onClick={props.onClick}
+      title="Refresh today's trades"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +108,7 @@ function RefreshButton(props: { onClick: () => void }) {
         viewBox="0 0 16 16"
       >
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
         />
         <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
@@ -140,8 +141,8 @@ export function TradeViewContainer({
         <TodaysTrades {...stats} />
       </div>
       <div className="card-footer">
+        <strong>All time stats</strong>
         <table className="table table-sm">
-          <strong>All time stats</strong>
           <tbody>
             <tr>
               <th scope="row">
@@ -171,25 +172,27 @@ function TodaysTrades({ trades }: { trades: ITradeResponse }) {
   return (
     <table className="table table-striped table-sm">
       <thead>
-        <th>
-          <small>Time</small>
-        </th>
-        <th>
-          <small>Action</small>
-        </th>
-        <th>
-          <small>Price</small>
-        </th>
-        <th>
-          <small>Value</small>
-        </th>
-        <th>
-          <small>Profit</small>
-        </th>
+        <tr>
+          <th>
+            <small>Time</small>
+          </th>
+          <th>
+            <small>Action</small>
+          </th>
+          <th>
+            <small>Price</small>
+          </th>
+          <th>
+            <small>Value</small>
+          </th>
+          <th>
+            <small>Profit</small>
+          </th>
+        </tr>
       </thead>
       <tbody>
         {trades.map(({ timestamp, value, price, profit, action }) => (
-          <tr>
+          <tr key={`${timestamp}-${price}-${action}`}>
             <th scope="row">
               <small>{timestamp.split("T")[1].split(".")[0]}</small>
             </th>
