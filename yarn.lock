@@ -7180,9 +7180,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"recoil@npm:^0.6.1":
-  version: 0.6.1
-  resolution: "recoil@npm:0.6.1"
+"recoil@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "recoil@npm:0.7.3"
   dependencies:
     hamt_plus: 1.0.2
   peerDependencies:
@@ -7192,7 +7192,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 823c098e30f9b711f6e5d73ae3bf3c6d43ae6342998825f00ee18b01c88f499f7216fd59b472bd5ad349c6475e698e2937ad73b82499e31535bd63e431244146
+  checksum: 6f48077eea4da8a4b0434eb9567210b74d603086bf5760810719bb12cc74d31b93291e7b80d26caa1e3b7e8cf3ec5fc44308fae8be22228cbcc64c78b048751e
   languageName: node
   linkType: hard
 
@@ -8298,7 +8298,7 @@ __metadata:
     react-dom: ^18.0.0
     react-error-boundary: ^3.1.4
     react-modal: ^3.14.4
-    recoil: ^0.6.1
+    recoil: ^0.7.3
     socket.io-client: ^4.4.1
     typescript: ^4.6.3
     vite: ^2.9.5
