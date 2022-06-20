@@ -15,7 +15,9 @@
     "pkg:linux:local": "yarn build:local && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "pkg:linux:cloud": "yarn build:cloud && yarn pkg package.json --options optimize_for_size,max_old_space_size=64,use-idle-notification",
     "pkg:analysis": "cp ./.analysis.env ./.env && yarn build:local && cp ./dist/index.js ../analysis/src/simulation/bot.js",
-    "make": "rimraf bin & zx make.mjs"
+    "make": "rimraf bin & zx make.mjs",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@binance/connector": "^1.9.2",
@@ -38,6 +40,7 @@
     "pkg": "^5.6.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.3",
+    "vitest": "^0.15.1",
     "xxhashjs": "^0.2.2"
   },
   "pkg": {
