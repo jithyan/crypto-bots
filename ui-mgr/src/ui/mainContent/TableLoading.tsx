@@ -1,6 +1,6 @@
 import React from "react";
 
-export function TableLoading() {
+export function TableLoading(): JSX.Element {
   return (
     <div
       className="text-center"

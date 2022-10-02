@@ -50,7 +50,7 @@ function BotSymbolAndIndex({
 }: {
   index: number;
   symbol: string;
-}) {
+}): JSX.Element {
   const highlightOnMount = useHighlightOnMount();
 
   return (
@@ -75,7 +75,7 @@ function BotSymbolAndIndex({
   );
 }
 
-export function BotHeader() {
+export function BotHeader(): JSX.Element {
   return (
     <Row>
       <Col

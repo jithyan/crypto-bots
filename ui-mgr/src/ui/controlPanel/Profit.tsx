@@ -12,7 +12,7 @@ export const spinner = (
   </div>
 );
 
-export function Profit() {
+export function Profit(): JSX.Element {
   return (
     <Suspense fallback={spinner}>
       <ErrorBoundary
@@ -26,7 +26,7 @@ export function Profit() {
   );
 }
 
-export function ProfitChild() {
+export function ProfitChild(): JSX.Element {
   const totalProfit = useRecoilValue(queryProfit);
 
   const animatedTotalProfit = useAnimateNumber(totalProfit, 3, {

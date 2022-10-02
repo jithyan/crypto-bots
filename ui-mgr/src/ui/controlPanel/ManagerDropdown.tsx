@@ -3,7 +3,7 @@ import { startupAllBots, shutdownAllBots, shutdownManager } from "../../api";
 import { usePasswordContext } from "../password";
 import { NavBarDropdown, NavBarDropdownItem } from "./NavBar/NavBarDropdown";
 
-export function ManagerDropdown() {
+export function ManagerDropdown(): JSX.Element {
   const { setShowPasswordModal, password } = usePasswordContext();
 
   const checkPassword = (func: () => void) => () => {

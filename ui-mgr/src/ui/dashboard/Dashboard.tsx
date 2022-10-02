@@ -9,7 +9,7 @@ import type { List } from "immutable";
 import { BotFeed } from "./BotFeed";
 import { BotHeader, BotRow } from "./BotRow";
 import type { ImmutableBotCollection } from "../../state/botRegistry";
-import { useBotFilterQueryValue, useBotSortMethod } from "ui-mgr/src/state";
+import { useBotSortMethod } from "ui-mgr/src/state";
 
 export function Dashboard({
   data,
@@ -17,7 +17,7 @@ export function Dashboard({
 }: {
   data: ImmutableBotCollection;
   changes: List<string>;
-}) {
+}): JSX.Element {
   const [sortMethod] = useBotSortMethod();
   const deferredDataListChange = useDeferredValue(data.count());
 

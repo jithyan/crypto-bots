@@ -1,6 +1,6 @@
 import React from "react";
 
-const upwardsPriceTrendConfirmedIcon = (
+const upwardsPriceTrendConfirmedIcon: JSX.Element = (
   <span
     title="Confirmed upwards price trend"
     style={{ margin: "1px" }}
@@ -19,7 +19,7 @@ const upwardsPriceTrendConfirmedIcon = (
   </span>
 );
 
-const downwardsPriceIcon = (
+const downwardsPriceIcon: JSX.Element = (
   <span
     style={{ margin: "1px" }}
     className="badge rounded-pill bg-warning text-dark"

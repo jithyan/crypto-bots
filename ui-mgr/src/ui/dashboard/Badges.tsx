@@ -21,7 +21,7 @@ export function Badge({
   border?: boolean;
   title?: string;
   onClick?: () => void;
-}>) {
+}>): JSX.Element {
   const bgColorClass = `bg-${color}`;
   const txtColorClass = textColor ? `text-${textColor}` : "";
   const roundedPillClass = rounded ? "rounded-pill" : "";
@@ -100,7 +100,11 @@ const postSellStasisIcon = (
   </Badge>
 );
 
-export const AssetStateBadge = ({ assetState }: { assetState: string }) => {
+export const AssetStateBadge = ({
+  assetState,
+}: {
+  assetState: string;
+}): JSX.Element => {
   if (assetState.includes("HoldStable")) {
     return holdStableAssetIcon;
   } else if (assetState.includes("Order")) {
@@ -118,7 +122,7 @@ function getBgColorFromPriceDifference({
 }: {
   lastPurchasePrice: Big;
   tickerPrice: Big;
-}) {
+}): "danger" | "secondary" | "success" {
   if (lastPurchasePrice.eq(tickerPrice)) {
     return "secondary";
   } else if (lastPurchasePrice.lt(tickerPrice)) {
@@ -131,7 +135,10 @@ function getBgColorFromPriceDifference({
 export const PctChangeBadge = ({
   lastPurchasePrice,
   tickerPrice,
-}: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
+}: Record<
+  "lastPurchasePrice" | "tickerPrice",
+  string | undefined
+>): JSX.Element | null => {
   if (!tickerPrice || !lastPurchasePrice) {
     console.error("PctChangeBadge called with no required args", {
       lastPurchasePrice,
@@ -171,7 +178,10 @@ export const PctChangeBadge = ({
 export const LastPurchasePriceBadge = ({
   lastPurchasePrice,
   tickerPrice,
-}: Record<"lastPurchasePrice" | "tickerPrice", string | undefined>) => {
+}: Record<
+  "lastPurchasePrice" | "tickerPrice",
+  string | undefined
+>): JSX.Element | null => {
   if (!tickerPrice || !lastPurchasePrice) {
     console.error("LastPurchasePriceBadge called with no required args", {
       lastPurchasePrice,

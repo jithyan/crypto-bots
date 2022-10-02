@@ -1,7 +1,7 @@
 import React from "react";
 import type { List } from "immutable";
 
-export function BotFeed({ changes }: { changes: List<string> }) {
+export function BotFeed({ changes }: { changes: List<string> }): JSX.Element {
   return (
     <div
       className={"card bg-dark border-light mb-3"}

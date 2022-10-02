@@ -3,7 +3,7 @@ import { useState, useLayoutEffect } from "react";
 export function useIsUpdatingOnChange<StrictEquality>(
   valueToWatch: StrictEquality,
   timeout: number = 3000
-) {
+): boolean {
   const [prevValue, setPrevValue] = useState(valueToWatch);
 
   useLayoutEffect(() => {

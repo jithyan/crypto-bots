@@ -2,15 +2,16 @@ import React, { useEffect, useState, startTransition } from "react";
 import { getSecondsTillNextCheckIn } from "../../utils/date";
 import { Badge } from "./Badges";
 
+interface Props {
+  sleepStrategy: "3m" | "6m" | "9m" | "15m" | "30m" | "1hr";
+  checkInIsoDate: string;
+  status: string;
+}
 export function BotUpdateCountdown({
   sleepStrategy,
   checkInIsoDate,
   status,
-}: {
-  sleepStrategy: "3m" | "6m" | "9m" | "15m" | "30m" | "1hr";
-  checkInIsoDate: string;
-  status: string;
-}) {
+}: Props): JSX.Element | null {
   const [secondsLeft, setSecondsLeft] = useState(
     getSecondsTillNextCheckIn(checkInIsoDate, sleepStrategy)
   );

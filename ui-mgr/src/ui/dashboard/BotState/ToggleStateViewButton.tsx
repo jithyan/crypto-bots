@@ -8,7 +8,7 @@ export const ToggleStateButton = ({
 }: {
   state: "expand" | "collapse";
   onToggleViewClicked: () => void;
-}) =>
+}): JSX.Element =>
   state === "expand" ? (
     <Badge
       title="Expand to view detailed bot state"

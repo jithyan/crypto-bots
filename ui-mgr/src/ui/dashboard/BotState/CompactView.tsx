@@ -28,7 +28,7 @@ export function CompactStateView({
 }: {
   symbol: string;
   changeViewState: TChangeViewState;
-} & IBotStateDetails) {
+} & IBotStateDetails): JSX.Element | null {
   const holdsVolatileAsset = state.includes("Volatile");
   const formattedTickerPrice = useAnimateNumber(tickerPrice, 3);
 

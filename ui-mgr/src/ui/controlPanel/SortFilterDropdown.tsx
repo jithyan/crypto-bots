@@ -2,7 +2,7 @@ import React, { useState, startTransition } from "react";
 import { useBotFilter, useBotSortMethod } from "../../state";
 import { NavBarDropdown, NavBarDropdownItem } from "./NavBar/NavBarDropdown";
 
-export function SortFilterDropdown() {
+export function SortFilterDropdown(): JSX.Element {
   const setFilter = useBotFilter();
   const [filterValue, setFilterValue] = useState("");
 

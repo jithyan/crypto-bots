@@ -11,7 +11,7 @@ import { ControlPanel } from "../controlPanel";
 import { Dashboard } from "../dashboard";
 import { TableLoading } from "./TableLoading";
 
-export function MainContent() {
+export function MainContent(): JSX.Element {
   const updateBotRegistry = useUpdateBotRegistry();
   const [feed, updateFeed] = useBotFeed();
   const refreshProfit = useRecoilRefresher_UNSTABLE(queryProfit);

@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import { RecoilRoot } from "recoil";
 import App from "./ui/App";
 
-const container = document.getElementById("root");
+const container: HTMLElement = document.getElementById("root")!;
 const root = createRoot(container as HTMLElement);
 
 root.render(

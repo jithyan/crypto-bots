@@ -2,7 +2,7 @@ import React from "react";
 import { PasswordModal, PasswordContextProvider } from "./password";
 import { MainContent } from "./mainContent";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div id="container" className="container-fluid px-4">
       <div className="row" style={{ paddingTop: "24px" }}>
@@ -20,7 +20,7 @@ function App() {
   );
 }
 
-export function Header() {
+export function Header(): JSX.Element {
   return (
     <header>
       <h1

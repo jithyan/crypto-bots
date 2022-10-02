@@ -9,7 +9,7 @@ import type { IBotInfoStream } from "@jithyan/lib";
 import { useCallback } from "react";
 import type { BotEventData } from "../api/botDataSocket";
 
-export function useUpdateBotRegistry() {
+export function useUpdateBotRegistry(): (action: BotEventData) => void {
   const setBotRegistry = useSetRecoilState(botRegistry);
 
   return useCallback(

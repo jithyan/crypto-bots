@@ -1,4 +1,4 @@
-export const spinner = (
+export const spinner: JSX.Element = (
   <div
     className="text-center"
     style={{

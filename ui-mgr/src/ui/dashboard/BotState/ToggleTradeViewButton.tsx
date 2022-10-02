@@ -8,7 +8,7 @@ export function ToggleTradeViewButton({
 }: {
   state: "trade" | "back";
   onClick: () => void;
-}) {
+}): JSX.Element | null {
   if (state === "trade") {
     return (
       <Badge

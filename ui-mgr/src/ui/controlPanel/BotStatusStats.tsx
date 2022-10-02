@@ -3,7 +3,7 @@ import { useBotStats } from "../../state";
 import { NavBarList, BadgeListItem } from "./NavBar/NavBarList";
 import { Profit } from "./Profit";
 
-export function BotStatusStats() {
+export function BotStatusStats(): JSX.Element {
   const { totalBots, botsNotWorking, onlineBots, offlineBots } = useBotStats(
     "totalBots",
     "botsNotWorking",

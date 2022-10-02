@@ -10,7 +10,7 @@ export const ActionsMenu = ({
 }: {
   id: string;
   actions: TBotAvailableActions;
-}) => {
+}): JSX.Element => {
   return (
     <div className="dropdown">
       <button
@@ -37,6 +37,7 @@ export const ActionsMenu = ({
     </div>
   );
 };
+
 function ActionButton({
   action,
   id,

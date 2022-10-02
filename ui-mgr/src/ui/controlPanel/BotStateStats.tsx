@@ -6,7 +6,7 @@ function pluralizeBot(val: number) {
   return val > 1 ? "bots" : "bot";
 }
 
-export function BotStateStats() {
+export function BotStateStats(): JSX.Element {
   const {
     numBotsHoldStable,
     numBotsHoldingVolatileAssets,

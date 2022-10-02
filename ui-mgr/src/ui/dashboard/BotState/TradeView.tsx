@@ -61,7 +61,7 @@ export const TradeView = React.memo(
   }
 );
 
-function RefreshButton(props: { onClick: () => void }) {
+function RefreshButton(props: { onClick: () => void }): JSX.Element {
   return (
     <Badge
       color="light"
@@ -95,7 +95,7 @@ export function TradeViewContainer({
 }: {
   changeViewState: TChangeViewState;
   symbol: string;
-}) {
+}): JSX.Element {
   const stats = useRecoilValue(getTradeStats(symbol));
   const refreshTradeStats = useRecoilRefresher_UNSTABLE(getTradeStats(symbol));
 
@@ -140,7 +140,7 @@ export function TradeViewContainer({
   );
 }
 
-function TodaysTrades({ trades }: { trades: ITradeResponse }) {
+function TodaysTrades({ trades }: { trades: ITradeResponse }): JSX.Element {
   return (
     <table className="table table-striped table-sm">
       <thead>

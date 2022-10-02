@@ -2,7 +2,9 @@
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 
-export function StateErrorBoundary({ children }: React.PropsWithChildren<{}>) {
+export function StateErrorBoundary({
+  children,
+}: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <ErrorBoundary
       fallback={

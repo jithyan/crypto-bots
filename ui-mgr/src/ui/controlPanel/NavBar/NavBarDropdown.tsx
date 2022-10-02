@@ -4,7 +4,7 @@ export function NavBarDropdown({
   heading,
   id,
   children,
-}: React.PropsWithChildren<{ heading?: string; id: string }>) {
+}: React.PropsWithChildren<{ heading?: string; id: string }>): JSX.Element {
   const dropdownId = `${id}-dropdown`;
 
   return (
@@ -31,7 +31,9 @@ export function NavBarDropdown({
   );
 }
 
-export function NavBarDropdownItem({ children }: React.PropsWithChildren<{}>) {
+export function NavBarDropdownItem({
+  children,
+}: React.PropsWithChildren<{}>): JSX.Element {
   return (
     <li>
       <div className="dropdown-item">{children}</div>

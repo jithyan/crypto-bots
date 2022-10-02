@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import ReactModal from "react-modal";
 import { usePasswordContext } from "./PasswordContext";
 
-export function PasswordModal() {
+export function PasswordModal(): JSX.Element {
   const [modalPassword, setModalPassword] = useState("");
   const { setPassword, setShowPasswordModal, showPasswordModal } =
     usePasswordContext();
 
   return (
+    // @ts-ignore
     <ReactModal
       isOpen={showPasswordModal}
       portalClassName="modal-sm modal-dialog modal-dialog-centered"

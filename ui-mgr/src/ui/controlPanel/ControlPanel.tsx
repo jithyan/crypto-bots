@@ -6,7 +6,7 @@ import { SortFilterDropdown } from "./SortFilterDropdown";
 import { BotStatusStats } from "./BotStatusStats";
 import { BotStateStats } from "./BotStateStats";
 
-export function ControlPanel() {
+export function ControlPanel(): JSX.Element {
   return (
     <>
       <NavBarPanel heading="Manager Panel" id="manager-panel">
