@@ -1,6 +1,6 @@
 {
   "name": "crypto-poc",
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.2.3",
   "type": "module",
   "workspaces": [
     "bot",
@@ -21,30 +21,26 @@
     "build:mgr": "nx run manager:make",
     "build:db": "nx run db:make",
     "build:ui": "nx run ui:build",
-    "upgrade:typescript": "yarn workspaces foreach add --dev typescript",
-    "upgrade:build": "yarn workspaces foreach --exclude '{lib,analysis,ui}' add --dev esbuild pkg",
-    "upgrade:ui": "yarn upgrade:typescript && yarn ui add --dev vite @vitejs/plugin-react @types/react @types/react-dom && yarn ui add react react-dom",
-    "upgrade-devdeps": "yarn upgrade:typescript && yarn upgrade:build && yarn upgrade:ui",
     "format": "prettier --write \"**/src/**/*.ts*\"",
     "remove-artifacts": "concurrently \"yarn bot remove-logs\" \"yarn mgr remove-logs\" \"yarn anal cleanup\"",
     "build:ui:cloud": "gcloud builds submit --tag gcr.io/crypto-bot-341604/crypto-ui",
     "deploy:ui": "gcloud run deploy --image gcr.io/crypto-bot-341604/crypto-ui --platform managed"
   },
   "devDependencies": {
-    "@nrwl/cli": "13.10.2",
-    "@nrwl/workspace": "13.10.2",
+    "@nrwl/cli": "13.10.6",
+    "@nrwl/workspace": "13.10.6",
     "@types/event-stream": "^4.0.0",
-    "concurrently": "^7.0.0",
-    "esbuild": "^0.14.37",
-    "nx": "13.10.2",
-    "pkg": "^5.6.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.6.3",
-    "zx": "5.1.0"
+    "concurrently": "^7.4.0",
+    "esbuild": "^0.14.54",
+    "nx": "13.10.6",
+    "pkg": "^5.8.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "zx": "5.3.0"
   },
   "dependencies": {
     "db": "workspace:^",
-    "winston": "^3.7.2",
-    "winston-daily-rotate-file": "^4.6.1"
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
   }
 }
