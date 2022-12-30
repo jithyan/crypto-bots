@@ -348,14 +348,14 @@ function handleAxiosError(message: string, e: unknown): void {
 
   apiLogger.error(message, {
     request: {
-      url: error.config.url,
-      data: error.config.data,
-      params: error.config.params,
+      url: error?.config?.url ?? "unknown url",
+      data: error?.config?.data ?? "no data",
+      params: error?.config?.params ?? "no params",
     },
     errorData: error.response?.data,
     status: error.response?.status,
     statusText: error.response?.statusText,
-  });
+  } as any);
 }
 
 interface BinanceWithdrawOptions {

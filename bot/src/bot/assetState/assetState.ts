@@ -187,13 +187,15 @@ export class AssetState<
       return this;
     }
 
-    if (error.response?.data.code === -2015) {
+    //@ts-ignore
+    if (error.response?.data?.code === -2015) {
       apiLogger.error(
         "FATAL BINANCE REJECTION - Update IP/Key",
         error.response.data
       );
       throw new Error("FATAL BINANCE REJECTION - Update IP/Key");
-    } else if (error.response?.data.code == -2010) {
+      //@ts-ignore
+    } else if (error.response?.data?.code === -2010) {
       apiLogger.error(
         "FATAL BINANCE REJECTION - Crypto pair not supported",
         error.response.data
