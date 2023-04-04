@@ -7,7 +7,7 @@ import type {
   IBotRemovalUpdate,
 } from "@jithyan/lib";
 
-const socket = io("ws://35.243.104.152:2000");
+const socket = io("ws://35.193.249.151:2000");
 
 export type BotEvent<E extends TBotStatusEvent, D> = { event: E; data: D };
 export type BotEventData =

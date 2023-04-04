@@ -3,7 +3,7 @@ import { getTimestampPepper } from "@jithyan/lib";
 import { Password } from "../ui/password/PasswordContext";
 
 export const axios = axiosDefault.create({
-  baseURL: "http://35.243.104.152:2000",
+  baseURL: "http://35.193.249.151:2000",
 });
 
 axios.interceptors.request.use(
