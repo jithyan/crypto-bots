@@ -12,7 +12,7 @@ const dailyRotationTransport: DailyRotateFile = new DailyRotateFile({
 });
 
 export const apiLogger = winston.createLogger({
-  level: "info",
+  level: "error",
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.json()
@@ -23,9 +23,9 @@ export const apiLogger = winston.createLogger({
   transports: [dailyRotationTransport],
 });
 
-if (process.env.NODE_ENV === "production") {
-  apiLogger.add(gcpTransport);
-}
+// if (process.env.NODE_ENV === "production") {
+//   apiLogger.add(gcpTransport);
+// }
 
 if (process.env.NODE_ENV !== "production") {
   apiLogger.add(

@@ -97,7 +97,8 @@ export const logTrade = async (
     value,
   };
 
-  csvLogger.log("info", logData);
+  // no longer want to log this
+  // csvLogger.log("info", logData);
   logToTradeDb({ ...logData, timestamp: now.toISOString() });
 
   return profit;

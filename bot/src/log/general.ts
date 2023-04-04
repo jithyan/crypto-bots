@@ -31,6 +31,7 @@ if (process.env.NODE_ENV !== "production") {
   );
 }
 
-if (process.env.NODE_ENV === "production") {
-  generalLogger.add(gcpTransport);
-}
+// No longer needed
+// if (process.env.NODE_ENV === "production") {
+//   generalLogger.add(gcpTransport);
+// }

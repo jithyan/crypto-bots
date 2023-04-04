@@ -23,9 +23,9 @@ export const stateLogger = winston.createLogger({
   transports: [dailyRotationTransport],
 });
 
-if (process.env.NODE_ENV === "production") {
-  stateLogger.add(gcpTransport);
-}
+// if (process.env.NODE_ENV === "production") {
+//   stateLogger.add(gcpTransport);
+// }
 
 if (process.env.NODE_ENV !== "production") {
   stateLogger.add(
