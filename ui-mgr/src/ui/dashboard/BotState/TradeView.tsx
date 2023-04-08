@@ -29,7 +29,7 @@ export const getTradeStats = selectorFamily<ITradeStatsResponse, string>({
   get: (symbol: string) => () =>
     axios
       .get<ITradeStatsResponse>(
-        `http://35.243.104.152:2000/db/tradestats/${symbol}`
+        `http://35.193.249.151:2000/db/tradestats/${symbol}`
       )
       .then((resp) => resp.data),
 });
